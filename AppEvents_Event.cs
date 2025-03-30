@@ -1,0 +1,7 @@
+namespace Excel
+{
+    public interface 
+    {
+
+    }
+}
