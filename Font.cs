@@ -1,0 +1,7 @@
+namespace Word
+{
+    public interface 
+    {
+
+    }
+}
