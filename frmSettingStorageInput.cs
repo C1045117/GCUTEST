@@ -1,252 +1,394 @@
 using System;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Drawing;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
+using GCUv2.My;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
 
-namespace GCUv2
+namespace GCUv2;
+
+[DesignerGenerated]
+public class frmSettingStorageInput : Form
 {
-    public class Form
-    {
-
-        private class ComponentModel.IContainer components;
-        private class Label _Label2;
-        private class ComboBox _cboBranch;
-        private class Button _btnSaveClose;
-        private class Label _Label9;
-        private class ComboBox _cboActive;
-        private class TextBox _txtName;
-        private class Label _Label1;
-        private class Label _Label3;
-        private class ComboBox _cboMarketingStorageType;
-        private int32 _currentId;
-
-
-        protected override strict void Dispose(boolean disposing) {
-
-          boolean var_1;
-
-        }
-
-        private void InitializeComponent() {
-
-
-        }
-
-        assem override strict specialname class Label get_Label2() {
-
-          loc_5124C7: ldarg.0
-          loc_5124C8: ldfld GCUv2.frmSettingStorageInput::_Label2
-          loc_5124CD: br.s loc_5124CF
-          loc_5124CF: // Referenced from: loc_5124CD
-          loc_5124CF: ret
-        }
-
-        assem override strict specialname void set_Label2(class Label WithEventsValue) {
-
-          loc_5124D1: ldarg.0
-          loc_5124D2: ldarg.1
-          loc_5124D3: stfld GCUv2.frmSettingStorageInput::_Label2
-          loc_5124D8: ret
-        }
-
-        assem override strict specialname class ComboBox get_cboBranch() {
-
-          loc_5124DA: ldarg.0
-          loc_5124DB: ldfld GCUv2.frmSettingStorageInput::_cboBranch
-          loc_5124E0: br.s loc_5124E2
-          loc_5124E2: // Referenced from: loc_5124E0
-          loc_5124E2: ret
-        }
-
-        assem override strict specialname void set_cboBranch(class ComboBox WithEventsValue) {
-
-          loc_5124E4: ldarg.0
-          loc_5124E5: ldarg.1
-          loc_5124E6: stfld GCUv2.frmSettingStorageInput::_cboBranch
-          loc_5124EB: ret
-        }
-
-        assem override strict specialname class Button get_btnSaveClose() {
-
-          loc_5124ED: ldarg.0
-          loc_5124EE: ldfld GCUv2.frmSettingStorageInput::_btnSaveClose
-          loc_5124F3: br.s loc_5124F5
-          loc_5124F5: // Referenced from: loc_5124F3
-          loc_5124F5: ret
-        }
-
-        assem override strict specialname void set_btnSaveClose(class Button WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Button var_2;
-
-        }
-
-        assem override strict specialname class Label get_Label9() {
-
-          loc_51253C: ldarg.0
-          loc_51253D: ldfld GCUv2.frmSettingStorageInput::_Label9
-          loc_512542: br.s loc_512544
-          loc_512544: // Referenced from: loc_512542
-          loc_512544: ret
-        }
-
-        assem override strict specialname void set_Label9(class Label WithEventsValue) {
-
-          loc_512546: ldarg.0
-          loc_512547: ldarg.1
-          loc_512548: stfld GCUv2.frmSettingStorageInput::_Label9
-          loc_51254D: ret
-        }
-
-        assem override strict specialname class ComboBox get_cboActive() {
-
-          loc_51254F: ldarg.0
-          loc_512550: ldfld GCUv2.frmSettingStorageInput::_cboActive
-          loc_512555: br.s loc_512557
-          loc_512557: // Referenced from: loc_512555
-          loc_512557: ret
-        }
-
-        assem override strict specialname void set_cboActive(class ComboBox WithEventsValue) {
-
-          loc_512559: ldarg.0
-          loc_51255A: ldarg.1
-          loc_51255B: stfld GCUv2.frmSettingStorageInput::_cboActive
-          loc_512560: ret
-        }
-
-        assem override strict specialname class TextBox get_txtName() {
-
-          loc_512562: ldarg.0
-          loc_512563: ldfld GCUv2.frmSettingStorageInput::_txtName
-          loc_512568: br.s loc_51256A
-          loc_51256A: // Referenced from: loc_512568
-          loc_51256A: ret
-        }
-
-        assem override strict specialname void set_txtName(class TextBox WithEventsValue) {
-
-          loc_51256C: ldarg.0
-          loc_51256D: ldarg.1
-          loc_51256E: stfld GCUv2.frmSettingStorageInput::_txtName
-          loc_512573: ret
-        }
-
-        assem override strict specialname class Label get_Label1() {
-
-          loc_512575: ldarg.0
-          loc_512576: ldfld GCUv2.frmSettingStorageInput::_Label1
-          loc_51257B: br.s loc_51257D
-          loc_51257D: // Referenced from: loc_51257B
-          loc_51257D: ret
-        }
-
-        assem override strict specialname void set_Label1(class Label WithEventsValue) {
-
-          loc_51257F: ldarg.0
-          loc_512580: ldarg.1
-          loc_512581: stfld GCUv2.frmSettingStorageInput::_Label1
-          loc_512586: ret
-        }
-
-        assem override strict specialname class Label get_Label3() {
-
-          loc_512588: ldarg.0
-          loc_512589: ldfld GCUv2.frmSettingStorageInput::_Label3
-          loc_51258E: br.s loc_512590
-          loc_512590: // Referenced from: loc_51258E
-          loc_512590: ret
-        }
-
-        assem override strict specialname void set_Label3(class Label WithEventsValue) {
-
-          loc_512592: ldarg.0
-          loc_512593: ldarg.1
-          loc_512594: stfld GCUv2.frmSettingStorageInput::_Label3
-          loc_512599: ret
-        }
-
-        assem override strict specialname class ComboBox get_cboMarketingStorageType() {
-
-          loc_51259B: ldarg.0
-          loc_51259C: ldfld GCUv2.frmSettingStorageInput::_cboMarketingStorageType
-          loc_5125A1: br.s loc_5125A3
-          loc_5125A3: // Referenced from: loc_5125A1
-          loc_5125A3: ret
-        }
-
-        assem override strict specialname void set_cboMarketingStorageType(class ComboBox WithEventsValue) {
-
-          loc_5125A5: ldarg.0
-          loc_5125A6: ldarg.1
-          loc_5125A7: stfld GCUv2.frmSettingStorageInput::_cboMarketingStorageType
-          loc_5125AC: ret
-        }
-
-        public specialname string get_CurrentId() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_CurrentId(string value) {
-
-          loc_5125CE: nop
-          loc_5125CF: ldarg.0
-          loc_5125D0: ldarg.1
-          loc_5125D1: call int32 Microsoft.VisualBasic.CompilerServices.Conversions::ToInteger(string)
-          loc_5125D6: stfld GCUv2.frmSettingStorageInput::_currentId
-          loc_5125DB: ret
-        }
-
-        public void frmSettingStorageInput() {
-
-          class ComboBox var_1;
-
-        }
-
-        private void frmSettingAreaInput_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        public void loadData() {
-
-          int32 num_1;
-          int32 num_2;
-          class GCUv2.cStorage var_1;
-          boolean var_2;
-          class ComboBox var_3;
-          boolean var_4;
-
-        }
-
-        public void prepareForm() {
-
-          loc_512819: nop
-          loc_51281A: ldarg.0
-          loc_51281B: ldc.i4.0
-          loc_51281C: stfld GCUv2.frmSettingStorageInput::_currentId
-          loc_512821: ret
-        }
-
-        private void btnSaveClose_Click(object sender, class System.EventArgs e) {
-
-          class GCUv2.cComboItem var_1;
-          class GCUv2.cComboItem var_2;
-          class GCUv2.cComboItem var_3;
-          class GCUv2.cStorage var_4;
-          boolean var_5;
-          boolean var_6;
-          boolean var_7;
-          boolean var_8;
-          boolean var_9;
-          boolean var_10;
-          boolean var_11;
-          boolean var_12;
-          boolean var_13;
-
-        }
-
-    }
+	private IContainer components;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnSaveClose")]
+	private Button _btnSaveClose;
+
+	private int _currentId;
+
+	[field: AccessedThroughProperty("Label2")]
+	internal virtual Label Label2
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("cboBranch")]
+	internal virtual ComboBox cboBranch
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual Button btnSaveClose
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnSaveClose;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnSaveClose_Click;
+			Button button = _btnSaveClose;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnSaveClose = value;
+			button = _btnSaveClose;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
+
+	[field: AccessedThroughProperty("Label9")]
+	internal virtual Label Label9
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("cboActive")]
+	internal virtual ComboBox cboActive
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("txtName")]
+	internal virtual TextBox txtName
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label1")]
+	internal virtual Label Label1
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label3")]
+	internal virtual Label Label3
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("cboMarketingStorageType")]
+	internal virtual ComboBox cboMarketingStorageType
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	public string CurrentId
+	{
+		get
+		{
+			return Conversions.ToString(_currentId);
+		}
+		set
+		{
+			_currentId = Conversions.ToInteger(value);
+		}
+	}
+
+	[DebuggerNonUserCode]
+	protected override void Dispose(bool disposing)
+	{
+		try
+		{
+			if (disposing && components != null)
+			{
+				components.Dispose();
+			}
+		}
+		finally
+		{
+			base.Dispose(disposing);
+		}
+	}
+
+	[System.Diagnostics.DebuggerStepThrough]
+	private void InitializeComponent()
+	{
+		this.Label2 = new System.Windows.Forms.Label();
+		this.cboBranch = new System.Windows.Forms.ComboBox();
+		this.btnSaveClose = new System.Windows.Forms.Button();
+		this.Label9 = new System.Windows.Forms.Label();
+		this.cboActive = new System.Windows.Forms.ComboBox();
+		this.txtName = new System.Windows.Forms.TextBox();
+		this.Label1 = new System.Windows.Forms.Label();
+		this.Label3 = new System.Windows.Forms.Label();
+		this.cboMarketingStorageType = new System.Windows.Forms.ComboBox();
+		base.SuspendLayout();
+		this.Label2.AutoSize = true;
+		this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label2.Location = new System.Drawing.Point(10, 70);
+		this.Label2.Name = "Label2";
+		this.Label2.Size = new System.Drawing.Size(44, 13);
+		this.Label2.TabIndex = 143;
+		this.Label2.Text = "Cabang";
+		this.cboBranch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+		this.cboBranch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+		this.cboBranch.FormattingEnabled = true;
+		this.cboBranch.Location = new System.Drawing.Point(75, 67);
+		this.cboBranch.Name = "cboBranch";
+		this.cboBranch.Size = new System.Drawing.Size(145, 21);
+		this.cboBranch.TabIndex = 2;
+		this.btnSaveClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnSaveClose.Location = new System.Drawing.Point(75, 123);
+		this.btnSaveClose.Name = "btnSaveClose";
+		this.btnSaveClose.Size = new System.Drawing.Size(93, 24);
+		this.btnSaveClose.TabIndex = 10;
+		this.btnSaveClose.Text = "Simpan && &Tutup";
+		this.btnSaveClose.UseVisualStyleBackColor = true;
+		this.Label9.AutoSize = true;
+		this.Label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label9.Location = new System.Drawing.Point(10, 98);
+		this.Label9.Name = "Label9";
+		this.Label9.Size = new System.Drawing.Size(28, 13);
+		this.Label9.TabIndex = 147;
+		this.Label9.Text = "Aktif";
+		this.cboActive.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+		this.cboActive.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+		this.cboActive.FormattingEnabled = true;
+		this.cboActive.Location = new System.Drawing.Point(75, 95);
+		this.cboActive.Name = "cboActive";
+		this.cboActive.Size = new System.Drawing.Size(145, 21);
+		this.cboActive.TabIndex = 3;
+		this.txtName.Location = new System.Drawing.Point(75, 12);
+		this.txtName.Name = "txtName";
+		this.txtName.Size = new System.Drawing.Size(145, 20);
+		this.txtName.TabIndex = 0;
+		this.Label1.AutoSize = true;
+		this.Label1.Location = new System.Drawing.Point(10, 15);
+		this.Label1.Name = "Label1";
+		this.Label1.Size = new System.Drawing.Size(45, 13);
+		this.Label1.TabIndex = 145;
+		this.Label1.Text = "Gudang";
+		this.Label3.AutoSize = true;
+		this.Label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label3.Location = new System.Drawing.Point(10, 43);
+		this.Label3.Name = "Label3";
+		this.Label3.Size = new System.Drawing.Size(31, 13);
+		this.Label3.TabIndex = 149;
+		this.Label3.Text = "Jenis";
+		this.cboMarketingStorageType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+		this.cboMarketingStorageType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+		this.cboMarketingStorageType.FormattingEnabled = true;
+		this.cboMarketingStorageType.Location = new System.Drawing.Point(75, 40);
+		this.cboMarketingStorageType.Name = "cboMarketingStorageType";
+		this.cboMarketingStorageType.Size = new System.Drawing.Size(145, 21);
+		this.cboMarketingStorageType.TabIndex = 1;
+		base.AcceptButton = this.btnSaveClose;
+		base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
+		base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+		base.ClientSize = new System.Drawing.Size(241, 158);
+		base.Controls.Add(this.Label3);
+		base.Controls.Add(this.cboMarketingStorageType);
+		base.Controls.Add(this.Label2);
+		base.Controls.Add(this.cboBranch);
+		base.Controls.Add(this.btnSaveClose);
+		base.Controls.Add(this.Label9);
+		base.Controls.Add(this.cboActive);
+		base.Controls.Add(this.txtName);
+		base.Controls.Add(this.Label1);
+		base.KeyPreview = true;
+		base.MaximizeBox = false;
+		base.Name = "frmSettingStorageInput";
+		base.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+		this.Text = "Setting - Gudang";
+		base.ResumeLayout(false);
+		base.PerformLayout();
+	}
+
+	public frmSettingStorageInput()
+	{
+		base.KeyDown += frmSettingAreaInput_KeyDown;
+		InitializeComponent();
+		ComboBox combo = cboBranch;
+		cCombo.getBranch(ref combo, Module1.pubGroupId, blnAll: false);
+		cboBranch = combo;
+		combo = cboMarketingStorageType;
+		cCombo.getMarketingStorageType(ref combo);
+		cboMarketingStorageType = combo;
+		combo = cboActive;
+		cCombo.getYesNo(ref combo, All: false);
+		cboActive = combo;
+		cboActive.SelectedIndex = 0;
+	}
+
+	private void frmSettingAreaInput_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Escape)
+		{
+			Close();
+		}
+	}
+
+	public void loadData()
+	{
+		int try0001_dispatch = -1;
+		int num2 = default(int);
+		int num = default(int);
+		while (true)
+		{
+			try
+			{
+				/*Note: ILSpy has introduced the following switch to emulate a goto from catch-block to try-block*/;
+				switch (try0001_dispatch)
+				{
+				default:
+				{
+					ProjectData.ClearProjectError();
+					num2 = 2;
+					cStorage cStorage2 = new cStorage(_currentId);
+					txtName.Text = cStorage2.Name;
+					ComboBox cboSource;
+					if (cStorage2.IsMarketing == 1)
+					{
+						cboSource = cboMarketingStorageType;
+						Module1.comboBoundValue(ref cboSource, 1.0);
+						cboMarketingStorageType = cboSource;
+					}
+					else if (cStorage2.IsReturn == 1)
+					{
+						cboSource = cboMarketingStorageType;
+						Module1.comboBoundValue(ref cboSource, 2.0);
+						cboMarketingStorageType = cboSource;
+					}
+					else
+					{
+						cboSource = cboMarketingStorageType;
+						Module1.comboBoundValue(ref cboSource, 0.0);
+						cboMarketingStorageType = cboSource;
+					}
+					cboSource = cboBranch;
+					Module1.comboBoundValue(ref cboSource, cStorage2.BranchId);
+					cboBranch = cboSource;
+					cboSource = cboActive;
+					Module1.comboBoundValue(ref cboSource, cStorage2.Active);
+					cboActive = cboSource;
+					goto end_IL_0001;
+				}
+				case 280:
+					num = -1;
+					switch (num2)
+					{
+					case 2:
+						Module1.SaveError(Information.Err(), "frmSettingStorageInput", "LoadData", "");
+						_currentId = 0;
+						goto end_IL_0001;
+					}
+					break;
+				}
+			}
+			catch (object obj) when (obj is Exception && num2 != 0 && num == 0)
+			{
+				ProjectData.SetProjectError((Exception)obj);
+				try0001_dispatch = 280;
+				continue;
+			}
+			throw ProjectData.CreateProjectError(-2146828237);
+			continue;
+			end_IL_0001:
+			break;
+		}
+		if (num != 0)
+		{
+			ProjectData.ClearProjectError();
+		}
+	}
+
+	public void prepareForm()
+	{
+		_currentId = 0;
+	}
+
+	private void btnSaveClose_Click(object sender, EventArgs e)
+	{
+		cComboItem cComboItem2 = (cComboItem)cboBranch.SelectedItem;
+		cComboItem cComboItem3 = (cComboItem)cboMarketingStorageType.SelectedItem;
+		cComboItem cComboItem4 = (cComboItem)cboActive.SelectedItem;
+		if (Operators.CompareString(txtName.Text, "", TextCompare: false) == 0)
+		{
+			Interaction.MsgBox("Masukkan kode customer", MsgBoxStyle.Information);
+			txtName.Focus();
+			return;
+		}
+		if (cboMarketingStorageType.SelectedIndex == -1)
+		{
+			Interaction.MsgBox("Pilih jenis gudang", MsgBoxStyle.Information);
+			cboMarketingStorageType.Focus();
+			return;
+		}
+		if ((Conversions.ToDouble(cComboItem3.Value) == 2.0) & (Operators.CompareString(Strings.Left(Strings.UCase(txtName.Text), 2), "BS", TextCompare: false) != 0))
+		{
+			Interaction.MsgBox("Nama gudang BS harus diawali dengan awalan 'BS'", MsgBoxStyle.Information);
+			txtName.Focus();
+			return;
+		}
+		if (cboBranch.SelectedIndex == -1)
+		{
+			Interaction.MsgBox("Pilih cabang", MsgBoxStyle.Information);
+			cboBranch.Focus();
+			return;
+		}
+		if (cStorage.IsExist(_currentId, Module1.cleanString(txtName.Text)))
+		{
+			Interaction.MsgBox("Nama gudang sudah pernah digunakan. Masukkan nama lain.", MsgBoxStyle.Information);
+			txtName.Focus();
+			return;
+		}
+		if (cboActive.SelectedIndex == -1)
+		{
+			Interaction.MsgBox("Pilih aktif/tidak", MsgBoxStyle.Information);
+			cboActive.Focus();
+			return;
+		}
+		cStorage cStorage2 = new cStorage(0);
+		cStorage2.Id = Conversions.ToInteger(CurrentId);
+		cStorage2.Name = txtName.Text;
+		if (Conversions.ToDouble(cComboItem3.Value) == 1.0)
+		{
+			cStorage2.IsMarketing = 1;
+		}
+		else if (Conversions.ToDouble(cComboItem3.Value) == 2.0)
+		{
+			cStorage2.IsReturn = 1;
+		}
+		cStorage2.BranchId = Conversions.ToInteger(cComboItem2.Value);
+		cStorage2.Active = Conversions.ToInteger(cComboItem4.Value);
+		cStorage2.Save();
+		Interaction.MsgBox("Gudang berhasil disimpan", MsgBoxStyle.Information);
+		if (!MyProject.Forms.frmSettingStorageList.chkManual.Checked)
+		{
+			MyProject.Forms.frmSettingStorageList.getList();
+		}
+		Close();
+	}
 }

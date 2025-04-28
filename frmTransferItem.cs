@@ -1,195 +1,373 @@
 using System;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Drawing;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
+using GCUv2.My;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
 
-namespace GCUv2
+namespace GCUv2;
+
+[DesignerGenerated]
+public class frmTransferItem : Form
 {
-    public class Form
-    {
+	private IContainer components;
 
-        private class ComponentModel.IContainer components;
-        private class Button _btnDelete;
-        private class Button _btnSave;
-        private class GCUv2.FilteredTextBox _txtQty;
-        private class Label _Label6;
-        private class ComboBox _cboItem;
-        private class Label _Label5;
-        private boolean _currentData;
-        private class GCUv2.cTransferItem[] _TransferItem;
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnDelete")]
+	private Button _btnDelete;
 
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnSave")]
+	private Button _btnSave;
 
-        protected override strict void Dispose(boolean disposing) {
+	private bool _currentData;
 
-          boolean var_1;
+	private cTransferItem[] _TransferItem;
 
-        }
+	internal virtual Button btnDelete
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnDelete;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnDelete_Click;
+			Button button = _btnDelete;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnDelete = value;
+			button = _btnDelete;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
 
-        private void InitializeComponent() {
+	internal virtual Button btnSave
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnSave;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnSave_Click;
+			Button button = _btnSave;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnSave = value;
+			button = _btnSave;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
 
+	[field: AccessedThroughProperty("txtQty")]
+	internal virtual FilteredTextBox txtQty
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-        }
+	[field: AccessedThroughProperty("Label6")]
+	internal virtual Label Label6
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-        assem override strict specialname class Button get_btnDelete() {
+	[field: AccessedThroughProperty("cboItem")]
+	internal virtual ComboBox cboItem
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-          loc_5464D7: ldarg.0
-          loc_5464D8: ldfld GCUv2.frmTransferItem::_btnDelete
-          loc_5464DD: br.s loc_5464DF
-          loc_5464DF: // Referenced from: loc_5464DD
-          loc_5464DF: ret
-        }
+	[field: AccessedThroughProperty("Label5")]
+	internal virtual Label Label5
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-        assem override strict specialname void set_btnDelete(class Button WithEventsValue) {
+	public cTransferItem[] TransferItem
+	{
+		get
+		{
+			return _TransferItem;
+		}
+		set
+		{
+			_TransferItem = value;
+		}
+	}
 
-          class System.EventHandler var_1;
-          class Button var_2;
+	[DebuggerNonUserCode]
+	protected override void Dispose(bool disposing)
+	{
+		try
+		{
+			if (disposing && components != null)
+			{
+				components.Dispose();
+			}
+		}
+		finally
+		{
+			base.Dispose(disposing);
+		}
+	}
 
-        }
+	[System.Diagnostics.DebuggerStepThrough]
+	private void InitializeComponent()
+	{
+		this.btnDelete = new System.Windows.Forms.Button();
+		this.btnSave = new System.Windows.Forms.Button();
+		this.Label6 = new System.Windows.Forms.Label();
+		this.cboItem = new System.Windows.Forms.ComboBox();
+		this.Label5 = new System.Windows.Forms.Label();
+		this.txtQty = new GCUv2.FilteredTextBox();
+		base.SuspendLayout();
+		this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnDelete.Location = new System.Drawing.Point(131, 71);
+		this.btnDelete.Name = "btnDelete";
+		this.btnDelete.Size = new System.Drawing.Size(54, 25);
+		this.btnDelete.TabIndex = 70;
+		this.btnDelete.Text = "Hapus";
+		this.btnDelete.UseVisualStyleBackColor = true;
+		this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnSave.Location = new System.Drawing.Point(65, 71);
+		this.btnSave.Name = "btnSave";
+		this.btnSave.Size = new System.Drawing.Size(59, 25);
+		this.btnSave.TabIndex = 69;
+		this.btnSave.Text = "Simpan ";
+		this.btnSave.UseVisualStyleBackColor = true;
+		this.Label6.AutoSize = true;
+		this.Label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label6.Location = new System.Drawing.Point(9, 15);
+		this.Label6.Name = "Label6";
+		this.Label6.Size = new System.Drawing.Size(41, 13);
+		this.Label6.TabIndex = 72;
+		this.Label6.Text = "Barang";
+		this.cboItem.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+		this.cboItem.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+		this.cboItem.FormattingEnabled = true;
+		this.cboItem.Location = new System.Drawing.Point(65, 12);
+		this.cboItem.Name = "cboItem";
+		this.cboItem.Size = new System.Drawing.Size(139, 21);
+		this.cboItem.TabIndex = 67;
+		this.Label5.AutoSize = true;
+		this.Label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label5.Location = new System.Drawing.Point(10, 47);
+		this.Label5.Name = "Label5";
+		this.Label5.Size = new System.Drawing.Size(40, 13);
+		this.Label5.TabIndex = 71;
+		this.Label5.Text = "Jumlah";
+		this.txtQty.AllowedCharacters = GCUv2.FilteredTextBox.InputType.All;
+		this.txtQty.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.txtQty.Location = new System.Drawing.Point(65, 39);
+		this.txtQty.Name = "txtQty";
+		this.txtQty.Size = new System.Drawing.Size(139, 26);
+		this.txtQty.TabIndex = 68;
+		this.txtQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+		base.AcceptButton = this.btnSave;
+		base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
+		base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+		base.ClientSize = new System.Drawing.Size(219, 102);
+		base.Controls.Add(this.btnDelete);
+		base.Controls.Add(this.btnSave);
+		base.Controls.Add(this.txtQty);
+		base.Controls.Add(this.Label6);
+		base.Controls.Add(this.cboItem);
+		base.Controls.Add(this.Label5);
+		base.KeyPreview = true;
+		base.MaximizeBox = false;
+		base.Name = "frmTransferItem";
+		base.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+		this.Text = "Barang - Input";
+		base.ResumeLayout(false);
+		base.PerformLayout();
+	}
 
-        assem override strict specialname class Button get_btnSave() {
+	public frmTransferItem(bool CurrentData, int StorageFromId, int StorageToId)
+	{
+		base.KeyDown += frmTransferItem_KeyDown;
+		InitializeComponent();
+		DoubleBuffered = true;
+		_currentData = CurrentData;
+		txtQty.AllowedCharacters = FilteredTextBox.InputType.NumeralsAndCurrency;
+		ComboBox combo = cboItem;
+		cCombo.getItemAll(ref combo, 99, 99, 0, 0, 0, 0, 99, 1, 0, 0, StorageFromId, StorageToId, 0.0, CanBeUsedAsGroupMember: false, Module1.pubGroupId, All: false, Active: true);
+		cboItem = combo;
+		if (_currentData)
+		{
+			btnSave.Text = "Update";
+			btnDelete.Enabled = true;
+		}
+		else
+		{
+			btnSave.Text = "Tambah";
+			btnDelete.Enabled = false;
+		}
+	}
 
-          loc_546524: ldarg.0
-          loc_546525: ldfld GCUv2.frmTransferItem::_btnSave
-          loc_54652A: br.s loc_54652C
-          loc_54652C: // Referenced from: loc_54652A
-          loc_54652C: ret
-        }
+	private void frmTransferItem_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Escape)
+		{
+			Close();
+		}
+	}
 
-        assem override strict specialname void set_btnSave(class Button WithEventsValue) {
+	private void btnSave_Click(object sender, EventArgs e)
+	{
+		int try0001_dispatch = -1;
+		int num2 = default(int);
+		int itemId = default(int);
+		double qty = default(double);
+		bool flag = default(bool);
+		int num = default(int);
+		while (true)
+		{
+			try
+			{
+				/*Note: ILSpy has introduced the following switch to emulate a goto from catch-block to try-block*/;
+				checked
+				{
+					switch (try0001_dispatch)
+					{
+					default:
+					{
+						ProjectData.ClearProjectError();
+						num2 = 2;
+						cComboItem cComboItem2 = (cComboItem)cboItem.SelectedItem;
+						cComboItem cComboItem3 = (cComboItem)MyProject.Forms.frmTransfer.cboStorageFrom.SelectedItem;
+						cComboItem cComboItem4 = (cComboItem)MyProject.Forms.frmTransfer.cboStorageTo.SelectedItem;
+						if (cboItem.SelectedIndex == -1)
+						{
+							Interaction.MsgBox("Pilih barang", MsgBoxStyle.Information);
+							cboItem.Focus();
+							goto end_IL_0001;
+						}
+						if (!Information.IsNothing(_TransferItem))
+						{
+							cTransferItem[] transferItem = _TransferItem;
+							foreach (cTransferItem cTransferItem2 in transferItem)
+							{
+								if ((double)cTransferItem2.ItemId == Conversions.ToDouble(cComboItem2.Value))
+								{
+									itemId = cTransferItem2.ItemId;
+									qty = cTransferItem2.Qty;
+									break;
+								}
+							}
+						}
+						int num3 = MyProject.Forms.frmTransfer.dgvItem.Rows.Count - 1;
+						for (int j = 0; j <= num3; j++)
+						{
+							if (Operators.ConditionalCompareObjectEqual(MyProject.Forms.frmTransfer.dgvItem[0, j].Value, cComboItem2.Value, TextCompare: false))
+							{
+								if (_currentData & (j != MyProject.Forms.frmTransfer.dgvItem.CurrentRow.Index))
+								{
+									flag = true;
+								}
+								else if (!_currentData)
+								{
+									flag = true;
+								}
+							}
+						}
+						if (flag)
+						{
+							Interaction.MsgBox(cboItem.Text + " tidak bisa dipilih karena sudah dimasukkan.", MsgBoxStyle.Information);
+							cboItem.Focus();
+							goto end_IL_0001;
+						}
+						if (Conversion.Val(Module1.unformatNumber(txtQty.Text)) == 0.0)
+						{
+							Interaction.MsgBox("Masukkan jumlah", MsgBoxStyle.Information);
+							txtQty.Focus();
+							goto end_IL_0001;
+						}
+						if (!Versioned.IsNumeric(txtQty.Text))
+						{
+							Interaction.MsgBox("Masukkan jumlah dengan format angka yang benar", MsgBoxStyle.Information);
+							txtQty.Focus();
+							goto end_IL_0001;
+						}
+						if (!cValidation.isInStock(Module1.pubCheckStock, Module1.pubBalanceDate, MyProject.Forms.frmTransfer.dtpTransfer.Value, "not_used", MyProject.Forms.frmTransfer.OriginalDate, Conversions.ToInteger(cComboItem2.Value), itemId, Conversions.ToDouble(txtQty.Text), qty, Conversions.ToInteger(cComboItem3.Value), MyProject.Forms.frmTransfer.OriginalStorageId, Module1.pubGroupId, 2))
+						{
+							Interaction.MsgBox("Stok tidak tersedia", MsgBoxStyle.Information);
+							txtQty.Focus();
+							goto end_IL_0001;
+						}
+						if (_currentData)
+						{
+							MyProject.Forms.frmTransfer.dgvItem[0, MyProject.Forms.frmTransfer.dgvItem.CurrentRow.Index].Value = cComboItem2.Value;
+							MyProject.Forms.frmTransfer.dgvItem[1, MyProject.Forms.frmTransfer.dgvItem.CurrentRow.Index].Value = cboItem.Text;
+							MyProject.Forms.frmTransfer.dgvItem[2, MyProject.Forms.frmTransfer.dgvItem.CurrentRow.Index].Value = Module1.formatCustomDecimal(txtQty.Text, 3);
+						}
+						else
+						{
+							MyProject.Forms.frmTransfer.dgvItem.Rows.Add(cComboItem2.Value, cboItem.Text, Module1.formatCustomDecimal(txtQty.Text, 3));
+							MyProject.Forms.frmTransfer.dgvItem.CurrentRow.Selected = false;
+						}
+						MyProject.Forms.frmTransfer.Edited = true;
+						Close();
+						goto end_IL_0001;
+					}
+					case 1116:
+						num = -1;
+						switch (num2)
+						{
+						case 2:
+							Module1.SaveError(Information.Err(), "frmTransferItem", "btnSave_Click", "");
+							goto end_IL_0001;
+						}
+						break;
+					}
+				}
+			}
+			catch (object obj) when (obj is Exception && num2 != 0 && num == 0)
+			{
+				ProjectData.SetProjectError((Exception)obj);
+				try0001_dispatch = 1116;
+				continue;
+			}
+			throw ProjectData.CreateProjectError(-2146828237);
+			continue;
+			end_IL_0001:
+			break;
+		}
+		if (num != 0)
+		{
+			ProjectData.ClearProjectError();
+		}
+	}
 
-          class System.EventHandler var_1;
-          class Button var_2;
-
-        }
-
-        assem override strict specialname class GCUv2.FilteredTextBox get_txtQty() {
-
-          loc_546574: ldarg.0
-          loc_546575: ldfld GCUv2.frmTransferItem::_txtQty
-          loc_54657A: br.s loc_54657C
-          loc_54657C: // Referenced from: loc_54657A
-          loc_54657C: ret
-        }
-
-        assem override strict specialname void set_txtQty(class GCUv2.FilteredTextBox WithEventsValue) {
-
-          loc_54657E: ldarg.0
-          loc_54657F: ldarg.1
-          loc_546580: stfld GCUv2.frmTransferItem::_txtQty
-          loc_546585: ret
-        }
-
-        assem override strict specialname class Label get_Label6() {
-
-          loc_546587: ldarg.0
-          loc_546588: ldfld GCUv2.frmTransferItem::_Label6
-          loc_54658D: br.s loc_54658F
-          loc_54658F: // Referenced from: loc_54658D
-          loc_54658F: ret
-        }
-
-        assem override strict specialname void set_Label6(class Label WithEventsValue) {
-
-          loc_546591: ldarg.0
-          loc_546592: ldarg.1
-          loc_546593: stfld GCUv2.frmTransferItem::_Label6
-          loc_546598: ret
-        }
-
-        assem override strict specialname class ComboBox get_cboItem() {
-
-          loc_54659A: ldarg.0
-          loc_54659B: ldfld GCUv2.frmTransferItem::_cboItem
-          loc_5465A0: br.s loc_5465A2
-          loc_5465A2: // Referenced from: loc_5465A0
-          loc_5465A2: ret
-        }
-
-        assem override strict specialname void set_cboItem(class ComboBox WithEventsValue) {
-
-          loc_5465A4: ldarg.0
-          loc_5465A5: ldarg.1
-          loc_5465A6: stfld GCUv2.frmTransferItem::_cboItem
-          loc_5465AB: ret
-        }
-
-        assem override strict specialname class Label get_Label5() {
-
-          loc_5465AD: ldarg.0
-          loc_5465AE: ldfld GCUv2.frmTransferItem::_Label5
-          loc_5465B3: br.s loc_5465B5
-          loc_5465B5: // Referenced from: loc_5465B3
-          loc_5465B5: ret
-        }
-
-        assem override strict specialname void set_Label5(class Label WithEventsValue) {
-
-          loc_5465B7: ldarg.0
-          loc_5465B8: ldarg.1
-          loc_5465B9: stfld GCUv2.frmTransferItem::_Label5
-          loc_5465BE: ret
-        }
-
-        public specialname class GCUv2.cTransferItem[] get_TransferItem() {
-
-          class GCUv2.cTransferItem[] var_1;
-
-        }
-
-        public specialname void set_TransferItem(class GCUv2.cTransferItem[] value) {
-
-          loc_5465D9: nop
-          loc_5465DA: ldarg.0
-          loc_5465DB: ldarg.1
-          loc_5465DC: stfld GCUv2.frmTransferItem::_TransferItem
-          loc_5465E1: ret
-        }
-
-        public void frmTransferItem(boolean CurrentData, int32 StorageFromId, int32 StorageToId) {
-
-          class ComboBox var_1;
-          boolean var_2;
-
-        }
-
-        private void frmTransferItem_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void btnSave_Click(object sender, class System.EventArgs e) {
-
-          int32 num_1;
-          int32 num_2;
-          class GCUv2.cComboItem var_1;
-          class GCUv2.cComboItem var_2;
-          class GCUv2.cComboItem var_3;
-          double flt_1;
-          int32 num_3;
-          int32 num_4;
-          boolean var_4;
-          boolean var_5;
-          boolean var_6;
-          class GCUv2.cTransferItem[] var_7;
-          int32 num_5;
-          class GCUv2.cTransferItem var_8;
-          boolean var_9;
-          boolean var_10;
-          int32 num_6;
-          boolean var_11;
-          boolean var_12;
-          boolean var_13;
-          boolean var_14;
-          boolean var_15;
-          boolean var_16;
-          boolean var_17;
-          boolean var_18;
-
-        }
-
-        private void btnDelete_Click(object sender, class System.EventArgs e) {
-
-
-        }
-
-    }
+	private void btnDelete_Click(object sender, EventArgs e)
+	{
+		MyProject.Forms.frmTransfer.dgvItem.Rows.RemoveAt(MyProject.Forms.frmTransfer.dgvItem.CurrentRow.Index);
+		MyProject.Forms.frmTransfer.Edited = true;
+		Close();
+	}
 }

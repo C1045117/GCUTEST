@@ -1,220 +1,350 @@
 using System;
+using System.ComponentModel;
+using System.Data;
+using System.Diagnostics;
+using System.Drawing;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
+using GCUv2.My;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
 
-namespace GCUv2
+namespace GCUv2;
+
+[DesignerGenerated]
+public class frmSettingAdjustmentTypeList : Form
 {
-    public class Form
-    {
+	private IContainer components;
 
-        private class ComponentModel.IContainer components;
-        private class DataGridView _dgvList;
-        private class ToolStrip _ToolStrip1;
-        private class ToolStripButton _tsbNew;
-        private class ToolStripButton _tsbDelete;
-        private class ToolStripButton _tsbRefresh;
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("dgvList")]
+	private DataGridView _dgvList;
 
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("tsbNew")]
+	private ToolStripButton _tsbNew;
 
-        public void frmSettingAdjustmentTypeList() {
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("tsbDelete")]
+	private ToolStripButton _tsbDelete;
 
-          loc_5388A1: ldarg.0
-          loc_5388A2: call instance void System.Windows.Forms.Form::.ctor()
-          loc_5388A7: ldarg.0
-          loc_5388A8: ldarg.0
-          loc_5388A9: ldftn instance void GCUv2.frmSettingAdjustmentTypeList::frmSettingAdjustmentTypeList_KeyDown(object, class KeyEventArgs)
-          loc_5388AF: newobj instance void System.Windows.Forms.KeyEventHandler::.ctor(object, System.IntPtr)
-          loc_5388B4: call instance void System.Windows.Forms.Control::add_KeyDown(class KeyEventHandler)
-          loc_5388B9: ldarg.0
-          loc_5388BA: ldarg.0
-          loc_5388BB: ldftn instance void GCUv2.frmSettingAdjustmentTypeList::frmAdjustmentTypeList_Load(object, class System.EventArgs)
-          loc_5388C1: newobj instance void System.EventHandler::.ctor(object, System.IntPtr)
-          loc_5388C6: call instance void System.Windows.Forms.Form::add_Load(class System.EventHandler)
-          loc_5388CB: ldarg.0
-          loc_5388CC: call instance void GCUv2.frmSettingAdjustmentTypeList::InitializeComponent()
-          loc_5388D1: ret
-        }
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("tsbRefresh")]
+	private ToolStripButton _tsbRefresh;
 
-        protected override strict void Dispose(boolean disposing) {
+	internal virtual DataGridView dgvList
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _dgvList;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = dgvList_DoubleClick;
+			KeyEventHandler value3 = dgvList_KeyDown;
+			DataGridView dataGridView = _dgvList;
+			if (dataGridView != null)
+			{
+				dataGridView.DoubleClick -= value2;
+				dataGridView.KeyDown -= value3;
+			}
+			_dgvList = value;
+			dataGridView = _dgvList;
+			if (dataGridView != null)
+			{
+				dataGridView.DoubleClick += value2;
+				dataGridView.KeyDown += value3;
+			}
+		}
+	}
 
-          boolean var_1;
+	[field: AccessedThroughProperty("ToolStrip1")]
+	internal virtual ToolStrip ToolStrip1
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-        }
+	internal virtual ToolStripButton tsbNew
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _tsbNew;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = ToolStripButton1_Click;
+			ToolStripButton toolStripButton = _tsbNew;
+			if (toolStripButton != null)
+			{
+				toolStripButton.Click -= value2;
+			}
+			_tsbNew = value;
+			toolStripButton = _tsbNew;
+			if (toolStripButton != null)
+			{
+				toolStripButton.Click += value2;
+			}
+		}
+	}
 
-        private void InitializeComponent() {
+	internal virtual ToolStripButton tsbDelete
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _tsbDelete;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = tsbDelete_Click;
+			ToolStripButton toolStripButton = _tsbDelete;
+			if (toolStripButton != null)
+			{
+				toolStripButton.Click -= value2;
+			}
+			_tsbDelete = value;
+			toolStripButton = _tsbDelete;
+			if (toolStripButton != null)
+			{
+				toolStripButton.Click += value2;
+			}
+		}
+	}
 
-          class ComponentModel.ComponentResourceManager var_1;
+	internal virtual ToolStripButton tsbRefresh
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _tsbRefresh;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = tsbRefresh_Click;
+			ToolStripButton toolStripButton = _tsbRefresh;
+			if (toolStripButton != null)
+			{
+				toolStripButton.Click -= value2;
+			}
+			_tsbRefresh = value;
+			toolStripButton = _tsbRefresh;
+			if (toolStripButton != null)
+			{
+				toolStripButton.Click += value2;
+			}
+		}
+	}
 
-        }
+	public frmSettingAdjustmentTypeList()
+	{
+		base.KeyDown += frmSettingAdjustmentTypeList_KeyDown;
+		base.Load += frmAdjustmentTypeList_Load;
+		InitializeComponent();
+	}
 
-        assem override strict specialname class DataGridView get_dgvList() {
+	[DebuggerNonUserCode]
+	protected override void Dispose(bool disposing)
+	{
+		try
+		{
+			if (disposing && components != null)
+			{
+				components.Dispose();
+			}
+		}
+		finally
+		{
+			base.Dispose(disposing);
+		}
+	}
 
-          loc_538CC0: ldarg.0
-          loc_538CC1: ldfld GCUv2.frmSettingAdjustmentTypeList::_dgvList
-          loc_538CC6: br.s loc_538CC8
-          loc_538CC8: // Referenced from: loc_538CC6
-          loc_538CC8: ret
-        }
+	[System.Diagnostics.DebuggerStepThrough]
+	private void InitializeComponent()
+	{
+		System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GCUv2.frmSettingAdjustmentTypeList));
+		this.dgvList = new System.Windows.Forms.DataGridView();
+		this.ToolStrip1 = new System.Windows.Forms.ToolStrip();
+		this.tsbNew = new System.Windows.Forms.ToolStripButton();
+		this.tsbDelete = new System.Windows.Forms.ToolStripButton();
+		this.tsbRefresh = new System.Windows.Forms.ToolStripButton();
+		((System.ComponentModel.ISupportInitialize)this.dgvList).BeginInit();
+		this.ToolStrip1.SuspendLayout();
+		base.SuspendLayout();
+		this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+		this.dgvList.Location = new System.Drawing.Point(12, 72);
+		this.dgvList.Name = "dgvList";
+		this.dgvList.Size = new System.Drawing.Size(326, 186);
+		this.dgvList.TabIndex = 4;
+		this.ToolStrip1.AutoSize = false;
+		this.ToolStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
+		this.ToolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[3] { this.tsbNew, this.tsbDelete, this.tsbRefresh });
+		this.ToolStrip1.Location = new System.Drawing.Point(0, 0);
+		this.ToolStrip1.Name = "ToolStrip1";
+		this.ToolStrip1.Size = new System.Drawing.Size(353, 60);
+		this.ToolStrip1.TabIndex = 5;
+		this.ToolStrip1.Text = "ToolStrip1";
+		this.tsbNew.Image = (System.Drawing.Image)resources.GetObject("tsbNew.Image");
+		this.tsbNew.ImageTransparentColor = System.Drawing.Color.Magenta;
+		this.tsbNew.Name = "tsbNew";
+		this.tsbNew.Size = new System.Drawing.Size(55, 57);
+		this.tsbNew.Text = "&Tambah";
+		this.tsbNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+		this.tsbDelete.Image = (System.Drawing.Image)resources.GetObject("tsbDelete.Image");
+		this.tsbDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
+		this.tsbDelete.Name = "tsbDelete";
+		this.tsbDelete.Size = new System.Drawing.Size(45, 57);
+		this.tsbDelete.Text = "&Hapus";
+		this.tsbDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+		this.tsbDelete.ToolTipText = "Hapus";
+		this.tsbRefresh.Image = (System.Drawing.Image)resources.GetObject("tsbRefresh.Image");
+		this.tsbRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+		this.tsbRefresh.Name = "tsbRefresh";
+		this.tsbRefresh.Size = new System.Drawing.Size(50, 57);
+		this.tsbRefresh.Text = "&Refresh";
+		this.tsbRefresh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+		base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
+		base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+		base.ClientSize = new System.Drawing.Size(353, 270);
+		base.Controls.Add(this.ToolStrip1);
+		base.Controls.Add(this.dgvList);
+		base.KeyPreview = true;
+		base.MaximizeBox = false;
+		base.Name = "frmSettingAdjustmentTypeList";
+		base.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+		this.Text = "Setting - Tipe Penyesuaian";
+		((System.ComponentModel.ISupportInitialize)this.dgvList).EndInit();
+		this.ToolStrip1.ResumeLayout(false);
+		this.ToolStrip1.PerformLayout();
+		base.ResumeLayout(false);
+	}
 
-        assem override strict specialname void set_dgvList(class DataGridView WithEventsValue) {
+	private void frmSettingAdjustmentTypeList_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Escape)
+		{
+			Close();
+		}
+		else if (e.KeyCode == Keys.F2)
+		{
+			tsbNew.PerformClick();
+		}
+		else if (e.KeyCode == Keys.F5)
+		{
+			tsbRefresh.PerformClick();
+		}
+	}
 
-          class System.EventHandler var_1;
-          class KeyEventHandler var_2;
-          class DataGridView var_3;
+	private void frmAdjustmentTypeList_Load(object sender, EventArgs e)
+	{
+		getAdjustmentTypes();
+	}
 
-        }
+	public void getAdjustmentTypes()
+	{
+		string strSql = " SELECT adjtypeId, adjtypeName as 'Tipe Penyesuaian' FROM adjustment_types ORDER BY adjtypeName ";
+		DataTable dataTable = new DataTable();
+		dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+		dgvList.DataSource = dataTable;
+		dgvList.Columns[0].Visible = false;
+		dgvList.Columns[1].Width = 300;
+		dgvList.RowHeadersVisible = false;
+		dgvList.AllowUserToAddRows = false;
+		dgvList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+		dgvList.MultiSelect = false;
+		dgvList.ReadOnly = true;
+		dgvList.AllowUserToResizeRows = false;
+	}
 
-        assem override strict specialname class ToolStrip get_ToolStrip1() {
+	private void dgvList_DoubleClick(object sender, EventArgs e)
+	{
+		openSelection();
+	}
 
-          loc_538D2B: ldarg.0
-          loc_538D2C: ldfld GCUv2.frmSettingAdjustmentTypeList::_ToolStrip1
-          loc_538D31: br.s loc_538D33
-          loc_538D33: // Referenced from: loc_538D31
-          loc_538D33: ret
-        }
+	private void ToolStripButton1_Click(object sender, EventArgs e)
+	{
+		MyProject.Forms.frmSettingAdjustmentTypeInput.ShowDialog();
+		MyProject.Forms.frmSettingAdjustmentTypeInput.Close();
+		MyProject.Forms.frmSettingAdjustmentTypeInput.Dispose();
+	}
 
-        assem override strict specialname void set_ToolStrip1(class ToolStrip WithEventsValue) {
+	private void openSelection()
+	{
+		MyProject.Forms.frmSettingAdjustmentTypeInput.intAdjtypeId = Conversions.ToInteger(dgvList[0, dgvList.CurrentRow.Index].Value);
+		string text = Conversions.ToString(dgvList[1, dgvList.CurrentRow.Index].Value);
+		MyProject.Forms.frmSettingAdjustmentTypeInput.txtName.Text = text;
+		MyProject.Forms.frmSettingAdjustmentTypeInput.ShowDialog();
+		MyProject.Forms.frmSettingAdjustmentTypeInput.Close();
+		MyProject.Forms.frmSettingAdjustmentTypeInput.Dispose();
+	}
 
-          loc_538D35: ldarg.0
-          loc_538D36: ldarg.1
-          loc_538D37: stfld GCUv2.frmSettingAdjustmentTypeList::_ToolStrip1
-          loc_538D3C: ret
-        }
+	private void dgvList_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Return)
+		{
+			openSelection();
+			e.SuppressKeyPress = true;
+		}
+		else if (e.KeyCode == Keys.Add)
+		{
+			tsbNew.PerformClick();
+		}
+		else if (e.KeyCode == Keys.Subtract)
+		{
+			tsbDelete.PerformClick();
+		}
+		else if (e.KeyCode == Keys.Delete)
+		{
+			tsbDelete.PerformClick();
+			e.SuppressKeyPress = true;
+		}
+		else if (e.KeyCode == Keys.Tab)
+		{
+			e.SuppressKeyPress = true;
+		}
+		else if (e.Shift & (e.KeyCode == Keys.Tab))
+		{
+			e.SuppressKeyPress = true;
+		}
+	}
 
-        assem override strict specialname class ToolStripButton get_tsbNew() {
+	private void tsbDelete_Click(object sender, EventArgs e)
+	{
+		int num = Conversions.ToInteger(dgvList[0, dgvList.CurrentRow.Index].Value);
+		string text = Conversions.ToString(dgvList[1, dgvList.CurrentRow.Index].Value);
+		int num2 = (int)Interaction.MsgBox("Hapus tipe " + text + "?", MsgBoxStyle.YesNo, "Hapus tipe penyesuaian");
+		if (num2 == 6)
+		{
+			string strSql = " SELECT * FROM adjustments WHERE adjCategory = " + Conversions.ToString(num);
+			DataTable dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+			if (dataTable.Rows.Count > 0)
+			{
+				Interaction.MsgBox("Tipe " + text + " tidak bisa dihapus karena sudah pernah dipakai", MsgBoxStyle.Information);
+				return;
+			}
+			strSql = " DELETE FROM adjustment_types WHERE adjtypeId = " + Conversions.ToString(num);
+			Module1.sqlNonQuery(strSql, "data");
+			Interaction.MsgBox("Tipe " + text + " berhasil dihapus", MsgBoxStyle.Information);
+			getAdjustmentTypes();
+		}
+	}
 
-          loc_538D3E: ldarg.0
-          loc_538D3F: ldfld GCUv2.frmSettingAdjustmentTypeList::_tsbNew
-          loc_538D44: br.s loc_538D46
-          loc_538D46: // Referenced from: loc_538D44
-          loc_538D46: ret
-        }
-
-        assem override strict specialname void set_tsbNew(class ToolStripButton WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class ToolStripButton var_2;
-
-        }
-
-        assem override strict specialname class ToolStripButton get_tsbDelete() {
-
-          loc_538D8C: ldarg.0
-          loc_538D8D: ldfld GCUv2.frmSettingAdjustmentTypeList::_tsbDelete
-          loc_538D92: br.s loc_538D94
-          loc_538D94: // Referenced from: loc_538D92
-          loc_538D94: ret
-        }
-
-        assem override strict specialname void set_tsbDelete(class ToolStripButton WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class ToolStripButton var_2;
-
-        }
-
-        assem override strict specialname class ToolStripButton get_tsbRefresh() {
-
-          loc_538DDC: ldarg.0
-          loc_538DDD: ldfld GCUv2.frmSettingAdjustmentTypeList::_tsbRefresh
-          loc_538DE2: br.s loc_538DE4
-          loc_538DE4: // Referenced from: loc_538DE2
-          loc_538DE4: ret
-        }
-
-        assem override strict specialname void set_tsbRefresh(class ToolStripButton WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class ToolStripButton var_2;
-
-        }
-
-        private void frmSettingAdjustmentTypeList_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-          boolean var_2;
-          boolean var_3;
-
-        }
-
-        private void frmAdjustmentTypeList_Load(object sender, class System.EventArgs e) {
-
-          loc_538E8B: nop
-          loc_538E8C: ldarg.0
-          loc_538E8D: call instance void GCUv2.frmSettingAdjustmentTypeList::getAdjustmentTypes()
-          loc_538E92: nop
-          loc_538E93: ret
-        }
-
-        public void getAdjustmentTypes() {
-
-          string str_1;
-          class DataTable var_1;
-
-        }
-
-        private void dgvList_DoubleClick(object sender, class System.EventArgs e) {
-
-          loc_538F4B: nop
-          loc_538F4C: ldarg.0
-          loc_538F4D: call instance void GCUv2.frmSettingAdjustmentTypeList::openSelection()
-          loc_538F52: nop
-          loc_538F53: ret
-        }
-
-        private void ToolStripButton1_Click(object sender, class System.EventArgs e) {
-
-          loc_538F55: nop
-          loc_538F56: call class MyForms GCUv2.My.MyProject::get_Forms()
-          loc_538F5B: callvirt instance class GCUv2.frmSettingAdjustmentTypeInput GCUv2.frmSettingAdjustmentTypeList/MyForms::get_frmSettingAdjustmentTypeInput()
-          loc_538F60: callvirt instance valuetype DialogResult System.Windows.Forms.Form::ShowDialog()
-          loc_538F65: pop
-          loc_538F66: call class MyForms GCUv2.My.MyProject::get_Forms()
-          loc_538F6B: callvirt instance class GCUv2.frmSettingAdjustmentTypeInput GCUv2.frmSettingAdjustmentTypeList/MyForms::get_frmSettingAdjustmentTypeInput()
-          loc_538F70: callvirt instance void System.Windows.Forms.Form::Close()
-          loc_538F75: nop
-          loc_538F76: call class MyForms GCUv2.My.MyProject::get_Forms()
-          loc_538F7B: callvirt instance class GCUv2.frmSettingAdjustmentTypeInput GCUv2.frmSettingAdjustmentTypeList/MyForms::get_frmSettingAdjustmentTypeInput()
-          loc_538F80: callvirt instance void System.ComponentModel.Component::Dispose()
-          loc_538F85: nop
-          loc_538F86: ret
-        }
-
-        private void openSelection() {
-
-          string str_1;
-
-        }
-
-        private void dgvList_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-          boolean var_2;
-          boolean var_3;
-          boolean var_4;
-          boolean var_5;
-          boolean var_6;
-
-        }
-
-        private void tsbDelete_Click(object sender, class System.EventArgs e) {
-
-          int32 num_1;
-          string str_1;
-          string str_2;
-          int32 num_2;
-          boolean var_1;
-          class DataTable var_2;
-          boolean var_3;
-
-        }
-
-        private void tsbRefresh_Click(object sender, class System.EventArgs e) {
-
-          loc_538E8B: nop
-          loc_538E8C: ldarg.0
-          loc_538E8D: call instance void GCUv2.frmSettingAdjustmentTypeList::getAdjustmentTypes()
-          loc_538E92: nop
-          loc_538E93: ret
-        }
-
-    }
+	private void tsbRefresh_Click(object sender, EventArgs e)
+	{
+		getAdjustmentTypes();
+	}
 }

@@ -1,131 +1,167 @@
 using System;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Drawing;
+using System.Globalization;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
+using GCUv2.My;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
 
-namespace GCUv2
+namespace GCUv2;
+
+[DesignerGenerated]
+public class frmSettingGroupInput : Form
 {
-    public class Form
-    {
+	private IContainer components;
 
-        private class ComponentModel.IContainer components;
-        private class Button _btnSave;
-        private class TextBox _txtName;
-        private class Label _Label1;
-        public int32 CurrentId;
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnSave")]
+	private Button _btnSave;
 
+	public int CurrentId;
 
-        public void frmSettingGroupInput() {
+	internal virtual Button btnSave
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnSave;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnSave_Click;
+			Button button = _btnSave;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnSave = value;
+			button = _btnSave;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
 
-          loc_4EEDE2: ldarg.0
-          loc_4EEDE3: call instance void System.Windows.Forms.Form::.ctor()
-          loc_4EEDE8: ldarg.0
-          loc_4EEDE9: ldarg.0
-          loc_4EEDEA: ldftn instance void GCUv2.frmSettingGroupInput::frmSettingGroupInput_KeyDown(object, class KeyEventArgs)
-          loc_4EEDF0: newobj instance void System.Windows.Forms.KeyEventHandler::.ctor(object, System.IntPtr)
-          loc_4EEDF5: call instance void System.Windows.Forms.Control::add_KeyDown(class KeyEventHandler)
-          loc_4EEDFA: ldarg.0
-          loc_4EEDFB: ldarg.0
-          loc_4EEDFC: ldftn instance void GCUv2.frmSettingGroupInput::frmSettingGroupInput_Load(object, class System.EventArgs)
-          loc_4EEE02: newobj instance void System.EventHandler::.ctor(object, System.IntPtr)
-          loc_4EEE07: call instance void System.Windows.Forms.Form::add_Load(class System.EventHandler)
-          loc_4EEE0C: ldarg.0
-          loc_4EEE0D: call instance void GCUv2.frmSettingGroupInput::InitializeComponent()
-          loc_4EEE12: ret
-        }
+	[field: AccessedThroughProperty("txtName")]
+	internal virtual TextBox txtName
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-        protected override strict void Dispose(boolean disposing) {
+	[field: AccessedThroughProperty("Label1")]
+	internal virtual Label Label1
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-          boolean var_1;
+	public frmSettingGroupInput()
+	{
+		base.KeyDown += frmSettingGroupInput_KeyDown;
+		base.Load += frmSettingGroupInput_Load;
+		InitializeComponent();
+	}
 
-        }
+	[DebuggerNonUserCode]
+	protected override void Dispose(bool disposing)
+	{
+		try
+		{
+			if (disposing && components != null)
+			{
+				components.Dispose();
+			}
+		}
+		finally
+		{
+			base.Dispose(disposing);
+		}
+	}
 
-        private void InitializeComponent() {
+	[System.Diagnostics.DebuggerStepThrough]
+	private void InitializeComponent()
+	{
+		this.btnSave = new System.Windows.Forms.Button();
+		this.txtName = new System.Windows.Forms.TextBox();
+		this.Label1 = new System.Windows.Forms.Label();
+		base.SuspendLayout();
+		this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnSave.Location = new System.Drawing.Point(78, 38);
+		this.btnSave.Name = "btnSave";
+		this.btnSave.Size = new System.Drawing.Size(92, 24);
+		this.btnSave.TabIndex = 11;
+		this.btnSave.Text = "Simpan && Tutup";
+		this.btnSave.UseVisualStyleBackColor = true;
+		this.txtName.Location = new System.Drawing.Point(78, 12);
+		this.txtName.Name = "txtName";
+		this.txtName.Size = new System.Drawing.Size(141, 20);
+		this.txtName.TabIndex = 10;
+		this.Label1.AutoSize = true;
+		this.Label1.Location = new System.Drawing.Point(11, 15);
+		this.Label1.Name = "Label1";
+		this.Label1.Size = new System.Drawing.Size(61, 13);
+		this.Label1.TabIndex = 9;
+		this.Label1.Text = "Nama Grup";
+		base.AcceptButton = this.btnSave;
+		base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
+		base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+		base.ClientSize = new System.Drawing.Size(252, 74);
+		base.Controls.Add(this.btnSave);
+		base.Controls.Add(this.txtName);
+		base.Controls.Add(this.Label1);
+		base.KeyPreview = true;
+		base.MaximizeBox = false;
+		base.Name = "frmSettingGroupInput";
+		base.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+		this.Text = "Grup Baru";
+		base.ResumeLayout(false);
+		base.PerformLayout();
+	}
 
+	private void btnSave_Click(object sender, EventArgs e)
+	{
+		string text = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtName.Text);
+		if (Operators.CompareString(text, "", TextCompare: false) == 0)
+		{
+			Interaction.MsgBox("Masukkan nama grup.", MsgBoxStyle.Information);
+			txtName.Focus();
+			return;
+		}
+		if (cGroup.NameIsUsed(CurrentId, text))
+		{
+			Interaction.MsgBox("Nama grup sudah dipakai. Masukkan nama lain.", MsgBoxStyle.Information);
+			txtName.Focus();
+			return;
+		}
+		cGroup.SaveGroupName(CurrentId, Module1.cleanString(text));
+		Interaction.MsgBox("Grup berhasil disimpan.", MsgBoxStyle.Information);
+		frmSettingGroup obj = MyProject.Forms.frmSettingGroup;
+		ComboBox combo = obj.cboGroup;
+		cCombo.getGroup(ref combo);
+		obj.cboGroup = combo;
+		MyProject.Forms.frmSettingGroup.cboGroup.Text = text;
+		Close();
+	}
 
-        }
+	private void frmSettingGroupInput_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Escape)
+		{
+			Close();
+		}
+	}
 
-        assem override strict specialname class Button get_btnSave() {
-
-          loc_4EF078: ldarg.0
-          loc_4EF079: ldfld GCUv2.frmSettingGroupInput::_btnSave
-          loc_4EF07E: br.s loc_4EF080
-          loc_4EF080: // Referenced from: loc_4EF07E
-          loc_4EF080: ret
-        }
-
-        assem override strict specialname void set_btnSave(class Button WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Button var_2;
-
-        }
-
-        assem override strict specialname class TextBox get_txtName() {
-
-          loc_4EF0C8: ldarg.0
-          loc_4EF0C9: ldfld GCUv2.frmSettingGroupInput::_txtName
-          loc_4EF0CE: br.s loc_4EF0D0
-          loc_4EF0D0: // Referenced from: loc_4EF0CE
-          loc_4EF0D0: ret
-        }
-
-        assem override strict specialname void set_txtName(class TextBox WithEventsValue) {
-
-          loc_4EF0D2: ldarg.0
-          loc_4EF0D3: ldarg.1
-          loc_4EF0D4: stfld GCUv2.frmSettingGroupInput::_txtName
-          loc_4EF0D9: ret
-        }
-
-        assem override strict specialname class Label get_Label1() {
-
-          loc_4EF0DB: ldarg.0
-          loc_4EF0DC: ldfld GCUv2.frmSettingGroupInput::_Label1
-          loc_4EF0E1: br.s loc_4EF0E3
-          loc_4EF0E3: // Referenced from: loc_4EF0E1
-          loc_4EF0E3: ret
-        }
-
-        assem override strict specialname void set_Label1(class Label WithEventsValue) {
-
-          loc_4EF0E5: ldarg.0
-          loc_4EF0E6: ldarg.1
-          loc_4EF0E7: stfld GCUv2.frmSettingGroupInput::_Label1
-          loc_4EF0EC: ret
-        }
-
-        private void btnSave_Click(object sender, class System.EventArgs e) {
-
-          string str_1;
-          boolean var_1;
-          boolean var_2;
-          class ComboBox var_3;
-
-        }
-
-        private void frmSettingGroupInput_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void frmSettingGroupInput_Load(object sender, class System.EventArgs e) {
-
-          loc_4EF1FA: nop
-          loc_4EF1FB: ldarg.0
-          loc_4EF1FC: callvirt instance class TextBox GCUv2.frmSettingGroupInput::get_txtName()
-          loc_4EF201: ldc.i4.0
-          loc_4EF202: callvirt instance void System.Windows.Forms.TextBoxBase::set_SelectionStart(int32)
-          loc_4EF207: nop
-          loc_4EF208: ldarg.0
-          loc_4EF209: callvirt instance class TextBox GCUv2.frmSettingGroupInput::get_txtName()
-          loc_4EF20E: ldarg.0
-          loc_4EF20F: callvirt instance class TextBox GCUv2.frmSettingGroupInput::get_txtName()
-          loc_4EF214: callvirt instance string System.Windows.Forms.TextBox::get_Text()
-          loc_4EF219: call int32 Microsoft.VisualBasic.Strings::Len(string)
-          loc_4EF21E: callvirt instance void System.Windows.Forms.TextBoxBase::set_SelectionLength(int32)
-          loc_4EF223: nop
-          loc_4EF224: ret
-        }
-
-    }
+	private void frmSettingGroupInput_Load(object sender, EventArgs e)
+	{
+		txtName.SelectionStart = 0;
+		txtName.SelectionLength = Strings.Len(txtName.Text);
+	}
 }

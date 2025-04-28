@@ -1,181 +1,239 @@
 using System;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Drawing;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
 
-namespace GCUv2
+namespace GCUv2;
+
+[DesignerGenerated]
+public class frmSettingChangePassword : Form
 {
-    public class Form
-    {
+	private IContainer components;
 
-        private class ComponentModel.IContainer components;
-        private class TextBox _txtPassword2;
-        private class Label _Label3;
-        private class Button _btnSaveClose;
-        private class TextBox _txtPassword;
-        private class Label _Label2;
-        private class TextBox _txtOldPassword;
-        private class Label _Label1;
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnSaveClose")]
+	private Button _btnSaveClose;
 
+	[field: AccessedThroughProperty("txtPassword2")]
+	internal virtual TextBox txtPassword2
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-        public void frmSettingChangePassword() {
+	[field: AccessedThroughProperty("Label3")]
+	internal virtual Label Label3
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-          loc_4E99C1: ldarg.0
-          loc_4E99C2: call instance void System.Windows.Forms.Form::.ctor()
-          loc_4E99C7: ldarg.0
-          loc_4E99C8: ldarg.0
-          loc_4E99C9: ldftn instance void GCUv2.frmSettingChangePassword::frmSettingChangePassword_KeyDown(object, class KeyEventArgs)
-          loc_4E99CF: newobj instance void System.Windows.Forms.KeyEventHandler::.ctor(object, System.IntPtr)
-          loc_4E99D4: call instance void System.Windows.Forms.Control::add_KeyDown(class KeyEventHandler)
-          loc_4E99D9: ldarg.0
-          loc_4E99DA: call instance void GCUv2.frmSettingChangePassword::InitializeComponent()
-          loc_4E99DF: ret
-        }
+	internal virtual Button btnSaveClose
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnSaveClose;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnSaveClose_Click;
+			Button button = _btnSaveClose;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnSaveClose = value;
+			button = _btnSaveClose;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
 
-        protected override strict void Dispose(boolean disposing) {
+	[field: AccessedThroughProperty("txtPassword")]
+	internal virtual TextBox txtPassword
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-          boolean var_1;
+	[field: AccessedThroughProperty("Label2")]
+	internal virtual Label Label2
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-        }
+	[field: AccessedThroughProperty("txtOldPassword")]
+	internal virtual TextBox txtOldPassword
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-        private void InitializeComponent() {
+	[field: AccessedThroughProperty("Label1")]
+	internal virtual Label Label1
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
+	public frmSettingChangePassword()
+	{
+		base.KeyDown += frmSettingChangePassword_KeyDown;
+		InitializeComponent();
+	}
 
-        }
+	[DebuggerNonUserCode]
+	protected override void Dispose(bool disposing)
+	{
+		try
+		{
+			if (disposing && components != null)
+			{
+				components.Dispose();
+			}
+		}
+		finally
+		{
+			base.Dispose(disposing);
+		}
+	}
 
-        assem override strict specialname class TextBox get_txtPassword2() {
+	[System.Diagnostics.DebuggerStepThrough]
+	private void InitializeComponent()
+	{
+		this.txtPassword2 = new System.Windows.Forms.TextBox();
+		this.Label3 = new System.Windows.Forms.Label();
+		this.btnSaveClose = new System.Windows.Forms.Button();
+		this.txtPassword = new System.Windows.Forms.TextBox();
+		this.Label2 = new System.Windows.Forms.Label();
+		this.txtOldPassword = new System.Windows.Forms.TextBox();
+		this.Label1 = new System.Windows.Forms.Label();
+		base.SuspendLayout();
+		this.txtPassword2.Location = new System.Drawing.Point(142, 64);
+		this.txtPassword2.MaxLength = 20;
+		this.txtPassword2.Name = "txtPassword2";
+		this.txtPassword2.PasswordChar = '*';
+		this.txtPassword2.Size = new System.Drawing.Size(139, 20);
+		this.txtPassword2.TabIndex = 2;
+		this.Label3.AutoSize = true;
+		this.Label3.Location = new System.Drawing.Point(10, 67);
+		this.Label3.Name = "Label3";
+		this.Label3.Size = new System.Drawing.Size(129, 13);
+		this.Label3.TabIndex = 137;
+		this.Label3.Text = "Konfirmasi Password Baru";
+		this.btnSaveClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnSaveClose.Location = new System.Drawing.Point(142, 90);
+		this.btnSaveClose.Name = "btnSaveClose";
+		this.btnSaveClose.Size = new System.Drawing.Size(93, 24);
+		this.btnSaveClose.TabIndex = 3;
+		this.btnSaveClose.Text = "Simpan && &Tutup";
+		this.btnSaveClose.UseVisualStyleBackColor = true;
+		this.txtPassword.Location = new System.Drawing.Point(142, 38);
+		this.txtPassword.MaxLength = 20;
+		this.txtPassword.Name = "txtPassword";
+		this.txtPassword.PasswordChar = '*';
+		this.txtPassword.Size = new System.Drawing.Size(139, 20);
+		this.txtPassword.TabIndex = 1;
+		this.Label2.AutoSize = true;
+		this.Label2.Location = new System.Drawing.Point(10, 41);
+		this.Label2.Name = "Label2";
+		this.Label2.Size = new System.Drawing.Size(78, 13);
+		this.Label2.TabIndex = 133;
+		this.Label2.Text = "Password Baru";
+		this.txtOldPassword.Location = new System.Drawing.Point(142, 12);
+		this.txtOldPassword.MaxLength = 20;
+		this.txtOldPassword.Name = "txtOldPassword";
+		this.txtOldPassword.PasswordChar = '*';
+		this.txtOldPassword.Size = new System.Drawing.Size(139, 20);
+		this.txtOldPassword.TabIndex = 0;
+		this.Label1.AutoSize = true;
+		this.Label1.Location = new System.Drawing.Point(10, 15);
+		this.Label1.Name = "Label1";
+		this.Label1.Size = new System.Drawing.Size(82, 13);
+		this.Label1.TabIndex = 139;
+		this.Label1.Text = "Password Lama";
+		base.AcceptButton = this.btnSaveClose;
+		base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
+		base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+		base.ClientSize = new System.Drawing.Size(295, 127);
+		base.Controls.Add(this.txtOldPassword);
+		base.Controls.Add(this.Label1);
+		base.Controls.Add(this.txtPassword2);
+		base.Controls.Add(this.Label3);
+		base.Controls.Add(this.btnSaveClose);
+		base.Controls.Add(this.txtPassword);
+		base.Controls.Add(this.Label2);
+		base.KeyPreview = true;
+		base.MaximizeBox = false;
+		base.Name = "frmSettingChangePassword";
+		base.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+		this.Text = "Ganti Password";
+		base.ResumeLayout(false);
+		base.PerformLayout();
+	}
 
-          loc_4E9E8A: ldarg.0
-          loc_4E9E8B: ldfld GCUv2.frmSettingChangePassword::_txtPassword2
-          loc_4E9E90: br.s loc_4E9E92
-          loc_4E9E92: // Referenced from: loc_4E9E90
-          loc_4E9E92: ret
-        }
+	private void frmSettingChangePassword_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Escape)
+		{
+			Close();
+		}
+	}
 
-        assem override strict specialname void set_txtPassword2(class TextBox WithEventsValue) {
-
-          loc_4E9E94: ldarg.0
-          loc_4E9E95: ldarg.1
-          loc_4E9E96: stfld GCUv2.frmSettingChangePassword::_txtPassword2
-          loc_4E9E9B: ret
-        }
-
-        assem override strict specialname class Label get_Label3() {
-
-          loc_4E9E9D: ldarg.0
-          loc_4E9E9E: ldfld GCUv2.frmSettingChangePassword::_Label3
-          loc_4E9EA3: br.s loc_4E9EA5
-          loc_4E9EA5: // Referenced from: loc_4E9EA3
-          loc_4E9EA5: ret
-        }
-
-        assem override strict specialname void set_Label3(class Label WithEventsValue) {
-
-          loc_4E9EA7: ldarg.0
-          loc_4E9EA8: ldarg.1
-          loc_4E9EA9: stfld GCUv2.frmSettingChangePassword::_Label3
-          loc_4E9EAE: ret
-        }
-
-        assem override strict specialname class Button get_btnSaveClose() {
-
-          loc_4E9EB0: ldarg.0
-          loc_4E9EB1: ldfld GCUv2.frmSettingChangePassword::_btnSaveClose
-          loc_4E9EB6: br.s loc_4E9EB8
-          loc_4E9EB8: // Referenced from: loc_4E9EB6
-          loc_4E9EB8: ret
-        }
-
-        assem override strict specialname void set_btnSaveClose(class Button WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Button var_2;
-
-        }
-
-        assem override strict specialname class TextBox get_txtPassword() {
-
-          loc_4E9F00: ldarg.0
-          loc_4E9F01: ldfld GCUv2.frmSettingChangePassword::_txtPassword
-          loc_4E9F06: br.s loc_4E9F08
-          loc_4E9F08: // Referenced from: loc_4E9F06
-          loc_4E9F08: ret
-        }
-
-        assem override strict specialname void set_txtPassword(class TextBox WithEventsValue) {
-
-          loc_4E9F0A: ldarg.0
-          loc_4E9F0B: ldarg.1
-          loc_4E9F0C: stfld GCUv2.frmSettingChangePassword::_txtPassword
-          loc_4E9F11: ret
-        }
-
-        assem override strict specialname class Label get_Label2() {
-
-          loc_4E9F13: ldarg.0
-          loc_4E9F14: ldfld GCUv2.frmSettingChangePassword::_Label2
-          loc_4E9F19: br.s loc_4E9F1B
-          loc_4E9F1B: // Referenced from: loc_4E9F19
-          loc_4E9F1B: ret
-        }
-
-        assem override strict specialname void set_Label2(class Label WithEventsValue) {
-
-          loc_4E9F1D: ldarg.0
-          loc_4E9F1E: ldarg.1
-          loc_4E9F1F: stfld GCUv2.frmSettingChangePassword::_Label2
-          loc_4E9F24: ret
-        }
-
-        assem override strict specialname class TextBox get_txtOldPassword() {
-
-          loc_4E9F26: ldarg.0
-          loc_4E9F27: ldfld GCUv2.frmSettingChangePassword::_txtOldPassword
-          loc_4E9F2C: br.s loc_4E9F2E
-          loc_4E9F2E: // Referenced from: loc_4E9F2C
-          loc_4E9F2E: ret
-        }
-
-        assem override strict specialname void set_txtOldPassword(class TextBox WithEventsValue) {
-
-          loc_4E9F30: ldarg.0
-          loc_4E9F31: ldarg.1
-          loc_4E9F32: stfld GCUv2.frmSettingChangePassword::_txtOldPassword
-          loc_4E9F37: ret
-        }
-
-        assem override strict specialname class Label get_Label1() {
-
-          loc_4E9F39: ldarg.0
-          loc_4E9F3A: ldfld GCUv2.frmSettingChangePassword::_Label1
-          loc_4E9F3F: br.s loc_4E9F41
-          loc_4E9F41: // Referenced from: loc_4E9F3F
-          loc_4E9F41: ret
-        }
-
-        assem override strict specialname void set_Label1(class Label WithEventsValue) {
-
-          loc_4E9F43: ldarg.0
-          loc_4E9F44: ldarg.1
-          loc_4E9F45: stfld GCUv2.frmSettingChangePassword::_Label1
-          loc_4E9F4A: ret
-        }
-
-        private void frmSettingChangePassword_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void btnSaveClose_Click(object sender, class System.EventArgs e) {
-
-          class GCUv2.cUser var_1;
-          class GCUv2.cHistory var_2;
-          boolean var_3;
-          boolean var_4;
-          boolean var_5;
-          boolean var_6;
-          boolean var_7;
-
-        }
-
-    }
+	private void btnSaveClose_Click(object sender, EventArgs e)
+	{
+		if (Operators.CompareString(txtOldPassword.Text, "", TextCompare: false) == 0)
+		{
+			Interaction.MsgBox("Masukkan password lama.", MsgBoxStyle.Information);
+			txtOldPassword.Focus();
+			return;
+		}
+		if (Operators.CompareString(txtPassword.Text, "", TextCompare: false) == 0)
+		{
+			Interaction.MsgBox("Masukkan password", MsgBoxStyle.Information);
+			txtPassword.Focus();
+			return;
+		}
+		if (Operators.CompareString(txtPassword2.Text, "", TextCompare: false) == 0)
+		{
+			Interaction.MsgBox("Masukkan konfirmasi password", MsgBoxStyle.Information);
+			txtPassword2.Focus();
+			return;
+		}
+		if (Operators.CompareString(txtPassword.Text, txtPassword2.Text, TextCompare: false) != 0)
+		{
+			Interaction.MsgBox("Konfirmasi password tidak sesuai", MsgBoxStyle.Information);
+			txtPassword2.Focus();
+			return;
+		}
+		cUser cUser2 = new cUser(Module1.pubUserId);
+		if (Operators.CompareString(txtOldPassword.Text, cUser2.Password, TextCompare: false) != 0)
+		{
+			Interaction.MsgBox("Password lama yang anda masukkan salah.", MsgBoxStyle.Information);
+			txtOldPassword.Focus();
+			return;
+		}
+		cUser2.Password = txtPassword.Text;
+		cUser2.Save();
+		cHistory cHistory2 = new cHistory();
+		cHistory2.Content = "Ganti password dari '" + txtOldPassword.Text + "' ke '" + txtPassword.Text + "'";
+		cHistory2.Description = " mengganti password.";
+		cHistory2.UserId = Module1.pubUserId;
+		cHistory2.UserLogin = Module1.pubLogin;
+		cHistory2.HistoryType = 5;
+		cHistory2.Save();
+		Interaction.MsgBox("Password berhasil diganti.", MsgBoxStyle.Information);
+		Close();
+	}
 }

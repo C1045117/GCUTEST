@@ -1,169 +1,262 @@
 using System;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Drawing;
+using System.Globalization;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
+using GCUv2.My;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
 
-namespace GCUv2
+namespace GCUv2;
+
+[DesignerGenerated]
+public class frmSettingItemCategoryInput : Form
 {
-    public class Form
-    {
+	private IContainer components;
 
-        private class ComponentModel.IContainer components;
-        private class Button _btnSave;
-        private class TextBox _txtName;
-        private class Label _Label1;
-        private class Label _Label2;
-        private class ComboBox _cboActive;
-        private int32 _currentId;
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnSave")]
+	private Button _btnSave;
 
+	private int _currentId;
 
-        protected override strict void Dispose(boolean disposing) {
+	internal virtual Button btnSave
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnSave;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnSave_Click;
+			Button button = _btnSave;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnSave = value;
+			button = _btnSave;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
 
-          boolean var_1;
+	[field: AccessedThroughProperty("txtName")]
+	internal virtual TextBox txtName
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-        }
+	[field: AccessedThroughProperty("Label1")]
+	internal virtual Label Label1
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-        private void InitializeComponent() {
+	[field: AccessedThroughProperty("Label2")]
+	internal virtual Label Label2
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
+	[field: AccessedThroughProperty("cboActive")]
+	internal virtual ComboBox cboActive
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-        }
+	public string CurrentId
+	{
+		get
+		{
+			return Conversions.ToString(_currentId);
+		}
+		set
+		{
+			_currentId = Conversions.ToInteger(value);
+		}
+	}
 
-        assem override strict specialname class Button get_btnSave() {
+	[DebuggerNonUserCode]
+	protected override void Dispose(bool disposing)
+	{
+		try
+		{
+			if (disposing && components != null)
+			{
+				components.Dispose();
+			}
+		}
+		finally
+		{
+			base.Dispose(disposing);
+		}
+	}
 
-          loc_54170E: ldarg.0
-          loc_54170F: ldfld GCUv2.frmSettingItemCategoryInput::_btnSave
-          loc_541714: br.s loc_541716
-          loc_541716: // Referenced from: loc_541714
-          loc_541716: ret
-        }
+	[System.Diagnostics.DebuggerStepThrough]
+	private void InitializeComponent()
+	{
+		this.btnSave = new System.Windows.Forms.Button();
+		this.txtName = new System.Windows.Forms.TextBox();
+		this.Label1 = new System.Windows.Forms.Label();
+		this.Label2 = new System.Windows.Forms.Label();
+		this.cboActive = new System.Windows.Forms.ComboBox();
+		base.SuspendLayout();
+		this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnSave.Location = new System.Drawing.Point(60, 65);
+		this.btnSave.Name = "btnSave";
+		this.btnSave.Size = new System.Drawing.Size(98, 24);
+		this.btnSave.TabIndex = 2;
+		this.btnSave.Text = "Simpan && Tutup";
+		this.btnSave.UseVisualStyleBackColor = true;
+		this.txtName.Location = new System.Drawing.Point(60, 12);
+		this.txtName.Name = "txtName";
+		this.txtName.Size = new System.Drawing.Size(177, 20);
+		this.txtName.TabIndex = 0;
+		this.Label1.AutoSize = true;
+		this.Label1.Location = new System.Drawing.Point(12, 15);
+		this.Label1.Name = "Label1";
+		this.Label1.Size = new System.Drawing.Size(46, 13);
+		this.Label1.TabIndex = 9;
+		this.Label1.Text = "Kategori";
+		this.Label2.AutoSize = true;
+		this.Label2.Location = new System.Drawing.Point(12, 41);
+		this.Label2.Name = "Label2";
+		this.Label2.Size = new System.Drawing.Size(28, 13);
+		this.Label2.TabIndex = 12;
+		this.Label2.Text = "Aktif";
+		this.cboActive.FormattingEnabled = true;
+		this.cboActive.Location = new System.Drawing.Point(60, 38);
+		this.cboActive.Name = "cboActive";
+		this.cboActive.Size = new System.Drawing.Size(84, 21);
+		this.cboActive.TabIndex = 1;
+		base.AcceptButton = this.btnSave;
+		base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
+		base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+		base.ClientSize = new System.Drawing.Size(253, 103);
+		base.Controls.Add(this.cboActive);
+		base.Controls.Add(this.Label2);
+		base.Controls.Add(this.btnSave);
+		base.Controls.Add(this.txtName);
+		base.Controls.Add(this.Label1);
+		base.KeyPreview = true;
+		base.MaximizeBox = false;
+		base.MinimizeBox = false;
+		base.Name = "frmSettingItemCategoryInput";
+		base.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+		this.Text = "Setting - Kategori Barang";
+		base.ResumeLayout(false);
+		base.PerformLayout();
+	}
 
-        assem override strict specialname void set_btnSave(class Button WithEventsValue) {
+	public frmSettingItemCategoryInput()
+	{
+		base.KeyDown += frmSetItemCategoryInput_KeyDown;
+		InitializeComponent();
+		ComboBox combo = cboActive;
+		cCombo.getYesNo(ref combo, All: false);
+		cboActive = combo;
+		cboActive.SelectedIndex = 0;
+	}
 
-          class System.EventHandler var_1;
-          class Button var_2;
+	private void frmSetItemCategoryInput_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Escape)
+		{
+			Close();
+		}
+	}
 
-        }
+	public void loadData()
+	{
+		int try0001_dispatch = -1;
+		int num2 = default(int);
+		int num = default(int);
+		while (true)
+		{
+			try
+			{
+				/*Note: ILSpy has introduced the following switch to emulate a goto from catch-block to try-block*/;
+				switch (try0001_dispatch)
+				{
+				default:
+				{
+					ProjectData.ClearProjectError();
+					num2 = 2;
+					cItemCategory cItemCategory2 = new cItemCategory(_currentId);
+					txtName.Text = cItemCategory2.Name;
+					ComboBox cboSource = cboActive;
+					Module1.comboBoundValue(ref cboSource, cItemCategory2.Active);
+					cboActive = cboSource;
+					goto end_IL_0001;
+				}
+				case 101:
+					num = -1;
+					switch (num2)
+					{
+					case 2:
+						Module1.SaveError(Information.Err(), "frmSettingItemCategoryInput", "loadData", "");
+						goto end_IL_0001;
+					}
+					break;
+				}
+			}
+			catch (object obj) when (obj is Exception && num2 != 0 && num == 0)
+			{
+				ProjectData.SetProjectError((Exception)obj);
+				try0001_dispatch = 101;
+				continue;
+			}
+			throw ProjectData.CreateProjectError(-2146828237);
+			continue;
+			end_IL_0001:
+			break;
+		}
+		if (num != 0)
+		{
+			ProjectData.ClearProjectError();
+		}
+	}
 
-        assem override strict specialname class TextBox get_txtName() {
+	public void prepareForm()
+	{
+		_currentId = 0;
+	}
 
-          loc_54175C: ldarg.0
-          loc_54175D: ldfld GCUv2.frmSettingItemCategoryInput::_txtName
-          loc_541762: br.s loc_541764
-          loc_541764: // Referenced from: loc_541762
-          loc_541764: ret
-        }
-
-        assem override strict specialname void set_txtName(class TextBox WithEventsValue) {
-
-          loc_541766: ldarg.0
-          loc_541767: ldarg.1
-          loc_541768: stfld GCUv2.frmSettingItemCategoryInput::_txtName
-          loc_54176D: ret
-        }
-
-        assem override strict specialname class Label get_Label1() {
-
-          loc_54176F: ldarg.0
-          loc_541770: ldfld GCUv2.frmSettingItemCategoryInput::_Label1
-          loc_541775: br.s loc_541777
-          loc_541777: // Referenced from: loc_541775
-          loc_541777: ret
-        }
-
-        assem override strict specialname void set_Label1(class Label WithEventsValue) {
-
-          loc_541779: ldarg.0
-          loc_54177A: ldarg.1
-          loc_54177B: stfld GCUv2.frmSettingItemCategoryInput::_Label1
-          loc_541780: ret
-        }
-
-        assem override strict specialname class Label get_Label2() {
-
-          loc_541782: ldarg.0
-          loc_541783: ldfld GCUv2.frmSettingItemCategoryInput::_Label2
-          loc_541788: br.s loc_54178A
-          loc_54178A: // Referenced from: loc_541788
-          loc_54178A: ret
-        }
-
-        assem override strict specialname void set_Label2(class Label WithEventsValue) {
-
-          loc_54178C: ldarg.0
-          loc_54178D: ldarg.1
-          loc_54178E: stfld GCUv2.frmSettingItemCategoryInput::_Label2
-          loc_541793: ret
-        }
-
-        assem override strict specialname class ComboBox get_cboActive() {
-
-          loc_541795: ldarg.0
-          loc_541796: ldfld GCUv2.frmSettingItemCategoryInput::_cboActive
-          loc_54179B: br.s loc_54179D
-          loc_54179D: // Referenced from: loc_54179B
-          loc_54179D: ret
-        }
-
-        assem override strict specialname void set_cboActive(class ComboBox WithEventsValue) {
-
-          loc_54179F: ldarg.0
-          loc_5417A0: ldarg.1
-          loc_5417A1: stfld GCUv2.frmSettingItemCategoryInput::_cboActive
-          loc_5417A6: ret
-        }
-
-        public specialname string get_CurrentId() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_CurrentId(string value) {
-
-          loc_5417C6: nop
-          loc_5417C7: ldarg.0
-          loc_5417C8: ldarg.1
-          loc_5417C9: call int32 Microsoft.VisualBasic.CompilerServices.Conversions::ToInteger(string)
-          loc_5417CE: stfld GCUv2.frmSettingItemCategoryInput::_currentId
-          loc_5417D3: ret
-        }
-
-        public void frmSettingItemCategoryInput() {
-
-          class ComboBox var_1;
-
-        }
-
-        private void frmSetItemCategoryInput_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        public void loadData() {
-
-          int32 num_1;
-          int32 num_2;
-          class GCUv2.cItemCategory var_1;
-          class ComboBox var_2;
-
-        }
-
-        public void prepareForm() {
-
-          loc_54191D: nop
-          loc_54191E: ldarg.0
-          loc_54191F: ldc.i4.0
-          loc_541920: stfld GCUv2.frmSettingItemCategoryInput::_currentId
-          loc_541925: ret
-        }
-
-        private void btnSave_Click(object sender, class System.EventArgs e) {
-
-          class GCUv2.cComboItem var_1;
-          class GCUv2.cItemCategory var_2;
-          boolean var_3;
-          boolean var_4;
-
-        }
-
-    }
+	private void btnSave_Click(object sender, EventArgs e)
+	{
+		cComboItem cComboItem2 = (cComboItem)cboActive.SelectedItem;
+		if (Operators.CompareString(txtName.Text, "", TextCompare: false) == 0)
+		{
+			Interaction.MsgBox("Masukkan kategori barang", MsgBoxStyle.Information);
+			txtName.Focus();
+			return;
+		}
+		if (cboActive.SelectedIndex == -1)
+		{
+			Interaction.MsgBox("Pilih aktif/tidak", MsgBoxStyle.Information);
+			cboActive.Focus();
+			return;
+		}
+		cItemCategory cItemCategory2 = new cItemCategory(0);
+		cItemCategory2.Id = Conversions.ToInteger(CurrentId);
+		cItemCategory2.Name = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtName.Text);
+		cItemCategory2.Active = Conversions.ToInteger(cComboItem2.Value);
+		cItemCategory2.Save();
+		Interaction.MsgBox("Kategori Barang berhasil disimpan", MsgBoxStyle.Information);
+		MyProject.Forms.frmSettingItemCategoryList.getItemCategory();
+		Close();
+	}
 }

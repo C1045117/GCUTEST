@@ -1,329 +1,517 @@
 using System;
+using System.Collections;
+using System.ComponentModel;
+using System.Data;
+using System.Diagnostics;
+using System.Drawing;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
+using GCUv2.My;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
 
-namespace GCUv2
+namespace GCUv2;
+
+[DesignerGenerated]
+public class frmSupplierSearch : Form
 {
-    public class Form
-    {
-
-        private class ComponentModel.IContainer components;
-        private class ToolStrip _ToolStrip1;
-        private class ToolStripButton _tsbNew;
-        private class Label _lblTotal;
-        private class DataGridView _dgvList;
-        private class Button _btnSearch;
-        private class TextBox _txtName;
-        private class Label _Label1;
-        private class Label _Label16;
-        private class Label _Label3;
-        private class Label _Label2;
-        private class Label _Label4;
-
-
-        protected override strict void Dispose(boolean disposing) {
-
-          boolean var_1;
-
-        }
-
-        private void InitializeComponent() {
-
-          class ComponentModel.ComponentResourceManager var_1;
-
-        }
-
-        assem override strict specialname class ToolStrip get_ToolStrip1() {
-
-          loc_542A63: ldarg.0
-          loc_542A64: ldfld GCUv2.frmSupplierSearch::_ToolStrip1
-          loc_542A69: br.s loc_542A6B
-          loc_542A6B: // Referenced from: loc_542A69
-          loc_542A6B: ret
-        }
-
-        assem override strict specialname void set_ToolStrip1(class ToolStrip WithEventsValue) {
-
-          loc_542A6D: ldarg.0
-          loc_542A6E: ldarg.1
-          loc_542A6F: stfld GCUv2.frmSupplierSearch::_ToolStrip1
-          loc_542A74: ret
-        }
-
-        assem override strict specialname class ToolStripButton get_tsbNew() {
-
-          loc_542A76: ldarg.0
-          loc_542A77: ldfld GCUv2.frmSupplierSearch::_tsbNew
-          loc_542A7C: br.s loc_542A7E
-          loc_542A7E: // Referenced from: loc_542A7C
-          loc_542A7E: ret
-        }
-
-        assem override strict specialname void set_tsbNew(class ToolStripButton WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class ToolStripButton var_2;
-
-        }
-
-        assem override strict specialname class Label get_lblTotal() {
-
-          loc_542AC4: ldarg.0
-          loc_542AC5: ldfld GCUv2.frmSupplierSearch::_lblTotal
-          loc_542ACA: br.s loc_542ACC
-          loc_542ACC: // Referenced from: loc_542ACA
-          loc_542ACC: ret
-        }
-
-        assem override strict specialname void set_lblTotal(class Label WithEventsValue) {
-
-          loc_542ACE: ldarg.0
-          loc_542ACF: ldarg.1
-          loc_542AD0: stfld GCUv2.frmSupplierSearch::_lblTotal
-          loc_542AD5: ret
-        }
-
-        assem override strict specialname class DataGridView get_dgvList() {
-
-          loc_542AD7: ldarg.0
-          loc_542AD8: ldfld GCUv2.frmSupplierSearch::_dgvList
-          loc_542ADD: br.s loc_542ADF
-          loc_542ADF: // Referenced from: loc_542ADD
-          loc_542ADF: ret
-        }
-
-        assem override strict specialname void set_dgvList(class DataGridView WithEventsValue) {
-
-          class KeyEventHandler var_1;
-          class System.EventHandler var_2;
-          class System.EventHandler var_3;
-          class System.EventHandler var_4;
-          class DataGridView var_5;
-
-        }
-
-        assem override strict specialname class Button get_btnSearch() {
-
-          loc_542B81: ldarg.0
-          loc_542B82: ldfld GCUv2.frmSupplierSearch::_btnSearch
-          loc_542B87: br.s loc_542B89
-          loc_542B89: // Referenced from: loc_542B87
-          loc_542B89: ret
-        }
-
-        assem override strict specialname void set_btnSearch(class Button WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Button var_2;
-
-        }
-
-        assem override strict specialname class TextBox get_txtName() {
-
-          loc_542BD0: ldarg.0
-          loc_542BD1: ldfld GCUv2.frmSupplierSearch::_txtName
-          loc_542BD6: br.s loc_542BD8
-          loc_542BD8: // Referenced from: loc_542BD6
-          loc_542BD8: ret
-        }
-
-        assem override strict specialname void set_txtName(class TextBox WithEventsValue) {
-
-          loc_542BDA: ldarg.0
-          loc_542BDB: ldarg.1
-          loc_542BDC: stfld GCUv2.frmSupplierSearch::_txtName
-          loc_542BE1: ret
-        }
-
-        assem override strict specialname class Label get_Label1() {
-
-          loc_542BE3: ldarg.0
-          loc_542BE4: ldfld GCUv2.frmSupplierSearch::_Label1
-          loc_542BE9: br.s loc_542BEB
-          loc_542BEB: // Referenced from: loc_542BE9
-          loc_542BEB: ret
-        }
-
-        assem override strict specialname void set_Label1(class Label WithEventsValue) {
-
-          loc_542BED: ldarg.0
-          loc_542BEE: ldarg.1
-          loc_542BEF: stfld GCUv2.frmSupplierSearch::_Label1
-          loc_542BF4: ret
-        }
-
-        assem override strict specialname class Label get_Label16() {
-
-          loc_542BF6: ldarg.0
-          loc_542BF7: ldfld GCUv2.frmSupplierSearch::_Label16
-          loc_542BFC: br.s loc_542BFE
-          loc_542BFE: // Referenced from: loc_542BFC
-          loc_542BFE: ret
-        }
-
-        assem override strict specialname void set_Label16(class Label WithEventsValue) {
-
-          loc_542C00: ldarg.0
-          loc_542C01: ldarg.1
-          loc_542C02: stfld GCUv2.frmSupplierSearch::_Label16
-          loc_542C07: ret
-        }
-
-        assem override strict specialname class Label get_Label3() {
-
-          loc_542C09: ldarg.0
-          loc_542C0A: ldfld GCUv2.frmSupplierSearch::_Label3
-          loc_542C0F: br.s loc_542C11
-          loc_542C11: // Referenced from: loc_542C0F
-          loc_542C11: ret
-        }
-
-        assem override strict specialname void set_Label3(class Label WithEventsValue) {
-
-          loc_542C13: ldarg.0
-          loc_542C14: ldarg.1
-          loc_542C15: stfld GCUv2.frmSupplierSearch::_Label3
-          loc_542C1A: ret
-        }
-
-        assem override strict specialname class Label get_Label2() {
-
-          loc_542C1C: ldarg.0
-          loc_542C1D: ldfld GCUv2.frmSupplierSearch::_Label2
-          loc_542C22: br.s loc_542C24
-          loc_542C24: // Referenced from: loc_542C22
-          loc_542C24: ret
-        }
-
-        assem override strict specialname void set_Label2(class Label WithEventsValue) {
-
-          loc_542C26: ldarg.0
-          loc_542C27: ldarg.1
-          loc_542C28: stfld GCUv2.frmSupplierSearch::_Label2
-          loc_542C2D: ret
-        }
-
-        assem override strict specialname class Label get_Label4() {
-
-          loc_542C2F: ldarg.0
-          loc_542C30: ldfld GCUv2.frmSupplierSearch::_Label4
-          loc_542C35: br.s loc_542C37
-          loc_542C37: // Referenced from: loc_542C35
-          loc_542C37: ret
-        }
-
-        assem override strict specialname void set_Label4(class Label WithEventsValue) {
-
-          loc_542C39: ldarg.0
-          loc_542C3A: ldarg.1
-          loc_542C3B: stfld GCUv2.frmSupplierSearch::_Label4
-          loc_542C40: ret
-        }
-
-        public void frmSupplierSearch() {
-
-          loc_542C42: nop
-          loc_542C43: ldarg.0
-          loc_542C44: call instance void System.Windows.Forms.Form::.ctor()
-          loc_542C49: nop
-          loc_542C4A: ldarg.0
-          loc_542C4B: ldarg.0
-          loc_542C4C: ldftn instance void GCUv2.frmSupplierSearch::frmSupplierSearch_KeyDown(object, class KeyEventArgs)
-          loc_542C52: newobj instance void System.Windows.Forms.KeyEventHandler::.ctor(object, System.IntPtr)
-          loc_542C57: call instance void System.Windows.Forms.Control::add_KeyDown(class KeyEventHandler)
-          loc_542C5C: nop
-          loc_542C5D: ldarg.0
-          loc_542C5E: call instance void GCUv2.frmSupplierSearch::InitializeComponent()
-          loc_542C63: nop
-          loc_542C64: ldarg.0
-          loc_542C65: call class MyForms GCUv2.My.MyProject::get_Forms()
-          loc_542C6A: callvirt instance class GCUv2.frmMenu GCUv2.frmSupplierSearch/MyForms::get_frmMenu()
-          loc_542C6F: call 
-          loc_542C74: nop
-          loc_542C75: ret
-        }
-
-        private void frmSupplierSearch_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-          boolean var_2;
-
-        }
-
-        private void btnSearch_Click(object sender, class System.EventArgs e) {
-
-          int32 num_1;
-          int32 num_2;
-          class DataTable var_1;
-          class System.Collections.IEnumerator var_2;
-          class DataRow var_3;
-          boolean var_4;
-          boolean var_5;
-
-        }
-
-        private void formatGrid() {
-
-
-        }
-
-        private void dgvList_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-          boolean var_2;
-          boolean var_3;
-          boolean var_4;
-          class ComboBox var_5;
-          boolean var_6;
-          boolean var_7;
-          boolean var_8;
-          boolean var_9;
-
-        }
-
-        private void dgvList_GotFocus(object sender, class System.EventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void dgvList_LostFocus(object sender, class System.EventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void dgvList_DoubleClick(object sender, class System.EventArgs e) {
-
-          loc_5434CD: nop
-          loc_5434CE: ldarg.0
-          loc_5434CF: call instance void GCUv2.frmSupplierSearch::getData()
-          loc_5434D4: nop
-          loc_5434D5: ret
-        }
-
-        public void getData() {
-
-          boolean var_1;
-
-        }
-
-        private void tsbNew_Click(object sender, class System.EventArgs e) {
-
-          loc_5435B5: nop
-          loc_5435B6: call class MyForms GCUv2.My.MyProject::get_Forms()
-          loc_5435BB: callvirt instance class GCUv2.frmSupplier GCUv2.frmSupplierSearch/MyForms::get_frmSupplier()
-          loc_5435C0: callvirt instance void System.Windows.Forms.Control::Show()
-          loc_5435C5: nop
-          loc_5435C6: call class MyForms GCUv2.My.MyProject::get_Forms()
-          loc_5435CB: callvirt instance class GCUv2.frmSupplier GCUv2.frmSupplierSearch/MyForms::get_frmSupplier()
-          loc_5435D0: callvirt instance void GCUv2.frmSupplier::prepareForm()
-          loc_5435D5: nop
-          loc_5435D6: call class MyForms GCUv2.My.MyProject::get_Forms()
-          loc_5435DB: callvirt instance class GCUv2.frmSupplier GCUv2.frmSupplierSearch/MyForms::get_frmSupplier()
-          loc_5435E0: callvirt instance void System.Windows.Forms.Form::Activate()
-          loc_5435E5: nop
-          loc_5435E6: ret
-        }
-
-    }
+	private IContainer components;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("tsbNew")]
+	private ToolStripButton _tsbNew;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("dgvList")]
+	private DataGridView _dgvList;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnSearch")]
+	private Button _btnSearch;
+
+	[field: AccessedThroughProperty("ToolStrip1")]
+	internal virtual ToolStrip ToolStrip1
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual ToolStripButton tsbNew
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _tsbNew;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = tsbNew_Click;
+			ToolStripButton toolStripButton = _tsbNew;
+			if (toolStripButton != null)
+			{
+				toolStripButton.Click -= value2;
+			}
+			_tsbNew = value;
+			toolStripButton = _tsbNew;
+			if (toolStripButton != null)
+			{
+				toolStripButton.Click += value2;
+			}
+		}
+	}
+
+	[field: AccessedThroughProperty("lblTotal")]
+	internal virtual Label lblTotal
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual DataGridView dgvList
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _dgvList;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			KeyEventHandler value2 = dgvList_KeyDown;
+			EventHandler value3 = dgvList_GotFocus;
+			EventHandler value4 = dgvList_LostFocus;
+			EventHandler value5 = dgvList_DoubleClick;
+			DataGridView dataGridView = _dgvList;
+			if (dataGridView != null)
+			{
+				dataGridView.KeyDown -= value2;
+				dataGridView.GotFocus -= value3;
+				dataGridView.LostFocus -= value4;
+				dataGridView.DoubleClick -= value5;
+			}
+			_dgvList = value;
+			dataGridView = _dgvList;
+			if (dataGridView != null)
+			{
+				dataGridView.KeyDown += value2;
+				dataGridView.GotFocus += value3;
+				dataGridView.LostFocus += value4;
+				dataGridView.DoubleClick += value5;
+			}
+		}
+	}
+
+	internal virtual Button btnSearch
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnSearch;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnSearch_Click;
+			Button button = _btnSearch;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnSearch = value;
+			button = _btnSearch;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
+
+	[field: AccessedThroughProperty("txtName")]
+	internal virtual TextBox txtName
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label1")]
+	internal virtual Label Label1
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label16")]
+	internal virtual Label Label16
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label3")]
+	internal virtual Label Label3
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label2")]
+	internal virtual Label Label2
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label4")]
+	internal virtual Label Label4
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[DebuggerNonUserCode]
+	protected override void Dispose(bool disposing)
+	{
+		try
+		{
+			if (disposing && components != null)
+			{
+				components.Dispose();
+			}
+		}
+		finally
+		{
+			base.Dispose(disposing);
+		}
+	}
+
+	[System.Diagnostics.DebuggerStepThrough]
+	private void InitializeComponent()
+	{
+		System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GCUv2.frmSupplierSearch));
+		this.ToolStrip1 = new System.Windows.Forms.ToolStrip();
+		this.tsbNew = new System.Windows.Forms.ToolStripButton();
+		this.lblTotal = new System.Windows.Forms.Label();
+		this.dgvList = new System.Windows.Forms.DataGridView();
+		this.btnSearch = new System.Windows.Forms.Button();
+		this.txtName = new System.Windows.Forms.TextBox();
+		this.Label1 = new System.Windows.Forms.Label();
+		this.Label16 = new System.Windows.Forms.Label();
+		this.Label3 = new System.Windows.Forms.Label();
+		this.Label2 = new System.Windows.Forms.Label();
+		this.Label4 = new System.Windows.Forms.Label();
+		this.ToolStrip1.SuspendLayout();
+		((System.ComponentModel.ISupportInitialize)this.dgvList).BeginInit();
+		base.SuspendLayout();
+		this.ToolStrip1.AutoSize = false;
+		this.ToolStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
+		this.ToolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[1] { this.tsbNew });
+		this.ToolStrip1.Location = new System.Drawing.Point(0, 0);
+		this.ToolStrip1.Name = "ToolStrip1";
+		this.ToolStrip1.Size = new System.Drawing.Size(799, 60);
+		this.ToolStrip1.TabIndex = 89;
+		this.ToolStrip1.Text = "ToolStrip1";
+		this.tsbNew.Image = (System.Drawing.Image)resources.GetObject("tsbNew.Image");
+		this.tsbNew.ImageTransparentColor = System.Drawing.Color.Magenta;
+		this.tsbNew.Name = "tsbNew";
+		this.tsbNew.Size = new System.Drawing.Size(44, 57);
+		this.tsbNew.Text = "&Baru";
+		this.tsbNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+		this.lblTotal.AutoSize = true;
+		this.lblTotal.Location = new System.Drawing.Point(221, 400);
+		this.lblTotal.Name = "lblTotal";
+		this.lblTotal.Size = new System.Drawing.Size(91, 13);
+		this.lblTotal.TabIndex = 88;
+		this.lblTotal.Text = "Total Pencarian: -";
+		this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+		this.dgvList.Location = new System.Drawing.Point(224, 68);
+		this.dgvList.Name = "dgvList";
+		this.dgvList.Size = new System.Drawing.Size(560, 329);
+		this.dgvList.TabIndex = 87;
+		this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnSearch.Location = new System.Drawing.Point(56, 94);
+		this.btnSearch.Name = "btnSearch";
+		this.btnSearch.Size = new System.Drawing.Size(47, 24);
+		this.btnSearch.TabIndex = 86;
+		this.btnSearch.Text = "&Cari";
+		this.btnSearch.UseVisualStyleBackColor = true;
+		this.txtName.Location = new System.Drawing.Point(56, 68);
+		this.txtName.Name = "txtName";
+		this.txtName.Size = new System.Drawing.Size(162, 20);
+		this.txtName.TabIndex = 84;
+		this.Label1.AutoSize = true;
+		this.Label1.Location = new System.Drawing.Point(15, 71);
+		this.Label1.Name = "Label1";
+		this.Label1.Size = new System.Drawing.Size(35, 13);
+		this.Label1.TabIndex = 85;
+		this.Label1.Text = "Nama";
+		this.Label16.AutoSize = true;
+		this.Label16.Location = new System.Drawing.Point(267, 31);
+		this.Label16.Name = "Label16";
+		this.Label16.Size = new System.Drawing.Size(111, 13);
+		this.Label16.TabIndex = 91;
+		this.Label16.Text = "R = Retur Pembelian; ";
+		this.Label3.AutoSize = true;
+		this.Label3.Location = new System.Drawing.Point(221, 9);
+		this.Label3.Name = "Label3";
+		this.Label3.Size = new System.Drawing.Size(209, 13);
+		this.Label3.TabIndex = 90;
+		this.Label3.Text = "Shortcut: T = Terima (Penerimaan Barang);";
+		this.Label2.AutoSize = true;
+		this.Label2.Location = new System.Drawing.Point(430, 31);
+		this.Label2.Name = "Label2";
+		this.Label2.Size = new System.Drawing.Size(91, 13);
+		this.Label2.TabIndex = 92;
+		this.Label2.Text = "B = Pembayaran; ";
+		this.Label4.AutoSize = true;
+		this.Label4.Location = new System.Drawing.Point(430, 9);
+		this.Label4.Name = "Label4";
+		this.Label4.Size = new System.Drawing.Size(110, 13);
+		this.Label4.TabIndex = 93;
+		this.Label4.Text = "F = Faktur Pembelian;";
+		base.AcceptButton = this.btnSearch;
+		base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
+		base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+		base.ClientSize = new System.Drawing.Size(799, 423);
+		base.Controls.Add(this.Label4);
+		base.Controls.Add(this.Label2);
+		base.Controls.Add(this.Label16);
+		base.Controls.Add(this.Label3);
+		base.Controls.Add(this.ToolStrip1);
+		base.Controls.Add(this.lblTotal);
+		base.Controls.Add(this.dgvList);
+		base.Controls.Add(this.btnSearch);
+		base.Controls.Add(this.txtName);
+		base.Controls.Add(this.Label1);
+		base.KeyPreview = true;
+		base.MaximizeBox = false;
+		base.Name = "frmSupplierSearch";
+		base.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+		this.Text = "Cari Supplier";
+		this.ToolStrip1.ResumeLayout(false);
+		this.ToolStrip1.PerformLayout();
+		((System.ComponentModel.ISupportInitialize)this.dgvList).EndInit();
+		base.ResumeLayout(false);
+		base.PerformLayout();
+	}
+
+	public frmSupplierSearch()
+	{
+		base.KeyDown += frmSupplierSearch_KeyDown;
+		InitializeComponent();
+		base.MdiParent = MyProject.Forms.frmMenu;
+	}
+
+	private void frmSupplierSearch_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Escape)
+		{
+			Close();
+		}
+		else if (e.KeyCode == Keys.F2)
+		{
+			tsbNew.PerformClick();
+		}
+	}
+
+	private void btnSearch_Click(object sender, EventArgs e)
+	{
+		int try0001_dispatch = -1;
+		int num2 = default(int);
+		int num = default(int);
+		while (true)
+		{
+			try
+			{
+				/*Note: ILSpy has introduced the following switch to emulate a goto from catch-block to try-block*/;
+				switch (try0001_dispatch)
+				{
+				default:
+				{
+					ProjectData.ClearProjectError();
+					num2 = 2;
+					DataTable dataTable = cSupplier.Search(Module1.cleanString(txtName.Text), Module1.pubGroupId, 99);
+					formatGrid();
+					dgvList.Rows.Clear();
+					IEnumerator enumerator = dataTable.Rows.GetEnumerator();
+					while (enumerator.MoveNext())
+					{
+						DataRow dataRow = (DataRow)enumerator.Current;
+						dgvList.Rows.Add(dataRow["supId"], dataRow["supName"], dataRow["supAddress"], dataRow["isParent"]);
+					}
+					if (enumerator is IDisposable)
+					{
+						(enumerator as IDisposable).Dispose();
+					}
+					if (dataTable.Rows.Count == 0)
+					{
+						Interaction.MsgBox("Data tidak ditemukan", MsgBoxStyle.Information);
+						txtName.Focus();
+					}
+					else
+					{
+						dgvList.Focus();
+					}
+					goto end_IL_0001;
+				}
+				case 300:
+					num = -1;
+					switch (num2)
+					{
+					case 2:
+						Module1.SaveError(Information.Err(), "frmSupplierSearch", "btnSearch_click", "");
+						goto end_IL_0001;
+					}
+					break;
+				}
+			}
+			catch (object obj) when (obj is Exception && num2 != 0 && num == 0)
+			{
+				ProjectData.SetProjectError((Exception)obj);
+				try0001_dispatch = 300;
+				continue;
+			}
+			throw ProjectData.CreateProjectError(-2146828237);
+			continue;
+			end_IL_0001:
+			break;
+		}
+		if (num != 0)
+		{
+			ProjectData.ClearProjectError();
+		}
+	}
+
+	private void formatGrid()
+	{
+		dgvList.Columns.Clear();
+		dgvList.Columns.Add("", "supId");
+		dgvList.Columns.Add("", "Nama");
+		dgvList.Columns.Add("", "Alamat");
+		dgvList.Columns.Add("", "IsParent");
+		dgvList.Columns[0].Visible = false;
+		dgvList.Columns[1].Width = 220;
+		dgvList.Columns[2].Width = 180;
+		dgvList.Columns[3].Visible = false;
+		dgvList.RowHeadersVisible = false;
+		dgvList.AllowUserToAddRows = false;
+		dgvList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+		dgvList.ReadOnly = true;
+		dgvList.AlternatingRowsDefaultCellStyle.BackColor = Color.WhiteSmoke;
+		dgvList.AllowUserToResizeRows = false;
+	}
+
+	private void dgvList_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Return)
+		{
+			getData();
+			e.SuppressKeyPress = true;
+		}
+		else if (e.Shift & (e.KeyCode == Keys.Tab))
+		{
+			btnSearch.Focus();
+			e.SuppressKeyPress = true;
+		}
+		else if (e.KeyCode == Keys.Tab)
+		{
+			txtName.Focus();
+			e.SuppressKeyPress = true;
+		}
+		else if (((e.KeyCode == Keys.T) & (dgvList.RowCount > 0)) && Operators.ConditionalCompareObjectGreater(dgvList[0, dgvList.CurrentRow.Index].Value, 0, TextCompare: false) && Operators.ConditionalCompareObjectEqual(dgvList[3, dgvList.CurrentRow.Index].Value, 0, TextCompare: false))
+		{
+			MyProject.Forms.frmReceivedItem.Show();
+			MyProject.Forms.frmReceivedItem.prepareForm(SaveNew: false);
+			frmReceivedItem obj = MyProject.Forms.frmReceivedItem;
+			ComboBox cboSource = obj.cboSupplier;
+			Module1.comboBoundValue(ref cboSource, Conversions.ToDouble(dgvList[0, dgvList.CurrentRow.Index].Value));
+			obj.cboSupplier = cboSource;
+			MyProject.Forms.frmReceivedItem.Activate();
+			MyProject.Forms.frmReceivedItem.dtpRI.Focus();
+		}
+		else if (((e.KeyCode == Keys.F) & (dgvList.RowCount > 0)) && Operators.ConditionalCompareObjectGreater(dgvList[0, dgvList.CurrentRow.Index].Value, 0, TextCompare: false) && Operators.ConditionalCompareObjectEqual(dgvList[3, dgvList.CurrentRow.Index].Value, 0, TextCompare: false))
+		{
+			MyProject.Forms.frmPurchaseInvoice.Show();
+			MyProject.Forms.frmPurchaseInvoice.prepareForm(SaveNew: false, KeepSupplier: false);
+			frmPurchaseInvoice obj2 = MyProject.Forms.frmPurchaseInvoice;
+			ComboBox cboSource = obj2.cboSupplier;
+			Module1.comboBoundValue(ref cboSource, Conversions.ToDouble(dgvList[0, dgvList.CurrentRow.Index].Value));
+			obj2.cboSupplier = cboSource;
+			MyProject.Forms.frmPurchaseInvoice.Activate();
+			MyProject.Forms.frmPurchaseInvoice.dtpInvoice.Focus();
+		}
+		else if (((e.KeyCode == Keys.R) & (dgvList.RowCount > 0)) && Operators.ConditionalCompareObjectGreater(dgvList[0, dgvList.CurrentRow.Index].Value, 0, TextCompare: false) && Operators.ConditionalCompareObjectEqual(dgvList[3, dgvList.CurrentRow.Index].Value, 0, TextCompare: false))
+		{
+			MyProject.Forms.frmPurchaseReturn.Show();
+			MyProject.Forms.frmPurchaseReturn.prepareForm(SaveNew: false, KeepSupplier: false);
+			frmPurchaseReturn obj3 = MyProject.Forms.frmPurchaseReturn;
+			ComboBox cboSource = obj3.cboSupplier;
+			Module1.comboBoundValue(ref cboSource, Conversions.ToDouble(dgvList[0, dgvList.CurrentRow.Index].Value));
+			obj3.cboSupplier = cboSource;
+			MyProject.Forms.frmPurchaseReturn.Activate();
+			MyProject.Forms.frmPurchaseReturn.dtpInvoice.Focus();
+		}
+		else if (((e.KeyCode == Keys.B) & (dgvList.RowCount > 0)) && Operators.ConditionalCompareObjectGreater(dgvList[0, dgvList.CurrentRow.Index].Value, 0, TextCompare: false))
+		{
+			if (!Module1.pubViewReportPurchaseInvoicePrice)
+			{
+				Interaction.MsgBox("Anda tidak bisa melihat faktur yang telah memiliki harga.", MsgBoxStyle.Information);
+				return;
+			}
+			MyProject.Forms.frmSupplierPayment.Show();
+			MyProject.Forms.frmSupplierPayment.PrepareForm(SaveNew: false);
+			frmSupplierPayment obj4 = MyProject.Forms.frmSupplierPayment;
+			ComboBox cboSource = obj4.cboSupplier;
+			Module1.comboBoundValue(ref cboSource, Conversions.ToDouble(dgvList[0, dgvList.CurrentRow.Index].Value));
+			obj4.cboSupplier = cboSource;
+			MyProject.Forms.frmSupplierPayment.Activate();
+		}
+	}
+
+	private void dgvList_GotFocus(object sender, EventArgs e)
+	{
+		if (dgvList.RowCount > 0)
+		{
+			dgvList.CurrentRow.Selected = true;
+		}
+	}
+
+	private void dgvList_LostFocus(object sender, EventArgs e)
+	{
+		if (dgvList.RowCount > 0)
+		{
+			dgvList.CurrentRow.Selected = false;
+		}
+	}
+
+	private void dgvList_DoubleClick(object sender, EventArgs e)
+	{
+		getData();
+	}
+
+	public void getData()
+	{
+		if (dgvList.RowCount > 0 && Operators.ConditionalCompareObjectGreater(dgvList[0, dgvList.CurrentRow.Index].Value, 0, TextCompare: false))
+		{
+			MyProject.Forms.frmSupplier.Show();
+			MyProject.Forms.frmSupplier.prepareForm();
+			MyProject.Forms.frmSupplier.CurrentId = Conversions.ToDouble(dgvList[0, dgvList.CurrentRow.Index].Value);
+			MyProject.Forms.frmSupplier.LoadData();
+			MyProject.Forms.frmSupplier.Activate();
+			MyProject.Forms.frmSupplier.WindowState = FormWindowState.Normal;
+		}
+	}
+
+	private void tsbNew_Click(object sender, EventArgs e)
+	{
+		MyProject.Forms.frmSupplier.Show();
+		MyProject.Forms.frmSupplier.prepareForm();
+		MyProject.Forms.frmSupplier.Activate();
+	}
 }

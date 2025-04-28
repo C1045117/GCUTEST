@@ -1,281 +1,388 @@
 using System;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Drawing;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
+using GCUv2.My;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
 
-namespace GCUv2
+namespace GCUv2;
+
+[DesignerGenerated]
+public class frmSettingSalesPersonInput : Form
 {
-    public class Form
-    {
-
-        private class ComponentModel.IContainer components;
-        private class Label _Label2;
-        private class ComboBox _cboBranch;
-        private class Button _btnSaveClose;
-        private class Label _Label9;
-        private class ComboBox _cboActive;
-        private class TextBox _txtName;
-        private class Label _Label1;
-        private class Label _Label3;
-        private class CheckBox _chkCollector;
-        private class CheckBox _chkDonator;
-        private class Label _Label4;
-        private int32 _currentId;
-
-
-        protected override strict void Dispose(boolean disposing) {
-
-          boolean var_1;
-
-        }
-
-        private void InitializeComponent() {
-
-
-        }
-
-        assem override strict specialname class Label get_Label2() {
-
-          loc_4F66F4: ldarg.0
-          loc_4F66F5: ldfld GCUv2.frmSettingSalesPersonInput::_Label2
-          loc_4F66FA: br.s loc_4F66FC
-          loc_4F66FC: // Referenced from: loc_4F66FA
-          loc_4F66FC: ret
-        }
-
-        assem override strict specialname void set_Label2(class Label WithEventsValue) {
-
-          loc_4F66FE: ldarg.0
-          loc_4F66FF: ldarg.1
-          loc_4F6700: stfld GCUv2.frmSettingSalesPersonInput::_Label2
-          loc_4F6705: ret
-        }
-
-        assem override strict specialname class ComboBox get_cboBranch() {
-
-          loc_4F6707: ldarg.0
-          loc_4F6708: ldfld GCUv2.frmSettingSalesPersonInput::_cboBranch
-          loc_4F670D: br.s loc_4F670F
-          loc_4F670F: // Referenced from: loc_4F670D
-          loc_4F670F: ret
-        }
-
-        assem override strict specialname void set_cboBranch(class ComboBox WithEventsValue) {
-
-          loc_4F6711: ldarg.0
-          loc_4F6712: ldarg.1
-          loc_4F6713: stfld GCUv2.frmSettingSalesPersonInput::_cboBranch
-          loc_4F6718: ret
-        }
-
-        assem override strict specialname class Button get_btnSaveClose() {
-
-          loc_4F671A: ldarg.0
-          loc_4F671B: ldfld GCUv2.frmSettingSalesPersonInput::_btnSaveClose
-          loc_4F6720: br.s loc_4F6722
-          loc_4F6722: // Referenced from: loc_4F6720
-          loc_4F6722: ret
-        }
-
-        assem override strict specialname void set_btnSaveClose(class Button WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Button var_2;
-
-        }
-
-        assem override strict specialname class Label get_Label9() {
-
-          loc_4F6768: ldarg.0
-          loc_4F6769: ldfld GCUv2.frmSettingSalesPersonInput::_Label9
-          loc_4F676E: br.s loc_4F6770
-          loc_4F6770: // Referenced from: loc_4F676E
-          loc_4F6770: ret
-        }
-
-        assem override strict specialname void set_Label9(class Label WithEventsValue) {
-
-          loc_4F6772: ldarg.0
-          loc_4F6773: ldarg.1
-          loc_4F6774: stfld GCUv2.frmSettingSalesPersonInput::_Label9
-          loc_4F6779: ret
-        }
-
-        assem override strict specialname class ComboBox get_cboActive() {
-
-          loc_4F677B: ldarg.0
-          loc_4F677C: ldfld GCUv2.frmSettingSalesPersonInput::_cboActive
-          loc_4F6781: br.s loc_4F6783
-          loc_4F6783: // Referenced from: loc_4F6781
-          loc_4F6783: ret
-        }
-
-        assem override strict specialname void set_cboActive(class ComboBox WithEventsValue) {
-
-          loc_4F6785: ldarg.0
-          loc_4F6786: ldarg.1
-          loc_4F6787: stfld GCUv2.frmSettingSalesPersonInput::_cboActive
-          loc_4F678C: ret
-        }
-
-        assem override strict specialname class TextBox get_txtName() {
-
-          loc_4F678E: ldarg.0
-          loc_4F678F: ldfld GCUv2.frmSettingSalesPersonInput::_txtName
-          loc_4F6794: br.s loc_4F6796
-          loc_4F6796: // Referenced from: loc_4F6794
-          loc_4F6796: ret
-        }
-
-        assem override strict specialname void set_txtName(class TextBox WithEventsValue) {
-
-          loc_4F6798: ldarg.0
-          loc_4F6799: ldarg.1
-          loc_4F679A: stfld GCUv2.frmSettingSalesPersonInput::_txtName
-          loc_4F679F: ret
-        }
-
-        assem override strict specialname class Label get_Label1() {
-
-          loc_4F67A1: ldarg.0
-          loc_4F67A2: ldfld GCUv2.frmSettingSalesPersonInput::_Label1
-          loc_4F67A7: br.s loc_4F67A9
-          loc_4F67A9: // Referenced from: loc_4F67A7
-          loc_4F67A9: ret
-        }
-
-        assem override strict specialname void set_Label1(class Label WithEventsValue) {
-
-          loc_4F67AB: ldarg.0
-          loc_4F67AC: ldarg.1
-          loc_4F67AD: stfld GCUv2.frmSettingSalesPersonInput::_Label1
-          loc_4F67B2: ret
-        }
-
-        assem override strict specialname class Label get_Label3() {
-
-          loc_4F67B4: ldarg.0
-          loc_4F67B5: ldfld GCUv2.frmSettingSalesPersonInput::_Label3
-          loc_4F67BA: br.s loc_4F67BC
-          loc_4F67BC: // Referenced from: loc_4F67BA
-          loc_4F67BC: ret
-        }
-
-        assem override strict specialname void set_Label3(class Label WithEventsValue) {
-
-          loc_4F67BE: ldarg.0
-          loc_4F67BF: ldarg.1
-          loc_4F67C0: stfld GCUv2.frmSettingSalesPersonInput::_Label3
-          loc_4F67C5: ret
-        }
-
-        assem override strict specialname class CheckBox get_chkCollector() {
-
-          loc_4F67C7: ldarg.0
-          loc_4F67C8: ldfld GCUv2.frmSettingSalesPersonInput::_chkCollector
-          loc_4F67CD: br.s loc_4F67CF
-          loc_4F67CF: // Referenced from: loc_4F67CD
-          loc_4F67CF: ret
-        }
-
-        assem override strict specialname void set_chkCollector(class CheckBox WithEventsValue) {
-
-          loc_4F67D1: ldarg.0
-          loc_4F67D2: ldarg.1
-          loc_4F67D3: stfld GCUv2.frmSettingSalesPersonInput::_chkCollector
-          loc_4F67D8: ret
-        }
-
-        assem override strict specialname class CheckBox get_chkDonator() {
-
-          loc_4F67DA: ldarg.0
-          loc_4F67DB: ldfld GCUv2.frmSettingSalesPersonInput::_chkDonator
-          loc_4F67E0: br.s loc_4F67E2
-          loc_4F67E2: // Referenced from: loc_4F67E0
-          loc_4F67E2: ret
-        }
-
-        assem override strict specialname void set_chkDonator(class CheckBox WithEventsValue) {
-
-          loc_4F67E4: ldarg.0
-          loc_4F67E5: ldarg.1
-          loc_4F67E6: stfld GCUv2.frmSettingSalesPersonInput::_chkDonator
-          loc_4F67EB: ret
-        }
-
-        assem override strict specialname class Label get_Label4() {
-
-          loc_4F67ED: ldarg.0
-          loc_4F67EE: ldfld GCUv2.frmSettingSalesPersonInput::_Label4
-          loc_4F67F3: br.s loc_4F67F5
-          loc_4F67F5: // Referenced from: loc_4F67F3
-          loc_4F67F5: ret
-        }
-
-        assem override strict specialname void set_Label4(class Label WithEventsValue) {
-
-          loc_4F67F7: ldarg.0
-          loc_4F67F8: ldarg.1
-          loc_4F67F9: stfld GCUv2.frmSettingSalesPersonInput::_Label4
-          loc_4F67FE: ret
-        }
-
-        public specialname string get_CurrentId() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_CurrentId(string value) {
-
-          loc_4F681E: nop
-          loc_4F681F: ldarg.0
-          loc_4F6820: ldarg.1
-          loc_4F6821: call int32 Microsoft.VisualBasic.CompilerServices.Conversions::ToInteger(string)
-          loc_4F6826: stfld GCUv2.frmSettingSalesPersonInput::_currentId
-          loc_4F682B: ret
-        }
-
-        public void frmSettingSalesPersonInput() {
-
-          class ComboBox var_1;
-
-        }
-
-        private void frmSettingSalesPersonInput_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        public void loadData() {
-
-          int32 num_1;
-          int32 num_2;
-          class GCUv2.cSalesPerson var_1;
-          class ComboBox var_2;
-
-        }
-
-        public void prepareForm() {
-
-          loc_4F6A29: nop
-          loc_4F6A2A: ldarg.0
-          loc_4F6A2B: ldc.i4.0
-          loc_4F6A2C: stfld GCUv2.frmSettingSalesPersonInput::_currentId
-          loc_4F6A31: ret
-        }
-
-        private void btnSaveClose_Click(object sender, class System.EventArgs e) {
-
-          class GCUv2.cComboItem var_1;
-          class GCUv2.cComboItem var_2;
-          class GCUv2.cSalesPerson var_3;
-          boolean var_4;
-          boolean var_5;
-          boolean var_6;
-          boolean var_7;
-          boolean var_8;
-
-        }
-
-    }
+	private IContainer components;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnSaveClose")]
+	private Button _btnSaveClose;
+
+	private int _currentId;
+
+	[field: AccessedThroughProperty("Label2")]
+	internal virtual Label Label2
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("cboBranch")]
+	internal virtual ComboBox cboBranch
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual Button btnSaveClose
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnSaveClose;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnSaveClose_Click;
+			Button button = _btnSaveClose;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnSaveClose = value;
+			button = _btnSaveClose;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
+
+	[field: AccessedThroughProperty("Label9")]
+	internal virtual Label Label9
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("cboActive")]
+	internal virtual ComboBox cboActive
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("txtName")]
+	internal virtual TextBox txtName
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label1")]
+	internal virtual Label Label1
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label3")]
+	internal virtual Label Label3
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("chkCollector")]
+	internal virtual CheckBox chkCollector
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("chkDonator")]
+	internal virtual CheckBox chkDonator
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label4")]
+	internal virtual Label Label4
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	public string CurrentId
+	{
+		get
+		{
+			return Conversions.ToString(_currentId);
+		}
+		set
+		{
+			_currentId = Conversions.ToInteger(value);
+		}
+	}
+
+	[DebuggerNonUserCode]
+	protected override void Dispose(bool disposing)
+	{
+		try
+		{
+			if (disposing && components != null)
+			{
+				components.Dispose();
+			}
+		}
+		finally
+		{
+			base.Dispose(disposing);
+		}
+	}
+
+	[System.Diagnostics.DebuggerStepThrough]
+	private void InitializeComponent()
+	{
+		this.Label2 = new System.Windows.Forms.Label();
+		this.cboBranch = new System.Windows.Forms.ComboBox();
+		this.btnSaveClose = new System.Windows.Forms.Button();
+		this.Label9 = new System.Windows.Forms.Label();
+		this.cboActive = new System.Windows.Forms.ComboBox();
+		this.txtName = new System.Windows.Forms.TextBox();
+		this.Label1 = new System.Windows.Forms.Label();
+		this.Label3 = new System.Windows.Forms.Label();
+		this.chkCollector = new System.Windows.Forms.CheckBox();
+		this.chkDonator = new System.Windows.Forms.CheckBox();
+		this.Label4 = new System.Windows.Forms.Label();
+		base.SuspendLayout();
+		this.Label2.AutoSize = true;
+		this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label2.Location = new System.Drawing.Point(10, 93);
+		this.Label2.Name = "Label2";
+		this.Label2.Size = new System.Drawing.Size(44, 13);
+		this.Label2.TabIndex = 143;
+		this.Label2.Text = "Cabang";
+		this.cboBranch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+		this.cboBranch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+		this.cboBranch.FormattingEnabled = true;
+		this.cboBranch.Location = new System.Drawing.Point(75, 90);
+		this.cboBranch.Name = "cboBranch";
+		this.cboBranch.Size = new System.Drawing.Size(125, 21);
+		this.cboBranch.TabIndex = 3;
+		this.btnSaveClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnSaveClose.Location = new System.Drawing.Point(75, 145);
+		this.btnSaveClose.Name = "btnSaveClose";
+		this.btnSaveClose.Size = new System.Drawing.Size(93, 24);
+		this.btnSaveClose.TabIndex = 5;
+		this.btnSaveClose.Text = "Simpan && &Tutup";
+		this.btnSaveClose.UseVisualStyleBackColor = true;
+		this.Label9.AutoSize = true;
+		this.Label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label9.Location = new System.Drawing.Point(10, 121);
+		this.Label9.Name = "Label9";
+		this.Label9.Size = new System.Drawing.Size(28, 13);
+		this.Label9.TabIndex = 147;
+		this.Label9.Text = "Aktif";
+		this.cboActive.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+		this.cboActive.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+		this.cboActive.FormattingEnabled = true;
+		this.cboActive.Location = new System.Drawing.Point(75, 118);
+		this.cboActive.Name = "cboActive";
+		this.cboActive.Size = new System.Drawing.Size(125, 21);
+		this.cboActive.TabIndex = 4;
+		this.txtName.Location = new System.Drawing.Point(75, 41);
+		this.txtName.Name = "txtName";
+		this.txtName.Size = new System.Drawing.Size(125, 20);
+		this.txtName.TabIndex = 0;
+		this.Label1.AutoSize = true;
+		this.Label1.Location = new System.Drawing.Point(10, 44);
+		this.Label1.Name = "Label1";
+		this.Label1.Size = new System.Drawing.Size(64, 13);
+		this.Label1.TabIndex = 145;
+		this.Label1.Text = "Nama Sales";
+		this.Label3.AutoSize = true;
+		this.Label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label3.Location = new System.Drawing.Point(10, 67);
+		this.Label3.Name = "Label3";
+		this.Label3.Size = new System.Drawing.Size(28, 13);
+		this.Label3.TabIndex = 148;
+		this.Label3.Text = "Tipe";
+		this.chkCollector.AutoSize = true;
+		this.chkCollector.Location = new System.Drawing.Point(75, 67);
+		this.chkCollector.Name = "chkCollector";
+		this.chkCollector.Size = new System.Drawing.Size(65, 17);
+		this.chkCollector.TabIndex = 1;
+		this.chkCollector.Text = "Kolektor";
+		this.chkCollector.UseVisualStyleBackColor = true;
+		this.chkDonator.AutoSize = true;
+		this.chkDonator.Location = new System.Drawing.Point(146, 67);
+		this.chkDonator.Name = "chkDonator";
+		this.chkDonator.Size = new System.Drawing.Size(83, 17);
+		this.chkDonator.TabIndex = 2;
+		this.chkDonator.Text = "Sumbangan";
+		this.chkDonator.UseVisualStyleBackColor = true;
+		this.Label4.AutoSize = true;
+		this.Label4.Location = new System.Drawing.Point(10, 9);
+		this.Label4.MaximumSize = new System.Drawing.Size(220, 100);
+		this.Label4.Name = "Label4";
+		this.Label4.Size = new System.Drawing.Size(217, 26);
+		this.Label4.TabIndex = 149;
+		this.Label4.Text = "Catatan: Opsi Sumbangan hanya bisa dipilih saat membuat Sales baru";
+		base.AcceptButton = this.btnSaveClose;
+		base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
+		base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+		base.ClientSize = new System.Drawing.Size(239, 178);
+		base.Controls.Add(this.Label4);
+		base.Controls.Add(this.chkDonator);
+		base.Controls.Add(this.chkCollector);
+		base.Controls.Add(this.Label3);
+		base.Controls.Add(this.Label2);
+		base.Controls.Add(this.cboBranch);
+		base.Controls.Add(this.btnSaveClose);
+		base.Controls.Add(this.Label9);
+		base.Controls.Add(this.cboActive);
+		base.Controls.Add(this.txtName);
+		base.Controls.Add(this.Label1);
+		base.KeyPreview = true;
+		base.MaximizeBox = false;
+		base.Name = "frmSettingSalesPersonInput";
+		base.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+		this.Text = "Setting - Sales";
+		base.ResumeLayout(false);
+		base.PerformLayout();
+	}
+
+	public frmSettingSalesPersonInput()
+	{
+		base.KeyDown += frmSettingSalesPersonInput_KeyDown;
+		InitializeComponent();
+		ComboBox combo = cboBranch;
+		cCombo.getBranch(ref combo, Module1.pubGroupId, blnAll: false);
+		cboBranch = combo;
+		combo = cboActive;
+		cCombo.getYesNo(ref combo, All: false);
+		cboActive = combo;
+		cboActive.SelectedIndex = 0;
+	}
+
+	private void frmSettingSalesPersonInput_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Escape)
+		{
+			Close();
+		}
+	}
+
+	public void loadData()
+	{
+		int try0001_dispatch = -1;
+		int num2 = default(int);
+		int num = default(int);
+		while (true)
+		{
+			try
+			{
+				/*Note: ILSpy has introduced the following switch to emulate a goto from catch-block to try-block*/;
+				switch (try0001_dispatch)
+				{
+				default:
+				{
+					ProjectData.ClearProjectError();
+					num2 = 2;
+					cSalesPerson cSalesPerson2 = new cSalesPerson(_currentId);
+					txtName.Text = cSalesPerson2.Name;
+					chkCollector.Checked = Conversions.ToBoolean(Interaction.IIf(cSalesPerson2.IsCollector == 1, true, false));
+					chkDonator.Checked = Conversions.ToBoolean(Interaction.IIf(cSalesPerson2.IsDonator == 1, true, false));
+					ComboBox cboSource = cboBranch;
+					Module1.comboBoundValue(ref cboSource, cSalesPerson2.BranchId);
+					cboBranch = cboSource;
+					cboSource = cboActive;
+					Module1.comboBoundValue(ref cboSource, cSalesPerson2.Active);
+					cboActive = cboSource;
+					chkDonator.Enabled = false;
+					goto end_IL_0001;
+				}
+				case 237:
+					num = -1;
+					switch (num2)
+					{
+					case 2:
+						Module1.SaveError(Information.Err(), "frmSettingSalesPersonInput", "LoadData", "");
+						_currentId = 0;
+						goto end_IL_0001;
+					}
+					break;
+				}
+			}
+			catch (object obj) when (obj is Exception && num2 != 0 && num == 0)
+			{
+				ProjectData.SetProjectError((Exception)obj);
+				try0001_dispatch = 237;
+				continue;
+			}
+			throw ProjectData.CreateProjectError(-2146828237);
+			continue;
+			end_IL_0001:
+			break;
+		}
+		if (num != 0)
+		{
+			ProjectData.ClearProjectError();
+		}
+	}
+
+	public void prepareForm()
+	{
+		_currentId = 0;
+	}
+
+	private void btnSaveClose_Click(object sender, EventArgs e)
+	{
+		cComboItem cComboItem2 = (cComboItem)cboBranch.SelectedItem;
+		cComboItem cComboItem3 = (cComboItem)cboActive.SelectedItem;
+		if (Operators.CompareString(txtName.Text, "", TextCompare: false) == 0)
+		{
+			Interaction.MsgBox("Masukkan nama sales", MsgBoxStyle.Information);
+			txtName.Focus();
+			return;
+		}
+		if (cboBranch.SelectedIndex == -1)
+		{
+			Interaction.MsgBox("Pilih cabang", MsgBoxStyle.Information);
+			cboBranch.Focus();
+			return;
+		}
+		if (cSalesPerson.IsExist(_currentId, Conversions.ToInteger(cComboItem2.Value), Module1.cleanString(txtName.Text)))
+		{
+			Interaction.MsgBox("Nama sales sudah pernah digunakan di cabang " + cboBranch.Text + ". Masukkan nama lain.", MsgBoxStyle.Information);
+			txtName.Focus();
+			return;
+		}
+		if (cboActive.SelectedIndex == -1)
+		{
+			Interaction.MsgBox("Pilih aktif/tidak", MsgBoxStyle.Information);
+			cboActive.Focus();
+			return;
+		}
+		cSalesPerson cSalesPerson2 = new cSalesPerson(0);
+		cSalesPerson2.Id = Conversions.ToInteger(CurrentId);
+		cSalesPerson2.Name = txtName.Text;
+		cSalesPerson2.IsCollector = Conversions.ToInteger(Interaction.IIf(chkCollector.Checked, 1, 0));
+		cSalesPerson2.IsDonator = Conversions.ToInteger(Interaction.IIf(chkDonator.Checked, 1, 0));
+		cSalesPerson2.BranchId = Conversions.ToInteger(cComboItem2.Value);
+		cSalesPerson2.Active = Conversions.ToInteger(cComboItem3.Value);
+		cSalesPerson2.save();
+		Interaction.MsgBox("Sales berhasil disimpan", MsgBoxStyle.Information);
+		if (!MyProject.Forms.frmSettingSalesPersonList.chkManual.Checked)
+		{
+			MyProject.Forms.frmSettingSalesPersonList.getList();
+		}
+		Close();
+	}
 }

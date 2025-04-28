@@ -1,296 +1,557 @@
 using System;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic.PowerPacks.Vs;
+using GCUv2.My;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using Microsoft.VisualBasic.PowerPacks;
 
-namespace GCUv2
+namespace GCUv2;
+
+[DesignerGenerated]
+public class frmSettingTaxInvoiceNumber : Form
 {
-    public class Form
-    {
-
-        private class ComponentModel.IContainer components;
-        private class GCUv2.FilteredTextBox _txtLatestNumber;
-        private class Label _Label5;
-        private class Label _Label3;
-        private class Button _btnSave;
-        private class DataGridView _dgvList;
-        private class Label _Label1;
-        private class ComboBox _cboYear;
-        private class Label _Label4;
-        private class ComboBox _cboBranch;
-        private class Microsoft.VisualBasic.PowerPacks.LineShape _LineShape2;
-        private class Microsoft.VisualBasic.PowerPacks.ShapeContainer _ShapeContainer1;
-
-
-        protected override strict void Dispose(boolean disposing) {
-
-          boolean var_1;
-
-        }
-
-        private void InitializeComponent() {
-
-
-        }
-
-        assem override strict specialname class GCUv2.FilteredTextBox get_txtLatestNumber() {
-
-          loc_513F61: ldarg.0
-          loc_513F62: ldfld GCUv2.frmSettingTaxInvoiceNumber::_txtLatestNumber
-          loc_513F67: br.s loc_513F69
-          loc_513F69: // Referenced from: loc_513F67
-          loc_513F69: ret
-        }
-
-        assem override strict specialname void set_txtLatestNumber(class GCUv2.FilteredTextBox WithEventsValue) {
-
-          loc_513F6B: ldarg.0
-          loc_513F6C: ldarg.1
-          loc_513F6D: stfld GCUv2.frmSettingTaxInvoiceNumber::_txtLatestNumber
-          loc_513F72: ret
-        }
-
-        assem override strict specialname class Label get_Label5() {
-
-          loc_513F74: ldarg.0
-          loc_513F75: ldfld GCUv2.frmSettingTaxInvoiceNumber::_Label5
-          loc_513F7A: br.s loc_513F7C
-          loc_513F7C: // Referenced from: loc_513F7A
-          loc_513F7C: ret
-        }
-
-        assem override strict specialname void set_Label5(class Label WithEventsValue) {
-
-          loc_513F7E: ldarg.0
-          loc_513F7F: ldarg.1
-          loc_513F80: stfld GCUv2.frmSettingTaxInvoiceNumber::_Label5
-          loc_513F85: ret
-        }
-
-        assem override strict specialname class Label get_Label3() {
-
-          loc_513F87: ldarg.0
-          loc_513F88: ldfld GCUv2.frmSettingTaxInvoiceNumber::_Label3
-          loc_513F8D: br.s loc_513F8F
-          loc_513F8F: // Referenced from: loc_513F8D
-          loc_513F8F: ret
-        }
-
-        assem override strict specialname void set_Label3(class Label WithEventsValue) {
-
-          loc_513F91: ldarg.0
-          loc_513F92: ldarg.1
-          loc_513F93: stfld GCUv2.frmSettingTaxInvoiceNumber::_Label3
-          loc_513F98: ret
-        }
-
-        assem override strict specialname class Button get_btnSave() {
-
-          loc_513F9A: ldarg.0
-          loc_513F9B: ldfld GCUv2.frmSettingTaxInvoiceNumber::_btnSave
-          loc_513FA0: br.s loc_513FA2
-          loc_513FA2: // Referenced from: loc_513FA0
-          loc_513FA2: ret
-        }
-
-        assem override strict specialname void set_btnSave(class Button WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Button var_2;
-
-        }
-
-        assem override strict specialname class DataGridView get_dgvList() {
-
-          loc_513FE8: ldarg.0
-          loc_513FE9: ldfld GCUv2.frmSettingTaxInvoiceNumber::_dgvList
-          loc_513FEE: br.s loc_513FF0
-          loc_513FF0: // Referenced from: loc_513FEE
-          loc_513FF0: ret
-        }
-
-        assem override strict specialname void set_dgvList(class DataGridView WithEventsValue) {
-
-          class KeyEventHandler var_1;
-          class DataGridViewCellValidatingEventHandler var_2;
-          class DataGridView var_3;
-
-        }
-
-        assem override strict specialname class Label get_Label1() {
-
-          loc_514053: ldarg.0
-          loc_514054: ldfld GCUv2.frmSettingTaxInvoiceNumber::_Label1
-          loc_514059: br.s loc_51405B
-          loc_51405B: // Referenced from: loc_514059
-          loc_51405B: ret
-        }
-
-        assem override strict specialname void set_Label1(class Label WithEventsValue) {
-
-          loc_51405D: ldarg.0
-          loc_51405E: ldarg.1
-          loc_51405F: stfld GCUv2.frmSettingTaxInvoiceNumber::_Label1
-          loc_514064: ret
-        }
-
-        assem override strict specialname class ComboBox get_cboYear() {
-
-          loc_514066: ldarg.0
-          loc_514067: ldfld GCUv2.frmSettingTaxInvoiceNumber::_cboYear
-          loc_51406C: br.s loc_51406E
-          loc_51406E: // Referenced from: loc_51406C
-          loc_51406E: ret
-        }
-
-        assem override strict specialname void set_cboYear(class ComboBox WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class ComboBox var_2;
-
-        }
-
-        assem override strict specialname class Label get_Label4() {
-
-          loc_5140B4: ldarg.0
-          loc_5140B5: ldfld GCUv2.frmSettingTaxInvoiceNumber::_Label4
-          loc_5140BA: br.s loc_5140BC
-          loc_5140BC: // Referenced from: loc_5140BA
-          loc_5140BC: ret
-        }
-
-        assem override strict specialname void set_Label4(class Label WithEventsValue) {
-
-          loc_5140BE: ldarg.0
-          loc_5140BF: ldarg.1
-          loc_5140C0: stfld GCUv2.frmSettingTaxInvoiceNumber::_Label4
-          loc_5140C5: ret
-        }
-
-        assem override strict specialname class ComboBox get_cboBranch() {
-
-          loc_5140C7: ldarg.0
-          loc_5140C8: ldfld GCUv2.frmSettingTaxInvoiceNumber::_cboBranch
-          loc_5140CD: br.s loc_5140CF
-          loc_5140CF: // Referenced from: loc_5140CD
-          loc_5140CF: ret
-        }
-
-        assem override strict specialname void set_cboBranch(class ComboBox WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class ComboBox var_2;
-
-        }
-
-        assem override strict specialname class Microsoft.VisualBasic.PowerPacks.LineShape get_LineShape2() {
-
-          loc_514114: ldarg.0
-          loc_514115: ldfld GCUv2.frmSettingTaxInvoiceNumber::_LineShape2
-          loc_51411A: br.s loc_51411C
-          loc_51411C: // Referenced from: loc_51411A
-          loc_51411C: ret
-        }
-
-        assem override strict specialname void set_LineShape2(class Microsoft.VisualBasic.PowerPacks.LineShape WithEventsValue) {
-
-          loc_51411E: ldarg.0
-          loc_51411F: ldarg.1
-          loc_514120: stfld GCUv2.frmSettingTaxInvoiceNumber::_LineShape2
-          loc_514125: ret
-        }
-
-        assem override strict specialname class Microsoft.VisualBasic.PowerPacks.ShapeContainer get_ShapeContainer1() {
-
-          loc_514127: ldarg.0
-          loc_514128: ldfld GCUv2.frmSettingTaxInvoiceNumber::_ShapeContainer1
-          loc_51412D: br.s loc_51412F
-          loc_51412F: // Referenced from: loc_51412D
-          loc_51412F: ret
-        }
-
-        assem override strict specialname void set_ShapeContainer1(class Microsoft.VisualBasic.PowerPacks.ShapeContainer WithEventsValue) {
-
-          loc_514131: ldarg.0
-          loc_514132: ldarg.1
-          loc_514133: stfld GCUv2.frmSettingTaxInvoiceNumber::_ShapeContainer1
-          loc_514138: ret
-        }
-
-        public void frmSettingTaxInvoiceNumber() {
-
-          class ComboBox var_1;
-
-        }
-
-        private void formatGrid() {
-
-
-        }
-
-        private void frmSettingTaxInvoiceNumber_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void cboBranch_SelectedIndexChanged(object sender, class System.EventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void cboYear_SelectedIndexChanged(object sender, class System.EventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void getData() {
-
-          class GCUv2.cComboItem var_1;
-          class GCUv2.cComboItem var_2;
-          class GCUv2.cTaxInvoiceNumber var_3;
-          valuetype NumberRange[] var_4;
-          int32 num_1;
-          valuetype NumberRange var_5;
-          boolean var_6;
-
-        }
-
-        private void dgvList_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-          boolean var_2;
-
-        }
-
-        private void dgvList_CellValidating(object sender, class DataGridViewCellValidatingEventArgs e) {
-
-          int32 num_1;
-          int32 num_2;
-          boolean var_1;
-          boolean var_2;
-
-        }
-
-        private void btnSave_Click(object sender, class System.EventArgs e) {
-
-          int32 num_1;
-          int32 num_2;
-          class GCUv2.cComboItem var_1;
-          class GCUv2.cComboItem var_2;
-          boolean var_3;
-          boolean var_4;
-          boolean var_5;
-          boolean var_6;
-          class GCUv2.cTaxInvoiceNumber var_7;
-          valuetype NumberRange[] var_8;
-          int32 num_3;
-          int32 num_4;
-          int32 num_5;
-          boolean var_9;
-
-        }
-
-    }
+	private IContainer components;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnSave")]
+	private Button _btnSave;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("dgvList")]
+	private DataGridView _dgvList;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("cboYear")]
+	private ComboBox _cboYear;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("cboBranch")]
+	private ComboBox _cboBranch;
+
+	[field: AccessedThroughProperty("txtLatestNumber")]
+	internal virtual FilteredTextBox txtLatestNumber
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label5")]
+	internal virtual Label Label5
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label3")]
+	internal virtual Label Label3
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual Button btnSave
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnSave;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnSave_Click;
+			Button button = _btnSave;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnSave = value;
+			button = _btnSave;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
+
+	internal virtual DataGridView dgvList
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _dgvList;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			KeyEventHandler value2 = dgvList_KeyDown;
+			DataGridViewCellValidatingEventHandler value3 = dgvList_CellValidating;
+			DataGridView dataGridView = _dgvList;
+			if (dataGridView != null)
+			{
+				dataGridView.KeyDown -= value2;
+				dataGridView.CellValidating -= value3;
+			}
+			_dgvList = value;
+			dataGridView = _dgvList;
+			if (dataGridView != null)
+			{
+				dataGridView.KeyDown += value2;
+				dataGridView.CellValidating += value3;
+			}
+		}
+	}
+
+	[field: AccessedThroughProperty("Label1")]
+	internal virtual Label Label1
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual ComboBox cboYear
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _cboYear;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = cboYear_SelectedIndexChanged;
+			ComboBox comboBox = _cboYear;
+			if (comboBox != null)
+			{
+				comboBox.SelectedIndexChanged -= value2;
+			}
+			_cboYear = value;
+			comboBox = _cboYear;
+			if (comboBox != null)
+			{
+				comboBox.SelectedIndexChanged += value2;
+			}
+		}
+	}
+
+	[field: AccessedThroughProperty("Label4")]
+	internal virtual Label Label4
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual ComboBox cboBranch
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _cboBranch;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = cboBranch_SelectedIndexChanged;
+			ComboBox comboBox = _cboBranch;
+			if (comboBox != null)
+			{
+				comboBox.SelectedIndexChanged -= value2;
+			}
+			_cboBranch = value;
+			comboBox = _cboBranch;
+			if (comboBox != null)
+			{
+				comboBox.SelectedIndexChanged += value2;
+			}
+		}
+	}
+
+	[field: AccessedThroughProperty("LineShape2")]
+	internal virtual LineShape LineShape2
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("ShapeContainer1")]
+	internal virtual ShapeContainer ShapeContainer1
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[DebuggerNonUserCode]
+	protected override void Dispose(bool disposing)
+	{
+		try
+		{
+			if (disposing && components != null)
+			{
+				components.Dispose();
+			}
+		}
+		finally
+		{
+			base.Dispose(disposing);
+		}
+	}
+
+	[System.Diagnostics.DebuggerStepThrough]
+	private void InitializeComponent()
+	{
+		//IL_006e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0078: Expected O, but got Unknown
+		//IL_007a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0084: Expected O, but got Unknown
+		this.txtLatestNumber = new GCUv2.FilteredTextBox();
+		this.Label5 = new System.Windows.Forms.Label();
+		this.Label3 = new System.Windows.Forms.Label();
+		this.btnSave = new System.Windows.Forms.Button();
+		this.dgvList = new System.Windows.Forms.DataGridView();
+		this.Label1 = new System.Windows.Forms.Label();
+		this.cboYear = new System.Windows.Forms.ComboBox();
+		this.Label4 = new System.Windows.Forms.Label();
+		this.cboBranch = new System.Windows.Forms.ComboBox();
+		this.LineShape2 = new LineShape();
+		this.ShapeContainer1 = new ShapeContainer();
+		((System.ComponentModel.ISupportInitialize)this.dgvList).BeginInit();
+		base.SuspendLayout();
+		this.txtLatestNumber.AllowedCharacters = GCUv2.FilteredTextBox.InputType.All;
+		this.txtLatestNumber.DontFormat = false;
+		this.txtLatestNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.txtLatestNumber.Location = new System.Drawing.Point(121, 74);
+		this.txtLatestNumber.MaximumDigit = 3;
+		this.txtLatestNumber.Name = "txtLatestNumber";
+		this.txtLatestNumber.Size = new System.Drawing.Size(76, 21);
+		this.txtLatestNumber.TabIndex = 2;
+		this.txtLatestNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+		this.Label5.AutoSize = true;
+		this.Label5.Location = new System.Drawing.Point(10, 76);
+		this.Label5.Name = "Label5";
+		this.Label5.Size = new System.Drawing.Size(105, 13);
+		this.Label5.TabIndex = 259;
+		this.Label5.Text = "Nomer Auto Terakhir";
+		this.Label3.AutoSize = true;
+		this.Label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label3.Location = new System.Drawing.Point(10, 101);
+		this.Label3.Name = "Label3";
+		this.Label3.Size = new System.Drawing.Size(57, 13);
+		this.Label3.TabIndex = 258;
+		this.Label3.Text = "No. Faktur";
+		this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnSave.Location = new System.Drawing.Point(77, 438);
+		this.btnSave.Name = "btnSave";
+		this.btnSave.Size = new System.Drawing.Size(87, 28);
+		this.btnSave.TabIndex = 4;
+		this.btnSave.Text = "Simpan";
+		this.btnSave.UseVisualStyleBackColor = true;
+		this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+		this.dgvList.Location = new System.Drawing.Point(76, 101);
+		this.dgvList.Name = "dgvList";
+		this.dgvList.Size = new System.Drawing.Size(201, 331);
+		this.dgvList.TabIndex = 3;
+		this.Label1.AutoSize = true;
+		this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label1.Location = new System.Drawing.Point(11, 39);
+		this.Label1.Name = "Label1";
+		this.Label1.Size = new System.Drawing.Size(38, 13);
+		this.Label1.TabIndex = 256;
+		this.Label1.Text = "Tahun";
+		this.cboYear.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+		this.cboYear.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+		this.cboYear.FormattingEnabled = true;
+		this.cboYear.Location = new System.Drawing.Point(77, 36);
+		this.cboYear.Name = "cboYear";
+		this.cboYear.Size = new System.Drawing.Size(120, 21);
+		this.cboYear.TabIndex = 1;
+		this.Label4.AutoSize = true;
+		this.Label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label4.Location = new System.Drawing.Point(11, 12);
+		this.Label4.Name = "Label4";
+		this.Label4.Size = new System.Drawing.Size(44, 13);
+		this.Label4.TabIndex = 255;
+		this.Label4.Text = "Cabang";
+		this.cboBranch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+		this.cboBranch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+		this.cboBranch.FormattingEnabled = true;
+		this.cboBranch.Location = new System.Drawing.Point(77, 9);
+		this.cboBranch.Name = "cboBranch";
+		this.cboBranch.Size = new System.Drawing.Size(120, 21);
+		this.cboBranch.TabIndex = 0;
+		((Shape)this.LineShape2).BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+		((Shape)this.LineShape2).Name = "LineShape2";
+		this.LineShape2.X1 = 13;
+		this.LineShape2.X2 = 276;
+		this.LineShape2.Y1 = 65;
+		this.LineShape2.Y2 = 65;
+		((System.Windows.Forms.Control)(object)this.ShapeContainer1).Location = new System.Drawing.Point(0, 0);
+		((System.Windows.Forms.Control)(object)this.ShapeContainer1).Margin = new System.Windows.Forms.Padding(0);
+		((System.Windows.Forms.Control)(object)this.ShapeContainer1).Name = "ShapeContainer1";
+		this.ShapeContainer1.Shapes.AddRange((Shape[])(object)new Shape[1] { (Shape)this.LineShape2 });
+		((System.Windows.Forms.Control)(object)this.ShapeContainer1).Size = new System.Drawing.Size(291, 476);
+		((System.Windows.Forms.Control)(object)this.ShapeContainer1).TabIndex = 260;
+		((System.Windows.Forms.Control)(object)this.ShapeContainer1).TabStop = false;
+		base.AcceptButton = this.btnSave;
+		base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
+		base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+		base.ClientSize = new System.Drawing.Size(291, 476);
+		base.Controls.Add(this.txtLatestNumber);
+		base.Controls.Add(this.Label5);
+		base.Controls.Add(this.Label3);
+		base.Controls.Add(this.btnSave);
+		base.Controls.Add(this.dgvList);
+		base.Controls.Add(this.Label1);
+		base.Controls.Add(this.cboYear);
+		base.Controls.Add(this.Label4);
+		base.Controls.Add(this.cboBranch);
+		base.Controls.Add((System.Windows.Forms.Control)(object)this.ShapeContainer1);
+		base.KeyPreview = true;
+		base.MaximizeBox = false;
+		base.Name = "frmSettingTaxInvoiceNumber";
+		base.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+		this.Text = "Setting - No. Faktur Pajak";
+		((System.ComponentModel.ISupportInitialize)this.dgvList).EndInit();
+		base.ResumeLayout(false);
+		base.PerformLayout();
+	}
+
+	public frmSettingTaxInvoiceNumber()
+	{
+		base.KeyDown += frmSettingTaxInvoiceNumber_KeyDown;
+		InitializeComponent();
+		DoubleBuffered = true;
+		base.MdiParent = MyProject.Forms.frmMenu;
+		txtLatestNumber.AllowedCharacters = FilteredTextBox.InputType.NumeralsOnly;
+		txtLatestNumber.DontFormat = true;
+		ComboBox combo = cboBranch;
+		cCombo.getBranch(ref combo, Module1.pubGroupId, blnAll: false);
+		cboBranch = combo;
+		combo = cboYear;
+		cCombo.getYear(ref combo, blnAll: false, checked(DateAndTime.Year(DateAndTime.Now) - 1), 1);
+		cboYear = combo;
+		cboYear.SelectedIndex = 1;
+		formatGrid();
+	}
+
+	private void formatGrid()
+	{
+		dgvList.Columns.Add("", "Awal");
+		dgvList.Columns.Add("", "Akhir");
+		dgvList.Columns[0].Width = 80;
+		dgvList.Columns[1].Width = 80;
+		dgvList.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+		dgvList.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+		dgvList.RowHeadersVisible = false;
+		dgvList.AlternatingRowsDefaultCellStyle.BackColor = Color.WhiteSmoke;
+		dgvList.AllowUserToResizeRows = false;
+		dgvList.AllowUserToDeleteRows = true;
+	}
+
+	private void frmSettingTaxInvoiceNumber_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Escape)
+		{
+			Close();
+		}
+	}
+
+	private void cboBranch_SelectedIndexChanged(object sender, EventArgs e)
+	{
+		if ((cboBranch.SelectedIndex > -1) & (cboYear.SelectedIndex > -1))
+		{
+			getData();
+		}
+	}
+
+	private void cboYear_SelectedIndexChanged(object sender, EventArgs e)
+	{
+		if ((cboBranch.SelectedIndex > -1) & (cboYear.SelectedIndex > -1))
+		{
+			getData();
+		}
+	}
+
+	private void getData()
+	{
+		cComboItem cComboItem2 = (cComboItem)cboBranch.SelectedItem;
+		cComboItem cComboItem3 = (cComboItem)cboYear.SelectedItem;
+		cTaxInvoiceNumber cTaxInvoiceNumber2 = new cTaxInvoiceNumber(Conversions.ToInteger(cComboItem2.Value), Conversions.ToInteger(cboYear.Text));
+		txtLatestNumber.Text = Conversions.ToString(cTaxInvoiceNumber2.LatestNumber);
+		dgvList.Rows.Clear();
+		cTaxInvoiceNumber.NumberRange[] range = cTaxInvoiceNumber2.Range;
+		for (int i = 0; i < range.Length; i = checked(i + 1))
+		{
+			cTaxInvoiceNumber.NumberRange numberRange = range[i];
+			dgvList.Rows.Add(Conversion.Val(numberRange._begin), Conversion.Val(numberRange._end));
+		}
+	}
+
+	private void dgvList_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Delete && !dgvList.Rows[dgvList.CurrentRow.Index].IsNewRow)
+		{
+			dgvList.Rows.RemoveAt(dgvList.CurrentRow.Index);
+		}
+	}
+
+	private void dgvList_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+	{
+		int try0001_dispatch = -1;
+		int num2 = default(int);
+		int num = default(int);
+		while (true)
+		{
+			try
+			{
+				/*Note: ILSpy has introduced the following switch to emulate a goto from catch-block to try-block*/;
+				switch (try0001_dispatch)
+				{
+				default:
+					ProjectData.ClearProjectError();
+					num2 = 2;
+					if (!dgvList.Rows[e.RowIndex].IsNewRow && Operators.CompareString(Strings.Trim(e.FormattedValue.ToString()), "", TextCompare: false) != 0 && !Versioned.IsNumeric(e.FormattedValue.ToString()))
+					{
+						e.Cancel = true;
+						Interaction.MsgBox("Masukkan nomer dengan format angka yang benar", MsgBoxStyle.Information);
+					}
+					goto end_IL_0001;
+				case 153:
+					num = -1;
+					switch (num2)
+					{
+					case 2:
+						Module1.SaveError(Information.Err(), "frmSettingTaxInvoiceNumber", "dgvList_CellValidating", "");
+						goto end_IL_0001;
+					}
+					break;
+				}
+				goto IL_00cf;
+				end_IL_0001:;
+			}
+			catch (object obj) when (obj is Exception && num2 != 0 && num == 0)
+			{
+				ProjectData.SetProjectError((Exception)obj);
+				try0001_dispatch = 153;
+				continue;
+			}
+			break;
+			IL_00cf:
+			throw ProjectData.CreateProjectError(-2146828237);
+		}
+		if (num != 0)
+		{
+			ProjectData.ClearProjectError();
+		}
+	}
+
+	private void btnSave_Click(object sender, EventArgs e)
+	{
+		int try0001_dispatch = -1;
+		int num2 = default(int);
+		int num4 = default(int);
+		int num = default(int);
+		while (true)
+		{
+			try
+			{
+				/*Note: ILSpy has introduced the following switch to emulate a goto from catch-block to try-block*/;
+				checked
+				{
+					switch (try0001_dispatch)
+					{
+					default:
+					{
+						ProjectData.ClearProjectError();
+						num2 = 2;
+						cComboItem cComboItem2 = (cComboItem)cboBranch.SelectedItem;
+						cComboItem cComboItem3 = (cComboItem)cboYear.SelectedItem;
+						if (cboBranch.SelectedIndex == -1)
+						{
+							Interaction.MsgBox("Pilih cabang.", MsgBoxStyle.Information);
+							cboBranch.Focus();
+						}
+						else if (cboYear.SelectedIndex == -1)
+						{
+							Interaction.MsgBox("Pilih tahun.", MsgBoxStyle.Information);
+							cboYear.Focus();
+						}
+						else if (Operators.CompareString(txtLatestNumber.Text, "", TextCompare: false) == 0)
+						{
+							Interaction.MsgBox("Masukkan nomer auto terakhir.", MsgBoxStyle.Information);
+							txtLatestNumber.Focus();
+						}
+						else
+						{
+							if (!Module1.isBeginLessThanEnd(dgvList) || Module1.isAlreadyInGrid(dgvList))
+							{
+								goto end_IL_0001;
+							}
+							cTaxInvoiceNumber cTaxInvoiceNumber2 = new cTaxInvoiceNumber(0, 0);
+							cTaxInvoiceNumber.NumberRange[] array = null;
+							cTaxInvoiceNumber2.BranchId = Conversions.ToInteger(cComboItem2.Value);
+							cTaxInvoiceNumber2.Year = Conversions.ToInteger(cComboItem3.Value);
+							cTaxInvoiceNumber2.LatestNumber = Conversions.ToDouble(txtLatestNumber.Text);
+							int num3 = dgvList.Rows.Count - 2;
+							for (int i = 0; i <= num3; i++)
+							{
+								if ((Conversion.Val(RuntimeHelpers.GetObjectValue(dgvList[0, i].Value)) > 0.0) & (Conversion.Val(RuntimeHelpers.GetObjectValue(dgvList[1, i].Value)) > 0.0))
+								{
+									array = (cTaxInvoiceNumber.NumberRange[])Utils.CopyArray(array, new cTaxInvoiceNumber.NumberRange[num4 + 1]);
+									array[num4]._begin = Conversions.ToDouble(dgvList[0, i].Value);
+									array[num4]._end = Conversions.ToDouble(dgvList[1, i].Value);
+									num4++;
+								}
+							}
+							cTaxInvoiceNumber2.Range = array;
+							cTaxInvoiceNumber2.Save();
+							Interaction.MsgBox("Nomer Faktur berhasil disimpan.", MsgBoxStyle.Information);
+							goto end_IL_0001;
+						}
+						goto end_IL_0001_2;
+					}
+					case 622:
+						num = -1;
+						switch (num2)
+						{
+						case 2:
+							Module1.SaveError(Information.Err(), "frmSettingTaxInvoiceNumber", "btnSave_click", "");
+							goto end_IL_0001_2;
+						}
+						break;
+					}
+					goto IL_02a4;
+				}
+				end_IL_0001_2:;
+			}
+			catch (object obj) when (obj is Exception && num2 != 0 && num == 0)
+			{
+				ProjectData.SetProjectError((Exception)obj);
+				try0001_dispatch = 622;
+				continue;
+			}
+			break;
+			IL_02a4:
+			throw ProjectData.CreateProjectError(-2146828237);
+			continue;
+			end_IL_0001:
+			break;
+		}
+		if (num != 0)
+		{
+			ProjectData.ClearProjectError();
+		}
+	}
 }

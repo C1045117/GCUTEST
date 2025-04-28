@@ -1,185 +1,388 @@
 using System;
+using System.Collections;
+using System.ComponentModel;
+using System.Data;
+using System.Diagnostics;
+using System.Drawing;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
+using GCUv2.My;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
 
-namespace GCUv2
+namespace GCUv2;
+
+[DesignerGenerated]
+public class frmSupplierPaymentList : Form
 {
-    public class Form
-    {
+	private IContainer components;
 
-        private class ComponentModel.IContainer components;
-        private class Label _lblTitle;
-        private class DataGridView _dgvList;
-        private class ToolStrip _ToolStrip1;
-        private class ToolStripButton _tsbNew;
-        private class ToolStripButton _tsbRefresh;
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("dgvList")]
+	private DataGridView _dgvList;
 
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("tsbNew")]
+	private ToolStripButton _tsbNew;
 
-        protected override strict void Dispose(boolean disposing) {
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("tsbRefresh")]
+	private ToolStripButton _tsbRefresh;
 
-          boolean var_1;
+	[field: AccessedThroughProperty("lblTitle")]
+	internal virtual Label lblTitle
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-        }
+	internal virtual DataGridView dgvList
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _dgvList;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			KeyEventHandler value2 = dgvList_KeyDown;
+			EventHandler value3 = dgvList_DoubleClick;
+			DataGridView dataGridView = _dgvList;
+			if (dataGridView != null)
+			{
+				dataGridView.KeyDown -= value2;
+				dataGridView.DoubleClick -= value3;
+			}
+			_dgvList = value;
+			dataGridView = _dgvList;
+			if (dataGridView != null)
+			{
+				dataGridView.KeyDown += value2;
+				dataGridView.DoubleClick += value3;
+			}
+		}
+	}
 
-        private void InitializeComponent() {
+	[field: AccessedThroughProperty("ToolStrip1")]
+	internal virtual ToolStrip ToolStrip1
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-          class ComponentModel.ComponentResourceManager var_1;
+	internal virtual ToolStripButton tsbNew
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _tsbNew;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = tsbNew_Click;
+			ToolStripButton toolStripButton = _tsbNew;
+			if (toolStripButton != null)
+			{
+				toolStripButton.Click -= value2;
+			}
+			_tsbNew = value;
+			toolStripButton = _tsbNew;
+			if (toolStripButton != null)
+			{
+				toolStripButton.Click += value2;
+			}
+		}
+	}
 
-        }
+	internal virtual ToolStripButton tsbRefresh
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _tsbRefresh;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = tsbRefresh_Click;
+			ToolStripButton toolStripButton = _tsbRefresh;
+			if (toolStripButton != null)
+			{
+				toolStripButton.Click -= value2;
+			}
+			_tsbRefresh = value;
+			toolStripButton = _tsbRefresh;
+			if (toolStripButton != null)
+			{
+				toolStripButton.Click += value2;
+			}
+		}
+	}
 
-        assem override strict specialname class Label get_lblTitle() {
+	[DebuggerNonUserCode]
+	protected override void Dispose(bool disposing)
+	{
+		try
+		{
+			if (disposing && components != null)
+			{
+				components.Dispose();
+			}
+		}
+		finally
+		{
+			base.Dispose(disposing);
+		}
+	}
 
-          loc_51F61B: ldarg.0
-          loc_51F61C: ldfld GCUv2.frmSupplierPaymentList::_lblTitle
-          loc_51F621: br.s loc_51F623
-          loc_51F623: // Referenced from: loc_51F621
-          loc_51F623: ret
-        }
+	[System.Diagnostics.DebuggerStepThrough]
+	private void InitializeComponent()
+	{
+		System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GCUv2.frmSupplierPaymentList));
+		this.lblTitle = new System.Windows.Forms.Label();
+		this.dgvList = new System.Windows.Forms.DataGridView();
+		this.ToolStrip1 = new System.Windows.Forms.ToolStrip();
+		this.tsbNew = new System.Windows.Forms.ToolStripButton();
+		this.tsbRefresh = new System.Windows.Forms.ToolStripButton();
+		((System.ComponentModel.ISupportInitialize)this.dgvList).BeginInit();
+		this.ToolStrip1.SuspendLayout();
+		base.SuspendLayout();
+		this.lblTitle.AutoSize = true;
+		this.lblTitle.Location = new System.Drawing.Point(9, 65);
+		this.lblTitle.Name = "lblTitle";
+		this.lblTitle.Size = new System.Drawing.Size(105, 13);
+		this.lblTitle.TabIndex = 16;
+		this.lblTitle.Text = "Pembayaran terbaru:";
+		this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+		this.dgvList.Location = new System.Drawing.Point(12, 82);
+		this.dgvList.Name = "dgvList";
+		this.dgvList.Size = new System.Drawing.Size(521, 294);
+		this.dgvList.TabIndex = 15;
+		this.ToolStrip1.AutoSize = false;
+		this.ToolStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
+		this.ToolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[2] { this.tsbNew, this.tsbRefresh });
+		this.ToolStrip1.Location = new System.Drawing.Point(0, 0);
+		this.ToolStrip1.Name = "ToolStrip1";
+		this.ToolStrip1.Size = new System.Drawing.Size(545, 60);
+		this.ToolStrip1.TabIndex = 14;
+		this.ToolStrip1.Text = "ToolStrip1";
+		this.tsbNew.Image = (System.Drawing.Image)resources.GetObject("tsbNew.Image");
+		this.tsbNew.ImageTransparentColor = System.Drawing.Color.Magenta;
+		this.tsbNew.Name = "tsbNew";
+		this.tsbNew.Size = new System.Drawing.Size(44, 57);
+		this.tsbNew.Text = "&Baru";
+		this.tsbNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+		this.tsbRefresh.Image = (System.Drawing.Image)resources.GetObject("tsbRefresh.Image");
+		this.tsbRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+		this.tsbRefresh.Name = "tsbRefresh";
+		this.tsbRefresh.Size = new System.Drawing.Size(50, 57);
+		this.tsbRefresh.Text = "&Refresh";
+		this.tsbRefresh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+		base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
+		base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+		base.ClientSize = new System.Drawing.Size(545, 394);
+		base.Controls.Add(this.lblTitle);
+		base.Controls.Add(this.dgvList);
+		base.Controls.Add(this.ToolStrip1);
+		base.KeyPreview = true;
+		base.MaximizeBox = false;
+		base.Name = "frmSupplierPaymentList";
+		base.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+		this.Text = "Daftar Pembayaran Supplier";
+		((System.ComponentModel.ISupportInitialize)this.dgvList).EndInit();
+		this.ToolStrip1.ResumeLayout(false);
+		this.ToolStrip1.PerformLayout();
+		base.ResumeLayout(false);
+		base.PerformLayout();
+	}
 
-        assem override strict specialname void set_lblTitle(class Label WithEventsValue) {
+	public frmSupplierPaymentList()
+	{
+		base.KeyDown += frmPaymentList_KeyDown;
+		InitializeComponent();
+		base.MdiParent = MyProject.Forms.frmMenu;
+		DoubleBuffered = true;
+		GetRecent();
+	}
 
-          loc_51F625: ldarg.0
-          loc_51F626: ldarg.1
-          loc_51F627: stfld GCUv2.frmSupplierPaymentList::_lblTitle
-          loc_51F62C: ret
-        }
+	private void frmPaymentList_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Escape)
+		{
+			Close();
+		}
+		else if (e.KeyCode == Keys.F2)
+		{
+			tsbNew.PerformClick();
+		}
+		else if (e.KeyCode == Keys.F5)
+		{
+			tsbRefresh.PerformClick();
+		}
+	}
 
-        assem override strict specialname class DataGridView get_dgvList() {
+	public void GetRecent()
+	{
+		int try0001_dispatch = -1;
+		int num2 = default(int);
+		int num = default(int);
+		while (true)
+		{
+			try
+			{
+				/*Note: ILSpy has introduced the following switch to emulate a goto from catch-block to try-block*/;
+				switch (try0001_dispatch)
+				{
+				default:
+					ProjectData.ClearProjectError();
+					num2 = 2;
+					if (Module1.pubViewReportPurchaseInvoicePrice)
+					{
+						DataTable dataTable = new DataTable();
+						DataTable dataTable2 = new DataTable();
+						dataTable = cPurchaseInvoiceMultiPayment.Search(2, DateAndTime.Now.AddDays(-90.0), DateAndTime.Now, 0, 0, 0, 0, Module1.pubGroupId, Module1.pubBranchId);
+						FormatGrid();
+						IEnumerator enumerator = dataTable.Rows.GetEnumerator();
+						while (enumerator.MoveNext())
+						{
+							DataRow dataRow = (DataRow)enumerator.Current;
+							dgvList.Rows.Add(dataRow["invId"], dataRow["mpayId"], dataRow["payDate"], dataRow["supName"], dataRow["pcName"], Module1.formatCustomDecimal(Conversions.ToString(dataRow["payAmount"]), 2), Module1.formatCustomDecimal(Conversions.ToString(dataRow["payRemain"]), 2));
+						}
+						if (enumerator is IDisposable)
+						{
+							(enumerator as IDisposable).Dispose();
+						}
+						lblTitle.Text = "Pembayaran terbaru (" + Conversions.ToString(DateAndTime.Now) + ")";
+					}
+					goto end_IL_0001;
+				case 387:
+					num = -1;
+					switch (num2)
+					{
+					case 2:
+						Module1.SaveError(Information.Err(), "frmSupplierPaymentList", "GetRecent", "");
+						goto end_IL_0001;
+					}
+					break;
+				}
+			}
+			catch (object obj) when (obj is Exception && num2 != 0 && num == 0)
+			{
+				ProjectData.SetProjectError((Exception)obj);
+				try0001_dispatch = 387;
+				continue;
+			}
+			throw ProjectData.CreateProjectError(-2146828237);
+			continue;
+			end_IL_0001:
+			break;
+		}
+		if (num != 0)
+		{
+			ProjectData.ClearProjectError();
+		}
+	}
 
-          loc_51F62E: ldarg.0
-          loc_51F62F: ldfld GCUv2.frmSupplierPaymentList::_dgvList
-          loc_51F634: br.s loc_51F636
-          loc_51F636: // Referenced from: loc_51F634
-          loc_51F636: ret
-        }
+	private void FormatGrid()
+	{
+		dgvList.Columns.Clear();
+		dgvList.Rows.Clear();
+		dgvList.Columns.Add("", "invId");
+		dgvList.Columns.Add("", "mpayId");
+		dgvList.Columns.Add("", "Tanggal");
+		dgvList.Columns.Add("", "Supplier");
+		dgvList.Columns.Add("", "Tipe");
+		dgvList.Columns.Add("", "Jumlah");
+		dgvList.Columns.Add("", "Sisa");
+		dgvList.Columns[0].Visible = false;
+		dgvList.Columns[1].Visible = false;
+		dgvList.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
+		dgvList.Columns[2].Width = 80;
+		dgvList.Columns[3].Width = 150;
+		dgvList.Columns[4].Width = 60;
+		dgvList.Columns[5].Width = 100;
+		dgvList.Columns[5].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+		dgvList.Columns[6].Width = 100;
+		dgvList.Columns[6].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+		dgvList.RowHeadersVisible = false;
+		dgvList.AllowUserToAddRows = false;
+		dgvList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+		dgvList.ReadOnly = true;
+		dgvList.AlternatingRowsDefaultCellStyle.BackColor = Color.WhiteSmoke;
+		dgvList.AllowUserToResizeRows = false;
+	}
 
-        assem override strict specialname void set_dgvList(class DataGridView WithEventsValue) {
+	private void tsbNew_Click(object sender, EventArgs e)
+	{
+		if (!Module1.pubViewReportPurchaseInvoicePrice)
+		{
+			Interaction.MsgBox("Anda tidak bisa melihat faktur yang telah memiliki harga.", MsgBoxStyle.Information);
+			return;
+		}
+		MyProject.Forms.frmSupplierPayment.Show();
+		MyProject.Forms.frmSupplierPayment.PrepareForm(SaveNew: false);
+		MyProject.Forms.frmSupplierPayment.Activate();
+	}
 
-          class KeyEventHandler var_1;
-          class System.EventHandler var_2;
-          class DataGridView var_3;
+	private void dgvList_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Return)
+		{
+			openSelection();
+			e.SuppressKeyPress = true;
+		}
+		else if (e.KeyCode == Keys.Tab)
+		{
+			e.SuppressKeyPress = true;
+		}
+		else if (e.Shift & (e.KeyCode == Keys.Tab))
+		{
+			e.SuppressKeyPress = true;
+		}
+		else if (e.KeyCode == Keys.Delete)
+		{
+			e.SuppressKeyPress = true;
+		}
+	}
 
-        }
+	private void dgvList_DoubleClick(object sender, EventArgs e)
+	{
+		openSelection();
+	}
 
-        assem override strict specialname class ToolStrip get_ToolStrip1() {
+	private void openSelection()
+	{
+		if (dgvList.RowCount > 0 && Conversion.Val(RuntimeHelpers.GetObjectValue(dgvList[1, dgvList.CurrentRow.Index].Value)) > 0.0)
+		{
+			MyProject.Forms.frmSupplierPayment.Show();
+			MyProject.Forms.frmSupplierPayment.PrepareForm(SaveNew: false);
+			MyProject.Forms.frmSupplierPayment.CurrentId = Conversions.ToDouble(dgvList[1, dgvList.CurrentRow.Index].Value);
+			MyProject.Forms.frmSupplierPayment.LoadData();
+			MyProject.Forms.frmSupplierPayment.Activate();
+			MyProject.Forms.frmSupplierPayment.WindowState = FormWindowState.Normal;
+		}
+		else if (dgvList.RowCount > 0 && Conversion.Val(RuntimeHelpers.GetObjectValue(dgvList[0, dgvList.CurrentRow.Index].Value)) > 0.0)
+		{
+			MyProject.Forms.frmPurchaseInvoice.Show();
+			MyProject.Forms.frmPurchaseInvoice.prepareForm(SaveNew: false, KeepSupplier: false);
+			MyProject.Forms.frmPurchaseInvoice.CurrentId = Conversions.ToDouble(dgvList[0, dgvList.CurrentRow.Index].Value);
+			MyProject.Forms.frmPurchaseInvoice.LoadData();
+			MyProject.Forms.frmPurchaseInvoice.TabControl1.SelectedIndex = 1;
+			MyProject.Forms.frmPurchaseInvoice.Activate();
+			MyProject.Forms.frmPurchaseInvoice.WindowState = FormWindowState.Normal;
+		}
+	}
 
-          loc_51F697: ldarg.0
-          loc_51F698: ldfld GCUv2.frmSupplierPaymentList::_ToolStrip1
-          loc_51F69D: br.s loc_51F69F
-          loc_51F69F: // Referenced from: loc_51F69D
-          loc_51F69F: ret
-        }
-
-        assem override strict specialname void set_ToolStrip1(class ToolStrip WithEventsValue) {
-
-          loc_51F6A1: ldarg.0
-          loc_51F6A2: ldarg.1
-          loc_51F6A3: stfld GCUv2.frmSupplierPaymentList::_ToolStrip1
-          loc_51F6A8: ret
-        }
-
-        assem override strict specialname class ToolStripButton get_tsbNew() {
-
-          loc_51F6AA: ldarg.0
-          loc_51F6AB: ldfld GCUv2.frmSupplierPaymentList::_tsbNew
-          loc_51F6B0: br.s loc_51F6B2
-          loc_51F6B2: // Referenced from: loc_51F6B0
-          loc_51F6B2: ret
-        }
-
-        assem override strict specialname void set_tsbNew(class ToolStripButton WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class ToolStripButton var_2;
-
-        }
-
-        assem override strict specialname class ToolStripButton get_tsbRefresh() {
-
-          loc_51F6F8: ldarg.0
-          loc_51F6F9: ldfld GCUv2.frmSupplierPaymentList::_tsbRefresh
-          loc_51F6FE: br.s loc_51F700
-          loc_51F700: // Referenced from: loc_51F6FE
-          loc_51F700: ret
-        }
-
-        assem override strict specialname void set_tsbRefresh(class ToolStripButton WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class ToolStripButton var_2;
-
-        }
-
-        public void frmSupplierPaymentList() {
-
-
-        }
-
-        private void frmPaymentList_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-          boolean var_2;
-          boolean var_3;
-
-        }
-
-        public void GetRecent() {
-
-          int32 num_1;
-          int32 num_2;
-          class DataTable var_1;
-          class DataTable var_2;
-          boolean var_3;
-          valuetype System.DateTime var_4;
-          class System.Collections.IEnumerator var_5;
-          class DataRow var_6;
-          boolean var_7;
-
-        }
-
-        private void FormatGrid() {
-
-
-        }
-
-        private void tsbNew_Click(object sender, class System.EventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void dgvList_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-          boolean var_2;
-          boolean var_3;
-          boolean var_4;
-
-        }
-
-        private void dgvList_DoubleClick(object sender, class System.EventArgs e) {
-
-          loc_51FD23: nop
-          loc_51FD24: ldarg.0
-          loc_51FD25: call instance void GCUv2.frmSupplierPaymentList::openSelection()
-          loc_51FD2A: nop
-          loc_51FD2B: ret
-        }
-
-        private void openSelection() {
-
-          boolean var_1;
-          boolean var_2;
-
-        }
-
-        private void tsbRefresh_Click(object sender, class System.EventArgs e) {
-
-          loc_51FF05: nop
-          loc_51FF06: ldarg.0
-          loc_51FF07: call instance void GCUv2.frmSupplierPaymentList::GetRecent()
-          loc_51FF0C: nop
-          loc_51FF0D: ret
-        }
-
-    }
+	private void tsbRefresh_Click(object sender, EventArgs e)
+	{
+		GetRecent();
+	}
 }

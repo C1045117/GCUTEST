@@ -1,230 +1,390 @@
 using System;
+using System.ComponentModel;
+using System.Data;
+using System.Diagnostics;
+using System.Drawing;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
+using GCUv2.My;
+using Microsoft.VisualBasic.CompilerServices;
 
-namespace GCUv2
+namespace GCUv2;
+
+[DesignerGenerated]
+public class frmSettingDiscountList : Form
 {
-    public class Form
-    {
-
-        private class ComponentModel.IContainer components;
-        private class CheckBox _chkAll;
-        private class DataGridView _dgvList;
-        private class ToolStrip _ToolStrip1;
-        private class ToolStripButton _tsbNew;
-        private class ToolStripButton _tsbRefresh;
-        private class CheckBox _chkManual;
-
-
-        protected override strict void Dispose(boolean disposing) {
-
-          boolean var_1;
-
-        }
-
-        private void InitializeComponent() {
-
-          class ComponentModel.ComponentResourceManager var_1;
-
-        }
-
-        assem override strict specialname class CheckBox get_chkAll() {
-
-          loc_4EDE90: ldarg.0
-          loc_4EDE91: ldfld GCUv2.frmSettingDiscountList::_chkAll
-          loc_4EDE96: br.s loc_4EDE98
-          loc_4EDE98: // Referenced from: loc_4EDE96
-          loc_4EDE98: ret
-        }
-
-        assem override strict specialname void set_chkAll(class CheckBox WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class CheckBox var_2;
-
-        }
-
-        assem override strict specialname class DataGridView get_dgvList() {
-
-          loc_4EDEE0: ldarg.0
-          loc_4EDEE1: ldfld GCUv2.frmSettingDiscountList::_dgvList
-          loc_4EDEE6: br.s loc_4EDEE8
-          loc_4EDEE8: // Referenced from: loc_4EDEE6
-          loc_4EDEE8: ret
-        }
-
-        assem override strict specialname void set_dgvList(class DataGridView WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class KeyEventHandler var_2;
-          class System.EventHandler var_3;
-          class System.EventHandler var_4;
-          class DataGridView var_5;
-
-        }
-
-        assem override strict specialname class ToolStrip get_ToolStrip1() {
-
-          loc_4EDF8D: ldarg.0
-          loc_4EDF8E: ldfld GCUv2.frmSettingDiscountList::_ToolStrip1
-          loc_4EDF93: br.s loc_4EDF95
-          loc_4EDF95: // Referenced from: loc_4EDF93
-          loc_4EDF95: ret
-        }
-
-        assem override strict specialname void set_ToolStrip1(class ToolStrip WithEventsValue) {
-
-          loc_4EDF97: ldarg.0
-          loc_4EDF98: ldarg.1
-          loc_4EDF99: stfld GCUv2.frmSettingDiscountList::_ToolStrip1
-          loc_4EDF9E: ret
-        }
-
-        assem override strict specialname class ToolStripButton get_tsbNew() {
-
-          loc_4EDFA0: ldarg.0
-          loc_4EDFA1: ldfld GCUv2.frmSettingDiscountList::_tsbNew
-          loc_4EDFA6: br.s loc_4EDFA8
-          loc_4EDFA8: // Referenced from: loc_4EDFA6
-          loc_4EDFA8: ret
-        }
-
-        assem override strict specialname void set_tsbNew(class ToolStripButton WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class ToolStripButton var_2;
-
-        }
-
-        assem override strict specialname class ToolStripButton get_tsbRefresh() {
-
-          loc_4EDFF0: ldarg.0
-          loc_4EDFF1: ldfld GCUv2.frmSettingDiscountList::_tsbRefresh
-          loc_4EDFF6: br.s loc_4EDFF8
-          loc_4EDFF8: // Referenced from: loc_4EDFF6
-          loc_4EDFF8: ret
-        }
-
-        assem override strict specialname void set_tsbRefresh(class ToolStripButton WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class ToolStripButton var_2;
-
-        }
-
-        assem override strict specialname class CheckBox get_chkManual() {
-
-          loc_4EE040: ldarg.0
-          loc_4EE041: ldfld GCUv2.frmSettingDiscountList::_chkManual
-          loc_4EE046: br.s loc_4EE048
-          loc_4EE048: // Referenced from: loc_4EE046
-          loc_4EE048: ret
-        }
-
-        assem override strict specialname void set_chkManual(class CheckBox WithEventsValue) {
-
-          loc_4EE04A: ldarg.0
-          loc_4EE04B: ldarg.1
-          loc_4EE04C: stfld GCUv2.frmSettingDiscountList::_chkManual
-          loc_4EE051: ret
-        }
-
-        public void frmSettingDiscountList() {
-
-
-        }
-
-        private void frmSettingDiscountList_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-          boolean var_2;
-          boolean var_3;
-
-        }
-
-        private void frmSettingDiscountList_Load(object sender, class System.EventArgs e) {
-
-          loc_4EE10F: nop
-          loc_4EE110: ldarg.0
-          loc_4EE111: call instance void GCUv2.frmSettingDiscountList::getList()
-          loc_4EE116: nop
-          loc_4EE117: ret
-        }
-
-        private void FormatGrid() {
-
-
-        }
-
-        private void chkAll_CheckedChanged(object sender, class System.EventArgs e) {
-
-          loc_4EE10F: nop
-          loc_4EE110: ldarg.0
-          loc_4EE111: call instance void GCUv2.frmSettingDiscountList::getList()
-          loc_4EE116: nop
-          loc_4EE117: ret
-        }
-
-        public void getList() {
-
-          class DataTable var_1;
-          class System.Collections.IEnumerator var_2;
-          class DataRow var_3;
-          boolean var_4;
-          boolean var_5;
-          boolean var_6;
-
-        }
-
-        private void dgvList_DoubleClick(object sender, class System.EventArgs e) {
-
-          loc_4EE36D: nop
-          loc_4EE36E: ldarg.0
-          loc_4EE36F: call instance void GCUv2.frmSettingDiscountList::openSelection()
-          loc_4EE374: nop
-          loc_4EE375: ret
-        }
-
-        private void openSelection() {
-
-          class GCUv2.frmSettingDiscountInput var_1;
-
-        }
-
-        private void dgvList_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-          boolean var_2;
-          boolean var_3;
-          boolean var_4;
-
-        }
-
-        private void dgvList_GotFocus(object sender, class System.EventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void dgvList_LostFocus(object sender, class System.EventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void tsbNew_Click(object sender, class System.EventArgs e) {
-
-          class GCUv2.frmSettingDiscountInput var_1;
-
-        }
-
-        private void tsbRefresh_Click(object sender, class System.EventArgs e) {
-
-          loc_4EE10F: nop
-          loc_4EE110: ldarg.0
-          loc_4EE111: call instance void GCUv2.frmSettingDiscountList::getList()
-          loc_4EE116: nop
-          loc_4EE117: ret
-        }
-
-    }
+	private IContainer components;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("chkAll")]
+	private CheckBox _chkAll;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("dgvList")]
+	private DataGridView _dgvList;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("tsbNew")]
+	private ToolStripButton _tsbNew;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("tsbRefresh")]
+	private ToolStripButton _tsbRefresh;
+
+	internal virtual CheckBox chkAll
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _chkAll;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = chkAll_CheckedChanged;
+			CheckBox checkBox = _chkAll;
+			if (checkBox != null)
+			{
+				checkBox.CheckedChanged -= value2;
+			}
+			_chkAll = value;
+			checkBox = _chkAll;
+			if (checkBox != null)
+			{
+				checkBox.CheckedChanged += value2;
+			}
+		}
+	}
+
+	internal virtual DataGridView dgvList
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _dgvList;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = dgvList_DoubleClick;
+			KeyEventHandler value3 = dgvList_KeyDown;
+			EventHandler value4 = dgvList_GotFocus;
+			EventHandler value5 = dgvList_LostFocus;
+			DataGridView dataGridView = _dgvList;
+			if (dataGridView != null)
+			{
+				dataGridView.DoubleClick -= value2;
+				dataGridView.KeyDown -= value3;
+				dataGridView.GotFocus -= value4;
+				dataGridView.LostFocus -= value5;
+			}
+			_dgvList = value;
+			dataGridView = _dgvList;
+			if (dataGridView != null)
+			{
+				dataGridView.DoubleClick += value2;
+				dataGridView.KeyDown += value3;
+				dataGridView.GotFocus += value4;
+				dataGridView.LostFocus += value5;
+			}
+		}
+	}
+
+	[field: AccessedThroughProperty("ToolStrip1")]
+	internal virtual ToolStrip ToolStrip1
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual ToolStripButton tsbNew
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _tsbNew;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = tsbNew_Click;
+			ToolStripButton toolStripButton = _tsbNew;
+			if (toolStripButton != null)
+			{
+				toolStripButton.Click -= value2;
+			}
+			_tsbNew = value;
+			toolStripButton = _tsbNew;
+			if (toolStripButton != null)
+			{
+				toolStripButton.Click += value2;
+			}
+		}
+	}
+
+	internal virtual ToolStripButton tsbRefresh
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _tsbRefresh;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = tsbRefresh_Click;
+			ToolStripButton toolStripButton = _tsbRefresh;
+			if (toolStripButton != null)
+			{
+				toolStripButton.Click -= value2;
+			}
+			_tsbRefresh = value;
+			toolStripButton = _tsbRefresh;
+			if (toolStripButton != null)
+			{
+				toolStripButton.Click += value2;
+			}
+		}
+	}
+
+	[field: AccessedThroughProperty("chkManual")]
+	internal virtual CheckBox chkManual
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[DebuggerNonUserCode]
+	protected override void Dispose(bool disposing)
+	{
+		try
+		{
+			if (disposing && components != null)
+			{
+				components.Dispose();
+			}
+		}
+		finally
+		{
+			base.Dispose(disposing);
+		}
+	}
+
+	[System.Diagnostics.DebuggerStepThrough]
+	private void InitializeComponent()
+	{
+		System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GCUv2.frmSettingDiscountList));
+		this.chkAll = new System.Windows.Forms.CheckBox();
+		this.dgvList = new System.Windows.Forms.DataGridView();
+		this.ToolStrip1 = new System.Windows.Forms.ToolStrip();
+		this.tsbNew = new System.Windows.Forms.ToolStripButton();
+		this.tsbRefresh = new System.Windows.Forms.ToolStripButton();
+		this.chkManual = new System.Windows.Forms.CheckBox();
+		((System.ComponentModel.ISupportInitialize)this.dgvList).BeginInit();
+		this.ToolStrip1.SuspendLayout();
+		base.SuspendLayout();
+		this.chkAll.AutoSize = true;
+		this.chkAll.Location = new System.Drawing.Point(12, 62);
+		this.chkAll.Name = "chkAll";
+		this.chkAll.Size = new System.Drawing.Size(242, 17);
+		this.chkAll.TabIndex = 20;
+		this.chkAll.Text = "Tampilkan semua ( termasuk yang tidak aktif )";
+		this.chkAll.UseVisualStyleBackColor = true;
+		this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+		this.dgvList.Location = new System.Drawing.Point(12, 108);
+		this.dgvList.Name = "dgvList";
+		this.dgvList.Size = new System.Drawing.Size(242, 284);
+		this.dgvList.TabIndex = 19;
+		this.ToolStrip1.AutoSize = false;
+		this.ToolStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
+		this.ToolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[2] { this.tsbNew, this.tsbRefresh });
+		this.ToolStrip1.Location = new System.Drawing.Point(0, 0);
+		this.ToolStrip1.Name = "ToolStrip1";
+		this.ToolStrip1.Size = new System.Drawing.Size(267, 60);
+		this.ToolStrip1.TabIndex = 22;
+		this.ToolStrip1.Text = "ToolStrip1";
+		this.tsbNew.Image = (System.Drawing.Image)resources.GetObject("tsbNew.Image");
+		this.tsbNew.ImageTransparentColor = System.Drawing.Color.Magenta;
+		this.tsbNew.Name = "tsbNew";
+		this.tsbNew.Size = new System.Drawing.Size(55, 57);
+		this.tsbNew.Text = "&Tambah";
+		this.tsbNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+		this.tsbRefresh.Image = (System.Drawing.Image)resources.GetObject("tsbRefresh.Image");
+		this.tsbRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+		this.tsbRefresh.Name = "tsbRefresh";
+		this.tsbRefresh.Size = new System.Drawing.Size(50, 57);
+		this.tsbRefresh.Text = "&Refresh";
+		this.tsbRefresh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+		this.chkManual.AutoSize = true;
+		this.chkManual.Location = new System.Drawing.Point(12, 85);
+		this.chkManual.Name = "chkManual";
+		this.chkManual.Size = new System.Drawing.Size(135, 17);
+		this.chkManual.TabIndex = 21;
+		this.chkManual.Text = "Refresh secara manual";
+		this.chkManual.UseVisualStyleBackColor = true;
+		base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
+		base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+		base.ClientSize = new System.Drawing.Size(267, 403);
+		base.Controls.Add(this.chkAll);
+		base.Controls.Add(this.dgvList);
+		base.Controls.Add(this.ToolStrip1);
+		base.Controls.Add(this.chkManual);
+		base.KeyPreview = true;
+		base.MaximizeBox = false;
+		base.Name = "frmSettingDiscountList";
+		base.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+		this.Text = "Setting - Discount";
+		((System.ComponentModel.ISupportInitialize)this.dgvList).EndInit();
+		this.ToolStrip1.ResumeLayout(false);
+		this.ToolStrip1.PerformLayout();
+		base.ResumeLayout(false);
+		base.PerformLayout();
+	}
+
+	public frmSettingDiscountList()
+	{
+		base.KeyDown += frmSettingDiscountList_KeyDown;
+		base.Load += frmSettingDiscountList_Load;
+		InitializeComponent();
+		base.MdiParent = MyProject.Forms.frmMenu;
+		FormatGrid();
+	}
+
+	private void frmSettingDiscountList_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Escape)
+		{
+			Close();
+		}
+		else if (e.KeyCode == Keys.F2)
+		{
+			tsbNew.PerformClick();
+		}
+		else if (e.KeyCode == Keys.F5)
+		{
+			tsbRefresh.PerformClick();
+		}
+	}
+
+	private void frmSettingDiscountList_Load(object sender, EventArgs e)
+	{
+		getList();
+	}
+
+	private void FormatGrid()
+	{
+		dgvList.Columns.Add("", "Id");
+		dgvList.Columns.Add("", "Kode");
+		dgvList.Columns.Add("", "Tipe");
+		dgvList.Columns[0].Visible = false;
+		dgvList.Columns[1].Width = 100;
+		dgvList.Columns[2].Width = 120;
+		dgvList.RowHeadersVisible = false;
+		dgvList.AllowUserToAddRows = false;
+		dgvList.AlternatingRowsDefaultCellStyle.BackColor = Color.WhiteSmoke;
+		dgvList.AllowUserToResizeRows = false;
+		dgvList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+		dgvList.MultiSelect = false;
+		dgvList.ReadOnly = true;
+	}
+
+	private void chkAll_CheckedChanged(object sender, EventArgs e)
+	{
+		getList();
+	}
+
+	public void getList()
+	{
+		DataTable dataTable = new DataTable();
+		dataTable = cDiscount.Search(!chkAll.Checked);
+		dgvList.Rows.Clear();
+		foreach (DataRow row in dataTable.Rows)
+		{
+			dgvList.Rows.Add(row["discId"], row["discName"], row["typeName"]);
+			if (Operators.ConditionalCompareObjectEqual(row["discStatus"], 0, TextCompare: false))
+			{
+				dgvList.Rows[checked(dgvList.RowCount - 1)].DefaultCellStyle.BackColor = Color.Red;
+			}
+		}
+		if (dgvList.Rows.Count > 0)
+		{
+			dgvList.Focus();
+		}
+	}
+
+	private void dgvList_DoubleClick(object sender, EventArgs e)
+	{
+		openSelection();
+	}
+
+	private void openSelection()
+	{
+		frmSettingDiscountInput frmSettingDiscountInput2 = new frmSettingDiscountInput();
+		frmSettingDiscountInput2.CurrentId = Conversions.ToString(dgvList[0, dgvList.CurrentRow.Index].Value);
+		frmSettingDiscountInput2.loadData();
+		frmSettingDiscountInput2.ShowDialog();
+		frmSettingDiscountInput2.Close();
+		frmSettingDiscountInput2.Dispose();
+	}
+
+	private void dgvList_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Return)
+		{
+			openSelection();
+			e.SuppressKeyPress = true;
+		}
+		else if (e.KeyCode == Keys.Add)
+		{
+			tsbNew.PerformClick();
+		}
+		else if (e.Shift & (e.KeyCode == Keys.Tab))
+		{
+			chkManual.Focus();
+			e.SuppressKeyPress = true;
+		}
+		else if (e.KeyCode == Keys.Tab)
+		{
+			chkAll.Focus();
+			e.SuppressKeyPress = true;
+		}
+	}
+
+	private void dgvList_GotFocus(object sender, EventArgs e)
+	{
+		if (dgvList.RowCount > 0)
+		{
+			dgvList.CurrentRow.Selected = true;
+		}
+	}
+
+	private void dgvList_LostFocus(object sender, EventArgs e)
+	{
+		if (dgvList.RowCount > 0)
+		{
+			dgvList.CurrentRow.Selected = false;
+		}
+	}
+
+	private void tsbNew_Click(object sender, EventArgs e)
+	{
+		frmSettingDiscountInput frmSettingDiscountInput2 = new frmSettingDiscountInput();
+		frmSettingDiscountInput2.prepareForm();
+		frmSettingDiscountInput2.ShowDialog();
+		frmSettingDiscountInput2.Close();
+		frmSettingDiscountInput2.Dispose();
+	}
+
+	private void tsbRefresh_Click(object sender, EventArgs e)
+	{
+		getList();
+	}
 }

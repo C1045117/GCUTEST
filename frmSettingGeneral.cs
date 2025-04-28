@@ -1,206 +1,260 @@
 using System;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Drawing;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
 
-namespace GCUv2
+namespace GCUv2;
+
+[DesignerGenerated]
+public class frmSettingGeneral : Form
 {
-    public class Form
-    {
+	private IContainer components;
 
-        private class ComponentModel.IContainer components;
-        private class TabControl _TabControl1;
-        private class TabPage _TabPage1;
-        private class ComboBox _cboPurchaseReturn;
-        private class Label _Label1;
-        private class Button _btnSave;
-        private class CheckBox _chkReportUseNewGetStockCode;
-        private class CheckBox _chkUseNewGetStockCode;
-        private class Label _Label2;
-        private class Label _Label3;
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnSave")]
+	private Button _btnSave;
 
+	[field: AccessedThroughProperty("TabControl1")]
+	internal virtual TabControl TabControl1
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-        protected override strict void Dispose(boolean disposing) {
+	[field: AccessedThroughProperty("TabPage1")]
+	internal virtual TabPage TabPage1
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-          boolean var_1;
+	[field: AccessedThroughProperty("cboPurchaseReturn")]
+	internal virtual ComboBox cboPurchaseReturn
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-        }
+	[field: AccessedThroughProperty("Label1")]
+	internal virtual Label Label1
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-        private void InitializeComponent() {
+	internal virtual Button btnSave
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnSave;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnSave_Click;
+			Button button = _btnSave;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnSave = value;
+			button = _btnSave;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
 
+	[field: AccessedThroughProperty("chkReportUseNewGetStockCode")]
+	internal virtual CheckBox chkReportUseNewGetStockCode
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-        }
+	[field: AccessedThroughProperty("chkUseNewGetStockCode")]
+	internal virtual CheckBox chkUseNewGetStockCode
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-        assem override strict specialname class TabControl get_TabControl1() {
+	[field: AccessedThroughProperty("Label2")]
+	internal virtual Label Label2
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-          loc_4EEB17: ldarg.0
-          loc_4EEB18: ldfld GCUv2.frmSettingGeneral::_TabControl1
-          loc_4EEB1D: br.s loc_4EEB1F
-          loc_4EEB1F: // Referenced from: loc_4EEB1D
-          loc_4EEB1F: ret
-        }
+	[field: AccessedThroughProperty("Label3")]
+	internal virtual Label Label3
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-        assem override strict specialname void set_TabControl1(class TabControl WithEventsValue) {
+	[DebuggerNonUserCode]
+	protected override void Dispose(bool disposing)
+	{
+		try
+		{
+			if (disposing && components != null)
+			{
+				components.Dispose();
+			}
+		}
+		finally
+		{
+			base.Dispose(disposing);
+		}
+	}
 
-          loc_4EEB21: ldarg.0
-          loc_4EEB22: ldarg.1
-          loc_4EEB23: stfld GCUv2.frmSettingGeneral::_TabControl1
-          loc_4EEB28: ret
-        }
+	[System.Diagnostics.DebuggerStepThrough]
+	private void InitializeComponent()
+	{
+		this.TabControl1 = new System.Windows.Forms.TabControl();
+		this.TabPage1 = new System.Windows.Forms.TabPage();
+		this.Label3 = new System.Windows.Forms.Label();
+		this.chkReportUseNewGetStockCode = new System.Windows.Forms.CheckBox();
+		this.chkUseNewGetStockCode = new System.Windows.Forms.CheckBox();
+		this.Label2 = new System.Windows.Forms.Label();
+		this.cboPurchaseReturn = new System.Windows.Forms.ComboBox();
+		this.Label1 = new System.Windows.Forms.Label();
+		this.btnSave = new System.Windows.Forms.Button();
+		this.TabControl1.SuspendLayout();
+		this.TabPage1.SuspendLayout();
+		base.SuspendLayout();
+		this.TabControl1.Controls.Add(this.TabPage1);
+		this.TabControl1.Location = new System.Drawing.Point(12, 12);
+		this.TabControl1.Name = "TabControl1";
+		this.TabControl1.SelectedIndex = 0;
+		this.TabControl1.Size = new System.Drawing.Size(431, 341);
+		this.TabControl1.TabIndex = 0;
+		this.TabPage1.Controls.Add(this.Label3);
+		this.TabPage1.Controls.Add(this.chkReportUseNewGetStockCode);
+		this.TabPage1.Controls.Add(this.chkUseNewGetStockCode);
+		this.TabPage1.Controls.Add(this.Label2);
+		this.TabPage1.Controls.Add(this.cboPurchaseReturn);
+		this.TabPage1.Controls.Add(this.Label1);
+		this.TabPage1.Location = new System.Drawing.Point(4, 22);
+		this.TabPage1.Name = "TabPage1";
+		this.TabPage1.Padding = new System.Windows.Forms.Padding(3);
+		this.TabPage1.Size = new System.Drawing.Size(423, 315);
+		this.TabPage1.TabIndex = 0;
+		this.TabPage1.Text = "Pendukung Transaksi";
+		this.TabPage1.UseVisualStyleBackColor = true;
+		this.Label3.AutoSize = true;
+		this.Label3.Location = new System.Drawing.Point(6, 53);
+		this.Label3.Name = "Label3";
+		this.Label3.Size = new System.Drawing.Size(212, 13);
+		this.Label3.TabIndex = 5;
+		this.Label3.Text = "Kode program untuk pencarian jumlah stok ";
+		this.chkReportUseNewGetStockCode.AutoSize = true;
+		this.chkReportUseNewGetStockCode.Location = new System.Drawing.Point(9, 92);
+		this.chkReportUseNewGetStockCode.Name = "chkReportUseNewGetStockCode";
+		this.chkReportUseNewGetStockCode.Size = new System.Drawing.Size(285, 17);
+		this.chkReportUseNewGetStockCode.TabIndex = 4;
+		this.chkReportUseNewGetStockCode.Text = "Gunakan kode baru untuk mencari stok awal di Report";
+		this.chkReportUseNewGetStockCode.UseVisualStyleBackColor = true;
+		this.chkUseNewGetStockCode.AutoSize = true;
+		this.chkUseNewGetStockCode.Location = new System.Drawing.Point(9, 69);
+		this.chkUseNewGetStockCode.Name = "chkUseNewGetStockCode";
+		this.chkUseNewGetStockCode.Size = new System.Drawing.Size(306, 17);
+		this.chkUseNewGetStockCode.TabIndex = 3;
+		this.chkUseNewGetStockCode.Text = "Gunakan kode baru untuk validasi cek stok saat input data";
+		this.chkUseNewGetStockCode.UseVisualStyleBackColor = true;
+		this.Label2.AutoSize = true;
+		this.Label2.Location = new System.Drawing.Point(255, 150);
+		this.Label2.Name = "Label2";
+		this.Label2.Size = new System.Drawing.Size(0, 13);
+		this.Label2.TabIndex = 2;
+		this.cboPurchaseReturn.FormattingEnabled = true;
+		this.cboPurchaseReturn.Location = new System.Drawing.Point(115, 10);
+		this.cboPurchaseReturn.Name = "cboPurchaseReturn";
+		this.cboPurchaseReturn.Size = new System.Drawing.Size(218, 21);
+		this.cboPurchaseReturn.TabIndex = 1;
+		this.Label1.AutoSize = true;
+		this.Label1.Location = new System.Drawing.Point(6, 13);
+		this.Label1.Name = "Label1";
+		this.Label1.Size = new System.Drawing.Size(85, 13);
+		this.Label1.TabIndex = 0;
+		this.Label1.Text = "Retur Pembelian";
+		this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnSave.Location = new System.Drawing.Point(374, 359);
+		this.btnSave.Name = "btnSave";
+		this.btnSave.Size = new System.Drawing.Size(65, 28);
+		this.btnSave.TabIndex = 101;
+		this.btnSave.Text = "Simpan";
+		this.btnSave.UseVisualStyleBackColor = true;
+		base.AcceptButton = this.btnSave;
+		base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
+		base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+		base.ClientSize = new System.Drawing.Size(454, 396);
+		base.Controls.Add(this.btnSave);
+		base.Controls.Add(this.TabControl1);
+		base.KeyPreview = true;
+		base.MaximizeBox = false;
+		base.Name = "frmSettingGeneral";
+		base.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+		this.Text = "Setting Umum";
+		this.TabControl1.ResumeLayout(false);
+		this.TabPage1.ResumeLayout(false);
+		this.TabPage1.PerformLayout();
+		base.ResumeLayout(false);
+	}
 
-        assem override strict specialname class TabPage get_TabPage1() {
+	public frmSettingGeneral()
+	{
+		base.KeyDown += frmSettingGeneral_KeyDown;
+		InitializeComponent();
+		ComboBox combo = cboPurchaseReturn;
+		cCombo.getAccount(ref combo, All: false, 0, 0, 0, 0, 0, 0, 0, 0, -1);
+		cboPurchaseReturn = combo;
+		cSetting cSetting2 = new cSetting("PurchaseReturnAccountId");
+		combo = cboPurchaseReturn;
+		Module1.comboBoundValue(ref combo, Conversions.ToDouble(cSetting2.Value));
+		cboPurchaseReturn = combo;
+		cSetting2 = new cSetting("UseNewGetStockCode");
+		chkUseNewGetStockCode.Checked = Conversions.ToBoolean(cSetting2.Value);
+		cSetting2 = new cSetting("ReportUseNewGetStockCode");
+		chkReportUseNewGetStockCode.Checked = Conversions.ToBoolean(cSetting2.Value);
+	}
 
-          loc_4EEB2A: ldarg.0
-          loc_4EEB2B: ldfld GCUv2.frmSettingGeneral::_TabPage1
-          loc_4EEB30: br.s loc_4EEB32
-          loc_4EEB32: // Referenced from: loc_4EEB30
-          loc_4EEB32: ret
-        }
+	private void frmSettingGeneral_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Escape)
+		{
+			Close();
+		}
+	}
 
-        assem override strict specialname void set_TabPage1(class TabPage WithEventsValue) {
-
-          loc_4EEB34: ldarg.0
-          loc_4EEB35: ldarg.1
-          loc_4EEB36: stfld GCUv2.frmSettingGeneral::_TabPage1
-          loc_4EEB3B: ret
-        }
-
-        assem override strict specialname class ComboBox get_cboPurchaseReturn() {
-
-          loc_4EEB3D: ldarg.0
-          loc_4EEB3E: ldfld GCUv2.frmSettingGeneral::_cboPurchaseReturn
-          loc_4EEB43: br.s loc_4EEB45
-          loc_4EEB45: // Referenced from: loc_4EEB43
-          loc_4EEB45: ret
-        }
-
-        assem override strict specialname void set_cboPurchaseReturn(class ComboBox WithEventsValue) {
-
-          loc_4EEB47: ldarg.0
-          loc_4EEB48: ldarg.1
-          loc_4EEB49: stfld GCUv2.frmSettingGeneral::_cboPurchaseReturn
-          loc_4EEB4E: ret
-        }
-
-        assem override strict specialname class Label get_Label1() {
-
-          loc_4EEB50: ldarg.0
-          loc_4EEB51: ldfld GCUv2.frmSettingGeneral::_Label1
-          loc_4EEB56: br.s loc_4EEB58
-          loc_4EEB58: // Referenced from: loc_4EEB56
-          loc_4EEB58: ret
-        }
-
-        assem override strict specialname void set_Label1(class Label WithEventsValue) {
-
-          loc_4EEB5A: ldarg.0
-          loc_4EEB5B: ldarg.1
-          loc_4EEB5C: stfld GCUv2.frmSettingGeneral::_Label1
-          loc_4EEB61: ret
-        }
-
-        assem override strict specialname class Button get_btnSave() {
-
-          loc_4EEB63: ldarg.0
-          loc_4EEB64: ldfld GCUv2.frmSettingGeneral::_btnSave
-          loc_4EEB69: br.s loc_4EEB6B
-          loc_4EEB6B: // Referenced from: loc_4EEB69
-          loc_4EEB6B: ret
-        }
-
-        assem override strict specialname void set_btnSave(class Button WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Button var_2;
-
-        }
-
-        assem override strict specialname class CheckBox get_chkReportUseNewGetStockCode() {
-
-          loc_4EEBB0: ldarg.0
-          loc_4EEBB1: ldfld GCUv2.frmSettingGeneral::_chkReportUseNewGetStockCode
-          loc_4EEBB6: br.s loc_4EEBB8
-          loc_4EEBB8: // Referenced from: loc_4EEBB6
-          loc_4EEBB8: ret
-        }
-
-        assem override strict specialname void set_chkReportUseNewGetStockCode(class CheckBox WithEventsValue) {
-
-          loc_4EEBBA: ldarg.0
-          loc_4EEBBB: ldarg.1
-          loc_4EEBBC: stfld GCUv2.frmSettingGeneral::_chkReportUseNewGetStockCode
-          loc_4EEBC1: ret
-        }
-
-        assem override strict specialname class CheckBox get_chkUseNewGetStockCode() {
-
-          loc_4EEBC3: ldarg.0
-          loc_4EEBC4: ldfld GCUv2.frmSettingGeneral::_chkUseNewGetStockCode
-          loc_4EEBC9: br.s loc_4EEBCB
-          loc_4EEBCB: // Referenced from: loc_4EEBC9
-          loc_4EEBCB: ret
-        }
-
-        assem override strict specialname void set_chkUseNewGetStockCode(class CheckBox WithEventsValue) {
-
-          loc_4EEBCD: ldarg.0
-          loc_4EEBCE: ldarg.1
-          loc_4EEBCF: stfld GCUv2.frmSettingGeneral::_chkUseNewGetStockCode
-          loc_4EEBD4: ret
-        }
-
-        assem override strict specialname class Label get_Label2() {
-
-          loc_4EEBD6: ldarg.0
-          loc_4EEBD7: ldfld GCUv2.frmSettingGeneral::_Label2
-          loc_4EEBDC: br.s loc_4EEBDE
-          loc_4EEBDE: // Referenced from: loc_4EEBDC
-          loc_4EEBDE: ret
-        }
-
-        assem override strict specialname void set_Label2(class Label WithEventsValue) {
-
-          loc_4EEBE0: ldarg.0
-          loc_4EEBE1: ldarg.1
-          loc_4EEBE2: stfld GCUv2.frmSettingGeneral::_Label2
-          loc_4EEBE7: ret
-        }
-
-        assem override strict specialname class Label get_Label3() {
-
-          loc_4EEBE9: ldarg.0
-          loc_4EEBEA: ldfld GCUv2.frmSettingGeneral::_Label3
-          loc_4EEBEF: br.s loc_4EEBF1
-          loc_4EEBF1: // Referenced from: loc_4EEBEF
-          loc_4EEBF1: ret
-        }
-
-        assem override strict specialname void set_Label3(class Label WithEventsValue) {
-
-          loc_4EEBF3: ldarg.0
-          loc_4EEBF4: ldarg.1
-          loc_4EEBF5: stfld GCUv2.frmSettingGeneral::_Label3
-          loc_4EEBFA: ret
-        }
-
-        public void frmSettingGeneral() {
-
-          class GCUv2.cSetting var_1;
-          class ComboBox var_2;
-
-        }
-
-        private void frmSettingGeneral_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void btnSave_Click(object sender, class System.EventArgs e) {
-
-          class GCUv2.cComboItem var_1;
-          class GCUv2.cSetting var_2;
-          boolean var_3;
-
-        }
-
-    }
+	private void btnSave_Click(object sender, EventArgs e)
+	{
+		cComboItem cComboItem2 = (cComboItem)cboPurchaseReturn.SelectedItem;
+		if (cboPurchaseReturn.SelectedIndex == -1)
+		{
+			Interaction.MsgBox("Pilih akun Retur Pembelian", MsgBoxStyle.Information);
+			cboPurchaseReturn.Focus();
+			return;
+		}
+		cSetting cSetting2 = new cSetting("PurchaseReturnAccountId");
+		cSetting2.Value = cComboItem2.Value;
+		cSetting2.Save();
+		cSetting2 = new cSetting("UseNewGetStockCode");
+		cSetting2.Value = Conversions.ToString(Interaction.IIf(chkUseNewGetStockCode.Checked, 1, 0));
+		cSetting2.Save();
+		cSetting2 = new cSetting("ReportUseNewGetStockCode");
+		cSetting2.Value = Conversions.ToString(Interaction.IIf(chkReportUseNewGetStockCode.Checked, 1, 0));
+		cSetting2.Save();
+		Interaction.MsgBox("Setting berhasil disimpan. Harap logout dan login ulang untuk mengaktifkan.", MsgBoxStyle.Information);
+		Close();
+	}
 }

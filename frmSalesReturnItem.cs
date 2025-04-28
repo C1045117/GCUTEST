@@ -1,271 +1,544 @@
 using System;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Drawing;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
+using GCUv2.My;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
 
-namespace GCUv2
+namespace GCUv2;
+
+[DesignerGenerated]
+public class frmSalesReturnItem : Form
 {
-    public class Form
-    {
-
-        private class ComponentModel.IContainer components;
-        private class GCUv2.FilteredTextBox _txtPrice;
-        private class Label _Label8;
-        private class Button _btnDelete;
-        private class Button _btnSave;
-        private class GCUv2.FilteredTextBox _txtQty;
-        private class Label _Label6;
-        private class ComboBox _cboItem;
-        private class Label _Label5;
-        private boolean _currentData;
-        private double _customerId;
-        private double _basePrice;
-        private class GCUv2.cSalesInvoiceItem[] _item;
-        private boolean _isGroup;
-
-
-        protected override strict void Dispose(boolean disposing) {
-
-          boolean var_1;
-
-        }
-
-        private void InitializeComponent() {
-
-
-        }
-
-        assem override strict specialname class GCUv2.FilteredTextBox get_txtPrice() {
-
-          loc_4FF133: ldarg.0
-          loc_4FF134: ldfld GCUv2.frmSalesReturnItem::_txtPrice
-          loc_4FF139: br.s loc_4FF13B
-          loc_4FF13B: // Referenced from: loc_4FF139
-          loc_4FF13B: ret
-        }
-
-        assem override strict specialname void set_txtPrice(class GCUv2.FilteredTextBox WithEventsValue) {
-
-          loc_4FF13D: ldarg.0
-          loc_4FF13E: ldarg.1
-          loc_4FF13F: stfld GCUv2.frmSalesReturnItem::_txtPrice
-          loc_4FF144: ret
-        }
-
-        assem override strict specialname class Label get_Label8() {
-
-          loc_4FF146: ldarg.0
-          loc_4FF147: ldfld GCUv2.frmSalesReturnItem::_Label8
-          loc_4FF14C: br.s loc_4FF14E
-          loc_4FF14E: // Referenced from: loc_4FF14C
-          loc_4FF14E: ret
-        }
-
-        assem override strict specialname void set_Label8(class Label WithEventsValue) {
-
-          loc_4FF150: ldarg.0
-          loc_4FF151: ldarg.1
-          loc_4FF152: stfld GCUv2.frmSalesReturnItem::_Label8
-          loc_4FF157: ret
-        }
-
-        assem override strict specialname class Button get_btnDelete() {
-
-          loc_4FF159: ldarg.0
-          loc_4FF15A: ldfld GCUv2.frmSalesReturnItem::_btnDelete
-          loc_4FF15F: br.s loc_4FF161
-          loc_4FF161: // Referenced from: loc_4FF15F
-          loc_4FF161: ret
-        }
-
-        assem override strict specialname void set_btnDelete(class Button WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Button var_2;
-
-        }
-
-        assem override strict specialname class Button get_btnSave() {
-
-          loc_4FF1A8: ldarg.0
-          loc_4FF1A9: ldfld GCUv2.frmSalesReturnItem::_btnSave
-          loc_4FF1AE: br.s loc_4FF1B0
-          loc_4FF1B0: // Referenced from: loc_4FF1AE
-          loc_4FF1B0: ret
-        }
-
-        assem override strict specialname void set_btnSave(class Button WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Button var_2;
-
-        }
-
-        assem override strict specialname class GCUv2.FilteredTextBox get_txtQty() {
-
-          loc_4FF1F8: ldarg.0
-          loc_4FF1F9: ldfld GCUv2.frmSalesReturnItem::_txtQty
-          loc_4FF1FE: br.s loc_4FF200
-          loc_4FF200: // Referenced from: loc_4FF1FE
-          loc_4FF200: ret
-        }
-
-        assem override strict specialname void set_txtQty(class GCUv2.FilteredTextBox WithEventsValue) {
-
-          loc_4FF202: ldarg.0
-          loc_4FF203: ldarg.1
-          loc_4FF204: stfld GCUv2.frmSalesReturnItem::_txtQty
-          loc_4FF209: ret
-        }
-
-        assem override strict specialname class Label get_Label6() {
-
-          loc_4FF20B: ldarg.0
-          loc_4FF20C: ldfld GCUv2.frmSalesReturnItem::_Label6
-          loc_4FF211: br.s loc_4FF213
-          loc_4FF213: // Referenced from: loc_4FF211
-          loc_4FF213: ret
-        }
-
-        assem override strict specialname void set_Label6(class Label WithEventsValue) {
-
-          loc_4FF215: ldarg.0
-          loc_4FF216: ldarg.1
-          loc_4FF217: stfld GCUv2.frmSalesReturnItem::_Label6
-          loc_4FF21C: ret
-        }
-
-        assem override strict specialname class ComboBox get_cboItem() {
-
-          loc_4FF21E: ldarg.0
-          loc_4FF21F: ldfld GCUv2.frmSalesReturnItem::_cboItem
-          loc_4FF224: br.s loc_4FF226
-          loc_4FF226: // Referenced from: loc_4FF224
-          loc_4FF226: ret
-        }
-
-        assem override strict specialname void set_cboItem(class ComboBox WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class ComboBox var_2;
-
-        }
-
-        assem override strict specialname class Label get_Label5() {
-
-          loc_4FF26C: ldarg.0
-          loc_4FF26D: ldfld GCUv2.frmSalesReturnItem::_Label5
-          loc_4FF272: br.s loc_4FF274
-          loc_4FF274: // Referenced from: loc_4FF272
-          loc_4FF274: ret
-        }
-
-        assem override strict specialname void set_Label5(class Label WithEventsValue) {
-
-          loc_4FF276: ldarg.0
-          loc_4FF277: ldarg.1
-          loc_4FF278: stfld GCUv2.frmSalesReturnItem::_Label5
-          loc_4FF27D: ret
-        }
-
-        public specialname class GCUv2.cSalesInvoiceItem[] get_Item() {
-
-          class GCUv2.cSalesInvoiceItem[] var_1;
-
-        }
-
-        public specialname void set_Item(class GCUv2.cSalesInvoiceItem[] value) {
-
-          loc_4FF299: nop
-          loc_4FF29A: ldarg.0
-          loc_4FF29B: ldarg.1
-          loc_4FF29C: stfld GCUv2.frmSalesReturnItem::_item
-          loc_4FF2A1: ret
-        }
-
-        public void frmSalesReturnItem(boolean CurrentData, double CustomerId, int32 StorageId) {
-
-          class ComboBox var_1;
-          boolean var_2;
-          boolean var_3;
-
-        }
-
-        private void frmSalesReturnItem_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void btnSave_Click(object sender, class System.EventArgs e) {
-
-          int32 num_1;
-          int32 num_2;
-          class GCUv2.cComboItem var_1;
-          class GCUv2.cComboItem var_2;
-          double flt_1;
-          int32 num_3;
-          int32 num_4;
-          boolean var_3;
-          boolean var_4;
-          boolean var_5;
-          class GCUv2.cSalesInvoiceItem[] var_6;
-          int32 num_5;
-          class GCUv2.cSalesInvoiceItem var_7;
-          boolean var_8;
-          boolean var_9;
-          int32 num_6;
-          boolean var_10;
-          boolean var_11;
-          boolean var_12;
-          boolean var_13;
-          boolean var_14;
-          boolean var_15;
-          boolean var_16;
-          boolean var_17;
-          boolean var_18;
-          boolean var_19;
-          class GCUv2.cItem var_20;
-          class GCUv2.cItemGroup[] var_21;
-          int32 num_7;
-          class GCUv2.cItemGroup var_22;
-          boolean var_23;
-          class GCUv2.cSalesInvoiceItem[] var_24;
-          int32 num_8;
-          class GCUv2.cSalesInvoiceItem var_25;
-          boolean var_26;
-          boolean var_27;
-          boolean var_28;
-          boolean var_29;
-
-        }
-
-        private void DeleteComponent() {
-
-          boolean var_1;
-          int32 num_1;
-          boolean var_2;
-          int32 num_2;
-          boolean var_3;
-          boolean var_4;
-          boolean var_5;
-          boolean var_6;
-          boolean var_7;
-          int32 num_3;
-          int32 num_4;
-
-        }
-
-        private void btnDelete_Click(object sender, class System.EventArgs e) {
-
-
-        }
-
-        private void cboItem_SelectedIndexChanged(object sender, class System.EventArgs e) {
-
-          class GCUv2.cComboItem var_1;
-          double flt_1;
-          boolean var_2;
-
-        }
-
-    }
+	private IContainer components;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnDelete")]
+	private Button _btnDelete;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnSave")]
+	private Button _btnSave;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("cboItem")]
+	private ComboBox _cboItem;
+
+	private bool _currentData;
+
+	private double _customerId;
+
+	private double _basePrice;
+
+	private cSalesInvoiceItem[] _item;
+
+	private bool _isGroup;
+
+	[field: AccessedThroughProperty("txtPrice")]
+	internal virtual FilteredTextBox txtPrice
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label8")]
+	internal virtual Label Label8
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual Button btnDelete
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnDelete;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnDelete_Click;
+			Button button = _btnDelete;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnDelete = value;
+			button = _btnDelete;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
+
+	internal virtual Button btnSave
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnSave;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnSave_Click;
+			Button button = _btnSave;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnSave = value;
+			button = _btnSave;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
+
+	[field: AccessedThroughProperty("txtQty")]
+	internal virtual FilteredTextBox txtQty
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label6")]
+	internal virtual Label Label6
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual ComboBox cboItem
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _cboItem;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = cboItem_SelectedIndexChanged;
+			ComboBox comboBox = _cboItem;
+			if (comboBox != null)
+			{
+				comboBox.SelectedIndexChanged -= value2;
+			}
+			_cboItem = value;
+			comboBox = _cboItem;
+			if (comboBox != null)
+			{
+				comboBox.SelectedIndexChanged += value2;
+			}
+		}
+	}
+
+	[field: AccessedThroughProperty("Label5")]
+	internal virtual Label Label5
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	public cSalesInvoiceItem[] Item
+	{
+		get
+		{
+			return _item;
+		}
+		set
+		{
+			_item = value;
+		}
+	}
+
+	[DebuggerNonUserCode]
+	protected override void Dispose(bool disposing)
+	{
+		try
+		{
+			if (disposing && components != null)
+			{
+				components.Dispose();
+			}
+		}
+		finally
+		{
+			base.Dispose(disposing);
+		}
+	}
+
+	[System.Diagnostics.DebuggerStepThrough]
+	private void InitializeComponent()
+	{
+		this.txtPrice = new GCUv2.FilteredTextBox();
+		this.Label8 = new System.Windows.Forms.Label();
+		this.btnDelete = new System.Windows.Forms.Button();
+		this.btnSave = new System.Windows.Forms.Button();
+		this.txtQty = new GCUv2.FilteredTextBox();
+		this.Label6 = new System.Windows.Forms.Label();
+		this.cboItem = new System.Windows.Forms.ComboBox();
+		this.Label5 = new System.Windows.Forms.Label();
+		base.SuspendLayout();
+		this.txtPrice.AllowedCharacters = GCUv2.FilteredTextBox.InputType.All;
+		this.txtPrice.DontFormat = false;
+		this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.txtPrice.Location = new System.Drawing.Point(76, 71);
+		this.txtPrice.MaximumDigit = 3;
+		this.txtPrice.Name = "txtPrice";
+		this.txtPrice.Size = new System.Drawing.Size(139, 26);
+		this.txtPrice.TabIndex = 88;
+		this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+		this.Label8.AutoSize = true;
+		this.Label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label8.Location = new System.Drawing.Point(11, 78);
+		this.Label8.Name = "Label8";
+		this.Label8.Size = new System.Drawing.Size(36, 13);
+		this.Label8.TabIndex = 93;
+		this.Label8.Text = "Harga";
+		this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnDelete.Location = new System.Drawing.Point(142, 103);
+		this.btnDelete.Name = "btnDelete";
+		this.btnDelete.Size = new System.Drawing.Size(54, 25);
+		this.btnDelete.TabIndex = 90;
+		this.btnDelete.Text = "Hapus";
+		this.btnDelete.UseVisualStyleBackColor = true;
+		this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnSave.Location = new System.Drawing.Point(76, 103);
+		this.btnSave.Name = "btnSave";
+		this.btnSave.Size = new System.Drawing.Size(59, 25);
+		this.btnSave.TabIndex = 89;
+		this.btnSave.Text = "Simpan ";
+		this.btnSave.UseVisualStyleBackColor = true;
+		this.txtQty.AllowedCharacters = GCUv2.FilteredTextBox.InputType.All;
+		this.txtQty.DontFormat = false;
+		this.txtQty.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.txtQty.Location = new System.Drawing.Point(76, 39);
+		this.txtQty.MaximumDigit = 3;
+		this.txtQty.Name = "txtQty";
+		this.txtQty.Size = new System.Drawing.Size(139, 26);
+		this.txtQty.TabIndex = 87;
+		this.txtQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+		this.Label6.AutoSize = true;
+		this.Label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label6.Location = new System.Drawing.Point(10, 15);
+		this.Label6.Name = "Label6";
+		this.Label6.Size = new System.Drawing.Size(41, 13);
+		this.Label6.TabIndex = 92;
+		this.Label6.Text = "Barang";
+		this.cboItem.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+		this.cboItem.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+		this.cboItem.FormattingEnabled = true;
+		this.cboItem.Location = new System.Drawing.Point(76, 12);
+		this.cboItem.Name = "cboItem";
+		this.cboItem.Size = new System.Drawing.Size(139, 21);
+		this.cboItem.TabIndex = 85;
+		this.Label5.AutoSize = true;
+		this.Label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label5.Location = new System.Drawing.Point(11, 47);
+		this.Label5.Name = "Label5";
+		this.Label5.Size = new System.Drawing.Size(40, 13);
+		this.Label5.TabIndex = 91;
+		this.Label5.Text = "Jumlah";
+		base.AcceptButton = this.btnSave;
+		base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
+		base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+		base.ClientSize = new System.Drawing.Size(227, 136);
+		base.Controls.Add(this.txtPrice);
+		base.Controls.Add(this.Label8);
+		base.Controls.Add(this.btnDelete);
+		base.Controls.Add(this.btnSave);
+		base.Controls.Add(this.txtQty);
+		base.Controls.Add(this.Label6);
+		base.Controls.Add(this.cboItem);
+		base.Controls.Add(this.Label5);
+		base.KeyPreview = true;
+		base.MaximizeBox = false;
+		base.Name = "frmSalesReturnItem";
+		base.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+		this.Text = "Barang";
+		base.ResumeLayout(false);
+		base.PerformLayout();
+	}
+
+	public frmSalesReturnItem(bool CurrentData, double CustomerId, int StorageId)
+	{
+		base.KeyDown += frmSalesReturnItem_KeyDown;
+		InitializeComponent();
+		DoubleBuffered = true;
+		_currentData = CurrentData;
+		_customerId = CustomerId;
+		txtQty.AllowedCharacters = FilteredTextBox.InputType.NumeralsAndCurrency;
+		txtPrice.AllowedCharacters = FilteredTextBox.InputType.NumeralsAndCurrency;
+		ComboBox combo = cboItem;
+		cCombo.getItemAll(ref combo, 99, 99, 0, 0, 0, 0, 1, 0, 0, 0, StorageId, 0, _customerId, CanBeUsedAsGroupMember: false, Module1.pubGroupId, All: false, Active: true);
+		cboItem = combo;
+		if (_currentData)
+		{
+			btnSave.Text = "Update";
+			btnDelete.Enabled = true;
+		}
+		else
+		{
+			btnSave.Text = "Tambah";
+			btnDelete.Enabled = false;
+		}
+		if (Module1.pubModifyPriceInSalesInvoice)
+		{
+			txtPrice.Enabled = true;
+		}
+		else
+		{
+			txtPrice.Enabled = false;
+		}
+	}
+
+	private void frmSalesReturnItem_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Escape)
+		{
+			Close();
+		}
+	}
+
+	private void btnSave_Click(object sender, EventArgs e)
+	{
+		int try0001_dispatch = -1;
+		int num2 = default(int);
+		bool flag = default(bool);
+		int num = default(int);
+		while (true)
+		{
+			try
+			{
+				/*Note: ILSpy has introduced the following switch to emulate a goto from catch-block to try-block*/;
+				checked
+				{
+					switch (try0001_dispatch)
+					{
+					default:
+					{
+						ProjectData.ClearProjectError();
+						num2 = 2;
+						cComboItem cComboItem2 = (cComboItem)cboItem.SelectedItem;
+						cComboItem cComboItem3 = (cComboItem)MyProject.Forms.frmSalesReturn.cboStorage.SelectedItem;
+						if (cboItem.SelectedIndex == -1)
+						{
+							Interaction.MsgBox("Pilih barang", MsgBoxStyle.Information);
+							cboItem.Focus();
+							goto end_IL_0001;
+						}
+						if (!Information.IsNothing(_item))
+						{
+							cSalesInvoiceItem[] item = _item;
+							foreach (cSalesInvoiceItem cSalesInvoiceItem2 in item)
+							{
+								if ((double)cSalesInvoiceItem2.ItemId == Conversions.ToDouble(cComboItem2.Value))
+								{
+									int itemId = cSalesInvoiceItem2.ItemId;
+									double qty = cSalesInvoiceItem2.Qty;
+									break;
+								}
+							}
+						}
+						int num3 = MyProject.Forms.frmSalesReturn.dgvItem.Rows.Count - 1;
+						for (int j = 0; j <= num3; j++)
+						{
+							if (Operators.ConditionalCompareObjectEqual(MyProject.Forms.frmSalesReturn.dgvItem[0, j].Value, cComboItem2.Value, TextCompare: false))
+							{
+								if (Conversions.ToBoolean(Operators.AndObject(_currentData & (j != MyProject.Forms.frmSalesReturn.dgvItem.CurrentRow.Index), Operators.CompareObjectEqual(MyProject.Forms.frmSalesReturn.dgvItem[7, MyProject.Forms.frmSalesReturn.dgvItem.CurrentRow.Index].Value, 0, TextCompare: false))))
+								{
+									flag = true;
+								}
+								else if (Conversions.ToBoolean(Operators.AndObject(!_currentData, Operators.CompareObjectEqual(MyProject.Forms.frmSalesReturn.dgvItem[7, MyProject.Forms.frmSalesReturn.dgvItem.CurrentRow.Index].Value, 0, TextCompare: false))))
+								{
+									flag = true;
+								}
+							}
+						}
+						if (flag)
+						{
+							Interaction.MsgBox(cboItem.Text + " tidak bisa dipilih karena sudah dimasukkan.", MsgBoxStyle.Information);
+							cboItem.Focus();
+							goto end_IL_0001;
+						}
+						if (Conversion.Val(Module1.unformatNumber(txtQty.Text)) == 0.0)
+						{
+							Interaction.MsgBox("Masukkan jumlah", MsgBoxStyle.Information);
+							txtQty.Focus();
+							goto end_IL_0001;
+						}
+						if (!Versioned.IsNumeric(txtQty.Text))
+						{
+							Interaction.MsgBox("Masukkan jumlah dengan format angka yang benar", MsgBoxStyle.Information);
+							txtQty.Focus();
+							goto end_IL_0001;
+						}
+						if (Operators.CompareString(txtPrice.Text, "", TextCompare: false) == 0)
+						{
+							Interaction.MsgBox("Masukkan harga.", MsgBoxStyle.Information);
+							txtPrice.Focus();
+							goto end_IL_0001;
+						}
+						if (!Versioned.IsNumeric(txtPrice.Text))
+						{
+							Interaction.MsgBox("Masukkan harga dengan format angka yang benar", MsgBoxStyle.Information);
+							txtPrice.Focus();
+							goto end_IL_0001;
+						}
+						if (_currentData)
+						{
+							MyProject.Forms.frmSalesReturn.dgvItem[0, MyProject.Forms.frmSalesReturn.dgvItem.CurrentRow.Index].Value = cComboItem2.Value;
+							MyProject.Forms.frmSalesReturn.dgvItem[1, MyProject.Forms.frmSalesReturn.dgvItem.CurrentRow.Index].Value = cboItem.Text;
+							MyProject.Forms.frmSalesReturn.dgvItem[2, MyProject.Forms.frmSalesReturn.dgvItem.CurrentRow.Index].Value = Module1.formatCustomDecimal(txtQty.Text, 3);
+							MyProject.Forms.frmSalesReturn.dgvItem[3, MyProject.Forms.frmSalesReturn.dgvItem.CurrentRow.Index].Value = Module1.formatCustomDecimal(txtPrice.Text, 2);
+							MyProject.Forms.frmSalesReturn.dgvItem[4, MyProject.Forms.frmSalesReturn.dgvItem.CurrentRow.Index].Value = Module1.formatCustomDecimal(Conversions.ToString(Conversions.ToDouble(txtQty.Text) * Conversions.ToDouble(txtPrice.Text)), 2);
+							MyProject.Forms.frmSalesReturn.dgvItem[5, MyProject.Forms.frmSalesReturn.dgvItem.CurrentRow.Index].Value = _basePrice;
+							MyProject.Forms.frmSalesReturn.dgvItem[6, MyProject.Forms.frmSalesReturn.dgvItem.CurrentRow.Index].Value = Conversions.ToDouble(txtQty.Text) * _basePrice;
+							DeleteComponent();
+						}
+						else
+						{
+							MyProject.Forms.frmSalesReturn.dgvItem.Rows.Add(cComboItem2.Value, cboItem.Text, Module1.formatCustomDecimal(txtQty.Text, 3), Module1.formatCustomDecimal(txtPrice.Text, 2), Module1.formatCustomDecimal(Conversions.ToString(Conversions.ToDouble(txtQty.Text) * Conversions.ToDouble(txtPrice.Text)), 2), _basePrice, Conversions.ToDouble(txtQty.Text) * _basePrice);
+							MyProject.Forms.frmSalesReturn.dgvItem.CurrentRow.Selected = false;
+						}
+						if (_isGroup)
+						{
+							int j = MyProject.Forms.frmSalesReturn.dgvItem.CurrentRow.Index + 1;
+							cItem cItem2 = new cItem(Conversions.ToInteger(cComboItem2.Value));
+							cItemGroup[] group = cItem2.Group;
+							foreach (cItemGroup cItemGroup2 in group)
+							{
+								if (!Information.IsNothing(_item))
+								{
+									cSalesInvoiceItem[] item2 = _item;
+									foreach (cSalesInvoiceItem cSalesInvoiceItem3 in item2)
+									{
+										if ((cSalesInvoiceItem3.ItemId == cItemGroup2.ComponentId) & ((double)cSalesInvoiceItem3.ParentItemId == Conversions.ToDouble(cComboItem2.Value)))
+										{
+											double qty = cSalesInvoiceItem3.Qty;
+											break;
+										}
+									}
+								}
+								if (_currentData)
+								{
+									MyProject.Forms.frmSalesReturn.dgvItem.Rows.Insert(j, cItemGroup2.ComponentId, "|--- " + cItemGroup2.ComponentName, Module1.formatCustomDecimal(Conversions.ToString(Conversions.ToDouble(txtQty.Text) * cItemGroup2.Qty), 3), 0, 0, 0, 0, cComboItem2.Value);
+								}
+								else
+								{
+									MyProject.Forms.frmSalesReturn.dgvItem.Rows.Add(cItemGroup2.ComponentId, "|--- " + cItemGroup2.ComponentName, Module1.formatCustomDecimal(Conversions.ToString(Conversions.ToDouble(txtQty.Text) * cItemGroup2.Qty), 3), 0, 0, 0, 0, cComboItem2.Value);
+								}
+								j++;
+							}
+						}
+						MyProject.Forms.frmSalesReturn.Edited = true;
+						MyProject.Forms.frmSalesReturn.calculateTotalPrice();
+						MyProject.Forms.frmSalesReturn.calculateDiscount();
+						Close();
+						goto end_IL_0001;
+					}
+					case 2235:
+						num = -1;
+						switch (num2)
+						{
+						case 2:
+							Module1.SaveError(Information.Err(), "frmSalesReturnItem", "btnSave_Click", "");
+							goto end_IL_0001;
+						}
+						break;
+					}
+				}
+			}
+			catch (object obj) when (obj is Exception && num2 != 0 && num == 0)
+			{
+				ProjectData.SetProjectError((Exception)obj);
+				try0001_dispatch = 2235;
+				continue;
+			}
+			throw ProjectData.CreateProjectError(-2146828237);
+			continue;
+			end_IL_0001:
+			break;
+		}
+		if (num != 0)
+		{
+			ProjectData.ClearProjectError();
+		}
+	}
+
+	private void DeleteComponent()
+	{
+		checked
+		{
+			bool flag = default(bool);
+			if (MyProject.Forms.frmSalesReturn.dgvItem.CurrentRow.Index == MyProject.Forms.frmSalesReturn.dgvItem.Rows.Count - 1)
+			{
+				flag = false;
+			}
+			else if (Operators.ConditionalCompareObjectGreater(MyProject.Forms.frmSalesReturn.dgvItem[7, MyProject.Forms.frmSalesReturn.dgvItem.CurrentRow.Index + 1].Value, 0, TextCompare: false))
+			{
+				flag = true;
+			}
+			int num = MyProject.Forms.frmSalesReturn.dgvItem.CurrentRow.Index;
+			if (!flag)
+			{
+				return;
+			}
+			bool flag2 = default(bool);
+			while (!flag2)
+			{
+				num++;
+				if (num == MyProject.Forms.frmSalesReturn.dgvItem.Rows.Count || Operators.ConditionalCompareObjectEqual(MyProject.Forms.frmSalesReturn.dgvItem[7, num].Value, 0, TextCompare: false))
+				{
+					flag2 = true;
+				}
+			}
+			int num2 = num - 1;
+			int num3 = num2;
+			int num4 = MyProject.Forms.frmSalesReturn.dgvItem.CurrentRow.Index + 1;
+			for (num = num3; num >= num4; num += -1)
+			{
+				MyProject.Forms.frmSalesReturn.dgvItem.Rows.RemoveAt(num);
+			}
+		}
+	}
+
+	private void btnDelete_Click(object sender, EventArgs e)
+	{
+		MyProject.Forms.frmSalesReturn.dgvItem.Rows.RemoveAt(MyProject.Forms.frmSalesReturn.dgvItem.CurrentRow.Index);
+		MyProject.Forms.frmSalesReturn.Edited = true;
+		MyProject.Forms.frmSalesReturn.calculateTotalPrice();
+		MyProject.Forms.frmSalesReturn.calculateDiscount();
+		Close();
+	}
+
+	private void cboItem_SelectedIndexChanged(object sender, EventArgs e)
+	{
+		cComboItem cComboItem2 = (cComboItem)cboItem.SelectedItem;
+		double price = cSalesPriceCode.GetPrice(Conversions.ToInteger(cComboItem2.Value), _customerId);
+		txtPrice.Text = Module1.formatCustomDecimal(Conversions.ToString(price), 2);
+		_basePrice = price;
+		if (cItem.GetTypeId(Conversions.ToInteger(cComboItem2.Value)) == 4)
+		{
+			_isGroup = true;
+		}
+		else
+		{
+			_isGroup = false;
+		}
+	}
 }

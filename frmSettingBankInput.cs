@@ -1,170 +1,270 @@
 using System;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Drawing;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
+using GCUv2.My;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
 
-namespace GCUv2
+namespace GCUv2;
+
+[DesignerGenerated]
+public class frmSettingBankInput : Form
 {
-    public class Form
-    {
+	private IContainer components;
 
-        private class ComponentModel.IContainer components;
-        private class Button _btnSaveClose;
-        private class Label _Label9;
-        private class ComboBox _cboActive;
-        private class TextBox _txtName;
-        private class Label _Label1;
-        private int32 _currentId;
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnSaveClose")]
+	private Button _btnSaveClose;
 
+	private int _currentId;
 
-        protected override strict void Dispose(boolean disposing) {
+	internal virtual Button btnSaveClose
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnSaveClose;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnSaveClose_Click;
+			Button button = _btnSaveClose;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnSaveClose = value;
+			button = _btnSaveClose;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
 
-          boolean var_1;
+	[field: AccessedThroughProperty("Label9")]
+	internal virtual Label Label9
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-        }
+	[field: AccessedThroughProperty("cboActive")]
+	internal virtual ComboBox cboActive
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-        private void InitializeComponent() {
+	[field: AccessedThroughProperty("txtName")]
+	internal virtual TextBox txtName
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
+	[field: AccessedThroughProperty("Label1")]
+	internal virtual Label Label1
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-        }
+	public string CurrentId
+	{
+		get
+		{
+			return Conversions.ToString(_currentId);
+		}
+		set
+		{
+			_currentId = Conversions.ToInteger(value);
+		}
+	}
 
-        assem override strict specialname class Button get_btnSaveClose() {
+	[DebuggerNonUserCode]
+	protected override void Dispose(bool disposing)
+	{
+		try
+		{
+			if (disposing && components != null)
+			{
+				components.Dispose();
+			}
+		}
+		finally
+		{
+			base.Dispose(disposing);
+		}
+	}
 
-          loc_4E8B19: ldarg.0
-          loc_4E8B1A: ldfld GCUv2.frmSettingBankInput::_btnSaveClose
-          loc_4E8B1F: br.s loc_4E8B21
-          loc_4E8B21: // Referenced from: loc_4E8B1F
-          loc_4E8B21: ret
-        }
+	[System.Diagnostics.DebuggerStepThrough]
+	private void InitializeComponent()
+	{
+		this.btnSaveClose = new System.Windows.Forms.Button();
+		this.Label9 = new System.Windows.Forms.Label();
+		this.cboActive = new System.Windows.Forms.ComboBox();
+		this.txtName = new System.Windows.Forms.TextBox();
+		this.Label1 = new System.Windows.Forms.Label();
+		base.SuspendLayout();
+		this.btnSaveClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnSaveClose.Location = new System.Drawing.Point(90, 65);
+		this.btnSaveClose.Name = "btnSaveClose";
+		this.btnSaveClose.Size = new System.Drawing.Size(93, 24);
+		this.btnSaveClose.TabIndex = 134;
+		this.btnSaveClose.Text = "Simpan && &Tutup";
+		this.btnSaveClose.UseVisualStyleBackColor = true;
+		this.Label9.AutoSize = true;
+		this.Label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label9.Location = new System.Drawing.Point(10, 38);
+		this.Label9.Name = "Label9";
+		this.Label9.Size = new System.Drawing.Size(28, 13);
+		this.Label9.TabIndex = 135;
+		this.Label9.Text = "Aktif";
+		this.cboActive.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+		this.cboActive.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+		this.cboActive.FormattingEnabled = true;
+		this.cboActive.Location = new System.Drawing.Point(90, 38);
+		this.cboActive.Name = "cboActive";
+		this.cboActive.Size = new System.Drawing.Size(110, 21);
+		this.cboActive.TabIndex = 132;
+		this.txtName.Location = new System.Drawing.Point(90, 12);
+		this.txtName.Name = "txtName";
+		this.txtName.Size = new System.Drawing.Size(110, 20);
+		this.txtName.TabIndex = 131;
+		this.Label1.AutoSize = true;
+		this.Label1.Location = new System.Drawing.Point(10, 15);
+		this.Label1.Name = "Label1";
+		this.Label1.Size = new System.Drawing.Size(63, 13);
+		this.Label1.TabIndex = 133;
+		this.Label1.Text = "Nama Bank";
+		base.AcceptButton = this.btnSaveClose;
+		base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
+		base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+		base.ClientSize = new System.Drawing.Size(219, 102);
+		base.Controls.Add(this.btnSaveClose);
+		base.Controls.Add(this.Label9);
+		base.Controls.Add(this.cboActive);
+		base.Controls.Add(this.txtName);
+		base.Controls.Add(this.Label1);
+		base.KeyPreview = true;
+		base.MaximizeBox = false;
+		base.Name = "frmSettingBankInput";
+		base.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+		this.Text = "Setting - Bank";
+		base.ResumeLayout(false);
+		base.PerformLayout();
+	}
 
-        assem override strict specialname void set_btnSaveClose(class Button WithEventsValue) {
+	public frmSettingBankInput()
+	{
+		base.KeyDown += frmSettingBankInput_KeyDown;
+		InitializeComponent();
+		ComboBox combo = cboActive;
+		cCombo.getYesNo(ref combo, All: false);
+		cboActive = combo;
+		cboActive.SelectedIndex = 0;
+	}
 
-          class System.EventHandler var_1;
-          class Button var_2;
+	private void frmSettingBankInput_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Escape)
+		{
+			Close();
+		}
+	}
 
-        }
+	public void loadData()
+	{
+		int try0001_dispatch = -1;
+		int num2 = default(int);
+		int num = default(int);
+		while (true)
+		{
+			try
+			{
+				/*Note: ILSpy has introduced the following switch to emulate a goto from catch-block to try-block*/;
+				switch (try0001_dispatch)
+				{
+				default:
+				{
+					ProjectData.ClearProjectError();
+					num2 = 2;
+					cBank cBank2 = new cBank(_currentId);
+					txtName.Text = cBank2.Name;
+					ComboBox cboSource = cboActive;
+					Module1.comboBoundValue(ref cboSource, cBank2.Active);
+					cboActive = cboSource;
+					goto end_IL_0001;
+				}
+				case 108:
+					num = -1;
+					switch (num2)
+					{
+					case 2:
+						Module1.SaveError(Information.Err(), "frmSettingBankInput", "LoadData", "");
+						_currentId = 0;
+						goto end_IL_0001;
+					}
+					break;
+				}
+			}
+			catch (object obj) when (obj is Exception && num2 != 0 && num == 0)
+			{
+				ProjectData.SetProjectError((Exception)obj);
+				try0001_dispatch = 108;
+				continue;
+			}
+			throw ProjectData.CreateProjectError(-2146828237);
+			continue;
+			end_IL_0001:
+			break;
+		}
+		if (num != 0)
+		{
+			ProjectData.ClearProjectError();
+		}
+	}
 
-        assem override strict specialname class Label get_Label9() {
+	public void prepareForm()
+	{
+		_currentId = 0;
+	}
 
-          loc_4E8B68: ldarg.0
-          loc_4E8B69: ldfld GCUv2.frmSettingBankInput::_Label9
-          loc_4E8B6E: br.s loc_4E8B70
-          loc_4E8B70: // Referenced from: loc_4E8B6E
-          loc_4E8B70: ret
-        }
-
-        assem override strict specialname void set_Label9(class Label WithEventsValue) {
-
-          loc_4E8B72: ldarg.0
-          loc_4E8B73: ldarg.1
-          loc_4E8B74: stfld GCUv2.frmSettingBankInput::_Label9
-          loc_4E8B79: ret
-        }
-
-        assem override strict specialname class ComboBox get_cboActive() {
-
-          loc_4E8B7B: ldarg.0
-          loc_4E8B7C: ldfld GCUv2.frmSettingBankInput::_cboActive
-          loc_4E8B81: br.s loc_4E8B83
-          loc_4E8B83: // Referenced from: loc_4E8B81
-          loc_4E8B83: ret
-        }
-
-        assem override strict specialname void set_cboActive(class ComboBox WithEventsValue) {
-
-          loc_4E8B85: ldarg.0
-          loc_4E8B86: ldarg.1
-          loc_4E8B87: stfld GCUv2.frmSettingBankInput::_cboActive
-          loc_4E8B8C: ret
-        }
-
-        assem override strict specialname class TextBox get_txtName() {
-
-          loc_4E8B8E: ldarg.0
-          loc_4E8B8F: ldfld GCUv2.frmSettingBankInput::_txtName
-          loc_4E8B94: br.s loc_4E8B96
-          loc_4E8B96: // Referenced from: loc_4E8B94
-          loc_4E8B96: ret
-        }
-
-        assem override strict specialname void set_txtName(class TextBox WithEventsValue) {
-
-          loc_4E8B98: ldarg.0
-          loc_4E8B99: ldarg.1
-          loc_4E8B9A: stfld GCUv2.frmSettingBankInput::_txtName
-          loc_4E8B9F: ret
-        }
-
-        assem override strict specialname class Label get_Label1() {
-
-          loc_4E8BA1: ldarg.0
-          loc_4E8BA2: ldfld GCUv2.frmSettingBankInput::_Label1
-          loc_4E8BA7: br.s loc_4E8BA9
-          loc_4E8BA9: // Referenced from: loc_4E8BA7
-          loc_4E8BA9: ret
-        }
-
-        assem override strict specialname void set_Label1(class Label WithEventsValue) {
-
-          loc_4E8BAB: ldarg.0
-          loc_4E8BAC: ldarg.1
-          loc_4E8BAD: stfld GCUv2.frmSettingBankInput::_Label1
-          loc_4E8BB2: ret
-        }
-
-        public specialname string get_CurrentId() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_CurrentId(string value) {
-
-          loc_4E8BD2: nop
-          loc_4E8BD3: ldarg.0
-          loc_4E8BD4: ldarg.1
-          loc_4E8BD5: call int32 Microsoft.VisualBasic.CompilerServices.Conversions::ToInteger(string)
-          loc_4E8BDA: stfld GCUv2.frmSettingBankInput::_currentId
-          loc_4E8BDF: ret
-        }
-
-        public void frmSettingBankInput() {
-
-          class ComboBox var_1;
-
-        }
-
-        private void frmSettingBankInput_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        public void loadData() {
-
-          int32 num_1;
-          int32 num_2;
-          class GCUv2.cBank var_1;
-          class ComboBox var_2;
-
-        }
-
-        public void prepareForm() {
-
-          loc_4E8D31: nop
-          loc_4E8D32: ldarg.0
-          loc_4E8D33: ldc.i4.0
-          loc_4E8D34: stfld GCUv2.frmSettingBankInput::_currentId
-          loc_4E8D39: ret
-        }
-
-        private void btnSaveClose_Click(object sender, class System.EventArgs e) {
-
-          class GCUv2.cComboItem var_1;
-          class GCUv2.cBank var_2;
-          boolean var_3;
-          boolean var_4;
-          boolean var_5;
-
-        }
-
-    }
+	private void btnSaveClose_Click(object sender, EventArgs e)
+	{
+		cComboItem cComboItem2 = (cComboItem)cboActive.SelectedItem;
+		if (Operators.CompareString(txtName.Text, "", TextCompare: false) == 0)
+		{
+			Interaction.MsgBox("Masukkan nama bank", MsgBoxStyle.Information);
+			txtName.Focus();
+			return;
+		}
+		if (cBank.IsExist(_currentId, Module1.cleanString(txtName.Text)))
+		{
+			Interaction.MsgBox("Nama bank sudah pernah digunakan. Masukkan nama lain.", MsgBoxStyle.Information);
+			txtName.Focus();
+			return;
+		}
+		if (cboActive.SelectedIndex == -1)
+		{
+			Interaction.MsgBox("Pilih aktif/tidak", MsgBoxStyle.Information);
+			cboActive.Focus();
+			return;
+		}
+		cBank cBank2 = new cBank(0);
+		cBank2.Id = Conversions.ToInteger(CurrentId);
+		cBank2.Name = txtName.Text;
+		cBank2.Active = Conversions.ToInteger(cComboItem2.Value);
+		cBank2.save();
+		Interaction.MsgBox("Bank berhasil disimpan", MsgBoxStyle.Information);
+		MyProject.Forms.frmSettingBankList.getList();
+		Close();
+	}
 }

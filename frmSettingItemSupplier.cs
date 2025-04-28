@@ -1,246 +1,336 @@
 using System;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Drawing;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
+using GCUv2.My;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
 
-namespace GCUv2
+namespace GCUv2;
+
+[DesignerGenerated]
+public class frmSettingItemSupplier : Form
 {
-    public class Form
-    {
+	private IContainer components;
 
-        private class ComponentModel.IContainer components;
-        private class Label _Label7;
-        private class ComboBox _cboSupplier;
-        private class Label _Label1;
-        private class DateTimePicker _dtpValid;
-        private class GCUv2.FilteredTextBox _txtPrice;
-        private class Label _Label5;
-        private class Button _btnDelete;
-        private class Button _btnSave;
-        private class Label _Label2;
-        private class ComboBox _cboUnit;
-        private boolean _currentData;
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnDelete")]
+	private Button _btnDelete;
 
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnSave")]
+	private Button _btnSave;
 
-        protected override strict void Dispose(boolean disposing) {
+	private bool _currentData;
 
-          boolean var_1;
+	[field: AccessedThroughProperty("Label7")]
+	internal virtual Label Label7
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-        }
+	[field: AccessedThroughProperty("cboSupplier")]
+	internal virtual ComboBox cboSupplier
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-        private void InitializeComponent() {
+	[field: AccessedThroughProperty("Label1")]
+	internal virtual Label Label1
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
+	[field: AccessedThroughProperty("dtpValid")]
+	internal virtual DateTimePicker dtpValid
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-        }
+	[field: AccessedThroughProperty("txtPrice")]
+	internal virtual FilteredTextBox txtPrice
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-        assem override strict specialname class Label get_Label7() {
+	[field: AccessedThroughProperty("Label5")]
+	internal virtual Label Label5
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-          loc_51192D: ldarg.0
-          loc_51192E: ldfld GCUv2.frmSettingItemSupplier::_Label7
-          loc_511933: br.s loc_511935
-          loc_511935: // Referenced from: loc_511933
-          loc_511935: ret
-        }
+	internal virtual Button btnDelete
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnDelete;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnDelete_Click;
+			Button button = _btnDelete;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnDelete = value;
+			button = _btnDelete;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
 
-        assem override strict specialname void set_Label7(class Label WithEventsValue) {
+	internal virtual Button btnSave
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnSave;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnSave_Click;
+			Button button = _btnSave;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnSave = value;
+			button = _btnSave;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
 
-          loc_511937: ldarg.0
-          loc_511938: ldarg.1
-          loc_511939: stfld GCUv2.frmSettingItemSupplier::_Label7
-          loc_51193E: ret
-        }
+	[field: AccessedThroughProperty("Label2")]
+	internal virtual Label Label2
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-        assem override strict specialname class ComboBox get_cboSupplier() {
+	[field: AccessedThroughProperty("cboUnit")]
+	internal virtual ComboBox cboUnit
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-          loc_511940: ldarg.0
-          loc_511941: ldfld GCUv2.frmSettingItemSupplier::_cboSupplier
-          loc_511946: br.s loc_511948
-          loc_511948: // Referenced from: loc_511946
-          loc_511948: ret
-        }
+	[DebuggerNonUserCode]
+	protected override void Dispose(bool disposing)
+	{
+		try
+		{
+			if (disposing && components != null)
+			{
+				components.Dispose();
+			}
+		}
+		finally
+		{
+			base.Dispose(disposing);
+		}
+	}
 
-        assem override strict specialname void set_cboSupplier(class ComboBox WithEventsValue) {
+	[System.Diagnostics.DebuggerStepThrough]
+	private void InitializeComponent()
+	{
+		this.Label7 = new System.Windows.Forms.Label();
+		this.cboSupplier = new System.Windows.Forms.ComboBox();
+		this.Label1 = new System.Windows.Forms.Label();
+		this.dtpValid = new System.Windows.Forms.DateTimePicker();
+		this.Label5 = new System.Windows.Forms.Label();
+		this.btnDelete = new System.Windows.Forms.Button();
+		this.btnSave = new System.Windows.Forms.Button();
+		this.txtPrice = new GCUv2.FilteredTextBox();
+		this.Label2 = new System.Windows.Forms.Label();
+		this.cboUnit = new System.Windows.Forms.ComboBox();
+		base.SuspendLayout();
+		this.Label7.AutoSize = true;
+		this.Label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label7.Location = new System.Drawing.Point(12, 15);
+		this.Label7.Name = "Label7";
+		this.Label7.Size = new System.Drawing.Size(45, 13);
+		this.Label7.TabIndex = 57;
+		this.Label7.Text = "Supplier";
+		this.cboSupplier.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+		this.cboSupplier.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+		this.cboSupplier.FormattingEnabled = true;
+		this.cboSupplier.Location = new System.Drawing.Point(114, 12);
+		this.cboSupplier.Name = "cboSupplier";
+		this.cboSupplier.Size = new System.Drawing.Size(174, 21);
+		this.cboSupplier.TabIndex = 0;
+		this.Label1.AutoSize = true;
+		this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label1.Location = new System.Drawing.Point(12, 97);
+		this.Label1.Name = "Label1";
+		this.Label1.Size = new System.Drawing.Size(101, 13);
+		this.Label1.TabIndex = 56;
+		this.Label1.Text = "Harga berlaku mulai";
+		this.dtpValid.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+		this.dtpValid.Location = new System.Drawing.Point(114, 94);
+		this.dtpValid.Name = "dtpValid";
+		this.dtpValid.Size = new System.Drawing.Size(121, 20);
+		this.dtpValid.TabIndex = 2;
+		this.Label5.AutoSize = true;
+		this.Label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label5.Location = new System.Drawing.Point(12, 71);
+		this.Label5.Name = "Label5";
+		this.Label5.Size = new System.Drawing.Size(36, 13);
+		this.Label5.TabIndex = 63;
+		this.Label5.Text = "Harga";
+		this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnDelete.Location = new System.Drawing.Point(181, 120);
+		this.btnDelete.Name = "btnDelete";
+		this.btnDelete.Size = new System.Drawing.Size(54, 25);
+		this.btnDelete.TabIndex = 4;
+		this.btnDelete.Text = "Hapus";
+		this.btnDelete.UseVisualStyleBackColor = true;
+		this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnSave.Location = new System.Drawing.Point(115, 120);
+		this.btnSave.Name = "btnSave";
+		this.btnSave.Size = new System.Drawing.Size(59, 25);
+		this.btnSave.TabIndex = 3;
+		this.btnSave.Text = "Simpan ";
+		this.btnSave.UseVisualStyleBackColor = true;
+		this.txtPrice.AllowedCharacters = GCUv2.FilteredTextBox.InputType.All;
+		this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.txtPrice.Location = new System.Drawing.Point(115, 66);
+		this.txtPrice.MaximumDigit = 3;
+		this.txtPrice.Name = "txtPrice";
+		this.txtPrice.Size = new System.Drawing.Size(121, 22);
+		this.txtPrice.TabIndex = 2;
+		this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+		this.Label2.AutoSize = true;
+		this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label2.Location = new System.Drawing.Point(12, 42);
+		this.Label2.Name = "Label2";
+		this.Label2.Size = new System.Drawing.Size(41, 13);
+		this.Label2.TabIndex = 67;
+		this.Label2.Text = "Satuan";
+		this.cboUnit.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+		this.cboUnit.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+		this.cboUnit.FormattingEnabled = true;
+		this.cboUnit.Location = new System.Drawing.Point(114, 39);
+		this.cboUnit.Name = "cboUnit";
+		this.cboUnit.Size = new System.Drawing.Size(174, 21);
+		this.cboUnit.TabIndex = 1;
+		base.AcceptButton = this.btnSave;
+		base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
+		base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+		base.ClientSize = new System.Drawing.Size(303, 159);
+		base.Controls.Add(this.Label2);
+		base.Controls.Add(this.cboUnit);
+		base.Controls.Add(this.btnDelete);
+		base.Controls.Add(this.btnSave);
+		base.Controls.Add(this.txtPrice);
+		base.Controls.Add(this.Label5);
+		base.Controls.Add(this.Label7);
+		base.Controls.Add(this.cboSupplier);
+		base.Controls.Add(this.Label1);
+		base.Controls.Add(this.dtpValid);
+		base.KeyPreview = true;
+		base.MaximizeBox = false;
+		base.Name = "frmSettingItemSupplier";
+		base.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+		this.Text = "Setting Harga Barang - Supplier";
+		base.ResumeLayout(false);
+		base.PerformLayout();
+	}
 
-          loc_51194A: ldarg.0
-          loc_51194B: ldarg.1
-          loc_51194C: stfld GCUv2.frmSettingItemSupplier::_cboSupplier
-          loc_511951: ret
-        }
+	public frmSettingItemSupplier(bool CurrentData)
+	{
+		base.KeyDown += frmSettingItemSupplier_KeyDown;
+		InitializeComponent();
+		DoubleBuffered = true;
+		_currentData = CurrentData;
+		txtPrice.AllowedCharacters = FilteredTextBox.InputType.NumeralsAndCurrency;
+		ComboBox combo = cboSupplier;
+		cCombo.getSupplier(ref combo, Module1.pubGroupId, All: false, FlowerOnly: false, IncludeParent: false, Active: true);
+		cboSupplier = combo;
+		if (_currentData)
+		{
+			btnSave.Text = "Update";
+			btnDelete.Enabled = true;
+		}
+		else
+		{
+			btnSave.Text = "Tambah";
+			btnDelete.Enabled = false;
+		}
+	}
 
-        assem override strict specialname class Label get_Label1() {
+	private void frmSettingItemSupplier_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Escape)
+		{
+			Close();
+		}
+	}
 
-          loc_511953: ldarg.0
-          loc_511954: ldfld GCUv2.frmSettingItemSupplier::_Label1
-          loc_511959: br.s loc_51195B
-          loc_51195B: // Referenced from: loc_511959
-          loc_51195B: ret
-        }
+	private void btnSave_Click(object sender, EventArgs e)
+	{
+		cComboItem cComboItem2 = (cComboItem)cboSupplier.SelectedItem;
+		if (cboSupplier.SelectedIndex == -1)
+		{
+			Interaction.MsgBox("Pilih supplier", MsgBoxStyle.Information);
+			cboSupplier.Focus();
+			return;
+		}
+		if (cboUnit.SelectedIndex == -1)
+		{
+			Interaction.MsgBox("Pilih satuan.", MsgBoxStyle.Information);
+			cboUnit.Focus();
+			return;
+		}
+		if (!Versioned.IsNumeric(txtPrice.Text))
+		{
+			Interaction.MsgBox("Masukkan harga dengan format angka yang benar", MsgBoxStyle.Information);
+			txtPrice.Focus();
+			return;
+		}
+		checked
+		{
+			if (_currentData)
+			{
+				MyProject.Forms.frmSettingItemInput.dgvSupplier[0, MyProject.Forms.frmSettingItemInput.dgvSupplier.CurrentRow.Index].Value = cComboItem2.Value;
+				MyProject.Forms.frmSettingItemInput.dgvSupplier[1, MyProject.Forms.frmSettingItemInput.dgvSupplier.CurrentRow.Index].Value = cboUnit.SelectedIndex + 1;
+				MyProject.Forms.frmSettingItemInput.dgvSupplier[2, MyProject.Forms.frmSettingItemInput.dgvSupplier.CurrentRow.Index].Value = cboSupplier.Text;
+				MyProject.Forms.frmSettingItemInput.dgvSupplier[3, MyProject.Forms.frmSettingItemInput.dgvSupplier.CurrentRow.Index].Value = cboUnit.Text;
+				MyProject.Forms.frmSettingItemInput.dgvSupplier[4, MyProject.Forms.frmSettingItemInput.dgvSupplier.CurrentRow.Index].Value = Module1.formatCustomDecimal(Conversions.ToString(Conversion.Val(Module1.unformatNumber(txtPrice.Text))), 2);
+				MyProject.Forms.frmSettingItemInput.dgvSupplier[5, MyProject.Forms.frmSettingItemInput.dgvSupplier.CurrentRow.Index].Value = Strings.Format(dtpValid.Value, "dd/MM/yyyy");
+			}
+			else
+			{
+				MyProject.Forms.frmSettingItemInput.dgvSupplier.Rows.Add(cComboItem2.Value, cboUnit.SelectedIndex + 1, cboSupplier.Text, cboUnit.Text, Module1.formatCustomDecimal(Conversions.ToString(Conversion.Val(Module1.unformatNumber(txtPrice.Text))), 2), Strings.Format(dtpValid.Value, "dd/MM/yyyy"));
+				MyProject.Forms.frmSettingItemInput.dgvSupplier.CurrentRow.Selected = false;
+			}
+			Close();
+		}
+	}
 
-        assem override strict specialname void set_Label1(class Label WithEventsValue) {
-
-          loc_51195D: ldarg.0
-          loc_51195E: ldarg.1
-          loc_51195F: stfld GCUv2.frmSettingItemSupplier::_Label1
-          loc_511964: ret
-        }
-
-        assem override strict specialname class DateTimePicker get_dtpValid() {
-
-          loc_511966: ldarg.0
-          loc_511967: ldfld GCUv2.frmSettingItemSupplier::_dtpValid
-          loc_51196C: br.s loc_51196E
-          loc_51196E: // Referenced from: loc_51196C
-          loc_51196E: ret
-        }
-
-        assem override strict specialname void set_dtpValid(class DateTimePicker WithEventsValue) {
-
-          loc_511970: ldarg.0
-          loc_511971: ldarg.1
-          loc_511972: stfld GCUv2.frmSettingItemSupplier::_dtpValid
-          loc_511977: ret
-        }
-
-        assem override strict specialname class GCUv2.FilteredTextBox get_txtPrice() {
-
-          loc_511979: ldarg.0
-          loc_51197A: ldfld GCUv2.frmSettingItemSupplier::_txtPrice
-          loc_51197F: br.s loc_511981
-          loc_511981: // Referenced from: loc_51197F
-          loc_511981: ret
-        }
-
-        assem override strict specialname void set_txtPrice(class GCUv2.FilteredTextBox WithEventsValue) {
-
-          loc_511983: ldarg.0
-          loc_511984: ldarg.1
-          loc_511985: stfld GCUv2.frmSettingItemSupplier::_txtPrice
-          loc_51198A: ret
-        }
-
-        assem override strict specialname class Label get_Label5() {
-
-          loc_51198C: ldarg.0
-          loc_51198D: ldfld GCUv2.frmSettingItemSupplier::_Label5
-          loc_511992: br.s loc_511994
-          loc_511994: // Referenced from: loc_511992
-          loc_511994: ret
-        }
-
-        assem override strict specialname void set_Label5(class Label WithEventsValue) {
-
-          loc_511996: ldarg.0
-          loc_511997: ldarg.1
-          loc_511998: stfld GCUv2.frmSettingItemSupplier::_Label5
-          loc_51199D: ret
-        }
-
-        assem override strict specialname class Button get_btnDelete() {
-
-          loc_51199F: ldarg.0
-          loc_5119A0: ldfld GCUv2.frmSettingItemSupplier::_btnDelete
-          loc_5119A5: br.s loc_5119A7
-          loc_5119A7: // Referenced from: loc_5119A5
-          loc_5119A7: ret
-        }
-
-        assem override strict specialname void set_btnDelete(class Button WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Button var_2;
-
-        }
-
-        assem override strict specialname class Button get_btnSave() {
-
-          loc_5119EC: ldarg.0
-          loc_5119ED: ldfld GCUv2.frmSettingItemSupplier::_btnSave
-          loc_5119F2: br.s loc_5119F4
-          loc_5119F4: // Referenced from: loc_5119F2
-          loc_5119F4: ret
-        }
-
-        assem override strict specialname void set_btnSave(class Button WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Button var_2;
-
-        }
-
-        assem override strict specialname class Label get_Label2() {
-
-          loc_511A3C: ldarg.0
-          loc_511A3D: ldfld GCUv2.frmSettingItemSupplier::_Label2
-          loc_511A42: br.s loc_511A44
-          loc_511A44: // Referenced from: loc_511A42
-          loc_511A44: ret
-        }
-
-        assem override strict specialname void set_Label2(class Label WithEventsValue) {
-
-          loc_511A46: ldarg.0
-          loc_511A47: ldarg.1
-          loc_511A48: stfld GCUv2.frmSettingItemSupplier::_Label2
-          loc_511A4D: ret
-        }
-
-        assem override strict specialname class ComboBox get_cboUnit() {
-
-          loc_511A4F: ldarg.0
-          loc_511A50: ldfld GCUv2.frmSettingItemSupplier::_cboUnit
-          loc_511A55: br.s loc_511A57
-          loc_511A57: // Referenced from: loc_511A55
-          loc_511A57: ret
-        }
-
-        assem override strict specialname void set_cboUnit(class ComboBox WithEventsValue) {
-
-          loc_511A59: ldarg.0
-          loc_511A5A: ldarg.1
-          loc_511A5B: stfld GCUv2.frmSettingItemSupplier::_cboUnit
-          loc_511A60: ret
-        }
-
-        public void frmSettingItemSupplier(boolean CurrentData) {
-
-          class ComboBox var_1;
-          boolean var_2;
-
-        }
-
-        private void frmSettingItemSupplier_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void btnSave_Click(object sender, class System.EventArgs e) {
-
-          class GCUv2.cComboItem var_1;
-          boolean var_2;
-          boolean var_3;
-          boolean var_4;
-          boolean var_5;
-
-        }
-
-        private void btnDelete_Click(object sender, class System.EventArgs e) {
-
-          loc_511E71: nop
-          loc_511E72: call class MyForms GCUv2.My.MyProject::get_Forms()
-          loc_511E77: callvirt instance class GCUv2.frmSettingItemInput GCUv2.frmSettingItemSupplier/MyForms::get_frmSettingItemInput()
-          loc_511E7C: callvirt instance class DataGridView GCUv2.frmSettingItemInput::get_dgvSupplier()
-          loc_511E81: callvirt instance class DataGridViewRowCollection System.Windows.Forms.DataGridView::get_Rows()
-          loc_511E86: call class MyForms GCUv2.My.MyProject::get_Forms()
-          loc_511E8B: callvirt instance class GCUv2.frmSettingItemInput GCUv2.frmSettingItemSupplier/MyForms::get_frmSettingItemInput()
-          loc_511E90: callvirt instance class DataGridView GCUv2.frmSettingItemInput::get_dgvSupplier()
-          loc_511E95: callvirt instance class DataGridViewRow System.Windows.Forms.DataGridView::get_CurrentRow()
-          loc_511E9A: callvirt instance int32 System.Windows.Forms.DataGridViewBand::get_Index()
-          loc_511E9F: callvirt instance void System.Windows.Forms.DataGridViewRowCollection::RemoveAt(int32)
-          loc_511EA4: nop
-          loc_511EA5: ldarg.0
-          loc_511EA6: call instance void System.Windows.Forms.Form::Close()
-          loc_511EAB: nop
-          loc_511EAC: ret
-        }
-
-    }
+	private void btnDelete_Click(object sender, EventArgs e)
+	{
+		MyProject.Forms.frmSettingItemInput.dgvSupplier.Rows.RemoveAt(MyProject.Forms.frmSettingItemInput.dgvSupplier.CurrentRow.Index);
+		Close();
+	}
 }

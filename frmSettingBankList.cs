@@ -1,248 +1,402 @@
 using System;
+using System.ComponentModel;
+using System.Data;
+using System.Diagnostics;
+using System.Drawing;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
+using GCUv2.My;
+using Microsoft.VisualBasic.CompilerServices;
 
-namespace GCUv2
+namespace GCUv2;
+
+[DesignerGenerated]
+public class frmSettingBankList : Form
 {
-    public class Form
-    {
-
-        private class ComponentModel.IContainer components;
-        private class ToolStripButton _tsbRefresh;
-        private class DataGridView _dgvList;
-        private class ToolStripButton _tsbNew;
-        private class CheckBox _chkAll;
-        private class ToolStrip _ToolStrip1;
-        private class Label _Label1;
-        private class Label _Label2;
-
-
-        protected override strict void Dispose(boolean disposing) {
-
-          boolean var_1;
-
-        }
-
-        private void InitializeComponent() {
-
-          class ComponentModel.ComponentResourceManager var_1;
-
-        }
-
-        assem override strict specialname class ToolStripButton get_tsbRefresh() {
-
-          loc_4E9376: ldarg.0
-          loc_4E9377: ldfld GCUv2.frmSettingBankList::_tsbRefresh
-          loc_4E937C: br.s loc_4E937E
-          loc_4E937E: // Referenced from: loc_4E937C
-          loc_4E937E: ret
-        }
-
-        assem override strict specialname void set_tsbRefresh(class ToolStripButton WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class ToolStripButton var_2;
-
-        }
-
-        assem override strict specialname class DataGridView get_dgvList() {
-
-          loc_4E93C4: ldarg.0
-          loc_4E93C5: ldfld GCUv2.frmSettingBankList::_dgvList
-          loc_4E93CA: br.s loc_4E93CC
-          loc_4E93CC: // Referenced from: loc_4E93CA
-          loc_4E93CC: ret
-        }
-
-        assem override strict specialname void set_dgvList(class DataGridView WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class KeyEventHandler var_2;
-          class System.EventHandler var_3;
-          class System.EventHandler var_4;
-          class DataGridView var_5;
-
-        }
-
-        assem override strict specialname class ToolStripButton get_tsbNew() {
-
-          loc_4E9471: ldarg.0
-          loc_4E9472: ldfld GCUv2.frmSettingBankList::_tsbNew
-          loc_4E9477: br.s loc_4E9479
-          loc_4E9479: // Referenced from: loc_4E9477
-          loc_4E9479: ret
-        }
-
-        assem override strict specialname void set_tsbNew(class ToolStripButton WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class ToolStripButton var_2;
-
-        }
-
-        assem override strict specialname class CheckBox get_chkAll() {
-
-          loc_4E94C0: ldarg.0
-          loc_4E94C1: ldfld GCUv2.frmSettingBankList::_chkAll
-          loc_4E94C6: br.s loc_4E94C8
-          loc_4E94C8: // Referenced from: loc_4E94C6
-          loc_4E94C8: ret
-        }
-
-        assem override strict specialname void set_chkAll(class CheckBox WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class CheckBox var_2;
-
-        }
-
-        assem override strict specialname class ToolStrip get_ToolStrip1() {
-
-          loc_4E9510: ldarg.0
-          loc_4E9511: ldfld GCUv2.frmSettingBankList::_ToolStrip1
-          loc_4E9516: br.s loc_4E9518
-          loc_4E9518: // Referenced from: loc_4E9516
-          loc_4E9518: ret
-        }
-
-        assem override strict specialname void set_ToolStrip1(class ToolStrip WithEventsValue) {
-
-          loc_4E951A: ldarg.0
-          loc_4E951B: ldarg.1
-          loc_4E951C: stfld GCUv2.frmSettingBankList::_ToolStrip1
-          loc_4E9521: ret
-        }
-
-        assem override strict specialname class Label get_Label1() {
-
-          loc_4E9523: ldarg.0
-          loc_4E9524: ldfld GCUv2.frmSettingBankList::_Label1
-          loc_4E9529: br.s loc_4E952B
-          loc_4E952B: // Referenced from: loc_4E9529
-          loc_4E952B: ret
-        }
-
-        assem override strict specialname void set_Label1(class Label WithEventsValue) {
-
-          loc_4E952D: ldarg.0
-          loc_4E952E: ldarg.1
-          loc_4E952F: stfld GCUv2.frmSettingBankList::_Label1
-          loc_4E9534: ret
-        }
-
-        assem override strict specialname class Label get_Label2() {
-
-          loc_4E9536: ldarg.0
-          loc_4E9537: ldfld GCUv2.frmSettingBankList::_Label2
-          loc_4E953C: br.s loc_4E953E
-          loc_4E953E: // Referenced from: loc_4E953C
-          loc_4E953E: ret
-        }
-
-        assem override strict specialname void set_Label2(class Label WithEventsValue) {
-
-          loc_4E9540: ldarg.0
-          loc_4E9541: ldarg.1
-          loc_4E9542: stfld GCUv2.frmSettingBankList::_Label2
-          loc_4E9547: ret
-        }
-
-        public void frmSettingBankList() {
-
-
-        }
-
-        private void frmSettingBranchList_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-          boolean var_2;
-          boolean var_3;
-
-        }
-
-        private void frmSettingBranchList_Load(object sender, class System.EventArgs e) {
-
-          loc_4E9603: nop
-          loc_4E9604: ldarg.0
-          loc_4E9605: call instance void GCUv2.frmSettingBankList::getList()
-          loc_4E960A: nop
-          loc_4E960B: ret
-        }
-
-        private void FormatGrid() {
-
-
-        }
-
-        private void chkAll_CheckedChanged(object sender, class System.EventArgs e) {
-
-          loc_4E9603: nop
-          loc_4E9604: ldarg.0
-          loc_4E9605: call instance void GCUv2.frmSettingBankList::getList()
-          loc_4E960A: nop
-          loc_4E960B: ret
-        }
-
-        public void getList() {
-
-          class DataTable var_1;
-          class System.Collections.IEnumerator var_2;
-          class DataRow var_3;
-          boolean var_4;
-          boolean var_5;
-          boolean var_6;
-
-        }
-
-        private void dgvList_DoubleClick(object sender, class System.EventArgs e) {
-
-          loc_4E9821: nop
-          loc_4E9822: ldarg.0
-          loc_4E9823: call instance void GCUv2.frmSettingBankList::openSelection()
-          loc_4E9828: nop
-          loc_4E9829: ret
-        }
-
-        private void openSelection() {
-
-          class GCUv2.frmSettingBankInput var_1;
-
-        }
-
-        private void dgvList_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-          boolean var_2;
-          boolean var_3;
-          boolean var_4;
-
-        }
-
-        private void dgvList_GotFocus(object sender, class System.EventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void dgvList_LostFocus(object sender, class System.EventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void tsbNew_Click(object sender, class System.EventArgs e) {
-
-          class GCUv2.frmSettingBankInput var_1;
-
-        }
-
-        private void tsbRefresh_Click(object sender, class System.EventArgs e) {
-
-          loc_4E9603: nop
-          loc_4E9604: ldarg.0
-          loc_4E9605: call instance void GCUv2.frmSettingBankList::getList()
-          loc_4E960A: nop
-          loc_4E960B: ret
-        }
-
-    }
+	private IContainer components;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("tsbRefresh")]
+	private ToolStripButton _tsbRefresh;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("dgvList")]
+	private DataGridView _dgvList;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("tsbNew")]
+	private ToolStripButton _tsbNew;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("chkAll")]
+	private CheckBox _chkAll;
+
+	internal virtual ToolStripButton tsbRefresh
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _tsbRefresh;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = tsbRefresh_Click;
+			ToolStripButton toolStripButton = _tsbRefresh;
+			if (toolStripButton != null)
+			{
+				toolStripButton.Click -= value2;
+			}
+			_tsbRefresh = value;
+			toolStripButton = _tsbRefresh;
+			if (toolStripButton != null)
+			{
+				toolStripButton.Click += value2;
+			}
+		}
+	}
+
+	internal virtual DataGridView dgvList
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _dgvList;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = dgvList_DoubleClick;
+			KeyEventHandler value3 = dgvList_KeyDown;
+			EventHandler value4 = dgvList_GotFocus;
+			EventHandler value5 = dgvList_LostFocus;
+			DataGridView dataGridView = _dgvList;
+			if (dataGridView != null)
+			{
+				dataGridView.DoubleClick -= value2;
+				dataGridView.KeyDown -= value3;
+				dataGridView.GotFocus -= value4;
+				dataGridView.LostFocus -= value5;
+			}
+			_dgvList = value;
+			dataGridView = _dgvList;
+			if (dataGridView != null)
+			{
+				dataGridView.DoubleClick += value2;
+				dataGridView.KeyDown += value3;
+				dataGridView.GotFocus += value4;
+				dataGridView.LostFocus += value5;
+			}
+		}
+	}
+
+	internal virtual ToolStripButton tsbNew
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _tsbNew;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = tsbNew_Click;
+			ToolStripButton toolStripButton = _tsbNew;
+			if (toolStripButton != null)
+			{
+				toolStripButton.Click -= value2;
+			}
+			_tsbNew = value;
+			toolStripButton = _tsbNew;
+			if (toolStripButton != null)
+			{
+				toolStripButton.Click += value2;
+			}
+		}
+	}
+
+	internal virtual CheckBox chkAll
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _chkAll;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = chkAll_CheckedChanged;
+			CheckBox checkBox = _chkAll;
+			if (checkBox != null)
+			{
+				checkBox.CheckedChanged -= value2;
+			}
+			_chkAll = value;
+			checkBox = _chkAll;
+			if (checkBox != null)
+			{
+				checkBox.CheckedChanged += value2;
+			}
+		}
+	}
+
+	[field: AccessedThroughProperty("ToolStrip1")]
+	internal virtual ToolStrip ToolStrip1
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label1")]
+	internal virtual Label Label1
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label2")]
+	internal virtual Label Label2
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[DebuggerNonUserCode]
+	protected override void Dispose(bool disposing)
+	{
+		try
+		{
+			if (disposing && components != null)
+			{
+				components.Dispose();
+			}
+		}
+		finally
+		{
+			base.Dispose(disposing);
+		}
+	}
+
+	[System.Diagnostics.DebuggerStepThrough]
+	private void InitializeComponent()
+	{
+		System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GCUv2.frmSettingBankList));
+		this.tsbRefresh = new System.Windows.Forms.ToolStripButton();
+		this.dgvList = new System.Windows.Forms.DataGridView();
+		this.tsbNew = new System.Windows.Forms.ToolStripButton();
+		this.chkAll = new System.Windows.Forms.CheckBox();
+		this.ToolStrip1 = new System.Windows.Forms.ToolStrip();
+		this.Label1 = new System.Windows.Forms.Label();
+		this.Label2 = new System.Windows.Forms.Label();
+		((System.ComponentModel.ISupportInitialize)this.dgvList).BeginInit();
+		this.ToolStrip1.SuspendLayout();
+		base.SuspendLayout();
+		this.tsbRefresh.Image = (System.Drawing.Image)resources.GetObject("tsbRefresh.Image");
+		this.tsbRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+		this.tsbRefresh.Name = "tsbRefresh";
+		this.tsbRefresh.Size = new System.Drawing.Size(50, 57);
+		this.tsbRefresh.Text = "&Refresh";
+		this.tsbRefresh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+		this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+		this.dgvList.Location = new System.Drawing.Point(12, 131);
+		this.dgvList.Name = "dgvList";
+		this.dgvList.Size = new System.Drawing.Size(260, 309);
+		this.dgvList.TabIndex = 16;
+		this.tsbNew.Image = (System.Drawing.Image)resources.GetObject("tsbNew.Image");
+		this.tsbNew.ImageTransparentColor = System.Drawing.Color.Magenta;
+		this.tsbNew.Name = "tsbNew";
+		this.tsbNew.Size = new System.Drawing.Size(55, 57);
+		this.tsbNew.Text = "&Tambah";
+		this.tsbNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+		this.chkAll.AutoSize = true;
+		this.chkAll.Location = new System.Drawing.Point(12, 108);
+		this.chkAll.Name = "chkAll";
+		this.chkAll.Size = new System.Drawing.Size(242, 17);
+		this.chkAll.TabIndex = 17;
+		this.chkAll.Text = "Tampilkan semua ( termasuk yang tidak aktif )";
+		this.chkAll.UseVisualStyleBackColor = true;
+		this.ToolStrip1.AutoSize = false;
+		this.ToolStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
+		this.ToolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[2] { this.tsbNew, this.tsbRefresh });
+		this.ToolStrip1.Location = new System.Drawing.Point(0, 0);
+		this.ToolStrip1.Name = "ToolStrip1";
+		this.ToolStrip1.Size = new System.Drawing.Size(441, 60);
+		this.ToolStrip1.TabIndex = 15;
+		this.ToolStrip1.Text = "ToolStrip1";
+		this.Label1.AutoSize = true;
+		this.Label1.Location = new System.Drawing.Point(12, 64);
+		this.Label1.Name = "Label1";
+		this.Label1.Size = new System.Drawing.Size(400, 13);
+		this.Label1.TabIndex = 18;
+		this.Label1.Text = "Catatan: Bank disini tidak ada hubungan dengan Rekening Bank milik perusahaan.";
+		this.Label2.AutoSize = true;
+		this.Label2.Location = new System.Drawing.Point(12, 85);
+		this.Label2.Name = "Label2";
+		this.Label2.Size = new System.Drawing.Size(420, 13);
+		this.Label2.TabIndex = 19;
+		this.Label2.Text = "Bank disini adalah Bank yang digunakan oleh Customer untuk melakukan Pembayaran.";
+		base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
+		base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+		base.ClientSize = new System.Drawing.Size(441, 451);
+		base.Controls.Add(this.Label2);
+		base.Controls.Add(this.Label1);
+		base.Controls.Add(this.dgvList);
+		base.Controls.Add(this.chkAll);
+		base.Controls.Add(this.ToolStrip1);
+		base.KeyPreview = true;
+		base.MaximizeBox = false;
+		base.Name = "frmSettingBankList";
+		base.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+		this.Text = "Setting - Bank";
+		((System.ComponentModel.ISupportInitialize)this.dgvList).EndInit();
+		this.ToolStrip1.ResumeLayout(false);
+		this.ToolStrip1.PerformLayout();
+		base.ResumeLayout(false);
+		base.PerformLayout();
+	}
+
+	public frmSettingBankList()
+	{
+		base.KeyDown += frmSettingBranchList_KeyDown;
+		base.Load += frmSettingBranchList_Load;
+		InitializeComponent();
+		base.MdiParent = MyProject.Forms.frmMenu;
+		FormatGrid();
+	}
+
+	private void frmSettingBranchList_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Escape)
+		{
+			Close();
+		}
+		else if (e.KeyCode == Keys.F2)
+		{
+			tsbNew.PerformClick();
+		}
+		else if (e.KeyCode == Keys.F5)
+		{
+			tsbRefresh.PerformClick();
+		}
+	}
+
+	private void frmSettingBranchList_Load(object sender, EventArgs e)
+	{
+		getList();
+	}
+
+	private void FormatGrid()
+	{
+		dgvList.Columns.Add("", "Id");
+		dgvList.Columns.Add("", "Nama Bank");
+		dgvList.Columns[0].Visible = false;
+		dgvList.Columns[1].Width = 200;
+		dgvList.RowHeadersVisible = false;
+		dgvList.AllowUserToAddRows = false;
+		dgvList.AlternatingRowsDefaultCellStyle.BackColor = Color.WhiteSmoke;
+		dgvList.AllowUserToResizeRows = false;
+		dgvList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+		dgvList.MultiSelect = false;
+		dgvList.ReadOnly = true;
+	}
+
+	private void chkAll_CheckedChanged(object sender, EventArgs e)
+	{
+		getList();
+	}
+
+	public void getList()
+	{
+		DataTable dataTable = new DataTable();
+		dataTable = cBank.Search((!chkAll.Checked) ? 1 : 99);
+		dgvList.Rows.Clear();
+		foreach (DataRow row in dataTable.Rows)
+		{
+			dgvList.Rows.Add(row["bankId"], row["bankName"]);
+			if (Operators.ConditionalCompareObjectEqual(row["bankStatus"], 0, TextCompare: false))
+			{
+				dgvList.Rows[checked(dgvList.RowCount - 1)].DefaultCellStyle.BackColor = Color.Red;
+			}
+		}
+		if (dgvList.Rows.Count > 0)
+		{
+			dgvList.Focus();
+		}
+	}
+
+	private void dgvList_DoubleClick(object sender, EventArgs e)
+	{
+		openSelection();
+	}
+
+	private void openSelection()
+	{
+		frmSettingBankInput frmSettingBankInput2 = new frmSettingBankInput();
+		frmSettingBankInput2.CurrentId = Conversions.ToString(dgvList[0, dgvList.CurrentRow.Index].Value);
+		frmSettingBankInput2.loadData();
+		frmSettingBankInput2.ShowDialog();
+		frmSettingBankInput2.Close();
+		frmSettingBankInput2.Dispose();
+	}
+
+	private void dgvList_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Return)
+		{
+			openSelection();
+			e.SuppressKeyPress = true;
+		}
+		else if (e.KeyCode == Keys.Add)
+		{
+			tsbNew.PerformClick();
+		}
+		else if (e.Shift & (e.KeyCode == Keys.Tab))
+		{
+			chkAll.Focus();
+			e.SuppressKeyPress = true;
+		}
+		else if (e.KeyCode == Keys.Tab)
+		{
+			chkAll.Focus();
+			e.SuppressKeyPress = true;
+		}
+	}
+
+	private void dgvList_GotFocus(object sender, EventArgs e)
+	{
+		if (dgvList.RowCount > 0)
+		{
+			dgvList.CurrentRow.Selected = true;
+		}
+	}
+
+	private void dgvList_LostFocus(object sender, EventArgs e)
+	{
+		if (dgvList.RowCount > 0)
+		{
+			dgvList.CurrentRow.Selected = false;
+		}
+	}
+
+	private void tsbNew_Click(object sender, EventArgs e)
+	{
+		frmSettingBankInput frmSettingBankInput2 = new frmSettingBankInput();
+		frmSettingBankInput2.prepareForm();
+		frmSettingBankInput2.ShowDialog();
+		frmSettingBankInput2.Close();
+		frmSettingBankInput2.Dispose();
+	}
+
+	private void tsbRefresh_Click(object sender, EventArgs e)
+	{
+		getList();
+	}
 }

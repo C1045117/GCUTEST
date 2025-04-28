@@ -1,239 +1,393 @@
 using System;
+using System.ComponentModel;
+using System.Data;
+using System.Diagnostics;
+using System.Drawing;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
+using GCUv2.My;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
 
-namespace GCUv2
+namespace GCUv2;
+
+[DesignerGenerated]
+public class frmSettingItemList : Form
 {
-    public class Form
-    {
-
-        private class ComponentModel.IContainer components;
-        private class DataGridView _dgvList;
-        private class ToolStrip _ToolStrip1;
-        private class ToolStripButton _tsbNew;
-        private class ToolStripButton _tsbRefresh;
-        private class CheckBox _chkManual;
-        private class CheckBox _chkAll;
-
-
-        protected override strict void Dispose(boolean disposing) {
-
-          boolean var_1;
-
-        }
-
-        private void InitializeComponent() {
-
-          class ComponentModel.ComponentResourceManager var_1;
-
-        }
-
-        assem override strict specialname class DataGridView get_dgvList() {
-
-          loc_510BAD: ldarg.0
-          loc_510BAE: ldfld GCUv2.frmSettingItemList::_dgvList
-          loc_510BB3: br.s loc_510BB5
-          loc_510BB5: // Referenced from: loc_510BB3
-          loc_510BB5: ret
-        }
-
-        assem override strict specialname void set_dgvList(class DataGridView WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class KeyEventHandler var_2;
-          class System.EventHandler var_3;
-          class System.EventHandler var_4;
-          class DataGridView var_5;
-
-        }
-
-        assem override strict specialname class ToolStrip get_ToolStrip1() {
-
-          loc_510C59: ldarg.0
-          loc_510C5A: ldfld GCUv2.frmSettingItemList::_ToolStrip1
-          loc_510C5F: br.s loc_510C61
-          loc_510C61: // Referenced from: loc_510C5F
-          loc_510C61: ret
-        }
-
-        assem override strict specialname void set_ToolStrip1(class ToolStrip WithEventsValue) {
-
-          loc_510C63: ldarg.0
-          loc_510C64: ldarg.1
-          loc_510C65: stfld GCUv2.frmSettingItemList::_ToolStrip1
-          loc_510C6A: ret
-        }
-
-        assem override strict specialname class ToolStripButton get_tsbNew() {
-
-          loc_510C6C: ldarg.0
-          loc_510C6D: ldfld GCUv2.frmSettingItemList::_tsbNew
-          loc_510C72: br.s loc_510C74
-          loc_510C74: // Referenced from: loc_510C72
-          loc_510C74: ret
-        }
-
-        assem override strict specialname void set_tsbNew(class ToolStripButton WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class ToolStripButton var_2;
-
-        }
-
-        assem override strict specialname class ToolStripButton get_tsbRefresh() {
-
-          loc_510CBC: ldarg.0
-          loc_510CBD: ldfld GCUv2.frmSettingItemList::_tsbRefresh
-          loc_510CC2: br.s loc_510CC4
-          loc_510CC4: // Referenced from: loc_510CC2
-          loc_510CC4: ret
-        }
-
-        assem override strict specialname void set_tsbRefresh(class ToolStripButton WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class ToolStripButton var_2;
-
-        }
-
-        assem override strict specialname class CheckBox get_chkManual() {
-
-          loc_510D0C: ldarg.0
-          loc_510D0D: ldfld GCUv2.frmSettingItemList::_chkManual
-          loc_510D12: br.s loc_510D14
-          loc_510D14: // Referenced from: loc_510D12
-          loc_510D14: ret
-        }
-
-        assem override strict specialname void set_chkManual(class CheckBox WithEventsValue) {
-
-          loc_510D16: ldarg.0
-          loc_510D17: ldarg.1
-          loc_510D18: stfld GCUv2.frmSettingItemList::_chkManual
-          loc_510D1D: ret
-        }
-
-        assem override strict specialname class CheckBox get_chkAll() {
-
-          loc_510D1F: ldarg.0
-          loc_510D20: ldfld GCUv2.frmSettingItemList::_chkAll
-          loc_510D25: br.s loc_510D27
-          loc_510D27: // Referenced from: loc_510D25
-          loc_510D27: ret
-        }
-
-        assem override strict specialname void set_chkAll(class CheckBox WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class CheckBox var_2;
-
-        }
-
-        public void frmSettingItemList() {
-
-
-        }
-
-        private void frmSettingItemList_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-          boolean var_2;
-          boolean var_3;
-
-        }
-
-        private void FormatGrid() {
-
-
-        }
-
-        private void frmSettingItemList_Load(object sender, class System.EventArgs e) {
-
-          loc_510F05: nop
-          loc_510F06: ldarg.0
-          loc_510F07: call instance void GCUv2.frmSettingItemList::getItem()
-          loc_510F0C: nop
-          loc_510F0D: ret
-        }
-
-        public void getItem() {
-
-          class DataTable var_1;
-          class System.Collections.IEnumerator var_2;
-          class DataRow var_3;
-          boolean var_4;
-          boolean var_5;
-          boolean var_6;
-
-        }
-
-        private void dgvList_DoubleClick(object sender, class System.EventArgs e) {
-
-          loc_511049: nop
-          loc_51104A: ldarg.0
-          loc_51104B: call instance void GCUv2.frmSettingItemList::openSelection()
-          loc_511050: nop
-          loc_511051: ret
-        }
-
-        private void openSelection() {
-
-
-        }
-
-        private void dgvList_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-          boolean var_2;
-          boolean var_3;
-          boolean var_4;
-
-        }
-
-        private void dgvList_GotFocus(object sender, class System.EventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void dgvList_LostFocus(object sender, class System.EventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void ToolStripButton1_Click(object sender, class System.EventArgs e) {
-
-
-        }
-
-        private void tsbDelete_Click(object sender, class System.EventArgs e) {
-
-          loc_511240: nop
-          loc_511241: ldstr "Fitur ini belum selesai dibuat"
-          loc_511246: ldc.i4.s 64
-          loc_511248: ldnull
-          loc_511249: call valuetype MsgBoxResult Microsoft.VisualBasic.Interaction::MsgBox(object, valuetype MsgBoxStyle, object)
-          loc_51124E: pop
-          loc_51124F: ret
-        }
-
-        private void tsbRefresh_Click(object sender, class System.EventArgs e) {
-
-          loc_510F05: nop
-          loc_510F06: ldarg.0
-          loc_510F07: call instance void GCUv2.frmSettingItemList::getItem()
-          loc_510F0C: nop
-          loc_510F0D: ret
-        }
-
-        private void chkAll_CheckedChanged(object sender, class System.EventArgs e) {
-
-          loc_510F05: nop
-          loc_510F06: ldarg.0
-          loc_510F07: call instance void GCUv2.frmSettingItemList::getItem()
-          loc_510F0C: nop
-          loc_510F0D: ret
-        }
-
-    }
+	private IContainer components;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("dgvList")]
+	private DataGridView _dgvList;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("tsbNew")]
+	private ToolStripButton _tsbNew;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("tsbRefresh")]
+	private ToolStripButton _tsbRefresh;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("chkAll")]
+	private CheckBox _chkAll;
+
+	internal virtual DataGridView dgvList
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _dgvList;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = dgvList_DoubleClick;
+			KeyEventHandler value3 = dgvList_KeyDown;
+			EventHandler value4 = dgvList_GotFocus;
+			EventHandler value5 = dgvList_LostFocus;
+			DataGridView dataGridView = _dgvList;
+			if (dataGridView != null)
+			{
+				dataGridView.DoubleClick -= value2;
+				dataGridView.KeyDown -= value3;
+				dataGridView.GotFocus -= value4;
+				dataGridView.LostFocus -= value5;
+			}
+			_dgvList = value;
+			dataGridView = _dgvList;
+			if (dataGridView != null)
+			{
+				dataGridView.DoubleClick += value2;
+				dataGridView.KeyDown += value3;
+				dataGridView.GotFocus += value4;
+				dataGridView.LostFocus += value5;
+			}
+		}
+	}
+
+	[field: AccessedThroughProperty("ToolStrip1")]
+	internal virtual ToolStrip ToolStrip1
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual ToolStripButton tsbNew
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _tsbNew;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = ToolStripButton1_Click;
+			ToolStripButton toolStripButton = _tsbNew;
+			if (toolStripButton != null)
+			{
+				toolStripButton.Click -= value2;
+			}
+			_tsbNew = value;
+			toolStripButton = _tsbNew;
+			if (toolStripButton != null)
+			{
+				toolStripButton.Click += value2;
+			}
+		}
+	}
+
+	internal virtual ToolStripButton tsbRefresh
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _tsbRefresh;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = tsbRefresh_Click;
+			ToolStripButton toolStripButton = _tsbRefresh;
+			if (toolStripButton != null)
+			{
+				toolStripButton.Click -= value2;
+			}
+			_tsbRefresh = value;
+			toolStripButton = _tsbRefresh;
+			if (toolStripButton != null)
+			{
+				toolStripButton.Click += value2;
+			}
+		}
+	}
+
+	[field: AccessedThroughProperty("chkManual")]
+	internal virtual CheckBox chkManual
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual CheckBox chkAll
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _chkAll;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = chkAll_CheckedChanged;
+			CheckBox checkBox = _chkAll;
+			if (checkBox != null)
+			{
+				checkBox.CheckedChanged -= value2;
+			}
+			_chkAll = value;
+			checkBox = _chkAll;
+			if (checkBox != null)
+			{
+				checkBox.CheckedChanged += value2;
+			}
+		}
+	}
+
+	[DebuggerNonUserCode]
+	protected override void Dispose(bool disposing)
+	{
+		try
+		{
+			if (disposing && components != null)
+			{
+				components.Dispose();
+			}
+		}
+		finally
+		{
+			base.Dispose(disposing);
+		}
+	}
+
+	[System.Diagnostics.DebuggerStepThrough]
+	private void InitializeComponent()
+	{
+		System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GCUv2.frmSettingItemList));
+		this.dgvList = new System.Windows.Forms.DataGridView();
+		this.ToolStrip1 = new System.Windows.Forms.ToolStrip();
+		this.tsbNew = new System.Windows.Forms.ToolStripButton();
+		this.tsbRefresh = new System.Windows.Forms.ToolStripButton();
+		this.chkManual = new System.Windows.Forms.CheckBox();
+		this.chkAll = new System.Windows.Forms.CheckBox();
+		((System.ComponentModel.ISupportInitialize)this.dgvList).BeginInit();
+		this.ToolStrip1.SuspendLayout();
+		base.SuspendLayout();
+		this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+		this.dgvList.Location = new System.Drawing.Point(12, 109);
+		this.dgvList.Name = "dgvList";
+		this.dgvList.Size = new System.Drawing.Size(326, 373);
+		this.dgvList.TabIndex = 0;
+		this.ToolStrip1.AutoSize = false;
+		this.ToolStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
+		this.ToolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[2] { this.tsbNew, this.tsbRefresh });
+		this.ToolStrip1.Location = new System.Drawing.Point(0, 0);
+		this.ToolStrip1.Name = "ToolStrip1";
+		this.ToolStrip1.Size = new System.Drawing.Size(352, 60);
+		this.ToolStrip1.TabIndex = 9;
+		this.ToolStrip1.Text = "ToolStrip1";
+		this.tsbNew.Image = (System.Drawing.Image)resources.GetObject("tsbNew.Image");
+		this.tsbNew.ImageTransparentColor = System.Drawing.Color.Magenta;
+		this.tsbNew.Name = "tsbNew";
+		this.tsbNew.Size = new System.Drawing.Size(55, 57);
+		this.tsbNew.Text = "&Tambah";
+		this.tsbNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+		this.tsbRefresh.Image = (System.Drawing.Image)resources.GetObject("tsbRefresh.Image");
+		this.tsbRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+		this.tsbRefresh.Name = "tsbRefresh";
+		this.tsbRefresh.Size = new System.Drawing.Size(50, 57);
+		this.tsbRefresh.Text = "&Refresh";
+		this.tsbRefresh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+		this.chkManual.AutoSize = true;
+		this.chkManual.Location = new System.Drawing.Point(12, 86);
+		this.chkManual.Name = "chkManual";
+		this.chkManual.Size = new System.Drawing.Size(135, 17);
+		this.chkManual.TabIndex = 2;
+		this.chkManual.Text = "Refresh secara manual";
+		this.chkManual.UseVisualStyleBackColor = true;
+		this.chkAll.AutoSize = true;
+		this.chkAll.Location = new System.Drawing.Point(12, 63);
+		this.chkAll.Name = "chkAll";
+		this.chkAll.Size = new System.Drawing.Size(242, 17);
+		this.chkAll.TabIndex = 1;
+		this.chkAll.Text = "Tampilkan semua ( termasuk yang tidak aktif )";
+		this.chkAll.UseVisualStyleBackColor = true;
+		base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
+		base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+		base.ClientSize = new System.Drawing.Size(352, 494);
+		base.Controls.Add(this.chkManual);
+		base.Controls.Add(this.chkAll);
+		base.Controls.Add(this.dgvList);
+		base.Controls.Add(this.ToolStrip1);
+		base.KeyPreview = true;
+		base.MaximizeBox = false;
+		base.Name = "frmSettingItemList";
+		base.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+		this.Text = "Setting - Barang";
+		((System.ComponentModel.ISupportInitialize)this.dgvList).EndInit();
+		this.ToolStrip1.ResumeLayout(false);
+		this.ToolStrip1.PerformLayout();
+		base.ResumeLayout(false);
+		base.PerformLayout();
+	}
+
+	public frmSettingItemList()
+	{
+		base.KeyDown += frmSettingItemList_KeyDown;
+		base.Load += frmSettingItemList_Load;
+		InitializeComponent();
+		base.MdiParent = MyProject.Forms.frmMenu;
+		FormatGrid();
+	}
+
+	private void frmSettingItemList_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Escape)
+		{
+			Close();
+		}
+		else if (e.KeyCode == Keys.F2)
+		{
+			tsbNew.PerformClick();
+		}
+		else if (e.KeyCode == Keys.F5)
+		{
+			tsbRefresh.PerformClick();
+		}
+	}
+
+	private void FormatGrid()
+	{
+		dgvList.Columns.Add("", "Id");
+		dgvList.Columns.Add("", "Barang");
+		dgvList.Columns[0].Visible = false;
+		dgvList.Columns[1].Width = 200;
+		dgvList.RowHeadersVisible = false;
+		dgvList.AllowUserToAddRows = false;
+		dgvList.AlternatingRowsDefaultCellStyle.BackColor = Color.WhiteSmoke;
+		dgvList.AllowUserToResizeRows = false;
+		dgvList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+		dgvList.MultiSelect = false;
+		dgvList.ReadOnly = true;
+	}
+
+	private void frmSettingItemList_Load(object sender, EventArgs e)
+	{
+		getItem();
+	}
+
+	public void getItem()
+	{
+		DataTable dataTable = new DataTable();
+		dataTable = cItem.getItem((!chkAll.Checked) ? 1 : 99);
+		dgvList.Rows.Clear();
+		foreach (DataRow row in dataTable.Rows)
+		{
+			dgvList.Rows.Add(row["prodId"], row["prodName"]);
+			if (Operators.ConditionalCompareObjectEqual(row["prodStatus"], 0, TextCompare: false))
+			{
+				dgvList.Rows[checked(dgvList.RowCount - 1)].DefaultCellStyle.BackColor = Color.Red;
+			}
+		}
+		if (dgvList.Rows.Count > 0)
+		{
+			dgvList.Focus();
+		}
+	}
+
+	private void dgvList_DoubleClick(object sender, EventArgs e)
+	{
+		openSelection();
+	}
+
+	private void openSelection()
+	{
+		MyProject.Forms.frmSettingItemInput.Show();
+		MyProject.Forms.frmSettingItemInput.prepareForm();
+		MyProject.Forms.frmSettingItemInput.CurrentId = Conversions.ToString(dgvList[0, dgvList.CurrentRow.Index].Value);
+		MyProject.Forms.frmSettingItemInput.loadData();
+		MyProject.Forms.frmSettingItemInput.Activate();
+		MyProject.Forms.frmSettingItemInput.WindowState = FormWindowState.Normal;
+	}
+
+	private void dgvList_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Return)
+		{
+			openSelection();
+			e.SuppressKeyPress = true;
+		}
+		else if (e.KeyCode == Keys.Add)
+		{
+			tsbNew.PerformClick();
+		}
+		else if (e.Shift & (e.KeyCode == Keys.Tab))
+		{
+			chkManual.Focus();
+			e.SuppressKeyPress = true;
+		}
+		else if (e.KeyCode == Keys.Tab)
+		{
+			chkAll.Focus();
+			e.SuppressKeyPress = true;
+		}
+	}
+
+	private void dgvList_GotFocus(object sender, EventArgs e)
+	{
+		if (dgvList.RowCount > 0)
+		{
+			dgvList.CurrentRow.Selected = true;
+		}
+	}
+
+	private void dgvList_LostFocus(object sender, EventArgs e)
+	{
+		if (dgvList.RowCount > 0)
+		{
+			dgvList.CurrentRow.Selected = false;
+		}
+	}
+
+	private void ToolStripButton1_Click(object sender, EventArgs e)
+	{
+		MyProject.Forms.frmSettingItemInput.Show();
+		MyProject.Forms.frmSettingItemInput.prepareForm();
+		MyProject.Forms.frmSettingItemInput.Activate();
+		MyProject.Forms.frmSettingItemInput.WindowState = FormWindowState.Normal;
+	}
+
+	private void tsbDelete_Click(object sender, EventArgs e)
+	{
+		Interaction.MsgBox("Fitur ini belum selesai dibuat", MsgBoxStyle.Information);
+	}
+
+	private void tsbRefresh_Click(object sender, EventArgs e)
+	{
+		getItem();
+	}
+
+	private void chkAll_CheckedChanged(object sender, EventArgs e)
+	{
+		getItem();
+	}
 }
