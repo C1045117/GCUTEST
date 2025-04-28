@@ -1,112 +1,169 @@
-namespace GCUv2
+using System;
+using System.Data;
+using System.Runtime.CompilerServices;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using MySql.Data.MySqlClient;
+
+namespace GCUv2;
+
+public class cTaxInvoiceNumber
 {
-    public class 
-    {
+	public struct NumberRange
+	{
+		public double _begin;
 
-        private int32 _branchId;
-        private int32 _year;
-        private double _latestNumber;
-        private valuetype NumberRange[] _range;
+		public double _end;
+	}
 
-        public struct NumberRange
-        {
-            public double _begin;
-            public double _end;
-        }
+	private int _branchId;
 
+	private int _year;
 
-        public specialname int32 get_BranchId() {
+	private double _latestNumber;
 
-          int32 num_1;
+	private NumberRange[] _range;
 
-        }
+	public int BranchId
+	{
+		get
+		{
+			return _branchId;
+		}
+		set
+		{
+			_branchId = value;
+		}
+	}
 
-        public specialname void set_BranchId(int32 value) {
+	public int Year
+	{
+		get
+		{
+			return _year;
+		}
+		set
+		{
+			_year = value;
+		}
+	}
 
-          loc_428AF1: nop
-          loc_428AF2: ldarg.0
-          loc_428AF3: ldarg.1
-          loc_428AF4: stfld GCUv2.cSupplier::_branchId
-          loc_428AF9: ret
-        }
+	public double LatestNumber
+	{
+		get
+		{
+			return _latestNumber;
+		}
+		set
+		{
+			_latestNumber = value;
+		}
+	}
 
-        public specialname int32 get_Year() {
+	public NumberRange[] Range
+	{
+		get
+		{
+			return _range;
+		}
+		set
+		{
+			_range = value;
+		}
+	}
 
-          int32 num_1;
+	public cTaxInvoiceNumber(int BranchId, int Year)
+	{
+		if (!(BranchId > 0 && Year > 0))
+		{
+			return;
+		}
+		DataTable dataTable = SearchTaxInvoiceNumber(BranchId, Year, All: false);
+		checked
+		{
+			_range = new NumberRange[dataTable.Rows.Count - 1 + 1];
+			int num = default(int);
+			foreach (DataRow row in dataTable.Rows)
+			{
+				_range[num]._begin = Conversion.Val(RuntimeHelpers.GetObjectValue(row["fsBegin"]));
+				_range[num]._end = Conversion.Val(RuntimeHelpers.GetObjectValue(row["fsEnd"]));
+				num++;
+			}
+			_latestNumber = cInvoiceNumber.GetLatestNumber(Year, 0, BranchId, 2);
+		}
+	}
 
-        }
+	[MethodImpl(MethodImplOptions.NoInlining | MethodImplOptions.NoOptimization)]
+	public void Save()
+	{
+		int try0001_dispatch = -1;
+		int num2 = default(int);
+		MySqlTransaction val = default(MySqlTransaction);
+		int num = default(int);
+		while (true)
+		{
+			try
+			{
+				/*Note: ILSpy has introduced the following switch to emulate a goto from catch-block to try-block*/;
+				switch (try0001_dispatch)
+				{
+				default:
+				{
+					ProjectData.ClearProjectError();
+					num2 = 2;
+					val = Module1.connectData.BeginTransaction();
+					string strSql = " DELETE FROM FakturPajak  WHERE branchId = " + Conversions.ToString(_branchId) + " AND fakturYear = " + Conversions.ToString(_year);
+					Module1.sqlNonQuery(strSql, "data");
+					NumberRange[] range = _range;
+					for (int i = 0; i < range.Length; i = checked(i + 1))
+					{
+						NumberRange numberRange = range[i];
+						strSql = " INSERT INTO FakturPajak  (fsBegin, fsEnd, branchId, fakturYear) VALUES  ( " + Conversions.ToString(numberRange._begin) + "," + Conversions.ToString(numberRange._end) + "," + Conversions.ToString(_branchId) + "," + Conversions.ToString(_year) + ")";
+						Module1.sqlNonQuery(strSql, "data");
+					}
+					strSql = " DELETE FROM FakturLatest  WHERE fakturYear = " + Conversions.ToString(_year) + " AND branchId = " + Conversions.ToString(_branchId) + " AND fakturType = 2 ";
+					Module1.sqlNonQuery(strSql, "data");
+					strSql = " INSERT INTO FakturLatest(fakturYear,fakturLatestNo,salesId,branchId,fakturType) VALUES  (" + Conversions.ToString(_year) + "," + Conversions.ToString(_latestNumber) + ",0," + Conversions.ToString(_branchId) + ",2)";
+					Module1.sqlNonQuery(strSql, "data");
+					val.Commit();
+					goto end_IL_0001;
+				}
+				case 525:
+					num = -1;
+					switch (num2)
+					{
+					case 2:
+						if (Operators.CompareString(Information.Err().Description, "Fatal error encountered during command execution.", TextCompare: false) != 0 && Operators.CompareString(Information.Err().Description, "The connection is not open.", TextCompare: false) != 0)
+						{
+							val.Rollback();
+						}
+						Information.Err().Raise(513, null, Information.Err().Description);
+						goto end_IL_0001;
+					}
+					break;
+				}
+				goto IL_0243;
+				end_IL_0001:;
+			}
+			catch (object obj) when (obj is Exception && num2 != 0 && num == 0)
+			{
+				ProjectData.SetProjectError((Exception)obj);
+				try0001_dispatch = 525;
+				continue;
+			}
+			break;
+			IL_0243:
+			throw ProjectData.CreateProjectError(-2146828237);
+		}
+		if (num != 0)
+		{
+			ProjectData.ClearProjectError();
+		}
+	}
 
-        public specialname void set_Year(int32 value) {
-
-          loc_428B15: nop
-          loc_428B16: ldarg.0
-          loc_428B17: ldarg.1
-          loc_428B18: stfld GCUv2.cTaxInvoiceNumber::_year
-          loc_428B1D: ret
-        }
-
-        public specialname double get_LatestNumber() {
-
-          double flt_1;
-
-        }
-
-        public specialname void set_LatestNumber(double value) {
-
-          loc_428B39: nop
-          loc_428B3A: ldarg.0
-          loc_428B3B: ldarg.1
-          loc_428B3C: stfld GCUv2.cTaxInvoiceNumber::_latestNumber
-          loc_428B41: ret
-        }
-
-        public specialname valuetype NumberRange[] get_Range() {
-
-          valuetype NumberRange[] var_1;
-
-        }
-
-        public specialname void set_Range(valuetype NumberRange[] value) {
-
-          loc_428B5D: nop
-          loc_428B5E: ldarg.0
-          loc_428B5F: ldarg.1
-          loc_428B60: stfld GCUv2.cTaxInvoiceNumber::_range
-          loc_428B65: ret
-        }
-
-        public void cTaxInvoiceNumber(int32 BranchId, int32 Year) {
-
-          boolean var_1;
-          class DataTable var_2;
-          int32 num_1;
-          class System.Collections.IEnumerator var_3;
-          class DataRow var_4;
-          boolean var_5;
-
-        }
-
-        public void Save() {
-
-          int32 num_1;
-          int32 num_2;
-          string str_1;
-          class MySqlClient.MySqlTransaction var_1;
-          valuetype NumberRange[] var_2;
-          int32 num_3;
-          valuetype NumberRange var_3;
-          boolean var_4;
-          boolean var_5;
-
-        }
-
-        public static class DataTable SearchTaxInvoiceNumber(int32 BranchId, int32 Year, boolean All) {
-
-          class DataTable var_1;
-          string str_1;
-          boolean var_2;
-
-        }
-
-    }
+	public static DataTable SearchTaxInvoiceNumber(int BranchId, int Year, bool All)
+	{
+		string strSql = ((!All) ? (" SELECT *  FROM FakturPajak WHERE branchId = " + Conversions.ToString(BranchId) + "  AND FakturYear = " + Conversions.ToString(Year) + "  ORDER BY fsBegin ") : (" SELECT *  FROM FakturPajak WHERE branchId <> " + Conversions.ToString(BranchId) + "  AND FakturYear = " + Conversions.ToString(Year) + "  ORDER BY fsBegin "));
+		return Module1.sqlTable(strSql, "data", Clone: false);
+	}
 }

@@ -1,82 +1,71 @@
-namespace GCUv2
+using System.Data;
+using Microsoft.VisualBasic.CompilerServices;
+
+namespace GCUv2;
+
+public class cGroupPermission
 {
-    public class 
-    {
+	private int _id;
 
-        private int32 _id;
-        private string _description;
-        private int32 _permissionValue;
+	private string _description;
 
+	private int _permissionValue;
 
-        public void cGroupPermission() {
+	public int Id
+	{
+		get
+		{
+			return _id;
+		}
+		set
+		{
+			_id = value;
+		}
+	}
 
-          loc_403253: ldarg.0
-          loc_403254: call instance void System.Object::.ctor()
-          loc_403259: ret
-        }
+	public string Description
+	{
+		get
+		{
+			return _description;
+		}
+		set
+		{
+			_description = value;
+		}
+	}
 
-        public specialname int32 get_Id() {
+	public int PermissionValue
+	{
+		get
+		{
+			return _permissionValue;
+		}
+		set
+		{
+			_permissionValue = value;
+		}
+	}
 
-          int32 num_1;
+	public static int getPermissionValue(int GroupId, string PermissionName)
+	{
+		string strSql = " SELECT permValue  FROM groups_permissions a, permissions b  WHERE a.groupId = " + Conversions.ToString(GroupId) + " AND a.permId = b.permId  AND permName = '" + PermissionName + "'";
+		DataTable dataTable = Module1.sqlTable(strSql, "read", Clone: false);
+		if (dataTable.Rows.Count > 0)
+		{
+			return Conversions.ToInteger(dataTable.Rows[0]["permValue"]);
+		}
+		return 0;
+	}
 
-        }
-
-        public specialname void set_Id(int32 value) {
-
-          loc_40F7F5: nop
-          loc_40F7F6: ldarg.0
-          loc_40F7F7: ldarg.1
-          loc_40F7F8: stfld GCUv2.cGroupCashAccount::_id
-          loc_40F7FD: ret
-        }
-
-        public specialname string get_Description() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_Description(string value) {
-
-          loc_40F819: nop
-          loc_40F81A: ldarg.0
-          loc_40F81B: ldarg.1
-          loc_40F81C: stfld GCUv2.cGroupPermission::_description
-          loc_40F821: ret
-        }
-
-        public specialname int32 get_PermissionValue() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_PermissionValue(int32 value) {
-
-          loc_40F83D: nop
-          loc_40F83E: ldarg.0
-          loc_40F83F: ldarg.1
-          loc_40F840: stfld GCUv2.cGroupPermission::_permissionValue
-          loc_40F845: ret
-        }
-
-        public static int32 getPermissionValue(int32 GroupId, string PermissionName) {
-
-          int32 num_1;
-          string str_1;
-          class DataTable var_1;
-          boolean var_2;
-
-        }
-
-        public static boolean IsAllowed(int32 GroupId, string PermissionName) {
-
-          boolean var_1;
-          string str_1;
-          class DataTable var_2;
-          boolean var_3;
-
-        }
-
-    }
+	public static bool IsAllowed(int GroupId, string PermissionName)
+	{
+		string strSql = " SELECT * FROM groups_permissions  WHERE groupId = " + Conversions.ToString(GroupId) + " AND permId =  (SELECT permId FROM permissions where permName = '" + PermissionName + "')";
+		DataTable dataTable = Module1.sqlTable(strSql, "read", Clone: false);
+		if (dataTable.Rows.Count > 0)
+		{
+			return true;
+		}
+		return false;
+	}
 }

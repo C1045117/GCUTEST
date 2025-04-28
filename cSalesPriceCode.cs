@@ -1,126 +1,169 @@
-namespace GCUv2
+using System.Data;
+using System.Runtime.CompilerServices;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+
+namespace GCUv2;
+
+public class cSalesPriceCode
 {
-    public class 
-    {
+	private int _id;
 
-        private int32 _id;
-        private string _name;
-        private class GCUv2.cSalesPriceCodeItem[] _item;
-        private int32 _active;
+	private string _name;
 
+	private cSalesPriceCodeItem[] _item;
 
-        public specialname int32 get_Id() {
+	private int _active;
 
-          int32 num_1;
+	public int Id
+	{
+		get
+		{
+			return _id;
+		}
+		set
+		{
+			_id = value;
+		}
+	}
 
-        }
+	public string Name
+	{
+		get
+		{
+			return _name;
+		}
+		set
+		{
+			_name = Module1.cleanString(value);
+		}
+	}
 
-        public specialname void set_Id(int32 value) {
+	public cSalesPriceCodeItem[] Item
+	{
+		get
+		{
+			return _item;
+		}
+		set
+		{
+			_item = value;
+		}
+	}
 
-          loc_422D05: nop
-          loc_422D06: ldarg.0
-          loc_422D07: ldarg.1
-          loc_422D08: stfld GCUv2.cSalesPerson::_id
-          loc_422D0D: ret
-        }
+	public int Active
+	{
+		get
+		{
+			return _active;
+		}
+		set
+		{
+			_active = value;
+		}
+	}
 
-        public specialname string get_Name() {
+	[MethodImpl(MethodImplOptions.NoInlining | MethodImplOptions.NoOptimization)]
+	public cSalesPriceCode(int Id)
+	{
+		if (Id <= 0)
+		{
+			return;
+		}
+		_id = Id;
+		DataTable dataTable = new DataTable();
+		string strSql = " SELECT *  FROM harga  WHERE hargaId = " + Conversions.ToString(_id);
+		dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+		if (dataTable.Rows.Count > 0)
+		{
+			_name = Conversions.ToString(dataTable.Rows[0]["hargaKode"]);
+			_active = Conversions.ToInteger(dataTable.Rows[0]["hargaStatus"]);
+		}
+		else
+		{
+			_id = 0;
+			Information.Err().Raise(513, null, "Kode Harga tidak ditemukan. Kemungkinan telah dihapus.");
+		}
+		strSql = " SELECT a.prodId, prodName, phAmount as price  FROM (SELECT prodId, prodName  FROM produk WHERE prodAllowSell = 1 and prodStatus = 1) as a  LEFT OUTER JOIN ProdHarga b  ON a.prodId = b.prodId  AND b.hargaId = " + Conversions.ToString(_id) + " ORDER BY prodName ";
+		int num = 0;
+		dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+		checked
+		{
+			_item = new cSalesPriceCodeItem[dataTable.Rows.Count - 1 + 1];
+			foreach (DataRow row in dataTable.Rows)
+			{
+				_item[num] = new cSalesPriceCodeItem();
+				_item[num].ItemId = Conversions.ToInteger(row["prodId"]);
+				_item[num].ItemName = Conversions.ToString(row["prodName"]);
+				_item[num].Price = Conversions.ToDouble((!Information.IsDBNull(RuntimeHelpers.GetObjectValue(row["price"]))) ? row["price"] : ((object)0));
+				num++;
+			}
+		}
+	}
 
-          string str_1;
+	public void Save()
+	{
+		if (_id == 0)
+		{
+			string strSql = " INSERT INTO harga(hargaKode, hargaStatus)  VALUES  ('" + _name + "'," + Conversions.ToString(_active) + ")";
+			Module1.sqlNonQuery(strSql, "data");
+		}
+		else
+		{
+			string strSql = " UPDATE harga  SET hargaKode = '" + _name + "',  hargaStatus = " + Conversions.ToString(_active) + "  WHERE hargaId = " + Conversions.ToString(_id) + " ";
+			Module1.sqlNonQuery(strSql, "data");
+			strSql = " DELETE FROM ProdHarga  WHERE hargaId = " + Conversions.ToString(_id);
+			Module1.sqlNonQuery(strSql, "data");
+		}
+		cSalesPriceCodeItem[] item = _item;
+		foreach (cSalesPriceCodeItem cSalesPriceCodeItem2 in item)
+		{
+			string strSql = " INSERT INTO ProdHarga  (hargaId, prodId, PhAmount) VALUES  ( " + Conversions.ToString(_id) + "," + Conversions.ToString(cSalesPriceCodeItem2.ItemId) + "," + Module1.unformatNumber(Conversions.ToString(cSalesPriceCodeItem2.Price)) + ")";
+			Module1.sqlNonQuery(strSql, "data");
+		}
+	}
 
-        }
+	public static DataTable Search(int Active)
+	{
+		string text = " SELECT * FROM harga  WHERE hargaStatus = hargaStatus ";
+		switch (Active)
+		{
+		case 0:
+			text += " AND hargaStatus = 0 ";
+			break;
+		case 1:
+			text += " AND hargaStatus = 1 ";
+			break;
+		}
+		text += " ORDER BY hargaKode ";
+		return Module1.sqlTable(text, "read", Clone: false);
+	}
 
-        public specialname void set_Name(string value) {
+	public static bool IsExist(int Id, string Name)
+	{
+		bool result = false;
+		string text = " SELECT * FROM harga  WHERE hargaKode = '" + Name + "'";
+		if (Id > 0)
+		{
+			text = text + " AND hargaId <> " + Conversions.ToString(Id);
+		}
+		DataTable dataTable = Module1.sqlTable(text, "data", Clone: false);
+		if (dataTable.Rows.Count > 0)
+		{
+			result = true;
+		}
+		return result;
+	}
 
-          loc_422D29: nop
-          loc_422D2A: ldarg.0
-          loc_422D2B: ldarg.1
-          loc_422D2C: call string GCUv2.Module1::cleanString(string)
-          loc_422D31: stfld GCUv2.cSalesPriceCode::_name
-          loc_422D36: ret
-        }
-
-        public specialname class GCUv2.cSalesPriceCodeItem[] get_Item() {
-
-          class GCUv2.cSalesPriceCodeItem[] var_1;
-
-        }
-
-        public specialname void set_Item(class GCUv2.cSalesPriceCodeItem[] value) {
-
-          loc_422D51: nop
-          loc_422D52: ldarg.0
-          loc_422D53: ldarg.1
-          loc_422D54: stfld GCUv2.cSalesPriceCode::_item
-          loc_422D59: ret
-        }
-
-        public specialname int32 get_Active() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_Active(int32 value) {
-
-          loc_422D75: nop
-          loc_422D76: ldarg.0
-          loc_422D77: ldarg.1
-          loc_422D78: stfld GCUv2.cSalesPriceCode::_active
-          loc_422D7D: ret
-        }
-
-        public void cSalesPriceCode(int32 Id) {
-
-          boolean var_1;
-          class DataTable var_2;
-          string str_1;
-          int32 num_1;
-          boolean var_3;
-          class System.Collections.IEnumerator var_4;
-          class DataRow var_5;
-          boolean var_6;
-
-        }
-
-        public void Save() {
-
-          string str_1;
-          boolean var_1;
-          class GCUv2.cSalesPriceCodeItem[] var_2;
-          int32 num_1;
-          class GCUv2.cSalesPriceCodeItem var_3;
-          boolean var_4;
-
-        }
-
-        public static class DataTable Search(int32 Active) {
-
-          class DataTable var_1;
-          string str_1;
-          boolean var_2;
-          boolean var_3;
-
-        }
-
-        public static boolean IsExist(int32 Id, string Name) {
-
-          boolean var_1;
-          string str_1;
-          class DataTable var_2;
-          boolean var_3;
-          boolean var_4;
-
-        }
-
-        public static double GetPrice(int32 ItemId, double CustomerId) {
-
-          double flt_1;
-          string str_1;
-          class DataTable var_1;
-          boolean var_2;
-
-        }
-
-    }
+	public static double GetPrice(int ItemId, double CustomerId)
+	{
+		double result = 0.0;
+		string strSql = " SELECT * FROM ProdHarga  WHERE ProdId = " + Conversions.ToString(ItemId) + " AND HargaId = (SELECT hargaId FROM customer  WHERE custId = " + Conversions.ToString(CustomerId) + ") ";
+		DataTable dataTable = Module1.sqlTable(strSql, "read", Clone: false);
+		if (dataTable.Rows.Count > 0)
+		{
+			result = Conversions.ToDouble(dataTable.Rows[0]["phAmount"]);
+		}
+		return result;
+	}
 }

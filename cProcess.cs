@@ -1,302 +1,471 @@
-using mscorlib;
+using System;
+using System.Data;
+using System.Runtime.CompilerServices;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using MySql.Data.MySqlClient;
 
-namespace GCUv2
+namespace GCUv2;
+
+public class cProcess
 {
-    public class 
-    {
-
-        private double _id;
-        private valuetype System.DateTime _processDate;
-        private double _qty;
-        private int32 _itemId;
-        private string _itemName;
-        private int32 _storageId;
-        private string _storageName;
-        private valuetype System.DateTime _createdDate;
-        private class GCUv2.cComponent[] _component;
-        private int32 _currentStorage;
-        private class GCUv2.cComponent[] _currentComponent;
-        private valuetype System.DateTime _currentDate;
-        private int32 _currentItem;
-        private double _currentQty;
-
-
-        public specialname double get_Id() {
-
-          double flt_1;
-
-        }
-
-        public specialname void set_Id(double value) {
-
-          loc_415CE1: nop
-          loc_415CE2: ldarg.0
-          loc_415CE3: ldarg.1
-          loc_415CE4: stfld GCUv2.cComboItemMenu::_id
-          loc_415CE9: ret
-        }
-
-        public specialname valuetype System.DateTime get_ProcessDate() {
-
-          valuetype System.DateTime var_1;
-
-        }
-
-        public specialname void set_ProcessDate(valuetype System.DateTime value) {
-
-          loc_415D05: nop
-          loc_415D06: ldarg.0
-          loc_415D07: ldarg.1
-          loc_415D08: stfld GCUv2.cProcess::_processDate
-          loc_415D0D: ret
-        }
-
-        public specialname double get_Qty() {
-
-          double flt_1;
-
-        }
-
-        public specialname void set_Qty(double value) {
-
-          loc_415D29: nop
-          loc_415D2A: ldarg.0
-          loc_415D2B: ldarg.1
-          loc_415D2C: stfld GCUv2.cProcess::_qty
-          loc_415D31: ret
-        }
-
-        public specialname int32 get_ItemId() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_ItemId(int32 value) {
-
-          loc_415D4D: nop
-          loc_415D4E: ldarg.0
-          loc_415D4F: ldarg.1
-          loc_415D50: stfld GCUv2.cProcess::_itemId
-          loc_415D55: ret
-        }
-
-        public specialname string get_ItemName() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_ItemName(string value) {
-
-          loc_415D71: nop
-          loc_415D72: ldarg.0
-          loc_415D73: ldarg.1
-          loc_415D74: stfld GCUv2.cProcess::_itemName
-          loc_415D79: ret
-        }
-
-        public specialname int32 get_StorageId() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_StorageId(int32 value) {
-
-          loc_415D95: nop
-          loc_415D96: ldarg.0
-          loc_415D97: ldarg.1
-          loc_415D98: stfld GCUv2.cProcess::_storageId
-          loc_415D9D: ret
-        }
-
-        public specialname string get_StorageName() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_StorageName(string value) {
-
-          loc_415DB9: nop
-          loc_415DBA: ldarg.0
-          loc_415DBB: ldarg.1
-          loc_415DBC: stfld GCUv2.cProcess::_storageName
-          loc_415DC1: ret
-        }
-
-        public specialname valuetype System.DateTime get_CreatedDate() {
-
-          valuetype System.DateTime var_1;
-
-        }
-
-        public specialname void set_CreatedDate(valuetype System.DateTime value) {
-
-          loc_415DDD: nop
-          loc_415DDE: ldarg.0
-          loc_415DDF: ldarg.1
-          loc_415DE0: stfld GCUv2.cProcess::_createdDate
-          loc_415DE5: ret
-        }
-
-        public specialname class GCUv2.cComponent[] get_Component() {
-
-          class GCUv2.cComponent[] var_1;
-
-        }
-
-        public specialname void set_Component(class GCUv2.cComponent[] value) {
-
-          loc_415E01: nop
-          loc_415E02: ldarg.0
-          loc_415E03: ldarg.1
-          loc_415E04: stfld GCUv2.cProcess::_component
-          loc_415E09: ret
-        }
-
-        public specialname class GCUv2.cComponent[] get_CurrentComponent() {
-
-          class GCUv2.cComponent[] var_1;
-
-        }
-
-        public specialname void set_CurrentComponent(class GCUv2.cComponent[] value) {
-
-          loc_415E25: nop
-          loc_415E26: ldarg.0
-          loc_415E27: ldarg.1
-          loc_415E28: stfld GCUv2.cProcess::_currentComponent
-          loc_415E2D: ret
-        }
-
-        public specialname int32 get_CurrentStorage() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_CurrentStorage(int32 value) {
-
-          loc_415E49: nop
-          loc_415E4A: ldarg.0
-          loc_415E4B: ldarg.1
-          loc_415E4C: stfld GCUv2.cProcess::_currentStorage
-          loc_415E51: ret
-        }
-
-        public specialname valuetype System.DateTime get_CurrentDate() {
-
-          valuetype System.DateTime var_1;
-
-        }
-
-        public specialname void set_CurrentDate(valuetype System.DateTime value) {
-
-          loc_415E6D: nop
-          loc_415E6E: ldarg.0
-          loc_415E6F: ldarg.1
-          loc_415E70: stfld GCUv2.cProcess::_currentDate
-          loc_415E75: ret
-        }
-
-        public specialname int32 get_CurrentItem() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_CurrentItem(int32 value) {
-
-          loc_415E91: nop
-          loc_415E92: ldarg.0
-          loc_415E93: ldarg.1
-          loc_415E94: stfld GCUv2.cProcess::_currentItem
-          loc_415E99: ret
-        }
-
-        public specialname double get_CurrentQty() {
-
-          double flt_1;
-
-        }
-
-        public specialname void set_CurrentQty(double value) {
-
-          loc_415EB5: nop
-          loc_415EB6: ldarg.0
-          loc_415EB7: ldarg.1
-          loc_415EB8: stfld GCUv2.cProcess::_currentQty
-          loc_415EBD: ret
-        }
-
-        public void cProcess(double ProcessId) {
-
-          boolean var_1;
-          class DataTable var_2;
-          string str_1;
-          int32 num_1;
-          boolean var_3;
-          class System.Collections.IEnumerator var_4;
-          class DataRow var_5;
-          boolean var_6;
-
-        }
-
-        public void save() {
-
-          int32 num_1;
-          int32 num_2;
-          string str_1;
-          int32 num_3;
-          class MySqlClient.MySqlTransaction var_1;
-          boolean var_2;
-          boolean var_3;
-          int32 num_4;
-          boolean var_4;
-          class GCUv2.cComponent[] var_5;
-          int32 num_5;
-          class GCUv2.cComponent var_6;
-          boolean var_7;
-          boolean var_8;
-          boolean var_9;
-
-        }
-
-        public void Delete() {
-
-          int32 num_1;
-          int32 num_2;
-          string str_1;
-          int32 num_3;
-          class MySqlClient.MySqlTransaction var_1;
-          boolean var_2;
-          int32 num_4;
-          boolean var_3;
-
-        }
-
-        public static class DataTable Search(int32 intRange, valuetype System.DateTime dateFirst, valuetype System.DateTime dateLast, int32 intItemId, int32 intStepId, int32 intStoreId, int32 intBranchId, int32 intGroupId, boolean blnShowComponent) {
-
-          class DataTable var_1;
-          string str_1;
-          string str_2;
-          boolean var_2;
-          boolean var_3;
-          boolean var_4;
-          boolean var_5;
-          boolean var_6;
-          boolean var_7;
-          boolean var_8;
-          boolean var_9;
-          boolean var_10;
-          boolean var_11;
-          boolean var_12;
-          boolean var_13;
-          boolean var_14;
-
-        }
-
-    }
+	private double _id;
+
+	private DateTime _processDate;
+
+	private double _qty;
+
+	private int _itemId;
+
+	private string _itemName;
+
+	private int _storageId;
+
+	private string _storageName;
+
+	private DateTime _createdDate;
+
+	private cComponent[] _component;
+
+	private int _currentStorage;
+
+	private cComponent[] _currentComponent;
+
+	private DateTime _currentDate;
+
+	private int _currentItem;
+
+	private double _currentQty;
+
+	public double Id
+	{
+		get
+		{
+			return _id;
+		}
+		set
+		{
+			_id = value;
+		}
+	}
+
+	public DateTime ProcessDate
+	{
+		get
+		{
+			return _processDate;
+		}
+		set
+		{
+			_processDate = value;
+		}
+	}
+
+	public double Qty
+	{
+		get
+		{
+			return _qty;
+		}
+		set
+		{
+			_qty = value;
+		}
+	}
+
+	public int ItemId
+	{
+		get
+		{
+			return _itemId;
+		}
+		set
+		{
+			_itemId = value;
+		}
+	}
+
+	public string ItemName
+	{
+		get
+		{
+			return _itemName;
+		}
+		set
+		{
+			_itemName = value;
+		}
+	}
+
+	public int StorageId
+	{
+		get
+		{
+			return _storageId;
+		}
+		set
+		{
+			_storageId = value;
+		}
+	}
+
+	public string StorageName
+	{
+		get
+		{
+			return _storageName;
+		}
+		set
+		{
+			_storageName = value;
+		}
+	}
+
+	public DateTime CreatedDate
+	{
+		get
+		{
+			return _createdDate;
+		}
+		set
+		{
+			_createdDate = value;
+		}
+	}
+
+	public cComponent[] Component
+	{
+		get
+		{
+			return _component;
+		}
+		set
+		{
+			_component = value;
+		}
+	}
+
+	public cComponent[] CurrentComponent
+	{
+		get
+		{
+			return _currentComponent;
+		}
+		set
+		{
+			_currentComponent = value;
+		}
+	}
+
+	public int CurrentStorage
+	{
+		get
+		{
+			return _currentStorage;
+		}
+		set
+		{
+			_currentStorage = value;
+		}
+	}
+
+	public DateTime CurrentDate
+	{
+		get
+		{
+			return _currentDate;
+		}
+		set
+		{
+			_currentDate = value;
+		}
+	}
+
+	public int CurrentItem
+	{
+		get
+		{
+			return _currentItem;
+		}
+		set
+		{
+			_currentItem = value;
+		}
+	}
+
+	public double CurrentQty
+	{
+		get
+		{
+			return _currentQty;
+		}
+		set
+		{
+			_currentQty = value;
+		}
+	}
+
+	[MethodImpl(MethodImplOptions.NoInlining | MethodImplOptions.NoOptimization)]
+	public cProcess(double ProcessId)
+	{
+		if (!(ProcessId > 0.0))
+		{
+			return;
+		}
+		_id = ProcessId;
+		DataTable dataTable = new DataTable();
+		string strSql = " SELECT a.*, b.itemName, c.storeName  FROM processes a, items b, storages c  WHERE proId = " + Conversions.ToString(_id) + " AND a.itemId = b.itemId  AND a.storeId = c.storeId ";
+		dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+		if (dataTable.Rows.Count > 0)
+		{
+			_processDate = Conversions.ToDate(dataTable.Rows[0]["proDate"]);
+			_qty = Conversions.ToDouble(dataTable.Rows[0]["proMainQty"]);
+			_itemId = Conversions.ToInteger(dataTable.Rows[0]["itemId"]);
+			_itemName = Conversions.ToString(dataTable.Rows[0]["itemName"]);
+			_storageId = Conversions.ToInteger(dataTable.Rows[0]["storeId"]);
+			_storageName = Conversions.ToString(dataTable.Rows[0]["storeName"]);
+			_createdDate = Conversions.ToDate(dataTable.Rows[0]["proCreated"]);
+		}
+		else
+		{
+			_id = 0.0;
+			Information.Err().Raise(513, null, "Produksi tidak ditemukan. Kemungkinan telah dihapus.");
+		}
+		strSql = " SELECT a.*, b.itemName, c.storeName  FROM processcomponents a, items b, storages c, produk d  WHERE a.itemId = b.itemId  AND a.storeId = c.storeId  AND proId = " + Conversions.ToString(_id) + " AND b.itemId = d.prodId  AND d.typeId = 1  ORDER BY b.itemName ";
+		int num = 0;
+		dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+		checked
+		{
+			_component = new cComponent[dataTable.Rows.Count - 1 + 1];
+			foreach (DataRow row in dataTable.Rows)
+			{
+				_component[num] = new cComponent(0.0);
+				_component[num].Id = Conversions.ToDouble(row["comId"]);
+				_component[num].ItemId = Conversions.ToInteger(row["itemId"]);
+				_component[num].ItemName = Conversions.ToString(row["itemName"]);
+				_component[num].ComponentDate = Conversions.ToDate(row["comDate"]);
+				_component[num].Qty = Conversions.ToDouble(row["comMainQty"]);
+				_component[num].StorageId = Conversions.ToInteger(row["storeId"]);
+				_component[num].StorageName = Conversions.ToString(row["storeName"]);
+				num++;
+			}
+		}
+	}
+
+	[MethodImpl(MethodImplOptions.NoInlining | MethodImplOptions.NoOptimization)]
+	public void save()
+	{
+		int try0001_dispatch = -1;
+		int num2 = default(int);
+		MySqlTransaction val = default(MySqlTransaction);
+		int num = default(int);
+		while (true)
+		{
+			try
+			{
+				/*Note: ILSpy has introduced the following switch to emulate a goto from catch-block to try-block*/;
+				checked
+				{
+					switch (try0001_dispatch)
+					{
+					default:
+					{
+						ProjectData.ClearProjectError();
+						num2 = 2;
+						val = Module1.connectData.BeginTransaction();
+						if (_id == 0.0)
+						{
+							string strSql = " INSERT INTO processes  (proDate,proMainQty,itemId,storeId,proCreated) VALUES  ('" + Strings.Format(_processDate, "yyyy-MM-dd") + "'," + Module1.unformatNumber(Conversions.ToString(_qty)) + "," + Conversions.ToString(_itemId) + "," + Conversions.ToString(_storageId) + ",'" + Strings.Format(DateAndTime.Now, "yyyy-MM-dd HH:mm:ss") + "')";
+							Module1.sqlNonQuery(strSql, "data");
+							_id = cDatabase.LastId("data");
+						}
+						else
+						{
+							string strSql = " UPDATE processes  SET proDate = '" + Strings.Format(_processDate, "yyyy-MM-dd") + "',  proMainQty = " + Module1.unformatNumber(Conversions.ToString(Qty)) + ", itemId = " + Conversions.ToString(_itemId) + ", storeId = " + Conversions.ToString(_storageId) + " WHERE proId = " + Conversions.ToString(_id);
+							Module1.sqlNonQuery(strSql, "data");
+							if (Module1.pubActivateDailyStockCode)
+							{
+								cDailyStock.add(_currentItem, _currentStorage, _currentDate, _currentQty * -1.0);
+								int num3 = _currentComponent.Length - 1;
+								for (int i = 0; i <= num3; i++)
+								{
+									cDailyStock.add(_currentComponent[i].ItemId, _currentComponent[i].StorageId, _currentComponent[i].ComponentDate, _currentComponent[i].Qty);
+								}
+							}
+							strSql = " DELETE FROM processComponents  WHERE proId = " + Conversions.ToString(_id);
+							Module1.sqlNonQuery(strSql, "data");
+						}
+						if (Module1.pubActivateDailyStockCode)
+						{
+							cDailyStock.add(_itemId, _storageId, _processDate, _qty);
+						}
+						cComponent[] component = _component;
+						foreach (cComponent cComponent2 in component)
+						{
+							string strSql = " INSERT INTO processComponents  (comDate, comMainQty, itemId, storeId, proId) VALUES  (' " + Strings.Format(cComponent2.ComponentDate, "yyyy-MM-dd") + "'," + Module1.unformatNumber(Conversions.ToString(cComponent2.Qty)) + ", " + Conversions.ToString(cComponent2.ItemId) + "," + Conversions.ToString(cComponent2.StorageId) + ", " + Conversions.ToString(_id) + ")";
+							Module1.sqlNonQuery(strSql, "data");
+							if (Module1.pubActivateDailyStockCode)
+							{
+								cDailyStock.add(cComponent2.ItemId, cComponent2.StorageId, cComponent2.ComponentDate, cComponent2.Qty * -1.0);
+							}
+						}
+						val.Commit();
+						goto end_IL_0001;
+					}
+					case 984:
+						num = -1;
+						switch (num2)
+						{
+						case 2:
+							if (Operators.CompareString(Information.Err().Description, "Fatal error encountered during command execution.", TextCompare: false) != 0 && Operators.CompareString(Information.Err().Description, "The connection is not open.", TextCompare: false) != 0)
+							{
+								val.Rollback();
+							}
+							Information.Err().Raise(513, null, Information.Err().Description);
+							goto end_IL_0001;
+						}
+						break;
+					}
+					goto IL_040e;
+				}
+				end_IL_0001:;
+			}
+			catch (object obj) when (obj is Exception && num2 != 0 && num == 0)
+			{
+				ProjectData.SetProjectError((Exception)obj);
+				try0001_dispatch = 984;
+				continue;
+			}
+			break;
+			IL_040e:
+			throw ProjectData.CreateProjectError(-2146828237);
+		}
+		if (num != 0)
+		{
+			ProjectData.ClearProjectError();
+		}
+	}
+
+	[MethodImpl(MethodImplOptions.NoInlining | MethodImplOptions.NoOptimization)]
+	public void Delete()
+	{
+		int try0001_dispatch = -1;
+		int num2 = default(int);
+		MySqlTransaction val = default(MySqlTransaction);
+		int num = default(int);
+		while (true)
+		{
+			try
+			{
+				/*Note: ILSpy has introduced the following switch to emulate a goto from catch-block to try-block*/;
+				checked
+				{
+					switch (try0001_dispatch)
+					{
+					default:
+					{
+						ProjectData.ClearProjectError();
+						num2 = 2;
+						val = Module1.connectData.BeginTransaction();
+						string strSql = " DELETE FROM processes  WHERE proId = " + Conversions.ToString(_id);
+						Module1.sqlNonQuery(strSql, "data");
+						strSql = " DELETE FROM processcomponents  WHERE proId = " + Conversions.ToString(_id);
+						Module1.sqlNonQuery(strSql, "data");
+						if (Module1.pubActivateDailyStockCode)
+						{
+							cDailyStock.add(_currentItem, _currentStorage, _currentDate, _currentQty * -1.0);
+							int num3 = _currentComponent.Length - 1;
+							for (int i = 0; i <= num3; i++)
+							{
+								cDailyStock.add(_currentComponent[i].ItemId, _currentComponent[i].StorageId, _currentComponent[i].ComponentDate, _currentComponent[i].Qty);
+							}
+						}
+						val.Commit();
+						goto end_IL_0001;
+					}
+					case 334:
+						num = -1;
+						switch (num2)
+						{
+						case 2:
+							if (Operators.CompareString(Information.Err().Description, "Fatal error encountered during command execution.", TextCompare: false) != 0 && Operators.CompareString(Information.Err().Description, "The connection is not open.", TextCompare: false) != 0)
+							{
+								val.Rollback();
+							}
+							Information.Err().Raise(513, null, Information.Err().Description);
+							goto end_IL_0001;
+						}
+						break;
+					}
+					goto IL_0184;
+				}
+				end_IL_0001:;
+			}
+			catch (object obj) when (obj is Exception && num2 != 0 && num == 0)
+			{
+				ProjectData.SetProjectError((Exception)obj);
+				try0001_dispatch = 334;
+				continue;
+			}
+			break;
+			IL_0184:
+			throw ProjectData.CreateProjectError(-2146828237);
+		}
+		if (num != 0)
+		{
+			ProjectData.ClearProjectError();
+		}
+	}
+
+	public static DataTable Search(int intRange, DateTime dateFirst, DateTime dateLast, int intItemId, int intStepId, int intStoreId, int intBranchId, int intGroupId, bool blnShowComponent)
+	{
+		string text = " SELECT proId, proDate, storeName,   itemName, proMainQty, proDate as origDate,  0 as orderBy, 0 as orderBy2  FROM processes a, items b, storages c, produk d  WHERE a.itemId = b.itemId  AND a.storeId = c.storeId  AND b.itemId = d.prodId  AND d.typeId = 1 ";
+		if (intRange == 1)
+		{
+			text = text + " AND proDate >= '" + Strings.Format(dateFirst, "yyyy-MM-dd") + "' AND proDate <= '" + Strings.Format(dateLast, "yyyy-MM-dd") + "'";
+		}
+		if (intStoreId > 0)
+		{
+			text = text + " AND a.storeId = " + Conversions.ToString(intStoreId);
+		}
+		else
+		{
+			text = text + " AND a.storeId IN (SELECT storeId FROM groupstorage  WHERE groupId = " + Conversions.ToString(intGroupId) + " AND generalDropDown = 1)";
+			if (intBranchId > 0)
+			{
+				text = text + " AND a.storeId IN (SELECT storeId FROM storages  WHERE branchId = " + Conversions.ToString(intBranchId) + ")";
+			}
+		}
+		text = ((intItemId > 0) ? (text + " AND a.itemId = " + Conversions.ToString(intItemId)) : ((intStepId <= 0) ? (text + " AND b.itemId IN (SELECT prodId FROM produk WHERE catId IN  (SELECT catId FROM group_itemcategory WHERE groupId = " + Conversions.ToString(intGroupId) + "))") : (text + " AND b.stepId = " + Conversions.ToString(intStepId))));
+		if (blnShowComponent)
+		{
+			string text2 = text;
+			text = text + " UNION SELECT a.proId, comDate as proDate, storeName,  itemName, comMainQty as proMainQty, proDate as origDate,  0 as orderBy, 1 as orderBy2  FROM processcomponents a, items b, storages c, processes d, produk e  WHERE a.proId IN(SELECT proId FROM (" + text2 + ") as processid)  AND a.itemId = b.itemId  AND a.storeId = c.storeId  AND a.proId = d.proId  AND b.itemId = e.prodId  AND e.typeId = 1 ";
+			text = text + " UNION SELECT 0 as proId, comDate as proDate, '' as storeName,  itemName, SUM(comMainQty) as proMainQty, '' as origDate,  1 as orderBy, 3 as orderBy2  FROM processcomponents a, items b, storages c, processes d, produk e  WHERE a.proId IN(SELECT proId FROM (" + text2 + ") as processid)  AND a.itemId = b.itemId  AND a.storeId = c.storeId  AND a.proId = d.proId  AND b.itemId = e.prodId  AND e.typeId = 1  GROUP BY itemName ";
+		}
+		if (intRange != 2)
+		{
+			text += " UNION SELECT 0 as proId, proDate, '' as storeName,   itemName, SUM(proMainQty), '' as origDate,  1 as orderBy, 2 as orderBy2  FROM processes a, items b, storages c, produk d  WHERE a.itemId = b.itemId  AND a.storeId = c.storeId  AND b.itemId = d.prodId  AND d.typeId = 1 ";
+			if (intRange == 1)
+			{
+				text = text + " AND proDate >= '" + Strings.Format(dateFirst, "yyyy-MM-dd") + "' AND proDate <= '" + Strings.Format(dateLast, "yyyy-MM-dd") + "'";
+			}
+			if (intStoreId > 0)
+			{
+				text = text + " AND a.storeId = " + Conversions.ToString(intStoreId);
+			}
+			else
+			{
+				text = text + " AND a.storeId IN (SELECT storeId FROM groupstorage  WHERE groupId = " + Conversions.ToString(intGroupId) + " AND generalDropDown = 1)";
+				if (intBranchId > 0)
+				{
+					text = text + " AND a.storeId IN (SELECT storeId FROM storages  WHERE branchId = " + Conversions.ToString(intBranchId) + ")";
+				}
+			}
+			text = ((intItemId > 0) ? (text + " AND a.itemId = " + Conversions.ToString(intItemId)) : ((intStepId <= 0) ? (text + " AND b.itemId IN (SELECT prodId FROM produk WHERE catId IN  (SELECT catId FROM group_itemcategory WHERE groupId = " + Conversions.ToString(intGroupId) + "))") : (text + " AND b.stepId = " + Conversions.ToString(intStepId))));
+			text += " GROUP BY itemName ";
+		}
+		text = ((intRange != 2) ? (text + " ORDER BY orderBy,origDate,proId,orderBy2,itemName ") : (text + " ORDER BY proId DESC LIMIT 100 "));
+		return Module1.sqlTable(text, "data", Clone: false);
+	}
 }

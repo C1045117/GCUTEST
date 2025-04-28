@@ -1,65 +1,54 @@
-namespace GCUv2
+using System.Data;
+using Microsoft.VisualBasic.CompilerServices;
+
+namespace GCUv2;
+
+public class cMinimumStock
 {
-    public class 
-    {
+	private int _branchId;
 
-        private int32 _branchId;
-        private class GCUv2.cMinimumStockItem[] _item;
+	private cMinimumStockItem[] _item;
 
+	public int BranchId
+	{
+		get
+		{
+			return _branchId;
+		}
+		set
+		{
+			_branchId = value;
+		}
+	}
 
-        public void cMinimumStock() {
+	public cMinimumStockItem[] Item
+	{
+		get
+		{
+			return _item;
+		}
+		set
+		{
+			_item = value;
+		}
+	}
 
-          loc_403253: ldarg.0
-          loc_403254: call instance void System.Object::.ctor()
-          loc_403259: ret
-        }
+	public void Save()
+	{
+		string strSql = " DELETE FROM prodBranches  WHERE branchId = " + Conversions.ToString(_branchId);
+		Module1.sqlNonQuery(strSql, "data");
+		cMinimumStockItem[] item = _item;
+		foreach (cMinimumStockItem cMinimumStockItem2 in item)
+		{
+			strSql = " INSERT INTO prodbranches(branchId, prodId, prodMin) VALUES (" + Conversions.ToString(_branchId) + "," + Conversions.ToString(cMinimumStockItem2.ItemId) + "," + Module1.unformatNumber(Conversions.ToString(cMinimumStockItem2.Qty)) + ")";
+			Module1.sqlNonQuery(strSql, "data");
+		}
+	}
 
-        public specialname int32 get_BranchId() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_BranchId(int32 value) {
-
-          loc_410B61: nop
-          loc_410B62: ldarg.0
-          loc_410B63: ldarg.1
-          loc_410B64: stfld GCUv2.cItemStandardUsage::_branchId
-          loc_410B69: ret
-        }
-
-        public specialname class GCUv2.cMinimumStockItem[] get_Item() {
-
-          class GCUv2.cMinimumStockItem[] var_1;
-
-        }
-
-        public specialname void set_Item(class GCUv2.cMinimumStockItem[] value) {
-
-          loc_410B85: nop
-          loc_410B86: ldarg.0
-          loc_410B87: ldarg.1
-          loc_410B88: stfld GCUv2.cMinimumStock::_item
-          loc_410B8D: ret
-        }
-
-        public void Save() {
-
-          string str_1;
-          class GCUv2.cMinimumStockItem[] var_1;
-          int32 num_1;
-          class GCUv2.cMinimumStockItem var_2;
-          boolean var_3;
-
-        }
-
-        public static class DataTable Search(int32 BranchId) {
-
-          class DataTable var_1;
-          string str_1;
-
-        }
-
-    }
+	public static DataTable Search(int BranchId)
+	{
+		string text = " SELECT a.prodName, a.prodId, b.prodMin  FROM (SELECT * FROM produk  WHERE typeId = 1 AND prodId IN (SELECT prodId FROM produkstorages  WHERE psAvailable = 1 AND storeId IN (SELECT storeId FROM storages WHERE branchId = " + Conversions.ToString(BranchId) + "))) a  LEFT OUTER JOIN prodBranches b  ON (a.prodId = b.prodId AND branchId = " + Conversions.ToString(BranchId) + ")";
+		text += " ORDER BY prodName ";
+		return Module1.sqlTable(text, "data", Clone: false);
+	}
 }

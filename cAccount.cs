@@ -1,430 +1,568 @@
-using mscorlib;
+using System;
+using System.Data;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
 
-namespace GCUv2
+namespace GCUv2;
+
+public class cAccount
 {
-    public class 
-    {
+	private int _id;
+
+	private string _name;
 
-        private int32 _id;
-        private string _name;
-        private string _number;
-        private int32 _typeId;
-        private string _typeName;
-        private int32 _cashBank;
-        private int32 _currencyId;
-        private string _currencyName;
-        private double _currencyRate;
-        private int32 _cashIncome;
-        private int32 _cashExpense;
-        private int32 _bankIncome;
-        private int32 _bankExpense;
-        private int32 _parentId;
-        private double _balanceAmount;
-        private valuetype System.DateTime _balanceDate;
-        private int32 _active;
-        private int32 _branchId;
-        private int32 _builtIn;
-        private int32 _level;
-        private int32 _isParent;
-
-
-        public specialname int32 get_Id() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_Id(int32 value) {
-
-          loc_40233D: nop
-          loc_40233E: ldarg.0
-          loc_40233F: ldarg.1
-          loc_402340: stfld GCUv2.My.MySettings::_id
-          loc_402345: ret
-        }
-
-        public specialname string get_Name() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_Name(string value) {
-
-          loc_402361: nop
-          loc_402362: ldarg.0
-          loc_402363: ldarg.1
-          loc_402364: stfld GCUv2.cAccount::_name
-          loc_402369: ret
-        }
-
-        public specialname string get_Number() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_Number(string value) {
-
-          loc_402385: nop
-          loc_402386: ldarg.0
-          loc_402387: ldarg.1
-          loc_402388: stfld GCUv2.cAccount::_number
-          loc_40238D: ret
-        }
-
-        public specialname int32 get_TypeId() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_TypeId(int32 value) {
-
-          loc_4023A9: nop
-          loc_4023AA: ldarg.0
-          loc_4023AB: ldarg.1
-          loc_4023AC: stfld GCUv2.cAccount::_typeId
-          loc_4023B1: ret
-        }
-
-        public specialname string get_TypeName() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_TypeName(string value) {
-
-          loc_4023CD: nop
-          loc_4023CE: ldarg.0
-          loc_4023CF: ldarg.1
-          loc_4023D0: stfld GCUv2.cAccount::_typeName
-          loc_4023D5: ret
-        }
-
-        public specialname int32 get_CashBank() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_CashBank(int32 value) {
-
-          loc_4023F1: nop
-          loc_4023F2: ldarg.0
-          loc_4023F3: ldarg.1
-          loc_4023F4: stfld GCUv2.cAccount::_cashBank
-          loc_4023F9: ret
-        }
-
-        public specialname int32 get_CurrencyId() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_CurrencyId(int32 value) {
-
-          loc_402415: nop
-          loc_402416: ldarg.0
-          loc_402417: ldarg.1
-          loc_402418: stfld GCUv2.cAccount::_currencyId
-          loc_40241D: ret
-        }
-
-        public specialname string get_CurrencyName() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_CurrencyName(string value) {
-
-          loc_402439: nop
-          loc_40243A: ldarg.0
-          loc_40243B: ldarg.1
-          loc_40243C: stfld GCUv2.cAccount::_currencyName
-          loc_402441: ret
-        }
-
-        public specialname double get_CurrencyRate() {
-
-          double flt_1;
-
-        }
-
-        public specialname void set_CurrencyRate(double value) {
-
-          loc_40245D: nop
-          loc_40245E: ldarg.0
-          loc_40245F: ldarg.1
-          loc_402460: stfld GCUv2.cAccount::_currencyRate
-          loc_402465: ret
-        }
-
-        public specialname int32 get_CashIncome() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_CashIncome(int32 value) {
-
-          loc_402481: nop
-          loc_402482: ldarg.0
-          loc_402483: ldarg.1
-          loc_402484: stfld GCUv2.cAccount::_cashIncome
-          loc_402489: ret
-        }
-
-        public specialname int32 get_CashExpense() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_CashExpense(int32 value) {
-
-          loc_4024A5: nop
-          loc_4024A6: ldarg.0
-          loc_4024A7: ldarg.1
-          loc_4024A8: stfld GCUv2.cAccount::_cashExpense
-          loc_4024AD: ret
-        }
-
-        public specialname int32 get_BankIncome() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_BankIncome(int32 value) {
-
-          loc_4024C9: nop
-          loc_4024CA: ldarg.0
-          loc_4024CB: ldarg.1
-          loc_4024CC: stfld GCUv2.cAccount::_bankIncome
-          loc_4024D1: ret
-        }
-
-        public specialname int32 get_BankExpense() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_BankExpense(int32 value) {
-
-          loc_4024ED: nop
-          loc_4024EE: ldarg.0
-          loc_4024EF: ldarg.1
-          loc_4024F0: stfld GCUv2.cAccount::_bankExpense
-          loc_4024F5: ret
-        }
-
-        public specialname int32 get_ParentId() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_ParentId(int32 value) {
-
-          loc_402511: nop
-          loc_402512: ldarg.0
-          loc_402513: ldarg.1
-          loc_402514: stfld GCUv2.cAccount::_parentId
-          loc_402519: ret
-        }
-
-        public specialname double get_BalanceAmount() {
-
-          double flt_1;
-
-        }
-
-        public specialname void set_BalanceAmount(double value) {
-
-          loc_402535: nop
-          loc_402536: ldarg.0
-          loc_402537: ldarg.1
-          loc_402538: stfld GCUv2.cAccount::_balanceAmount
-          loc_40253D: ret
-        }
-
-        public specialname valuetype System.DateTime get_BalanceDate() {
-
-          valuetype System.DateTime var_1;
-
-        }
-
-        public specialname void set_BalanceDate(valuetype System.DateTime value) {
-
-          loc_402559: nop
-          loc_40255A: ldarg.0
-          loc_40255B: ldarg.1
-          loc_40255C: stfld GCUv2.cAccount::_balanceDate
-          loc_402561: ret
-        }
-
-        public specialname int32 get_Active() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_Active(int32 value) {
-
-          loc_40257D: nop
-          loc_40257E: ldarg.0
-          loc_40257F: ldarg.1
-          loc_402580: stfld GCUv2.cAccount::_active
-          loc_402585: ret
-        }
-
-        public specialname int32 get_BranchId() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_BranchId(int32 value) {
-
-          loc_4025A1: nop
-          loc_4025A2: ldarg.0
-          loc_4025A3: ldarg.1
-          loc_4025A4: stfld GCUv2.cAccount::_branchId
-          loc_4025A9: ret
-        }
-
-        public specialname int32 get_BuiltIn() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_BuiltIn(int32 value) {
-
-          loc_4025C5: nop
-          loc_4025C6: ldarg.0
-          loc_4025C7: ldarg.1
-          loc_4025C8: stfld GCUv2.cAccount::_builtIn
-          loc_4025CD: ret
-        }
-
-        public specialname int32 get_Level() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_Level(int32 value) {
-
-          loc_4025E9: nop
-          loc_4025EA: ldarg.0
-          loc_4025EB: ldarg.1
-          loc_4025EC: stfld GCUv2.cAccount::_level
-          loc_4025F1: ret
-        }
-
-        public specialname int32 get_IsParent() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_IsParent(int32 value) {
-
-          loc_40260D: nop
-          loc_40260E: ldarg.0
-          loc_40260F: ldarg.1
-          loc_402610: stfld GCUv2.cAccount::_isParent
-          loc_402615: ret
-        }
-
-        public void cAccount(int32 AccountId) {
-
-          boolean var_1;
-          class DataTable var_2;
-          string str_1;
-          boolean var_3;
-
-        }
-
-        public void Save() {
-
-          string str_1;
-          int32 num_1;
-          int32 num_2;
-          class DataTable var_1;
-          boolean var_2;
-          boolean var_3;
-          boolean var_4;
-          boolean var_5;
-          boolean var_6;
-          boolean var_7;
-          boolean var_8;
-          boolean var_9;
-
-        }
-
-        public static class DataTable Search(int32 AccountTypeId, int32 AccountIsParent, int32 CurrentAccountId, int32 AccountCashBank, int32 AccountCashIncomeExpense, int32 AccountBankIncomeExpense, int32 CurrencyId, int32 Active) {
-
-          class DataTable var_1;
-          string str_1;
-          boolean var_2;
-          boolean var_3;
-          boolean var_4;
-          boolean var_5;
-          boolean var_6;
-          boolean var_7;
-          boolean var_8;
-          boolean var_9;
-          boolean var_10;
-          boolean var_11;
-          boolean var_12;
-          boolean var_13;
-          boolean var_14;
-          boolean var_15;
-          boolean var_16;
-          boolean var_17;
-
-        }
-
-        public static class DataTable SearchForTransaction(int32 CurrentAccountId, int32 AccountCashIncomeExpense, int32 AccountBankIncomeExpense, int32 CurrencyId, int32 GroupId, int32 Active) {
-
-          class DataTable var_1;
-          string str_1;
-          boolean var_2;
-          boolean var_3;
-          boolean var_4;
-          boolean var_5;
-          boolean var_6;
-          boolean var_7;
-          boolean var_8;
-          boolean var_9;
-          boolean var_10;
-          boolean var_11;
-          boolean var_12;
-          boolean var_13;
-          boolean var_14;
-          boolean var_15;
-          boolean var_16;
-          boolean var_17;
-          boolean var_18;
-          boolean var_19;
-          boolean var_20;
-          boolean var_21;
-
-        }
-
-        public static class DataTable GetAccountType() {
-
-          class DataTable var_1;
-          string str_1;
-
-        }
-
-    }
+	private string _number;
+
+	private int _typeId;
+
+	private string _typeName;
+
+	private int _cashBank;
+
+	private int _currencyId;
+
+	private string _currencyName;
+
+	private double _currencyRate;
+
+	private int _cashIncome;
+
+	private int _cashExpense;
+
+	private int _bankIncome;
+
+	private int _bankExpense;
+
+	private int _parentId;
+
+	private double _balanceAmount;
+
+	private DateTime _balanceDate;
+
+	private int _active;
+
+	private int _branchId;
+
+	private int _builtIn;
+
+	private int _level;
+
+	private int _isParent;
+
+	public int Id
+	{
+		get
+		{
+			return _id;
+		}
+		set
+		{
+			_id = value;
+		}
+	}
+
+	public string Name
+	{
+		get
+		{
+			return _name;
+		}
+		set
+		{
+			_name = value;
+		}
+	}
+
+	public string Number
+	{
+		get
+		{
+			return _number;
+		}
+		set
+		{
+			_number = value;
+		}
+	}
+
+	public int TypeId
+	{
+		get
+		{
+			return _typeId;
+		}
+		set
+		{
+			_typeId = value;
+		}
+	}
+
+	public string TypeName
+	{
+		get
+		{
+			return _typeName;
+		}
+		set
+		{
+			_typeName = value;
+		}
+	}
+
+	public int CashBank
+	{
+		get
+		{
+			return _cashBank;
+		}
+		set
+		{
+			_cashBank = value;
+		}
+	}
+
+	public int CurrencyId
+	{
+		get
+		{
+			return _currencyId;
+		}
+		set
+		{
+			_currencyId = value;
+		}
+	}
+
+	public string CurrencyName
+	{
+		get
+		{
+			return _currencyName;
+		}
+		set
+		{
+			_currencyName = value;
+		}
+	}
+
+	public double CurrencyRate
+	{
+		get
+		{
+			return _currencyRate;
+		}
+		set
+		{
+			_currencyRate = value;
+		}
+	}
+
+	public int CashIncome
+	{
+		get
+		{
+			return _cashIncome;
+		}
+		set
+		{
+			_cashIncome = value;
+		}
+	}
+
+	public int CashExpense
+	{
+		get
+		{
+			return _cashExpense;
+		}
+		set
+		{
+			_cashExpense = value;
+		}
+	}
+
+	public int BankIncome
+	{
+		get
+		{
+			return _bankIncome;
+		}
+		set
+		{
+			_bankIncome = value;
+		}
+	}
+
+	public int BankExpense
+	{
+		get
+		{
+			return _bankExpense;
+		}
+		set
+		{
+			_bankExpense = value;
+		}
+	}
+
+	public int ParentId
+	{
+		get
+		{
+			return _parentId;
+		}
+		set
+		{
+			_parentId = value;
+		}
+	}
+
+	public double BalanceAmount
+	{
+		get
+		{
+			return _balanceAmount;
+		}
+		set
+		{
+			_balanceAmount = value;
+		}
+	}
+
+	public DateTime BalanceDate
+	{
+		get
+		{
+			return _balanceDate;
+		}
+		set
+		{
+			_balanceDate = value;
+		}
+	}
+
+	public int Active
+	{
+		get
+		{
+			return _active;
+		}
+		set
+		{
+			_active = value;
+		}
+	}
+
+	public int BranchId
+	{
+		get
+		{
+			return _branchId;
+		}
+		set
+		{
+			_branchId = value;
+		}
+	}
+
+	public int BuiltIn
+	{
+		get
+		{
+			return _builtIn;
+		}
+		set
+		{
+			_builtIn = value;
+		}
+	}
+
+	public int Level
+	{
+		get
+		{
+			return _level;
+		}
+		set
+		{
+			_level = value;
+		}
+	}
+
+	public int IsParent
+	{
+		get
+		{
+			return _isParent;
+		}
+		set
+		{
+			_isParent = value;
+		}
+	}
+
+	public cAccount(int AccountId)
+	{
+		if (AccountId > 0)
+		{
+			_id = AccountId;
+			string strSql = " SELECT *  FROM account a, accountType b, currency c  WHERE a.accountTypeId = b.accountTypeId  AND a.currencyId = c.currencyId  AND accountId = " + Conversions.ToString(_id);
+			DataTable dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+			if (dataTable.Rows.Count > 0)
+			{
+				_name = Conversions.ToString(dataTable.Rows[0]["accountName"]);
+				_number = Conversions.ToString(dataTable.Rows[0]["accountNumber"]);
+				_typeId = Conversions.ToInteger(dataTable.Rows[0]["accountTypeId"]);
+				_typeName = Conversions.ToString(dataTable.Rows[0]["accountTypeName"]);
+				_cashBank = Conversions.ToInteger(dataTable.Rows[0]["accountCashBank"]);
+				_currencyId = Conversions.ToInteger(dataTable.Rows[0]["currencyId"]);
+				_currencyName = Conversions.ToString(dataTable.Rows[0]["currencyName"]);
+				_currencyRate = Conversions.ToDouble(dataTable.Rows[0]["currencyRate"]);
+				_cashIncome = Conversions.ToInteger(dataTable.Rows[0]["accountCashIncome"]);
+				_cashExpense = Conversions.ToInteger(dataTable.Rows[0]["accountCashExpense"]);
+				_bankIncome = Conversions.ToInteger(dataTable.Rows[0]["accountBankIncome"]);
+				_bankExpense = Conversions.ToInteger(dataTable.Rows[0]["accountBankExpense"]);
+				_parentId = Conversions.ToInteger(dataTable.Rows[0]["accountParentId"]);
+				_balanceAmount = Conversions.ToDouble(dataTable.Rows[0]["accountBalanceAmount"]);
+				_balanceDate = Conversions.ToDate(dataTable.Rows[0]["accountBalanceDate"]);
+				_active = Conversions.ToInteger(dataTable.Rows[0]["accountActive"]);
+				_branchId = Conversions.ToInteger(dataTable.Rows[0]["branchId"]);
+				_builtIn = Conversions.ToInteger(dataTable.Rows[0]["accountBuiltIn"]);
+				_level = Conversions.ToInteger(dataTable.Rows[0]["accountLevel"]);
+				_isParent = Conversions.ToInteger(dataTable.Rows[0]["accountIsParent"]);
+			}
+		}
+	}
+
+	public void Save()
+	{
+		string strSql;
+		if (_id == 0)
+		{
+			strSql = " INSERT INTO account  (accountName,accountNumber,accountTypeId,  currencyId, accountCashIncome, accountCashExpense, accountBankIncome, accountBankExpense, accountParentId,  accountBalanceAmount, accountBalanceDate, branchId,  accountIsParent, accountActive  ) VALUES  ('" + _name + "','" + _number + "', " + Conversions.ToString(_typeId) + "," + Conversions.ToString(_currencyId) + "," + Conversions.ToString(_cashIncome) + "," + Conversions.ToString(_cashExpense) + "," + Conversions.ToString(_bankIncome) + "," + Conversions.ToString(_bankExpense) + "," + Conversions.ToString(_parentId) + "," + Conversions.ToString(_balanceAmount) + ",'" + Strings.Format(_balanceDate, "yyyy-MM-dd") + "'," + Conversions.ToString(_branchId) + "," + Conversions.ToString(_isParent) + "," + Conversions.ToString(_active) + ")";
+			Module1.sqlNonQuery(strSql, "data");
+			_id = checked((int)Math.Round(cDatabase.LastId("data")));
+			if (_parentId == 0)
+			{
+				strSql = " UPDATE account SET  accountParentId = " + Conversions.ToString(_id) + " WHERE accountId = " + Conversions.ToString(_id);
+				Module1.sqlNonQuery(strSql, "data");
+				_parentId = _id;
+			}
+		}
+		else
+		{
+			strSql = " UPDATE account  SET accountName = '" + _name + "',  accountNumber = '" + _number + "',  accountTypeId = " + Conversions.ToString(_typeId) + ", currencyId = " + Conversions.ToString(_currencyId) + ", accountCashIncome = " + Conversions.ToString(_cashIncome) + ", accountCashExpense = " + Conversions.ToString(_cashExpense) + ", accountBankIncome = " + Conversions.ToString(_bankIncome) + ", accountBankExpense = " + Conversions.ToString(_bankExpense) + ", accountParentId = " + Conversions.ToString(_parentId) + ", accountBalanceAmount = " + Module1.unformatNumber(Conversions.ToString(_balanceAmount)) + ", accountBalanceDate = '" + Strings.Format(_balanceDate, "yyyy-MM-dd") + "', branchId = " + Conversions.ToString(_branchId) + ", accountIsParent = " + Conversions.ToString(_isParent) + ", accountActive = " + Conversions.ToString(_active) + " WHERE accountId = " + Conversions.ToString(_id);
+			Module1.sqlNonQuery(strSql, "data");
+		}
+		int num = _parentId;
+		int num2;
+		if (_id != _parentId)
+		{
+			num2 = 1;
+			bool flag = default(bool);
+			while (!(num == 1 || num == 2 || flag))
+			{
+				strSql = " SELECT *  FROM account  WHERE accountId = " + Conversions.ToString(num);
+				DataTable dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+				num2 = checked(num2 + 1);
+				if (Operators.ConditionalCompareObjectEqual(dataTable.Rows[0]["accountId"], dataTable.Rows[0]["accountParentId"], TextCompare: false))
+				{
+					_cashBank = 0;
+					flag = true;
+				}
+				else
+				{
+					num = Conversions.ToInteger(dataTable.Rows[0]["accountParentId"]);
+				}
+			}
+		}
+		else
+		{
+			num2 = 0;
+		}
+		_level = num2;
+		if (((num2 > 0) & (_isParent == 0)) && num == 1)
+		{
+			_cashBank = 1;
+		}
+		else if (((num2 > 0) & (_isParent == 0)) && num == 2)
+		{
+			_cashBank = 2;
+		}
+		else
+		{
+			_cashBank = 0;
+		}
+		strSql = " UPDATE account  SET accountCashBank = " + Conversions.ToString(_cashBank) + ", accountLevel = " + Conversions.ToString(_level) + " WHERE accountId = " + Conversions.ToString(_id);
+		Module1.sqlNonQuery(strSql, "data");
+	}
+
+	public static DataTable Search(int AccountTypeId, int AccountIsParent, int CurrentAccountId, int AccountCashBank, int AccountCashIncomeExpense, int AccountBankIncomeExpense, int CurrencyId, int Active)
+	{
+		string text = " SELECT *  FROM account a, accountType b  WHERE a.accountTypeId = b.accountTypeId ";
+		if (AccountTypeId > 0)
+		{
+			text = text + " AND a.accountTypeId = " + Conversions.ToString(AccountTypeId);
+		}
+		switch (AccountIsParent)
+		{
+		case 1:
+			text += " AND accountIsParent = 1 ";
+			break;
+		case 0:
+			text += " AND accountIsParent = 0 ";
+			break;
+		}
+		if (CurrentAccountId > 0)
+		{
+			text = text + " AND accountId <> " + Conversions.ToString(CurrentAccountId);
+		}
+		switch (AccountCashBank)
+		{
+		case 1:
+			text += " AND accountCashBank = 1 ";
+			break;
+		case 2:
+			text += " AND accountCashBank = 2 ";
+			break;
+		case 0:
+			text += " AND accountCashBank = 0 ";
+			break;
+		}
+		switch (AccountCashIncomeExpense)
+		{
+		case 1:
+			text += " AND accountCashIncome = 1 ";
+			break;
+		case 2:
+			text += " AND accountCashExpense = 1 ";
+			break;
+		case 3:
+			text += " AND (accountCashIncome = 1 OR accountCashExpense = 1) ";
+			break;
+		}
+		switch (AccountBankIncomeExpense)
+		{
+		case 1:
+			text += " AND accountBankIncome = 1 ";
+			break;
+		case 2:
+			text += " AND accountBankExpense = 1 ";
+			break;
+		case 3:
+			text += " AND (accountBankIncome = 1 OR accountBankExpense = 1) ";
+			break;
+		}
+		if (CurrencyId > 0)
+		{
+			text = text + " AND currencyId = " + Conversions.ToString(CurrencyId);
+		}
+		switch (Active)
+		{
+		case 0:
+			text += " AND accountActive = 0 ";
+			break;
+		case 1:
+			text += " AND accountActive = 1 ";
+			break;
+		}
+		text += " ORDER BY accountNumber ";
+		return Module1.sqlTable(text, "read", Clone: false);
+	}
+
+	public static DataTable SearchForTransaction(int CurrentAccountId, int AccountCashIncomeExpense, int AccountBankIncomeExpense, int CurrencyId, int GroupId, int Active)
+	{
+		string text = " SELECT *  FROM account a, accountType b  WHERE a.accountTypeId = b.accountTypeId  AND accountIsParent = 0  AND accountCashBank = 0 ";
+		switch (AccountCashIncomeExpense)
+		{
+		case 1:
+			text += " AND accountCashIncome = 1 ";
+			break;
+		case 2:
+			text += " AND accountCashExpense = 1 ";
+			break;
+		case 3:
+			text += " AND (accountCashIncome = 1 OR accountCashExpense = 1) ";
+			break;
+		}
+		switch (AccountBankIncomeExpense)
+		{
+		case 1:
+			text += " AND accountBankIncome = 1 ";
+			break;
+		case 2:
+			text += " AND accountBankExpense = 1 ";
+			break;
+		case 3:
+			text += " AND (accountBankIncome = 1 OR accountBankExpense = 1) ";
+			break;
+		}
+		if (CurrencyId > 0)
+		{
+			text = text + " AND currencyId = " + Conversions.ToString(CurrencyId);
+		}
+		switch (Active)
+		{
+		case 0:
+			text += " AND accountActive = 0 ";
+			break;
+		case 1:
+			text += " AND accountActive = 1 ";
+			break;
+		}
+		text += " UNION ALL  SELECT *  FROM account a, accountType b  WHERE a.accountTypeId = b.accountTypeId  AND accountCashBank > 0 ";
+		if (CurrentAccountId > 0)
+		{
+			text = text + " AND accountId <> " + Conversions.ToString(CurrentAccountId);
+		}
+		switch (AccountCashIncomeExpense)
+		{
+		case 1:
+			text += " AND accountCashIncome = 1 ";
+			break;
+		case 2:
+			text += " AND accountCashExpense = 1 ";
+			break;
+		case 3:
+			text += " AND (accountCashIncome = 1 OR accountCashExpense = 1) ";
+			break;
+		}
+		switch (AccountBankIncomeExpense)
+		{
+		case 1:
+			text += " AND accountBankIncome = 1 ";
+			break;
+		case 2:
+			text += " AND accountBankExpense = 1 ";
+			break;
+		case 3:
+			text += " AND (accountBankIncome = 1 OR accountBankExpense = 1) ";
+			break;
+		}
+		if (CurrencyId > 0)
+		{
+			text = text + " AND currencyId = " + Conversions.ToString(CurrencyId);
+		}
+		switch (Active)
+		{
+		case 0:
+			text += " AND accountActive = 0 ";
+			break;
+		case 1:
+			text += " AND accountActive = 1 ";
+			break;
+		}
+		if (GroupId > 0)
+		{
+			text = text + " AND (accountId IN (SELECT kgId FROM groupKg WHERE groupId = " + Conversions.ToString(GroupId) + " AND transactionDropDown = 1)  OR accountId IN (SELECT tgId FROM groupTg WHERE groupId = " + Conversions.ToString(GroupId) + " AND transactionDropDown = 1)) ";
+		}
+		text += " ORDER BY accountNumber ";
+		return Module1.sqlTable(text, "read", Clone: false);
+	}
+
+	public static DataTable GetAccountType()
+	{
+		string strSql = " SELECT *  FROM accountType  ORDER BY accountTypeId ";
+		return Module1.sqlTable(strSql, "read", Clone: false);
+	}
 }

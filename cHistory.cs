@@ -1,177 +1,153 @@
-using mscorlib;
+using System;
+using System.Data;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
 
-namespace GCUv2
+namespace GCUv2;
+
+public class cHistory
 {
-    public class 
-    {
+	private double _id;
 
-        private double _id;
-        private valuetype System.DateTime _createdDate;
-        private string _content;
-        private string _description;
-        private int32 _historyType;
-        private int32 _userId;
-        private string _userLogin;
-        private double _fKeyId;
+	private DateTime _createdDate;
 
+	private string _content;
 
-        public void cHistory() {
+	private string _description;
 
-          loc_403253: ldarg.0
-          loc_403254: call instance void System.Object::.ctor()
-          loc_403259: ret
-        }
+	private int _historyType;
 
-        public specialname double get_Id() {
+	private int _userId;
 
-          double flt_1;
+	private string _userLogin;
 
-        }
+	private double _fKeyId;
 
-        public specialname void set_Id(double value) {
+	public double Id
+	{
+		get
+		{
+			return _id;
+		}
+		set
+		{
+			_id = value;
+		}
+	}
 
-          loc_40F9DD: nop
-          loc_40F9DE: ldarg.0
-          loc_40F9DF: ldarg.1
-          loc_40F9E0: stfld GCUv2.cGroupStorage::_id
-          loc_40F9E5: ret
-        }
+	public DateTime CreatedDate
+	{
+		get
+		{
+			return _createdDate;
+		}
+		set
+		{
+			_createdDate = value;
+		}
+	}
 
-        public specialname valuetype System.DateTime get_CreatedDate() {
+	public string Content
+	{
+		get
+		{
+			return _content;
+		}
+		set
+		{
+			_content = Module1.cleanString(value);
+		}
+	}
 
-          valuetype System.DateTime var_1;
+	public string Description
+	{
+		get
+		{
+			return _description;
+		}
+		set
+		{
+			_description = Module1.cleanString(value);
+		}
+	}
 
-        }
+	public int HistoryType
+	{
+		get
+		{
+			return _historyType;
+		}
+		set
+		{
+			_historyType = value;
+		}
+	}
 
-        public specialname void set_CreatedDate(valuetype System.DateTime value) {
+	public int UserId
+	{
+		get
+		{
+			return _userId;
+		}
+		set
+		{
+			_userId = value;
+		}
+	}
 
-          loc_40FA01: nop
-          loc_40FA02: ldarg.0
-          loc_40FA03: ldarg.1
-          loc_40FA04: stfld GCUv2.cHistory::_createdDate
-          loc_40FA09: ret
-        }
+	public string UserLogin
+	{
+		get
+		{
+			return _userLogin;
+		}
+		set
+		{
+			_userLogin = value;
+		}
+	}
 
-        public specialname string get_Content() {
+	public double fKeyId
+	{
+		get
+		{
+			return _fKeyId;
+		}
+		set
+		{
+			_fKeyId = value;
+		}
+	}
 
-          string str_1;
+	public static DataTable GetHistory(int intFkeyId, int HistoryType)
+	{
+		string strSql = " SELECT userLogin, histDate, histContent  FROM " + Module1.pubDbHistory + ".historyV2 a  WHERE histType = " + Conversions.ToString(HistoryType) + " AND fkeyId = " + Conversions.ToString(intFkeyId) + " ORDER BY histId DESC ";
+		return Module1.sqlTable(strSql, "data", Clone: false);
+	}
 
-        }
+	public void Save()
+	{
+		string strSql = " INSERT INTO " + Module1.pubDbHistory + ".historyV2(histDate, histContent, histDescription, histType, userId, userLogin, fkeyId)  VALUES ('" + Strings.Format(DateAndTime.Now, "yyyy-MM-dd HH:mm:ss") + "','" + _content + "','" + _description + "' ," + Conversions.ToString(_historyType) + "," + Conversions.ToString(_userId) + ",'" + _userLogin + "'," + Conversions.ToString(_fKeyId) + ")";
+		Module1.sqlNonQuery(strSql, "data");
+	}
 
-        public specialname void set_Content(string value) {
+	public static DataTable Search(DateTime dateFirst, DateTime dateLast, string UserLogin, int HistoryTypeId)
+	{
+		string text = " SELECT histType as histTypeId, fkeyId, histDate, CONCAT(userLogin, ' ', histDescription) AS activity  FROM " + Module1.pubDbHistory + ".historyV2 a  WHERE histDate >= '" + Strings.Format(dateFirst, "yyyy-MM-dd") + "' AND histDate <= '" + Strings.Format(dateLast, "yyyy-MM-dd") + " 24:00:00'";
+		if (Operators.CompareString(UserLogin, "--SEMUA--", TextCompare: false) != 0)
+		{
+			text = text + " AND userLogin = '" + UserLogin + "'";
+		}
+		if (HistoryTypeId > 0)
+		{
+			text = text + " AND a.histType = " + Conversions.ToString(HistoryTypeId);
+		}
+		return Module1.sqlTable(text, "data", Clone: false);
+	}
 
-          loc_40FA25: nop
-          loc_40FA26: ldarg.0
-          loc_40FA27: ldarg.1
-          loc_40FA28: call string GCUv2.Module1::cleanString(string)
-          loc_40FA2D: stfld GCUv2.cHistory::_content
-          loc_40FA32: ret
-        }
-
-        public specialname string get_Description() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_Description(string value) {
-
-          loc_40FA4D: nop
-          loc_40FA4E: ldarg.0
-          loc_40FA4F: ldarg.1
-          loc_40FA50: call string GCUv2.Module1::cleanString(string)
-          loc_40FA55: stfld GCUv2.cHistory::_description
-          loc_40FA5A: ret
-        }
-
-        public specialname int32 get_HistoryType() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_HistoryType(int32 value) {
-
-          loc_40FA75: nop
-          loc_40FA76: ldarg.0
-          loc_40FA77: ldarg.1
-          loc_40FA78: stfld GCUv2.cHistory::_historyType
-          loc_40FA7D: ret
-        }
-
-        public specialname int32 get_UserId() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_UserId(int32 value) {
-
-          loc_40FA99: nop
-          loc_40FA9A: ldarg.0
-          loc_40FA9B: ldarg.1
-          loc_40FA9C: stfld GCUv2.cHistory::_userId
-          loc_40FAA1: ret
-        }
-
-        public specialname string get_UserLogin() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_UserLogin(string value) {
-
-          loc_40FABD: nop
-          loc_40FABE: ldarg.0
-          loc_40FABF: ldarg.1
-          loc_40FAC0: stfld GCUv2.cHistory::_userLogin
-          loc_40FAC5: ret
-        }
-
-        public specialname double get_fKeyId() {
-
-          double flt_1;
-
-        }
-
-        public specialname void set_fKeyId(double value) {
-
-          loc_40FAE1: nop
-          loc_40FAE2: ldarg.0
-          loc_40FAE3: ldarg.1
-          loc_40FAE4: stfld GCUv2.cHistory::_fKeyId
-          loc_40FAE9: ret
-        }
-
-        public static class DataTable GetHistory(int32 intFkeyId, int32 HistoryType) {
-
-          class DataTable var_1;
-          string str_1;
-
-        }
-
-        public void Save() {
-
-          string str_1;
-
-        }
-
-        public static class DataTable Search(valuetype System.DateTime dateFirst, valuetype System.DateTime dateLast, string UserLogin, int32 HistoryTypeId) {
-
-          class DataTable var_1;
-          string str_1;
-          boolean var_2;
-          boolean var_3;
-
-        }
-
-        public static class DataTable GetHistoryType() {
-
-          class DataTable var_1;
-          string str_1;
-
-        }
-
-    }
+	public static DataTable GetHistoryType()
+	{
+		string strSql = " SELECT * FROM historyType ORDER by historyTypeName ";
+		return Module1.sqlTable(strSql, "read", Clone: false);
+	}
 }

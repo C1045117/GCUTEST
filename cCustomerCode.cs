@@ -1,93 +1,119 @@
-namespace GCUv2
+using System.Data;
+using System.Runtime.CompilerServices;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+
+namespace GCUv2;
+
+public class cCustomerCode
 {
-    public class 
-    {
+	private int _id;
 
-        private int32 _id;
-        private string _name;
-        private int32 _active;
+	private string _name;
 
+	private int _active;
 
-        public specialname int32 get_Id() {
+	public int Id
+	{
+		get
+		{
+			return _id;
+		}
+		set
+		{
+			_id = value;
+		}
+	}
 
-          int32 num_1;
+	public string Name
+	{
+		get
+		{
+			return _name;
+		}
+		set
+		{
+			_name = Module1.cleanString(value);
+		}
+	}
 
-        }
+	public int Active
+	{
+		get
+		{
+			return _active;
+		}
+		set
+		{
+			_active = value;
+		}
+	}
 
-        public specialname void set_Id(int32 value) {
+	[MethodImpl(MethodImplOptions.NoInlining | MethodImplOptions.NoOptimization)]
+	public cCustomerCode(int Id)
+	{
+		if (Id > 0)
+		{
+			_id = Id;
+			DataTable dataTable = new DataTable();
+			string strSql = " SELECT *  FROM custKode  WHERE ckId = " + Conversions.ToString(_id);
+			dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+			if (dataTable.Rows.Count > 0)
+			{
+				_name = Conversions.ToString(dataTable.Rows[0]["ckName"]);
+				_active = Conversions.ToInteger(dataTable.Rows[0]["ckStatus"]);
+			}
+			else
+			{
+				_id = 0;
+				Information.Err().Raise(513, null, "Kode customer tidak ditemukan. Kemungkinan telah dihapus.");
+			}
+		}
+	}
 
-          loc_40BBDD: nop
-          loc_40BBDE: ldarg.0
-          loc_40BBDF: ldarg.1
-          loc_40BBE0: stfld GCUv2.cCustomer::_id
-          loc_40BBE5: ret
-        }
+	public void save()
+	{
+		if (_id == 0)
+		{
+			string strSql = " INSERT INTO custKode(ckName, ckStatus)  VALUES  ('" + _name + "'," + Conversions.ToString(_active) + ")";
+			Module1.sqlNonQuery(strSql, "data");
+		}
+		else
+		{
+			string strSql = " UPDATE custKode  SET ckName = '" + _name + "',  ckStatus = " + Conversions.ToString(_active) + "  WHERE ckId = " + Conversions.ToString(_id) + " ";
+			Module1.sqlNonQuery(strSql, "data");
+		}
+	}
 
-        public specialname string get_Name() {
+	public static DataTable Search(int Active)
+	{
+		string text = " SELECT *  FROM custKode  WHERE ckStatus = ckStatus ";
+		switch (Active)
+		{
+		case 0:
+			text += " AND ckStatus = 0 ";
+			break;
+		case 1:
+			text += " AND ckStatus = 1 ";
+			break;
+		}
+		text += " ORDER BY ckName ";
+		return Module1.sqlTable(text, "read", Clone: false);
+	}
 
-          string str_1;
-
-        }
-
-        public specialname void set_Name(string value) {
-
-          loc_40BC01: nop
-          loc_40BC02: ldarg.0
-          loc_40BC03: ldarg.1
-          loc_40BC04: call string GCUv2.Module1::cleanString(string)
-          loc_40BC09: stfld GCUv2.cCustomerCode::_name
-          loc_40BC0E: ret
-        }
-
-        public specialname int32 get_Active() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_Active(int32 value) {
-
-          loc_40BC29: nop
-          loc_40BC2A: ldarg.0
-          loc_40BC2B: ldarg.1
-          loc_40BC2C: stfld GCUv2.cCustomerCode::_active
-          loc_40BC31: ret
-        }
-
-        public void cCustomerCode(int32 Id) {
-
-          boolean var_1;
-          class DataTable var_2;
-          string str_1;
-          boolean var_3;
-
-        }
-
-        public void save() {
-
-          string str_1;
-          boolean var_1;
-
-        }
-
-        public static class DataTable Search(int32 Active) {
-
-          class DataTable var_1;
-          string str_1;
-          boolean var_2;
-          boolean var_3;
-
-        }
-
-        public static boolean IsExist(int32 Id, string Name) {
-
-          boolean var_1;
-          string str_1;
-          class DataTable var_2;
-          boolean var_3;
-          boolean var_4;
-
-        }
-
-    }
+	public static bool IsExist(int Id, string Name)
+	{
+		bool result = false;
+		string text = " SELECT * FROM custKode  WHERE ckName = '" + Name + "'";
+		if (Id > 0)
+		{
+			text = text + " AND ckId <> " + Conversions.ToString(Id);
+		}
+		DataTable dataTable = Module1.sqlTable(text, "read", Clone: false);
+		if (dataTable.Rows.Count > 0)
+		{
+			result = true;
+		}
+		return result;
+	}
 }

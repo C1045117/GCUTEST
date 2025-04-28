@@ -1,202 +1,352 @@
-namespace GCUv2
+using System;
+using System.Data;
+using System.Runtime.CompilerServices;
+using System.Windows.Forms;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using MySql.Data.MySqlClient;
+
+namespace GCUv2;
+
+public class cInvoiceNumber
 {
-    public class 
-    {
+	public struct NumberRange
+	{
+		public double _begin;
 
-        private int32 _salesPersonId;
-        private int32 _year;
-        private double _latestNumber;
-        private valuetype NumberRange[] _range;
-        private string _salesPersonCode;
+		public double _end;
+	}
 
-        public struct NumberRange
-        {
-            public double _begin;
-            public double _end;
-        }
+	private int _salesPersonId;
 
+	private int _year;
 
-        public specialname int32 get_SalesPersonId() {
+	private double _latestNumber;
 
-          int32 num_1;
+	private NumberRange[] _range;
 
-        }
+	private string _salesPersonCode;
 
-        public specialname void set_SalesPersonId(int32 value) {
+	public int SalesPersonId
+	{
+		get
+		{
+			return _salesPersonId;
+		}
+		set
+		{
+			_salesPersonId = value;
+		}
+	}
 
-          loc_40FD25: nop
-          loc_40FD26: ldarg.0
-          loc_40FD27: ldarg.1
-          loc_40FD28: stfld GCUv2.cHistory::_salesPersonId
-          loc_40FD2D: ret
-        }
+	public int Year
+	{
+		get
+		{
+			return _year;
+		}
+		set
+		{
+			_year = value;
+		}
+	}
 
-        public specialname int32 get_Year() {
+	public double LatestNumber
+	{
+		get
+		{
+			return _latestNumber;
+		}
+		set
+		{
+			_latestNumber = value;
+		}
+	}
 
-          int32 num_1;
+	public NumberRange[] Range
+	{
+		get
+		{
+			return _range;
+		}
+		set
+		{
+			_range = value;
+		}
+	}
 
-        }
+	public string SalesPersonCode
+	{
+		get
+		{
+			return _salesPersonCode;
+		}
+		set
+		{
+			_salesPersonCode = value;
+		}
+	}
 
-        public specialname void set_Year(int32 value) {
+	public cInvoiceNumber(int SalesPersonId, int Year)
+	{
+		if (!(SalesPersonId > 0 && Year > 0))
+		{
+			return;
+		}
+		DataTable dataTable = SearchInvoiceNumber(SalesPersonId, Year, blnAll: false, 0);
+		checked
+		{
+			_range = new NumberRange[dataTable.Rows.Count - 1 + 1];
+			int num = default(int);
+			foreach (DataRow row in dataTable.Rows)
+			{
+				_range[num]._begin = Conversion.Val(RuntimeHelpers.GetObjectValue(row["fsBegin"]));
+				_range[num]._end = Conversion.Val(RuntimeHelpers.GetObjectValue(row["fsEnd"]));
+				num++;
+			}
+			_latestNumber = GetLatestNumber(Year, SalesPersonId, 0, 1);
+			string strSql = " SELECT salesFakNo  FROM sales  WHERE salesId = " + Conversions.ToString(SalesPersonId);
+			dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+			_salesPersonCode = Conversions.ToString(dataTable.Rows[0]["salesFakNo"]);
+		}
+	}
 
-          loc_40FD49: nop
-          loc_40FD4A: ldarg.0
-          loc_40FD4B: ldarg.1
-          loc_40FD4C: stfld GCUv2.cInvoiceNumber::_year
-          loc_40FD51: ret
-        }
+	[MethodImpl(MethodImplOptions.NoInlining | MethodImplOptions.NoOptimization)]
+	public void Save()
+	{
+		int try0001_dispatch = -1;
+		int num2 = default(int);
+		MySqlTransaction val = default(MySqlTransaction);
+		int num = default(int);
+		while (true)
+		{
+			try
+			{
+				/*Note: ILSpy has introduced the following switch to emulate a goto from catch-block to try-block*/;
+				switch (try0001_dispatch)
+				{
+				default:
+				{
+					ProjectData.ClearProjectError();
+					num2 = 2;
+					val = Module1.connectData.BeginTransaction();
+					string strSql = " UPDATE sales  SET salesFakNo = '" + _salesPersonCode + "' WHERE salesId = " + Conversions.ToString(_salesPersonId);
+					Module1.sqlNonQuery(strSql, "data");
+					strSql = " DELETE FROM FakturSales  WHERE salesId = " + Conversions.ToString(_salesPersonId) + " AND fakturYear = " + Conversions.ToString(_year);
+					Module1.sqlNonQuery(strSql, "data");
+					NumberRange[] range = _range;
+					for (int i = 0; i < range.Length; i = checked(i + 1))
+					{
+						NumberRange numberRange = range[i];
+						strSql = " INSERT INTO FakturSales  (fsBegin, fsEnd, salesId, fakturYear) VALUES  ( " + Conversions.ToString(numberRange._begin) + "," + Conversions.ToString(numberRange._end) + "," + Conversions.ToString(_salesPersonId) + "," + Conversions.ToString(_year) + ")";
+						Module1.sqlNonQuery(strSql, "data");
+					}
+					strSql = " DELETE FROM FakturLatest  WHERE fakturYear = " + Conversions.ToString(_year) + " AND salesId = " + Conversions.ToString(_salesPersonId) + " AND fakturType = 1 ";
+					Module1.sqlNonQuery(strSql, "data");
+					strSql = " INSERT INTO FakturLatest(fakturYear,fakturLatestNo,salesId,branchId,fakturType) VALUES  (" + Conversions.ToString(_year) + "," + Conversions.ToString(_latestNumber) + "," + Conversions.ToString(_salesPersonId) + ",0,1)";
+					Module1.sqlNonQuery(strSql, "data");
+					val.Commit();
+					goto end_IL_0001;
+				}
+				case 570:
+					num = -1;
+					switch (num2)
+					{
+					case 2:
+						if (Operators.CompareString(Information.Err().Description, "Fatal error encountered during command execution.", TextCompare: false) != 0 && Operators.CompareString(Information.Err().Description, "The connection is not open.", TextCompare: false) != 0)
+						{
+							val.Rollback();
+						}
+						Information.Err().Raise(513, null, Information.Err().Description);
+						goto end_IL_0001;
+					}
+					break;
+				}
+				goto IL_0270;
+				end_IL_0001:;
+			}
+			catch (object obj) when (obj is Exception && num2 != 0 && num == 0)
+			{
+				ProjectData.SetProjectError((Exception)obj);
+				try0001_dispatch = 570;
+				continue;
+			}
+			break;
+			IL_0270:
+			throw ProjectData.CreateProjectError(-2146828237);
+		}
+		if (num != 0)
+		{
+			ProjectData.ClearProjectError();
+		}
+	}
 
-        public specialname double get_LatestNumber() {
+	public static DataTable SearchInvoiceNumber(int intSales, int intYear, bool blnAll, int intBranchId)
+	{
+		string strSql = ((!blnAll) ? (" SELECT * FROM FakturSales  WHERE salesId = " + Conversions.ToString(intSales) + "  AND FakturYear = " + Conversions.ToString(intYear) + "  ORDER BY CONVERT(fsBegin,SIGNED) ") : (" SELECT a.*, salesName  FROM FakturSales a, sales b WHERE a.salesId <> " + Conversions.ToString(intSales) + " AND a.salesId = b.salesId  AND FakturYear = " + Conversions.ToString(intYear) + "  AND a.salesId IN (SELECT salesId FROM sales WHERE branchId = " + Conversions.ToString(intBranchId) + ")  AND a.salesId NOT IN (SELECT salesId FROM sales WHERE salesDonation = 1)  ORDER BY CONVERT(fsBegin,SIGNED) "));
+		return Module1.sqlTable(strSql, "data", Clone: false);
+	}
 
-          double flt_1;
+	public static double GetLatestNumber(int intYear, int intSalesId, int intBranchId, int intType)
+	{
+		double result = 0.0;
+		string text = " SELECT * FROM fakturLatest  WHERE fakturYear = " + Conversions.ToString(intYear) + " AND fakturType = " + Conversions.ToString(intType);
+		switch (intType)
+		{
+		case 1:
+			text = text + " AND salesId = " + Conversions.ToString(intSalesId);
+			break;
+		case 2:
+			text = text + " AND branchId = " + Conversions.ToString(intBranchId);
+			break;
+		}
+		DataTable dataTable = Module1.sqlTable(text, "data", Clone: false);
+		if (dataTable.Rows.Count > 0)
+		{
+			result = Conversions.ToDouble(dataTable.Rows[0]["fakturLatestNo"]);
+		}
+		return result;
+	}
 
-        }
+	public static bool IsUsed(DataTable MyData, DataGridView dgvList)
+	{
+		bool flag = false;
+		checked
+		{
+			foreach (DataRow row in MyData.Rows)
+			{
+				int num = dgvList.Rows.Count - 2;
+				int i;
+				for (i = 0; i <= num; i++)
+				{
+					if ((Conversion.Val(RuntimeHelpers.GetObjectValue(dgvList[0, i].Value)) >= Conversion.Val(RuntimeHelpers.GetObjectValue(row["fsBegin"]))) & (Conversion.Val(RuntimeHelpers.GetObjectValue(dgvList[0, i].Value)) <= Conversion.Val(RuntimeHelpers.GetObjectValue(row["fsEnd"]))))
+					{
+						flag = true;
+						break;
+					}
+					if ((Conversion.Val(RuntimeHelpers.GetObjectValue(dgvList[1, i].Value)) >= Conversion.Val(RuntimeHelpers.GetObjectValue(row["fsBegin"]))) & (Conversion.Val(RuntimeHelpers.GetObjectValue(dgvList[1, i].Value)) <= Conversion.Val(RuntimeHelpers.GetObjectValue(row["fsEnd"]))))
+					{
+						flag = true;
+						break;
+					}
+				}
+				if (flag)
+				{
+					Interaction.MsgBox(Operators.ConcatenateObject(Operators.ConcatenateObject(Operators.ConcatenateObject(Operators.ConcatenateObject(Operators.ConcatenateObject(Operators.ConcatenateObject("Kelompok No Faktur ", dgvList[0, i].Value), "-"), dgvList[1, i].Value), " telah dipakai oleh sales "), row["salesName"]), ". Masukkan nomer lain."), MsgBoxStyle.Information);
+					bool flag2 = true;
+					break;
+				}
+			}
+			return flag;
+		}
+	}
 
-        public specialname void set_LatestNumber(double value) {
+	public static bool isExist(string strFaktur, bool blnFP, DateTime datInput, double intId)
+	{
+		int num = DateAndTime.Year(datInput);
+		bool flag = false;
+		if (!blnFP)
+		{
+			if (Module1.pubDuplicateSalesInvoiceNumber == -1)
+			{
+				strFaktur = Module1.FormatInvoiceNumber(strFaktur);
+			}
+			else
+			{
+				strFaktur = Module1.RemoveChar(strFaktur);
+				strFaktur = Module1.FormatTaxInvoiceNumber(strFaktur);
+			}
+			string strSql = " select PenjFaktur from Penjualan  where Year(penjDate) = " + Conversions.ToString(num) + " and penjFaktur like '%" + strFaktur + "'  and penjFp = 0  and penjId <> " + Conversions.ToString(intId) + " ";
+			DataTable dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+			if (dataTable.Rows.Count == 0)
+			{
+				flag = false;
+			}
+			else
+			{
+				string inputStr = "";
+				foreach (DataRow row in dataTable.Rows)
+				{
+					if (Module1.pubDuplicateSalesInvoiceNumber == 0)
+					{
+						inputStr = Module1.RemoveChar(Conversions.ToString(dataTable.Rows[0]["penjFaktur"]));
+					}
+					if (Conversion.Val(strFaktur) == Conversion.Val(inputStr))
+					{
+						flag = true;
+						break;
+					}
+				}
+			}
+		}
+		else
+		{
+			string strSql = " select PenjFaktur from Penjualan  where penjFaktur = '" + Module1.FormatInvoiceNumber(strFaktur) + "'  and Year(penjDate) = " + Conversions.ToString(num) + "  and penjId <> " + Conversions.ToString(intId) + " ";
+			DataTable dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+			flag = ((dataTable.Rows.Count != 0) ? true : false);
+		}
+		if (blnFP && !flag)
+		{
+			string strSql = " select PenjFP from Penjualan  where penjFP = " + Conversions.ToString(Conversion.Val(strFaktur)) + "  and Year(penjDate) = " + Conversions.ToString(num) + "  and penjId <> " + Conversions.ToString(intId) + " ";
+			DataTable dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+			if (dataTable.Rows.Count > 0)
+			{
+				flag = true;
+			}
+		}
+		return flag;
+	}
 
-          loc_40FD6D: nop
-          loc_40FD6E: ldarg.0
-          loc_40FD6F: ldarg.1
-          loc_40FD70: stfld GCUv2.cInvoiceNumber::_latestNumber
-          loc_40FD75: ret
-        }
+	public static bool isMyNumber(string strFaktur, bool blnFP, int intSalesId, int intYear)
+	{
+		strFaktur = Module1.RemoveChar(strFaktur);
+		bool result = false;
+		if (!blnFP)
+		{
+			string strSql = " select * from fakturSales  where salesId = " + Conversions.ToString(intSalesId) + "  and CONVERT(fsBegin,SIGNED) <= " + Conversions.ToString(Conversion.Val(strFaktur)) + "  and CONVERT(fsEnd,SIGNED) >= " + Conversions.ToString(Conversion.Val(strFaktur)) + "  and FakturYear = " + Conversions.ToString(intYear) + " ";
+			DataTable dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+			if (dataTable.Rows.Count > 0)
+			{
+				result = true;
+			}
+		}
+		else if (blnFP)
+		{
+			string strSql = " select * from FakturPajak  where CONVERT(fsBegin,SIGNED) <= " + Conversions.ToString(Conversion.Val(strFaktur)) + "  and CONVERT(fsEnd,SIGNED) >= " + Conversions.ToString(Conversion.Val(strFaktur)) + "  and FakturYear = " + Conversions.ToString(intYear) + "  and branchId = (select branchId from sales where salesId=" + Conversions.ToString(intSalesId) + ") ";
+			DataTable dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+			if (dataTable.Rows.Count > 0)
+			{
+				result = true;
+			}
+		}
+		return result;
+	}
 
-        public specialname valuetype NumberRange[] get_Range() {
-
-          valuetype NumberRange[] var_1;
-
-        }
-
-        public specialname void set_Range(valuetype NumberRange[] value) {
-
-          loc_40FD91: nop
-          loc_40FD92: ldarg.0
-          loc_40FD93: ldarg.1
-          loc_40FD94: stfld GCUv2.cInvoiceNumber::_range
-          loc_40FD99: ret
-        }
-
-        public specialname string get_SalesPersonCode() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_SalesPersonCode(string value) {
-
-          loc_40FDB5: nop
-          loc_40FDB6: ldarg.0
-          loc_40FDB7: ldarg.1
-          loc_40FDB8: stfld GCUv2.cInvoiceNumber::_salesPersonCode
-          loc_40FDBD: ret
-        }
-
-        public void cInvoiceNumber(int32 SalesPersonId, int32 Year) {
-
-          boolean var_1;
-          class DataTable var_2;
-          string str_1;
-          int32 num_1;
-          class System.Collections.IEnumerator var_3;
-          class DataRow var_4;
-          boolean var_5;
-
-        }
-
-        public void Save() {
-
-          int32 num_1;
-          int32 num_2;
-          string str_1;
-          class MySqlClient.MySqlTransaction var_1;
-          valuetype NumberRange[] var_2;
-          int32 num_3;
-          valuetype NumberRange var_3;
-          boolean var_4;
-          boolean var_5;
-
-        }
-
-        public static class DataTable SearchInvoiceNumber(int32 intSales, int32 intYear, boolean blnAll, int32 intBranchId) {
-
-          class DataTable var_1;
-          string str_1;
-          boolean var_2;
-
-        }
-
-        public static double GetLatestNumber(int32 intYear, int32 intSalesId, int32 intBranchId, int32 intType) {
-
-          double flt_1;
-          string str_1;
-          class DataTable var_1;
-          boolean var_2;
-          boolean var_3;
-          boolean var_4;
-
-        }
-
-        public static boolean IsUsed(class DataTable MyData, class DataGridView dgvList) {
-
-          boolean var_1;
-          int32 num_1;
-          boolean var_2;
-          class System.Collections.IEnumerator var_3;
-          class DataRow var_4;
-          int32 num_2;
-          boolean var_5;
-          boolean var_6;
-          boolean var_7;
-          boolean var_8;
-
-        }
-
-        public static boolean isExist(string strFaktur, boolean blnFP, valuetype System.DateTime datInput, double intId) {
-
-          boolean var_1;
-          string str_1;
-          class DataTable var_2;
-          int32 num_1;
-          boolean var_3;
-          boolean var_4;
-          boolean var_5;
-          string str_2;
-          class System.Collections.IEnumerator var_6;
-          class DataRow var_7;
-          boolean var_8;
-          boolean var_9;
-          boolean var_10;
-          boolean var_11;
-          boolean var_12;
-          boolean var_13;
-
-        }
-
-        public static boolean isMyNumber(string strFaktur, boolean blnFP, int32 intSalesId, int32 intYear) {
-
-          boolean var_1;
-          string str_1;
-          class DataTable var_2;
-          boolean var_3;
-          boolean var_4;
-          boolean var_5;
-          boolean var_6;
-
-        }
-
-        public static boolean isMyCode(string strFaktur, boolean blnFP, int32 intSalesId) {
-
-          boolean var_1;
-          string str_1;
-          string str_2;
-          class DataTable var_2;
-          boolean var_3;
-          boolean var_4;
-          boolean var_5;
-          boolean var_6;
-          boolean var_7;
-
-        }
-
-    }
+	public static bool isMyCode(string strFaktur, bool blnFP, int intSalesId)
+	{
+		bool result = false;
+		string startingChar = Module1.GetStartingChar(Module1.cleanString(strFaktur));
+		if (!blnFP)
+		{
+			strFaktur = Module1.RemoveChar(strFaktur);
+			string strSql = " select salesId from Sales  where salesId = " + Conversions.ToString(intSalesId) + "  and salesFakNo = '" + startingChar + "' ";
+			DataTable dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+			if (dataTable.Rows.Count > 0)
+			{
+				result = true;
+			}
+		}
+		else if (blnFP)
+		{
+			if (Operators.CompareString(startingChar, "", TextCompare: false) == 0)
+			{
+				result = true;
+			}
+		}
+		else if (Operators.CompareString(startingChar, "IT", TextCompare: false) == 0)
+		{
+			result = true;
+		}
+		return result;
+	}
 }

@@ -1,112 +1,132 @@
-namespace GCUv2
+using System.Data;
+using Microsoft.VisualBasic.CompilerServices;
+
+namespace GCUv2;
+
+public class cItemCategory
 {
-    public class 
-    {
+	private int _id;
 
-        private int32 _id;
-        private string _name;
-        private int32 _active;
-        private boolean _used;
+	private string _name;
 
+	private int _active;
 
-        public specialname int32 get_Id() {
+	private bool _used;
 
-          int32 num_1;
+	public int Id
+	{
+		get
+		{
+			return _id;
+		}
+		set
+		{
+			_id = value;
+		}
+	}
 
-        }
+	public string Name
+	{
+		get
+		{
+			return _name;
+		}
+		set
+		{
+			_name = value;
+		}
+	}
 
-        public specialname void set_Id(int32 value) {
+	public int Active
+	{
+		get
+		{
+			return _active;
+		}
+		set
+		{
+			_active = value;
+		}
+	}
 
-          loc_415955: nop
-          loc_415956: ldarg.0
-          loc_415957: ldarg.1
-          loc_415958: stfld GCUv2.cItem::_id
-          loc_41595D: ret
-        }
+	public bool Used
+	{
+		get
+		{
+			return _used;
+		}
+		set
+		{
+			_used = value;
+		}
+	}
 
-        public specialname string get_Name() {
+	public override string ToString()
+	{
+		return _name;
+	}
 
-          string str_1;
+	public cItemCategory(int CatId)
+	{
+		if (CatId > 0)
+		{
+			_id = CatId;
+			DataTable dataTable = new DataTable();
+			string strSql = " SELECT *  FROM itemcategory  WHERE catId = " + Conversions.ToString(_id) + " ORDER BY catName ";
+			dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+			if (dataTable.Rows.Count > 0)
+			{
+				_name = Conversions.ToString(dataTable.Rows[0]["catName"]);
+				_active = Conversions.ToInteger(dataTable.Rows[0]["catActive"]);
+			}
+			strSql = " SELECT catId  FROM produk  WHERE catId = " + Conversions.ToString(_id);
+			dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+			if (dataTable.Rows.Count > 0)
+			{
+				_used = true;
+			}
+			else
+			{
+				_used = false;
+			}
+		}
+	}
 
-        }
+	public static DataTable getItemCategory(int GroupId, bool Active)
+	{
+		string text = " SELECT catId, catName  FROM itemCategory  WHERE catId = catId ";
+		if (Active)
+		{
+			text += " AND catActive = 1 ";
+		}
+		if (GroupId > 0)
+		{
+			text = text + " AND catId IN (SELECT catId FROM group_itemcategory WHERE groupId = " + Conversions.ToString(GroupId) + ")";
+		}
+		text += " ORDER BY catName ";
+		return Module1.sqlTable(text, "read", Clone: false);
+	}
 
-        public specialname void set_Name(string value) {
+	public void Save()
+	{
+		if (_id == 0)
+		{
+			string strSql = " INSERT INTO itemcategory  (catName,catActive) VALUES  ('" + _name + "'," + Conversions.ToString(_active) + ")";
+			Module1.sqlNonQuery(strSql, "data");
+		}
+		else
+		{
+			string strSql = " UPDATE itemcategory  SET catName = '" + _name + "',  catActive = " + Conversions.ToString(_active) + " WHERE catId = " + Conversions.ToString(_id);
+			Module1.sqlNonQuery(strSql, "data");
+		}
+	}
 
-          loc_415979: nop
-          loc_41597A: ldarg.0
-          loc_41597B: ldarg.1
-          loc_41597C: stfld GCUv2.cItemCategory::_name
-          loc_415981: ret
-        }
-
-        public specialname int32 get_Active() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_Active(int32 value) {
-
-          loc_41599D: nop
-          loc_41599E: ldarg.0
-          loc_41599F: ldarg.1
-          loc_4159A0: stfld GCUv2.cItemCategory::_active
-          loc_4159A5: ret
-        }
-
-        public specialname boolean get_Used() {
-
-          boolean var_1;
-
-        }
-
-        public specialname void set_Used(boolean value) {
-
-          loc_4159C1: nop
-          loc_4159C2: ldarg.0
-          loc_4159C3: ldarg.1
-          loc_4159C4: stfld GCUv2.cItemCategory::_used
-          loc_4159C9: ret
-        }
-
-        public override strict string ToString() {
-
-          string str_1;
-
-        }
-
-        public void cItemCategory(int32 CatId) {
-
-          boolean var_1;
-          class DataTable var_2;
-          string str_1;
-          boolean var_3;
-          boolean var_4;
-
-        }
-
-        public static class DataTable getItemCategory(int32 GroupId, boolean Active) {
-
-          class DataTable var_1;
-          string str_1;
-          boolean var_2;
-          boolean var_3;
-
-        }
-
-        public void Save() {
-
-          string str_1;
-          boolean var_1;
-
-        }
-
-        public void Delete() {
-
-          string str_1;
-          boolean var_1;
-
-        }
-
-    }
+	public void Delete()
+	{
+		if (!_used)
+		{
+			string strSql = " DELETE FROM itemcategory  WHERE catId = " + Conversions.ToString(_id);
+			Module1.sqlNonQuery(strSql, "data");
+		}
+	}
 }

@@ -1,315 +1,400 @@
-using mscorlib;
+using System;
+using System.Data;
+using System.Runtime.CompilerServices;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using MySql.Data.MySqlClient;
 
-namespace GCUv2
+namespace GCUv2;
+
+public class cSalesReceipt
 {
-    public class 
-    {
-
-        private double _id;
-        private int32 _number;
-        private int32 _month;
-        private int32 _year;
-        private valuetype System.DateTime _receiptDate;
-        private double _amount;
-        private string _receiveFrom;
-        private string _name;
-        private string _city;
-        private valuetype SalesInvoice[] _invoice;
-        private double _customerId;
-        private string _customerName;
-        private string _customerAddress;
-        private string _customerPT;
-
-        public struct SalesInvoice
-        {
-            public double _id;
-            public string _number;
-            public valuetype System.DateTime _date;
-            public double _amount;
-        }
-
-
-        public specialname double get_Id() {
-
-          double flt_1;
-
-        }
-
-        public specialname void set_Id(double value) {
-
-          loc_4232BD: nop
-          loc_4232BE: ldarg.0
-          loc_4232BF: ldarg.1
-          loc_4232C0: stfld GCUv2.cSalesPriceCodeItem::_id
-          loc_4232C5: ret
-        }
-
-        public specialname int32 get_Number() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_Number(int32 value) {
-
-          loc_4232E1: nop
-          loc_4232E2: ldarg.0
-          loc_4232E3: ldarg.1
-          loc_4232E4: stfld GCUv2.cSalesReceipt::_number
-          loc_4232E9: ret
-        }
-
-        public specialname int32 get_ReceiptMonth() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_ReceiptMonth(int32 value) {
-
-          loc_423305: nop
-          loc_423306: ldarg.0
-          loc_423307: ldarg.1
-          loc_423308: stfld GCUv2.cSalesReceipt::_month
-          loc_42330D: ret
-        }
-
-        public specialname int32 get_ReceiptYear() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_ReceiptYear(int32 value) {
-
-          loc_423329: nop
-          loc_42332A: ldarg.0
-          loc_42332B: ldarg.1
-          loc_42332C: stfld GCUv2.cSalesReceipt::_year
-          loc_423331: ret
-        }
-
-        public specialname valuetype System.DateTime get_ReceiptDate() {
-
-          valuetype System.DateTime var_1;
-
-        }
-
-        public specialname void set_ReceiptDate(valuetype System.DateTime value) {
-
-          loc_42334D: nop
-          loc_42334E: ldarg.0
-          loc_42334F: ldarg.1
-          loc_423350: stfld GCUv2.cSalesReceipt::_receiptDate
-          loc_423355: ret
-        }
-
-        public specialname double get_Amount() {
-
-          double flt_1;
-
-        }
-
-        public specialname void set_Amount(double value) {
-
-          loc_423371: nop
-          loc_423372: ldarg.0
-          loc_423373: ldarg.1
-          loc_423374: stfld GCUv2.cSalesReceipt::_amount
-          loc_423379: ret
-        }
-
-        public specialname string get_ReceiveFrom() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_ReceiveFrom(string value) {
-
-          loc_423395: nop
-          loc_423396: ldarg.0
-          loc_423397: ldarg.1
-          loc_423398: stfld GCUv2.cSalesReceipt::_receiveFrom
-          loc_42339D: ret
-        }
-
-        public specialname string get_Name() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_Name(string value) {
-
-          loc_4233B9: nop
-          loc_4233BA: ldarg.0
-          loc_4233BB: ldarg.1
-          loc_4233BC: call string GCUv2.Module1::cleanString(string)
-          loc_4233C1: stfld GCUv2.cSalesReceipt::_name
-          loc_4233C6: ret
-        }
-
-        public specialname string get_City() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_City(string value) {
-
-          loc_4233E1: nop
-          loc_4233E2: ldarg.0
-          loc_4233E3: ldarg.1
-          loc_4233E4: call string GCUv2.Module1::cleanString(string)
-          loc_4233E9: stfld GCUv2.cSalesReceipt::_city
-          loc_4233EE: ret
-        }
-
-        public specialname valuetype SalesInvoice[] get_Invoice() {
-
-          valuetype SalesInvoice[] var_1;
-
-        }
-
-        public specialname void set_Invoice(valuetype SalesInvoice[] value) {
-
-          loc_423409: nop
-          loc_42340A: ldarg.0
-          loc_42340B: ldarg.1
-          loc_42340C: stfld GCUv2.cSalesReceipt::_invoice
-          loc_423411: ret
-        }
-
-        public specialname double get_CustomerId() {
-
-          double flt_1;
-
-        }
-
-        public specialname void set_CustomerId(double value) {
-
-          loc_42342D: nop
-          loc_42342E: ldarg.0
-          loc_42342F: ldarg.1
-          loc_423430: stfld GCUv2.cSalesReceipt::_customerId
-          loc_423435: ret
-        }
-
-        public specialname string get_CustomerName() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_CustomerName(string value) {
-
-          loc_423451: nop
-          loc_423452: ldarg.0
-          loc_423453: ldarg.1
-          loc_423454: stfld GCUv2.cSalesReceipt::_customerName
-          loc_423459: ret
-        }
-
-        public specialname string get_CustomerAddress() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_CustomerAddress(string value) {
-
-          loc_423475: nop
-          loc_423476: ldarg.0
-          loc_423477: ldarg.1
-          loc_423478: stfld GCUv2.cSalesReceipt::_customerAddress
-          loc_42347D: ret
-        }
-
-        public specialname string get_CustomerPT() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_CustomerPT(string value) {
-
-          loc_423499: nop
-          loc_42349A: ldarg.0
-          loc_42349B: ldarg.1
-          loc_42349C: stfld GCUv2.cSalesReceipt::_customerPT
-          loc_4234A1: ret
-        }
-
-        public void cSalesReceipt(double Id) {
-
-          boolean var_1;
-          class DataTable var_2;
-          string str_1;
-          int32 num_1;
-          boolean var_3;
-          class System.Collections.IEnumerator var_4;
-          class DataRow var_5;
-          boolean var_6;
-
-        }
-
-        public static class DataTable Search(int32 Range, valuetype System.DateTime FirstDate, valuetype System.DateTime LastDate, double CustomerId, int32 StorageId, int32 BranchId, int32 GroupId) {
-
-          class DataTable var_1;
-          string str_1;
-          boolean var_2;
-          boolean var_3;
-          boolean var_4;
-          boolean var_5;
-          boolean var_6;
-          boolean var_7;
-
-        }
-
-        public static object FormatSalesReceiptNumber(string ReceiptCode, int32 ReceiptNumber, int32 Month, int32 Year) {
-
-          object var_1;
-
-        }
-
-        public void Save() {
-
-          int32 num_1;
-          int32 num_2;
-          string str_1;
-          class MySqlClient.MySqlTransaction var_1;
-          boolean var_2;
-          valuetype SalesInvoice[] var_3;
-          int32 num_3;
-          valuetype SalesInvoice var_4;
-          boolean var_5;
-          boolean var_6;
-
-        }
-
-        public void Delete() {
-
-          string str_1;
-
-        }
-
-        private string GenerateNewNumber() {
-
-          string str_1;
-          string str_2;
-          class DataTable var_1;
-          int32 num_1;
-          boolean var_2;
-
-        }
-
-        public static class DataTable GetReceiptCandidate(int32 CustomerId, int32 GroupId) {
-
-          class DataTable var_1;
-          string str_1;
-
-        }
-
-    }
+	public struct SalesInvoice
+	{
+		public double _id;
+
+		public string _number;
+
+		public DateTime _date;
+
+		public double _amount;
+	}
+
+	private double _id;
+
+	private int _number;
+
+	private int _month;
+
+	private int _year;
+
+	private DateTime _receiptDate;
+
+	private double _amount;
+
+	private string _receiveFrom;
+
+	private string _name;
+
+	private string _city;
+
+	private SalesInvoice[] _invoice;
+
+	private double _customerId;
+
+	private string _customerName;
+
+	private string _customerAddress;
+
+	private string _customerPT;
+
+	public double Id
+	{
+		get
+		{
+			return _id;
+		}
+		set
+		{
+			_id = value;
+		}
+	}
+
+	public int Number
+	{
+		get
+		{
+			return _number;
+		}
+		set
+		{
+			_number = value;
+		}
+	}
+
+	public int ReceiptMonth
+	{
+		get
+		{
+			return _month;
+		}
+		set
+		{
+			_month = value;
+		}
+	}
+
+	public int ReceiptYear
+	{
+		get
+		{
+			return _year;
+		}
+		set
+		{
+			_year = value;
+		}
+	}
+
+	public DateTime ReceiptDate
+	{
+		get
+		{
+			return _receiptDate;
+		}
+		set
+		{
+			_receiptDate = value;
+		}
+	}
+
+	public double Amount
+	{
+		get
+		{
+			return _amount;
+		}
+		set
+		{
+			_amount = value;
+		}
+	}
+
+	public string ReceiveFrom
+	{
+		get
+		{
+			return _receiveFrom;
+		}
+		set
+		{
+			_receiveFrom = value;
+		}
+	}
+
+	public string Name
+	{
+		get
+		{
+			return _name;
+		}
+		set
+		{
+			_name = Module1.cleanString(value);
+		}
+	}
+
+	public string City
+	{
+		get
+		{
+			return _city;
+		}
+		set
+		{
+			_city = Module1.cleanString(value);
+		}
+	}
+
+	public SalesInvoice[] Invoice
+	{
+		get
+		{
+			return _invoice;
+		}
+		set
+		{
+			_invoice = value;
+		}
+	}
+
+	public double CustomerId
+	{
+		get
+		{
+			return _customerId;
+		}
+		set
+		{
+			_customerId = value;
+		}
+	}
+
+	public string CustomerName
+	{
+		get
+		{
+			return _customerName;
+		}
+		set
+		{
+			_customerName = value;
+		}
+	}
+
+	public string CustomerAddress
+	{
+		get
+		{
+			return _customerAddress;
+		}
+		set
+		{
+			_customerAddress = value;
+		}
+	}
+
+	public string CustomerPT
+	{
+		get
+		{
+			return _customerPT;
+		}
+		set
+		{
+			_customerPT = value;
+		}
+	}
+
+	[MethodImpl(MethodImplOptions.NoInlining | MethodImplOptions.NoOptimization)]
+	public cSalesReceipt(double Id)
+	{
+		if (!(Id > 0.0))
+		{
+			return;
+		}
+		_id = Id;
+		DataTable dataTable = new DataTable();
+		string strSql = " SELECT *  FROM kuitansi  WHERE kuiId = " + Conversions.ToString(_id);
+		dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+		if (dataTable.Rows.Count > 0)
+		{
+			_number = Conversions.ToInteger(dataTable.Rows[0]["kuiNo"]);
+			_month = Conversions.ToInteger(dataTable.Rows[0]["kuiMonth"]);
+			_year = Conversions.ToInteger(dataTable.Rows[0]["kuiYear"]);
+			_receiptDate = Conversions.ToDate(dataTable.Rows[0]["kuiDate"]);
+			_receiveFrom = Conversions.ToString(dataTable.Rows[0]["kuiReceived"]);
+			_amount = Conversions.ToDouble(dataTable.Rows[0]["kuiAmount"]);
+			_name = Conversions.ToString(dataTable.Rows[0]["kuiName"]);
+			_city = Conversions.ToString(dataTable.Rows[0]["kuiCity"]);
+		}
+		else
+		{
+			_id = 0.0;
+			Information.Err().Raise(513, null, "Kuitansi tidak ditemukan. Kemungkinan telah dihapus.");
+		}
+		strSql = " SELECT penjId, penjFaktur, penjDate,  penjTotal-penjDisc AS amount, a.custId, custName,  custAddress, custPT  FROM penjualan a, customer b WHERE a.custId = b.custId  AND penjId IN(  SELECT penjId FROM penjKui  WHERE kuiId = " + Conversions.ToString(_id) + ")";
+		int num = 0;
+		dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+		checked
+		{
+			_invoice = new SalesInvoice[dataTable.Rows.Count - 1 + 1];
+			foreach (DataRow row in dataTable.Rows)
+			{
+				_invoice[num]._id = Conversions.ToDouble(row["penjId"]);
+				_invoice[num]._date = Conversions.ToDate(row["penjDate"]);
+				_invoice[num]._number = Conversions.ToString(row["penjFaktur"]);
+				_invoice[num]._amount = Conversions.ToDouble(row["amount"]);
+				_customerId = Conversions.ToDouble(row["custId"]);
+				_customerName = Conversions.ToString(row["custName"]);
+				_customerAddress = Conversions.ToString(row["custAddress"]);
+				_customerPT = Conversions.ToString(row["custPT"]);
+				num++;
+			}
+		}
+	}
+
+	public static DataTable Search(int Range, DateTime FirstDate, DateTime LastDate, double CustomerId, int StorageId, int BranchId, int GroupId)
+	{
+		string text = " SELECT DISTINCT a.*,IF(kuiAmount <= 250000,3000,6000) as meterai, d.custName, d.custPT, c.custId  FROM kuitansi a, penjKui b, penjualan c, customer d  WHERE a.kuiId = b.kuiId  AND b.penjId = c.penjId  AND c.custId = d.custId ";
+		if (Range == 1)
+		{
+			text = text + " AND kuiDate >= '" + Strings.Format(FirstDate, "yyyy-MM-dd") + "'  AND kuiDate <= '" + Strings.Format(LastDate, "yyyy-MM-dd") + "' ";
+		}
+		if (CustomerId > 0.0)
+		{
+			text = text + " AND (d.custId = " + Conversions.ToString(CustomerId) + " OR custParentId = " + Conversions.ToString(CustomerId) + ")";
+		}
+		if (StorageId > 0)
+		{
+			text = text + " AND c.storeId = " + Conversions.ToString(StorageId) + " ";
+		}
+		else
+		{
+			text = text + " AND c.storeId IN (SELECT storeId FROM GroupStorage WHERE groupId = " + Conversions.ToString(GroupId) + " AND generalDropDown = 1) ";
+			if (BranchId > 0)
+			{
+				text = text + " AND d.branchId = " + Conversions.ToString(BranchId) + " ";
+			}
+		}
+		return Module1.sqlTable(Range switch
+		{
+			2 => text + " ORDER BY kuiId DESC LIMIT 100 ", 
+			3 => text + " ORDER BY kuiDate DESC ", 
+			_ => text + " ORDER BY kuiYear, kuiMonth, kuiNo ", 
+		}, "data", Clone: false);
+	}
+
+	public static object FormatSalesReceiptNumber(string ReceiptCode, int ReceiptNumber, int Month, int Year)
+	{
+		return Conversions.ToString(ReceiptNumber) + "/" + ReceiptCode + "/" + Module1.ConvertToRoman(Month) + "/" + Conversions.ToString(Year);
+	}
+
+	[MethodImpl(MethodImplOptions.NoInlining | MethodImplOptions.NoOptimization)]
+	public void Save()
+	{
+		int try0001_dispatch = -1;
+		int num2 = default(int);
+		MySqlTransaction val = default(MySqlTransaction);
+		int num = default(int);
+		while (true)
+		{
+			try
+			{
+				/*Note: ILSpy has introduced the following switch to emulate a goto from catch-block to try-block*/;
+				switch (try0001_dispatch)
+				{
+				default:
+				{
+					ProjectData.ClearProjectError();
+					num2 = 2;
+					val = Module1.connectData.BeginTransaction();
+					if (_id == 0.0)
+					{
+						_number = Conversions.ToInteger(GenerateNewNumber());
+						string strSql = " INSERT INTO kuitansi  (kuiDate,kuiNo,kuiMonth,  kuiYear,kuiAmount,kuiReceived,  kuiName,kuiCity) VALUES  ('" + Strings.Format(_receiptDate, "yyyy-MM-dd") + "','" + Conversions.ToString(_number) + "'," + Conversions.ToString(_month) + "," + Conversions.ToString(_year) + "," + Module1.unformatNumber(Conversions.ToString(_amount)) + ",'" + _receiveFrom + "','" + _name + "','" + _city + "')";
+						Module1.sqlNonQuery(strSql, "data");
+						_id = cDatabase.LastId("data");
+					}
+					else
+					{
+						string strSql = " UPDATE kuitansi  SET kuiAmount = " + Module1.unformatNumber(Conversions.ToString(_amount)) + ", kuiName = '" + _name + "', kuiCity = '" + _city + "' WHERE kuiId = " + Conversions.ToString(_id);
+						Module1.sqlNonQuery(strSql, "data");
+						strSql = " DELETE FROM penjKui  WHERE kuiId = " + Conversions.ToString(_id);
+						Module1.sqlNonQuery(strSql, "data");
+					}
+					SalesInvoice[] invoice = _invoice;
+					for (int i = 0; i < invoice.Length; i = checked(i + 1))
+					{
+						SalesInvoice salesInvoice = invoice[i];
+						string strSql = " INSERT INTO penjKui  (penjId, kuiId) VALUES  ( " + Conversions.ToString(salesInvoice._id) + "," + Conversions.ToString(_id) + ")";
+						Module1.sqlNonQuery(strSql, "data");
+					}
+					val.Commit();
+					goto end_IL_0001;
+				}
+				case 676:
+					num = -1;
+					switch (num2)
+					{
+					case 2:
+						if (Operators.CompareString(Information.Err().Description, "Fatal error encountered during command execution.", TextCompare: false) != 0 && Operators.CompareString(Information.Err().Description, "The connection is not open.", TextCompare: false) != 0)
+						{
+							val.Rollback();
+						}
+						Information.Err().Raise(513, null, Information.Err().Description);
+						goto end_IL_0001;
+					}
+					break;
+				}
+				goto IL_02da;
+				end_IL_0001:;
+			}
+			catch (object obj) when (obj is Exception && num2 != 0 && num == 0)
+			{
+				ProjectData.SetProjectError((Exception)obj);
+				try0001_dispatch = 676;
+				continue;
+			}
+			break;
+			IL_02da:
+			throw ProjectData.CreateProjectError(-2146828237);
+		}
+		if (num != 0)
+		{
+			ProjectData.ClearProjectError();
+		}
+	}
+
+	public void Delete()
+	{
+		string strSql = " DELETE FROM kuitansi WHERE kuiId = " + Conversions.ToString(_id);
+		Module1.sqlNonQuery(strSql, "data");
+		strSql = " DELETE FROM penjKui WHERE kuiId = " + Conversions.ToString(_id);
+		Module1.sqlNonQuery(strSql, "data");
+	}
+
+	private string GenerateNewNumber()
+	{
+		string strSql = " SELECT kuiNo FROM kuitansi  WHERE YEAR(kuiDate) = " + Conversions.ToString(DateAndTime.Year(_receiptDate)) + " AND MONTH(kuiDate) = " + Conversions.ToString(DateAndTime.Month(_receiptDate)) + " ORDER BY kuiNo DESC LIMIT 1 ";
+		DataTable dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+		int num = ((dataTable.Rows.Count <= 0) ? 1 : Conversions.ToInteger(Operators.AddObject(dataTable.Rows[0]["kuiNo"], 1)));
+		return Conversions.ToString(num);
+	}
+
+	public static DataTable GetReceiptCandidate(int CustomerId, int GroupId)
+	{
+		string strSql = " SELECT penjId, penjDate, penjFaktur, penjTotal-penjDisc AS amount  FROM penjualan  WHERE custId = " + Conversions.ToString(CustomerId) + " AND (penjTotal-penjBs-penjDisc-penjPot-penjBayar) > 0  AND penjId NOT IN (SELECT penjId FROM penjKui)  AND storeId IN (SELECT storeId FROM GroupStorage WHERE groupId = " + Conversions.ToString(GroupId) + " AND generalDropDown = 1) AND penjBsType = 0  ORDER BY penjDate DESC ";
+		return Module1.sqlTable(strSql, "data", Clone: false);
+	}
 }

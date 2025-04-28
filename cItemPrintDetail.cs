@@ -1,113 +1,106 @@
-namespace GCUv2
+using System.Data;
+using Microsoft.VisualBasic.CompilerServices;
+
+namespace GCUv2;
+
+public class cItemPrintDetail
 {
-    public class 
-    {
+	private string _generalType;
 
-        private string _generalType;
-        private string _longName;
-        private string _packaging;
-        private string _smallUnit;
-        private double _smallQtyMultiplier;
-        private string _largeUnit;
+	private string _longName;
 
+	private string _packaging;
 
-        public specialname string get_GeneralType() {
+	private string _smallUnit;
 
-          string str_1;
+	private double _smallQtyMultiplier;
 
-        }
+	private string _largeUnit;
 
-        public specialname void set_GeneralType(string value) {
+	public string GeneralType
+	{
+		get
+		{
+			return _generalType;
+		}
+		set
+		{
+			_generalType = value;
+		}
+	}
 
-          loc_410D2D: nop
-          loc_410D2E: ldarg.0
-          loc_410D2F: ldarg.1
-          loc_410D30: stfld GCUv2.cItemComponent::_generalType
-          loc_410D35: ret
-        }
+	public string LongName
+	{
+		get
+		{
+			return _longName;
+		}
+		set
+		{
+			_longName = value;
+		}
+	}
 
-        public specialname string get_LongName() {
+	public string Packaging
+	{
+		get
+		{
+			return _packaging;
+		}
+		set
+		{
+			_packaging = value;
+		}
+	}
 
-          string str_1;
+	public string SmallUnit
+	{
+		get
+		{
+			return _smallUnit;
+		}
+		set
+		{
+			_smallUnit = value;
+		}
+	}
 
-        }
+	public double SmallQtyMultiplier
+	{
+		get
+		{
+			return _smallQtyMultiplier;
+		}
+		set
+		{
+			_smallQtyMultiplier = value;
+		}
+	}
 
-        public specialname void set_LongName(string value) {
+	public string LargeUnit
+	{
+		get
+		{
+			return _largeUnit;
+		}
+		set
+		{
+			_largeUnit = value;
+		}
+	}
 
-          loc_410D51: nop
-          loc_410D52: ldarg.0
-          loc_410D53: ldarg.1
-          loc_410D54: stfld GCUv2.cItemPrintDetail::_longName
-          loc_410D59: ret
-        }
-
-        public specialname string get_Packaging() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_Packaging(string value) {
-
-          loc_410D75: nop
-          loc_410D76: ldarg.0
-          loc_410D77: ldarg.1
-          loc_410D78: stfld GCUv2.cItemPrintDetail::_packaging
-          loc_410D7D: ret
-        }
-
-        public specialname string get_SmallUnit() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_SmallUnit(string value) {
-
-          loc_410D99: nop
-          loc_410D9A: ldarg.0
-          loc_410D9B: ldarg.1
-          loc_410D9C: stfld GCUv2.cItemPrintDetail::_smallUnit
-          loc_410DA1: ret
-        }
-
-        public specialname double get_SmallQtyMultiplier() {
-
-          double flt_1;
-
-        }
-
-        public specialname void set_SmallQtyMultiplier(double value) {
-
-          loc_410DBD: nop
-          loc_410DBE: ldarg.0
-          loc_410DBF: ldarg.1
-          loc_410DC0: stfld GCUv2.cItemPrintDetail::_smallQtyMultiplier
-          loc_410DC5: ret
-        }
-
-        public specialname string get_LargeUnit() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_LargeUnit(string value) {
-
-          loc_410DE1: nop
-          loc_410DE2: ldarg.0
-          loc_410DE3: ldarg.1
-          loc_410DE4: stfld GCUv2.cItemPrintDetail::_largeUnit
-          loc_410DE9: ret
-        }
-
-        public void cItemPrintDetail(int32 ItemId) {
-
-          string str_1;
-          class DataTable var_1;
-          boolean var_2;
-
-        }
-
-    }
+	public cItemPrintDetail(int ItemId)
+	{
+		string strSql = " SELECT IF(a.prodTea=1,'Teh GOPEK','') as generalType, a.prodLongName, a.prodBox,  smallUnit.unitName AS smallUnitName, smallUnit.unitQty AS smallUnitQty, largeUnit.unitName AS largeUnitName FROM produk a, (SELECT * FROM itemUnit WHERE unitQty > 0 AND itemId = " + Conversions.ToString(ItemId) + " ORDER BY unitQty ASC LIMIT 1) smallUnit,  (SELECT * FROM itemUnit WHERE unitQty = 1 AND itemId = " + Conversions.ToString(ItemId) + " ORDER BY unitQty DESC LIMIT 1) largeUnit  WHERE a.prodId = " + Conversions.ToString(ItemId);
+		DataTable dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+		if (dataTable.Rows.Count > 0)
+		{
+			_generalType = Conversions.ToString(dataTable.Rows[0]["generalType"]);
+			_longName = Conversions.ToString(dataTable.Rows[0]["prodLongName"]);
+			_packaging = Conversions.ToString(dataTable.Rows[0]["prodBox"]);
+			_smallUnit = Conversions.ToString(dataTable.Rows[0]["smallUnitName"]);
+			_smallQtyMultiplier = Conversions.ToDouble(dataTable.Rows[0]["smallUnitQty"]);
+			_largeUnit = Conversions.ToString(dataTable.Rows[0]["largeUnitName"]);
+		}
+	}
 }

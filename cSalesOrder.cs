@@ -1,362 +1,438 @@
-using mscorlib;
+using System;
+using System.Data;
+using System.Runtime.CompilerServices;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using MySql.Data.MySqlClient;
 
-namespace GCUv2
+namespace GCUv2;
+
+public class cSalesOrder
 {
-    public class 
-    {
-
-        private double _id;
-        private valuetype System.DateTime _soDate;
-        private valuetype System.DateTime _expiredDate;
-        private string _soNumber;
-        private string _poNumber;
-        private double _totalPrice;
-        private double _discount;
-        private string _discountDescription;
-        private string _note;
-        private valuetype System.DateTime _createdDate;
-        private class GCUv2.cSalesOrderItem[] _item;
-        private double _customerId;
-        private string _customerName;
-        private string _customerAddress;
-        private int32 _branchId;
-        private double _invoiceId;
-        private string _invoiceNumber;
-        private int32 _discountId;
-
-
-        public specialname double get_Id() {
-
-          double flt_1;
-
-        }
-
-        public specialname void set_Id(double value) {
-
-          loc_4214D9: nop
-          loc_4214DA: ldarg.0
-          loc_4214DB: ldarg.1
-          loc_4214DC: stfld GCUv2.cSalesInvoiceReturn::_id
-          loc_4214E1: ret
-        }
-
-        public specialname valuetype System.DateTime get_SODate() {
-
-          valuetype System.DateTime var_1;
-
-        }
-
-        public specialname void set_SODate(valuetype System.DateTime value) {
-
-          loc_4214FD: nop
-          loc_4214FE: ldarg.0
-          loc_4214FF: ldarg.1
-          loc_421500: stfld GCUv2.cSalesOrder::_soDate
-          loc_421505: ret
-        }
-
-        public specialname valuetype System.DateTime get_ExpiredDate() {
-
-          valuetype System.DateTime var_1;
-
-        }
-
-        public specialname void set_ExpiredDate(valuetype System.DateTime value) {
-
-          loc_421521: nop
-          loc_421522: ldarg.0
-          loc_421523: ldarg.1
-          loc_421524: stfld GCUv2.cSalesOrder::_expiredDate
-          loc_421529: ret
-        }
-
-        public specialname string get_SONumber() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_SONumber(string value) {
-
-          loc_421545: nop
-          loc_421546: ldarg.0
-          loc_421547: ldarg.1
-          loc_421548: stfld GCUv2.cSalesOrder::_soNumber
-          loc_42154D: ret
-        }
-
-        public specialname string get_PONumber() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_PONumber(string value) {
-
-          loc_421569: nop
-          loc_42156A: ldarg.0
-          loc_42156B: ldarg.1
-          loc_42156C: stfld GCUv2.cSalesOrder::_poNumber
-          loc_421571: ret
-        }
-
-        public specialname double get_TotalPrice() {
-
-          double flt_1;
-
-        }
-
-        public specialname void set_TotalPrice(double value) {
-
-          loc_42158D: nop
-          loc_42158E: ldarg.0
-          loc_42158F: ldarg.1
-          loc_421590: stfld GCUv2.cSalesOrder::_totalPrice
-          loc_421595: ret
-        }
-
-        public specialname double get_Discount() {
-
-          double flt_1;
-
-        }
-
-        public specialname void set_Discount(double value) {
-
-          loc_4215B1: nop
-          loc_4215B2: ldarg.0
-          loc_4215B3: ldarg.1
-          loc_4215B4: stfld GCUv2.cSalesOrder::_discount
-          loc_4215B9: ret
-        }
-
-        public specialname string get_DiscountDescription() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_DiscountDescription(string value) {
-
-          loc_4215D5: nop
-          loc_4215D6: ldarg.0
-          loc_4215D7: ldarg.1
-          loc_4215D8: call string GCUv2.Module1::cleanString(string)
-          loc_4215DD: stfld GCUv2.cSalesOrder::_discountDescription
-          loc_4215E2: ret
-        }
-
-        public specialname string get_Note() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_Note(string value) {
-
-          loc_4215FD: nop
-          loc_4215FE: ldarg.0
-          loc_4215FF: ldarg.1
-          loc_421600: call string GCUv2.Module1::cleanString(string)
-          loc_421605: stfld GCUv2.cSalesOrder::_note
-          loc_42160A: ret
-        }
-
-        public specialname valuetype System.DateTime get_CreatedDate() {
-
-          valuetype System.DateTime var_1;
-
-        }
-
-        public specialname void set_CreatedDate(valuetype System.DateTime value) {
-
-          loc_421625: nop
-          loc_421626: ldarg.0
-          loc_421627: ldarg.1
-          loc_421628: stfld GCUv2.cSalesOrder::_createdDate
-          loc_42162D: ret
-        }
-
-        public specialname class GCUv2.cSalesOrderItem[] get_Item() {
-
-          class GCUv2.cSalesOrderItem[] var_1;
-
-        }
-
-        public specialname void set_Item(class GCUv2.cSalesOrderItem[] value) {
-
-          loc_421649: nop
-          loc_42164A: ldarg.0
-          loc_42164B: ldarg.1
-          loc_42164C: stfld GCUv2.cSalesOrder::_item
-          loc_421651: ret
-        }
-
-        public specialname double get_CustomerId() {
-
-          double flt_1;
-
-        }
-
-        public specialname void set_CustomerId(double value) {
-
-          loc_42166D: nop
-          loc_42166E: ldarg.0
-          loc_42166F: ldarg.1
-          loc_421670: stfld GCUv2.cSalesOrder::_customerId
-          loc_421675: ret
-        }
-
-        public specialname string get_CustomerName() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_CustomerName(string value) {
-
-          loc_421691: nop
-          loc_421692: ldarg.0
-          loc_421693: ldarg.1
-          loc_421694: stfld GCUv2.cSalesOrder::_customerName
-          loc_421699: ret
-        }
-
-        public specialname string get_CustomerAddress() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_CustomerAddress(string value) {
-
-          loc_4216B5: nop
-          loc_4216B6: ldarg.0
-          loc_4216B7: ldarg.1
-          loc_4216B8: stfld GCUv2.cSalesOrder::_customerAddress
-          loc_4216BD: ret
-        }
-
-        public specialname int32 get_BranchId() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_BranchId(int32 value) {
-
-          loc_4216D9: nop
-          loc_4216DA: ldarg.0
-          loc_4216DB: ldarg.1
-          loc_4216DC: stfld GCUv2.cSalesOrder::_branchId
-          loc_4216E1: ret
-        }
-
-        public specialname double get_InvoiceId() {
-
-          double flt_1;
-
-        }
-
-        public specialname void set_InvoiceId(double value) {
-
-          loc_4216FD: nop
-          loc_4216FE: ldarg.0
-          loc_4216FF: ldarg.1
-          loc_421700: stfld GCUv2.cSalesOrder::_invoiceId
-          loc_421705: ret
-        }
-
-        public specialname string get_InvoiceNumber() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_InvoiceNumber(string value) {
-
-          loc_421721: nop
-          loc_421722: ldarg.0
-          loc_421723: ldarg.1
-          loc_421724: stfld GCUv2.cSalesOrder::_invoiceNumber
-          loc_421729: ret
-        }
-
-        public specialname int32 get_DiscountId() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_DiscountId(int32 value) {
-
-          loc_421745: nop
-          loc_421746: ldarg.0
-          loc_421747: ldarg.1
-          loc_421748: stfld GCUv2.cSalesOrder::_discountId
-          loc_42174D: ret
-        }
-
-        public void cSalesOrder(double SOId) {
-
-          boolean var_1;
-          class DataTable var_2;
-          string str_1;
-          int32 num_1;
-          boolean var_3;
-          boolean var_4;
-          class System.Collections.IEnumerator var_5;
-          class DataRow var_6;
-          boolean var_7;
-
-        }
-
-        public void Save() {
-
-          int32 num_1;
-          int32 num_2;
-          string str_1;
-          class MySqlClient.MySqlTransaction var_1;
-          boolean var_2;
-          class GCUv2.cSalesOrderItem[] var_3;
-          int32 num_3;
-          class GCUv2.cSalesOrderItem var_4;
-          boolean var_5;
-          boolean var_6;
-
-        }
-
-        public static class DataTable Search(int32 intRange, valuetype System.DateTime dateFirst, valuetype System.DateTime dateLast, double CustomerId, int32 GroupId, int32 BranchId, double InvoiceId) {
-
-          class DataTable var_1;
-          string str_1;
-          boolean var_2;
-          boolean var_3;
-          boolean var_4;
-          boolean var_5;
-          boolean var_6;
-          boolean var_7;
-          boolean var_8;
-          boolean var_9;
-          boolean var_10;
-
-        }
-
-        public void Delete() {
-
-          string str_1;
-
-        }
-
-        private string GenerateNewNumber() {
-
-          string str_1;
-          string str_2;
-          class DataTable var_1;
-          int32 num_1;
-          boolean var_2;
-
-        }
-
-    }
+	private double _id;
+
+	private DateTime _soDate;
+
+	private DateTime _expiredDate;
+
+	private string _soNumber;
+
+	private string _poNumber;
+
+	private double _totalPrice;
+
+	private double _discount;
+
+	private string _discountDescription;
+
+	private string _note;
+
+	private DateTime _createdDate;
+
+	private cSalesOrderItem[] _item;
+
+	private double _customerId;
+
+	private string _customerName;
+
+	private string _customerAddress;
+
+	private int _branchId;
+
+	private double _invoiceId;
+
+	private string _invoiceNumber;
+
+	private int _discountId;
+
+	public double Id
+	{
+		get
+		{
+			return _id;
+		}
+		set
+		{
+			_id = value;
+		}
+	}
+
+	public DateTime SODate
+	{
+		get
+		{
+			return _soDate;
+		}
+		set
+		{
+			_soDate = value;
+		}
+	}
+
+	public DateTime ExpiredDate
+	{
+		get
+		{
+			return _expiredDate;
+		}
+		set
+		{
+			_expiredDate = value;
+		}
+	}
+
+	public string SONumber
+	{
+		get
+		{
+			return _soNumber;
+		}
+		set
+		{
+			_soNumber = value;
+		}
+	}
+
+	public string PONumber
+	{
+		get
+		{
+			return _poNumber;
+		}
+		set
+		{
+			_poNumber = value;
+		}
+	}
+
+	public double TotalPrice
+	{
+		get
+		{
+			return _totalPrice;
+		}
+		set
+		{
+			_totalPrice = value;
+		}
+	}
+
+	public double Discount
+	{
+		get
+		{
+			return _discount;
+		}
+		set
+		{
+			_discount = value;
+		}
+	}
+
+	public string DiscountDescription
+	{
+		get
+		{
+			return _discountDescription;
+		}
+		set
+		{
+			_discountDescription = Module1.cleanString(value);
+		}
+	}
+
+	public string Note
+	{
+		get
+		{
+			return _note;
+		}
+		set
+		{
+			_note = Module1.cleanString(value);
+		}
+	}
+
+	public DateTime CreatedDate
+	{
+		get
+		{
+			return _createdDate;
+		}
+		set
+		{
+			_createdDate = value;
+		}
+	}
+
+	public cSalesOrderItem[] Item
+	{
+		get
+		{
+			return _item;
+		}
+		set
+		{
+			_item = value;
+		}
+	}
+
+	public double CustomerId
+	{
+		get
+		{
+			return _customerId;
+		}
+		set
+		{
+			_customerId = value;
+		}
+	}
+
+	public string CustomerName
+	{
+		get
+		{
+			return _customerName;
+		}
+		set
+		{
+			_customerName = value;
+		}
+	}
+
+	public string CustomerAddress
+	{
+		get
+		{
+			return _customerAddress;
+		}
+		set
+		{
+			_customerAddress = value;
+		}
+	}
+
+	public int BranchId
+	{
+		get
+		{
+			return _branchId;
+		}
+		set
+		{
+			_branchId = value;
+		}
+	}
+
+	public double InvoiceId
+	{
+		get
+		{
+			return _invoiceId;
+		}
+		set
+		{
+			_invoiceId = value;
+		}
+	}
+
+	public string InvoiceNumber
+	{
+		get
+		{
+			return _invoiceNumber;
+		}
+		set
+		{
+			_invoiceNumber = value;
+		}
+	}
+
+	public int DiscountId
+	{
+		get
+		{
+			return _discountId;
+		}
+		set
+		{
+			_discountId = value;
+		}
+	}
+
+	[MethodImpl(MethodImplOptions.NoInlining | MethodImplOptions.NoOptimization)]
+	public cSalesOrder(double SOId)
+	{
+		if (!(SOId > 0.0))
+		{
+			return;
+		}
+		_id = SOId;
+		DataTable dataTable = new DataTable();
+		string strSql = " SELECT soDate, soExpiredDate, CONCAT('SO/',CAST(b.branchId AS CHAR),'/',SUBSTR(YEAR(soDate),3),'/',soNumber) AS soNumber,  poNumber, soDiscount, soDiscountDescription,  soNote, soCreatedDate, a.penjId, c.penjFaktur,  a.custId, b.custName, b.custAddress, b.branchId, b.discId  FROM salesOrder a LEFT OUTER JOIN penjualan c ON a.penjId = c.penjId, customer b WHERE soId = " + Conversions.ToString(_id) + " AND a.custId = b.custId ";
+		dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+		if (dataTable.Rows.Count > 0)
+		{
+			_soDate = Conversions.ToDate(dataTable.Rows[0]["soDate"]);
+			_expiredDate = Conversions.ToDate(dataTable.Rows[0]["soExpiredDate"]);
+			_soNumber = Conversions.ToString(dataTable.Rows[0]["soNumber"]);
+			_poNumber = Conversions.ToString(dataTable.Rows[0]["poNumber"]);
+			_discount = Conversions.ToDouble(dataTable.Rows[0]["soDiscount"]);
+			_discountDescription = Conversions.ToString(dataTable.Rows[0]["soDiscountDescription"]);
+			_note = Conversions.ToString(dataTable.Rows[0]["soNote"]);
+			_createdDate = Conversions.ToDate(dataTable.Rows[0]["soCreatedDate"]);
+			_customerId = Conversions.ToDouble(dataTable.Rows[0]["custId"]);
+			_customerName = Conversions.ToString(dataTable.Rows[0]["custName"]);
+			_customerAddress = Conversions.ToString(dataTable.Rows[0]["custAddress"]);
+			_branchId = Conversions.ToInteger(dataTable.Rows[0]["branchId"]);
+			_invoiceId = Conversions.ToDouble(dataTable.Rows[0]["penjId"]);
+			_discountId = Conversions.ToInteger(dataTable.Rows[0]["discId"]);
+			if (!Information.IsDBNull(RuntimeHelpers.GetObjectValue(dataTable.Rows[0]["penjFaktur"])))
+			{
+				_invoiceNumber = Conversions.ToString(dataTable.Rows[0]["penjFaktur"]);
+			}
+		}
+		else
+		{
+			_id = 0.0;
+			Information.Err().Raise(513, null, "Pesanan Penjualan tidak ditemukan. Kemungkinan telah dihapus.");
+		}
+		strSql = " SELECT soId, a.itemId, itemName, itemQty, itemPrice  FROM salesorder_item a, items b  WHERE a.itemId = b.itemId  AND soId = " + Conversions.ToString(_id);
+		int num = 0;
+		dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+		checked
+		{
+			_item = new cSalesOrderItem[dataTable.Rows.Count - 1 + 1];
+			foreach (DataRow row in dataTable.Rows)
+			{
+				_item[num] = new cSalesOrderItem();
+				_item[num].SOId = Conversions.ToDouble(row["soId"]);
+				_item[num].ItemId = Conversions.ToInteger(row["itemId"]);
+				_item[num].ItemName = Conversions.ToString(row["itemName"]);
+				_item[num].Qty = Conversions.ToDouble(row["itemQty"]);
+				_item[num].Price = Conversions.ToDouble(row["itemPrice"]);
+				num++;
+			}
+		}
+	}
+
+	[MethodImpl(MethodImplOptions.NoInlining | MethodImplOptions.NoOptimization)]
+	public void Save()
+	{
+		int try0001_dispatch = -1;
+		int num2 = default(int);
+		MySqlTransaction val = default(MySqlTransaction);
+		int num = default(int);
+		while (true)
+		{
+			try
+			{
+				/*Note: ILSpy has introduced the following switch to emulate a goto from catch-block to try-block*/;
+				switch (try0001_dispatch)
+				{
+				default:
+				{
+					ProjectData.ClearProjectError();
+					num2 = 2;
+					val = Module1.connectData.BeginTransaction();
+					if (_id == 0.0)
+					{
+						_soNumber = GenerateNewNumber();
+						string strSql = " INSERT INTO salesOrder  (soDate, soExpiredDate, soNumber, poNumber, soTotalPrice, soDiscount,  soDiscountDescription, soNote, soCreatedDate,  custId) VALUES  ('" + Strings.Format(_soDate, "yyyy-MM-dd") + "','" + Strings.Format(_expiredDate, "yyyy-MM-dd") + "','" + _soNumber + "','" + _poNumber + "'," + Module1.unformatNumber(Conversions.ToString(_totalPrice)) + "," + Module1.unformatNumber(Conversions.ToString(_discount)) + ",'" + _discountDescription + "','" + _note + "','" + Strings.Format(DateAndTime.Now, "yyyy-MM-dd HH:mm:ss") + "'," + Conversions.ToString(CustomerId) + ")";
+						Module1.sqlNonQuery(strSql, "data");
+						_id = cDatabase.LastId("data");
+					}
+					else
+					{
+						string strSql = " UPDATE salesOrder  SET soDate = '" + Strings.Format(_soDate, "yyyy-MM-dd") + "', soExpiredDate = '" + Strings.Format(_expiredDate, "yyyy-MM-dd") + "', poNumber = '" + _poNumber + "', soTotalPrice = " + Module1.unformatNumber(Conversions.ToString(_totalPrice)) + ", soDiscount = " + Module1.unformatNumber(Conversions.ToString(_discount)) + ", soDiscountDescription = '" + _discountDescription + "', soNote = '" + _note + "', custId = " + Conversions.ToString(_customerId) + " WHERE soId = " + Conversions.ToString(_id);
+						Module1.sqlNonQuery(strSql, "data");
+						strSql = " DELETE FROM salesOrder_item  WHERE soId = " + Conversions.ToString(_id);
+						Module1.sqlNonQuery(strSql, "data");
+					}
+					cSalesOrderItem[] item = _item;
+					foreach (cSalesOrderItem cSalesOrderItem2 in item)
+					{
+						string strSql = " INSERT INTO salesOrder_item  (soId, itemId, itemQty, itemPrice) VALUES  ( " + Conversions.ToString(_id) + "," + Conversions.ToString(cSalesOrderItem2.ItemId) + "," + Module1.unformatNumber(Conversions.ToString(cSalesOrderItem2.Qty)) + "," + Module1.unformatNumber(Conversions.ToString(cSalesOrderItem2.Price)) + ")";
+						Module1.sqlNonQuery(strSql, "data");
+					}
+					val.Commit();
+					goto end_IL_0001;
+				}
+				case 941:
+					num = -1;
+					switch (num2)
+					{
+					case 2:
+						if (Operators.CompareString(Information.Err().Description, "Fatal error encountered during command execution.", TextCompare: false) != 0 && Operators.CompareString(Information.Err().Description, "The connection is not open.", TextCompare: false) != 0)
+						{
+							val.Rollback();
+						}
+						Information.Err().Raise(513, null, Information.Err().Description);
+						goto end_IL_0001;
+					}
+					break;
+				}
+				goto IL_03e3;
+				end_IL_0001:;
+			}
+			catch (object obj) when (obj is Exception && num2 != 0 && num == 0)
+			{
+				ProjectData.SetProjectError((Exception)obj);
+				try0001_dispatch = 941;
+				continue;
+			}
+			break;
+			IL_03e3:
+			throw ProjectData.CreateProjectError(-2146828237);
+		}
+		if (num != 0)
+		{
+			ProjectData.ClearProjectError();
+		}
+	}
+
+	public static DataTable Search(int intRange, DateTime dateFirst, DateTime dateLast, double CustomerId, int GroupId, int BranchId, double InvoiceId)
+	{
+		string text = ((intRange != 5) ? " SELECT soId, soDate, soExpiredDate,  CONCAT('SO/',CAST(b.branchId AS CHAR),'/',SUBSTR(YEAR(soDate),3),'/',soNumber) AS soNumber, poNumber,  soTotalPrice, soDiscount, soDiscountDescription,  soNote, soCreatedDate, custName, CAST(COALESCE(penjDate,'0000-00-00 00:00:00') AS DATETIME) AS penjDate, COALESCE(penjFaktur,'') AS penjFaktur " : " SELECT DISTINCT soId, soDate, soExpiredDate,  CONCAT('SO/',CAST(b.branchId AS CHAR),'/',SUBSTR(YEAR(soDate),3),'/',soNumber) AS soNumber, poNumber,  soTotalPrice, soDiscount ");
+		text += " FROM salesOrder a LEFT OUTER JOIN penjualan c ON a.penjId = c.penjId, customer b  WHERE a.custId = b.custId ";
+		switch (intRange)
+		{
+		case 1:
+			text = text + " AND soDate >= '" + Strings.Format(dateFirst, "yyyy-MM-dd") + "' AND soDate <= '" + Strings.Format(dateLast, "yyyy-MM-dd") + "'";
+			break;
+		case 3:
+			text = text + " AND soExpiredDate >= '" + Strings.Format(dateFirst, "yyyy-MM-dd") + "' AND soExpiredDate <= '" + Strings.Format(dateLast, "yyyy-MM-dd") + "'";
+			break;
+		case 5:
+			text = ((!(InvoiceId > 0.0)) ? (text + " AND a.soId NOT IN (SELECT soId FROM penjprod) ") : (text + " AND (a.soId NOT IN (SELECT soId FROM penjprod)  OR a.soId IN (SELECT soId FROM penjprod WHERE penjId = " + Conversions.ToString(InvoiceId) + "))"));
+			break;
+		}
+		text = ((BranchId <= 0) ? (text + " AND b.branchId IN (SELECT branchId FROM groups_branches  WHERE groupId = " + Conversions.ToString(GroupId) + " AND generalDropDown = 1) ") : (text + " AND b.branchId = " + Conversions.ToString(BranchId)));
+		if (CustomerId > 0.0)
+		{
+			text = text + " AND (a.custId = " + Conversions.ToString(CustomerId) + " OR b.custParentId = " + Conversions.ToString(CustomerId) + ")";
+		}
+		return Module1.sqlTable(intRange switch
+		{
+			2 => text + " ORDER BY soId DESC LIMIT 100 ", 
+			4 => text + " ORDER BY soDate DESC ", 
+			_ => text + " ORDER BY soDate, custName ", 
+		}, "data", Clone: false);
+	}
+
+	public void Delete()
+	{
+		string strSql = " DELETE FROM salesOrder WHERE soId = " + Conversions.ToString(_id);
+		Module1.sqlNonQuery(strSql, "data");
+		strSql = " DELETE FROM salesOrder_item WHERE soId = " + Conversions.ToString(_id);
+		Module1.sqlNonQuery(strSql, "data");
+	}
+
+	private string GenerateNewNumber()
+	{
+		string strSql = " SELECT * FROM salesOrder a, customer b WHERE YEAR(soDate) = " + Conversions.ToString(DateAndTime.Year(_soDate)) + " AND a.custId = b.custId  AND b.branchId = " + Conversions.ToString(_branchId) + " ORDER BY soId DESC LIMIT 1 ";
+		DataTable dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+		return ((dataTable.Rows.Count <= 0) ? 1 : checked((int)Math.Round(Conversion.Val(Strings.Right(Conversions.ToString(dataTable.Rows[0]["soNumber"]), 5)) + 1.0))).ToString("00000");
+	}
 }

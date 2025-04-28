@@ -1,93 +1,119 @@
-namespace GCUv2
+using System.Data;
+using System.Runtime.CompilerServices;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+
+namespace GCUv2;
+
+public class cBank
 {
-    public class 
-    {
+	private int _id;
 
-        private int32 _id;
-        private string _name;
-        private int32 _active;
+	private string _name;
 
+	private int _active;
 
-        public specialname int32 get_Id() {
+	public int Id
+	{
+		get
+		{
+			return _id;
+		}
+		set
+		{
+			_id = value;
+		}
+	}
 
-          int32 num_1;
+	public string Name
+	{
+		get
+		{
+			return _name;
+		}
+		set
+		{
+			_name = Module1.cleanString(value);
+		}
+	}
 
-        }
+	public int Active
+	{
+		get
+		{
+			return _active;
+		}
+		set
+		{
+			_active = value;
+		}
+	}
 
-        public specialname void set_Id(int32 value) {
+	[MethodImpl(MethodImplOptions.NoInlining | MethodImplOptions.NoOptimization)]
+	public cBank(int Id)
+	{
+		if (Id > 0)
+		{
+			_id = Id;
+			DataTable dataTable = new DataTable();
+			string strSql = " SELECT *  FROM bank  WHERE bankId = " + Conversions.ToString(_id);
+			dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+			if (dataTable.Rows.Count > 0)
+			{
+				_name = Conversions.ToString(dataTable.Rows[0]["bankName"]);
+				_active = Conversions.ToInteger(dataTable.Rows[0]["bankStatus"]);
+			}
+			else
+			{
+				_id = 0;
+				Information.Err().Raise(513, null, "Bank tidak ditemukan. Kemungkinan telah dihapus.");
+			}
+		}
+	}
 
-          loc_404255: nop
-          loc_404256: ldarg.0
-          loc_404257: ldarg.1
-          loc_404258: stfld GCUv2.cArea::_id
-          loc_40425D: ret
-        }
+	public void save()
+	{
+		if (_id == 0)
+		{
+			string strSql = " INSERT INTO bank(bankName, bankStatus)  VALUES  ('" + _name + "'," + Conversions.ToString(_active) + ")";
+			Module1.sqlNonQuery(strSql, "data");
+		}
+		else
+		{
+			string strSql = " UPDATE bank  SET bankName = '" + _name + "',  bankStatus = " + Conversions.ToString(_active) + "  WHERE bankId = " + Conversions.ToString(_id) + " ";
+			Module1.sqlNonQuery(strSql, "data");
+		}
+	}
 
-        public specialname string get_Name() {
+	public static DataTable Search(int Active)
+	{
+		string text = " SELECT * FROM bank  WHERE bankStatus = bankStatus ";
+		switch (Active)
+		{
+		case 0:
+			text += " AND bankStatus = 0 ";
+			break;
+		case 1:
+			text += " AND bankStatus = 1 ";
+			break;
+		}
+		text += " ORDER BY bankName ";
+		return Module1.sqlTable(text, "read", Clone: false);
+	}
 
-          string str_1;
-
-        }
-
-        public specialname void set_Name(string value) {
-
-          loc_404279: nop
-          loc_40427A: ldarg.0
-          loc_40427B: ldarg.1
-          loc_40427C: call string GCUv2.Module1::cleanString(string)
-          loc_404281: stfld GCUv2.cBank::_name
-          loc_404286: ret
-        }
-
-        public specialname int32 get_Active() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_Active(int32 value) {
-
-          loc_4042A1: nop
-          loc_4042A2: ldarg.0
-          loc_4042A3: ldarg.1
-          loc_4042A4: stfld GCUv2.cBank::_active
-          loc_4042A9: ret
-        }
-
-        public void cBank(int32 Id) {
-
-          boolean var_1;
-          class DataTable var_2;
-          string str_1;
-          boolean var_3;
-
-        }
-
-        public void save() {
-
-          string str_1;
-          boolean var_1;
-
-        }
-
-        public static class DataTable Search(int32 Active) {
-
-          class DataTable var_1;
-          string str_1;
-          boolean var_2;
-          boolean var_3;
-
-        }
-
-        public static boolean IsExist(int32 Id, string Name) {
-
-          boolean var_1;
-          string str_1;
-          class DataTable var_2;
-          boolean var_3;
-          boolean var_4;
-
-        }
-
-    }
+	public static bool IsExist(int Id, string Name)
+	{
+		bool result = false;
+		string text = " SELECT * FROM bank  WHERE bankName = '" + Name + "'";
+		if (Id > 0)
+		{
+			text = text + " AND bankId <> " + Conversions.ToString(Id);
+		}
+		DataTable dataTable = Module1.sqlTable(text, "data", Clone: false);
+		if (dataTable.Rows.Count > 0)
+		{
+			result = true;
+		}
+		return result;
+	}
 }

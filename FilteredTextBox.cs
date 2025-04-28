@@ -1,114 +1,151 @@
-namespace GCUv2
+using System;
+using System.Globalization;
+using System.Windows.Forms;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+
+namespace GCUv2;
+
+public class FilteredTextBox : TextBox
 {
-    public class TextBox
-    {
+	public enum InputType
+	{
+		All,
+		NumeralsOnly,
+		LettersOnly,
+		NumeralsAndCurrency,
+		NoSymbols,
+		NumeralsAndDotAndPlus
+	}
 
-        private valuetype InputType _allowedcharacters;
-        private boolean _isDecimal;
-        private int32 _maximumDigit;
-        private boolean _dontFormat;
+	private InputType _allowedcharacters;
 
-        public enum InputType
-        {
-            public const valuetype InputType All = 0,
-            public const valuetype InputType NumeralsOnly = 1,
-            public const valuetype InputType LettersOnly = 2,
-            public const valuetype InputType NumeralsAndCurrency = 3,
-            public const valuetype InputType NoSymbols = 4,
-            public const valuetype InputType NumeralsAndDotAndPlus = 5
-        }
+	private bool _isDecimal;
 
+	private int _maximumDigit;
 
-        public void FilteredTextBox() {
+	private bool _dontFormat;
 
-          loc_428F77: ldarg.0
-          loc_428F78: call instance void System.Windows.Forms.TextBox::.ctor()
-          loc_428F7D: nop
-          loc_428F7E: ldarg.0
-          loc_428F7F: ldc.i4.0
-          loc_428F80: stfld GCUv2.FilteredTextBox::_isDecimal
-          loc_428F85: ldarg.0
-          loc_428F86: ldc.i4.3
-          loc_428F87: stfld GCUv2.FilteredTextBox::_maximumDigit
-          loc_428F8C: ldarg.0
-          loc_428F8D: ldc.i4.0
-          loc_428F8E: stfld GCUv2.FilteredTextBox::_dontFormat
-          loc_428F93: ret
-        }
+	public int MaximumDigit
+	{
+		get
+		{
+			return _maximumDigit;
+		}
+		set
+		{
+			_maximumDigit = value;
+		}
+	}
 
-        public specialname int32 get_MaximumDigit() {
+	public bool DontFormat
+	{
+		get
+		{
+			return _dontFormat;
+		}
+		set
+		{
+			_dontFormat = value;
+		}
+	}
 
-          int32 num_1;
+	public InputType AllowedCharacters
+	{
+		get
+		{
+			return _allowedcharacters;
+		}
+		set
+		{
+			if (value >= InputType.NumeralsOnly && value <= InputType.NumeralsAndDotAndPlus)
+			{
+				_allowedcharacters = value;
+			}
+			else
+			{
+				_allowedcharacters = InputType.All;
+			}
+		}
+	}
 
-        }
+	public FilteredTextBox()
+	{
+		_isDecimal = false;
+		_maximumDigit = 3;
+		_dontFormat = false;
+	}
 
-        public specialname void set_MaximumDigit(int32 value) {
+	protected override void OnKeyDown(KeyEventArgs e)
+	{
+		if (e.KeyValue == 110)
+		{
+			_isDecimal = true;
+		}
+		else
+		{
+			_isDecimal = false;
+		}
+	}
 
-          loc_428FAD: nop
-          loc_428FAE: ldarg.0
-          loc_428FAF: ldarg.1
-          loc_428FB0: stfld GCUv2.FilteredTextBox::_maximumDigit
-          loc_428FB5: ret
-        }
+	protected override void OnKeyPress(KeyPressEventArgs e)
+	{
+		base.OnKeyPress(e);
+		short num = checked((short)Strings.Asc(e.KeyChar));
+		switch (_allowedcharacters)
+		{
+		case InputType.NumeralsOnly:
+			if (!((num >= 48 && num <= 57) | (e.KeyChar == Convert.ToChar(8))))
+			{
+				e.Handled = true;
+				Interaction.Beep();
+			}
+			break;
+		case InputType.NumeralsAndCurrency:
+			if (_isDecimal)
+			{
+				e.KeyChar = Conversions.ToChar(CultureInfo.CurrentCulture.NumberFormat.CurrencyDecimalSeparator);
+			}
+			if (!(((num >= 48 && num <= 57) || num == 45) | (e.KeyChar == Convert.ToChar(8)) | (Operators.CompareString(Conversions.ToString(e.KeyChar), CultureInfo.CurrentCulture.NumberFormat.CurrencyDecimalSeparator, TextCompare: false) == 0)))
+			{
+				e.Handled = true;
+			}
+			break;
+		case InputType.NumeralsAndDotAndPlus:
+			if (!((num == 46 || num == 43 || (num >= 48 && num <= 57)) | (e.KeyChar == Convert.ToChar(8))))
+			{
+				e.Handled = true;
+			}
+			break;
+		default:
+			if (_isDecimal)
+			{
+				e.KeyChar = Conversions.ToChar(CultureInfo.CurrentCulture.NumberFormat.CurrencyDecimalSeparator);
+			}
+			break;
+		}
+	}
 
-        public specialname boolean get_DontFormat() {
+	protected override void OnGotFocus(EventArgs e)
+	{
+		base.OnGotFocus(e);
+		if ((Operators.CompareString(base.Text, "", TextCompare: false) != 0) & !_dontFormat)
+		{
+			base.Text = Conversions.ToString(decimal.Parse(base.Text, NumberStyles.Currency));
+			if (!string.IsNullOrEmpty(base.Text))
+			{
+				base.SelectionStart = 0;
+				base.SelectionLength = base.Text.Length;
+			}
+		}
+	}
 
-          boolean var_1;
-
-        }
-
-        public specialname void set_DontFormat(boolean value) {
-
-          loc_428FD1: nop
-          loc_428FD2: ldarg.0
-          loc_428FD3: ldarg.1
-          loc_428FD4: stfld GCUv2.FilteredTextBox::_dontFormat
-          loc_428FD9: ret
-        }
-
-        public specialname valuetype InputType get_AllowedCharacters() {
-
-          valuetype InputType var_1;
-
-        }
-
-        public specialname void set_AllowedCharacters(valuetype InputType Value) {
-
-          valuetype InputType var_1;
-          boolean var_2;
-
-        }
-
-        protected override strict void OnKeyDown(class KeyEventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        protected override strict void OnKeyPress(class KeyPressEventArgs e) {
-
-          int16 num_1;
-          valuetype InputType var_1;
-          boolean var_2;
-          boolean var_3;
-          boolean var_4;
-          boolean var_5;
-          boolean var_6;
-
-        }
-
-        protected override strict void OnGotFocus(class System.EventArgs e) {
-
-          boolean var_1;
-          boolean var_2;
-
-        }
-
-        protected override strict void OnLostFocus(class System.EventArgs e) {
-
-          boolean var_1;
-
-        }
-
-    }
+	protected override void OnLostFocus(EventArgs e)
+	{
+		base.OnLostFocus(e);
+		if ((Operators.CompareString(base.Text, "", TextCompare: false) != 0) & !_dontFormat)
+		{
+			base.Text = Module1.formatCustomDecimal(base.Text, _maximumDigit);
+		}
+	}
 }

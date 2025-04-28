@@ -1,23 +1,19 @@
-namespace GCUv2
+using System.Data;
+using Microsoft.VisualBasic.CompilerServices;
+
+namespace GCUv2;
+
+public class cGroupCustomer
 {
-    public class 
-    {
-
-        public void cGroupCustomer() {
-
-          loc_403253: ldarg.0
-          loc_403254: call instance void System.Object::.ctor()
-          loc_403259: ret
-        }
-
-        public static class DataTable getGroupCustomer(int32 BranchId, boolean GroupId, boolean Active) {
-
-          class DataTable var_1;
-          string str_1;
-          boolean var_2;
-          boolean var_3;
-
-        }
-
-    }
+	public static DataTable getGroupCustomer(int BranchId, bool GroupId, bool Active)
+	{
+		string text = " SELECT custId, custName, branchName  FROM customer a, branches b WHERE a.branchId = b.branchId  AND isParent = 1 ";
+		if (Active)
+		{
+			text += " AND custActive = 1 ";
+		}
+		text = ((BranchId <= 0) ? (text + " AND a.branchId IN (  SELECT branchId FROM groups_branches  WHERE groupId = " + Conversions.ToString(GroupId) + " AND generalDropDown = 1)") : (text + " AND a.branchId = " + Conversions.ToString(BranchId)));
+		text += " ORDER BY branchName, custName ";
+		return Module1.sqlTable(text, "read", Clone: false);
+	}
 }

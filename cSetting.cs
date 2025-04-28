@@ -1,72 +1,69 @@
-namespace GCUv2
+using System.Data;
+using Microsoft.VisualBasic.CompilerServices;
+
+namespace GCUv2;
+
+public class cSetting
 {
-    public class 
-    {
+	private string _name;
 
-        private string _name;
-        private string _value;
+	private string _value;
 
+	public string Name
+	{
+		get
+		{
+			return _name;
+		}
+		set
+		{
+			_name = value;
+		}
+	}
 
-        public specialname string get_Name() {
+	public string Value
+	{
+		get
+		{
+			return _value;
+		}
+		set
+		{
+			_value = value;
+		}
+	}
 
-          string str_1;
+	public static int GetMaximumTOP()
+	{
+		string strSql = " SELECT MAX(custTop) AS maximum  FROM customer ";
+		DataTable dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+		return Conversions.ToInteger(dataTable.Rows[0]["maximum"]);
+	}
 
-        }
+	public static int GetMaximumCredit()
+	{
+		string strSql = " SELECT MAX(custPiutang) AS maximum  FROM customer ";
+		DataTable dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+		return Conversions.ToInteger(dataTable.Rows[0]["maximum"]);
+	}
 
-        public specialname void set_Name(string value) {
+	public cSetting(string Name)
+	{
+		if (Operators.CompareString(Name, "", TextCompare: false) != 0)
+		{
+			string strSql = " SELECT * FROM settings  WHERE setName = '" + Name + "'";
+			DataTable dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+			if (dataTable.Rows.Count > 0)
+			{
+				_name = Conversions.ToString(dataTable.Rows[0]["setName"]);
+				_value = Conversions.ToString(dataTable.Rows[0]["setVal"]);
+			}
+		}
+	}
 
-          loc_423E25: nop
-          loc_423E26: ldarg.0
-          loc_423E27: ldarg.1
-          loc_423E28: stfld GCUv2.cSalesReceipt::_name
-          loc_423E2D: ret
-        }
-
-        public specialname string get_Value() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_Value(string value) {
-
-          loc_423E49: nop
-          loc_423E4A: ldarg.0
-          loc_423E4B: ldarg.1
-          loc_423E4C: stfld GCUv2.cSetting::_value
-          loc_423E51: ret
-        }
-
-        public static int32 GetMaximumTOP() {
-
-          int32 num_1;
-          string str_1;
-          class DataTable var_1;
-
-        }
-
-        public static int32 GetMaximumCredit() {
-
-          int32 num_1;
-          string str_1;
-          class DataTable var_1;
-
-        }
-
-        public void cSetting(string Name) {
-
-          string str_1;
-          class DataTable var_1;
-          boolean var_2;
-          boolean var_3;
-
-        }
-
-        public void Save() {
-
-          string str_1;
-
-        }
-
-    }
+	public void Save()
+	{
+		string strSql = " UPDATE Settings  SET setVal = '" + _value + "'  WHERE setName = '" + _name + "'";
+		Module1.sqlNonQuery(strSql, "data");
+	}
 }

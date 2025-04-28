@@ -1,73 +1,79 @@
-namespace GCUv2
+using System.Data;
+using Microsoft.VisualBasic.CompilerServices;
+
+namespace GCUv2;
+
+public class cPage
 {
-    public class 
-    {
+	private int _id;
 
-        private int32 _id;
-        private string _name;
+	private string _name;
 
+	public int Id
+	{
+		get
+		{
+			return _id;
+		}
+		set
+		{
+			_id = value;
+		}
+	}
 
-        public specialname int32 get_Id() {
+	public string Name
+	{
+		get
+		{
+			return _name;
+		}
+		set
+		{
+			_name = value;
+		}
+	}
 
-          int32 num_1;
+	public override string ToString()
+	{
+		return _name;
+	}
 
-        }
+	public cPage(int PageId)
+	{
+		if (PageId <= 0)
+		{
+			return;
+		}
+		_id = PageId;
+		DataTable dataTable = new DataTable();
+		string strSql = " SELECT *  FROM pages  WHERE pageId = " + Conversions.ToString(_id) + " ORDER BY pagePriority, pageLevel ";
+		dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+		if (dataTable.Rows.Count > 0)
+		{
+			if (Operators.ConditionalCompareObjectEqual(dataTable.Rows[0]["pageLevel"], 0, TextCompare: false))
+			{
+				_name = Conversions.ToString(dataTable.Rows[0]["pageName"]);
+			}
+			else if (Operators.ConditionalCompareObjectEqual(dataTable.Rows[0]["pageLevel"], 1, TextCompare: false))
+			{
+				_name = Conversions.ToString(Operators.ConcatenateObject("-- ", dataTable.Rows[0]["pageName"]));
+			}
+			else if (Operators.ConditionalCompareObjectEqual(dataTable.Rows[0]["pageLevel"], 2, TextCompare: false))
+			{
+				_name = Conversions.ToString(Operators.ConcatenateObject("---- ", dataTable.Rows[0]["pageName"]));
+			}
+		}
+	}
 
-        public specialname void set_Id(int32 value) {
+	public static DataTable getParent()
+	{
+		string strSql = " SELECT pageId, pageName, pageIsParent  FROM pages  WHERE pageMenu <> ''  AND parentId = 0  AND pageAlways = 0  ORDER BY pagePriority, pageName ";
+		return Module1.sqlTable(strSql, "data", Clone: false);
+	}
 
-          loc_411361: nop
-          loc_411362: ldarg.0
-          loc_411363: ldarg.1
-          loc_411364: stfld GCUv2.cMinimumStockItem::_id
-          loc_411369: ret
-        }
-
-        public specialname string get_Name() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_Name(string value) {
-
-          loc_411385: nop
-          loc_411386: ldarg.0
-          loc_411387: ldarg.1
-          loc_411388: stfld GCUv2.cPage::_name
-          loc_41138D: ret
-        }
-
-        public override strict string ToString() {
-
-          string str_1;
-
-        }
-
-        public void cPage(int32 PageId) {
-
-          boolean var_1;
-          class DataTable var_2;
-          string str_1;
-          boolean var_3;
-          boolean var_4;
-          boolean var_5;
-          boolean var_6;
-
-        }
-
-        public static class DataTable getParent() {
-
-          class DataTable var_1;
-          string str_1;
-
-        }
-
-        public static class DataTable getChild(int32 ParentId) {
-
-          class DataTable var_1;
-          string str_1;
-
-        }
-
-    }
+	public static DataTable getChild(int ParentId)
+	{
+		string strSql = " SELECT pageId, pageName, pageIsParent  FROM pages  WHERE pageMenu <> ''  AND parentId = " + Conversions.ToString(ParentId) + " ORDER BY pagePriority, pageName ";
+		return Module1.sqlTable(strSql, "data", Clone: false);
+	}
 }

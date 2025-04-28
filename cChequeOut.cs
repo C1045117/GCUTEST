@@ -1,113 +1,130 @@
-using mscorlib;
+using System;
+using System.Data;
+using System.Runtime.CompilerServices;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
 
-namespace GCUv2
+namespace GCUv2;
+
+public class cChequeOut
 {
-    public class 
-    {
+	private double _id;
 
-        private double _id;
-        private double _paymentId;
-        private double _multiPaymentId;
-        private string _number;
-        private valuetype System.DateTime _chequeDate;
+	private double _paymentId;
 
+	private double _multiPaymentId;
 
-        public specialname double get_Id() {
+	private string _number;
 
-          double flt_1;
+	private DateTime _chequeDate;
 
-        }
+	public double Id
+	{
+		get
+		{
+			return _id;
+		}
+		set
+		{
+			_id = value;
+		}
+	}
 
-        public specialname void set_Id(double value) {
+	public double PaymentId
+	{
+		get
+		{
+			return _paymentId;
+		}
+		set
+		{
+			_paymentId = value;
+		}
+	}
 
-          loc_406EE9: nop
-          loc_406EEA: ldarg.0
-          loc_406EEB: ldarg.1
-          loc_406EEC: stfld GCUv2.cChequeIn::_id
-          loc_406EF1: ret
-        }
+	public double MultiPaymentId
+	{
+		get
+		{
+			return _multiPaymentId;
+		}
+		set
+		{
+			_multiPaymentId = value;
+		}
+	}
 
-        public specialname double get_PaymentId() {
+	public string Number
+	{
+		get
+		{
+			return _number;
+		}
+		set
+		{
+			_number = value;
+		}
+	}
 
-          double flt_1;
+	public DateTime ChequeDate
+	{
+		get
+		{
+			return _chequeDate;
+		}
+		set
+		{
+			_chequeDate = value;
+		}
+	}
 
-        }
+	[MethodImpl(MethodImplOptions.NoInlining | MethodImplOptions.NoOptimization)]
+	public cChequeOut(double PaymentId, double MultiPaymentId)
+	{
+		string strSql;
+		if (MultiPaymentId > 0.0)
+		{
+			this.MultiPaymentId = MultiPaymentId;
+			strSql = " SELECT a.*  FROM chequesout a  WHERE mpayId = " + Conversions.ToString(_multiPaymentId);
+		}
+		else
+		{
+			_paymentId = PaymentId;
+			strSql = " SELECT a.*  FROM chequesout a  WHERE payId = " + Conversions.ToString(_paymentId);
+		}
+		DataTable dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+		if (dataTable.Rows.Count > 0)
+		{
+			_id = Conversions.ToDouble(dataTable.Rows[0]["cheqId"]);
+			_number = Conversions.ToString(dataTable.Rows[0]["cheqNumber"]);
+			_chequeDate = Conversions.ToDate(dataTable.Rows[0]["cheqDate"]);
+		}
+		else
+		{
+			_id = 0.0;
+			Information.Err().Raise(513, null, "Cek tidak ditemukan. Kemungkinan telah dihapus.");
+		}
+	}
 
-        public specialname void set_PaymentId(double value) {
-
-          loc_406F0D: nop
-          loc_406F0E: ldarg.0
-          loc_406F0F: ldarg.1
-          loc_406F10: stfld GCUv2.cChequeOut::_paymentId
-          loc_406F15: ret
-        }
-
-        public specialname double get_MultiPaymentId() {
-
-          double flt_1;
-
-        }
-
-        public specialname void set_MultiPaymentId(double value) {
-
-          loc_406F31: nop
-          loc_406F32: ldarg.0
-          loc_406F33: ldarg.1
-          loc_406F34: stfld GCUv2.cChequeOut::_multiPaymentId
-          loc_406F39: ret
-        }
-
-        public specialname string get_Number() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_Number(string value) {
-
-          loc_406F55: nop
-          loc_406F56: ldarg.0
-          loc_406F57: ldarg.1
-          loc_406F58: stfld GCUv2.cChequeOut::_number
-          loc_406F5D: ret
-        }
-
-        public specialname valuetype System.DateTime get_ChequeDate() {
-
-          valuetype System.DateTime var_1;
-
-        }
-
-        public specialname void set_ChequeDate(valuetype System.DateTime value) {
-
-          loc_406F79: nop
-          loc_406F7A: ldarg.0
-          loc_406F7B: ldarg.1
-          loc_406F7C: stfld GCUv2.cChequeOut::_chequeDate
-          loc_406F81: ret
-        }
-
-        public void cChequeOut(double PaymentId, double MultiPaymentId) {
-
-          string str_1;
-          class DataTable var_1;
-          boolean var_2;
-          boolean var_3;
-
-        }
-
-        public static class DataTable Search(int32 Range, valuetype System.DateTime FirstDate, valuetype System.DateTime LastDate, string ChequeNo, int32 BankAccountId, int32 GroupId) {
-
-          class DataTable var_1;
-          string str_1;
-          boolean var_2;
-          boolean var_3;
-          boolean var_4;
-          boolean var_5;
-          boolean var_6;
-          boolean var_7;
-
-        }
-
-    }
+	public static DataTable Search(int Range, DateTime FirstDate, DateTime LastDate, string ChequeNo, int BankAccountId, int GroupId)
+	{
+		string text = " SELECT c.invId, 0 as mpayId, payDate AS payDate,  supName, cheqDate AS chequeDate, cheqNumber AS chequeNumber,  payAmount as chequeAmount, accountName  FROM chequesout a, purchaseinvoices_payments b, purchaseinvoices c, account d, suppliers e  WHERE a.payId > 0  AND a.payId = b.payId  AND b.invId = c.invId  AND c.supId = e.supId  AND b.accountId = d.accountId  AND c.supId IN (SELECT supId FROM groups_suppliers WHERE groupId = " + Conversions.ToString(GroupId) + ")";
+		text = Range switch
+		{
+			1 => text + " AND payDate >= '" + Strings.Format(FirstDate, "yyyy-MM-dd") + "' AND payDate <= '" + Strings.Format(LastDate, "yyyy-MM-dd") + "'", 
+			3 => text + " AND cheqDate >= '" + Strings.Format(FirstDate, "yyyy-MM-dd") + "' AND cheqDate <= '" + Strings.Format(LastDate, "yyyy-MM-dd") + "'", 
+			_ => text + " AND a.cheqNumber LIKE '%" + ChequeNo + "%'", 
+		};
+		text = ((BankAccountId <= 0) ? (text + " AND b.accountId IN (SELECT tgId FROM groupTg WHERE groupId = " + Conversions.ToString(GroupId) + " AND generalDropDown = 1) ") : (text + " AND b.accountId = " + Conversions.ToString(BankAccountId)));
+		text = text + " UNION SELECT 0, b.mpayId, mpaydate as payDate,  supName, cheqDate AS chequeDate, cheqNumber AS chequeNumber,  mpayAmount as chequeAmount, accountName  FROM chequesout a, purchaseinvoices_multipayments b, account c, suppliers d  WHERE a.mpayId > 0  AND a.mpayId = b.mpayId  AND b.supId = d.supId  AND b.accountId = c.accountId  AND b.supId IN (SELECT supId FROM groups_suppliers WHERE groupId = " + Conversions.ToString(GroupId) + ")";
+		text = Range switch
+		{
+			1 => text + " AND mpayDate >= '" + Strings.Format(FirstDate, "yyyy-MM-dd") + "' AND mpayDate <= '" + Strings.Format(LastDate, "yyyy-MM-dd") + "'", 
+			3 => text + " AND cheqDate >= '" + Strings.Format(FirstDate, "yyyy-MM-dd") + "' AND cheqDate <= '" + Strings.Format(LastDate, "yyyy-MM-dd") + "'", 
+			_ => text + " AND a.cheqNumber LIKE '%" + ChequeNo + "%'", 
+		};
+		text = ((BankAccountId <= 0) ? (text + " AND b.accountId IN (SELECT tgId FROM groupTg WHERE groupId = " + Conversions.ToString(GroupId) + " AND generalDropDown = 1) ") : (text + " AND b.accountId = " + Conversions.ToString(BankAccountId)));
+		text += " ORDER BY chequeDate, chequeNumber ";
+		return Module1.sqlTable(text, "data", Clone: false);
+	}
 }

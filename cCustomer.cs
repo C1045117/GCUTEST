@@ -1,776 +1,777 @@
-using mscorlib;
+using System;
+using System.Data;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
 
-namespace GCUv2
+namespace GCUv2;
+
+public class cCustomer
 {
-    public class 
-    {
-
-        private double _id;
-        private string _name;
-        private string _address;
-        private string _city;
-        private string _postCode;
-        private string _phone;
-        private string _fax;
-        private string _PT;
-        private string _NPWP;
-        private string _taxAddress;
-        private string _taxCity;
-        private string _taxPostCode;
-        private string _contact;
-        private int32 _creditLimit;
-        private int32 _TOP;
-        private int32 _specialTOP;
-        private valuetype System.DateTime _createdDate;
-        private string _note;
-        private int32 _customerCodeId;
-        private string _customerCodeName;
-        private int32 _priceCodeId;
-        private string _priceCodeName;
-        private int32 _salesPersonId;
-        private string _salesPersonName;
-        private int32 _collectorId;
-        private string _collectorName;
-        private int32 _discountId;
-        private string _discountName;
-        private int32 _discountType;
-        private int32 _areaId;
-        private string _areaName;
-        private int32 _active;
-        private int32 _tukarFaktur;
-        private int32 _cashAccountId;
-        private string _cashAccountName;
-        private int32 _bankAccountId;
-        private string _bankAccountName;
-        private int32 _storageId;
-        private string _storageName;
-        private int32 _branchId;
-        private double _parentId;
-        private string _parentName;
-        private int32 _isParent;
-        private string[] _memberName;
-
-
-        public specialname double get_Id() {
-
-          double flt_1;
-
-        }
-
-        public specialname void set_Id(double value) {
-
-          loc_40A61D: nop
-          loc_40A61E: ldarg.0
-          loc_40A61F: ldarg.1
-          loc_40A620: stfld GCUv2.cCurrency::_id
-          loc_40A625: ret
-        }
-
-        public specialname string get_Name() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_Name(string value) {
-
-          loc_40A641: nop
-          loc_40A642: ldarg.0
-          loc_40A643: ldarg.1
-          loc_40A644: call string GCUv2.Module1::cleanString(string)
-          loc_40A649: stfld GCUv2.cCustomer::_name
-          loc_40A64E: ret
-        }
-
-        public specialname string get_Address() {
-
-          string str_1;
+	private double _id;
 
-        }
+	private string _name;
 
-        public specialname void set_Address(string value) {
+	private string _address;
 
-          loc_40A669: nop
-          loc_40A66A: ldarg.0
-          loc_40A66B: ldarg.1
-          loc_40A66C: call string GCUv2.Module1::cleanString(string)
-          loc_40A671: stfld GCUv2.cCustomer::_address
-          loc_40A676: ret
-        }
+	private string _city;
 
-        public specialname string get_City() {
+	private string _postCode;
 
-          string str_1;
+	private string _phone;
 
-        }
+	private string _fax;
 
-        public specialname void set_City(string value) {
+	private string _PT;
 
-          loc_40A691: nop
-          loc_40A692: ldarg.0
-          loc_40A693: ldarg.1
-          loc_40A694: call string GCUv2.Module1::cleanString(string)
-          loc_40A699: stfld GCUv2.cCustomer::_city
-          loc_40A69E: ret
-        }
+	private string _NPWP;
 
-        public specialname string get_PostCode() {
+	private string _taxAddress;
 
-          string str_1;
+	private string _taxCity;
 
-        }
+	private string _taxPostCode;
 
-        public specialname void set_PostCode(string value) {
+	private string _contact;
 
-          loc_40A6B9: nop
-          loc_40A6BA: ldarg.0
-          loc_40A6BB: ldarg.1
-          loc_40A6BC: call string GCUv2.Module1::cleanString(string)
-          loc_40A6C1: stfld GCUv2.cCustomer::_postCode
-          loc_40A6C6: ret
-        }
+	private int _creditLimit;
 
-        public specialname string get_Phone() {
+	private int _TOP;
 
-          string str_1;
+	private int _specialTOP;
 
-        }
+	private DateTime _createdDate;
 
-        public specialname void set_Phone(string value) {
+	private string _note;
 
-          loc_40A6E1: nop
-          loc_40A6E2: ldarg.0
-          loc_40A6E3: ldarg.1
-          loc_40A6E4: call string GCUv2.Module1::cleanString(string)
-          loc_40A6E9: stfld GCUv2.cCustomer::_phone
-          loc_40A6EE: ret
-        }
+	private int _customerCodeId;
 
-        public specialname string get_Fax() {
+	private string _customerCodeName;
 
-          string str_1;
+	private int _priceCodeId;
 
-        }
+	private string _priceCodeName;
 
-        public specialname void set_Fax(string value) {
+	private int _salesPersonId;
 
-          loc_40A709: nop
-          loc_40A70A: ldarg.0
-          loc_40A70B: ldarg.1
-          loc_40A70C: call string GCUv2.Module1::cleanString(string)
-          loc_40A711: stfld GCUv2.cCustomer::_fax
-          loc_40A716: ret
-        }
+	private string _salesPersonName;
 
-        public specialname string get_PT() {
+	private int _collectorId;
 
-          string str_1;
+	private string _collectorName;
 
-        }
+	private int _discountId;
 
-        public specialname void set_PT(string value) {
+	private string _discountName;
 
-          loc_40A731: nop
-          loc_40A732: ldarg.0
-          loc_40A733: ldarg.1
-          loc_40A734: call string GCUv2.Module1::cleanString(string)
-          loc_40A739: stfld GCUv2.cCustomer::_PT
-          loc_40A73E: ret
-        }
+	private int _discountType;
 
-        public specialname string get_NPWP() {
+	private int _areaId;
 
-          string str_1;
+	private string _areaName;
 
-        }
+	private int _active;
 
-        public specialname void set_NPWP(string value) {
+	private int _tukarFaktur;
 
-          loc_40A759: nop
-          loc_40A75A: ldarg.0
-          loc_40A75B: ldarg.1
-          loc_40A75C: call string GCUv2.Module1::cleanString(string)
-          loc_40A761: stfld GCUv2.cCustomer::_NPWP
-          loc_40A766: ret
-        }
+	private int _cashAccountId;
 
-        public specialname string get_TaxAddress() {
+	private string _cashAccountName;
 
-          string str_1;
+	private int _bankAccountId;
 
-        }
+	private string _bankAccountName;
 
-        public specialname void set_TaxAddress(string value) {
+	private int _storageId;
 
-          loc_40A781: nop
-          loc_40A782: ldarg.0
-          loc_40A783: ldarg.1
-          loc_40A784: call string GCUv2.Module1::cleanString(string)
-          loc_40A789: stfld GCUv2.cCustomer::_taxAddress
-          loc_40A78E: ret
-        }
+	private string _storageName;
 
-        public specialname string get_TaxCity() {
+	private int _branchId;
 
-          string str_1;
+	private double _parentId;
 
-        }
+	private string _parentName;
 
-        public specialname void set_TaxCity(string value) {
+	private int _isParent;
 
-          loc_40A7A9: nop
-          loc_40A7AA: ldarg.0
-          loc_40A7AB: ldarg.1
-          loc_40A7AC: call string GCUv2.Module1::cleanString(string)
-          loc_40A7B1: stfld GCUv2.cCustomer::_taxCity
-          loc_40A7B6: ret
-        }
+	private string[] _memberName;
 
-        public specialname string get_TaxPostCode() {
+	public double Id
+	{
+		get
+		{
+			return _id;
+		}
+		set
+		{
+			_id = value;
+		}
+	}
 
-          string str_1;
-
-        }
-
-        public specialname void set_TaxPostCode(string value) {
-
-          loc_40A7D1: nop
-          loc_40A7D2: ldarg.0
-          loc_40A7D3: ldarg.1
-          loc_40A7D4: call string GCUv2.Module1::cleanString(string)
-          loc_40A7D9: stfld GCUv2.cCustomer::_taxPostCode
-          loc_40A7DE: ret
-        }
-
-        public specialname string get_Contact() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_Contact(string value) {
-
-          loc_40A7F9: nop
-          loc_40A7FA: ldarg.0
-          loc_40A7FB: ldarg.1
-          loc_40A7FC: call string GCUv2.Module1::cleanString(string)
-          loc_40A801: stfld GCUv2.cCustomer::_contact
-          loc_40A806: ret
-        }
-
-        public specialname int32 get_CreditLimit() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_CreditLimit(int32 value) {
-
-          loc_40A821: nop
-          loc_40A822: ldarg.0
-          loc_40A823: ldarg.1
-          loc_40A824: stfld GCUv2.cCustomer::_creditLimit
-          loc_40A829: ret
-        }
-
-        public specialname int32 get_TOP() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_TOP(int32 value) {
-
-          loc_40A845: nop
-          loc_40A846: ldarg.0
-          loc_40A847: ldarg.1
-          loc_40A848: stfld GCUv2.cCustomer::_TOP
-          loc_40A84D: ret
-        }
-
-        public specialname int32 get_SpecialTOP() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_SpecialTOP(int32 value) {
-
-          loc_40A869: nop
-          loc_40A86A: ldarg.0
-          loc_40A86B: ldarg.1
-          loc_40A86C: stfld GCUv2.cCustomer::_specialTOP
-          loc_40A871: ret
-        }
-
-        public specialname valuetype System.DateTime get_CreatedDate() {
-
-          valuetype System.DateTime var_1;
-
-        }
-
-        public specialname void set_CreatedDate(valuetype System.DateTime value) {
-
-          loc_40A88D: nop
-          loc_40A88E: ldarg.0
-          loc_40A88F: ldarg.1
-          loc_40A890: stfld GCUv2.cCustomer::_createdDate
-          loc_40A895: ret
-        }
-
-        public specialname string get_Note() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_Note(string value) {
-
-          loc_40A8B1: nop
-          loc_40A8B2: ldarg.0
-          loc_40A8B3: ldarg.1
-          loc_40A8B4: call string GCUv2.Module1::cleanString(string)
-          loc_40A8B9: stfld GCUv2.cCustomer::_note
-          loc_40A8BE: ret
-        }
-
-        public specialname int32 get_CustomerCodeId() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_CustomerCodeId(int32 value) {
-
-          loc_40A8D9: nop
-          loc_40A8DA: ldarg.0
-          loc_40A8DB: ldarg.1
-          loc_40A8DC: stfld GCUv2.cCustomer::_customerCodeId
-          loc_40A8E1: ret
-        }
-
-        public specialname string get_CustomerCodeName() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_CustomerCodeName(string value) {
-
-          loc_40A8FD: nop
-          loc_40A8FE: ldarg.0
-          loc_40A8FF: ldarg.1
-          loc_40A900: stfld GCUv2.cCustomer::_customerCodeName
-          loc_40A905: ret
-        }
-
-        public specialname int32 get_PriceCodeId() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_PriceCodeId(int32 value) {
-
-          loc_40A921: nop
-          loc_40A922: ldarg.0
-          loc_40A923: ldarg.1
-          loc_40A924: stfld GCUv2.cCustomer::_priceCodeId
-          loc_40A929: ret
-        }
-
-        public specialname string get_PriceCodeName() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_PriceCodeName(string value) {
-
-          loc_40A945: nop
-          loc_40A946: ldarg.0
-          loc_40A947: ldarg.1
-          loc_40A948: stfld GCUv2.cCustomer::_priceCodeName
-          loc_40A94D: ret
-        }
-
-        public specialname int32 get_SalesPersonId() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_SalesPersonId(int32 value) {
-
-          loc_40A969: nop
-          loc_40A96A: ldarg.0
-          loc_40A96B: ldarg.1
-          loc_40A96C: stfld GCUv2.cCustomer::_salesPersonId
-          loc_40A971: ret
-        }
-
-        public specialname string get_SalesPersonName() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_SalesPersonName(string value) {
-
-          loc_40A98D: nop
-          loc_40A98E: ldarg.0
-          loc_40A98F: ldarg.1
-          loc_40A990: stfld GCUv2.cCustomer::_salesPersonName
-          loc_40A995: ret
-        }
-
-        public specialname int32 get_CollectorId() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_CollectorId(int32 value) {
-
-          loc_40A9B1: nop
-          loc_40A9B2: ldarg.0
-          loc_40A9B3: ldarg.1
-          loc_40A9B4: stfld GCUv2.cCustomer::_collectorId
-          loc_40A9B9: ret
-        }
-
-        public specialname string get_CollectorName() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_CollectorName(string value) {
-
-          loc_40A9D5: nop
-          loc_40A9D6: ldarg.0
-          loc_40A9D7: ldarg.1
-          loc_40A9D8: stfld GCUv2.cCustomer::_collectorName
-          loc_40A9DD: ret
-        }
-
-        public specialname int32 get_DiscountId() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_DiscountId(int32 value) {
-
-          loc_40A9F9: nop
-          loc_40A9FA: ldarg.0
-          loc_40A9FB: ldarg.1
-          loc_40A9FC: stfld GCUv2.cCustomer::_discountId
-          loc_40AA01: ret
-        }
-
-        public specialname string get_DiscountName() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_DiscountName(string value) {
-
-          loc_40AA1D: nop
-          loc_40AA1E: ldarg.0
-          loc_40AA1F: ldarg.1
-          loc_40AA20: stfld GCUv2.cCustomer::_discountName
-          loc_40AA25: ret
-        }
-
-        public specialname int32 get_DiscountType() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_DiscountType(int32 value) {
-
-          loc_40AA41: nop
-          loc_40AA42: ldarg.0
-          loc_40AA43: ldarg.1
-          loc_40AA44: stfld GCUv2.cCustomer::_discountType
-          loc_40AA49: ret
-        }
-
-        public specialname int32 get_AreaId() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_AreaId(int32 value) {
-
-          loc_40AA65: nop
-          loc_40AA66: ldarg.0
-          loc_40AA67: ldarg.1
-          loc_40AA68: stfld GCUv2.cCustomer::_areaId
-          loc_40AA6D: ret
-        }
-
-        public specialname string get_AreaName() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_AreaName(string value) {
-
-          loc_40AA89: nop
-          loc_40AA8A: ldarg.0
-          loc_40AA8B: ldarg.1
-          loc_40AA8C: stfld GCUv2.cCustomer::_areaName
-          loc_40AA91: ret
-        }
-
-        public specialname int32 get_Active() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_Active(int32 value) {
-
-          loc_40AAAD: nop
-          loc_40AAAE: ldarg.0
-          loc_40AAAF: ldarg.1
-          loc_40AAB0: stfld GCUv2.cCustomer::_active
-          loc_40AAB5: ret
-        }
-
-        public specialname int32 get_TukarFaktur() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_TukarFaktur(int32 value) {
-
-          loc_40AAD1: nop
-          loc_40AAD2: ldarg.0
-          loc_40AAD3: ldarg.1
-          loc_40AAD4: stfld GCUv2.cCustomer::_tukarFaktur
-          loc_40AAD9: ret
-        }
-
-        public specialname int32 get_CashAccountId() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_CashAccountId(int32 value) {
-
-          loc_40AAF5: nop
-          loc_40AAF6: ldarg.0
-          loc_40AAF7: ldarg.1
-          loc_40AAF8: stfld GCUv2.cCustomer::_cashAccountId
-          loc_40AAFD: ret
-        }
-
-        public specialname string get_CashAccountName() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_CashAccountName(string value) {
-
-          loc_40AB19: nop
-          loc_40AB1A: ldarg.0
-          loc_40AB1B: ldarg.1
-          loc_40AB1C: stfld GCUv2.cCustomer::_cashAccountName
-          loc_40AB21: ret
-        }
-
-        public specialname int32 get_BankAccountId() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_BankAccountId(int32 value) {
-
-          loc_40AB3D: nop
-          loc_40AB3E: ldarg.0
-          loc_40AB3F: ldarg.1
-          loc_40AB40: stfld GCUv2.cCustomer::_bankAccountId
-          loc_40AB45: ret
-        }
-
-        public specialname string get_BankAccountName() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_BankAccountName(string value) {
-
-          loc_40AB61: nop
-          loc_40AB62: ldarg.0
-          loc_40AB63: ldarg.1
-          loc_40AB64: stfld GCUv2.cCustomer::_bankAccountName
-          loc_40AB69: ret
-        }
-
-        public specialname int32 get_StorageId() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_StorageId(int32 value) {
-
-          loc_40AB85: nop
-          loc_40AB86: ldarg.0
-          loc_40AB87: ldarg.1
-          loc_40AB88: stfld GCUv2.cCustomer::_storageId
-          loc_40AB8D: ret
-        }
-
-        public specialname string get_StorageName() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_StorageName(string value) {
-
-          loc_40ABA9: nop
-          loc_40ABAA: ldarg.0
-          loc_40ABAB: ldarg.1
-          loc_40ABAC: stfld GCUv2.cCustomer::_storageName
-          loc_40ABB1: ret
-        }
-
-        public specialname int32 get_BranchId() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_BranchId(int32 value) {
-
-          loc_40ABCD: nop
-          loc_40ABCE: ldarg.0
-          loc_40ABCF: ldarg.1
-          loc_40ABD0: stfld GCUv2.cCustomer::_branchId
-          loc_40ABD5: ret
-        }
-
-        public specialname double get_ParentId() {
-
-          double flt_1;
-
-        }
-
-        public specialname void set_ParentId(double value) {
-
-          loc_40ABF1: nop
-          loc_40ABF2: ldarg.0
-          loc_40ABF3: ldarg.1
-          loc_40ABF4: stfld GCUv2.cCustomer::_parentId
-          loc_40ABF9: ret
-        }
-
-        public specialname string get_ParentName() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_ParentName(string value) {
-
-          loc_40AC15: nop
-          loc_40AC16: ldarg.0
-          loc_40AC17: ldarg.1
-          loc_40AC18: stfld GCUv2.cCustomer::_parentName
-          loc_40AC1D: ret
-        }
-
-        public specialname int32 get_IsParent() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_IsParent(int32 value) {
-
-          loc_40AC39: nop
-          loc_40AC3A: ldarg.0
-          loc_40AC3B: ldarg.1
-          loc_40AC3C: stfld GCUv2.cCustomer::_isParent
-          loc_40AC41: ret
-        }
-
-        public specialname string[] get_MemberName() {
-
-          string[] var_1;
-
-        }
-
-        public specialname void set_MemberName(string[] value) {
-
-          loc_40AC5D: nop
-          loc_40AC5E: ldarg.0
-          loc_40AC5F: ldarg.1
-          loc_40AC60: stfld GCUv2.cCustomer::_memberName
-          loc_40AC65: ret
-        }
-
-        public void cCustomer(double CustomerId) {
-
-          boolean var_1;
-          class DataTable var_2;
-          string str_1;
-          int32 num_1;
-          boolean var_3;
-          boolean var_4;
-          class System.Collections.IEnumerator var_5;
-          class DataRow var_6;
-          boolean var_7;
-
-        }
-
-        public void save() {
-
-          string str_1;
-          boolean var_1;
-          boolean var_2;
-
-        }
-
-        public static class DataTable Search(string Name, string Address, int32 CustomerCodeId, int32 SalesId, int32 PriceCodeId, int32 AreaId, int32 DiscountId, int32 Active, boolean BelongToGroup, int32 StorageId, int32 GroupId, int32 BranchId, int32 intMM, int32 intYY, int32 isParent) {
-
-          class DataTable var_1;
-          string str_1;
-          boolean var_2;
-          boolean var_3;
-          boolean var_4;
-          boolean var_5;
-          boolean var_6;
-          boolean var_7;
-          boolean var_8;
-          boolean var_9;
-          boolean var_10;
-          boolean var_11;
-          boolean var_12;
-          boolean var_13;
-          boolean var_14;
-
-        }
-
-        public static void NonActivate(double CustomerId) {
-
-          string str_1;
-
-        }
-
-    }
+	public string Name
+	{
+		get
+		{
+			return _name;
+		}
+		set
+		{
+			_name = Module1.cleanString(value);
+		}
+	}
+
+	public string Address
+	{
+		get
+		{
+			return _address;
+		}
+		set
+		{
+			_address = Module1.cleanString(value);
+		}
+	}
+
+	public string City
+	{
+		get
+		{
+			return _city;
+		}
+		set
+		{
+			_city = Module1.cleanString(value);
+		}
+	}
+
+	public string PostCode
+	{
+		get
+		{
+			return _postCode;
+		}
+		set
+		{
+			_postCode = Module1.cleanString(value);
+		}
+	}
+
+	public string Phone
+	{
+		get
+		{
+			return _phone;
+		}
+		set
+		{
+			_phone = Module1.cleanString(value);
+		}
+	}
+
+	public string Fax
+	{
+		get
+		{
+			return _fax;
+		}
+		set
+		{
+			_fax = Module1.cleanString(value);
+		}
+	}
+
+	public string PT
+	{
+		get
+		{
+			return _PT;
+		}
+		set
+		{
+			_PT = Module1.cleanString(value);
+		}
+	}
+
+	public string NPWP
+	{
+		get
+		{
+			return _NPWP;
+		}
+		set
+		{
+			_NPWP = Module1.cleanString(value);
+		}
+	}
+
+	public string TaxAddress
+	{
+		get
+		{
+			return _taxAddress;
+		}
+		set
+		{
+			_taxAddress = Module1.cleanString(value);
+		}
+	}
+
+	public string TaxCity
+	{
+		get
+		{
+			return _taxCity;
+		}
+		set
+		{
+			_taxCity = Module1.cleanString(value);
+		}
+	}
+
+	public string TaxPostCode
+	{
+		get
+		{
+			return _taxPostCode;
+		}
+		set
+		{
+			_taxPostCode = Module1.cleanString(value);
+		}
+	}
+
+	public string Contact
+	{
+		get
+		{
+			return _contact;
+		}
+		set
+		{
+			_contact = Module1.cleanString(value);
+		}
+	}
+
+	public int CreditLimit
+	{
+		get
+		{
+			return _creditLimit;
+		}
+		set
+		{
+			_creditLimit = value;
+		}
+	}
+
+	public int TOP
+	{
+		get
+		{
+			return _TOP;
+		}
+		set
+		{
+			_TOP = value;
+		}
+	}
+
+	public int SpecialTOP
+	{
+		get
+		{
+			return _specialTOP;
+		}
+		set
+		{
+			_specialTOP = value;
+		}
+	}
+
+	public DateTime CreatedDate
+	{
+		get
+		{
+			return _createdDate;
+		}
+		set
+		{
+			_createdDate = value;
+		}
+	}
+
+	public string Note
+	{
+		get
+		{
+			return _note;
+		}
+		set
+		{
+			_note = Module1.cleanString(value);
+		}
+	}
+
+	public int CustomerCodeId
+	{
+		get
+		{
+			return _customerCodeId;
+		}
+		set
+		{
+			_customerCodeId = value;
+		}
+	}
+
+	public string CustomerCodeName
+	{
+		get
+		{
+			return _customerCodeName;
+		}
+		set
+		{
+			_customerCodeName = value;
+		}
+	}
+
+	public int PriceCodeId
+	{
+		get
+		{
+			return _priceCodeId;
+		}
+		set
+		{
+			_priceCodeId = value;
+		}
+	}
+
+	public string PriceCodeName
+	{
+		get
+		{
+			return _priceCodeName;
+		}
+		set
+		{
+			_priceCodeName = value;
+		}
+	}
+
+	public int SalesPersonId
+	{
+		get
+		{
+			return _salesPersonId;
+		}
+		set
+		{
+			_salesPersonId = value;
+		}
+	}
+
+	public string SalesPersonName
+	{
+		get
+		{
+			return _salesPersonName;
+		}
+		set
+		{
+			_salesPersonName = value;
+		}
+	}
+
+	public int CollectorId
+	{
+		get
+		{
+			return _collectorId;
+		}
+		set
+		{
+			_collectorId = value;
+		}
+	}
+
+	public string CollectorName
+	{
+		get
+		{
+			return _collectorName;
+		}
+		set
+		{
+			_collectorName = value;
+		}
+	}
+
+	public int DiscountId
+	{
+		get
+		{
+			return _discountId;
+		}
+		set
+		{
+			_discountId = value;
+		}
+	}
+
+	public string DiscountName
+	{
+		get
+		{
+			return _discountName;
+		}
+		set
+		{
+			_discountName = value;
+		}
+	}
+
+	public int DiscountType
+	{
+		get
+		{
+			return _discountType;
+		}
+		set
+		{
+			_discountType = value;
+		}
+	}
+
+	public int AreaId
+	{
+		get
+		{
+			return _areaId;
+		}
+		set
+		{
+			_areaId = value;
+		}
+	}
+
+	public string AreaName
+	{
+		get
+		{
+			return _areaName;
+		}
+		set
+		{
+			_areaName = value;
+		}
+	}
+
+	public int Active
+	{
+		get
+		{
+			return _active;
+		}
+		set
+		{
+			_active = value;
+		}
+	}
+
+	public int TukarFaktur
+	{
+		get
+		{
+			return _tukarFaktur;
+		}
+		set
+		{
+			_tukarFaktur = value;
+		}
+	}
+
+	public int CashAccountId
+	{
+		get
+		{
+			return _cashAccountId;
+		}
+		set
+		{
+			_cashAccountId = value;
+		}
+	}
+
+	public string CashAccountName
+	{
+		get
+		{
+			return _cashAccountName;
+		}
+		set
+		{
+			_cashAccountName = value;
+		}
+	}
+
+	public int BankAccountId
+	{
+		get
+		{
+			return _bankAccountId;
+		}
+		set
+		{
+			_bankAccountId = value;
+		}
+	}
+
+	public string BankAccountName
+	{
+		get
+		{
+			return _bankAccountName;
+		}
+		set
+		{
+			_bankAccountName = value;
+		}
+	}
+
+	public int StorageId
+	{
+		get
+		{
+			return _storageId;
+		}
+		set
+		{
+			_storageId = value;
+		}
+	}
+
+	public string StorageName
+	{
+		get
+		{
+			return _storageName;
+		}
+		set
+		{
+			_storageName = value;
+		}
+	}
+
+	public int BranchId
+	{
+		get
+		{
+			return _branchId;
+		}
+		set
+		{
+			_branchId = value;
+		}
+	}
+
+	public double ParentId
+	{
+		get
+		{
+			return _parentId;
+		}
+		set
+		{
+			_parentId = value;
+		}
+	}
+
+	public string ParentName
+	{
+		get
+		{
+			return _parentName;
+		}
+		set
+		{
+			_parentName = value;
+		}
+	}
+
+	public int IsParent
+	{
+		get
+		{
+			return _isParent;
+		}
+		set
+		{
+			_isParent = value;
+		}
+	}
+
+	public string[] MemberName
+	{
+		get
+		{
+			return _memberName;
+		}
+		set
+		{
+			_memberName = value;
+		}
+	}
+
+	public cCustomer(double CustomerId)
+	{
+		if (!(CustomerId > 0.0))
+		{
+			return;
+		}
+		_id = CustomerId;
+		DataTable dataTable = new DataTable();
+		string strSql = " SELECT a.*,b.ckName,c.HargaKode,d.salesName,e.discName,e.discType,f.wilName,g.accountName as cashAccountName,h.accountName as bankAccountName,i.storeName,  j.salesName AS tagihName, IFNULL(gc.custName,'----') as custParentName  FROM Customer a LEFT OUTER JOIN customer gc ON a.custParentId = gc.custId,CustKode b,Harga c,Sales d,Discount e,Wilayah f,account g,account h,Storages i, Sales j WHERE a.custId = " + Conversions.ToString(Id) + "  AND a.ckId = b.ckID  AND a.hargaId = c.hargaId  AND a.salesId = d.salesId  AND a.tagihId = j.salesId  AND a.discId = e.discId  AND a.wilId = f.wilId  AND a.kgId = g.accountId  AND a.tgId = h.accountId  AND a.storeId = i.storeId ";
+		dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+		if (dataTable.Rows.Count > 0)
+		{
+			_name = Conversions.ToString(dataTable.Rows[0]["custName"]);
+			_address = Conversions.ToString(dataTable.Rows[0]["custAddress"]);
+			_city = Conversions.ToString(dataTable.Rows[0]["custCity"]);
+			_postCode = Conversions.ToString(dataTable.Rows[0]["custPc"]);
+			_phone = Conversions.ToString(dataTable.Rows[0]["custPhone"]);
+			_fax = Conversions.ToString(dataTable.Rows[0]["custFax"]);
+			_PT = Conversions.ToString(dataTable.Rows[0]["custPt"]);
+			_NPWP = Conversions.ToString(dataTable.Rows[0]["custNPWP"]);
+			_taxAddress = Conversions.ToString(dataTable.Rows[0]["custTaxAddress"]);
+			_taxCity = Conversions.ToString(dataTable.Rows[0]["custTaxCity"]);
+			_taxPostCode = Conversions.ToString(dataTable.Rows[0]["custTaxPc"]);
+			_contact = Conversions.ToString(dataTable.Rows[0]["custContact"]);
+			_creditLimit = Conversions.ToInteger(dataTable.Rows[0]["custPiutang"]);
+			_TOP = Conversions.ToInteger(dataTable.Rows[0]["custTop"]);
+			_specialTOP = Conversions.ToInteger(dataTable.Rows[0]["custSTop"]);
+			_createdDate = Conversions.ToDate(dataTable.Rows[0]["custSince"]);
+			_note = Conversions.ToString(dataTable.Rows[0]["custNote"]);
+			_customerCodeId = Conversions.ToInteger(dataTable.Rows[0]["ckId"]);
+			_customerCodeName = Conversions.ToString(dataTable.Rows[0]["ckName"]);
+			_priceCodeId = Conversions.ToInteger(dataTable.Rows[0]["hargaId"]);
+			_priceCodeName = Conversions.ToString(dataTable.Rows[0]["hargaKode"]);
+			_salesPersonId = Conversions.ToInteger(dataTable.Rows[0]["salesId"]);
+			_salesPersonName = Conversions.ToString(dataTable.Rows[0]["salesName"]);
+			_collectorId = Conversions.ToInteger(dataTable.Rows[0]["tagihId"]);
+			_collectorName = Conversions.ToString(dataTable.Rows[0]["tagihName"]);
+			_discountId = Conversions.ToInteger(dataTable.Rows[0]["discId"]);
+			_discountName = Conversions.ToString(dataTable.Rows[0]["discName"]);
+			_discountType = Conversions.ToInteger(dataTable.Rows[0]["discType"]);
+			_areaId = Conversions.ToInteger(dataTable.Rows[0]["wilId"]);
+			_areaName = Conversions.ToString(dataTable.Rows[0]["wilName"]);
+			_cashAccountId = Conversions.ToInteger(dataTable.Rows[0]["kgId"]);
+			_cashAccountName = Conversions.ToString(dataTable.Rows[0]["cashAccountName"]);
+			_bankAccountId = Conversions.ToInteger(dataTable.Rows[0]["tgId"]);
+			_bankAccountName = Conversions.ToString(dataTable.Rows[0]["bankAccountName"]);
+			_storageId = Conversions.ToInteger(dataTable.Rows[0]["storeId"]);
+			_storageName = Conversions.ToString(dataTable.Rows[0]["storeName"]);
+			_active = Conversions.ToInteger(dataTable.Rows[0]["custActive"]);
+			_tukarFaktur = Conversions.ToInteger(dataTable.Rows[0]["custTf"]);
+			_branchId = Conversions.ToInteger(dataTable.Rows[0]["branchId"]);
+			_parentId = Conversions.ToDouble(dataTable.Rows[0]["custParentId"]);
+			_parentName = Conversions.ToString(dataTable.Rows[0]["custParentName"]);
+			_isParent = Conversions.ToInteger(dataTable.Rows[0]["isParent"]);
+		}
+		strSql = " SELECT * FROM customer  WHERE isParent = 0  AND custParentId = " + Conversions.ToString(_id) + " AND custId <> custParentId  ORDER BY custName ";
+		dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+		if (dataTable.Rows.Count <= 0)
+		{
+			return;
+		}
+		checked
+		{
+			_memberName = new string[dataTable.Rows.Count - 1 + 1];
+			int num = 0;
+			foreach (DataRow row in dataTable.Rows)
+			{
+				_memberName[num] = Conversions.ToString(row["custName"]);
+				num++;
+			}
+		}
+	}
+
+	public void save()
+	{
+		if (_id == 0.0)
+		{
+			string strSql = " INSERT INTO Customer(custName,custAddress,custCity,  custPC,custPhone,custFax, custPT,custNPWP,custTaxAddress,  custTaxCity,custTaxPC,custContact,  custPiutang,custTOP,custSTOP,  custSince,custNote,custCreated,  ckID,hargaID,salesID,  discId,wilId,kgId,  tgId,storeId,custTf,  custParentId,custActive,branchId,  tagihId,isParent) values  ('" + _name + "','" + _address + "','" + _city + "','" + _postCode + "', '" + _phone + "','" + _fax + "','" + _PT + "','" + _NPWP + "','" + _taxAddress + "','" + _taxCity + "','" + _taxPostCode + "','" + _contact + "'," + Conversions.ToString(_creditLimit) + ", " + Conversions.ToString(_TOP) + ", " + Conversions.ToString(_specialTOP) + ",'" + Strings.Format(_createdDate, "yyyy-MM-dd") + "','" + _note + "','" + Strings.Format(DateAndTime.Now, "yyyy-MM-dd HH:mm:ss") + "'," + Conversions.ToString(_customerCodeId) + "," + Conversions.ToString(_priceCodeId) + "," + Conversions.ToString(_salesPersonId) + ", " + Conversions.ToString(_discountId) + "," + Conversions.ToString(_areaId) + "," + Conversions.ToString(_cashAccountId) + "," + Conversions.ToString(_bankAccountId) + ", " + Conversions.ToString(_storageId) + "," + Conversions.ToString(_tukarFaktur) + "," + Conversions.ToString(_parentId) + ", " + Conversions.ToString(_active) + ", " + Conversions.ToString(_branchId) + ", " + Conversions.ToString(_collectorId) + "," + Conversions.ToString(_isParent) + ")";
+			Module1.sqlNonQuery(strSql, "data");
+			_id = cDatabase.LastId("data");
+			if (_parentId == 0.0)
+			{
+				strSql = " UPDATE customer SET  custParentId = " + Conversions.ToString(_id) + " WHERE custId = " + Conversions.ToString(_id);
+				Module1.sqlNonQuery(strSql, "data");
+			}
+		}
+		else
+		{
+			string strSql = " UPDATE Customer  SET custName = '" + _name + "', custAddress = '" + _address + "', custCity = '" + _city + "', custPc = '" + _postCode + "', custPhone = '" + _phone + "', custFax = '" + _fax + "', custPt = '" + _PT + "', custNPWP = '" + _NPWP + "', custTaxAddress = '" + _taxAddress + "', custTaxCity = '" + _taxCity + "', custTaxPc = '" + _taxPostCode + "', custContact = '" + _contact + "' , custPiutang = " + Conversions.ToString(_creditLimit) + ", custtop=" + Conversions.ToString(_TOP) + ", custstop=" + Conversions.ToString(_specialTOP) + ",  custSince = '" + Strings.Format(_createdDate, "yyyy-MM-dd") + "', custNote = '" + _note + "', custTf = " + Conversions.ToString(_tukarFaktur) + ",  ckId = " + Conversions.ToString(_customerCodeId) + ", hargaId = " + Conversions.ToString(_priceCodeId) + ", discId = " + Conversions.ToString(_discountId) + ", salesId = " + Conversions.ToString(_salesPersonId) + ", tagihId = " + Conversions.ToString(_collectorId) + ",  wilId = " + Conversions.ToString(_areaId) + ",  kgId = " + Conversions.ToString(_cashAccountId) + ",tgId = " + Conversions.ToString(_bankAccountId) + ", storeId = " + Conversions.ToString(_storageId) + ",  isParent = " + Conversions.ToString(_isParent) + ",custParentId = " + Conversions.ToString(_parentId) + ", custActive = " + Conversions.ToString(_active) + ",  BranchId = " + Conversions.ToString(_branchId) + " WHERE custId = " + Conversions.ToString(_id) + " ";
+			Module1.sqlNonQuery(strSql, "data");
+		}
+	}
+
+	public static DataTable Search(string Name, string Address, int CustomerCodeId, int SalesId, int PriceCodeId, int AreaId, int DiscountId, int Active, bool BelongToGroup, int StorageId, int GroupId, int BranchId, int intMM, int intYY, int isParent)
+	{
+		string text = " SELECT a.*,b.salesName,c.ckName, d.wilName  FROM customer a,sales b, custKode c, wilayah d  WHERE a.salesID = b.salesID and a.ckID = c.ckID and a.wilId = d.wilId ";
+		if (Operators.CompareString(Name, "", TextCompare: false) != 0)
+		{
+			text = text + " AND custName like '%" + Name + "%'";
+		}
+		if (Operators.CompareString(Address, "", TextCompare: false) != 0)
+		{
+			text = text + " AND custAddress like '%" + Address + "%'";
+		}
+		if (CustomerCodeId != 0)
+		{
+			text = text + " AND a.ckId = " + Conversions.ToString(CustomerCodeId);
+		}
+		if (SalesId != 0)
+		{
+			text = text + " AND a.salesId = " + Conversions.ToString(SalesId);
+		}
+		if (PriceCodeId != 0)
+		{
+			text = text + " AND a.hargaId = " + Conversions.ToString(PriceCodeId);
+		}
+		if (AreaId != 0)
+		{
+			text = text + " AND a.wilId = " + Conversions.ToString(AreaId);
+		}
+		if (DiscountId != 0)
+		{
+			text = text + " AND a.discId = " + Conversions.ToString(DiscountId);
+		}
+		if (Active < 2)
+		{
+			text = text + " AND a.custActive = " + Conversions.ToString(Active);
+		}
+		if (intMM > 0 && intYY > 0)
+		{
+			text = text + " AND MONTH(a.custSince) = " + Conversions.ToString(intMM) + " AND YEAR(a.custSince) = " + Conversions.ToString(intYY);
+		}
+		if (BelongToGroup)
+		{
+			text += " AND a.custId <> a.custParentId ";
+		}
+		text = ((StorageId == 0) ? (text + " AND a.storeId IN (SELECT storeId FROM GroupStorage WHERE groupId = " + Conversions.ToString(GroupId) + " AND generalDropDown = 1)") : (text + " AND a.storeId = " + Conversions.ToString(StorageId)));
+		text = ((BranchId <= 0) ? (text + " AND a.branchId IN ( SELECT branchId FROM groups_branches  WHERE groupId = " + Conversions.ToString(GroupId) + " AND generalDropDown = 1) ") : (text + " AND a.branchId = " + Conversions.ToString(BranchId)));
+		if (isParent < 2)
+		{
+			text = text + " AND a.isParent = " + Conversions.ToString(isParent);
+		}
+		text += " ORDER BY custName ";
+		return Module1.sqlTable(text, "read", Clone: false);
+	}
+
+	public static void NonActivate(double CustomerId)
+	{
+		string strSql = " UPDATE customer  SET custActive = 0  WHERE custId = " + Conversions.ToString(CustomerId);
+		Module1.sqlNonQuery(strSql, "data");
+	}
 }

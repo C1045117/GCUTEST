@@ -1,127 +1,154 @@
-namespace GCUv2
+using System.Data;
+using System.Runtime.CompilerServices;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+
+namespace GCUv2;
+
+public class cArea
 {
-    public class 
-    {
+	private int _id;
 
-        private int32 _id;
-        private string _name;
-        private int32 _branchId;
-        private string _branchName;
-        private int32 _active;
+	private string _name;
 
+	private int _branchId;
 
-        public specialname int32 get_Id() {
+	private string _branchName;
 
-          int32 num_1;
+	private int _active;
 
-        }
+	public int Id
+	{
+		get
+		{
+			return _id;
+		}
+		set
+		{
+			_id = value;
+		}
+	}
 
-        public specialname void set_Id(int32 value) {
+	public string Name
+	{
+		get
+		{
+			return _name;
+		}
+		set
+		{
+			_name = Module1.cleanString(value);
+		}
+	}
 
-          loc_403E81: nop
-          loc_403E82: ldarg.0
-          loc_403E83: ldarg.1
-          loc_403E84: stfld GCUv2.cAdjustment::_id
-          loc_403E89: ret
-        }
+	public int BranchId
+	{
+		get
+		{
+			return _branchId;
+		}
+		set
+		{
+			_branchId = value;
+		}
+	}
 
-        public specialname string get_Name() {
+	public string BranchName
+	{
+		get
+		{
+			return _branchName;
+		}
+		set
+		{
+			_branchName = value;
+		}
+	}
 
-          string str_1;
+	public int Active
+	{
+		get
+		{
+			return _active;
+		}
+		set
+		{
+			_active = value;
+		}
+	}
 
-        }
+	[MethodImpl(MethodImplOptions.NoInlining | MethodImplOptions.NoOptimization)]
+	public cArea(int Id)
+	{
+		if (Id > 0)
+		{
+			_id = Id;
+			DataTable dataTable = new DataTable();
+			string strSql = " SELECT a.*, b.branchName  FROM wilayah a, branches b  WHERE a.branchId = b.branchId  AND wilId = " + Conversions.ToString(_id);
+			dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+			if (dataTable.Rows.Count > 0)
+			{
+				_name = Conversions.ToString(dataTable.Rows[0]["wilName"]);
+				_branchId = Conversions.ToInteger(dataTable.Rows[0]["branchId"]);
+				_branchName = Conversions.ToString(dataTable.Rows[0]["branchName"]);
+				_active = Conversions.ToInteger(dataTable.Rows[0]["wilStatus"]);
+			}
+			else
+			{
+				_id = 0;
+				Information.Err().Raise(513, null, "Wilayah tidak ditemukan. Kemungkinan telah dihapus.");
+			}
+		}
+	}
 
-        public specialname void set_Name(string value) {
+	public void Save()
+	{
+		if (_id == 0)
+		{
+			string strSql = " INSERT INTO wilayah(wilName, branchId, wilStatus)  VALUES  ('" + _name + "', " + Conversions.ToString(_branchId) + "," + Conversions.ToString(_active) + ")";
+			Module1.sqlNonQuery(strSql, "data");
+		}
+		else
+		{
+			string strSql = " UPDATE wilayah  SET wilName = '" + _name + "',  branchId = " + Conversions.ToString(_branchId) + ", wilStatus = " + Conversions.ToString(_active) + "  WHERE wilId = " + Conversions.ToString(_id) + " ";
+			Module1.sqlNonQuery(strSql, "data");
+		}
+	}
 
-          loc_403EA5: nop
-          loc_403EA6: ldarg.0
-          loc_403EA7: ldarg.1
-          loc_403EA8: call string GCUv2.Module1::cleanString(string)
-          loc_403EAD: stfld GCUv2.cArea::_name
-          loc_403EB2: ret
-        }
+	public static DataTable Search(int BranchId, int GroupId, int Active)
+	{
+		string text = " SELECT a.*, branchName  FROM wilayah a, branches b WHERE a.branchId = b.branchId ";
+		switch (Active)
+		{
+		case 0:
+			text += " AND wilStatus = 0 ";
+			break;
+		case 1:
+			text += " AND wilStatus = 1 ";
+			break;
+		}
+		text = ((BranchId <= 0) ? (text + " AND a.branchId IN (  SELECT branchId FROM groups_branches  WHERE groupId = " + Conversions.ToString(GroupId) + " AND generalDropDown = 1)") : (text + " AND a.branchId = " + Conversions.ToString(BranchId)));
+		text += " ORDER BY branchName, wilName ";
+		return Module1.sqlTable(text, "read", Clone: false);
+	}
 
-        public specialname int32 get_BranchId() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_BranchId(int32 value) {
-
-          loc_403ECD: nop
-          loc_403ECE: ldarg.0
-          loc_403ECF: ldarg.1
-          loc_403ED0: stfld GCUv2.cArea::_branchId
-          loc_403ED5: ret
-        }
-
-        public specialname string get_BranchName() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_BranchName(string value) {
-
-          loc_403EF1: nop
-          loc_403EF2: ldarg.0
-          loc_403EF3: ldarg.1
-          loc_403EF4: stfld GCUv2.cArea::_branchName
-          loc_403EF9: ret
-        }
-
-        public specialname int32 get_Active() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_Active(int32 value) {
-
-          loc_403F15: nop
-          loc_403F16: ldarg.0
-          loc_403F17: ldarg.1
-          loc_403F18: stfld GCUv2.cArea::_active
-          loc_403F1D: ret
-        }
-
-        public void cArea(int32 Id) {
-
-          boolean var_1;
-          class DataTable var_2;
-          string str_1;
-          boolean var_3;
-
-        }
-
-        public void Save() {
-
-          string str_1;
-          boolean var_1;
-
-        }
-
-        public static class DataTable Search(int32 BranchId, int32 GroupId, int32 Active) {
-
-          class DataTable var_1;
-          string str_1;
-          boolean var_2;
-          boolean var_3;
-          boolean var_4;
-
-        }
-
-        public static boolean IsExist(int32 Id, int32 BranchId, string Name) {
-
-          boolean var_1;
-          string str_1;
-          class DataTable var_2;
-          boolean var_3;
-          boolean var_4;
-          boolean var_5;
-
-        }
-
-    }
+	public static bool IsExist(int Id, int BranchId, string Name)
+	{
+		bool result = false;
+		string text = " SELECT * FROM wilayah  WHERE wilName = '" + Name + "'";
+		if (Id > 0)
+		{
+			text = text + " AND wilId <> " + Conversions.ToString(Id);
+		}
+		if (BranchId > 0)
+		{
+			text = text + " AND branchId = " + Conversions.ToString(BranchId);
+		}
+		DataTable dataTable = Module1.sqlTable(text, "data", Clone: false);
+		if (dataTable.Rows.Count > 0)
+		{
+			result = true;
+		}
+		return result;
+	}
 }

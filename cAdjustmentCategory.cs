@@ -1,22 +1,17 @@
-namespace GCUv2
+using System.Data;
+
+namespace GCUv2;
+
+public class cAdjustmentCategory
 {
-    public class 
-    {
-
-        public void cAdjustmentCategory() {
-
-          loc_403253: ldarg.0
-          loc_403254: call instance void System.Object::.ctor()
-          loc_403259: ret
-        }
-
-        public static class DataTable dtCategory(boolean Active) {
-
-          class DataTable var_1;
-          string str_1;
-          boolean var_2;
-
-        }
-
-    }
+	public static DataTable dtCategory(bool Active)
+	{
+		string text = " SELECT adjTypeId, adjTypeName  FROM adjustment_types ";
+		if (Active)
+		{
+			text += " WHERE adjTypeActive = 1 ";
+		}
+		text += " ORDER BY adjTypeName ";
+		return Module1.sqlTable(text, "read", Clone: false);
+	}
 }

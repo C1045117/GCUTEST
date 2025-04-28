@@ -1,22 +1,21 @@
-namespace GCUv2
+using System;
+using System.Collections;
+using System.IO;
+
+namespace GCUv2;
+
+public class cCompareFileInfo : IComparer
 {
-    public class 
-    {
+	public int Compare(object x, object y)
+	{
+		FileInfo fileInfo = (FileInfo)x;
+		FileInfo fileInfo2 = (FileInfo)y;
+		return DateTime.Compare(fileInfo.LastWriteTime, fileInfo2.LastWriteTime);
+	}
 
-        public void cCompareFileInfo() {
-
-          loc_403253: ldarg.0
-          loc_403254: call instance void System.Object::.ctor()
-          loc_403259: ret
-        }
-
-        public final override strict int32 Compare(object x, object y) {
-
-          int32 num_1;
-          class System.IO.FileInfo var_1;
-          class System.IO.FileInfo var_2;
-
-        }
-
-    }
+	int IComparer.Compare(object x, object y)
+	{
+		//ILSpy generated this explicit interface implementation from .override directive in Compare
+		return this.Compare(x, y);
+	}
 }

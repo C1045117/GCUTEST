@@ -1,390 +1,371 @@
-using mscorlib;
+using System;
+using System.Data;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
 
-namespace GCUv2
+namespace GCUv2;
+
+public class cSalesInvoicePayment
 {
-    public class 
-    {
+	private double _paymentId;
 
-        private double _paymentId;
-        private double _multiPaymentId;
-        private uint8 _paymentCodeId;
-        private string _paymentCodeName;
-        private int32 _salesPersonId;
-        private string _salesPersonName;
-        private valuetype System.DateTime _paymentDate;
-        private double _amount;
-        private int32 _bankId;
-        private string _bankName;
-        private double _chequeId;
-        private valuetype System.DateTime _chequeDate;
-        private string _chequeNumber;
-        private valuetype System.DateTime _chequeDepositDate;
-        private valuetype System.DateTime _chequeClearingDate;
-        private valuetype System.DateTime _createdDate;
-        private string _accountName;
-        private int32 _accountId;
-        private double _invoiceId;
-        private valuetype System.DateTime _invoiceDate;
-        private string _invoiceNumber;
-        private double _invoiceReceivable;
+	private double _multiPaymentId;
 
+	private byte _paymentCodeId;
 
-        public void cSalesInvoicePayment() {
+	private string _paymentCodeName;
 
-          loc_403253: ldarg.0
-          loc_403254: call instance void System.Object::.ctor()
-          loc_403259: ret
-        }
-
-        public specialname double get_PaymentId() {
-
-          double flt_1;
-
-        }
-
-        public specialname void set_PaymentId(double value) {
-
-          loc_420E9D: nop
-          loc_420E9E: ldarg.0
-          loc_420E9F: ldarg.1
-          loc_420EA0: stfld GCUv2.cSalesInvoiceMultiPayment::_paymentId
-          loc_420EA5: ret
-        }
-
-        public specialname double get_MultiPaymentId() {
-
-          double flt_1;
-
-        }
-
-        public specialname void set_MultiPaymentId(double value) {
-
-          loc_420EC1: nop
-          loc_420EC2: ldarg.0
-          loc_420EC3: ldarg.1
-          loc_420EC4: stfld GCUv2.cSalesInvoicePayment::_multiPaymentId
-          loc_420EC9: ret
-        }
-
-        public specialname uint8 get_PaymentCodeId() {
-
-          uint8 num_1;
-
-        }
-
-        public specialname void set_PaymentCodeId(uint8 value) {
-
-          loc_420EE5: nop
-          loc_420EE6: ldarg.0
-          loc_420EE7: ldarg.1
-          loc_420EE8: stfld GCUv2.cSalesInvoicePayment::_paymentCodeId
-          loc_420EED: ret
-        }
-
-        public specialname string get_PaymentCodeName() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_PaymentCodeName(string value) {
-
-          loc_420F09: nop
-          loc_420F0A: ldarg.0
-          loc_420F0B: ldarg.1
-          loc_420F0C: stfld GCUv2.cSalesInvoicePayment::_paymentCodeName
-          loc_420F11: ret
-        }
-
-        public specialname int32 get_SalesPersonId() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_SalesPersonId(int32 value) {
-
-          loc_420F2D: nop
-          loc_420F2E: ldarg.0
-          loc_420F2F: ldarg.1
-          loc_420F30: stfld GCUv2.cSalesInvoicePayment::_salesPersonId
-          loc_420F35: ret
-        }
-
-        public specialname string get_SalesPersonName() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_SalesPersonName(string value) {
-
-          loc_420F51: nop
-          loc_420F52: ldarg.0
-          loc_420F53: ldarg.1
-          loc_420F54: stfld GCUv2.cSalesInvoicePayment::_salesPersonName
-          loc_420F59: ret
-        }
-
-        public specialname valuetype System.DateTime get_PaymentDate() {
-
-          valuetype System.DateTime var_1;
-
-        }
-
-        public specialname void set_PaymentDate(valuetype System.DateTime value) {
-
-          loc_420F75: nop
-          loc_420F76: ldarg.0
-          loc_420F77: ldarg.1
-          loc_420F78: stfld GCUv2.cSalesInvoicePayment::_paymentDate
-          loc_420F7D: ret
-        }
-
-        public specialname double get_Amount() {
-
-          double flt_1;
-
-        }
-
-        public specialname void set_Amount(double value) {
-
-          loc_420F99: nop
-          loc_420F9A: ldarg.0
-          loc_420F9B: ldarg.1
-          loc_420F9C: stfld GCUv2.cSalesInvoicePayment::_amount
-          loc_420FA1: ret
-        }
-
-        public specialname int32 get_BankId() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_BankId(int32 value) {
-
-          loc_420FBD: nop
-          loc_420FBE: ldarg.0
-          loc_420FBF: ldarg.1
-          loc_420FC0: stfld GCUv2.cSalesInvoicePayment::_bankId
-          loc_420FC5: ret
-        }
-
-        public specialname string get_BankName() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_BankName(string value) {
-
-          loc_420FE1: nop
-          loc_420FE2: ldarg.0
-          loc_420FE3: ldarg.1
-          loc_420FE4: stfld GCUv2.cSalesInvoicePayment::_bankName
-          loc_420FE9: ret
-        }
-
-        public specialname double get_ChequeId() {
-
-          double flt_1;
-
-        }
-
-        public specialname void set_ChequeId(double value) {
-
-          loc_421005: nop
-          loc_421006: ldarg.0
-          loc_421007: ldarg.1
-          loc_421008: stfld GCUv2.cSalesInvoicePayment::_chequeId
-          loc_42100D: ret
-        }
-
-        public specialname valuetype System.DateTime get_ChequeDate() {
-
-          valuetype System.DateTime var_1;
-
-        }
-
-        public specialname void set_ChequeDate(valuetype System.DateTime value) {
-
-          loc_421029: nop
-          loc_42102A: ldarg.0
-          loc_42102B: ldarg.1
-          loc_42102C: stfld GCUv2.cSalesInvoicePayment::_chequeDate
-          loc_421031: ret
-        }
-
-        public specialname string get_ChequeNumber() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_ChequeNumber(string value) {
-
-          loc_42104D: nop
-          loc_42104E: ldarg.0
-          loc_42104F: ldarg.1
-          loc_421050: stfld GCUv2.cSalesInvoicePayment::_chequeNumber
-          loc_421055: ret
-        }
-
-        public specialname valuetype System.DateTime get_ChequeDepositDate() {
-
-          valuetype System.DateTime var_1;
-
-        }
-
-        public specialname void set_ChequeDepositDate(valuetype System.DateTime value) {
-
-          loc_421071: nop
-          loc_421072: ldarg.0
-          loc_421073: ldarg.1
-          loc_421074: stfld GCUv2.cSalesInvoicePayment::_chequeDepositDate
-          loc_421079: ret
-        }
-
-        public specialname valuetype System.DateTime get_ChequeClearingDate() {
-
-          valuetype System.DateTime var_1;
-
-        }
-
-        public specialname void set_ChequeClearingDate(valuetype System.DateTime value) {
-
-          loc_421095: nop
-          loc_421096: ldarg.0
-          loc_421097: ldarg.1
-          loc_421098: stfld GCUv2.cSalesInvoicePayment::_chequeClearingDate
-          loc_42109D: ret
-        }
-
-        public specialname valuetype System.DateTime get_CreatedDate() {
-
-          valuetype System.DateTime var_1;
-
-        }
-
-        public specialname void set_CreatedDate(valuetype System.DateTime value) {
-
-          loc_4210B9: nop
-          loc_4210BA: ldarg.0
-          loc_4210BB: ldarg.1
-          loc_4210BC: stfld GCUv2.cSalesInvoicePayment::_createdDate
-          loc_4210C1: ret
-        }
-
-        public specialname int32 get_AccountId() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_AccountId(int32 value) {
-
-          loc_4210DD: nop
-          loc_4210DE: ldarg.0
-          loc_4210DF: ldarg.1
-          loc_4210E0: stfld GCUv2.cSalesInvoicePayment::_accountId
-          loc_4210E5: ret
-        }
-
-        public specialname string get_AccountName() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_AccountName(string value) {
-
-          loc_421101: nop
-          loc_421102: ldarg.0
-          loc_421103: ldarg.1
-          loc_421104: stfld GCUv2.cSalesInvoicePayment::_accountName
-          loc_421109: ret
-        }
-
-        public specialname double get_InvoiceId() {
-
-          double flt_1;
-
-        }
-
-        public specialname void set_InvoiceId(double value) {
-
-          loc_421125: nop
-          loc_421126: ldarg.0
-          loc_421127: ldarg.1
-          loc_421128: stfld GCUv2.cSalesInvoicePayment::_invoiceId
-          loc_42112D: ret
-        }
-
-        public specialname valuetype System.DateTime get_InvoiceDate() {
-
-          valuetype System.DateTime var_1;
-
-        }
-
-        public specialname void set_InvoiceDate(valuetype System.DateTime value) {
-
-          loc_421149: nop
-          loc_42114A: ldarg.0
-          loc_42114B: ldarg.1
-          loc_42114C: stfld GCUv2.cSalesInvoicePayment::_invoiceDate
-          loc_421151: ret
-        }
-
-        public specialname string get_InvoiceNumber() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_InvoiceNumber(string value) {
-
-          loc_42116D: nop
-          loc_42116E: ldarg.0
-          loc_42116F: ldarg.1
-          loc_421170: stfld GCUv2.cSalesInvoicePayment::_invoiceNumber
-          loc_421175: ret
-        }
-
-        public specialname double get_InvoiceReceivable() {
-
-          double flt_1;
-
-        }
-
-        public specialname void set_InvoiceReceivable(double value) {
-
-          loc_421191: nop
-          loc_421192: ldarg.0
-          loc_421193: ldarg.1
-          loc_421194: stfld GCUv2.cSalesInvoicePayment::_invoiceReceivable
-          loc_421199: ret
-        }
-
-        public static class DataTable Search(int32 Range, valuetype System.DateTime DateFirst, valuetype System.DateTime DateLast, double CustomerId, int32 PaymentCodeId, int32 SalesPersonId, int32 IsReturn, int32 StorageId, int32 BranchId, int32 GroupId) {
-
-          class DataTable var_1;
-          string str_1;
-          string str_2;
-          boolean var_2;
-          boolean var_3;
-          boolean var_4;
-          boolean var_5;
-          boolean var_6;
-          boolean var_7;
-          boolean var_8;
-          boolean var_9;
-          boolean var_10;
-          boolean var_11;
-          boolean var_12;
-          boolean var_13;
-
-        }
-
-    }
+	private int _salesPersonId;
+
+	private string _salesPersonName;
+
+	private DateTime _paymentDate;
+
+	private double _amount;
+
+	private int _bankId;
+
+	private string _bankName;
+
+	private double _chequeId;
+
+	private DateTime _chequeDate;
+
+	private string _chequeNumber;
+
+	private DateTime _chequeDepositDate;
+
+	private DateTime _chequeClearingDate;
+
+	private DateTime _createdDate;
+
+	private string _accountName;
+
+	private int _accountId;
+
+	private double _invoiceId;
+
+	private DateTime _invoiceDate;
+
+	private string _invoiceNumber;
+
+	private double _invoiceReceivable;
+
+	public double PaymentId
+	{
+		get
+		{
+			return _paymentId;
+		}
+		set
+		{
+			_paymentId = value;
+		}
+	}
+
+	public double MultiPaymentId
+	{
+		get
+		{
+			return _multiPaymentId;
+		}
+		set
+		{
+			_multiPaymentId = value;
+		}
+	}
+
+	public byte PaymentCodeId
+	{
+		get
+		{
+			return _paymentCodeId;
+		}
+		set
+		{
+			_paymentCodeId = value;
+		}
+	}
+
+	public string PaymentCodeName
+	{
+		get
+		{
+			return _paymentCodeName;
+		}
+		set
+		{
+			_paymentCodeName = value;
+		}
+	}
+
+	public int SalesPersonId
+	{
+		get
+		{
+			return _salesPersonId;
+		}
+		set
+		{
+			_salesPersonId = value;
+		}
+	}
+
+	public string SalesPersonName
+	{
+		get
+		{
+			return _salesPersonName;
+		}
+		set
+		{
+			_salesPersonName = value;
+		}
+	}
+
+	public DateTime PaymentDate
+	{
+		get
+		{
+			return _paymentDate;
+		}
+		set
+		{
+			_paymentDate = value;
+		}
+	}
+
+	public double Amount
+	{
+		get
+		{
+			return _amount;
+		}
+		set
+		{
+			_amount = value;
+		}
+	}
+
+	public int BankId
+	{
+		get
+		{
+			return _bankId;
+		}
+		set
+		{
+			_bankId = value;
+		}
+	}
+
+	public string BankName
+	{
+		get
+		{
+			return _bankName;
+		}
+		set
+		{
+			_bankName = value;
+		}
+	}
+
+	public double ChequeId
+	{
+		get
+		{
+			return _chequeId;
+		}
+		set
+		{
+			_chequeId = value;
+		}
+	}
+
+	public DateTime ChequeDate
+	{
+		get
+		{
+			return _chequeDate;
+		}
+		set
+		{
+			_chequeDate = value;
+		}
+	}
+
+	public string ChequeNumber
+	{
+		get
+		{
+			return _chequeNumber;
+		}
+		set
+		{
+			_chequeNumber = value;
+		}
+	}
+
+	public DateTime ChequeDepositDate
+	{
+		get
+		{
+			return _chequeDepositDate;
+		}
+		set
+		{
+			_chequeDepositDate = value;
+		}
+	}
+
+	public DateTime ChequeClearingDate
+	{
+		get
+		{
+			return _chequeClearingDate;
+		}
+		set
+		{
+			_chequeClearingDate = value;
+		}
+	}
+
+	public DateTime CreatedDate
+	{
+		get
+		{
+			return _createdDate;
+		}
+		set
+		{
+			_createdDate = value;
+		}
+	}
+
+	public int AccountId
+	{
+		get
+		{
+			return _accountId;
+		}
+		set
+		{
+			_accountId = value;
+		}
+	}
+
+	public string AccountName
+	{
+		get
+		{
+			return _accountName;
+		}
+		set
+		{
+			_accountName = value;
+		}
+	}
+
+	public double InvoiceId
+	{
+		get
+		{
+			return _invoiceId;
+		}
+		set
+		{
+			_invoiceId = value;
+		}
+	}
+
+	public DateTime InvoiceDate
+	{
+		get
+		{
+			return _invoiceDate;
+		}
+		set
+		{
+			_invoiceDate = value;
+		}
+	}
+
+	public string InvoiceNumber
+	{
+		get
+		{
+			return _invoiceNumber;
+		}
+		set
+		{
+			_invoiceNumber = value;
+		}
+	}
+
+	public double InvoiceReceivable
+	{
+		get
+		{
+			return _invoiceReceivable;
+		}
+		set
+		{
+			_invoiceReceivable = value;
+		}
+	}
+
+	public static DataTable Search(int Range, DateTime DateFirst, DateTime DateLast, double CustomerId, int PaymentCodeId, int SalesPersonId, int IsReturn, int StorageId, int BranchId, int GroupId)
+	{
+		string text = "";
+		string text2 = "";
+		text = " SELECT 0 AS penjId, pbgId, pbgDate AS paymentDate,  custName, CONCAT('M-',b.pkName) AS pkName, pbgAmount AS paymentAmount,  pbgAmount-allocatedAmount AS paymentRemainder, salesName, '0' AS type, createdDate  FROM PenjBayarGroup a, pembKode b, sales c, customer d  WHERE a.pkId = b.pkId  AND a.salesId = c.salesId  AND a.custId = d.custId ";
+		if (Range == 1)
+		{
+			text = text + " AND pbgDate >= '" + Strings.Format(DateFirst, "yyyy-MM-dd") + "'  AND pbgDate <= '" + Strings.Format(DateLast, "yyyy-MM-dd") + "' ";
+		}
+		if (CustomerId > 0.0)
+		{
+			text2 = text2 + " AND (d.custId = " + Conversions.ToString(CustomerId) + " OR d.custParentId = " + Conversions.ToString(CustomerId) + ")";
+		}
+		text2 = ((StorageId <= 0) ? (text2 + " AND d.storeId IN (SELECT storeId FROM GroupStorage WHERE groupId = " + Conversions.ToString(GroupId) + " AND generalDropDown = 1) ") : (text2 + " AND d.storeId = " + Conversions.ToString(StorageId) + " "));
+		if (BranchId > 0)
+		{
+			text2 = text2 + " AND d.branchId = " + Conversions.ToString(BranchId);
+		}
+		if (PaymentCodeId > 0)
+		{
+			text2 = text2 + " AND a.pkId = " + Conversions.ToString(PaymentCodeId);
+		}
+		if (SalesPersonId > 0)
+		{
+			text2 = text2 + " AND a.salesId = " + Conversions.ToString(SalesPersonId);
+		}
+		text += text2;
+		if (IsReturn == 1)
+		{
+			text = "";
+		}
+		if (Operators.CompareString(text, "", TextCompare: false) != 0)
+		{
+			text += " UNION ";
+		}
+		text = text + " SELECT a.penjId AS penjId, 0 AS pbgId, pbDate AS paymentDate,  custName, b.pkName, IF(penjBsType>0,pbAmount*-1,pbAmount) AS paymentAmount,  0 AS paymentRemainder, salesName, '1' AS type, createdDate  FROM PenjBayar a, pembKode b, sales c, customer d, penjualan e  WHERE a.pkId = b.pkId  AND a.salesId = c.salesId  AND a.penjId = e.penjId  AND e.custId = d.custId  AND pbgId = 0  AND e.penjBsType = " + Conversions.ToString(IsReturn);
+		switch (Range)
+		{
+		case 1:
+			text = text + " AND pbDate >= '" + Strings.Format(DateFirst, "yyyy-MM-dd") + "'  AND pbDate <= '" + Strings.Format(DateLast, "yyyy-MM-dd") + "' ";
+			break;
+		case 2:
+			text = text + " AND pbDate >= '" + Strings.Format(DateFirst, "yyyy-MM-dd") + "'";
+			break;
+		}
+		text += text2;
+		return Module1.sqlTable(Range switch
+		{
+			2 => text + " ORDER BY createdDate DESC LIMIT 100", 
+			3 => text + " ORDER BY paymentDate DESC ", 
+			_ => text + " ORDER BY paymentDate ", 
+		}, "data", Clone: false);
+	}
 }

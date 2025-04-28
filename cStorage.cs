@@ -1,187 +1,236 @@
-namespace GCUv2
+using System.Data;
+using System.Runtime.CompilerServices;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+
+namespace GCUv2;
+
+public class cStorage
 {
-    public class 
-    {
+	private int _id;
 
-        private int32 _id;
-        private string _name;
-        private int32 _isMarketing;
-        private int32 _isReturn;
-        private int32 _branchId;
-        private string _branchName;
-        private int32 _active;
-        private boolean _used;
+	private string _name;
 
+	private int _isMarketing;
 
-        public specialname int32 get_Id() {
+	private int _isReturn;
 
-          int32 num_1;
+	private int _branchId;
 
-        }
+	private string _branchName;
 
-        public specialname void set_Id(int32 value) {
+	private int _active;
 
-          loc_427B79: nop
-          loc_427B7A: ldarg.0
-          loc_427B7B: ldarg.1
-          loc_427B7C: stfld GCUv2.cStepItem::_id
-          loc_427B81: ret
-        }
+	private bool _used;
 
-        public specialname string get_Name() {
+	public int Id
+	{
+		get
+		{
+			return _id;
+		}
+		set
+		{
+			_id = value;
+		}
+	}
 
-          string str_1;
+	public string Name
+	{
+		get
+		{
+			return _name;
+		}
+		set
+		{
+			_name = Module1.cleanString(value);
+		}
+	}
 
-        }
+	public int IsMarketing
+	{
+		get
+		{
+			return _isMarketing;
+		}
+		set
+		{
+			_isMarketing = value;
+		}
+	}
 
-        public specialname void set_Name(string value) {
+	public int IsReturn
+	{
+		get
+		{
+			return _isReturn;
+		}
+		set
+		{
+			_isReturn = value;
+		}
+	}
 
-          loc_427B9D: nop
-          loc_427B9E: ldarg.0
-          loc_427B9F: ldarg.1
-          loc_427BA0: call string GCUv2.Module1::cleanString(string)
-          loc_427BA5: stfld GCUv2.cStorage::_name
-          loc_427BAA: ret
-        }
+	public int BranchId
+	{
+		get
+		{
+			return _branchId;
+		}
+		set
+		{
+			_branchId = value;
+		}
+	}
 
-        public specialname int32 get_IsMarketing() {
+	public string BranchName
+	{
+		get
+		{
+			return _name;
+		}
+		set
+		{
+			_name = value;
+		}
+	}
 
-          int32 num_1;
+	public int Active
+	{
+		get
+		{
+			return _active;
+		}
+		set
+		{
+			_active = value;
+		}
+	}
 
-        }
+	public bool Used
+	{
+		get
+		{
+			return _used;
+		}
+		set
+		{
+			_used = value;
+		}
+	}
 
-        public specialname void set_IsMarketing(int32 value) {
+	[MethodImpl(MethodImplOptions.NoInlining | MethodImplOptions.NoOptimization)]
+	public cStorage(int Id)
+	{
+		if (Id > 0)
+		{
+			_id = Id;
+			DataTable dataTable = new DataTable();
+			string strSql = " SELECT a.*, b.branchName  FROM storages a, branches b WHERE a.branchId = b.branchId  AND storeId = " + Conversions.ToString(_id);
+			dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+			if (dataTable.Rows.Count > 0)
+			{
+				_id = Conversions.ToInteger(dataTable.Rows[0]["storeId"]);
+				_name = Conversions.ToString(dataTable.Rows[0]["storeName"]);
+				_isMarketing = Conversions.ToInteger(dataTable.Rows[0]["storeMkt"]);
+				_isReturn = Conversions.ToInteger(dataTable.Rows[0]["storeReturn"]);
+				_branchId = Conversions.ToInteger(dataTable.Rows[0]["branchId"]);
+				_branchName = Conversions.ToString(dataTable.Rows[0]["branchName"]);
+				_active = Conversions.ToInteger(dataTable.Rows[0]["storeActive"]);
+			}
+			else
+			{
+				_id = 0;
+				Information.Err().Raise(513, null, "Gudang tidak ditemukan. Kemungkinan telah dihapus.");
+			}
+			strSql = " SELECT storeId  FROM customer  WHERE storeId = " + Conversions.ToString(_id) + " UNION  SELECT storeId  FROM adjustments  WHERE storeId = " + Conversions.ToString(_id) + " UNION  SELECT storeId  FROM deliveryorder  WHERE storeId = " + Conversions.ToString(_id) + " UNION  SELECT storeId  FROM penjualan  WHERE storeId = " + Conversions.ToString(_id) + " UNION  SELECT storeId  FROM processes  WHERE storeId = " + Conversions.ToString(_id) + " UNION  SELECT storeId  FROM processcomponents  WHERE storeId = " + Conversions.ToString(_id) + " UNION  SELECT storeId  FROM purchaseinvoices_items  WHERE storeId = " + Conversions.ToString(_id) + " UNION  SELECT storeId  FROM receiveditem  WHERE storeId = " + Conversions.ToString(_id) + " UNION  SELECT storageFromId  FROM transfer  WHERE storageFromId = " + Conversions.ToString(_id) + " UNION  SELECT storageToId  FROM transfer  WHERE storageToId = " + Conversions.ToString(_id) + " UNION  SELECT storeId  FROM usages  WHERE storeId = " + Conversions.ToString(_id);
+			dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+			if (dataTable.Rows.Count > 0)
+			{
+				_used = true;
+			}
+			else
+			{
+				_used = false;
+			}
+		}
+	}
 
-          loc_427BC5: nop
-          loc_427BC6: ldarg.0
-          loc_427BC7: ldarg.1
-          loc_427BC8: stfld GCUv2.cStorage::_isMarketing
-          loc_427BCD: ret
-        }
+	public void Save()
+	{
+		if (_id == 0)
+		{
+			string strSql = " INSERT INTO storages(storeName, storeMkt, storeReturn,  branchId, storeActive)  VALUES  ('" + _name + "', " + Conversions.ToString(_isMarketing) + "," + Conversions.ToString(_isReturn) + "," + Conversions.ToString(_branchId) + "," + Conversions.ToString(_active) + ")";
+			Module1.sqlNonQuery(strSql, "data");
+		}
+		else
+		{
+			string strSql = " UPDATE storages  SET storeName = '" + _name + "',  storeMkt = " + Conversions.ToString(_isMarketing) + ", storeReturn = " + Conversions.ToString(_isReturn) + ", branchId = " + Conversions.ToString(_branchId) + ", storeActive = " + Conversions.ToString(_active) + "  WHERE storeId = " + Conversions.ToString(_id) + " ";
+			Module1.sqlNonQuery(strSql, "data");
+		}
+	}
 
-        public specialname int32 get_IsReturn() {
+	public static DataTable Search(int intGroupId, int intBranchId, string StorageType, int Active)
+	{
+		string text = " SELECT a.*, b.branchName  FROM storages a, branches b WHERE a.branchId = b.branchId ";
+		switch (Active)
+		{
+		case 0:
+			text += " AND storeActive = 0 ";
+			break;
+		case 1:
+			text += " AND storeActive = 1 ";
+			break;
+		}
+		switch (StorageType)
+		{
+		case "MARKETING":
+			text += " AND storeMkt = 1 ";
+			break;
+		case "RETURN":
+			text += " AND storeReturn = 1 ";
+			break;
+		case "MARKETING_RETURN":
+			text += " AND (storeMkt = 1 OR storeReturn = 1) ";
+			break;
+		case "NO_RETURN":
+			text += " AND storeReturn = 0 ";
+			break;
+		}
+		if (intGroupId > 0)
+		{
+			text = text + " AND storeId IN (SELECT storeId FROM groupStorage  WHERE groupId = " + Conversions.ToString(intGroupId) + " AND generalDropDown = 1)";
+		}
+		if (intBranchId > 0)
+		{
+			text = text + " AND a.branchId = " + Conversions.ToString(intBranchId);
+		}
+		text += " ORDER BY branchName, storeName ";
+		return Module1.sqlTable(text, "read", Clone: false);
+	}
 
-          int32 num_1;
+	public static bool IsExist(int Id, string Name)
+	{
+		bool result = false;
+		string text = " SELECT * FROM storages  WHERE storeName = '" + Name + "'";
+		if (Id > 0)
+		{
+			text = text + " AND storeId <> " + Conversions.ToString(Id);
+		}
+		DataTable dataTable = Module1.sqlTable(text, "data", Clone: false);
+		if (dataTable.Rows.Count > 0)
+		{
+			result = true;
+		}
+		return result;
+	}
 
-        }
-
-        public specialname void set_IsReturn(int32 value) {
-
-          loc_427BE9: nop
-          loc_427BEA: ldarg.0
-          loc_427BEB: ldarg.1
-          loc_427BEC: stfld GCUv2.cStorage::_isReturn
-          loc_427BF1: ret
-        }
-
-        public specialname int32 get_BranchId() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_BranchId(int32 value) {
-
-          loc_427C0D: nop
-          loc_427C0E: ldarg.0
-          loc_427C0F: ldarg.1
-          loc_427C10: stfld GCUv2.cStorage::_branchId
-          loc_427C15: ret
-        }
-
-        public specialname string get_BranchName() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_BranchName(string value) {
-
-          loc_427C31: nop
-          loc_427C32: ldarg.0
-          loc_427C33: ldarg.1
-          loc_427C34: stfld GCUv2.cStorage::_name
-          loc_427C39: ret
-        }
-
-        public specialname int32 get_Active() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_Active(int32 value) {
-
-          loc_427C55: nop
-          loc_427C56: ldarg.0
-          loc_427C57: ldarg.1
-          loc_427C58: stfld GCUv2.cStorage::_active
-          loc_427C5D: ret
-        }
-
-        public specialname boolean get_Used() {
-
-          boolean var_1;
-
-        }
-
-        public specialname void set_Used(boolean value) {
-
-          loc_427C79: nop
-          loc_427C7A: ldarg.0
-          loc_427C7B: ldarg.1
-          loc_427C7C: stfld GCUv2.cStorage::_used
-          loc_427C81: ret
-        }
-
-        public void cStorage(int32 Id) {
-
-          boolean var_1;
-          class DataTable var_2;
-          string str_1;
-          boolean var_3;
-          boolean var_4;
-
-        }
-
-        public void Save() {
-
-          string str_1;
-          boolean var_1;
-
-        }
-
-        public static class DataTable Search(int32 intGroupId, int32 intBranchId, string StorageType, int32 Active) {
-
-          class DataTable var_1;
-          string str_1;
-          boolean var_2;
-          boolean var_3;
-          boolean var_4;
-          boolean var_5;
-          boolean var_6;
-          boolean var_7;
-          boolean var_8;
-          boolean var_9;
-
-        }
-
-        public static boolean IsExist(int32 Id, string Name) {
-
-          boolean var_1;
-          string str_1;
-          class DataTable var_2;
-          boolean var_3;
-          boolean var_4;
-
-        }
-
-        public void Delete() {
-
-          string str_1;
-          boolean var_1;
-
-        }
-
-    }
+	public void Delete()
+	{
+		if (!_used)
+		{
+			string strSql = " DELETE FROM storages  WHERE storeId = " + Conversions.ToString(_id);
+			Module1.sqlNonQuery(strSql, "data");
+		}
+	}
 }

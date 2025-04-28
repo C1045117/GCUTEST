@@ -1,169 +1,183 @@
-using mscorlib;
+using System;
+using System.Data;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
 
-namespace GCUv2
+namespace GCUv2;
+
+public class cComponent
 {
-    public class 
-    {
+	private double _id;
 
-        private double _id;
-        private int32 _itemId;
-        private string _itemName;
-        private valuetype System.DateTime _componentDate;
-        private double _qty;
-        private int32 _storageId;
-        private string _storageName;
-        private double _processId;
+	private int _itemId;
 
+	private string _itemName;
 
-        public specialname double get_Id() {
+	private DateTime _componentDate;
 
-          double flt_1;
+	private double _qty;
 
-        }
+	private int _storageId;
 
-        public specialname void set_Id(double value) {
+	private string _storageName;
 
-          loc_409931: nop
-          loc_409932: ldarg.0
-          loc_409933: ldarg.1
-          loc_409934: stfld GCUv2.cChequeOut::_id
-          loc_409939: ret
-        }
+	private double _processId;
 
-        public specialname int32 get_ItemId() {
+	public double Id
+	{
+		get
+		{
+			return _id;
+		}
+		set
+		{
+			_id = value;
+		}
+	}
 
-          int32 num_1;
+	public int ItemId
+	{
+		get
+		{
+			return _itemId;
+		}
+		set
+		{
+			_itemId = value;
+		}
+	}
 
-        }
+	public string ItemName
+	{
+		get
+		{
+			return _itemName;
+		}
+		set
+		{
+			_itemName = value;
+		}
+	}
 
-        public specialname void set_ItemId(int32 value) {
+	public double Qty
+	{
+		get
+		{
+			return _qty;
+		}
+		set
+		{
+			_qty = value;
+		}
+	}
 
-          loc_409955: nop
-          loc_409956: ldarg.0
-          loc_409957: ldarg.1
-          loc_409958: stfld GCUv2.cComponent::_itemId
-          loc_40995D: ret
-        }
+	public DateTime ComponentDate
+	{
+		get
+		{
+			return _componentDate;
+		}
+		set
+		{
+			_componentDate = value;
+		}
+	}
 
-        public specialname string get_ItemName() {
+	public int StorageId
+	{
+		get
+		{
+			return _storageId;
+		}
+		set
+		{
+			_storageId = value;
+		}
+	}
 
-          string str_1;
+	public string StorageName
+	{
+		get
+		{
+			return _storageName;
+		}
+		set
+		{
+			_storageName = value;
+		}
+	}
 
-        }
+	public double ProcessId
+	{
+		get
+		{
+			return _processId;
+		}
+		set
+		{
+			_processId = value;
+		}
+	}
 
-        public specialname void set_ItemName(string value) {
+	public cComponent(double ComponentId)
+	{
+		if (ComponentId > 0.0)
+		{
+			_id = ComponentId;
+			string strSql = " SELECT a.*, b.itemName  FROM processcomponents a, items b  WHERE comId = " + Conversions.ToString(_id) + " AND a.itemId = b.itemId ";
+			DataTable dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+			if (dataTable.Rows.Count > 0)
+			{
+				_itemName = Conversions.ToString(dataTable.Rows[0]["itemName"]);
+			}
+		}
+	}
 
-          loc_409979: nop
-          loc_40997A: ldarg.0
-          loc_40997B: ldarg.1
-          loc_40997C: stfld GCUv2.cComponent::_itemName
-          loc_409981: ret
-        }
+	public static DataTable GetStandardComponent(int ItemId, int StorageId, double Qty, DateTime ProcessDate)
+	{
+		string strSql = " SELECT b.itemId, a.storeId as storageId, b.itemName, c.storeName as storageName, a.standardQty*" + Module1.unformatNumber(Conversions.ToString(Qty)) + " as qty, b.itemProcessType  FROM standardcomponents a, items b, storages c, produk d  WHERE a.comId = b.itemId  AND a.storeId = c.storeId  AND a.itemId = " + Conversions.ToString(ItemId) + " AND a.storeId = " + Conversions.ToString(StorageId) + " AND b.itemId = d.prodId  AND d.typeId = 1 ";
+		DataTable dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+		if (dataTable.Rows.Count == 0)
+		{
+			strSql = " SELECT b.itemId, a.storeId as storageId, b.itemName, c.storeName as storageName, a.standardQty*" + Module1.unformatNumber(Conversions.ToString(Qty)) + " as qty, b.itemProcessType  FROM standardcomponents a, items b, storages c, produk d  WHERE a.comId = b.itemId  AND a.storeId = c.storeId  AND a.itemId = " + Conversions.ToString(ItemId) + " AND b.itemId = d.prodId  AND d.typeId = 1  AND c.branchId IN  (SELECT branchId FROM storages   WHERE storeId = " + Conversions.ToString(StorageId) + ")";
+			dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+		}
+		return dataTable;
+	}
 
-        public specialname double get_Qty() {
-
-          double flt_1;
-
-        }
-
-        public specialname void set_Qty(double value) {
-
-          loc_40999D: nop
-          loc_40999E: ldarg.0
-          loc_40999F: ldarg.1
-          loc_4099A0: stfld GCUv2.cComponent::_qty
-          loc_4099A5: ret
-        }
-
-        public specialname valuetype System.DateTime get_ComponentDate() {
-
-          valuetype System.DateTime var_1;
-
-        }
-
-        public specialname void set_ComponentDate(valuetype System.DateTime value) {
-
-          loc_4099C1: nop
-          loc_4099C2: ldarg.0
-          loc_4099C3: ldarg.1
-          loc_4099C4: stfld GCUv2.cComponent::_componentDate
-          loc_4099C9: ret
-        }
-
-        public specialname int32 get_StorageId() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_StorageId(int32 value) {
-
-          loc_4099E5: nop
-          loc_4099E6: ldarg.0
-          loc_4099E7: ldarg.1
-          loc_4099E8: stfld GCUv2.cComponent::_storageId
-          loc_4099ED: ret
-        }
-
-        public specialname string get_StorageName() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_StorageName(string value) {
-
-          loc_409A09: nop
-          loc_409A0A: ldarg.0
-          loc_409A0B: ldarg.1
-          loc_409A0C: stfld GCUv2.cComponent::_storageName
-          loc_409A11: ret
-        }
-
-        public specialname double get_ProcessId() {
-
-          double flt_1;
-
-        }
-
-        public specialname void set_ProcessId(double value) {
-
-          loc_409A2D: nop
-          loc_409A2E: ldarg.0
-          loc_409A2F: ldarg.1
-          loc_409A30: stfld GCUv2.cComponent::_processId
-          loc_409A35: ret
-        }
-
-        public void cComponent(double ComponentId) {
-
-          boolean var_1;
-          class DataTable var_2;
-          string str_1;
-          boolean var_3;
-
-        }
-
-        public static class DataTable GetStandardComponent(int32 ItemId, int32 StorageId, double Qty, valuetype System.DateTime ProcessDate) {
-
-          class DataTable var_1;
-          string str_1;
-          boolean var_2;
-
-        }
-
-        public static class DataTable Search(valuetype System.DateTime FirstDate, valuetype System.DateTime LastDate, int32 ItemId, int32 ItemCategoryId, int32 StorageId, int32 BranchId, int32 GroupId) {
-
-          class DataTable var_1;
-          string str_1;
-          string str_2;
-          boolean var_2;
-          boolean var_3;
-          boolean var_4;
-          boolean var_5;
-          boolean var_6;
-
-        }
-
-    }
+	public static DataTable Search(DateTime FirstDate, DateTime LastDate, int ItemId, int ItemCategoryId, int StorageId, int BranchId, int GroupId)
+	{
+		string text = " SELECT d.proId, comDate, storeName as storageName,  b.prodName as componentName, comMainQty, proDate,  e.prodName as productName, 0 AS orderBy ";
+		string text2 = " FROM processComponents a, produk b, storages c, processes d, produk e  WHERE a.itemId = b.prodId  AND a.storeId = c.storeId  AND a.proId = d.proId  AND d.itemId = e.prodId  AND comDate >= '" + Strings.Format(FirstDate, "yyyy-MM-dd") + "' AND comDate <= '" + Strings.Format(LastDate, "yyyy-MM-dd") + "'";
+		if (ItemId > 0)
+		{
+			text2 = text2 + " AND b.prodId = " + Conversions.ToString(ItemId);
+		}
+		if (ItemCategoryId > 0)
+		{
+			text2 = text2 + " AND b.catId = " + Conversions.ToString(ItemCategoryId);
+		}
+		else if (GroupId > 0)
+		{
+			text2 = text2 + " AND b.catId IN (SELECT catId FROM group_itemcategory WHERE groupId = " + Conversions.ToString(GroupId) + ")";
+		}
+		if (StorageId > 0)
+		{
+			text2 = text2 + " AND a.storeId = " + Conversions.ToString(StorageId);
+		}
+		else
+		{
+			text2 = text2 + " AND a.storeId IN (SELECT storeId FROM groupstorage  WHERE groupId = " + Conversions.ToString(GroupId) + " AND generalDropDown = 1)";
+			if (BranchId > 0)
+			{
+				text2 = text2 + " AND a.storeId IN (SELECT storeId FROM storages  WHERE branchId = " + Conversions.ToString(BranchId) + ")";
+			}
+		}
+		text += text2;
+		text += " UNION ALL  SELECT 0, CURDATE(), '',  b.prodName as componentName, SUM(comMainQty), CURDATE(),  '', 1 AS orderBy ";
+		text += text2;
+		text += " GROUP BY componentName ";
+		text += " ORDER BY orderBy, comDate, componentName, productName ";
+		return Module1.sqlTable(text, "data", Clone: false);
+	}
 }

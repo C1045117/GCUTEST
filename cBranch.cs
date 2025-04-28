@@ -1,94 +1,124 @@
-namespace GCUv2
+using System.Data;
+using System.Runtime.CompilerServices;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+
+namespace GCUv2;
+
+public class cBranch
 {
-    public class 
-    {
+	private int _id;
 
-        private int32 _id;
-        private string _name;
-        private int32 _active;
+	private string _name;
 
+	private int _active;
 
-        public specialname int32 get_Id() {
+	public int Id
+	{
+		get
+		{
+			return _id;
+		}
+		set
+		{
+			_id = value;
+		}
+	}
 
-          int32 num_1;
+	public string Name
+	{
+		get
+		{
+			return _name;
+		}
+		set
+		{
+			_name = Module1.cleanString(value);
+		}
+	}
 
-        }
+	public int Active
+	{
+		get
+		{
+			return _active;
+		}
+		set
+		{
+			_active = value;
+		}
+	}
 
-        public specialname void set_Id(int32 value) {
+	[MethodImpl(MethodImplOptions.NoInlining | MethodImplOptions.NoOptimization)]
+	public cBranch(int Id)
+	{
+		if (Id > 0)
+		{
+			_id = Id;
+			DataTable dataTable = new DataTable();
+			string strSql = " SELECT *  FROM branches  WHERE branchId = " + Conversions.ToString(_id);
+			dataTable = Module1.sqlTable(strSql, "data", Clone: false);
+			if (dataTable.Rows.Count > 0)
+			{
+				_id = Conversions.ToInteger(dataTable.Rows[0]["branchId"]);
+				_name = Conversions.ToString(dataTable.Rows[0]["branchName"]);
+				_active = Conversions.ToInteger(dataTable.Rows[0]["branchActive"]);
+			}
+			else
+			{
+				_id = 0;
+				Information.Err().Raise(513, null, "Cabang tidak ditemukan. Kemungkinan telah dihapus.");
+			}
+		}
+	}
 
-          loc_405661: nop
-          loc_405662: ldarg.0
-          loc_405663: ldarg.1
-          loc_405664: stfld GCUv2.cBank::_id
-          loc_405669: ret
-        }
+	public void save()
+	{
+		if (_id == 0)
+		{
+			string strSql = " INSERT INTO branches(branchName, branchActive)  VALUES  ('" + _name + "'," + Conversions.ToString(_active) + ")";
+			Module1.sqlNonQuery(strSql, "data");
+		}
+		else
+		{
+			string strSql = " UPDATE branches  SET branchName = '" + _name + "',  branchActive = " + Conversions.ToString(_active) + "  WHERE branchId = " + Conversions.ToString(_id) + " ";
+			Module1.sqlNonQuery(strSql, "data");
+		}
+	}
 
-        public specialname string get_Name() {
+	public static DataTable Search(int GroupId, int Active)
+	{
+		string text = " SELECT * FROM branches  WHERE branchActive = branchActive ";
+		if (GroupId > 0)
+		{
+			text = text + " AND branchId IN (SELECT branchId FROM groups_branches  WHERE groupId = " + Conversions.ToString(GroupId) + " AND generalDropDown = 1)";
+		}
+		switch (Active)
+		{
+		case 0:
+			text += " AND branchActive = 0 ";
+			break;
+		case 1:
+			text += " AND branchActive = 1 ";
+			break;
+		}
+		text += " ORDER BY branchName ";
+		return Module1.sqlTable(text, "read", Clone: false);
+	}
 
-          string str_1;
-
-        }
-
-        public specialname void set_Name(string value) {
-
-          loc_405685: nop
-          loc_405686: ldarg.0
-          loc_405687: ldarg.1
-          loc_405688: call string GCUv2.Module1::cleanString(string)
-          loc_40568D: stfld GCUv2.cBranch::_name
-          loc_405692: ret
-        }
-
-        public specialname int32 get_Active() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_Active(int32 value) {
-
-          loc_4056AD: nop
-          loc_4056AE: ldarg.0
-          loc_4056AF: ldarg.1
-          loc_4056B0: stfld GCUv2.cBranch::_active
-          loc_4056B5: ret
-        }
-
-        public void cBranch(int32 Id) {
-
-          boolean var_1;
-          class DataTable var_2;
-          string str_1;
-          boolean var_3;
-
-        }
-
-        public void save() {
-
-          string str_1;
-          boolean var_1;
-
-        }
-
-        public static class DataTable Search(int32 GroupId, int32 Active) {
-
-          class DataTable var_1;
-          string str_1;
-          boolean var_2;
-          boolean var_3;
-          boolean var_4;
-
-        }
-
-        public static boolean IsExist(int32 BranchId, string Name) {
-
-          boolean var_1;
-          string str_1;
-          class DataTable var_2;
-          boolean var_3;
-          boolean var_4;
-
-        }
-
-    }
+	public static bool IsExist(int BranchId, string Name)
+	{
+		bool result = false;
+		string text = " SELECT * FROM branches  WHERE branchName = '" + Name + "'";
+		if (BranchId > 0)
+		{
+			text = text + " AND branchId <> " + Conversions.ToString(BranchId);
+		}
+		DataTable dataTable = Module1.sqlTable(text, "data", Clone: false);
+		if (dataTable.Rows.Count > 0)
+		{
+			result = true;
+		}
+		return result;
+	}
 }
