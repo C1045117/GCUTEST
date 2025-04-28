@@ -1,920 +1,1594 @@
 using System;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Drawing;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
+using GCUv2.My;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
 
-namespace GCUv2
+namespace GCUv2;
+
+[DesignerGenerated]
+public class frmSalesOrder : Form
 {
-    public class Form
-    {
-
-        private class ComponentModel.IContainer components;
-        private class Label _lblNumber;
-        private class Label _Label4;
-        private class Button _btnSearch;
-        private class Label _lblAddress;
-        private class Label _lblName;
-        private class Label _Label2;
-        private class Label _Label10;
-        private class Button _btnItem;
-        private class Label _Label3;
-        private class TabControl _TabControl1;
-        private class TabPage _TabPage1;
-        private class DataGridView _dgvItem;
-        private class Label _Label1;
-        private class DateTimePicker _dtpSO;
-        private class Button _btnSaveClose;
-        private class Button _btnDelete;
-        private class Button _btnHistory;
-        private class Label _Label23;
-        private class Label _Label13;
-        private class Label _Label9;
-        private class Label _lblTotalInvoice;
-        private class Label _Label8;
-        private class GCUv2.FilteredTextBox _txtDiscountValue;
-        private class Label _lblTotalPrice;
-        private class Label _Label6;
-        private class TextBox _txtPONumber;
-        private class Label _Label5;
-        private class DateTimePicker _dtpExpired;
-        private class DateTimePicker _DateTimePicker1;
-        private class Button _btnSave;
-        private class Label _lblInformation;
-        private class GCUv2.FilteredTextBox _txtDiscountDescription;
-        private double _customerId;
-        private double _currentId;
-        private int32 _storageId;
-        private int32 _branchId;
-        private class GCUv2.cSalesOrderItem[] _SOItem;
-        private double _invoiceId;
-        private int32 _totalItem;
-        private int32 _discountId;
-
-
-        protected override strict void Dispose(boolean disposing) {
-
-          boolean var_1;
-
-        }
-
-        private void InitializeComponent() {
-
-
-        }
-
-        assem override strict specialname class Label get_lblNumber() {
-
-          loc_4E493B: ldarg.0
-          loc_4E493C: ldfld GCUv2.frmSalesOrder::_lblNumber
-          loc_4E4941: br.s loc_4E4943
-          loc_4E4943: // Referenced from: loc_4E4941
-          loc_4E4943: ret
-        }
-
-        assem override strict specialname void set_lblNumber(class Label WithEventsValue) {
-
-          loc_4E4945: ldarg.0
-          loc_4E4946: ldarg.1
-          loc_4E4947: stfld GCUv2.frmSalesOrder::_lblNumber
-          loc_4E494C: ret
-        }
-
-        assem override strict specialname class Label get_Label4() {
-
-          loc_4E494E: ldarg.0
-          loc_4E494F: ldfld GCUv2.frmSalesOrder::_Label4
-          loc_4E4954: br.s loc_4E4956
-          loc_4E4956: // Referenced from: loc_4E4954
-          loc_4E4956: ret
-        }
-
-        assem override strict specialname void set_Label4(class Label WithEventsValue) {
-
-          loc_4E4958: ldarg.0
-          loc_4E4959: ldarg.1
-          loc_4E495A: stfld GCUv2.frmSalesOrder::_Label4
-          loc_4E495F: ret
-        }
-
-        assem override strict specialname class Button get_btnSearch() {
-
-          loc_4E4961: ldarg.0
-          loc_4E4962: ldfld GCUv2.frmSalesOrder::_btnSearch
-          loc_4E4967: br.s loc_4E4969
-          loc_4E4969: // Referenced from: loc_4E4967
-          loc_4E4969: ret
-        }
-
-        assem override strict specialname void set_btnSearch(class Button WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Button var_2;
-
-        }
-
-        assem override strict specialname class Label get_lblAddress() {
-
-          loc_4E49B0: ldarg.0
-          loc_4E49B1: ldfld GCUv2.frmSalesOrder::_lblAddress
-          loc_4E49B6: br.s loc_4E49B8
-          loc_4E49B8: // Referenced from: loc_4E49B6
-          loc_4E49B8: ret
-        }
-
-        assem override strict specialname void set_lblAddress(class Label WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Label var_2;
-
-        }
-
-        assem override strict specialname class Label get_lblName() {
-
-          loc_4E4A00: ldarg.0
-          loc_4E4A01: ldfld GCUv2.frmSalesOrder::_lblName
-          loc_4E4A06: br.s loc_4E4A08
-          loc_4E4A08: // Referenced from: loc_4E4A06
-          loc_4E4A08: ret
-        }
-
-        assem override strict specialname void set_lblName(class Label WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Label var_2;
-
-        }
-
-        assem override strict specialname class Label get_Label2() {
-
-          loc_4E4A50: ldarg.0
-          loc_4E4A51: ldfld GCUv2.frmSalesOrder::_Label2
-          loc_4E4A56: br.s loc_4E4A58
-          loc_4E4A58: // Referenced from: loc_4E4A56
-          loc_4E4A58: ret
-        }
-
-        assem override strict specialname void set_Label2(class Label WithEventsValue) {
-
-          loc_4E4A5A: ldarg.0
-          loc_4E4A5B: ldarg.1
-          loc_4E4A5C: stfld GCUv2.frmSalesOrder::_Label2
-          loc_4E4A61: ret
-        }
-
-        assem override strict specialname class Label get_Label10() {
-
-          loc_4E4A63: ldarg.0
-          loc_4E4A64: ldfld GCUv2.frmSalesOrder::_Label10
-          loc_4E4A69: br.s loc_4E4A6B
-          loc_4E4A6B: // Referenced from: loc_4E4A69
-          loc_4E4A6B: ret
-        }
-
-        assem override strict specialname void set_Label10(class Label WithEventsValue) {
-
-          loc_4E4A6D: ldarg.0
-          loc_4E4A6E: ldarg.1
-          loc_4E4A6F: stfld GCUv2.frmSalesOrder::_Label10
-          loc_4E4A74: ret
-        }
-
-        assem override strict specialname class Button get_btnItem() {
-
-          loc_4E4A76: ldarg.0
-          loc_4E4A77: ldfld GCUv2.frmSalesOrder::_btnItem
-          loc_4E4A7C: br.s loc_4E4A7E
-          loc_4E4A7E: // Referenced from: loc_4E4A7C
-          loc_4E4A7E: ret
-        }
-
-        assem override strict specialname void set_btnItem(class Button WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Button var_2;
-
-        }
-
-        assem override strict specialname class Label get_Label3() {
-
-          loc_4E4AC4: ldarg.0
-          loc_4E4AC5: ldfld GCUv2.frmSalesOrder::_Label3
-          loc_4E4ACA: br.s loc_4E4ACC
-          loc_4E4ACC: // Referenced from: loc_4E4ACA
-          loc_4E4ACC: ret
-        }
-
-        assem override strict specialname void set_Label3(class Label WithEventsValue) {
-
-          loc_4E4ACE: ldarg.0
-          loc_4E4ACF: ldarg.1
-          loc_4E4AD0: stfld GCUv2.frmSalesOrder::_Label3
-          loc_4E4AD5: ret
-        }
-
-        assem override strict specialname class TabControl get_TabControl1() {
-
-          loc_4E4AD7: ldarg.0
-          loc_4E4AD8: ldfld GCUv2.frmSalesOrder::_TabControl1
-          loc_4E4ADD: br.s loc_4E4ADF
-          loc_4E4ADF: // Referenced from: loc_4E4ADD
-          loc_4E4ADF: ret
-        }
-
-        assem override strict specialname void set_TabControl1(class TabControl WithEventsValue) {
-
-          loc_4E4AE1: ldarg.0
-          loc_4E4AE2: ldarg.1
-          loc_4E4AE3: stfld GCUv2.frmSalesOrder::_TabControl1
-          loc_4E4AE8: ret
-        }
-
-        assem override strict specialname class TabPage get_TabPage1() {
-
-          loc_4E4AEA: ldarg.0
-          loc_4E4AEB: ldfld GCUv2.frmSalesOrder::_TabPage1
-          loc_4E4AF0: br.s loc_4E4AF2
-          loc_4E4AF2: // Referenced from: loc_4E4AF0
-          loc_4E4AF2: ret
-        }
-
-        assem override strict specialname void set_TabPage1(class TabPage WithEventsValue) {
-
-          loc_4E4AF4: ldarg.0
-          loc_4E4AF5: ldarg.1
-          loc_4E4AF6: stfld GCUv2.frmSalesOrder::_TabPage1
-          loc_4E4AFB: ret
-        }
-
-        assem override strict specialname class DataGridView get_dgvItem() {
-
-          loc_4E4AFD: ldarg.0
-          loc_4E4AFE: ldfld GCUv2.frmSalesOrder::_dgvItem
-          loc_4E4B03: br.s loc_4E4B05
-          loc_4E4B05: // Referenced from: loc_4E4B03
-          loc_4E4B05: ret
-        }
-
-        assem override strict specialname void set_dgvItem(class DataGridView WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class System.EventHandler var_2;
-          class System.EventHandler var_3;
-          class KeyEventHandler var_4;
-          class DataGridView var_5;
-
-        }
-
-        assem override strict specialname class Label get_Label1() {
-
-          loc_4E4BA9: ldarg.0
-          loc_4E4BAA: ldfld GCUv2.frmSalesOrder::_Label1
-          loc_4E4BAF: br.s loc_4E4BB1
-          loc_4E4BB1: // Referenced from: loc_4E4BAF
-          loc_4E4BB1: ret
-        }
-
-        assem override strict specialname void set_Label1(class Label WithEventsValue) {
-
-          loc_4E4BB3: ldarg.0
-          loc_4E4BB4: ldarg.1
-          loc_4E4BB5: stfld GCUv2.frmSalesOrder::_Label1
-          loc_4E4BBA: ret
-        }
-
-        assem override strict specialname class DateTimePicker get_dtpSO() {
-
-          loc_4E4BBC: ldarg.0
-          loc_4E4BBD: ldfld GCUv2.frmSalesOrder::_dtpSO
-          loc_4E4BC2: br.s loc_4E4BC4
-          loc_4E4BC4: // Referenced from: loc_4E4BC2
-          loc_4E4BC4: ret
-        }
-
-        assem override strict specialname void set_dtpSO(class DateTimePicker WithEventsValue) {
-
-          loc_4E4BC6: ldarg.0
-          loc_4E4BC7: ldarg.1
-          loc_4E4BC8: stfld GCUv2.frmSalesOrder::_dtpSO
-          loc_4E4BCD: ret
-        }
-
-        assem override strict specialname class Button get_btnSaveClose() {
-
-          loc_4E4BCF: ldarg.0
-          loc_4E4BD0: ldfld GCUv2.frmSalesOrder::_btnSaveClose
-          loc_4E4BD5: br.s loc_4E4BD7
-          loc_4E4BD7: // Referenced from: loc_4E4BD5
-          loc_4E4BD7: ret
-        }
-
-        assem override strict specialname void set_btnSaveClose(class Button WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Button var_2;
-
-        }
-
-        assem override strict specialname class Button get_btnDelete() {
-
-          loc_4E4C1C: ldarg.0
-          loc_4E4C1D: ldfld GCUv2.frmSalesOrder::_btnDelete
-          loc_4E4C22: br.s loc_4E4C24
-          loc_4E4C24: // Referenced from: loc_4E4C22
-          loc_4E4C24: ret
-        }
-
-        assem override strict specialname void set_btnDelete(class Button WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Button var_2;
-
-        }
-
-        assem override strict specialname class Button get_btnHistory() {
-
-          loc_4E4C6C: ldarg.0
-          loc_4E4C6D: ldfld GCUv2.frmSalesOrder::_btnHistory
-          loc_4E4C72: br.s loc_4E4C74
-          loc_4E4C74: // Referenced from: loc_4E4C72
-          loc_4E4C74: ret
-        }
-
-        assem override strict specialname void set_btnHistory(class Button WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Button var_2;
-
-        }
-
-        assem override strict specialname class Label get_Label23() {
-
-          loc_4E4CBC: ldarg.0
-          loc_4E4CBD: ldfld GCUv2.frmSalesOrder::_Label23
-          loc_4E4CC2: br.s loc_4E4CC4
-          loc_4E4CC4: // Referenced from: loc_4E4CC2
-          loc_4E4CC4: ret
-        }
-
-        assem override strict specialname void set_Label23(class Label WithEventsValue) {
-
-          loc_4E4CC6: ldarg.0
-          loc_4E4CC7: ldarg.1
-          loc_4E4CC8: stfld GCUv2.frmSalesOrder::_Label23
-          loc_4E4CCD: ret
-        }
-
-        assem override strict specialname class Label get_Label13() {
-
-          loc_4E4CCF: ldarg.0
-          loc_4E4CD0: ldfld GCUv2.frmSalesOrder::_Label13
-          loc_4E4CD5: br.s loc_4E4CD7
-          loc_4E4CD7: // Referenced from: loc_4E4CD5
-          loc_4E4CD7: ret
-        }
-
-        assem override strict specialname void set_Label13(class Label WithEventsValue) {
-
-          loc_4E4CD9: ldarg.0
-          loc_4E4CDA: ldarg.1
-          loc_4E4CDB: stfld GCUv2.frmSalesOrder::_Label13
-          loc_4E4CE0: ret
-        }
-
-        assem override strict specialname class Label get_Label9() {
-
-          loc_4E4CE2: ldarg.0
-          loc_4E4CE3: ldfld GCUv2.frmSalesOrder::_Label9
-          loc_4E4CE8: br.s loc_4E4CEA
-          loc_4E4CEA: // Referenced from: loc_4E4CE8
-          loc_4E4CEA: ret
-        }
-
-        assem override strict specialname void set_Label9(class Label WithEventsValue) {
-
-          loc_4E4CEC: ldarg.0
-          loc_4E4CED: ldarg.1
-          loc_4E4CEE: stfld GCUv2.frmSalesOrder::_Label9
-          loc_4E4CF3: ret
-        }
-
-        assem override strict specialname class Label get_lblTotalInvoice() {
-
-          loc_4E4CF5: ldarg.0
-          loc_4E4CF6: ldfld GCUv2.frmSalesOrder::_lblTotalInvoice
-          loc_4E4CFB: br.s loc_4E4CFD
-          loc_4E4CFD: // Referenced from: loc_4E4CFB
-          loc_4E4CFD: ret
-        }
-
-        assem override strict specialname void set_lblTotalInvoice(class Label WithEventsValue) {
-
-          loc_4E4CFF: ldarg.0
-          loc_4E4D00: ldarg.1
-          loc_4E4D01: stfld GCUv2.frmSalesOrder::_lblTotalInvoice
-          loc_4E4D06: ret
-        }
-
-        assem override strict specialname class Label get_Label8() {
-
-          loc_4E4D08: ldarg.0
-          loc_4E4D09: ldfld GCUv2.frmSalesOrder::_Label8
-          loc_4E4D0E: br.s loc_4E4D10
-          loc_4E4D10: // Referenced from: loc_4E4D0E
-          loc_4E4D10: ret
-        }
-
-        assem override strict specialname void set_Label8(class Label WithEventsValue) {
-
-          loc_4E4D12: ldarg.0
-          loc_4E4D13: ldarg.1
-          loc_4E4D14: stfld GCUv2.frmSalesOrder::_Label8
-          loc_4E4D19: ret
-        }
-
-        assem override strict specialname class GCUv2.FilteredTextBox get_txtDiscountValue() {
-
-          loc_4E4D1B: ldarg.0
-          loc_4E4D1C: ldfld GCUv2.frmSalesOrder::_txtDiscountValue
-          loc_4E4D21: br.s loc_4E4D23
-          loc_4E4D23: // Referenced from: loc_4E4D21
-          loc_4E4D23: ret
-        }
-
-        assem override strict specialname void set_txtDiscountValue(class GCUv2.FilteredTextBox WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class System.EventHandler var_2;
-          class System.EventHandler var_3;
-          class GCUv2.FilteredTextBox var_4;
-
-        }
-
-        assem override strict specialname class Label get_lblTotalPrice() {
-
-          loc_4E4D9E: ldarg.0
-          loc_4E4D9F: ldfld GCUv2.frmSalesOrder::_lblTotalPrice
-          loc_4E4DA4: br.s loc_4E4DA6
-          loc_4E4DA6: // Referenced from: loc_4E4DA4
-          loc_4E4DA6: ret
-        }
-
-        assem override strict specialname void set_lblTotalPrice(class Label WithEventsValue) {
-
-          loc_4E4DA8: ldarg.0
-          loc_4E4DA9: ldarg.1
-          loc_4E4DAA: stfld GCUv2.frmSalesOrder::_lblTotalPrice
-          loc_4E4DAF: ret
-        }
-
-        assem override strict specialname class Label get_Label6() {
-
-          loc_4E4DB1: ldarg.0
-          loc_4E4DB2: ldfld GCUv2.frmSalesOrder::_Label6
-          loc_4E4DB7: br.s loc_4E4DB9
-          loc_4E4DB9: // Referenced from: loc_4E4DB7
-          loc_4E4DB9: ret
-        }
-
-        assem override strict specialname void set_Label6(class Label WithEventsValue) {
-
-          loc_4E4DBB: ldarg.0
-          loc_4E4DBC: ldarg.1
-          loc_4E4DBD: stfld GCUv2.frmSalesOrder::_Label6
-          loc_4E4DC2: ret
-        }
-
-        assem override strict specialname class TextBox get_txtPONumber() {
-
-          loc_4E4DC4: ldarg.0
-          loc_4E4DC5: ldfld GCUv2.frmSalesOrder::_txtPONumber
-          loc_4E4DCA: br.s loc_4E4DCC
-          loc_4E4DCC: // Referenced from: loc_4E4DCA
-          loc_4E4DCC: ret
-        }
-
-        assem override strict specialname void set_txtPONumber(class TextBox WithEventsValue) {
-
-          loc_4E4DCE: ldarg.0
-          loc_4E4DCF: ldarg.1
-          loc_4E4DD0: stfld GCUv2.frmSalesOrder::_txtPONumber
-          loc_4E4DD5: ret
-        }
-
-        assem override strict specialname class Label get_Label5() {
-
-          loc_4E4DD7: ldarg.0
-          loc_4E4DD8: ldfld GCUv2.frmSalesOrder::_Label5
-          loc_4E4DDD: br.s loc_4E4DDF
-          loc_4E4DDF: // Referenced from: loc_4E4DDD
-          loc_4E4DDF: ret
-        }
-
-        assem override strict specialname void set_Label5(class Label WithEventsValue) {
-
-          loc_4E4DE1: ldarg.0
-          loc_4E4DE2: ldarg.1
-          loc_4E4DE3: stfld GCUv2.frmSalesOrder::_Label5
-          loc_4E4DE8: ret
-        }
-
-        assem override strict specialname class DateTimePicker get_dtpExpired() {
-
-          loc_4E4DEA: ldarg.0
-          loc_4E4DEB: ldfld GCUv2.frmSalesOrder::_dtpExpired
-          loc_4E4DF0: br.s loc_4E4DF2
-          loc_4E4DF2: // Referenced from: loc_4E4DF0
-          loc_4E4DF2: ret
-        }
-
-        assem override strict specialname void set_dtpExpired(class DateTimePicker WithEventsValue) {
-
-          loc_4E4DF4: ldarg.0
-          loc_4E4DF5: ldarg.1
-          loc_4E4DF6: stfld GCUv2.frmSalesOrder::_dtpExpired
-          loc_4E4DFB: ret
-        }
-
-        assem override strict specialname class DateTimePicker get_DateTimePicker1() {
-
-          loc_4E4DFD: ldarg.0
-          loc_4E4DFE: ldfld GCUv2.frmSalesOrder::_DateTimePicker1
-          loc_4E4E03: br.s loc_4E4E05
-          loc_4E4E05: // Referenced from: loc_4E4E03
-          loc_4E4E05: ret
-        }
-
-        assem override strict specialname void set_DateTimePicker1(class DateTimePicker WithEventsValue) {
-
-          loc_4E4E07: ldarg.0
-          loc_4E4E08: ldarg.1
-          loc_4E4E09: stfld GCUv2.frmSalesOrder::_DateTimePicker1
-          loc_4E4E0E: ret
-        }
-
-        assem override strict specialname class Button get_btnSave() {
-
-          loc_4E4E10: ldarg.0
-          loc_4E4E11: ldfld GCUv2.frmSalesOrder::_btnSave
-          loc_4E4E16: br.s loc_4E4E18
-          loc_4E4E18: // Referenced from: loc_4E4E16
-          loc_4E4E18: ret
-        }
-
-        assem override strict specialname void set_btnSave(class Button WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Button var_2;
-
-        }
-
-        assem override strict specialname class Label get_lblInformation() {
-
-          loc_4E4E60: ldarg.0
-          loc_4E4E61: ldfld GCUv2.frmSalesOrder::_lblInformation
-          loc_4E4E66: br.s loc_4E4E68
-          loc_4E4E68: // Referenced from: loc_4E4E66
-          loc_4E4E68: ret
-        }
-
-        assem override strict specialname void set_lblInformation(class Label WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Label var_2;
-
-        }
-
-        assem override strict specialname class GCUv2.FilteredTextBox get_txtDiscountDescription() {
-
-          loc_4E4EB0: ldarg.0
-          loc_4E4EB1: ldfld GCUv2.frmSalesOrder::_txtDiscountDescription
-          loc_4E4EB6: br.s loc_4E4EB8
-          loc_4E4EB8: // Referenced from: loc_4E4EB6
-          loc_4E4EB8: ret
-        }
-
-        assem override strict specialname void set_txtDiscountDescription(class GCUv2.FilteredTextBox WithEventsValue) {
-
-          loc_4E4EBA: ldarg.0
-          loc_4E4EBB: ldarg.1
-          loc_4E4EBC: stfld GCUv2.frmSalesOrder::_txtDiscountDescription
-          loc_4E4EC1: ret
-        }
-
-        public specialname double get_CustomerId() {
-
-          double flt_1;
-
-        }
-
-        public specialname void set_CustomerId(double value) {
-
-          loc_4E4EDD: nop
-          loc_4E4EDE: ldarg.0
-          loc_4E4EDF: ldarg.1
-          loc_4E4EE0: stfld GCUv2.frmSalesOrder::_customerId
-          loc_4E4EE5: ret
-        }
-
-        public specialname double get_CurrentId() {
-
-          double flt_1;
-
-        }
-
-        public specialname void set_CurrentId(double value) {
-
-          loc_4E4F01: nop
-          loc_4E4F02: ldarg.0
-          loc_4E4F03: ldarg.1
-          loc_4E4F04: stfld GCUv2.frmSalesOrder::_currentId
-          loc_4E4F09: ret
-        }
-
-        public specialname int32 get_StorageId() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_StorageId(int32 value) {
-
-          loc_4E4F25: nop
-          loc_4E4F26: ldarg.0
-          loc_4E4F27: ldarg.1
-          loc_4E4F28: stfld GCUv2.frmSalesOrder::_storageId
-          loc_4E4F2D: ret
-        }
-
-        public specialname int32 get_BranchId() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_BranchId(int32 value) {
-
-          loc_4E4F49: nop
-          loc_4E4F4A: ldarg.0
-          loc_4E4F4B: ldarg.1
-          loc_4E4F4C: stfld GCUv2.frmSalesOrder::_branchId
-          loc_4E4F51: ret
-        }
-
-        public void frmSalesOrder() {
-
-
-        }
-
-        private void formatGrid() {
-
-
-        }
-
-        public void prepareForm(boolean SaveNew) {
-
-
-        }
-
-        public void loadData() {
-
-          int32 num_1;
-          int32 num_2;
-          class GCUv2.cSalesOrder var_1;
-          class GCUv2.cSalesOrderItem[] var_2;
-          int32 num_3;
-          class GCUv2.cSalesOrderItem var_3;
-          boolean var_4;
-          boolean var_5;
-          boolean var_6;
-          boolean var_7;
-          boolean var_8;
-          boolean var_9;
-
-        }
-
-        private void frmSalesOrder_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void btnSearch_Click(object sender, class System.EventArgs e) {
-
-          class GCUv2.frmCustomerMiniSearch var_1;
-          boolean var_2;
-
-        }
-
-        public void LoadCustomer() {
-
-          class GCUv2.cCustomer var_1;
-
-        }
-
-        private void lblName_Click(object sender, class System.EventArgs e) {
-
-          loc_4E5748: nop
-          loc_4E5749: ldarg.0
-          loc_4E574A: call instance void GCUv2.frmSalesOrder::OpenCustomer()
-          loc_4E574F: nop
-          loc_4E5750: ret
-        }
-
-        private void lblAddress_Click(object sender, class System.EventArgs e) {
-
-          loc_4E5748: nop
-          loc_4E5749: ldarg.0
-          loc_4E574A: call instance void GCUv2.frmSalesOrder::OpenCustomer()
-          loc_4E574F: nop
-          loc_4E5750: ret
-        }
-
-        private void OpenCustomer() {
-
-          boolean var_1;
-
-        }
-
-        private void btnItem_Click(object sender, class System.EventArgs e) {
-
-          class GCUv2.frmSalesOrderItem var_1;
-
-        }
-
-        private void dgvItem_GotFocus(object sender, class System.EventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void dgvItem_LostFocus(object sender, class System.EventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void dgvItem_DoubleClick(object sender, class System.EventArgs e) {
-
-          loc_4E5881: nop
-          loc_4E5882: ldarg.0
-          loc_4E5883: call instance void GCUv2.frmSalesOrder::OpenItem()
-          loc_4E5888: nop
-          loc_4E5889: ret
-        }
-
-        private void dgvItem_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-          boolean var_2;
-          boolean var_3;
-
-        }
-
-        private void OpenItem() {
-
-          int32 num_1;
-          int32 num_2;
-          boolean var_1;
-          class GCUv2.frmSalesOrderItem var_2;
-          class ComboBox var_3;
-
-        }
-
-        public void calculateTotalPrice() {
-
-          int32 num_1;
-          int32 num_2;
-          int32 num_3;
-          double flt_1;
-          int32 num_4;
-          int32 & var_1;
-
-        }
-
-        public void calculateDiscount() {
-
-
-        }
-
-        public void calculateTotalInvoice() {
-
-          int32 num_1;
-          int32 num_2;
-          double flt_1;
-
-        }
-
-        private void txtDiscount_Click(object sender, class System.EventArgs e) {
-
-          loc_4E5CE5: nop
-          loc_4E5CE6: ldarg.0
-          loc_4E5CE7: callvirt instance class GCUv2.FilteredTextBox GCUv2.frmSalesOrder::get_txtDiscountValue()
-          loc_4E5CEC: ldc.i4.0
-          loc_4E5CED: callvirt instance void System.Windows.Forms.TextBoxBase::set_SelectionStart(int32)
-          loc_4E5CF2: nop
-          loc_4E5CF3: ldarg.0
-          loc_4E5CF4: callvirt instance class GCUv2.FilteredTextBox GCUv2.frmSalesOrder::get_txtDiscountValue()
-          loc_4E5CF9: ldarg.0
-          loc_4E5CFA: callvirt instance class GCUv2.FilteredTextBox GCUv2.frmSalesOrder::get_txtDiscountValue()
-          loc_4E5CFF: callvirt instance string System.Windows.Forms.TextBox::get_Text()
-          loc_4E5D04: call int32 Microsoft.VisualBasic.Strings::Len(string)
-          loc_4E5D09: callvirt instance void System.Windows.Forms.TextBoxBase::set_SelectionLength(int32)
-          loc_4E5D0E: nop
-          loc_4E5D0F: ret
-        }
-
-        private void txtDiscount_GotFocus(object sender, class System.EventArgs e) {
-
-          loc_4E5CE5: nop
-          loc_4E5CE6: ldarg.0
-          loc_4E5CE7: callvirt instance class GCUv2.FilteredTextBox GCUv2.frmSalesOrder::get_txtDiscountValue()
-          loc_4E5CEC: ldc.i4.0
-          loc_4E5CED: callvirt instance void System.Windows.Forms.TextBoxBase::set_SelectionStart(int32)
-          loc_4E5CF2: nop
-          loc_4E5CF3: ldarg.0
-          loc_4E5CF4: callvirt instance class GCUv2.FilteredTextBox GCUv2.frmSalesOrder::get_txtDiscountValue()
-          loc_4E5CF9: ldarg.0
-          loc_4E5CFA: callvirt instance class GCUv2.FilteredTextBox GCUv2.frmSalesOrder::get_txtDiscountValue()
-          loc_4E5CFF: callvirt instance string System.Windows.Forms.TextBox::get_Text()
-          loc_4E5D04: call int32 Microsoft.VisualBasic.Strings::Len(string)
-          loc_4E5D09: callvirt instance void System.Windows.Forms.TextBoxBase::set_SelectionLength(int32)
-          loc_4E5D0E: nop
-          loc_4E5D0F: ret
-        }
-
-        private void txtDiscount_TextChanged(object sender, class System.EventArgs e) {
-
-          loc_4E5D11: nop
-          loc_4E5D12: ldarg.0
-          loc_4E5D13: call instance void GCUv2.frmSalesOrder::calculateTotalInvoice()
-          loc_4E5D18: nop
-          loc_4E5D19: ret
-        }
-
-        private void btnSave_Click(object sender, class System.EventArgs e) {
-
-          loc_4E5D1B: nop
-          loc_4E5D1C: ldarg.0
-          loc_4E5D1D: ldc.i4.0
-          loc_4E5D1E: call instance void GCUv2.frmSalesOrder::SaveData(boolean)
-          loc_4E5D23: nop
-          loc_4E5D24: ret
-        }
-
-        private void btnSaveClose_Click(object sender, class System.EventArgs e) {
-
-          loc_4E5D26: nop
-          loc_4E5D27: ldarg.0
-          loc_4E5D28: ldc.i4.1
-          loc_4E5D29: call instance void GCUv2.frmSalesOrder::SaveData(boolean)
-          loc_4E5D2E: nop
-          loc_4E5D2F: ret
-        }
-
-        private void SaveData(boolean CloseForm) {
-
-          int32 num_1;
-          int32 num_2;
-          class GCUv2.cSalesOrder var_1;
-          class GCUv2.cSalesOrderItem[] var_2;
-          int32 num_3;
-          string str_1;
-          string str_2;
-          class GCUv2.cHistory var_3;
-          boolean var_4;
-          boolean var_5;
-          boolean var_6;
-          boolean var_7;
-          boolean var_8;
-          int32 num_4;
-          boolean var_9;
-          int32 num_5;
-          boolean var_10;
-          boolean var_11;
-          boolean var_12;
-          boolean var_13;
-
-        }
-
-        private void btnDelete_Click(object sender, class System.EventArgs e) {
-
-          int32 num_1;
-          int32 num_2;
-          string str_1;
-          class GCUv2.cSalesOrder var_1;
-          class GCUv2.cHistory var_2;
-          boolean var_3;
-          boolean var_4;
-
-        }
-
-        private void btnHistory_Click(object sender, class System.EventArgs e) {
-
-
-        }
-
-        private void lblInformation_Click(object sender, class System.EventArgs e) {
-
-
-        }
-
-    }
+	private IContainer components;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnSearch")]
+	private Button _btnSearch;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("lblAddress")]
+	private Label _lblAddress;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("lblName")]
+	private Label _lblName;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnItem")]
+	private Button _btnItem;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("dgvItem")]
+	private DataGridView _dgvItem;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnSaveClose")]
+	private Button _btnSaveClose;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnDelete")]
+	private Button _btnDelete;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnHistory")]
+	private Button _btnHistory;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("txtDiscountValue")]
+	private FilteredTextBox _txtDiscountValue;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnSave")]
+	private Button _btnSave;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("lblInformation")]
+	private Label _lblInformation;
+
+	private double _customerId;
+
+	private double _currentId;
+
+	private int _storageId;
+
+	private int _branchId;
+
+	private cSalesOrderItem[] _SOItem;
+
+	private double _invoiceId;
+
+	private int _totalItem;
+
+	private int _discountId;
+
+	[field: AccessedThroughProperty("lblNumber")]
+	internal virtual Label lblNumber
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label4")]
+	internal virtual Label Label4
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual Button btnSearch
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnSearch;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnSearch_Click;
+			Button button = _btnSearch;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnSearch = value;
+			button = _btnSearch;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
+
+	internal virtual Label lblAddress
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _lblAddress;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = lblAddress_Click;
+			Label label = _lblAddress;
+			if (label != null)
+			{
+				label.Click -= value2;
+			}
+			_lblAddress = value;
+			label = _lblAddress;
+			if (label != null)
+			{
+				label.Click += value2;
+			}
+		}
+	}
+
+	internal virtual Label lblName
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _lblName;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = lblName_Click;
+			Label label = _lblName;
+			if (label != null)
+			{
+				label.Click -= value2;
+			}
+			_lblName = value;
+			label = _lblName;
+			if (label != null)
+			{
+				label.Click += value2;
+			}
+		}
+	}
+
+	[field: AccessedThroughProperty("Label2")]
+	internal virtual Label Label2
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label10")]
+	internal virtual Label Label10
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual Button btnItem
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnItem;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnItem_Click;
+			Button button = _btnItem;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnItem = value;
+			button = _btnItem;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
+
+	[field: AccessedThroughProperty("Label3")]
+	internal virtual Label Label3
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("TabControl1")]
+	internal virtual TabControl TabControl1
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("TabPage1")]
+	internal virtual TabPage TabPage1
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual DataGridView dgvItem
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _dgvItem;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = dgvItem_GotFocus;
+			EventHandler value3 = dgvItem_LostFocus;
+			EventHandler value4 = dgvItem_DoubleClick;
+			KeyEventHandler value5 = dgvItem_KeyDown;
+			DataGridView dataGridView = _dgvItem;
+			if (dataGridView != null)
+			{
+				dataGridView.GotFocus -= value2;
+				dataGridView.LostFocus -= value3;
+				dataGridView.DoubleClick -= value4;
+				dataGridView.KeyDown -= value5;
+			}
+			_dgvItem = value;
+			dataGridView = _dgvItem;
+			if (dataGridView != null)
+			{
+				dataGridView.GotFocus += value2;
+				dataGridView.LostFocus += value3;
+				dataGridView.DoubleClick += value4;
+				dataGridView.KeyDown += value5;
+			}
+		}
+	}
+
+	[field: AccessedThroughProperty("Label1")]
+	internal virtual Label Label1
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("dtpSO")]
+	internal virtual DateTimePicker dtpSO
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual Button btnSaveClose
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnSaveClose;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnSaveClose_Click;
+			Button button = _btnSaveClose;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnSaveClose = value;
+			button = _btnSaveClose;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
+
+	internal virtual Button btnDelete
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnDelete;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnDelete_Click;
+			Button button = _btnDelete;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnDelete = value;
+			button = _btnDelete;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
+
+	internal virtual Button btnHistory
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnHistory;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnHistory_Click;
+			Button button = _btnHistory;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnHistory = value;
+			button = _btnHistory;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
+
+	[field: AccessedThroughProperty("Label23")]
+	internal virtual Label Label23
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label13")]
+	internal virtual Label Label13
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label9")]
+	internal virtual Label Label9
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("lblTotalInvoice")]
+	internal virtual Label lblTotalInvoice
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label8")]
+	internal virtual Label Label8
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual FilteredTextBox txtDiscountValue
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _txtDiscountValue;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = txtDiscount_Click;
+			EventHandler value3 = txtDiscount_GotFocus;
+			EventHandler value4 = txtDiscount_TextChanged;
+			FilteredTextBox filteredTextBox = _txtDiscountValue;
+			if (filteredTextBox != null)
+			{
+				filteredTextBox.Click -= value2;
+				filteredTextBox.GotFocus -= value3;
+				filteredTextBox.TextChanged -= value4;
+			}
+			_txtDiscountValue = value;
+			filteredTextBox = _txtDiscountValue;
+			if (filteredTextBox != null)
+			{
+				filteredTextBox.Click += value2;
+				filteredTextBox.GotFocus += value3;
+				filteredTextBox.TextChanged += value4;
+			}
+		}
+	}
+
+	[field: AccessedThroughProperty("lblTotalPrice")]
+	internal virtual Label lblTotalPrice
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label6")]
+	internal virtual Label Label6
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("txtPONumber")]
+	internal virtual TextBox txtPONumber
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label5")]
+	internal virtual Label Label5
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("dtpExpired")]
+	internal virtual DateTimePicker dtpExpired
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("DateTimePicker1")]
+	internal virtual DateTimePicker DateTimePicker1
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual Button btnSave
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnSave;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnSave_Click;
+			Button button = _btnSave;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnSave = value;
+			button = _btnSave;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
+
+	internal virtual Label lblInformation
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _lblInformation;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = lblInformation_Click;
+			Label label = _lblInformation;
+			if (label != null)
+			{
+				label.Click -= value2;
+			}
+			_lblInformation = value;
+			label = _lblInformation;
+			if (label != null)
+			{
+				label.Click += value2;
+			}
+		}
+	}
+
+	[field: AccessedThroughProperty("txtDiscountDescription")]
+	internal virtual FilteredTextBox txtDiscountDescription
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	public double CustomerId
+	{
+		get
+		{
+			return _customerId;
+		}
+		set
+		{
+			_customerId = value;
+		}
+	}
+
+	public double CurrentId
+	{
+		get
+		{
+			return _currentId;
+		}
+		set
+		{
+			_currentId = value;
+		}
+	}
+
+	public int StorageId
+	{
+		get
+		{
+			return _storageId;
+		}
+		set
+		{
+			_storageId = value;
+		}
+	}
+
+	public int BranchId
+	{
+		get
+		{
+			return _branchId;
+		}
+		set
+		{
+			_branchId = value;
+		}
+	}
+
+	[DebuggerNonUserCode]
+	protected override void Dispose(bool disposing)
+	{
+		try
+		{
+			if (disposing && components != null)
+			{
+				components.Dispose();
+			}
+		}
+		finally
+		{
+			base.Dispose(disposing);
+		}
+	}
+
+	[System.Diagnostics.DebuggerStepThrough]
+	private void InitializeComponent()
+	{
+		this.lblNumber = new System.Windows.Forms.Label();
+		this.Label4 = new System.Windows.Forms.Label();
+		this.btnSearch = new System.Windows.Forms.Button();
+		this.lblAddress = new System.Windows.Forms.Label();
+		this.lblName = new System.Windows.Forms.Label();
+		this.Label2 = new System.Windows.Forms.Label();
+		this.Label10 = new System.Windows.Forms.Label();
+		this.btnItem = new System.Windows.Forms.Button();
+		this.Label3 = new System.Windows.Forms.Label();
+		this.TabControl1 = new System.Windows.Forms.TabControl();
+		this.TabPage1 = new System.Windows.Forms.TabPage();
+		this.dgvItem = new System.Windows.Forms.DataGridView();
+		this.Label1 = new System.Windows.Forms.Label();
+		this.dtpSO = new System.Windows.Forms.DateTimePicker();
+		this.btnSaveClose = new System.Windows.Forms.Button();
+		this.btnDelete = new System.Windows.Forms.Button();
+		this.btnHistory = new System.Windows.Forms.Button();
+		this.Label23 = new System.Windows.Forms.Label();
+		this.Label13 = new System.Windows.Forms.Label();
+		this.Label9 = new System.Windows.Forms.Label();
+		this.lblTotalInvoice = new System.Windows.Forms.Label();
+		this.Label8 = new System.Windows.Forms.Label();
+		this.lblTotalPrice = new System.Windows.Forms.Label();
+		this.Label6 = new System.Windows.Forms.Label();
+		this.txtPONumber = new System.Windows.Forms.TextBox();
+		this.Label5 = new System.Windows.Forms.Label();
+		this.dtpExpired = new System.Windows.Forms.DateTimePicker();
+		this.DateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+		this.btnSave = new System.Windows.Forms.Button();
+		this.txtDiscountValue = new GCUv2.FilteredTextBox();
+		this.lblInformation = new System.Windows.Forms.Label();
+		this.txtDiscountDescription = new GCUv2.FilteredTextBox();
+		this.TabControl1.SuspendLayout();
+		this.TabPage1.SuspendLayout();
+		((System.ComponentModel.ISupportInitialize)this.dgvItem).BeginInit();
+		base.SuspendLayout();
+		this.lblNumber.AutoSize = true;
+		this.lblNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.lblNumber.Location = new System.Drawing.Point(283, 73);
+		this.lblNumber.Name = "lblNumber";
+		this.lblNumber.Size = new System.Drawing.Size(54, 13);
+		this.lblNumber.TabIndex = 204;
+		this.lblNumber.Text = "lblNumber";
+		this.lblNumber.Visible = false;
+		this.Label4.AutoSize = true;
+		this.Label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label4.Location = new System.Drawing.Point(7, 125);
+		this.Label4.Name = "Label4";
+		this.Label4.Size = new System.Drawing.Size(63, 13);
+		this.Label4.TabIndex = 202;
+		this.Label4.Text = "Tgl. Expired";
+		this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.btnSearch.Location = new System.Drawing.Point(365, 17);
+		this.btnSearch.Name = "btnSearch";
+		this.btnSearch.Size = new System.Drawing.Size(83, 23);
+		this.btnSearch.TabIndex = 0;
+		this.btnSearch.Text = "Pilih Customer";
+		this.btnSearch.UseVisualStyleBackColor = true;
+		this.lblAddress.BackColor = System.Drawing.Color.White;
+		this.lblAddress.Cursor = System.Windows.Forms.Cursors.Hand;
+		this.lblAddress.Location = new System.Drawing.Point(9, 32);
+		this.lblAddress.Name = "lblAddress";
+		this.lblAddress.Size = new System.Drawing.Size(350, 26);
+		this.lblAddress.TabIndex = 201;
+		this.lblAddress.Text = "lblAddress";
+		this.lblName.BackColor = System.Drawing.Color.White;
+		this.lblName.Cursor = System.Windows.Forms.Cursors.Hand;
+		this.lblName.Location = new System.Drawing.Point(9, 9);
+		this.lblName.Name = "lblName";
+		this.lblName.Size = new System.Drawing.Size(350, 23);
+		this.lblName.TabIndex = 200;
+		this.lblName.Text = "lblName";
+		this.Label2.BackColor = System.Drawing.Color.White;
+		this.Label2.Location = new System.Drawing.Point(-12, -11);
+		this.Label2.Name = "Label2";
+		this.Label2.Size = new System.Drawing.Size(713, 69);
+		this.Label2.TabIndex = 199;
+		this.Label10.BackColor = System.Drawing.Color.Silver;
+		this.Label10.Location = new System.Drawing.Point(-224, 455);
+		this.Label10.Name = "Label10";
+		this.Label10.Size = new System.Drawing.Size(713, 59);
+		this.Label10.TabIndex = 198;
+		this.btnItem.BackColor = System.Drawing.SystemColors.ButtonFace;
+		this.btnItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnItem.Location = new System.Drawing.Point(6, 11);
+		this.btnItem.Name = "btnItem";
+		this.btnItem.Size = new System.Drawing.Size(61, 24);
+		this.btnItem.TabIndex = 5;
+		this.btnItem.Text = "+ Barang";
+		this.btnItem.UseVisualStyleBackColor = false;
+		this.Label3.AutoSize = true;
+		this.Label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label3.Location = new System.Drawing.Point(229, 73);
+		this.Label3.Name = "Label3";
+		this.Label3.Size = new System.Drawing.Size(38, 13);
+		this.Label3.TabIndex = 203;
+		this.Label3.Text = "Nomer";
+		this.Label3.Visible = false;
+		this.TabControl1.Controls.Add(this.TabPage1);
+		this.TabControl1.Location = new System.Drawing.Point(9, 148);
+		this.TabControl1.Name = "TabControl1";
+		this.TabControl1.SelectedIndex = 0;
+		this.TabControl1.Size = new System.Drawing.Size(441, 207);
+		this.TabControl1.TabIndex = 4;
+		this.TabPage1.Controls.Add(this.btnItem);
+		this.TabPage1.Controls.Add(this.dgvItem);
+		this.TabPage1.Location = new System.Drawing.Point(4, 22);
+		this.TabPage1.Name = "TabPage1";
+		this.TabPage1.Padding = new System.Windows.Forms.Padding(3);
+		this.TabPage1.Size = new System.Drawing.Size(433, 181);
+		this.TabPage1.TabIndex = 0;
+		this.TabPage1.Text = "Barang";
+		this.TabPage1.UseVisualStyleBackColor = true;
+		this.dgvItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+		this.dgvItem.Location = new System.Drawing.Point(6, 41);
+		this.dgvItem.Name = "dgvItem";
+		this.dgvItem.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+		this.dgvItem.Size = new System.Drawing.Size(412, 134);
+		this.dgvItem.TabIndex = 6;
+		this.Label1.AutoSize = true;
+		this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label1.Location = new System.Drawing.Point(6, 99);
+		this.Label1.Name = "Label1";
+		this.Label1.Size = new System.Drawing.Size(70, 13);
+		this.Label1.TabIndex = 197;
+		this.Label1.Text = "Tgl. Pesanan";
+		this.dtpSO.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+		this.dtpSO.Location = new System.Drawing.Point(92, 96);
+		this.dtpSO.Name = "dtpSO";
+		this.dtpSO.Size = new System.Drawing.Size(121, 20);
+		this.dtpSO.TabIndex = 2;
+		this.btnSaveClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnSaveClose.Location = new System.Drawing.Point(244, 464);
+		this.btnSaveClose.Name = "btnSaveClose";
+		this.btnSaveClose.Size = new System.Drawing.Size(93, 24);
+		this.btnSaveClose.TabIndex = 32;
+		this.btnSaveClose.Text = "Simpan && &Tutup";
+		this.btnSaveClose.UseVisualStyleBackColor = true;
+		this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnDelete.Location = new System.Drawing.Point(343, 464);
+		this.btnDelete.Name = "btnDelete";
+		this.btnDelete.Size = new System.Drawing.Size(49, 24);
+		this.btnDelete.TabIndex = 33;
+		this.btnDelete.Text = "Hapus";
+		this.btnDelete.UseVisualStyleBackColor = true;
+		this.btnHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnHistory.Location = new System.Drawing.Point(398, 464);
+		this.btnHistory.Name = "btnHistory";
+		this.btnHistory.Size = new System.Drawing.Size(50, 24);
+		this.btnHistory.TabIndex = 34;
+		this.btnHistory.Text = "&History";
+		this.btnHistory.UseVisualStyleBackColor = true;
+		this.Label23.BackColor = System.Drawing.Color.Silver;
+		this.Label23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+		this.Label23.Location = new System.Drawing.Point(16, 422);
+		this.Label23.Name = "Label23";
+		this.Label23.Size = new System.Drawing.Size(434, 1);
+		this.Label23.TabIndex = 220;
+		this.Label13.BackColor = System.Drawing.Color.Silver;
+		this.Label13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+		this.Label13.Location = new System.Drawing.Point(15, 402);
+		this.Label13.Name = "Label13";
+		this.Label13.Size = new System.Drawing.Size(434, 1);
+		this.Label13.TabIndex = 219;
+		this.Label9.AutoSize = true;
+		this.Label9.Location = new System.Drawing.Point(12, 406);
+		this.Label9.Name = "Label9";
+		this.Label9.Size = new System.Drawing.Size(31, 13);
+		this.Label9.TabIndex = 218;
+		this.Label9.Text = "Total";
+		this.lblTotalInvoice.Location = new System.Drawing.Point(75, 406);
+		this.lblTotalInvoice.Name = "lblTotalInvoice";
+		this.lblTotalInvoice.Size = new System.Drawing.Size(90, 13);
+		this.lblTotalInvoice.TabIndex = 217;
+		this.lblTotalInvoice.Text = "Total Invoice";
+		this.lblTotalInvoice.TextAlign = System.Drawing.ContentAlignment.TopRight;
+		this.Label8.AutoSize = true;
+		this.Label8.Location = new System.Drawing.Point(12, 358);
+		this.Label8.Name = "Label8";
+		this.Label8.Size = new System.Drawing.Size(63, 13);
+		this.Label8.TabIndex = 215;
+		this.Label8.Text = "Total Harga";
+		this.lblTotalPrice.Location = new System.Drawing.Point(75, 358);
+		this.lblTotalPrice.Name = "lblTotalPrice";
+		this.lblTotalPrice.Size = new System.Drawing.Size(90, 13);
+		this.lblTotalPrice.TabIndex = 213;
+		this.lblTotalPrice.Text = "Total Price";
+		this.lblTotalPrice.TextAlign = System.Drawing.ContentAlignment.TopRight;
+		this.Label6.AutoSize = true;
+		this.Label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label6.Location = new System.Drawing.Point(13, 376);
+		this.Label6.Name = "Label6";
+		this.Label6.Size = new System.Drawing.Size(40, 13);
+		this.Label6.TabIndex = 212;
+		this.Label6.Text = "Diskon";
+		this.txtPONumber.Location = new System.Drawing.Point(92, 70);
+		this.txtPONumber.Name = "txtPONumber";
+		this.txtPONumber.Size = new System.Drawing.Size(121, 20);
+		this.txtPONumber.TabIndex = 1;
+		this.Label5.AutoSize = true;
+		this.Label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label5.Location = new System.Drawing.Point(7, 73);
+		this.Label5.Name = "Label5";
+		this.Label5.Size = new System.Drawing.Size(83, 13);
+		this.Label5.TabIndex = 222;
+		this.Label5.Text = "Nomer Pesanan";
+		this.dtpExpired.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+		this.dtpExpired.Location = new System.Drawing.Point(92, 122);
+		this.dtpExpired.Name = "dtpExpired";
+		this.dtpExpired.Size = new System.Drawing.Size(121, 20);
+		this.dtpExpired.TabIndex = 3;
+		this.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+		this.DateTimePicker1.Location = new System.Drawing.Point(78, 137);
+		this.DateTimePicker1.Name = "DateTimePicker1";
+		this.DateTimePicker1.Size = new System.Drawing.Size(121, 20);
+		this.DateTimePicker1.TabIndex = 223;
+		this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnSave.Location = new System.Drawing.Point(145, 464);
+		this.btnSave.Name = "btnSave";
+		this.btnSave.Size = new System.Drawing.Size(93, 24);
+		this.btnSave.TabIndex = 31;
+		this.btnSave.Text = "&Simpan && Baru";
+		this.btnSave.UseVisualStyleBackColor = true;
+		this.txtDiscountValue.AllowedCharacters = GCUv2.FilteredTextBox.InputType.All;
+		this.txtDiscountValue.DontFormat = false;
+		this.txtDiscountValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.txtDiscountValue.Location = new System.Drawing.Point(78, 374);
+		this.txtDiscountValue.MaximumDigit = 3;
+		this.txtDiscountValue.Name = "txtDiscountValue";
+		this.txtDiscountValue.Size = new System.Drawing.Size(87, 21);
+		this.txtDiscountValue.TabIndex = 21;
+		this.txtDiscountValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+		this.lblInformation.AutoSize = true;
+		this.lblInformation.Cursor = System.Windows.Forms.Cursors.Hand;
+		this.lblInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9f, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, 0);
+		this.lblInformation.ForeColor = System.Drawing.Color.Blue;
+		this.lblInformation.Location = new System.Drawing.Point(16, 429);
+		this.lblInformation.Name = "lblInformation";
+		this.lblInformation.Size = new System.Drawing.Size(82, 15);
+		this.lblInformation.TabIndex = 223;
+		this.lblInformation.Text = "lblInformation";
+		this.txtDiscountDescription.AllowedCharacters = GCUv2.FilteredTextBox.InputType.All;
+		this.txtDiscountDescription.DontFormat = false;
+		this.txtDiscountDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 9f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.txtDiscountDescription.Location = new System.Drawing.Point(171, 374);
+		this.txtDiscountDescription.MaximumDigit = 3;
+		this.txtDiscountDescription.Name = "txtDiscountDescription";
+		this.txtDiscountDescription.Size = new System.Drawing.Size(87, 21);
+		this.txtDiscountDescription.TabIndex = 22;
+		base.AcceptButton = this.btnSave;
+		base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
+		base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+		base.ClientSize = new System.Drawing.Size(460, 494);
+		base.Controls.Add(this.txtDiscountDescription);
+		base.Controls.Add(this.lblInformation);
+		base.Controls.Add(this.btnSave);
+		base.Controls.Add(this.dtpExpired);
+		base.Controls.Add(this.txtPONumber);
+		base.Controls.Add(this.Label5);
+		base.Controls.Add(this.Label23);
+		base.Controls.Add(this.Label13);
+		base.Controls.Add(this.Label9);
+		base.Controls.Add(this.lblTotalInvoice);
+		base.Controls.Add(this.Label8);
+		base.Controls.Add(this.txtDiscountValue);
+		base.Controls.Add(this.lblTotalPrice);
+		base.Controls.Add(this.Label6);
+		base.Controls.Add(this.btnSaveClose);
+		base.Controls.Add(this.btnDelete);
+		base.Controls.Add(this.btnHistory);
+		base.Controls.Add(this.lblNumber);
+		base.Controls.Add(this.Label4);
+		base.Controls.Add(this.btnSearch);
+		base.Controls.Add(this.lblAddress);
+		base.Controls.Add(this.lblName);
+		base.Controls.Add(this.Label2);
+		base.Controls.Add(this.Label10);
+		base.Controls.Add(this.Label3);
+		base.Controls.Add(this.TabControl1);
+		base.Controls.Add(this.Label1);
+		base.Controls.Add(this.dtpSO);
+		base.KeyPreview = true;
+		base.MaximizeBox = false;
+		base.Name = "frmSalesOrder";
+		base.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+		this.Text = "Pesanan Penjualan";
+		this.TabControl1.ResumeLayout(false);
+		this.TabPage1.ResumeLayout(false);
+		((System.ComponentModel.ISupportInitialize)this.dgvItem).EndInit();
+		base.ResumeLayout(false);
+		base.PerformLayout();
+	}
+
+	public frmSalesOrder()
+	{
+		base.KeyDown += frmSalesOrder_KeyDown;
+		InitializeComponent();
+		DoubleBuffered = true;
+		base.MdiParent = MyProject.Forms.frmMenu;
+		txtDiscountValue.AllowedCharacters = FilteredTextBox.InputType.NumeralsAndCurrency;
+		txtDiscountDescription.AllowedCharacters = FilteredTextBox.InputType.All;
+		txtDiscountDescription.DontFormat = true;
+		formatGrid();
+		btnSearch.Focus();
+	}
+
+	private void formatGrid()
+	{
+		dgvItem.Columns.Add("", "itemId");
+		dgvItem.Columns.Add("", "Barang");
+		dgvItem.Columns.Add("", "Jumlah");
+		dgvItem.Columns.Add("", "Harga");
+		dgvItem.Columns.Add("", "Total");
+		dgvItem.Columns[0].Visible = false;
+		dgvItem.Columns[1].Width = 120;
+		dgvItem.Columns[2].Width = 80;
+		dgvItem.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+		dgvItem.Columns[3].Width = 80;
+		dgvItem.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+		dgvItem.Columns[4].Width = 100;
+		dgvItem.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+		dgvItem.RowHeadersVisible = false;
+		dgvItem.AllowUserToAddRows = false;
+		dgvItem.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+		dgvItem.ReadOnly = true;
+		dgvItem.AlternatingRowsDefaultCellStyle.BackColor = Color.WhiteSmoke;
+		dgvItem.AllowUserToResizeRows = false;
+	}
+
+	public void prepareForm(bool SaveNew)
+	{
+		_currentId = 0.0;
+		_customerId = 0.0;
+		_SOItem = null;
+		btnSearch.Visible = true;
+		lblName.Text = "Klik tombol 'Pilih Customer' untuk memilih customer";
+		lblAddress.Text = "";
+		txtPONumber.Text = "";
+		txtDiscountDescription.Text = "";
+		txtDiscountValue.Text = "";
+		dtpSO.Value = DateAndTime.Now;
+		dtpExpired.Value = DateAndTime.Now;
+		dtpSO.Enabled = true;
+		lblTotalPrice.Text = "";
+		lblTotalInvoice.Text = "";
+		lblInformation.Text = "";
+		dgvItem.Rows.Clear();
+		lblNumber.Text = "auto";
+		btnHistory.Enabled = false;
+		btnDelete.Enabled = false;
+	}
+
+	public void loadData()
+	{
+		int try0001_dispatch = -1;
+		int num2 = default(int);
+		int num = default(int);
+		while (true)
+		{
+			try
+			{
+				/*Note: ILSpy has introduced the following switch to emulate a goto from catch-block to try-block*/;
+				switch (try0001_dispatch)
+				{
+				default:
+				{
+					ProjectData.ClearProjectError();
+					num2 = 2;
+					cSalesOrder cSalesOrder2 = new cSalesOrder(_currentId);
+					_customerId = cSalesOrder2.CustomerId;
+					_discountId = cSalesOrder2.DiscountId;
+					btnSearch.Visible = false;
+					lblName.Text = cSalesOrder2.CustomerName;
+					lblAddress.Text = cSalesOrder2.CustomerAddress;
+					lblNumber.Text = cSalesOrder2.SONumber;
+					txtPONumber.Text = cSalesOrder2.PONumber;
+					dtpSO.Value = cSalesOrder2.SODate;
+					dtpExpired.Value = cSalesOrder2.ExpiredDate;
+					txtDiscountDescription.Text = cSalesOrder2.DiscountDescription;
+					txtDiscountValue.Text = Module1.formatCustomDecimal(Conversions.ToString(cSalesOrder2.Discount), 2);
+					_SOItem = cSalesOrder2.Item;
+					cSalesOrderItem[] item = cSalesOrder2.Item;
+					foreach (cSalesOrderItem cSalesOrderItem2 in item)
+					{
+						dgvItem.Rows.Add(cSalesOrderItem2.ItemId, cSalesOrderItem2.ItemName, Module1.formatCustomDecimal(Conversions.ToString(cSalesOrderItem2.Qty), 3), Module1.formatCustomDecimal(Conversions.ToString(cSalesOrderItem2.Price), 2), Module1.formatCustomDecimal(Conversions.ToString(cSalesOrderItem2.Qty * cSalesOrderItem2.Price), 2));
+					}
+					calculateTotalPrice();
+					if (dgvItem.RowCount > 0)
+					{
+						dgvItem.CurrentRow.Selected = false;
+					}
+					_invoiceId = cSalesOrder2.InvoiceId;
+					if (DateAndTime.DateDiff(DateInterval.Day, dtpSO.Value, DateAndTime.Now) <= Module1.pubDaysLimit)
+					{
+						dtpSO.Enabled = true;
+					}
+					else
+					{
+						dtpSO.Enabled = false;
+					}
+					if (Operators.CompareString(cSalesOrder2.InvoiceNumber, "", TextCompare: false) != 0)
+					{
+						lblInformation.Text = "Sudah dimasukkan di Faktur Penjualan: " + cSalesOrder2.InvoiceNumber;
+						btnSave.Enabled = false;
+						btnSaveClose.Enabled = false;
+						btnDelete.Enabled = false;
+					}
+					else
+					{
+						btnSave.Enabled = true;
+						btnSaveClose.Enabled = true;
+						if (DateAndTime.DateDiff(DateInterval.Day, dtpSO.Value, DateAndTime.Now) <= Module1.pubDaysLimit)
+						{
+							btnDelete.Enabled = true;
+						}
+						else
+						{
+							btnDelete.Enabled = false;
+						}
+					}
+					btnHistory.Enabled = true;
+					goto end_IL_0001;
+				}
+				case 792:
+					num = -1;
+					switch (num2)
+					{
+					case 2:
+						Module1.SaveError(Information.Err(), "frmSalesOrder", "loadData", "");
+						if (Information.Err().Number == 513)
+						{
+							Close();
+						}
+						goto end_IL_0001;
+					}
+					break;
+				}
+			}
+			catch (object obj) when (obj is Exception && num2 != 0 && num == 0)
+			{
+				ProjectData.SetProjectError((Exception)obj);
+				try0001_dispatch = 792;
+				continue;
+			}
+			throw ProjectData.CreateProjectError(-2146828237);
+			continue;
+			end_IL_0001:
+			break;
+		}
+		if (num != 0)
+		{
+			ProjectData.ClearProjectError();
+		}
+	}
+
+	private void frmSalesOrder_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Escape)
+		{
+			Close();
+		}
+	}
+
+	private void btnSearch_Click(object sender, EventArgs e)
+	{
+		frmCustomerMiniSearch frmCustomerMiniSearch2 = new frmCustomerMiniSearch();
+		frmCustomerMiniSearch2.CallerName = "SalesOrder";
+		frmCustomerMiniSearch2.ShowDialog();
+		frmCustomerMiniSearch2.Close();
+		frmCustomerMiniSearch2.Dispose();
+		if (_customerId > 0.0)
+		{
+			LoadCustomer();
+		}
+	}
+
+	public void LoadCustomer()
+	{
+		cCustomer cCustomer2 = new cCustomer(_customerId);
+		_branchId = cCustomer2.BranchId;
+		lblName.Text = cCustomer2.Name;
+		lblAddress.Text = cCustomer2.Address;
+		StorageId = cCustomer2.StorageId;
+		_discountId = cCustomer2.DiscountId;
+		txtPONumber.Focus();
+	}
+
+	private void lblName_Click(object sender, EventArgs e)
+	{
+		OpenCustomer();
+	}
+
+	private void lblAddress_Click(object sender, EventArgs e)
+	{
+		OpenCustomer();
+	}
+
+	private void OpenCustomer()
+	{
+		if (_customerId > 0.0)
+		{
+			MyProject.Forms.frmCustomer.Show();
+			MyProject.Forms.frmCustomer.prepareForm();
+			MyProject.Forms.frmCustomer.CurrentId = _customerId;
+			MyProject.Forms.frmCustomer.LoadData();
+			MyProject.Forms.frmCustomer.Activate();
+			MyProject.Forms.frmCustomer.WindowState = FormWindowState.Normal;
+		}
+	}
+
+	private void btnItem_Click(object sender, EventArgs e)
+	{
+		frmSalesOrderItem frmSalesOrderItem2 = new frmSalesOrderItem(CurrentData: false, _customerId, _storageId);
+		frmSalesOrderItem2.ShowDialog();
+		frmSalesOrderItem2.Close();
+		frmSalesOrderItem2.Dispose();
+	}
+
+	private void dgvItem_GotFocus(object sender, EventArgs e)
+	{
+		if (dgvItem.RowCount > 0)
+		{
+			dgvItem.CurrentRow.Selected = true;
+		}
+	}
+
+	private void dgvItem_LostFocus(object sender, EventArgs e)
+	{
+		if (dgvItem.RowCount > 0)
+		{
+			dgvItem.CurrentRow.Selected = false;
+		}
+	}
+
+	private void dgvItem_DoubleClick(object sender, EventArgs e)
+	{
+		OpenItem();
+	}
+
+	private void dgvItem_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Return)
+		{
+			OpenItem();
+			e.SuppressKeyPress = true;
+		}
+		else if (e.Shift & (e.KeyCode == Keys.Tab))
+		{
+			btnItem.Focus();
+			e.SuppressKeyPress = true;
+		}
+		else if (e.KeyCode == Keys.Tab)
+		{
+			txtDiscountValue.Focus();
+			e.SuppressKeyPress = true;
+		}
+	}
+
+	private void OpenItem()
+	{
+		int try0001_dispatch = -1;
+		int num2 = default(int);
+		int num = default(int);
+		while (true)
+		{
+			try
+			{
+				/*Note: ILSpy has introduced the following switch to emulate a goto from catch-block to try-block*/;
+				switch (try0001_dispatch)
+				{
+				default:
+					ProjectData.ClearProjectError();
+					num2 = 2;
+					if (dgvItem.Rows.Count > 0)
+					{
+						frmSalesOrderItem frmSalesOrderItem2 = new frmSalesOrderItem(CurrentData: true, _customerId, _storageId);
+						frmSalesOrderItem2.SOItem = _SOItem;
+						ComboBox cboSource = frmSalesOrderItem2.cboItem;
+						Module1.comboBoundValue(ref cboSource, Conversions.ToDouble(dgvItem[0, dgvItem.CurrentRow.Index].Value));
+						frmSalesOrderItem2.cboItem = cboSource;
+						frmSalesOrderItem2.txtQty.Text = Module1.formatCustomDecimal(Conversions.ToString(dgvItem[2, dgvItem.CurrentRow.Index].Value), 3);
+						frmSalesOrderItem2.txtPrice.Text = Module1.formatCustomDecimal(Conversions.ToString(dgvItem[3, dgvItem.CurrentRow.Index].Value), 2);
+						frmSalesOrderItem2.ShowDialog();
+					}
+					goto end_IL_0001;
+				case 283:
+					num = -1;
+					switch (num2)
+					{
+					case 2:
+						Module1.SaveError(Information.Err(), "frmSalesOrder", "OpenItem", "");
+						goto end_IL_0001;
+					}
+					break;
+				}
+			}
+			catch (object obj) when (obj is Exception && num2 != 0 && num == 0)
+			{
+				ProjectData.SetProjectError((Exception)obj);
+				try0001_dispatch = 283;
+				continue;
+			}
+			throw ProjectData.CreateProjectError(-2146828237);
+			continue;
+			end_IL_0001:
+			break;
+		}
+		if (num != 0)
+		{
+			ProjectData.ClearProjectError();
+		}
+	}
+
+	public void calculateTotalPrice()
+	{
+		int try0001_dispatch = -1;
+		int num2 = default(int);
+		double num4 = default(double);
+		int num = default(int);
+		while (true)
+		{
+			try
+			{
+				/*Note: ILSpy has introduced the following switch to emulate a goto from catch-block to try-block*/;
+				checked
+				{
+					switch (try0001_dispatch)
+					{
+					default:
+					{
+						ProjectData.ClearProjectError();
+						num2 = 2;
+						_totalItem = 0;
+						int num3 = dgvItem.Rows.Count - 1;
+						for (int i = 0; i <= num3; i++)
+						{
+							ref int totalItem = ref _totalItem;
+							totalItem = (int)Math.Round((double)totalItem + Conversions.ToDouble(dgvItem[2, i].Value));
+							num4 += Conversions.ToDouble(dgvItem[4, i].Value);
+						}
+						lblTotalPrice.Text = Module1.formatCustomDecimal(Conversions.ToString(num4), 2);
+						calculateTotalInvoice();
+						goto end_IL_0001;
+					}
+					case 182:
+						num = -1;
+						switch (num2)
+						{
+						case 2:
+							Module1.SaveError(Information.Err(), "frmSalesOrder", "CalculateTotalPrice", "");
+							goto end_IL_0001;
+						}
+						break;
+					}
+				}
+			}
+			catch (object obj) when (obj is Exception && num2 != 0 && num == 0)
+			{
+				ProjectData.SetProjectError((Exception)obj);
+				try0001_dispatch = 182;
+				continue;
+			}
+			throw ProjectData.CreateProjectError(-2146828237);
+			continue;
+			end_IL_0001:
+			break;
+		}
+		if (num != 0)
+		{
+			ProjectData.ClearProjectError();
+		}
+	}
+
+	public void calculateDiscount()
+	{
+		txtDiscountValue.Text = Module1.formatCustomDecimal(Conversions.ToString(cDiscount.CalculateDiscount(_discountId, Conversion.Val(Module1.unformatNumber(lblTotalPrice.Text)), _totalItem)), 2);
+	}
+
+	public void calculateTotalInvoice()
+	{
+		int try0001_dispatch = -1;
+		int num2 = default(int);
+		int num = default(int);
+		while (true)
+		{
+			try
+			{
+				/*Note: ILSpy has introduced the following switch to emulate a goto from catch-block to try-block*/;
+				switch (try0001_dispatch)
+				{
+				default:
+				{
+					ProjectData.ClearProjectError();
+					num2 = 2;
+					double num3 = Conversion.Val(Module1.unformatNumber(lblTotalPrice.Text)) - Conversion.Val(Module1.unformatNumber(txtDiscountValue.Text));
+					lblTotalInvoice.Text = Module1.formatCustomDecimal(Conversions.ToString(num3), 2);
+					goto end_IL_0001;
+				}
+				case 111:
+					num = -1;
+					switch (num2)
+					{
+					case 2:
+						Module1.SaveError(Information.Err(), "frmSalesOrder", "CalculateTotalInvoice", "");
+						goto end_IL_0001;
+					}
+					break;
+				}
+			}
+			catch (object obj) when (obj is Exception && num2 != 0 && num == 0)
+			{
+				ProjectData.SetProjectError((Exception)obj);
+				try0001_dispatch = 111;
+				continue;
+			}
+			throw ProjectData.CreateProjectError(-2146828237);
+			continue;
+			end_IL_0001:
+			break;
+		}
+		if (num != 0)
+		{
+			ProjectData.ClearProjectError();
+		}
+	}
+
+	private void txtDiscount_Click(object sender, EventArgs e)
+	{
+		txtDiscountValue.SelectionStart = 0;
+		txtDiscountValue.SelectionLength = Strings.Len(txtDiscountValue.Text);
+	}
+
+	private void txtDiscount_GotFocus(object sender, EventArgs e)
+	{
+		txtDiscountValue.SelectionStart = 0;
+		txtDiscountValue.SelectionLength = Strings.Len(txtDiscountValue.Text);
+	}
+
+	private void txtDiscount_TextChanged(object sender, EventArgs e)
+	{
+		calculateTotalInvoice();
+	}
+
+	private void btnSave_Click(object sender, EventArgs e)
+	{
+		SaveData(CloseForm: false);
+	}
+
+	private void btnSaveClose_Click(object sender, EventArgs e)
+	{
+		SaveData(CloseForm: true);
+	}
+
+	private void SaveData(bool CloseForm)
+	{
+		int try0001_dispatch = -1;
+		int num2 = default(int);
+		int num = default(int);
+		while (true)
+		{
+			try
+			{
+				/*Note: ILSpy has introduced the following switch to emulate a goto from catch-block to try-block*/;
+				checked
+				{
+					switch (try0001_dispatch)
+					{
+					default:
+					{
+						ProjectData.ClearProjectError();
+						num2 = 2;
+						if (_customerId == 0.0)
+						{
+							Interaction.MsgBox("Pilih customer", MsgBoxStyle.Information);
+							btnSearch.Focus();
+							goto end_IL_0001;
+						}
+						if (Operators.CompareString(txtPONumber.Text, "", TextCompare: false) == 0)
+						{
+							Interaction.MsgBox("Masukkan Nomer PO.", MsgBoxStyle.Information);
+							txtPONumber.Focus();
+							goto end_IL_0001;
+						}
+						if (!cValidation.isDateWithinRange(dtpSO.Value, Module1.pubGroupId, Module1.pubDaysLimit))
+						{
+							Interaction.MsgBox("Tanggal diluar batas yang diperbolehkan", MsgBoxStyle.Information);
+							dtpSO.Focus();
+							goto end_IL_0001;
+						}
+						if (dgvItem.Rows.Count == 0)
+						{
+							Interaction.MsgBox("Masukkan barang.", MsgBoxStyle.Information);
+							btnItem.Focus();
+							goto end_IL_0001;
+						}
+						if (Conversion.Val(txtDiscountValue.Text) != 0.0 && !Versioned.IsNumeric(txtDiscountValue.Text))
+						{
+							Interaction.MsgBox("Masukkan jumlah discount dengan format angka yang benar", MsgBoxStyle.Information);
+							txtDiscountValue.Focus();
+							goto end_IL_0001;
+						}
+						cSalesOrder cSalesOrder2 = new cSalesOrder(0.0);
+						cSalesOrderItem[] array = new cSalesOrderItem[dgvItem.Rows.Count - 1 + 1];
+						int num3 = 0;
+						cSalesOrder2.Id = _currentId;
+						cSalesOrder2.SODate = dtpSO.Value;
+						cSalesOrder2.ExpiredDate = dtpExpired.Value;
+						cSalesOrder2.PONumber = txtPONumber.Text;
+						cSalesOrder2.BranchId = _branchId;
+						cSalesOrder2.CustomerId = _customerId;
+						int num4 = dgvItem.Rows.Count - 1;
+						for (num3 = 0; num3 <= num4; num3++)
+						{
+							array[num3] = new cSalesOrderItem();
+							array[num3].ItemId = Conversions.ToInteger(dgvItem[0, num3].Value);
+							array[num3].Qty = Conversions.ToDouble(dgvItem[2, num3].Value);
+							array[num3].Price = Conversions.ToDouble(dgvItem[3, num3].Value);
+						}
+						cSalesOrder2.Item = array;
+						cSalesOrder2.Discount = Conversion.Val(Module1.unformatNumber(txtDiscountValue.Text));
+						cSalesOrder2.DiscountDescription = txtDiscountDescription.Text;
+						cSalesOrder2.TotalPrice = Conversion.Val(Module1.unformatNumber(lblTotalPrice.Text));
+						cSalesOrder2.Save();
+						if (Operators.CompareString(lblNumber.Text, "auto", TextCompare: false) == 0)
+						{
+							lblNumber.Text = "SO/" + Conversions.ToString(cSalesOrder2.BranchId) + "/" + Strings.Right(Conversions.ToString(DateAndTime.Year(cSalesOrder2.SODate)), 2) + "/" + cSalesOrder2.SONumber;
+						}
+						string text = "Nomer: " + txtPONumber.Text + "<br />Tanggal: " + Strings.Format(dtpSO.Value, "dd/MM/yyyy") + "<br />Tanggal Expired: " + Strings.Format(dtpExpired.Value, "dd/MM/yyyy") + "<br />Customer: " + lblName.Text + "<br /><br />";
+						text += "Barang:<br />";
+						text += "<table><tr><td>Barang</td><td>Jumlah</td><td>Harga</td><td>Total</td></tr>";
+						int num5 = dgvItem.Rows.Count - 1;
+						for (num3 = 0; num3 <= num5; num3++)
+						{
+							text = Conversions.ToString(Operators.ConcatenateObject(text, Operators.ConcatenateObject(Operators.ConcatenateObject(Operators.ConcatenateObject(Operators.ConcatenateObject(Operators.ConcatenateObject(Operators.ConcatenateObject(Operators.ConcatenateObject(Operators.ConcatenateObject(Operators.ConcatenateObject(Operators.ConcatenateObject(Operators.ConcatenateObject("<tr><td>", dgvItem[1, num3].Value), "</td>"), "<td align='right'>"), Module1.formatCustomDecimal(Conversions.ToString(dgvItem[2, num3].Value), 3)), "</td>"), "<td align='right'>"), Module1.formatCustomDecimal(Conversions.ToString(dgvItem[3, num3].Value), 2)), "</td>"), "<td align='right'>"), Module1.formatCustomDecimal(Conversions.ToString(dgvItem[4, num3].Value), 2)), "</td></tr>")));
+						}
+						text += "</table>";
+						text = text + "Diskon: " + Module1.formatCustomDecimal(txtDiscountValue.Text, 2) + "<br />Deskripsi: " + txtDiscountDescription.Text + "<br />";
+						string text2;
+						if (_currentId == 0.0)
+						{
+							text2 = "membuat ";
+							_currentId = cSalesOrder2.Id;
+						}
+						else
+						{
+							text2 = "mengupdate ";
+						}
+						text2 = text2 + "Pesanan Penjualan " + txtPONumber.Text + " tanggal " + Strings.Format(dtpSO.Value, "dd/MM/yyyy") + ". ID= " + Conversions.ToString(_currentId) + ", v2";
+						cHistory cHistory2 = new cHistory();
+						cHistory2.Content = text;
+						cHistory2.Description = text2;
+						cHistory2.UserId = Module1.pubUserId;
+						cHistory2.UserLogin = Module1.pubLogin;
+						cHistory2.fKeyId = _currentId;
+						cHistory2.HistoryType = 17;
+						cHistory2.Save();
+						Interaction.MsgBox("Pesanan Penjualan berhasil disimpan", MsgBoxStyle.Information);
+						if (Module1.FormIsOpen("frmSalesOrderList"))
+						{
+							MyProject.Forms.frmSalesOrderList.GetRecent();
+						}
+						if (Module1.FormIsOpen("frmCustomer"))
+						{
+							MyProject.Forms.frmCustomer.GetSalesOrder();
+						}
+						MyProject.Forms.frmInformation.GetActivity();
+						if (CloseForm)
+						{
+							Close();
+							goto end_IL_0001;
+						}
+						prepareForm(SaveNew: true);
+						btnSearch.Focus();
+						goto end_IL_0001_2;
+					}
+					case 1771:
+						num = -1;
+						switch (num2)
+						{
+						case 2:
+							Module1.SaveError(Information.Err(), "frmSalesOrder", "SaveData", "");
+							goto end_IL_0001_2;
+						}
+						break;
+					}
+					goto IL_0721;
+				}
+				end_IL_0001_2:;
+			}
+			catch (object obj) when (obj is Exception && num2 != 0 && num == 0)
+			{
+				ProjectData.SetProjectError((Exception)obj);
+				try0001_dispatch = 1771;
+				continue;
+			}
+			break;
+			IL_0721:
+			throw ProjectData.CreateProjectError(-2146828237);
+			continue;
+			end_IL_0001:
+			break;
+		}
+		if (num != 0)
+		{
+			ProjectData.ClearProjectError();
+		}
+	}
+
+	private void btnDelete_Click(object sender, EventArgs e)
+	{
+		int try0001_dispatch = -1;
+		int num2 = default(int);
+		int num = default(int);
+		while (true)
+		{
+			try
+			{
+				/*Note: ILSpy has introduced the following switch to emulate a goto from catch-block to try-block*/;
+				switch (try0001_dispatch)
+				{
+				default:
+					ProjectData.ClearProjectError();
+					num2 = 2;
+					if (MessageBox.Show("Hapus Pengiriman Pesanan?", "Konfirmasi", MessageBoxButtons.YesNo) != DialogResult.No)
+					{
+						cSalesOrder cSalesOrder2 = new cSalesOrder(_currentId);
+						cSalesOrder2.Delete();
+						string description = "menghapus Pengiriman Pesanan " + cSalesOrder2.SONumber + ". Tanggal  " + Strings.Format(cSalesOrder2.SODate, "dd/MM/yyyy") + ". ID= " + Conversions.ToString(_currentId) + ", v2";
+						cHistory cHistory2 = new cHistory();
+						cHistory2.Description = description;
+						cHistory2.UserId = Module1.pubUserId;
+						cHistory2.UserLogin = Module1.pubLogin;
+						cHistory2.fKeyId = _currentId;
+						cHistory2.HistoryType = 17;
+						cHistory2.Save();
+						Interaction.MsgBox("Pengiriman Pesanan berhasil dihapus", MsgBoxStyle.Information);
+						if (Module1.FormIsOpen("frmSalesOrderList"))
+						{
+							MyProject.Forms.frmSalesOrderList.GetRecent();
+						}
+						MyProject.Forms.frmInformation.GetActivity();
+						Close();
+					}
+					goto end_IL_0001;
+				case 327:
+					num = -1;
+					switch (num2)
+					{
+					case 2:
+						Module1.SaveError(Information.Err(), "frmSalesOrder", "btnDelete_Click", "");
+						goto end_IL_0001;
+					}
+					break;
+				}
+			}
+			catch (object obj) when (obj is Exception && num2 != 0 && num == 0)
+			{
+				ProjectData.SetProjectError((Exception)obj);
+				try0001_dispatch = 327;
+				continue;
+			}
+			throw ProjectData.CreateProjectError(-2146828237);
+			continue;
+			end_IL_0001:
+			break;
+		}
+		if (num != 0)
+		{
+			ProjectData.ClearProjectError();
+		}
+	}
+
+	private void btnHistory_Click(object sender, EventArgs e)
+	{
+		MyProject.Forms.frmHistory.GetHistory(checked((int)Math.Round(_currentId)), 17);
+		MyProject.Forms.frmHistory.Show();
+		MyProject.Forms.frmHistory.Activate();
+		MyProject.Forms.frmHistory.WindowState = FormWindowState.Normal;
+	}
+
+	private void lblInformation_Click(object sender, EventArgs e)
+	{
+		MyProject.Forms.frmSalesInvoice.Show();
+		MyProject.Forms.frmSalesInvoice.prepareForm(SaveNew: false);
+		MyProject.Forms.frmSalesInvoice.CurrentId = _invoiceId;
+		MyProject.Forms.frmSalesInvoice.LoadData();
+		MyProject.Forms.frmSalesInvoice.Activate();
+		MyProject.Forms.frmSalesInvoice.WindowState = FormWindowState.Normal;
+	}
 }

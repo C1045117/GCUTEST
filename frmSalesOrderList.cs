@@ -1,194 +1,374 @@
 using System;
+using System.Collections;
+using System.ComponentModel;
+using System.Data;
+using System.Diagnostics;
+using System.Drawing;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
+using GCUv2.My;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
 
-namespace GCUv2
+namespace GCUv2;
+
+[DesignerGenerated]
+public class frmSalesOrderList : Form
 {
-    public class Form
-    {
+	private IContainer components;
 
-        private class ComponentModel.IContainer components;
-        private class ToolStripButton _tsbNew;
-        private class Label _lblTitle;
-        private class ToolStrip _ToolStrip1;
-        private class DataGridView _dgvList;
-        private class ToolStripButton _tsbRefresh;
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("tsbNew")]
+	private ToolStripButton _tsbNew;
 
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("dgvList")]
+	private DataGridView _dgvList;
 
-        protected override strict void Dispose(boolean disposing) {
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("tsbRefresh")]
+	private ToolStripButton _tsbRefresh;
 
-          boolean var_1;
+	internal virtual ToolStripButton tsbNew
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _tsbNew;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = tsbNew_Click;
+			ToolStripButton toolStripButton = _tsbNew;
+			if (toolStripButton != null)
+			{
+				toolStripButton.Click -= value2;
+			}
+			_tsbNew = value;
+			toolStripButton = _tsbNew;
+			if (toolStripButton != null)
+			{
+				toolStripButton.Click += value2;
+			}
+		}
+	}
 
-        }
+	[field: AccessedThroughProperty("lblTitle")]
+	internal virtual Label lblTitle
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-        private void InitializeComponent() {
+	[field: AccessedThroughProperty("ToolStrip1")]
+	internal virtual ToolStrip ToolStrip1
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-          class ComponentModel.ComponentResourceManager var_1;
+	internal virtual DataGridView dgvList
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _dgvList;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			KeyEventHandler value2 = dgvList_KeyDown;
+			EventHandler value3 = dgvList_DoubleClick;
+			DataGridView dataGridView = _dgvList;
+			if (dataGridView != null)
+			{
+				dataGridView.KeyDown -= value2;
+				dataGridView.DoubleClick -= value3;
+			}
+			_dgvList = value;
+			dataGridView = _dgvList;
+			if (dataGridView != null)
+			{
+				dataGridView.KeyDown += value2;
+				dataGridView.DoubleClick += value3;
+			}
+		}
+	}
 
-        }
+	internal virtual ToolStripButton tsbRefresh
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _tsbRefresh;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = tsbRefresh_Click;
+			ToolStripButton toolStripButton = _tsbRefresh;
+			if (toolStripButton != null)
+			{
+				toolStripButton.Click -= value2;
+			}
+			_tsbRefresh = value;
+			toolStripButton = _tsbRefresh;
+			if (toolStripButton != null)
+			{
+				toolStripButton.Click += value2;
+			}
+		}
+	}
 
-        assem override strict specialname class ToolStripButton get_tsbNew() {
+	[DebuggerNonUserCode]
+	protected override void Dispose(bool disposing)
+	{
+		try
+		{
+			if (disposing && components != null)
+			{
+				components.Dispose();
+			}
+		}
+		finally
+		{
+			base.Dispose(disposing);
+		}
+	}
 
-          loc_4E6B07: ldarg.0
-          loc_4E6B08: ldfld GCUv2.frmSalesOrderList::_tsbNew
-          loc_4E6B0D: br.s loc_4E6B0F
-          loc_4E6B0F: // Referenced from: loc_4E6B0D
-          loc_4E6B0F: ret
-        }
+	[System.Diagnostics.DebuggerStepThrough]
+	private void InitializeComponent()
+	{
+		System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GCUv2.frmSalesOrderList));
+		this.tsbNew = new System.Windows.Forms.ToolStripButton();
+		this.lblTitle = new System.Windows.Forms.Label();
+		this.ToolStrip1 = new System.Windows.Forms.ToolStrip();
+		this.tsbRefresh = new System.Windows.Forms.ToolStripButton();
+		this.dgvList = new System.Windows.Forms.DataGridView();
+		this.ToolStrip1.SuspendLayout();
+		((System.ComponentModel.ISupportInitialize)this.dgvList).BeginInit();
+		base.SuspendLayout();
+		this.tsbNew.Image = (System.Drawing.Image)resources.GetObject("tsbNew.Image");
+		this.tsbNew.ImageTransparentColor = System.Drawing.Color.Magenta;
+		this.tsbNew.Name = "tsbNew";
+		this.tsbNew.Size = new System.Drawing.Size(44, 57);
+		this.tsbNew.Text = "&Baru";
+		this.tsbNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+		this.lblTitle.AutoSize = true;
+		this.lblTitle.Location = new System.Drawing.Point(12, 65);
+		this.lblTitle.Name = "lblTitle";
+		this.lblTitle.Size = new System.Drawing.Size(101, 13);
+		this.lblTitle.TabIndex = 19;
+		this.lblTitle.Text = "Sales Order terbaru:";
+		this.ToolStrip1.AutoSize = false;
+		this.ToolStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
+		this.ToolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[2] { this.tsbNew, this.tsbRefresh });
+		this.ToolStrip1.Location = new System.Drawing.Point(0, 0);
+		this.ToolStrip1.Name = "ToolStrip1";
+		this.ToolStrip1.Size = new System.Drawing.Size(728, 60);
+		this.ToolStrip1.TabIndex = 17;
+		this.ToolStrip1.Text = "ToolStrip1";
+		this.tsbRefresh.Image = (System.Drawing.Image)resources.GetObject("tsbRefresh.Image");
+		this.tsbRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+		this.tsbRefresh.Name = "tsbRefresh";
+		this.tsbRefresh.Size = new System.Drawing.Size(50, 57);
+		this.tsbRefresh.Text = "&Refresh";
+		this.tsbRefresh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+		this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+		this.dgvList.Location = new System.Drawing.Point(12, 82);
+		this.dgvList.Name = "dgvList";
+		this.dgvList.Size = new System.Drawing.Size(704, 325);
+		this.dgvList.TabIndex = 18;
+		base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
+		base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+		base.ClientSize = new System.Drawing.Size(728, 419);
+		base.Controls.Add(this.lblTitle);
+		base.Controls.Add(this.ToolStrip1);
+		base.Controls.Add(this.dgvList);
+		base.KeyPreview = true;
+		base.MaximizeBox = false;
+		base.Name = "frmSalesOrderList";
+		base.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+		this.Text = "Pesanan Penjualan";
+		this.ToolStrip1.ResumeLayout(false);
+		this.ToolStrip1.PerformLayout();
+		((System.ComponentModel.ISupportInitialize)this.dgvList).EndInit();
+		base.ResumeLayout(false);
+		base.PerformLayout();
+	}
 
-        assem override strict specialname void set_tsbNew(class ToolStripButton WithEventsValue) {
+	public frmSalesOrderList()
+	{
+		base.KeyDown += frmSalesOrderList_KeyDown;
+		InitializeComponent();
+		DoubleBuffered = true;
+		base.MdiParent = MyProject.Forms.frmMenu;
+		GetRecent();
+	}
 
-          class System.EventHandler var_1;
-          class ToolStripButton var_2;
+	private void frmSalesOrderList_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Escape)
+		{
+			Close();
+		}
+		else if (e.KeyCode == Keys.F2)
+		{
+			tsbNew.PerformClick();
+		}
+		else if (e.KeyCode == Keys.F5)
+		{
+			tsbRefresh.PerformClick();
+		}
+	}
 
-        }
+	public void GetRecent()
+	{
+		int try0001_dispatch = -1;
+		int num2 = default(int);
+		int num = default(int);
+		while (true)
+		{
+			try
+			{
+				/*Note: ILSpy has introduced the following switch to emulate a goto from catch-block to try-block*/;
+				switch (try0001_dispatch)
+				{
+				default:
+				{
+					ProjectData.ClearProjectError();
+					num2 = 2;
+					DataTable dataTable = new DataTable();
+					dataTable = cSalesOrder.Search(2, DateAndTime.Now, DateAndTime.Now, 0.0, Module1.pubGroupId, 0, 0.0);
+					FormatGrid();
+					IEnumerator enumerator = dataTable.Rows.GetEnumerator();
+					while (enumerator.MoveNext())
+					{
+						DataRow dataRow = (DataRow)enumerator.Current;
+						dgvList.Rows.Add(dataRow["soId"], dataRow["soDate"], dataRow["soExpiredDate"], dataRow["poNumber"], dataRow["custName"], Module1.formatCustomDecimal(Conversions.ToString(Operators.SubtractObject(dataRow["soTotalPrice"], dataRow["soDiscount"])), 2), Interaction.IIf(Operators.ConditionalCompareObjectGreater(dataRow["penjDate"], DateTime.MinValue, TextCompare: false), RuntimeHelpers.GetObjectValue(dataRow["penjDate"]), ""), dataRow["penjFaktur"]);
+					}
+					if (enumerator is IDisposable)
+					{
+						(enumerator as IDisposable).Dispose();
+					}
+					lblTitle.Text = "Pesanan Penjualan terbaru (" + Conversions.ToString(DateAndTime.Now) + ")";
+					goto end_IL_0001;
+				}
+				case 412:
+					num = -1;
+					switch (num2)
+					{
+					case 2:
+						Module1.SaveError(Information.Err(), "frmSalesOrderList", "GetRecent", "");
+						goto end_IL_0001;
+					}
+					break;
+				}
+			}
+			catch (object obj) when (obj is Exception && num2 != 0 && num == 0)
+			{
+				ProjectData.SetProjectError((Exception)obj);
+				try0001_dispatch = 412;
+				continue;
+			}
+			throw ProjectData.CreateProjectError(-2146828237);
+			continue;
+			end_IL_0001:
+			break;
+		}
+		if (num != 0)
+		{
+			ProjectData.ClearProjectError();
+		}
+	}
 
-        assem override strict specialname class Label get_lblTitle() {
+	private void FormatGrid()
+	{
+		dgvList.Columns.Clear();
+		dgvList.Rows.Clear();
+		dgvList.Columns.Add("", "soId");
+		dgvList.Columns.Add("", "Tgl. Pesanan");
+		dgvList.Columns.Add("", "Tgl. Expired");
+		dgvList.Columns.Add("", "Nomer Pesanan");
+		dgvList.Columns.Add("", "Customer");
+		dgvList.Columns.Add("", "Total");
+		dgvList.Columns.Add("", "Tgl. Faktur");
+		dgvList.Columns.Add("", "No. Faktur");
+		dgvList.Columns[0].Visible = false;
+		dgvList.Columns[1].Width = 70;
+		dgvList.Columns[1].DefaultCellStyle.Format = "dd/MM/yyyy";
+		dgvList.Columns[2].Width = 70;
+		dgvList.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
+		dgvList.Columns[3].Width = 140;
+		dgvList.Columns[4].Width = 175;
+		dgvList.Columns[5].Width = 75;
+		dgvList.Columns[5].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+		dgvList.Columns[6].Width = 70;
+		dgvList.Columns[6].DefaultCellStyle.Format = "dd/MM/yyyy";
+		dgvList.Columns[7].Width = 80;
+		dgvList.RowHeadersVisible = false;
+		dgvList.AllowUserToAddRows = false;
+		dgvList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+		dgvList.ReadOnly = true;
+		dgvList.AlternatingRowsDefaultCellStyle.BackColor = Color.WhiteSmoke;
+		dgvList.AllowUserToResizeRows = false;
+	}
 
-          loc_4E6B54: ldarg.0
-          loc_4E6B55: ldfld GCUv2.frmSalesOrderList::_lblTitle
-          loc_4E6B5A: br.s loc_4E6B5C
-          loc_4E6B5C: // Referenced from: loc_4E6B5A
-          loc_4E6B5C: ret
-        }
+	private void dgvList_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Return)
+		{
+			openSelection();
+			e.SuppressKeyPress = true;
+		}
+		else if (e.KeyCode == Keys.Tab)
+		{
+			e.SuppressKeyPress = true;
+		}
+		else if (e.Shift & (e.KeyCode == Keys.Tab))
+		{
+			e.SuppressKeyPress = true;
+		}
+		else if (e.KeyCode == Keys.Delete)
+		{
+			e.SuppressKeyPress = true;
+		}
+	}
 
-        assem override strict specialname void set_lblTitle(class Label WithEventsValue) {
+	private void dgvList_DoubleClick(object sender, EventArgs e)
+	{
+		openSelection();
+	}
 
-          loc_4E6B5E: ldarg.0
-          loc_4E6B5F: ldarg.1
-          loc_4E6B60: stfld GCUv2.frmSalesOrderList::_lblTitle
-          loc_4E6B65: ret
-        }
+	private void openSelection()
+	{
+		if (dgvList.RowCount > 0 && Operators.ConditionalCompareObjectGreater(dgvList[0, dgvList.CurrentRow.Index].Value, 0, TextCompare: false))
+		{
+			MyProject.Forms.frmSalesOrder.Show();
+			MyProject.Forms.frmSalesOrder.prepareForm(SaveNew: false);
+			MyProject.Forms.frmSalesOrder.CurrentId = Conversions.ToDouble(dgvList[0, dgvList.CurrentRow.Index].Value);
+			MyProject.Forms.frmSalesOrder.loadData();
+			MyProject.Forms.frmSalesOrder.Activate();
+			MyProject.Forms.frmSalesOrder.WindowState = FormWindowState.Normal;
+		}
+	}
 
-        assem override strict specialname class ToolStrip get_ToolStrip1() {
+	private void tsbNew_Click(object sender, EventArgs e)
+	{
+		MyProject.Forms.frmSalesOrder.Show();
+		MyProject.Forms.frmSalesOrder.prepareForm(SaveNew: false);
+		MyProject.Forms.frmSalesOrder.Activate();
+	}
 
-          loc_4E6B67: ldarg.0
-          loc_4E6B68: ldfld GCUv2.frmSalesOrderList::_ToolStrip1
-          loc_4E6B6D: br.s loc_4E6B6F
-          loc_4E6B6F: // Referenced from: loc_4E6B6D
-          loc_4E6B6F: ret
-        }
-
-        assem override strict specialname void set_ToolStrip1(class ToolStrip WithEventsValue) {
-
-          loc_4E6B71: ldarg.0
-          loc_4E6B72: ldarg.1
-          loc_4E6B73: stfld GCUv2.frmSalesOrderList::_ToolStrip1
-          loc_4E6B78: ret
-        }
-
-        assem override strict specialname class DataGridView get_dgvList() {
-
-          loc_4E6B7A: ldarg.0
-          loc_4E6B7B: ldfld GCUv2.frmSalesOrderList::_dgvList
-          loc_4E6B80: br.s loc_4E6B82
-          loc_4E6B82: // Referenced from: loc_4E6B80
-          loc_4E6B82: ret
-        }
-
-        assem override strict specialname void set_dgvList(class DataGridView WithEventsValue) {
-
-          class KeyEventHandler var_1;
-          class System.EventHandler var_2;
-          class DataGridView var_3;
-
-        }
-
-        assem override strict specialname class ToolStripButton get_tsbRefresh() {
-
-          loc_4E6BE3: ldarg.0
-          loc_4E6BE4: ldfld GCUv2.frmSalesOrderList::_tsbRefresh
-          loc_4E6BE9: br.s loc_4E6BEB
-          loc_4E6BEB: // Referenced from: loc_4E6BE9
-          loc_4E6BEB: ret
-        }
-
-        assem override strict specialname void set_tsbRefresh(class ToolStripButton WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class ToolStripButton var_2;
-
-        }
-
-        public void frmSalesOrderList() {
-
-
-        }
-
-        private void frmSalesOrderList_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-          boolean var_2;
-          boolean var_3;
-
-        }
-
-        public void GetRecent() {
-
-          int32 num_1;
-          int32 num_2;
-          class DataTable var_1;
-          class System.Collections.IEnumerator var_2;
-          class DataRow var_3;
-          boolean var_4;
-
-        }
-
-        private void FormatGrid() {
-
-
-        }
-
-        private void dgvList_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-          boolean var_2;
-          boolean var_3;
-          boolean var_4;
-
-        }
-
-        private void dgvList_DoubleClick(object sender, class System.EventArgs e) {
-
-          loc_4E721F: nop
-          loc_4E7220: ldarg.0
-          loc_4E7221: call instance void GCUv2.frmSalesOrderList::openSelection()
-          loc_4E7226: nop
-          loc_4E7227: ret
-        }
-
-        private void openSelection() {
-
-          boolean var_1;
-
-        }
-
-        private void tsbNew_Click(object sender, class System.EventArgs e) {
-
-          loc_4E7306: nop
-          loc_4E7307: call class MyForms GCUv2.My.MyProject::get_Forms()
-          loc_4E730C: callvirt instance class GCUv2.frmSalesOrder GCUv2.frmSalesOrderList/MyForms::get_frmSalesOrder()
-          loc_4E7311: callvirt instance void System.Windows.Forms.Control::Show()
-          loc_4E7316: nop
-          loc_4E7317: call class MyForms GCUv2.My.MyProject::get_Forms()
-          loc_4E731C: callvirt instance class GCUv2.frmSalesOrder GCUv2.frmSalesOrderList/MyForms::get_frmSalesOrder()
-          loc_4E7321: ldc.i4.0
-          loc_4E7322: callvirt instance void GCUv2.frmSalesOrder::prepareForm(boolean)
-          loc_4E7327: nop
-          loc_4E7328: call class MyForms GCUv2.My.MyProject::get_Forms()
-          loc_4E732D: callvirt instance class GCUv2.frmSalesOrder GCUv2.frmSalesOrderList/MyForms::get_frmSalesOrder()
-          loc_4E7332: callvirt instance void System.Windows.Forms.Form::Activate()
-          loc_4E7337: nop
-          loc_4E7338: ret
-        }
-
-        private void tsbRefresh_Click(object sender, class System.EventArgs e) {
-
-          loc_4E733A: nop
-          loc_4E733B: ldarg.0
-          loc_4E733C: call instance void GCUv2.frmSalesOrderList::GetRecent()
-          loc_4E7341: nop
-          loc_4E7342: ret
-        }
-
-    }
+	private void tsbRefresh_Click(object sender, EventArgs e)
+	{
+		GetRecent();
+	}
 }

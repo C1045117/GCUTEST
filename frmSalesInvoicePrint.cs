@@ -1,1316 +1,1707 @@
 using System;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Drawing;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using Microsoft.VisualBasic.PowerPacks.Printing.Compatibility.VB6;
 
-namespace GCUv2
+namespace GCUv2;
+
+[DesignerGenerated]
+public class frmSalesInvoicePrint : Form
 {
-    public class Form
-    {
-
-        private class ComponentModel.IContainer components;
-        private class TabControl _TabControl1;
-        private class TabPage _TabPage1;
-        private class Button _btnPrintLetter;
-        private class DataGridView _dgvItemLetter;
-        private class Label _lblInvoiceNoLetter;
-        private class Label _lblAddressLetter;
-        private class Label _lblNameLetter;
-        private class Label _lblYthLetter;
-        private class Label _lblDateLetter;
-        private class TabPage _TabPage2;
-        private class Label _lblCompanyName;
-        private class TabPage _TabPage3;
-        private class Label _lblAddressCommercial;
-        private class Label _lblNameCommercial;
-        private class Label _lblYthCommercial;
-        private class Label _lblDateCommercial;
-        private class Label _lblCompanyDetail3;
-        private class Label _lblCompanyDetail2;
-        private class Label _lblCompanyDetail1;
-        private class Button _btnPrintCommercial;
-        private class DataGridView _dgvItemCommercial;
-        private class Label _lblInvoiceNoCommercial;
-        private class Label _lblTotalPaymentCommercial;
-        private class Label _Label7;
-        private class Label _lblDeductionCommercial;
-        private class Label _lblDiscountValueCommercial;
-        private class Label _Label3;
-        private class Label _lblTotalPriceCommercial;
-        private class Label _Label1;
-        private class Label _Label13;
-        private class Label _Label5;
-        private class TextBox _txtDiscountDescription;
-        private class Label _Label8;
-        private class TextBox _txtDiscountDescriptionTax;
-        private class Label _lblPPN;
-        private class Label _lblDPP;
-        private class Label _lblDiscountValueTax;
-        private class Label _Label11;
-        private class Label _lblTotalPriceTax;
-        private class Label _Label14;
-        private class Button _btnPrintTax;
-        private class DataGridView _dgvItemTax;
-        private class Label _lblNPWP;
-        private class Label _lblAddressTax;
-        private class Label _lblNameTax;
-        private class Label _lblTaxInvoiceNo;
-        private class Label _lblYear;
-        private class CheckBox _chkNPPKP;
-        private class TextBox _txtTaxPersonPosition;
-        private class TextBox _txtTaxPersonName;
-        private class TextBox _txtDateTax;
-        private class TextBox _txtCityTax;
-        private class TextBox _txtDPP;
-        private class TextBox _txtStar;
-        private class Label _Label17;
-        private class Label _Label16;
-        private class Label _Label15;
-        private class Label _Label4;
-        private class Label _Label2;
-        private class Label _Label21;
-        private class Label _Label20;
-        private class Label _Label19;
-        private class Label _Label18;
-        private class Label _lblTotalPrintCommercial;
-        private class Label _lblTotalPrintTax;
-        private double _id;
-        private string _taxAddress;
-        private string _NPWP;
-        private int32 _totalPrintCommercial;
-        private int32 _totalPrintTax;
-
-
-        protected override strict void Dispose(boolean disposing) {
-
-          boolean var_1;
-
-        }
-
-        private void InitializeComponent() {
-
-
-        }
-
-        assem override strict specialname class TabControl get_TabControl1() {
-
-          loc_4E126A: ldarg.0
-          loc_4E126B: ldfld GCUv2.frmSalesInvoicePrint::_TabControl1
-          loc_4E1270: br.s loc_4E1272
-          loc_4E1272: // Referenced from: loc_4E1270
-          loc_4E1272: ret
-        }
-
-        assem override strict specialname void set_TabControl1(class TabControl WithEventsValue) {
-
-          loc_4E1274: ldarg.0
-          loc_4E1275: ldarg.1
-          loc_4E1276: stfld GCUv2.frmSalesInvoicePrint::_TabControl1
-          loc_4E127B: ret
-        }
-
-        assem override strict specialname class TabPage get_TabPage1() {
-
-          loc_4E127D: ldarg.0
-          loc_4E127E: ldfld GCUv2.frmSalesInvoicePrint::_TabPage1
-          loc_4E1283: br.s loc_4E1285
-          loc_4E1285: // Referenced from: loc_4E1283
-          loc_4E1285: ret
-        }
-
-        assem override strict specialname void set_TabPage1(class TabPage WithEventsValue) {
-
-          loc_4E1287: ldarg.0
-          loc_4E1288: ldarg.1
-          loc_4E1289: stfld GCUv2.frmSalesInvoicePrint::_TabPage1
-          loc_4E128E: ret
-        }
-
-        assem override strict specialname class Button get_btnPrintLetter() {
-
-          loc_4E1290: ldarg.0
-          loc_4E1291: ldfld GCUv2.frmSalesInvoicePrint::_btnPrintLetter
-          loc_4E1296: br.s loc_4E1298
-          loc_4E1298: // Referenced from: loc_4E1296
-          loc_4E1298: ret
-        }
-
-        assem override strict specialname void set_btnPrintLetter(class Button WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Button var_2;
-
-        }
-
-        assem override strict specialname class DataGridView get_dgvItemLetter() {
-
-          loc_4E12E0: ldarg.0
-          loc_4E12E1: ldfld GCUv2.frmSalesInvoicePrint::_dgvItemLetter
-          loc_4E12E6: br.s loc_4E12E8
-          loc_4E12E8: // Referenced from: loc_4E12E6
-          loc_4E12E8: ret
-        }
-
-        assem override strict specialname void set_dgvItemLetter(class DataGridView WithEventsValue) {
-
-          loc_4E12EA: ldarg.0
-          loc_4E12EB: ldarg.1
-          loc_4E12EC: stfld GCUv2.frmSalesInvoicePrint::_dgvItemLetter
-          loc_4E12F1: ret
-        }
-
-        assem override strict specialname class Label get_lblInvoiceNoLetter() {
-
-          loc_4E12F3: ldarg.0
-          loc_4E12F4: ldfld GCUv2.frmSalesInvoicePrint::_lblInvoiceNoLetter
-          loc_4E12F9: br.s loc_4E12FB
-          loc_4E12FB: // Referenced from: loc_4E12F9
-          loc_4E12FB: ret
-        }
-
-        assem override strict specialname void set_lblInvoiceNoLetter(class Label WithEventsValue) {
-
-          loc_4E12FD: ldarg.0
-          loc_4E12FE: ldarg.1
-          loc_4E12FF: stfld GCUv2.frmSalesInvoicePrint::_lblInvoiceNoLetter
-          loc_4E1304: ret
-        }
-
-        assem override strict specialname class Label get_lblAddressLetter() {
-
-          loc_4E1306: ldarg.0
-          loc_4E1307: ldfld GCUv2.frmSalesInvoicePrint::_lblAddressLetter
-          loc_4E130C: br.s loc_4E130E
-          loc_4E130E: // Referenced from: loc_4E130C
-          loc_4E130E: ret
-        }
-
-        assem override strict specialname void set_lblAddressLetter(class Label WithEventsValue) {
-
-          loc_4E1310: ldarg.0
-          loc_4E1311: ldarg.1
-          loc_4E1312: stfld GCUv2.frmSalesInvoicePrint::_lblAddressLetter
-          loc_4E1317: ret
-        }
-
-        assem override strict specialname class Label get_lblNameLetter() {
-
-          loc_4E1319: ldarg.0
-          loc_4E131A: ldfld GCUv2.frmSalesInvoicePrint::_lblNameLetter
-          loc_4E131F: br.s loc_4E1321
-          loc_4E1321: // Referenced from: loc_4E131F
-          loc_4E1321: ret
-        }
-
-        assem override strict specialname void set_lblNameLetter(class Label WithEventsValue) {
-
-          loc_4E1323: ldarg.0
-          loc_4E1324: ldarg.1
-          loc_4E1325: stfld GCUv2.frmSalesInvoicePrint::_lblNameLetter
-          loc_4E132A: ret
-        }
-
-        assem override strict specialname class Label get_lblYthLetter() {
-
-          loc_4E132C: ldarg.0
-          loc_4E132D: ldfld GCUv2.frmSalesInvoicePrint::_lblYthLetter
-          loc_4E1332: br.s loc_4E1334
-          loc_4E1334: // Referenced from: loc_4E1332
-          loc_4E1334: ret
-        }
-
-        assem override strict specialname void set_lblYthLetter(class Label WithEventsValue) {
-
-          loc_4E1336: ldarg.0
-          loc_4E1337: ldarg.1
-          loc_4E1338: stfld GCUv2.frmSalesInvoicePrint::_lblYthLetter
-          loc_4E133D: ret
-        }
-
-        assem override strict specialname class Label get_lblDateLetter() {
-
-          loc_4E133F: ldarg.0
-          loc_4E1340: ldfld GCUv2.frmSalesInvoicePrint::_lblDateLetter
-          loc_4E1345: br.s loc_4E1347
-          loc_4E1347: // Referenced from: loc_4E1345
-          loc_4E1347: ret
-        }
-
-        assem override strict specialname void set_lblDateLetter(class Label WithEventsValue) {
-
-          loc_4E1349: ldarg.0
-          loc_4E134A: ldarg.1
-          loc_4E134B: stfld GCUv2.frmSalesInvoicePrint::_lblDateLetter
-          loc_4E1350: ret
-        }
-
-        assem override strict specialname class TabPage get_TabPage2() {
-
-          loc_4E1352: ldarg.0
-          loc_4E1353: ldfld GCUv2.frmSalesInvoicePrint::_TabPage2
-          loc_4E1358: br.s loc_4E135A
-          loc_4E135A: // Referenced from: loc_4E1358
-          loc_4E135A: ret
-        }
-
-        assem override strict specialname void set_TabPage2(class TabPage WithEventsValue) {
-
-          loc_4E135C: ldarg.0
-          loc_4E135D: ldarg.1
-          loc_4E135E: stfld GCUv2.frmSalesInvoicePrint::_TabPage2
-          loc_4E1363: ret
-        }
-
-        assem override strict specialname class Label get_lblCompanyName() {
-
-          loc_4E1365: ldarg.0
-          loc_4E1366: ldfld GCUv2.frmSalesInvoicePrint::_lblCompanyName
-          loc_4E136B: br.s loc_4E136D
-          loc_4E136D: // Referenced from: loc_4E136B
-          loc_4E136D: ret
-        }
-
-        assem override strict specialname void set_lblCompanyName(class Label WithEventsValue) {
-
-          loc_4E136F: ldarg.0
-          loc_4E1370: ldarg.1
-          loc_4E1371: stfld GCUv2.frmSalesInvoicePrint::_lblCompanyName
-          loc_4E1376: ret
-        }
-
-        assem override strict specialname class TabPage get_TabPage3() {
-
-          loc_4E1378: ldarg.0
-          loc_4E1379: ldfld GCUv2.frmSalesInvoicePrint::_TabPage3
-          loc_4E137E: br.s loc_4E1380
-          loc_4E1380: // Referenced from: loc_4E137E
-          loc_4E1380: ret
-        }
-
-        assem override strict specialname void set_TabPage3(class TabPage WithEventsValue) {
-
-          loc_4E1382: ldarg.0
-          loc_4E1383: ldarg.1
-          loc_4E1384: stfld GCUv2.frmSalesInvoicePrint::_TabPage3
-          loc_4E1389: ret
-        }
-
-        assem override strict specialname class Label get_lblAddressCommercial() {
-
-          loc_4E138B: ldarg.0
-          loc_4E138C: ldfld GCUv2.frmSalesInvoicePrint::_lblAddressCommercial
-          loc_4E1391: br.s loc_4E1393
-          loc_4E1393: // Referenced from: loc_4E1391
-          loc_4E1393: ret
-        }
-
-        assem override strict specialname void set_lblAddressCommercial(class Label WithEventsValue) {
-
-          loc_4E1395: ldarg.0
-          loc_4E1396: ldarg.1
-          loc_4E1397: stfld GCUv2.frmSalesInvoicePrint::_lblAddressCommercial
-          loc_4E139C: ret
-        }
-
-        assem override strict specialname class Label get_lblNameCommercial() {
-
-          loc_4E139E: ldarg.0
-          loc_4E139F: ldfld GCUv2.frmSalesInvoicePrint::_lblNameCommercial
-          loc_4E13A4: br.s loc_4E13A6
-          loc_4E13A6: // Referenced from: loc_4E13A4
-          loc_4E13A6: ret
-        }
-
-        assem override strict specialname void set_lblNameCommercial(class Label WithEventsValue) {
-
-          loc_4E13A8: ldarg.0
-          loc_4E13A9: ldarg.1
-          loc_4E13AA: stfld GCUv2.frmSalesInvoicePrint::_lblNameCommercial
-          loc_4E13AF: ret
-        }
-
-        assem override strict specialname class Label get_lblYthCommercial() {
-
-          loc_4E13B1: ldarg.0
-          loc_4E13B2: ldfld GCUv2.frmSalesInvoicePrint::_lblYthCommercial
-          loc_4E13B7: br.s loc_4E13B9
-          loc_4E13B9: // Referenced from: loc_4E13B7
-          loc_4E13B9: ret
-        }
-
-        assem override strict specialname void set_lblYthCommercial(class Label WithEventsValue) {
-
-          loc_4E13BB: ldarg.0
-          loc_4E13BC: ldarg.1
-          loc_4E13BD: stfld GCUv2.frmSalesInvoicePrint::_lblYthCommercial
-          loc_4E13C2: ret
-        }
-
-        assem override strict specialname class Label get_lblDateCommercial() {
-
-          loc_4E13C4: ldarg.0
-          loc_4E13C5: ldfld GCUv2.frmSalesInvoicePrint::_lblDateCommercial
-          loc_4E13CA: br.s loc_4E13CC
-          loc_4E13CC: // Referenced from: loc_4E13CA
-          loc_4E13CC: ret
-        }
-
-        assem override strict specialname void set_lblDateCommercial(class Label WithEventsValue) {
-
-          loc_4E13CE: ldarg.0
-          loc_4E13CF: ldarg.1
-          loc_4E13D0: stfld GCUv2.frmSalesInvoicePrint::_lblDateCommercial
-          loc_4E13D5: ret
-        }
-
-        assem override strict specialname class Label get_lblCompanyDetail3() {
-
-          loc_4E13D7: ldarg.0
-          loc_4E13D8: ldfld GCUv2.frmSalesInvoicePrint::_lblCompanyDetail3
-          loc_4E13DD: br.s loc_4E13DF
-          loc_4E13DF: // Referenced from: loc_4E13DD
-          loc_4E13DF: ret
-        }
-
-        assem override strict specialname void set_lblCompanyDetail3(class Label WithEventsValue) {
-
-          loc_4E13E1: ldarg.0
-          loc_4E13E2: ldarg.1
-          loc_4E13E3: stfld GCUv2.frmSalesInvoicePrint::_lblCompanyDetail3
-          loc_4E13E8: ret
-        }
-
-        assem override strict specialname class Label get_lblCompanyDetail2() {
-
-          loc_4E13EA: ldarg.0
-          loc_4E13EB: ldfld GCUv2.frmSalesInvoicePrint::_lblCompanyDetail2
-          loc_4E13F0: br.s loc_4E13F2
-          loc_4E13F2: // Referenced from: loc_4E13F0
-          loc_4E13F2: ret
-        }
-
-        assem override strict specialname void set_lblCompanyDetail2(class Label WithEventsValue) {
-
-          loc_4E13F4: ldarg.0
-          loc_4E13F5: ldarg.1
-          loc_4E13F6: stfld GCUv2.frmSalesInvoicePrint::_lblCompanyDetail2
-          loc_4E13FB: ret
-        }
-
-        assem override strict specialname class Label get_lblCompanyDetail1() {
-
-          loc_4E13FD: ldarg.0
-          loc_4E13FE: ldfld GCUv2.frmSalesInvoicePrint::_lblCompanyDetail1
-          loc_4E1403: br.s loc_4E1405
-          loc_4E1405: // Referenced from: loc_4E1403
-          loc_4E1405: ret
-        }
-
-        assem override strict specialname void set_lblCompanyDetail1(class Label WithEventsValue) {
-
-          loc_4E1407: ldarg.0
-          loc_4E1408: ldarg.1
-          loc_4E1409: stfld GCUv2.frmSalesInvoicePrint::_lblCompanyDetail1
-          loc_4E140E: ret
-        }
-
-        assem override strict specialname class Button get_btnPrintCommercial() {
-
-          loc_4E1410: ldarg.0
-          loc_4E1411: ldfld GCUv2.frmSalesInvoicePrint::_btnPrintCommercial
-          loc_4E1416: br.s loc_4E1418
-          loc_4E1418: // Referenced from: loc_4E1416
-          loc_4E1418: ret
-        }
-
-        assem override strict specialname void set_btnPrintCommercial(class Button WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Button var_2;
-
-        }
-
-        assem override strict specialname class DataGridView get_dgvItemCommercial() {
-
-          loc_4E1460: ldarg.0
-          loc_4E1461: ldfld GCUv2.frmSalesInvoicePrint::_dgvItemCommercial
-          loc_4E1466: br.s loc_4E1468
-          loc_4E1468: // Referenced from: loc_4E1466
-          loc_4E1468: ret
-        }
-
-        assem override strict specialname void set_dgvItemCommercial(class DataGridView WithEventsValue) {
-
-          loc_4E146A: ldarg.0
-          loc_4E146B: ldarg.1
-          loc_4E146C: stfld GCUv2.frmSalesInvoicePrint::_dgvItemCommercial
-          loc_4E1471: ret
-        }
-
-        assem override strict specialname class Label get_lblInvoiceNoCommercial() {
-
-          loc_4E1473: ldarg.0
-          loc_4E1474: ldfld GCUv2.frmSalesInvoicePrint::_lblInvoiceNoCommercial
-          loc_4E1479: br.s loc_4E147B
-          loc_4E147B: // Referenced from: loc_4E1479
-          loc_4E147B: ret
-        }
-
-        assem override strict specialname void set_lblInvoiceNoCommercial(class Label WithEventsValue) {
-
-          loc_4E147D: ldarg.0
-          loc_4E147E: ldarg.1
-          loc_4E147F: stfld GCUv2.frmSalesInvoicePrint::_lblInvoiceNoCommercial
-          loc_4E1484: ret
-        }
-
-        assem override strict specialname class Label get_lblTotalPaymentCommercial() {
-
-          loc_4E1486: ldarg.0
-          loc_4E1487: ldfld GCUv2.frmSalesInvoicePrint::_lblTotalPaymentCommercial
-          loc_4E148C: br.s loc_4E148E
-          loc_4E148E: // Referenced from: loc_4E148C
-          loc_4E148E: ret
-        }
-
-        assem override strict specialname void set_lblTotalPaymentCommercial(class Label WithEventsValue) {
-
-          loc_4E1490: ldarg.0
-          loc_4E1491: ldarg.1
-          loc_4E1492: stfld GCUv2.frmSalesInvoicePrint::_lblTotalPaymentCommercial
-          loc_4E1497: ret
-        }
-
-        assem override strict specialname class Label get_Label7() {
-
-          loc_4E1499: ldarg.0
-          loc_4E149A: ldfld GCUv2.frmSalesInvoicePrint::_Label7
-          loc_4E149F: br.s loc_4E14A1
-          loc_4E14A1: // Referenced from: loc_4E149F
-          loc_4E14A1: ret
-        }
-
-        assem override strict specialname void set_Label7(class Label WithEventsValue) {
-
-          loc_4E14A3: ldarg.0
-          loc_4E14A4: ldarg.1
-          loc_4E14A5: stfld GCUv2.frmSalesInvoicePrint::_Label7
-          loc_4E14AA: ret
-        }
-
-        assem override strict specialname class Label get_lblDeductionCommercial() {
-
-          loc_4E14AC: ldarg.0
-          loc_4E14AD: ldfld GCUv2.frmSalesInvoicePrint::_lblDeductionCommercial
-          loc_4E14B2: br.s loc_4E14B4
-          loc_4E14B4: // Referenced from: loc_4E14B2
-          loc_4E14B4: ret
-        }
-
-        assem override strict specialname void set_lblDeductionCommercial(class Label WithEventsValue) {
-
-          loc_4E14B6: ldarg.0
-          loc_4E14B7: ldarg.1
-          loc_4E14B8: stfld GCUv2.frmSalesInvoicePrint::_lblDeductionCommercial
-          loc_4E14BD: ret
-        }
-
-        assem override strict specialname class Label get_lblDiscountValueCommercial() {
-
-          loc_4E14BF: ldarg.0
-          loc_4E14C0: ldfld GCUv2.frmSalesInvoicePrint::_lblDiscountValueCommercial
-          loc_4E14C5: br.s loc_4E14C7
-          loc_4E14C7: // Referenced from: loc_4E14C5
-          loc_4E14C7: ret
-        }
-
-        assem override strict specialname void set_lblDiscountValueCommercial(class Label WithEventsValue) {
-
-          loc_4E14C9: ldarg.0
-          loc_4E14CA: ldarg.1
-          loc_4E14CB: stfld GCUv2.frmSalesInvoicePrint::_lblDiscountValueCommercial
-          loc_4E14D0: ret
-        }
-
-        assem override strict specialname class Label get_Label3() {
-
-          loc_4E14D2: ldarg.0
-          loc_4E14D3: ldfld GCUv2.frmSalesInvoicePrint::_Label3
-          loc_4E14D8: br.s loc_4E14DA
-          loc_4E14DA: // Referenced from: loc_4E14D8
-          loc_4E14DA: ret
-        }
-
-        assem override strict specialname void set_Label3(class Label WithEventsValue) {
-
-          loc_4E14DC: ldarg.0
-          loc_4E14DD: ldarg.1
-          loc_4E14DE: stfld GCUv2.frmSalesInvoicePrint::_Label3
-          loc_4E14E3: ret
-        }
-
-        assem override strict specialname class Label get_lblTotalPriceCommercial() {
-
-          loc_4E14E5: ldarg.0
-          loc_4E14E6: ldfld GCUv2.frmSalesInvoicePrint::_lblTotalPriceCommercial
-          loc_4E14EB: br.s loc_4E14ED
-          loc_4E14ED: // Referenced from: loc_4E14EB
-          loc_4E14ED: ret
-        }
-
-        assem override strict specialname void set_lblTotalPriceCommercial(class Label WithEventsValue) {
-
-          loc_4E14EF: ldarg.0
-          loc_4E14F0: ldarg.1
-          loc_4E14F1: stfld GCUv2.frmSalesInvoicePrint::_lblTotalPriceCommercial
-          loc_4E14F6: ret
-        }
-
-        assem override strict specialname class Label get_Label1() {
-
-          loc_4E14F8: ldarg.0
-          loc_4E14F9: ldfld GCUv2.frmSalesInvoicePrint::_Label1
-          loc_4E14FE: br.s loc_4E1500
-          loc_4E1500: // Referenced from: loc_4E14FE
-          loc_4E1500: ret
-        }
-
-        assem override strict specialname void set_Label1(class Label WithEventsValue) {
-
-          loc_4E1502: ldarg.0
-          loc_4E1503: ldarg.1
-          loc_4E1504: stfld GCUv2.frmSalesInvoicePrint::_Label1
-          loc_4E1509: ret
-        }
-
-        assem override strict specialname class Label get_Label13() {
-
-          loc_4E150B: ldarg.0
-          loc_4E150C: ldfld GCUv2.frmSalesInvoicePrint::_Label13
-          loc_4E1511: br.s loc_4E1513
-          loc_4E1513: // Referenced from: loc_4E1511
-          loc_4E1513: ret
-        }
-
-        assem override strict specialname void set_Label13(class Label WithEventsValue) {
-
-          loc_4E1515: ldarg.0
-          loc_4E1516: ldarg.1
-          loc_4E1517: stfld GCUv2.frmSalesInvoicePrint::_Label13
-          loc_4E151C: ret
-        }
-
-        assem override strict specialname class Label get_Label5() {
-
-          loc_4E151E: ldarg.0
-          loc_4E151F: ldfld GCUv2.frmSalesInvoicePrint::_Label5
-          loc_4E1524: br.s loc_4E1526
-          loc_4E1526: // Referenced from: loc_4E1524
-          loc_4E1526: ret
-        }
-
-        assem override strict specialname void set_Label5(class Label WithEventsValue) {
-
-          loc_4E1528: ldarg.0
-          loc_4E1529: ldarg.1
-          loc_4E152A: stfld GCUv2.frmSalesInvoicePrint::_Label5
-          loc_4E152F: ret
-        }
-
-        assem override strict specialname class TextBox get_txtDiscountDescription() {
-
-          loc_4E1531: ldarg.0
-          loc_4E1532: ldfld GCUv2.frmSalesInvoicePrint::_txtDiscountDescription
-          loc_4E1537: br.s loc_4E1539
-          loc_4E1539: // Referenced from: loc_4E1537
-          loc_4E1539: ret
-        }
-
-        assem override strict specialname void set_txtDiscountDescription(class TextBox WithEventsValue) {
-
-          loc_4E153B: ldarg.0
-          loc_4E153C: ldarg.1
-          loc_4E153D: stfld GCUv2.frmSalesInvoicePrint::_txtDiscountDescription
-          loc_4E1542: ret
-        }
-
-        assem override strict specialname class Label get_Label8() {
-
-          loc_4E1544: ldarg.0
-          loc_4E1545: ldfld GCUv2.frmSalesInvoicePrint::_Label8
-          loc_4E154A: br.s loc_4E154C
-          loc_4E154C: // Referenced from: loc_4E154A
-          loc_4E154C: ret
-        }
-
-        assem override strict specialname void set_Label8(class Label WithEventsValue) {
-
-          loc_4E154E: ldarg.0
-          loc_4E154F: ldarg.1
-          loc_4E1550: stfld GCUv2.frmSalesInvoicePrint::_Label8
-          loc_4E1555: ret
-        }
-
-        assem override strict specialname class TextBox get_txtDiscountDescriptionTax() {
-
-          loc_4E1557: ldarg.0
-          loc_4E1558: ldfld GCUv2.frmSalesInvoicePrint::_txtDiscountDescriptionTax
-          loc_4E155D: br.s loc_4E155F
-          loc_4E155F: // Referenced from: loc_4E155D
-          loc_4E155F: ret
-        }
-
-        assem override strict specialname void set_txtDiscountDescriptionTax(class TextBox WithEventsValue) {
-
-          loc_4E1561: ldarg.0
-          loc_4E1562: ldarg.1
-          loc_4E1563: stfld GCUv2.frmSalesInvoicePrint::_txtDiscountDescriptionTax
-          loc_4E1568: ret
-        }
-
-        assem override strict specialname class Label get_lblPPN() {
-
-          loc_4E156A: ldarg.0
-          loc_4E156B: ldfld GCUv2.frmSalesInvoicePrint::_lblPPN
-          loc_4E1570: br.s loc_4E1572
-          loc_4E1572: // Referenced from: loc_4E1570
-          loc_4E1572: ret
-        }
-
-        assem override strict specialname void set_lblPPN(class Label WithEventsValue) {
-
-          loc_4E1574: ldarg.0
-          loc_4E1575: ldarg.1
-          loc_4E1576: stfld GCUv2.frmSalesInvoicePrint::_lblPPN
-          loc_4E157B: ret
-        }
-
-        assem override strict specialname class Label get_lblDPP() {
-
-          loc_4E157D: ldarg.0
-          loc_4E157E: ldfld GCUv2.frmSalesInvoicePrint::_lblDPP
-          loc_4E1583: br.s loc_4E1585
-          loc_4E1585: // Referenced from: loc_4E1583
-          loc_4E1585: ret
-        }
-
-        assem override strict specialname void set_lblDPP(class Label WithEventsValue) {
-
-          loc_4E1587: ldarg.0
-          loc_4E1588: ldarg.1
-          loc_4E1589: stfld GCUv2.frmSalesInvoicePrint::_lblDPP
-          loc_4E158E: ret
-        }
-
-        assem override strict specialname class Label get_lblDiscountValueTax() {
-
-          loc_4E1590: ldarg.0
-          loc_4E1591: ldfld GCUv2.frmSalesInvoicePrint::_lblDiscountValueTax
-          loc_4E1596: br.s loc_4E1598
-          loc_4E1598: // Referenced from: loc_4E1596
-          loc_4E1598: ret
-        }
-
-        assem override strict specialname void set_lblDiscountValueTax(class Label WithEventsValue) {
-
-          loc_4E159A: ldarg.0
-          loc_4E159B: ldarg.1
-          loc_4E159C: stfld GCUv2.frmSalesInvoicePrint::_lblDiscountValueTax
-          loc_4E15A1: ret
-        }
-
-        assem override strict specialname class Label get_Label11() {
-
-          loc_4E15A3: ldarg.0
-          loc_4E15A4: ldfld GCUv2.frmSalesInvoicePrint::_Label11
-          loc_4E15A9: br.s loc_4E15AB
-          loc_4E15AB: // Referenced from: loc_4E15A9
-          loc_4E15AB: ret
-        }
-
-        assem override strict specialname void set_Label11(class Label WithEventsValue) {
-
-          loc_4E15AD: ldarg.0
-          loc_4E15AE: ldarg.1
-          loc_4E15AF: stfld GCUv2.frmSalesInvoicePrint::_Label11
-          loc_4E15B4: ret
-        }
-
-        assem override strict specialname class Label get_lblTotalPriceTax() {
-
-          loc_4E15B6: ldarg.0
-          loc_4E15B7: ldfld GCUv2.frmSalesInvoicePrint::_lblTotalPriceTax
-          loc_4E15BC: br.s loc_4E15BE
-          loc_4E15BE: // Referenced from: loc_4E15BC
-          loc_4E15BE: ret
-        }
-
-        assem override strict specialname void set_lblTotalPriceTax(class Label WithEventsValue) {
-
-          loc_4E15C0: ldarg.0
-          loc_4E15C1: ldarg.1
-          loc_4E15C2: stfld GCUv2.frmSalesInvoicePrint::_lblTotalPriceTax
-          loc_4E15C7: ret
-        }
-
-        assem override strict specialname class Label get_Label14() {
-
-          loc_4E15C9: ldarg.0
-          loc_4E15CA: ldfld GCUv2.frmSalesInvoicePrint::_Label14
-          loc_4E15CF: br.s loc_4E15D1
-          loc_4E15D1: // Referenced from: loc_4E15CF
-          loc_4E15D1: ret
-        }
-
-        assem override strict specialname void set_Label14(class Label WithEventsValue) {
-
-          loc_4E15D3: ldarg.0
-          loc_4E15D4: ldarg.1
-          loc_4E15D5: stfld GCUv2.frmSalesInvoicePrint::_Label14
-          loc_4E15DA: ret
-        }
-
-        assem override strict specialname class Button get_btnPrintTax() {
-
-          loc_4E15DC: ldarg.0
-          loc_4E15DD: ldfld GCUv2.frmSalesInvoicePrint::_btnPrintTax
-          loc_4E15E2: br.s loc_4E15E4
-          loc_4E15E4: // Referenced from: loc_4E15E2
-          loc_4E15E4: ret
-        }
-
-        assem override strict specialname void set_btnPrintTax(class Button WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Button var_2;
-
-        }
-
-        assem override strict specialname class DataGridView get_dgvItemTax() {
-
-          loc_4E162C: ldarg.0
-          loc_4E162D: ldfld GCUv2.frmSalesInvoicePrint::_dgvItemTax
-          loc_4E1632: br.s loc_4E1634
-          loc_4E1634: // Referenced from: loc_4E1632
-          loc_4E1634: ret
-        }
-
-        assem override strict specialname void set_dgvItemTax(class DataGridView WithEventsValue) {
-
-          loc_4E1636: ldarg.0
-          loc_4E1637: ldarg.1
-          loc_4E1638: stfld GCUv2.frmSalesInvoicePrint::_dgvItemTax
-          loc_4E163D: ret
-        }
-
-        assem override strict specialname class Label get_lblNPWP() {
-
-          loc_4E163F: ldarg.0
-          loc_4E1640: ldfld GCUv2.frmSalesInvoicePrint::_lblNPWP
-          loc_4E1645: br.s loc_4E1647
-          loc_4E1647: // Referenced from: loc_4E1645
-          loc_4E1647: ret
-        }
-
-        assem override strict specialname void set_lblNPWP(class Label WithEventsValue) {
-
-          loc_4E1649: ldarg.0
-          loc_4E164A: ldarg.1
-          loc_4E164B: stfld GCUv2.frmSalesInvoicePrint::_lblNPWP
-          loc_4E1650: ret
-        }
-
-        assem override strict specialname class Label get_lblAddressTax() {
-
-          loc_4E1652: ldarg.0
-          loc_4E1653: ldfld GCUv2.frmSalesInvoicePrint::_lblAddressTax
-          loc_4E1658: br.s loc_4E165A
-          loc_4E165A: // Referenced from: loc_4E1658
-          loc_4E165A: ret
-        }
-
-        assem override strict specialname void set_lblAddressTax(class Label WithEventsValue) {
-
-          loc_4E165C: ldarg.0
-          loc_4E165D: ldarg.1
-          loc_4E165E: stfld GCUv2.frmSalesInvoicePrint::_lblAddressTax
-          loc_4E1663: ret
-        }
-
-        assem override strict specialname class Label get_lblNameTax() {
-
-          loc_4E1665: ldarg.0
-          loc_4E1666: ldfld GCUv2.frmSalesInvoicePrint::_lblNameTax
-          loc_4E166B: br.s loc_4E166D
-          loc_4E166D: // Referenced from: loc_4E166B
-          loc_4E166D: ret
-        }
-
-        assem override strict specialname void set_lblNameTax(class Label WithEventsValue) {
-
-          loc_4E166F: ldarg.0
-          loc_4E1670: ldarg.1
-          loc_4E1671: stfld GCUv2.frmSalesInvoicePrint::_lblNameTax
-          loc_4E1676: ret
-        }
-
-        assem override strict specialname class Label get_lblTaxInvoiceNo() {
-
-          loc_4E1678: ldarg.0
-          loc_4E1679: ldfld GCUv2.frmSalesInvoicePrint::_lblTaxInvoiceNo
-          loc_4E167E: br.s loc_4E1680
-          loc_4E1680: // Referenced from: loc_4E167E
-          loc_4E1680: ret
-        }
-
-        assem override strict specialname void set_lblTaxInvoiceNo(class Label WithEventsValue) {
-
-          loc_4E1682: ldarg.0
-          loc_4E1683: ldarg.1
-          loc_4E1684: stfld GCUv2.frmSalesInvoicePrint::_lblTaxInvoiceNo
-          loc_4E1689: ret
-        }
-
-        assem override strict specialname class Label get_lblYear() {
-
-          loc_4E168B: ldarg.0
-          loc_4E168C: ldfld GCUv2.frmSalesInvoicePrint::_lblYear
-          loc_4E1691: br.s loc_4E1693
-          loc_4E1693: // Referenced from: loc_4E1691
-          loc_4E1693: ret
-        }
-
-        assem override strict specialname void set_lblYear(class Label WithEventsValue) {
-
-          loc_4E1695: ldarg.0
-          loc_4E1696: ldarg.1
-          loc_4E1697: stfld GCUv2.frmSalesInvoicePrint::_lblYear
-          loc_4E169C: ret
-        }
-
-        assem override strict specialname class CheckBox get_chkNPPKP() {
-
-          loc_4E169E: ldarg.0
-          loc_4E169F: ldfld GCUv2.frmSalesInvoicePrint::_chkNPPKP
-          loc_4E16A4: br.s loc_4E16A6
-          loc_4E16A6: // Referenced from: loc_4E16A4
-          loc_4E16A6: ret
-        }
-
-        assem override strict specialname void set_chkNPPKP(class CheckBox WithEventsValue) {
-
-          loc_4E16A8: ldarg.0
-          loc_4E16A9: ldarg.1
-          loc_4E16AA: stfld GCUv2.frmSalesInvoicePrint::_chkNPPKP
-          loc_4E16AF: ret
-        }
-
-        assem override strict specialname class TextBox get_txtTaxPersonPosition() {
-
-          loc_4E16B1: ldarg.0
-          loc_4E16B2: ldfld GCUv2.frmSalesInvoicePrint::_txtTaxPersonPosition
-          loc_4E16B7: br.s loc_4E16B9
-          loc_4E16B9: // Referenced from: loc_4E16B7
-          loc_4E16B9: ret
-        }
-
-        assem override strict specialname void set_txtTaxPersonPosition(class TextBox WithEventsValue) {
-
-          loc_4E16BB: ldarg.0
-          loc_4E16BC: ldarg.1
-          loc_4E16BD: stfld GCUv2.frmSalesInvoicePrint::_txtTaxPersonPosition
-          loc_4E16C2: ret
-        }
-
-        assem override strict specialname class TextBox get_txtTaxPersonName() {
-
-          loc_4E16C4: ldarg.0
-          loc_4E16C5: ldfld GCUv2.frmSalesInvoicePrint::_txtTaxPersonName
-          loc_4E16CA: br.s loc_4E16CC
-          loc_4E16CC: // Referenced from: loc_4E16CA
-          loc_4E16CC: ret
-        }
-
-        assem override strict specialname void set_txtTaxPersonName(class TextBox WithEventsValue) {
-
-          loc_4E16CE: ldarg.0
-          loc_4E16CF: ldarg.1
-          loc_4E16D0: stfld GCUv2.frmSalesInvoicePrint::_txtTaxPersonName
-          loc_4E16D5: ret
-        }
-
-        assem override strict specialname class TextBox get_txtDateTax() {
-
-          loc_4E16D7: ldarg.0
-          loc_4E16D8: ldfld GCUv2.frmSalesInvoicePrint::_txtDateTax
-          loc_4E16DD: br.s loc_4E16DF
-          loc_4E16DF: // Referenced from: loc_4E16DD
-          loc_4E16DF: ret
-        }
-
-        assem override strict specialname void set_txtDateTax(class TextBox WithEventsValue) {
-
-          loc_4E16E1: ldarg.0
-          loc_4E16E2: ldarg.1
-          loc_4E16E3: stfld GCUv2.frmSalesInvoicePrint::_txtDateTax
-          loc_4E16E8: ret
-        }
-
-        assem override strict specialname class TextBox get_txtCityTax() {
-
-          loc_4E16EA: ldarg.0
-          loc_4E16EB: ldfld GCUv2.frmSalesInvoicePrint::_txtCityTax
-          loc_4E16F0: br.s loc_4E16F2
-          loc_4E16F2: // Referenced from: loc_4E16F0
-          loc_4E16F2: ret
-        }
-
-        assem override strict specialname void set_txtCityTax(class TextBox WithEventsValue) {
-
-          loc_4E16F4: ldarg.0
-          loc_4E16F5: ldarg.1
-          loc_4E16F6: stfld GCUv2.frmSalesInvoicePrint::_txtCityTax
-          loc_4E16FB: ret
-        }
-
-        assem override strict specialname class TextBox get_txtDPP() {
-
-          loc_4E16FD: ldarg.0
-          loc_4E16FE: ldfld GCUv2.frmSalesInvoicePrint::_txtDPP
-          loc_4E1703: br.s loc_4E1705
-          loc_4E1705: // Referenced from: loc_4E1703
-          loc_4E1705: ret
-        }
-
-        assem override strict specialname void set_txtDPP(class TextBox WithEventsValue) {
-
-          loc_4E1707: ldarg.0
-          loc_4E1708: ldarg.1
-          loc_4E1709: stfld GCUv2.frmSalesInvoicePrint::_txtDPP
-          loc_4E170E: ret
-        }
-
-        assem override strict specialname class TextBox get_txtStar() {
-
-          loc_4E1710: ldarg.0
-          loc_4E1711: ldfld GCUv2.frmSalesInvoicePrint::_txtStar
-          loc_4E1716: br.s loc_4E1718
-          loc_4E1718: // Referenced from: loc_4E1716
-          loc_4E1718: ret
-        }
-
-        assem override strict specialname void set_txtStar(class TextBox WithEventsValue) {
-
-          loc_4E171A: ldarg.0
-          loc_4E171B: ldarg.1
-          loc_4E171C: stfld GCUv2.frmSalesInvoicePrint::_txtStar
-          loc_4E1721: ret
-        }
-
-        assem override strict specialname class Label get_Label17() {
-
-          loc_4E1723: ldarg.0
-          loc_4E1724: ldfld GCUv2.frmSalesInvoicePrint::_Label17
-          loc_4E1729: br.s loc_4E172B
-          loc_4E172B: // Referenced from: loc_4E1729
-          loc_4E172B: ret
-        }
-
-        assem override strict specialname void set_Label17(class Label WithEventsValue) {
-
-          loc_4E172D: ldarg.0
-          loc_4E172E: ldarg.1
-          loc_4E172F: stfld GCUv2.frmSalesInvoicePrint::_Label17
-          loc_4E1734: ret
-        }
-
-        assem override strict specialname class Label get_Label16() {
-
-          loc_4E1736: ldarg.0
-          loc_4E1737: ldfld GCUv2.frmSalesInvoicePrint::_Label16
-          loc_4E173C: br.s loc_4E173E
-          loc_4E173E: // Referenced from: loc_4E173C
-          loc_4E173E: ret
-        }
-
-        assem override strict specialname void set_Label16(class Label WithEventsValue) {
-
-          loc_4E1740: ldarg.0
-          loc_4E1741: ldarg.1
-          loc_4E1742: stfld GCUv2.frmSalesInvoicePrint::_Label16
-          loc_4E1747: ret
-        }
-
-        assem override strict specialname class Label get_Label15() {
-
-          loc_4E1749: ldarg.0
-          loc_4E174A: ldfld GCUv2.frmSalesInvoicePrint::_Label15
-          loc_4E174F: br.s loc_4E1751
-          loc_4E1751: // Referenced from: loc_4E174F
-          loc_4E1751: ret
-        }
-
-        assem override strict specialname void set_Label15(class Label WithEventsValue) {
-
-          loc_4E1753: ldarg.0
-          loc_4E1754: ldarg.1
-          loc_4E1755: stfld GCUv2.frmSalesInvoicePrint::_Label15
-          loc_4E175A: ret
-        }
-
-        assem override strict specialname class Label get_Label4() {
-
-          loc_4E175C: ldarg.0
-          loc_4E175D: ldfld GCUv2.frmSalesInvoicePrint::_Label4
-          loc_4E1762: br.s loc_4E1764
-          loc_4E1764: // Referenced from: loc_4E1762
-          loc_4E1764: ret
-        }
-
-        assem override strict specialname void set_Label4(class Label WithEventsValue) {
-
-          loc_4E1766: ldarg.0
-          loc_4E1767: ldarg.1
-          loc_4E1768: stfld GCUv2.frmSalesInvoicePrint::_Label4
-          loc_4E176D: ret
-        }
-
-        assem override strict specialname class Label get_Label2() {
-
-          loc_4E176F: ldarg.0
-          loc_4E1770: ldfld GCUv2.frmSalesInvoicePrint::_Label2
-          loc_4E1775: br.s loc_4E1777
-          loc_4E1777: // Referenced from: loc_4E1775
-          loc_4E1777: ret
-        }
-
-        assem override strict specialname void set_Label2(class Label WithEventsValue) {
-
-          loc_4E1779: ldarg.0
-          loc_4E177A: ldarg.1
-          loc_4E177B: stfld GCUv2.frmSalesInvoicePrint::_Label2
-          loc_4E1780: ret
-        }
-
-        assem override strict specialname class Label get_Label21() {
-
-          loc_4E1782: ldarg.0
-          loc_4E1783: ldfld GCUv2.frmSalesInvoicePrint::_Label21
-          loc_4E1788: br.s loc_4E178A
-          loc_4E178A: // Referenced from: loc_4E1788
-          loc_4E178A: ret
-        }
-
-        assem override strict specialname void set_Label21(class Label WithEventsValue) {
-
-          loc_4E178C: ldarg.0
-          loc_4E178D: ldarg.1
-          loc_4E178E: stfld GCUv2.frmSalesInvoicePrint::_Label21
-          loc_4E1793: ret
-        }
-
-        assem override strict specialname class Label get_Label20() {
-
-          loc_4E1795: ldarg.0
-          loc_4E1796: ldfld GCUv2.frmSalesInvoicePrint::_Label20
-          loc_4E179B: br.s loc_4E179D
-          loc_4E179D: // Referenced from: loc_4E179B
-          loc_4E179D: ret
-        }
-
-        assem override strict specialname void set_Label20(class Label WithEventsValue) {
-
-          loc_4E179F: ldarg.0
-          loc_4E17A0: ldarg.1
-          loc_4E17A1: stfld GCUv2.frmSalesInvoicePrint::_Label20
-          loc_4E17A6: ret
-        }
-
-        assem override strict specialname class Label get_Label19() {
-
-          loc_4E17A8: ldarg.0
-          loc_4E17A9: ldfld GCUv2.frmSalesInvoicePrint::_Label19
-          loc_4E17AE: br.s loc_4E17B0
-          loc_4E17B0: // Referenced from: loc_4E17AE
-          loc_4E17B0: ret
-        }
-
-        assem override strict specialname void set_Label19(class Label WithEventsValue) {
-
-          loc_4E17B2: ldarg.0
-          loc_4E17B3: ldarg.1
-          loc_4E17B4: stfld GCUv2.frmSalesInvoicePrint::_Label19
-          loc_4E17B9: ret
-        }
-
-        assem override strict specialname class Label get_Label18() {
-
-          loc_4E17BB: ldarg.0
-          loc_4E17BC: ldfld GCUv2.frmSalesInvoicePrint::_Label18
-          loc_4E17C1: br.s loc_4E17C3
-          loc_4E17C3: // Referenced from: loc_4E17C1
-          loc_4E17C3: ret
-        }
-
-        assem override strict specialname void set_Label18(class Label WithEventsValue) {
-
-          loc_4E17C5: ldarg.0
-          loc_4E17C6: ldarg.1
-          loc_4E17C7: stfld GCUv2.frmSalesInvoicePrint::_Label18
-          loc_4E17CC: ret
-        }
-
-        assem override strict specialname class Label get_lblTotalPrintCommercial() {
-
-          loc_4E17CE: ldarg.0
-          loc_4E17CF: ldfld GCUv2.frmSalesInvoicePrint::_lblTotalPrintCommercial
-          loc_4E17D4: br.s loc_4E17D6
-          loc_4E17D6: // Referenced from: loc_4E17D4
-          loc_4E17D6: ret
-        }
-
-        assem override strict specialname void set_lblTotalPrintCommercial(class Label WithEventsValue) {
-
-          loc_4E17D8: ldarg.0
-          loc_4E17D9: ldarg.1
-          loc_4E17DA: stfld GCUv2.frmSalesInvoicePrint::_lblTotalPrintCommercial
-          loc_4E17DF: ret
-        }
-
-        assem override strict specialname class Label get_lblTotalPrintTax() {
-
-          loc_4E17E1: ldarg.0
-          loc_4E17E2: ldfld GCUv2.frmSalesInvoicePrint::_lblTotalPrintTax
-          loc_4E17E7: br.s loc_4E17E9
-          loc_4E17E9: // Referenced from: loc_4E17E7
-          loc_4E17E9: ret
-        }
-
-        assem override strict specialname void set_lblTotalPrintTax(class Label WithEventsValue) {
-
-          loc_4E17EB: ldarg.0
-          loc_4E17EC: ldarg.1
-          loc_4E17ED: stfld GCUv2.frmSalesInvoicePrint::_lblTotalPrintTax
-          loc_4E17F2: ret
-        }
-
-        public specialname double get_Id() {
-
-          double flt_1;
-
-        }
-
-        public specialname void set_Id(double value) {
-
-          loc_4E180D: nop
-          loc_4E180E: ldarg.0
-          loc_4E180F: ldarg.1
-          loc_4E1810: stfld GCUv2.frmSalesInvoicePrint::_id
-          loc_4E1815: ret
-        }
-
-        public specialname string get_TaxAddress() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_TaxAddress(string value) {
-
-          loc_4E1831: nop
-          loc_4E1832: ldarg.0
-          loc_4E1833: ldarg.1
-          loc_4E1834: stfld GCUv2.frmSalesInvoicePrint::_taxAddress
-          loc_4E1839: ret
-        }
-
-        public specialname string get_NPWP() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_NPWP(string value) {
-
-          loc_4E1855: nop
-          loc_4E1856: ldarg.0
-          loc_4E1857: ldarg.1
-          loc_4E1858: stfld GCUv2.frmSalesInvoicePrint::_NPWP
-          loc_4E185D: ret
-        }
-
-        public void frmSalesInvoicePrint() {
-
-
-        }
-
-        private void formatGrid() {
-
-
-        }
-
-        private void frmSalesInvoicePrint_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void frmSalesInvoicePrint_Load(object sender, class System.EventArgs e) {
-
-
-        }
-
-        private void btnPrintLetter_Click(object sender, class System.EventArgs e) {
-
-          int32 num_1;
-          int32 num_2;
-          class Microsoft.VisualBasic.PowerPacks.Printing.Compatibility.VB6.Printer var_1;
-          int32 num_3;
-          int32 num_4;
-          int32 num_5;
-          double flt_1;
-          string[] var_2;
-          int32 num_6;
-          int32 num_7;
-          int32 num_8;
-
-        }
-
-        private void btnPrintCommercial_Click(object sender, class System.EventArgs e) {
-
-          int32 num_1;
-          int32 num_2;
-          int32 num_3;
-          int32 num_4;
-          int32 num_5;
-          int32 num_6;
-          class Microsoft.VisualBasic.PowerPacks.Printing.Compatibility.VB6.Printer var_1;
-          double flt_1;
-          string[] var_2;
-          boolean var_3;
-          boolean var_4;
-          int32 num_7;
-          int32 num_8;
-          int32 num_9;
-          boolean var_5;
-          int32 & var_6;
-
-        }
-
-        private void btnPrintTax_Click(object sender, class System.EventArgs e) {
-
-          int32 num_1;
-          int32 num_2;
-          class Microsoft.VisualBasic.PowerPacks.Printing.Compatibility.VB6.Printer var_1;
-          int32 num_3;
-          int32 num_4;
-          int32 num_5;
-          boolean var_2;
-          boolean var_3;
-          boolean var_4;
-          int32 num_6;
-          boolean var_5;
-          int32 & var_6;
-
-        }
-
-    }
+	private IContainer components;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnPrintLetter")]
+	private Button _btnPrintLetter;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnPrintCommercial")]
+	private Button _btnPrintCommercial;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnPrintTax")]
+	private Button _btnPrintTax;
+
+	private double _id;
+
+	private string _taxAddress;
+
+	private string _NPWP;
+
+	private int _totalPrintCommercial;
+
+	private int _totalPrintTax;
+
+	[field: AccessedThroughProperty("TabControl1")]
+	internal virtual TabControl TabControl1
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("TabPage1")]
+	internal virtual TabPage TabPage1
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual Button btnPrintLetter
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnPrintLetter;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnPrintLetter_Click;
+			Button button = _btnPrintLetter;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnPrintLetter = value;
+			button = _btnPrintLetter;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
+
+	[field: AccessedThroughProperty("dgvItemLetter")]
+	internal virtual DataGridView dgvItemLetter
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("lblInvoiceNoLetter")]
+	internal virtual Label lblInvoiceNoLetter
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("lblAddressLetter")]
+	internal virtual Label lblAddressLetter
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("lblNameLetter")]
+	internal virtual Label lblNameLetter
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("lblYthLetter")]
+	internal virtual Label lblYthLetter
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("lblDateLetter")]
+	internal virtual Label lblDateLetter
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("TabPage2")]
+	internal virtual TabPage TabPage2
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("lblCompanyName")]
+	internal virtual Label lblCompanyName
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("TabPage3")]
+	internal virtual TabPage TabPage3
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("lblAddressCommercial")]
+	internal virtual Label lblAddressCommercial
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("lblNameCommercial")]
+	internal virtual Label lblNameCommercial
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("lblYthCommercial")]
+	internal virtual Label lblYthCommercial
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("lblDateCommercial")]
+	internal virtual Label lblDateCommercial
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("lblCompanyDetail3")]
+	internal virtual Label lblCompanyDetail3
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("lblCompanyDetail2")]
+	internal virtual Label lblCompanyDetail2
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("lblCompanyDetail1")]
+	internal virtual Label lblCompanyDetail1
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual Button btnPrintCommercial
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnPrintCommercial;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnPrintCommercial_Click;
+			Button button = _btnPrintCommercial;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnPrintCommercial = value;
+			button = _btnPrintCommercial;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
+
+	[field: AccessedThroughProperty("dgvItemCommercial")]
+	internal virtual DataGridView dgvItemCommercial
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("lblInvoiceNoCommercial")]
+	internal virtual Label lblInvoiceNoCommercial
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("lblTotalPaymentCommercial")]
+	internal virtual Label lblTotalPaymentCommercial
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label7")]
+	internal virtual Label Label7
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("lblDeductionCommercial")]
+	internal virtual Label lblDeductionCommercial
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("lblDiscountValueCommercial")]
+	internal virtual Label lblDiscountValueCommercial
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label3")]
+	internal virtual Label Label3
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("lblTotalPriceCommercial")]
+	internal virtual Label lblTotalPriceCommercial
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label1")]
+	internal virtual Label Label1
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label13")]
+	internal virtual Label Label13
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label5")]
+	internal virtual Label Label5
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("txtDiscountDescription")]
+	internal virtual TextBox txtDiscountDescription
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label8")]
+	internal virtual Label Label8
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("txtDiscountDescriptionTax")]
+	internal virtual TextBox txtDiscountDescriptionTax
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("lblPPN")]
+	internal virtual Label lblPPN
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("lblDPP")]
+	internal virtual Label lblDPP
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("lblDiscountValueTax")]
+	internal virtual Label lblDiscountValueTax
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label11")]
+	internal virtual Label Label11
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("lblTotalPriceTax")]
+	internal virtual Label lblTotalPriceTax
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label14")]
+	internal virtual Label Label14
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual Button btnPrintTax
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnPrintTax;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnPrintTax_Click;
+			Button button = _btnPrintTax;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnPrintTax = value;
+			button = _btnPrintTax;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
+
+	[field: AccessedThroughProperty("dgvItemTax")]
+	internal virtual DataGridView dgvItemTax
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("lblNPWP")]
+	internal virtual Label lblNPWP
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("lblAddressTax")]
+	internal virtual Label lblAddressTax
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("lblNameTax")]
+	internal virtual Label lblNameTax
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("lblTaxInvoiceNo")]
+	internal virtual Label lblTaxInvoiceNo
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("lblYear")]
+	internal virtual Label lblYear
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("chkNPPKP")]
+	internal virtual CheckBox chkNPPKP
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("txtTaxPersonPosition")]
+	internal virtual TextBox txtTaxPersonPosition
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("txtTaxPersonName")]
+	internal virtual TextBox txtTaxPersonName
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("txtDateTax")]
+	internal virtual TextBox txtDateTax
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("txtCityTax")]
+	internal virtual TextBox txtCityTax
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("txtDPP")]
+	internal virtual TextBox txtDPP
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("txtStar")]
+	internal virtual TextBox txtStar
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label17")]
+	internal virtual Label Label17
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label16")]
+	internal virtual Label Label16
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label15")]
+	internal virtual Label Label15
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label4")]
+	internal virtual Label Label4
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label2")]
+	internal virtual Label Label2
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label21")]
+	internal virtual Label Label21
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label20")]
+	internal virtual Label Label20
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label19")]
+	internal virtual Label Label19
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label18")]
+	internal virtual Label Label18
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("lblTotalPrintCommercial")]
+	internal virtual Label lblTotalPrintCommercial
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("lblTotalPrintTax")]
+	internal virtual Label lblTotalPrintTax
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	public double Id
+	{
+		get
+		{
+			return _id;
+		}
+		set
+		{
+			_id = value;
+		}
+	}
+
+	public string TaxAddress
+	{
+		get
+		{
+			return _taxAddress;
+		}
+		set
+		{
+			_taxAddress = value;
+		}
+	}
+
+	public string NPWP
+	{
+		get
+		{
+			return _NPWP;
+		}
+		set
+		{
+			_NPWP = value;
+		}
+	}
+
+	[DebuggerNonUserCode]
+	protected override void Dispose(bool disposing)
+	{
+		try
+		{
+			if (disposing && components != null)
+			{
+				components.Dispose();
+			}
+		}
+		finally
+		{
+			base.Dispose(disposing);
+		}
+	}
+
+	[System.Diagnostics.DebuggerStepThrough]
+	private void InitializeComponent()
+	{
+		this.TabControl1 = new System.Windows.Forms.TabControl();
+		this.TabPage1 = new System.Windows.Forms.TabPage();
+		this.btnPrintLetter = new System.Windows.Forms.Button();
+		this.dgvItemLetter = new System.Windows.Forms.DataGridView();
+		this.lblInvoiceNoLetter = new System.Windows.Forms.Label();
+		this.lblAddressLetter = new System.Windows.Forms.Label();
+		this.lblNameLetter = new System.Windows.Forms.Label();
+		this.lblYthLetter = new System.Windows.Forms.Label();
+		this.lblDateLetter = new System.Windows.Forms.Label();
+		this.TabPage2 = new System.Windows.Forms.TabPage();
+		this.Label8 = new System.Windows.Forms.Label();
+		this.Label5 = new System.Windows.Forms.Label();
+		this.txtDiscountDescription = new System.Windows.Forms.TextBox();
+		this.Label13 = new System.Windows.Forms.Label();
+		this.lblTotalPaymentCommercial = new System.Windows.Forms.Label();
+		this.Label7 = new System.Windows.Forms.Label();
+		this.lblDeductionCommercial = new System.Windows.Forms.Label();
+		this.lblDiscountValueCommercial = new System.Windows.Forms.Label();
+		this.Label3 = new System.Windows.Forms.Label();
+		this.lblTotalPriceCommercial = new System.Windows.Forms.Label();
+		this.Label1 = new System.Windows.Forms.Label();
+		this.btnPrintCommercial = new System.Windows.Forms.Button();
+		this.dgvItemCommercial = new System.Windows.Forms.DataGridView();
+		this.lblInvoiceNoCommercial = new System.Windows.Forms.Label();
+		this.lblAddressCommercial = new System.Windows.Forms.Label();
+		this.lblNameCommercial = new System.Windows.Forms.Label();
+		this.lblYthCommercial = new System.Windows.Forms.Label();
+		this.lblDateCommercial = new System.Windows.Forms.Label();
+		this.lblCompanyDetail3 = new System.Windows.Forms.Label();
+		this.lblCompanyDetail2 = new System.Windows.Forms.Label();
+		this.lblCompanyDetail1 = new System.Windows.Forms.Label();
+		this.lblCompanyName = new System.Windows.Forms.Label();
+		this.TabPage3 = new System.Windows.Forms.TabPage();
+		this.Label21 = new System.Windows.Forms.Label();
+		this.Label20 = new System.Windows.Forms.Label();
+		this.Label19 = new System.Windows.Forms.Label();
+		this.Label18 = new System.Windows.Forms.Label();
+		this.Label17 = new System.Windows.Forms.Label();
+		this.Label16 = new System.Windows.Forms.Label();
+		this.Label15 = new System.Windows.Forms.Label();
+		this.Label4 = new System.Windows.Forms.Label();
+		this.Label2 = new System.Windows.Forms.Label();
+		this.chkNPPKP = new System.Windows.Forms.CheckBox();
+		this.txtTaxPersonPosition = new System.Windows.Forms.TextBox();
+		this.txtTaxPersonName = new System.Windows.Forms.TextBox();
+		this.txtDateTax = new System.Windows.Forms.TextBox();
+		this.txtCityTax = new System.Windows.Forms.TextBox();
+		this.txtDPP = new System.Windows.Forms.TextBox();
+		this.txtStar = new System.Windows.Forms.TextBox();
+		this.txtDiscountDescriptionTax = new System.Windows.Forms.TextBox();
+		this.lblPPN = new System.Windows.Forms.Label();
+		this.lblDPP = new System.Windows.Forms.Label();
+		this.lblDiscountValueTax = new System.Windows.Forms.Label();
+		this.Label11 = new System.Windows.Forms.Label();
+		this.lblTotalPriceTax = new System.Windows.Forms.Label();
+		this.Label14 = new System.Windows.Forms.Label();
+		this.btnPrintTax = new System.Windows.Forms.Button();
+		this.dgvItemTax = new System.Windows.Forms.DataGridView();
+		this.lblNPWP = new System.Windows.Forms.Label();
+		this.lblAddressTax = new System.Windows.Forms.Label();
+		this.lblNameTax = new System.Windows.Forms.Label();
+		this.lblTaxInvoiceNo = new System.Windows.Forms.Label();
+		this.lblYear = new System.Windows.Forms.Label();
+		this.lblTotalPrintCommercial = new System.Windows.Forms.Label();
+		this.lblTotalPrintTax = new System.Windows.Forms.Label();
+		this.TabControl1.SuspendLayout();
+		this.TabPage1.SuspendLayout();
+		((System.ComponentModel.ISupportInitialize)this.dgvItemLetter).BeginInit();
+		this.TabPage2.SuspendLayout();
+		((System.ComponentModel.ISupportInitialize)this.dgvItemCommercial).BeginInit();
+		this.TabPage3.SuspendLayout();
+		((System.ComponentModel.ISupportInitialize)this.dgvItemTax).BeginInit();
+		base.SuspendLayout();
+		this.TabControl1.Controls.Add(this.TabPage1);
+		this.TabControl1.Controls.Add(this.TabPage2);
+		this.TabControl1.Controls.Add(this.TabPage3);
+		this.TabControl1.Location = new System.Drawing.Point(12, 12);
+		this.TabControl1.Name = "TabControl1";
+		this.TabControl1.SelectedIndex = 0;
+		this.TabControl1.Size = new System.Drawing.Size(738, 467);
+		this.TabControl1.TabIndex = 14;
+		this.TabPage1.Controls.Add(this.btnPrintLetter);
+		this.TabPage1.Controls.Add(this.dgvItemLetter);
+		this.TabPage1.Controls.Add(this.lblInvoiceNoLetter);
+		this.TabPage1.Controls.Add(this.lblAddressLetter);
+		this.TabPage1.Controls.Add(this.lblNameLetter);
+		this.TabPage1.Controls.Add(this.lblYthLetter);
+		this.TabPage1.Controls.Add(this.lblDateLetter);
+		this.TabPage1.Location = new System.Drawing.Point(4, 22);
+		this.TabPage1.Name = "TabPage1";
+		this.TabPage1.Padding = new System.Windows.Forms.Padding(3);
+		this.TabPage1.Size = new System.Drawing.Size(730, 441);
+		this.TabPage1.TabIndex = 0;
+		this.TabPage1.Text = "Surat Jalan";
+		this.TabPage1.UseVisualStyleBackColor = true;
+		this.btnPrintLetter.BackColor = System.Drawing.SystemColors.ButtonFace;
+		this.btnPrintLetter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnPrintLetter.Location = new System.Drawing.Point(651, 401);
+		this.btnPrintLetter.Name = "btnPrintLetter";
+		this.btnPrintLetter.Size = new System.Drawing.Size(61, 24);
+		this.btnPrintLetter.TabIndex = 20;
+		this.btnPrintLetter.Text = "Cetak";
+		this.btnPrintLetter.UseVisualStyleBackColor = false;
+		this.dgvItemLetter.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+		this.dgvItemLetter.Location = new System.Drawing.Point(17, 106);
+		this.dgvItemLetter.Name = "dgvItemLetter";
+		this.dgvItemLetter.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+		this.dgvItemLetter.Size = new System.Drawing.Size(695, 146);
+		this.dgvItemLetter.TabIndex = 19;
+		this.lblInvoiceNoLetter.AutoSize = true;
+		this.lblInvoiceNoLetter.Location = new System.Drawing.Point(14, 90);
+		this.lblInvoiceNoLetter.Name = "lblInvoiceNoLetter";
+		this.lblInvoiceNoLetter.Size = new System.Drawing.Size(93, 13);
+		this.lblInvoiceNoLetter.TabIndex = 18;
+		this.lblInvoiceNoLetter.Text = "lblInvoiceNoLetter";
+		this.lblAddressLetter.AutoSize = true;
+		this.lblAddressLetter.Location = new System.Drawing.Point(407, 54);
+		this.lblAddressLetter.Name = "lblAddressLetter";
+		this.lblAddressLetter.Size = new System.Drawing.Size(82, 13);
+		this.lblAddressLetter.TabIndex = 17;
+		this.lblAddressLetter.Text = "lblAddressLetter";
+		this.lblNameLetter.AutoSize = true;
+		this.lblNameLetter.Location = new System.Drawing.Point(407, 41);
+		this.lblNameLetter.Name = "lblNameLetter";
+		this.lblNameLetter.Size = new System.Drawing.Size(72, 13);
+		this.lblNameLetter.TabIndex = 16;
+		this.lblNameLetter.Text = "lblNameLetter";
+		this.lblYthLetter.AutoSize = true;
+		this.lblYthLetter.Location = new System.Drawing.Point(407, 28);
+		this.lblYthLetter.Name = "lblYthLetter";
+		this.lblYthLetter.Size = new System.Drawing.Size(66, 13);
+		this.lblYthLetter.TabIndex = 15;
+		this.lblYthLetter.Text = "Kepada Yth,";
+		this.lblDateLetter.AutoSize = true;
+		this.lblDateLetter.Location = new System.Drawing.Point(407, 15);
+		this.lblDateLetter.Name = "lblDateLetter";
+		this.lblDateLetter.Size = new System.Drawing.Size(67, 13);
+		this.lblDateLetter.TabIndex = 14;
+		this.lblDateLetter.Text = "lblDateLetter";
+		this.TabPage2.Controls.Add(this.lblTotalPrintCommercial);
+		this.TabPage2.Controls.Add(this.Label8);
+		this.TabPage2.Controls.Add(this.Label5);
+		this.TabPage2.Controls.Add(this.txtDiscountDescription);
+		this.TabPage2.Controls.Add(this.Label13);
+		this.TabPage2.Controls.Add(this.lblTotalPaymentCommercial);
+		this.TabPage2.Controls.Add(this.Label7);
+		this.TabPage2.Controls.Add(this.lblDeductionCommercial);
+		this.TabPage2.Controls.Add(this.lblDiscountValueCommercial);
+		this.TabPage2.Controls.Add(this.Label3);
+		this.TabPage2.Controls.Add(this.lblTotalPriceCommercial);
+		this.TabPage2.Controls.Add(this.Label1);
+		this.TabPage2.Controls.Add(this.btnPrintCommercial);
+		this.TabPage2.Controls.Add(this.dgvItemCommercial);
+		this.TabPage2.Controls.Add(this.lblInvoiceNoCommercial);
+		this.TabPage2.Controls.Add(this.lblAddressCommercial);
+		this.TabPage2.Controls.Add(this.lblNameCommercial);
+		this.TabPage2.Controls.Add(this.lblYthCommercial);
+		this.TabPage2.Controls.Add(this.lblDateCommercial);
+		this.TabPage2.Controls.Add(this.lblCompanyDetail3);
+		this.TabPage2.Controls.Add(this.lblCompanyDetail2);
+		this.TabPage2.Controls.Add(this.lblCompanyDetail1);
+		this.TabPage2.Controls.Add(this.lblCompanyName);
+		this.TabPage2.Location = new System.Drawing.Point(4, 22);
+		this.TabPage2.Name = "TabPage2";
+		this.TabPage2.Padding = new System.Windows.Forms.Padding(3);
+		this.TabPage2.Size = new System.Drawing.Size(730, 441);
+		this.TabPage2.TabIndex = 1;
+		this.TabPage2.Text = "F. Komersial";
+		this.TabPage2.UseVisualStyleBackColor = true;
+		this.Label8.BackColor = System.Drawing.Color.Silver;
+		this.Label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+		this.Label8.Location = new System.Drawing.Point(23, 324);
+		this.Label8.Name = "Label8";
+		this.Label8.Size = new System.Drawing.Size(684, 1);
+		this.Label8.TabIndex = 154;
+		this.Label5.BackColor = System.Drawing.Color.Silver;
+		this.Label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+		this.Label5.Location = new System.Drawing.Point(22, 300);
+		this.Label5.Name = "Label5";
+		this.Label5.Size = new System.Drawing.Size(684, 1);
+		this.Label5.TabIndex = 153;
+		this.txtDiscountDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+		this.txtDiscountDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 9f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.txtDiscountDescription.Location = new System.Drawing.Point(159, 272);
+		this.txtDiscountDescription.Name = "txtDiscountDescription";
+		this.txtDiscountDescription.Size = new System.Drawing.Size(140, 21);
+		this.txtDiscountDescription.TabIndex = 152;
+		this.Label13.BackColor = System.Drawing.Color.Silver;
+		this.Label13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+		this.Label13.Location = new System.Drawing.Point(24, 264);
+		this.Label13.Name = "Label13";
+		this.Label13.Size = new System.Drawing.Size(684, 1);
+		this.Label13.TabIndex = 151;
+		this.lblTotalPaymentCommercial.Location = new System.Drawing.Point(566, 328);
+		this.lblTotalPaymentCommercial.Name = "lblTotalPaymentCommercial";
+		this.lblTotalPaymentCommercial.Size = new System.Drawing.Size(144, 13);
+		this.lblTotalPaymentCommercial.TabIndex = 32;
+		this.lblTotalPaymentCommercial.Text = "lblTotalPaymentCommercial";
+		this.lblTotalPaymentCommercial.TextAlign = System.Drawing.ContentAlignment.TopRight;
+		this.Label7.AutoSize = true;
+		this.Label7.Location = new System.Drawing.Point(20, 328);
+		this.Label7.Name = "Label7";
+		this.Label7.Size = new System.Drawing.Size(138, 13);
+		this.Label7.TabIndex = 31;
+		this.Label7.Text = "Jumlah Yang Harus Dibayar";
+		this.lblDeductionCommercial.Location = new System.Drawing.Point(566, 305);
+		this.lblDeductionCommercial.Name = "lblDeductionCommercial";
+		this.lblDeductionCommercial.Size = new System.Drawing.Size(144, 13);
+		this.lblDeductionCommercial.TabIndex = 30;
+		this.lblDeductionCommercial.Text = "lblDeductionCommercial";
+		this.lblDeductionCommercial.TextAlign = System.Drawing.ContentAlignment.TopRight;
+		this.lblDiscountValueCommercial.Location = new System.Drawing.Point(566, 276);
+		this.lblDiscountValueCommercial.Name = "lblDiscountValueCommercial";
+		this.lblDiscountValueCommercial.Size = new System.Drawing.Size(144, 13);
+		this.lblDiscountValueCommercial.TabIndex = 28;
+		this.lblDiscountValueCommercial.Text = "lblDiscountValueCommercial";
+		this.lblDiscountValueCommercial.TextAlign = System.Drawing.ContentAlignment.TopRight;
+		this.Label3.AutoSize = true;
+		this.Label3.Location = new System.Drawing.Point(20, 276);
+		this.Label3.Name = "Label3";
+		this.Label3.Size = new System.Drawing.Size(133, 13);
+		this.Label3.TabIndex = 27;
+		this.Label3.Text = "Dikurangi Potongan Harga";
+		this.lblTotalPriceCommercial.Location = new System.Drawing.Point(566, 246);
+		this.lblTotalPriceCommercial.Name = "lblTotalPriceCommercial";
+		this.lblTotalPriceCommercial.Size = new System.Drawing.Size(144, 13);
+		this.lblTotalPriceCommercial.TabIndex = 26;
+		this.lblTotalPriceCommercial.Text = "lblTotalPriceCommercial";
+		this.lblTotalPriceCommercial.TextAlign = System.Drawing.ContentAlignment.TopRight;
+		this.Label1.AutoSize = true;
+		this.Label1.Location = new System.Drawing.Point(20, 246);
+		this.Label1.Name = "Label1";
+		this.Label1.Size = new System.Drawing.Size(94, 13);
+		this.Label1.TabIndex = 25;
+		this.Label1.Text = "Jumlah Harga Jual";
+		this.btnPrintCommercial.BackColor = System.Drawing.SystemColors.ButtonFace;
+		this.btnPrintCommercial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnPrintCommercial.Location = new System.Drawing.Point(649, 402);
+		this.btnPrintCommercial.Name = "btnPrintCommercial";
+		this.btnPrintCommercial.Size = new System.Drawing.Size(61, 24);
+		this.btnPrintCommercial.TabIndex = 24;
+		this.btnPrintCommercial.Text = "Cetak";
+		this.btnPrintCommercial.UseVisualStyleBackColor = false;
+		this.dgvItemCommercial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+		this.dgvItemCommercial.Location = new System.Drawing.Point(23, 102);
+		this.dgvItemCommercial.Name = "dgvItemCommercial";
+		this.dgvItemCommercial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+		this.dgvItemCommercial.Size = new System.Drawing.Size(687, 132);
+		this.dgvItemCommercial.TabIndex = 23;
+		this.lblInvoiceNoCommercial.AutoSize = true;
+		this.lblInvoiceNoCommercial.Location = new System.Drawing.Point(20, 86);
+		this.lblInvoiceNoCommercial.Name = "lblInvoiceNoCommercial";
+		this.lblInvoiceNoCommercial.Size = new System.Drawing.Size(120, 13);
+		this.lblInvoiceNoCommercial.TabIndex = 22;
+		this.lblInvoiceNoCommercial.Text = "lblInvoiceNoCommercial";
+		this.lblAddressCommercial.AutoSize = true;
+		this.lblAddressCommercial.Location = new System.Drawing.Point(381, 59);
+		this.lblAddressCommercial.Name = "lblAddressCommercial";
+		this.lblAddressCommercial.Size = new System.Drawing.Size(109, 13);
+		this.lblAddressCommercial.TabIndex = 21;
+		this.lblAddressCommercial.Text = "lblAddressCommercial";
+		this.lblNameCommercial.AutoSize = true;
+		this.lblNameCommercial.Location = new System.Drawing.Point(381, 46);
+		this.lblNameCommercial.Name = "lblNameCommercial";
+		this.lblNameCommercial.Size = new System.Drawing.Size(99, 13);
+		this.lblNameCommercial.TabIndex = 20;
+		this.lblNameCommercial.Text = "lblNameCommercial";
+		this.lblYthCommercial.AutoSize = true;
+		this.lblYthCommercial.Location = new System.Drawing.Point(381, 33);
+		this.lblYthCommercial.Name = "lblYthCommercial";
+		this.lblYthCommercial.Size = new System.Drawing.Size(66, 13);
+		this.lblYthCommercial.TabIndex = 19;
+		this.lblYthCommercial.Text = "Kepada Yth,";
+		this.lblDateCommercial.AutoSize = true;
+		this.lblDateCommercial.Location = new System.Drawing.Point(381, 20);
+		this.lblDateCommercial.Name = "lblDateCommercial";
+		this.lblDateCommercial.Size = new System.Drawing.Size(94, 13);
+		this.lblDateCommercial.TabIndex = 18;
+		this.lblDateCommercial.Text = "lblDateCommercial";
+		this.lblCompanyDetail3.AutoSize = true;
+		this.lblCompanyDetail3.Location = new System.Drawing.Point(20, 59);
+		this.lblCompanyDetail3.Name = "lblCompanyDetail3";
+		this.lblCompanyDetail3.Size = new System.Drawing.Size(94, 13);
+		this.lblCompanyDetail3.TabIndex = 3;
+		this.lblCompanyDetail3.Text = "lblCompanyDetail3";
+		this.lblCompanyDetail2.AutoSize = true;
+		this.lblCompanyDetail2.Location = new System.Drawing.Point(20, 46);
+		this.lblCompanyDetail2.Name = "lblCompanyDetail2";
+		this.lblCompanyDetail2.Size = new System.Drawing.Size(94, 13);
+		this.lblCompanyDetail2.TabIndex = 2;
+		this.lblCompanyDetail2.Text = "lblCompanyDetail2";
+		this.lblCompanyDetail1.AutoSize = true;
+		this.lblCompanyDetail1.Location = new System.Drawing.Point(20, 33);
+		this.lblCompanyDetail1.Name = "lblCompanyDetail1";
+		this.lblCompanyDetail1.Size = new System.Drawing.Size(94, 13);
+		this.lblCompanyDetail1.TabIndex = 1;
+		this.lblCompanyDetail1.Text = "lblCompanyDetail1";
+		this.lblCompanyName.AutoSize = true;
+		this.lblCompanyName.Location = new System.Drawing.Point(20, 20);
+		this.lblCompanyName.Name = "lblCompanyName";
+		this.lblCompanyName.Size = new System.Drawing.Size(89, 13);
+		this.lblCompanyName.TabIndex = 0;
+		this.lblCompanyName.Text = "lblCompanyName";
+		this.TabPage3.BackColor = System.Drawing.Color.Gainsboro;
+		this.TabPage3.Controls.Add(this.lblTotalPrintTax);
+		this.TabPage3.Controls.Add(this.Label21);
+		this.TabPage3.Controls.Add(this.Label20);
+		this.TabPage3.Controls.Add(this.Label19);
+		this.TabPage3.Controls.Add(this.Label18);
+		this.TabPage3.Controls.Add(this.Label17);
+		this.TabPage3.Controls.Add(this.Label16);
+		this.TabPage3.Controls.Add(this.Label15);
+		this.TabPage3.Controls.Add(this.Label4);
+		this.TabPage3.Controls.Add(this.Label2);
+		this.TabPage3.Controls.Add(this.chkNPPKP);
+		this.TabPage3.Controls.Add(this.txtTaxPersonPosition);
+		this.TabPage3.Controls.Add(this.txtTaxPersonName);
+		this.TabPage3.Controls.Add(this.txtDateTax);
+		this.TabPage3.Controls.Add(this.txtCityTax);
+		this.TabPage3.Controls.Add(this.txtDPP);
+		this.TabPage3.Controls.Add(this.txtStar);
+		this.TabPage3.Controls.Add(this.txtDiscountDescriptionTax);
+		this.TabPage3.Controls.Add(this.lblPPN);
+		this.TabPage3.Controls.Add(this.lblDPP);
+		this.TabPage3.Controls.Add(this.lblDiscountValueTax);
+		this.TabPage3.Controls.Add(this.Label11);
+		this.TabPage3.Controls.Add(this.lblTotalPriceTax);
+		this.TabPage3.Controls.Add(this.Label14);
+		this.TabPage3.Controls.Add(this.btnPrintTax);
+		this.TabPage3.Controls.Add(this.dgvItemTax);
+		this.TabPage3.Controls.Add(this.lblNPWP);
+		this.TabPage3.Controls.Add(this.lblAddressTax);
+		this.TabPage3.Controls.Add(this.lblNameTax);
+		this.TabPage3.Controls.Add(this.lblTaxInvoiceNo);
+		this.TabPage3.Controls.Add(this.lblYear);
+		this.TabPage3.Location = new System.Drawing.Point(4, 22);
+		this.TabPage3.Name = "TabPage3";
+		this.TabPage3.Size = new System.Drawing.Size(730, 441);
+		this.TabPage3.TabIndex = 2;
+		this.TabPage3.Text = "F. Pajak";
+		this.Label21.AutoSize = true;
+		this.Label21.Location = new System.Drawing.Point(530, 305);
+		this.Label21.Name = "Label21";
+		this.Label21.Size = new System.Drawing.Size(29, 13);
+		this.Label21.TabIndex = 188;
+		this.Label21.Text = "PPN";
+		this.Label20.AutoSize = true;
+		this.Label20.Location = new System.Drawing.Point(530, 278);
+		this.Label20.Name = "Label20";
+		this.Label20.Size = new System.Drawing.Size(29, 13);
+		this.Label20.TabIndex = 187;
+		this.Label20.Text = "DPP";
+		this.Label19.AutoSize = true;
+		this.Label19.Location = new System.Drawing.Point(530, 252);
+		this.Label19.Name = "Label19";
+		this.Label19.Size = new System.Drawing.Size(49, 13);
+		this.Label19.TabIndex = 186;
+		this.Label19.Text = "Discount";
+		this.Label18.AutoSize = true;
+		this.Label18.Location = new System.Drawing.Point(530, 225);
+		this.Label18.Name = "Label18";
+		this.Label18.Size = new System.Drawing.Size(63, 13);
+		this.Label18.TabIndex = 185;
+		this.Label18.Text = "Total Harga";
+		this.Label17.AutoSize = true;
+		this.Label17.Location = new System.Drawing.Point(26, 227);
+		this.Label17.Name = "Label17";
+		this.Label17.Size = new System.Drawing.Size(35, 13);
+		this.Label17.TabIndex = 184;
+		this.Label17.Text = "*******";
+		this.Label16.AutoSize = true;
+		this.Label16.Location = new System.Drawing.Point(223, 386);
+		this.Label16.Name = "Label16";
+		this.Label16.Size = new System.Drawing.Size(34, 13);
+		this.Label16.TabIndex = 183;
+		this.Label16.Text = "Posisi";
+		this.Label15.AutoSize = true;
+		this.Label15.Location = new System.Drawing.Point(223, 359);
+		this.Label15.Name = "Label15";
+		this.Label15.Size = new System.Drawing.Size(35, 13);
+		this.Label15.TabIndex = 182;
+		this.Label15.Text = "Nama";
+		this.Label4.AutoSize = true;
+		this.Label4.Location = new System.Drawing.Point(372, 314);
+		this.Label4.Name = "Label4";
+		this.Label4.Size = new System.Drawing.Size(46, 13);
+		this.Label4.TabIndex = 181;
+		this.Label4.Text = "Tanggal";
+		this.Label2.AutoSize = true;
+		this.Label2.Location = new System.Drawing.Point(223, 314);
+		this.Label2.Name = "Label2";
+		this.Label2.Size = new System.Drawing.Size(29, 13);
+		this.Label2.TabIndex = 180;
+		this.Label2.Text = "Kota";
+		this.chkNPPKP.AutoSize = true;
+		this.chkNPPKP.Location = new System.Drawing.Point(550, 409);
+		this.chkNPPKP.Name = "chkNPPKP";
+		this.chkNPPKP.Size = new System.Drawing.Size(93, 17);
+		this.chkNPPKP.TabIndex = 179;
+		this.chkNPPKP.Text = "Cetak NPPKP";
+		this.chkNPPKP.UseVisualStyleBackColor = true;
+		this.txtTaxPersonPosition.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+		this.txtTaxPersonPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.txtTaxPersonPosition.Location = new System.Drawing.Point(291, 384);
+		this.txtTaxPersonPosition.Name = "txtTaxPersonPosition";
+		this.txtTaxPersonPosition.Size = new System.Drawing.Size(140, 20);
+		this.txtTaxPersonPosition.TabIndex = 178;
+		this.txtTaxPersonName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+		this.txtTaxPersonName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.txtTaxPersonName.Location = new System.Drawing.Point(291, 357);
+		this.txtTaxPersonName.Name = "txtTaxPersonName";
+		this.txtTaxPersonName.Size = new System.Drawing.Size(140, 20);
+		this.txtTaxPersonName.TabIndex = 177;
+		this.txtDateTax.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+		this.txtDateTax.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.txtDateTax.Location = new System.Drawing.Point(372, 330);
+		this.txtDateTax.Name = "txtDateTax";
+		this.txtDateTax.Size = new System.Drawing.Size(140, 20);
+		this.txtDateTax.TabIndex = 176;
+		this.txtCityTax.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+		this.txtCityTax.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.txtCityTax.Location = new System.Drawing.Point(226, 330);
+		this.txtCityTax.Name = "txtCityTax";
+		this.txtCityTax.Size = new System.Drawing.Size(140, 20);
+		this.txtCityTax.TabIndex = 175;
+		this.txtDPP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+		this.txtDPP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.txtDPP.Location = new System.Drawing.Point(82, 276);
+		this.txtDPP.Name = "txtDPP";
+		this.txtDPP.Size = new System.Drawing.Size(140, 20);
+		this.txtDPP.TabIndex = 174;
+		this.txtStar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+		this.txtStar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.txtStar.Location = new System.Drawing.Point(82, 223);
+		this.txtStar.Name = "txtStar";
+		this.txtStar.Size = new System.Drawing.Size(140, 20);
+		this.txtStar.TabIndex = 173;
+		this.txtDiscountDescriptionTax.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+		this.txtDiscountDescriptionTax.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.txtDiscountDescriptionTax.Location = new System.Drawing.Point(82, 249);
+		this.txtDiscountDescriptionTax.Name = "txtDiscountDescriptionTax";
+		this.txtDiscountDescriptionTax.Size = new System.Drawing.Size(140, 20);
+		this.txtDiscountDescriptionTax.TabIndex = 172;
+		this.lblPPN.Location = new System.Drawing.Point(566, 305);
+		this.lblPPN.Name = "lblPPN";
+		this.lblPPN.Size = new System.Drawing.Size(144, 13);
+		this.lblPPN.TabIndex = 170;
+		this.lblPPN.Text = "lblPPN";
+		this.lblPPN.TextAlign = System.Drawing.ContentAlignment.TopRight;
+		this.lblDPP.Location = new System.Drawing.Point(566, 278);
+		this.lblDPP.Name = "lblDPP";
+		this.lblDPP.Size = new System.Drawing.Size(144, 13);
+		this.lblDPP.TabIndex = 169;
+		this.lblDPP.Text = "lblDPP";
+		this.lblDPP.TextAlign = System.Drawing.ContentAlignment.TopRight;
+		this.lblDiscountValueTax.Location = new System.Drawing.Point(566, 252);
+		this.lblDiscountValueTax.Name = "lblDiscountValueTax";
+		this.lblDiscountValueTax.Size = new System.Drawing.Size(144, 13);
+		this.lblDiscountValueTax.TabIndex = 168;
+		this.lblDiscountValueTax.Text = "lblDiscountValueTax";
+		this.lblDiscountValueTax.TextAlign = System.Drawing.ContentAlignment.TopRight;
+		this.Label11.AutoSize = true;
+		this.Label11.Location = new System.Drawing.Point(26, 253);
+		this.Label11.Name = "Label11";
+		this.Label11.Size = new System.Drawing.Size(49, 13);
+		this.Label11.TabIndex = 167;
+		this.Label11.Text = "Discount";
+		this.lblTotalPriceTax.Location = new System.Drawing.Point(566, 225);
+		this.lblTotalPriceTax.Name = "lblTotalPriceTax";
+		this.lblTotalPriceTax.Size = new System.Drawing.Size(144, 13);
+		this.lblTotalPriceTax.TabIndex = 166;
+		this.lblTotalPriceTax.Text = "lblTotalPriceTax";
+		this.lblTotalPriceTax.TextAlign = System.Drawing.ContentAlignment.TopRight;
+		this.Label14.AutoSize = true;
+		this.Label14.Location = new System.Drawing.Point(26, 278);
+		this.Label14.Name = "Label14";
+		this.Label14.Size = new System.Drawing.Size(29, 13);
+		this.Label14.TabIndex = 165;
+		this.Label14.Text = "DPP";
+		this.btnPrintTax.BackColor = System.Drawing.SystemColors.ButtonFace;
+		this.btnPrintTax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnPrintTax.Location = new System.Drawing.Point(649, 404);
+		this.btnPrintTax.Name = "btnPrintTax";
+		this.btnPrintTax.Size = new System.Drawing.Size(61, 24);
+		this.btnPrintTax.TabIndex = 164;
+		this.btnPrintTax.Text = "Cetak";
+		this.btnPrintTax.UseVisualStyleBackColor = false;
+		this.dgvItemTax.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+		this.dgvItemTax.Location = new System.Drawing.Point(23, 99);
+		this.dgvItemTax.Name = "dgvItemTax";
+		this.dgvItemTax.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+		this.dgvItemTax.Size = new System.Drawing.Size(687, 118);
+		this.dgvItemTax.TabIndex = 163;
+		this.lblNPWP.AutoSize = true;
+		this.lblNPWP.Location = new System.Drawing.Point(20, 83);
+		this.lblNPWP.Name = "lblNPWP";
+		this.lblNPWP.Size = new System.Drawing.Size(50, 13);
+		this.lblNPWP.TabIndex = 162;
+		this.lblNPWP.Text = "lblNPWP";
+		this.lblAddressTax.AutoSize = true;
+		this.lblAddressTax.Location = new System.Drawing.Point(21, 52);
+		this.lblAddressTax.Name = "lblAddressTax";
+		this.lblAddressTax.Size = new System.Drawing.Size(73, 13);
+		this.lblAddressTax.TabIndex = 161;
+		this.lblAddressTax.Text = "lblAddressTax";
+		this.lblNameTax.AutoSize = true;
+		this.lblNameTax.Location = new System.Drawing.Point(21, 39);
+		this.lblNameTax.Name = "lblNameTax";
+		this.lblNameTax.Size = new System.Drawing.Size(63, 13);
+		this.lblNameTax.TabIndex = 160;
+		this.lblNameTax.Text = "lblNameTax";
+		this.lblTaxInvoiceNo.AutoSize = true;
+		this.lblTaxInvoiceNo.Location = new System.Drawing.Point(333, 15);
+		this.lblTaxInvoiceNo.Name = "lblTaxInvoiceNo";
+		this.lblTaxInvoiceNo.Size = new System.Drawing.Size(84, 13);
+		this.lblTaxInvoiceNo.TabIndex = 159;
+		this.lblTaxInvoiceNo.Text = "lblTaxInvoiceNo";
+		this.lblYear.Location = new System.Drawing.Point(297, 15);
+		this.lblYear.Name = "lblYear";
+		this.lblYear.Size = new System.Drawing.Size(39, 13);
+		this.lblYear.TabIndex = 158;
+		this.lblYear.Text = "lblYear";
+		this.lblYear.TextAlign = System.Drawing.ContentAlignment.TopRight;
+		this.lblTotalPrintCommercial.AutoSize = true;
+		this.lblTotalPrintCommercial.ForeColor = System.Drawing.Color.Red;
+		this.lblTotalPrintCommercial.Location = new System.Drawing.Point(19, 402);
+		this.lblTotalPrintCommercial.Name = "lblTotalPrintCommercial";
+		this.lblTotalPrintCommercial.Size = new System.Drawing.Size(116, 13);
+		this.lblTotalPrintCommercial.TabIndex = 155;
+		this.lblTotalPrintCommercial.Text = "lblTotalPrintCommercial";
+		this.lblTotalPrintTax.AutoSize = true;
+		this.lblTotalPrintTax.ForeColor = System.Drawing.Color.Red;
+		this.lblTotalPrintTax.Location = new System.Drawing.Point(26, 409);
+		this.lblTotalPrintTax.Name = "lblTotalPrintTax";
+		this.lblTotalPrintTax.Size = new System.Drawing.Size(80, 13);
+		this.lblTotalPrintTax.TabIndex = 189;
+		this.lblTotalPrintTax.Text = "lblTotalPrintTax";
+		base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
+		base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+		base.ClientSize = new System.Drawing.Size(760, 490);
+		base.Controls.Add(this.TabControl1);
+		base.KeyPreview = true;
+		base.MaximizeBox = false;
+		base.Name = "frmSalesInvoicePrint";
+		base.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+		this.Text = "Print Preview - Faktur Penjualan";
+		this.TabControl1.ResumeLayout(false);
+		this.TabPage1.ResumeLayout(false);
+		this.TabPage1.PerformLayout();
+		((System.ComponentModel.ISupportInitialize)this.dgvItemLetter).EndInit();
+		this.TabPage2.ResumeLayout(false);
+		this.TabPage2.PerformLayout();
+		((System.ComponentModel.ISupportInitialize)this.dgvItemCommercial).EndInit();
+		this.TabPage3.ResumeLayout(false);
+		this.TabPage3.PerformLayout();
+		((System.ComponentModel.ISupportInitialize)this.dgvItemTax).EndInit();
+		base.ResumeLayout(false);
+	}
+
+	public frmSalesInvoicePrint()
+	{
+		base.KeyDown += frmSalesInvoicePrint_KeyDown;
+		base.Load += frmSalesInvoicePrint_Load;
+		InitializeComponent();
+		DoubleBuffered = true;
+		formatGrid();
+	}
+
+	private void formatGrid()
+	{
+		dgvItemLetter.Columns.Add("", "No");
+		dgvItemLetter.Columns.Add("", "Nama Barang");
+		dgvItemLetter.Columns.Add("", "Kemasan");
+		dgvItemLetter.Columns.Add("", "Qty");
+		dgvItemLetter.Columns[0].Width = 30;
+		dgvItemLetter.Columns[1].Width = 180;
+		dgvItemLetter.Columns[2].Width = 100;
+		dgvItemLetter.Columns[3].Width = 100;
+		dgvItemLetter.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+		dgvItemLetter.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+		dgvItemLetter.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+		dgvItemLetter.RowHeadersVisible = false;
+		dgvItemLetter.AllowUserToAddRows = false;
+		dgvItemLetter.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+		dgvItemLetter.ReadOnly = true;
+		dgvItemLetter.AlternatingRowsDefaultCellStyle.BackColor = Color.WhiteSmoke;
+		dgvItemLetter.AllowUserToResizeRows = false;
+		dgvItemCommercial.Columns.Add("", "No");
+		dgvItemCommercial.Columns.Add("", "Nama Barang");
+		dgvItemCommercial.Columns.Add("", "Kemasan");
+		dgvItemCommercial.Columns.Add("", "Qty");
+		dgvItemCommercial.Columns.Add("", "Harga Satuan");
+		dgvItemCommercial.Columns.Add("", "Total");
+		dgvItemCommercial.Columns[0].Width = 30;
+		dgvItemCommercial.Columns[1].Width = 180;
+		dgvItemCommercial.Columns[2].Width = 100;
+		dgvItemCommercial.Columns[3].Width = 100;
+		dgvItemCommercial.Columns[4].Width = 100;
+		dgvItemCommercial.Columns[5].Width = 100;
+		dgvItemCommercial.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+		dgvItemCommercial.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+		dgvItemCommercial.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+		dgvItemCommercial.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+		dgvItemCommercial.Columns[5].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+		dgvItemCommercial.RowHeadersVisible = false;
+		dgvItemCommercial.AllowUserToAddRows = false;
+		dgvItemCommercial.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+		dgvItemCommercial.ReadOnly = true;
+		dgvItemCommercial.AlternatingRowsDefaultCellStyle.BackColor = Color.WhiteSmoke;
+		dgvItemCommercial.AllowUserToResizeRows = false;
+		dgvItemTax.Columns.Add("", "No");
+		dgvItemTax.Columns.Add("", "Nama Barang");
+		dgvItemTax.Columns.Add("", "Qty(kecil)");
+		dgvItemTax.Columns.Add("", "Kemasan(kecil)");
+		dgvItemTax.Columns.Add("", "Total");
+		dgvItemTax.Columns[0].Width = 30;
+		dgvItemTax.Columns[1].Width = 180;
+		dgvItemTax.Columns[2].Width = 100;
+		dgvItemTax.Columns[3].Width = 100;
+		dgvItemTax.Columns[4].Width = 100;
+		dgvItemTax.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+		dgvItemTax.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+		dgvItemTax.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+		dgvItemTax.RowHeadersVisible = false;
+		dgvItemTax.AllowUserToAddRows = false;
+		dgvItemTax.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+		dgvItemTax.ReadOnly = true;
+		dgvItemTax.AlternatingRowsDefaultCellStyle.BackColor = Color.WhiteSmoke;
+		dgvItemTax.AllowUserToResizeRows = false;
+	}
+
+	private void frmSalesInvoicePrint_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Escape)
+		{
+			Close();
+		}
+	}
+
+	private void frmSalesInvoicePrint_Load(object sender, EventArgs e)
+	{
+		dgvItemLetter.CurrentRow.Selected = false;
+		_totalPrintCommercial = cSalesInvoice.GetTotalPrint(_id, 1);
+		_totalPrintTax = cSalesInvoice.GetTotalPrint(_id, 2);
+		lblTotalPrintCommercial.Text = "Faktur Komersial telah dicetak sebanyak " + Conversions.ToString(_totalPrintCommercial) + " kali.";
+		lblTotalPrintTax.Text = "Faktur Pajak telah dicetak sebanyak " + Conversions.ToString(_totalPrintTax) + " kali.";
+	}
+
+	private void btnPrintLetter_Click(object sender, EventArgs e)
+	{
+		//IL_000a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0010: Expected O, but got Unknown
+		int try0001_dispatch = -1;
+		int num2 = default(int);
+		int num = default(int);
+		while (true)
+		{
+			try
+			{
+				/*Note: ILSpy has introduced the following switch to emulate a goto from catch-block to try-block*/;
+				checked
+				{
+					switch (try0001_dispatch)
+					{
+					default:
+					{
+						ProjectData.ClearProjectError();
+						num2 = 2;
+						Printer val = new Printer();
+						val.ScaleMode = 6;
+						val.Width = 11907;
+						val.Height = 7880;
+						val.Font = new Font("Times New Roman", 11f);
+						double num3 = 1.0;
+						int num4 = 132;
+						val.CurrentX = num4;
+						val.CurrentY = (float)(num3 + 3.0);
+						val.Print(new object[1] { lblDateLetter.Text });
+						val.CurrentX = num4;
+						val.CurrentY = (float)(num3 + 8.0);
+						val.Print(new object[1] { lblYthLetter.Text });
+						val.CurrentX = num4;
+						val.CurrentY = (float)(num3 + 13.0);
+						val.Print(new object[1] { lblNameLetter.Text });
+						val.Font = new Font("Times New Roman", 10f);
+						string[] array = Module1.divideString(lblAddressLetter.Text, 44);
+						int num5 = (int)Math.Round(num3 + 18.0);
+						int num6 = Information.LBound(array);
+						int num7 = Information.UBound(array);
+						int i;
+						for (i = num6; i <= num7; i++)
+						{
+							val.CurrentX = num4;
+							val.CurrentY = num5;
+							val.Print(new object[1] { array[i] });
+							num5 += 4;
+						}
+						val.Font = new Font("Times New Roman", 11f);
+						val.CurrentX = 5f;
+						val.CurrentY = (float)(num3 + 28.0);
+						val.Print(new object[1] { lblInvoiceNoLetter.Text });
+						val.Font = new Font("Times New Roman", 9f);
+						num5 = 34;
+						i = 0;
+						do
+						{
+							val.Line(5f, (float)num5, 13f, (float)(num5 + 5), -1, true, false);
+							val.Line(13f, (float)num5, 85f, (float)(num5 + 5), -1, true, false);
+							val.Line(85f, (float)num5, 115f, (float)(num5 + 5), -1, true, false);
+							val.Line(115f, (float)num5, 138f, (float)(num5 + 5), -1, true, false);
+							num5 += 5;
+							i++;
+						}
+						while (i <= 10);
+						num5 = (int)Math.Round(num3 + 39.0);
+						int num8 = dgvItemLetter.RowCount - 1;
+						for (i = 0; i <= num8; i++)
+						{
+							val.CurrentX = 8f;
+							val.CurrentY = num5;
+							val.Print(new object[1] { dgvItemLetter[0, i].Value });
+							val.CurrentX = 15f;
+							val.CurrentY = num5;
+							val.Print(new object[1] { dgvItemLetter[1, i].Value });
+							val.CurrentX = 110f - val.TextWidth(Conversions.ToString(dgvItemLetter[2, i].Value));
+							val.CurrentY = num5;
+							val.Print(new object[1] { dgvItemLetter[2, i].Value });
+							val.CurrentX = 136f - val.TextWidth(Conversions.ToString(dgvItemLetter[3, i].Value));
+							val.CurrentY = num5;
+							val.Print(new object[1] { dgvItemLetter[3, i].Value });
+							num5 += 5;
+						}
+						num5 = 35;
+						val.CurrentX = 7f;
+						val.CurrentY = num5;
+						val.Print(new object[1] { "No." });
+						val.CurrentX = 15f;
+						val.CurrentY = num5;
+						val.Print(new object[1] { "Nama Barang" });
+						val.CurrentX = 87f;
+						val.CurrentY = num5;
+						val.Print(new object[1] { "Kemasan" });
+						val.CurrentX = 117f;
+						val.CurrentY = num5;
+						val.Print(new object[1] { "Banyaknya" });
+						val.NewPage();
+						val.EndDoc();
+						goto end_IL_0001;
+					}
+					case 1194:
+						num = -1;
+						switch (num2)
+						{
+						case 2:
+							Module1.SaveError(Information.Err(), "frmSalesInvoicePrint", "btnPrintLetter_click", "");
+							goto end_IL_0001;
+						}
+						break;
+					}
+				}
+			}
+			catch (object obj) when (obj is Exception && num2 != 0 && num == 0)
+			{
+				ProjectData.SetProjectError((Exception)obj);
+				try0001_dispatch = 1194;
+				continue;
+			}
+			throw ProjectData.CreateProjectError(-2146828237);
+			continue;
+			end_IL_0001:
+			break;
+		}
+		if (num != 0)
+		{
+			ProjectData.ClearProjectError();
+		}
+	}
+
+	private void btnPrintCommercial_Click(object sender, EventArgs e)
+	{
+		//IL_003a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0041: Expected O, but got Unknown
+		int try0001_dispatch = -1;
+		int num2 = default(int);
+		int num = default(int);
+		while (true)
+		{
+			try
+			{
+				/*Note: ILSpy has introduced the following switch to emulate a goto from catch-block to try-block*/;
+				checked
+				{
+					switch (try0001_dispatch)
+					{
+					default:
+						ProjectData.ClearProjectError();
+						num2 = 2;
+						if (_totalPrintCommercial <= 0 || MessageBox.Show("Faktur Komersial sudah pernah dicetak. Apakah hendak dicetak ulang?", "Konfirmasi", MessageBoxButtons.YesNo) != DialogResult.No)
+						{
+							Printer val = new Printer();
+							val.ScaleMode = 6;
+							val.Width = 11907;
+							val.Height = 7880;
+							val.Font = new Font("Times New Roman", 11f);
+							double num3 = 1.0;
+							int num4 = 132;
+							val.CurrentX = num4;
+							val.CurrentY = (float)(num3 + 3.0 + (double)Module1.pubCustomY);
+							val.Print(new object[1] { lblDateCommercial.Text });
+							val.CurrentX = num4;
+							val.CurrentY = (float)(num3 + 8.0 + (double)Module1.pubCustomY);
+							val.Print(new object[1] { lblYthCommercial.Text });
+							val.CurrentX = num4;
+							val.CurrentY = (float)(num3 + 13.0 + (double)Module1.pubCustomY);
+							val.Print(new object[1] { lblNameCommercial.Text });
+							val.Font = new Font("Times New Roman", 10f);
+							string[] array = Module1.divideString(lblAddressCommercial.Text, 44);
+							int num5 = (int)Math.Round(num3 + 18.0);
+							int num6 = Information.LBound(array);
+							int num7 = Information.UBound(array);
+							for (int i = num6; i <= num7; i++)
+							{
+								val.CurrentX = num4;
+								val.CurrentY = num5 + Module1.pubCustomY;
+								val.Print(new object[1] { array[i] });
+								num5 += 4;
+							}
+							val.Font = new Font("Times New Roman", 11f);
+							val.CurrentX = 5f;
+							val.CurrentY = (float)(num3 + 28.0 + (double)Module1.pubCustomY);
+							val.Print(new object[1] { lblInvoiceNoCommercial.Text });
+							val.Font = new Font("Times New Roman", 9f);
+							num5 = (int)Math.Round(num3 + 39.0);
+							int num8 = dgvItemCommercial.RowCount - 1;
+							for (int i = 0; i <= num8; i++)
+							{
+								val.CurrentX = 8f;
+								val.CurrentY = num5 + Module1.pubCustomY;
+								val.Print(new object[1] { dgvItemCommercial[0, i].Value });
+								val.CurrentX = 15f;
+								val.CurrentY = num5 + Module1.pubCustomY;
+								val.Print(new object[1] { dgvItemCommercial[1, i].Value });
+								val.CurrentX = 110f - val.TextWidth(Conversions.ToString(dgvItemCommercial[2, i].Value));
+								val.CurrentY = num5 + Module1.pubCustomY;
+								val.Print(new object[1] { dgvItemCommercial[2, i].Value });
+								val.CurrentX = 136f - val.TextWidth(Conversions.ToString(dgvItemCommercial[3, i].Value));
+								val.CurrentY = num5 + Module1.pubCustomY;
+								val.Print(new object[1] { dgvItemCommercial[3, i].Value });
+								val.CurrentX = 141f;
+								val.CurrentY = num5 + Module1.pubCustomY;
+								val.Print(new object[1] { "Rp." });
+								val.CurrentX = 167f - val.TextWidth(Conversions.ToString(dgvItemCommercial[4, i].Value));
+								val.CurrentY = num5 + Module1.pubCustomY;
+								val.Print(new object[1] { dgvItemCommercial[4, i].Value });
+								val.CurrentX = 171f;
+								val.CurrentY = num5 + Module1.pubCustomY;
+								val.Print(new object[1] { "Rp." });
+								val.CurrentX = 197f - val.TextWidth(Conversions.ToString(dgvItemCommercial[5, i].Value));
+								val.CurrentY = num5 + Module1.pubCustomY;
+								val.Print(new object[1] { dgvItemCommercial[5, i].Value });
+								num5 += 5;
+							}
+							num4 = 171;
+							num5 = (int)Math.Round(num3 + 89.0);
+							int num9 = 197;
+							val.CurrentX = 10f;
+							val.CurrentY = num5 + Module1.pubCustomY;
+							val.CurrentX = num4;
+							val.CurrentY = num5 + Module1.pubCustomY;
+							val.Print(new object[1] { "Rp." });
+							val.CurrentX = (float)num9 - val.TextWidth(lblTotalPriceCommercial.Text);
+							val.CurrentY = num5 + Module1.pubCustomY;
+							val.Print(new object[1] { lblTotalPriceCommercial.Text });
+							if (Operators.CompareString(txtDiscountDescription.Text, "", TextCompare: false) != 0)
+							{
+								num5 = (int)Math.Round(num3 + 94.0);
+								val.CurrentX = 10f;
+								val.CurrentY = num5 + Module1.pubCustomY;
+								val.Print(new object[1] { "Dikurangi Potongan Harga " + txtDiscountDescription.Text });
+							}
+							num5 = (int)Math.Round(num3 + 94.0);
+							val.CurrentX = num4;
+							val.CurrentY = num5 + Module1.pubCustomY;
+							val.Print(new object[1] { "Rp." });
+							val.CurrentX = (float)num9 - val.TextWidth(lblDiscountValueCommercial.Text);
+							val.CurrentY = num5 + Module1.pubCustomY;
+							val.Print(new object[1] { lblDiscountValueCommercial.Text });
+							num5 = (int)Math.Round(num3 + 99.0);
+							val.CurrentX = num4;
+							val.CurrentY = num5 + Module1.pubCustomY;
+							val.Print(new object[1] { "Rp." });
+							val.CurrentX = (float)num9 - val.TextWidth(lblDeductionCommercial.Text);
+							val.CurrentY = num5 + Module1.pubCustomY;
+							val.Print(new object[1] { lblDeductionCommercial.Text });
+							num5 = (int)Math.Round(num3 + 104.0);
+							val.CurrentX = 10f;
+							val.CurrentY = num5 + Module1.pubCustomY;
+							val.CurrentX = num4;
+							val.CurrentY = num5 + Module1.pubCustomY;
+							val.Print(new object[1] { "Rp." });
+							val.CurrentX = (float)num9 - val.TextWidth(lblTotalPaymentCommercial.Text);
+							val.CurrentY = num5 + Module1.pubCustomY;
+							val.Print(new object[1] { lblTotalPaymentCommercial.Text });
+							val.NewPage();
+							val.EndDoc();
+							cSalesInvoice.SetTotalPrint(_id, 1);
+							_totalPrintCommercial++;
+							lblTotalPrintCommercial.Text = "Faktur Komersial telah dicetak sebanyak " + Conversions.ToString(_totalPrintCommercial) + " kali.";
+						}
+						goto end_IL_0001;
+					case 2153:
+						num = -1;
+						switch (num2)
+						{
+						case 2:
+							Module1.SaveError(Information.Err(), "frmSalesInvoicePrint", "btnPrintCommercial_click", "");
+							goto end_IL_0001;
+						}
+						break;
+					}
+				}
+			}
+			catch (object obj) when (obj is Exception && num2 != 0 && num == 0)
+			{
+				ProjectData.SetProjectError((Exception)obj);
+				try0001_dispatch = 2153;
+				continue;
+			}
+			throw ProjectData.CreateProjectError(-2146828237);
+			continue;
+			end_IL_0001:
+			break;
+		}
+		if (num != 0)
+		{
+			ProjectData.ClearProjectError();
+		}
+	}
+
+	private void btnPrintTax_Click(object sender, EventArgs e)
+	{
+		//IL_003a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0040: Expected O, but got Unknown
+		int try0001_dispatch = -1;
+		int num2 = default(int);
+		int num = default(int);
+		while (true)
+		{
+			try
+			{
+				/*Note: ILSpy has introduced the following switch to emulate a goto from catch-block to try-block*/;
+				checked
+				{
+					switch (try0001_dispatch)
+					{
+					default:
+						ProjectData.ClearProjectError();
+						num2 = 2;
+						if (_totalPrintTax <= 0 || MessageBox.Show("Faktur Pajak sudah pernah dicetak. Apakah hendak dicetak ulang?", "Konfirmasi", MessageBoxButtons.YesNo) != DialogResult.No)
+						{
+							Printer val = new Printer();
+							val.ScaleMode = 6;
+							val.CurrentX = 22f;
+							val.CurrentY = 15f;
+							val.Font = new Font("Times New Roman", 11f);
+							val.CurrentX = 106f;
+							val.CurrentY = 17f;
+							val.Print(new object[1] { lblYear.Text + lblTaxInvoiceNo.Text });
+							val.CurrentX = 32f;
+							val.CurrentY = 32f;
+							val.Print(new object[1] { lblCompanyName.Text });
+							val.CurrentX = 32f;
+							val.CurrentY = 42f;
+							val.Font = new Font("Times New Roman", 10f);
+							val.Print(new object[1] { _taxAddress });
+							val.Font = new Font("Times New Roman", 11f);
+							val.CurrentX = 32f;
+							val.CurrentY = 52f;
+							val.Print(new object[1] { _NPWP });
+							val.CurrentX = 32f;
+							val.CurrentY = 69f;
+							val.Print(new object[1] { Module1.cleanString(lblNameTax.Text) });
+							val.CurrentX = 32f;
+							val.CurrentY = 77f;
+							val.Font = new Font("Times New Roman", 10f);
+							val.Print(new object[1] { Module1.cleanString(lblAddressTax.Text) });
+							val.Font = new Font("Times New Roman", 11f);
+							val.CurrentX = 32f;
+							val.CurrentY = 83f;
+							val.Print(new object[1] { Module1.cleanString(lblNPWP.Text) });
+							val.CurrentX = 155f;
+							val.CurrentY = 83f;
+							if (chkNPPKP.Checked)
+							{
+								val.Print(new object[1] { Module1.cleanString(lblNPWP.Text) });
+							}
+							int num3 = 190;
+							val.CurrentY = 100f;
+							int num4 = dgvItemTax.RowCount - 1;
+							for (int i = 0; i <= num4; i++)
+							{
+								val.CurrentX = 14f;
+								int num5 = (int)Math.Round(val.CurrentY);
+								val.Print(new object[1] { dgvItemTax[0, i].Value });
+								val.CurrentX = 29f;
+								val.CurrentY = num5;
+								val.Print(new object[1] { dgvItemTax[1, i].Value });
+								val.CurrentX = 90f;
+								val.CurrentY = num5;
+								val.Print(new object[1] { dgvItemTax[2, i].Value });
+								val.CurrentX = 98f;
+								val.CurrentY = num5;
+								val.Print(new object[1] { dgvItemTax[3, i].Value });
+								val.CurrentX = (float)num3 - val.TextWidth(Conversions.ToString(dgvItemTax[4, i].Value));
+								val.CurrentY = num5;
+								val.Print(new object[1] { Operators.ConcatenateObject(dgvItemTax[4, i].Value, ",-") });
+							}
+							val.CurrentX = 31f;
+							val.CurrentY = 179f;
+							val.Print(new object[1] { txtStar.Text });
+							val.CurrentX = (float)num3 - val.TextWidth(lblTotalPriceTax.Text);
+							val.CurrentY = 179f;
+							val.Print(new object[1] { lblTotalPriceTax.Text + ",-" });
+							val.CurrentX = 65f;
+							val.CurrentY = 185f;
+							val.Print(new object[1] { txtDiscountDescriptionTax.Text });
+							val.CurrentX = (float)num3 - val.TextWidth(lblDiscountValueTax.Text);
+							val.CurrentY = 185f;
+							if (Operators.CompareString(lblDiscountValueTax.Text, "", TextCompare: false) != 0)
+							{
+								val.Print(new object[1] { lblDiscountValueTax.Text + ",-" });
+							}
+							else
+							{
+								val.Print(new object[1] { "-" });
+							}
+							val.CurrentX = num3;
+							val.CurrentY = 190f;
+							val.Print(new object[1] { "-" });
+							val.Font = new Font("Times New Roman", 9f);
+							val.CurrentX = 62f;
+							val.CurrentY = 197f;
+							val.Print(new object[1] { txtDPP.Text });
+							val.Font = new Font("Times New Roman", 11f);
+							val.CurrentX = (float)num3 - val.TextWidth(lblDPP.Text);
+							val.CurrentY = 197f;
+							val.Print(new object[1] { lblDPP.Text + ",-" });
+							val.CurrentX = (float)num3 - val.TextWidth(lblPPN.Text);
+							val.CurrentY = 203f;
+							val.Print(new object[1] { lblPPN.Text + ",-" });
+							val.CurrentX = 127f;
+							val.CurrentY = 213f;
+							val.Print(new object[1] { txtCityTax.Text });
+							val.CurrentX = 165f;
+							val.CurrentY = 213f;
+							val.Print(new object[1] { txtDateTax.Text });
+							val.CurrentX = 165f - val.TextWidth(Strings.Trim(txtTaxPersonName.Text)) / 2f;
+							val.CurrentY = 240f;
+							val.Print(new object[1] { txtTaxPersonName.Text });
+							val.CurrentX = 165f - val.TextWidth(Strings.Trim(txtTaxPersonPosition.Text)) / 2f;
+							val.CurrentY = 245f;
+							val.Print(new object[1] { txtTaxPersonPosition.Text });
+							val.NewPage();
+							val.EndDoc();
+							cSalesInvoice.SetTotalPrint(_id, 2);
+							_totalPrintTax++;
+							lblTotalPrintTax.Text = "Faktur Pajak telah dicetak sebanyak " + Conversions.ToString(_totalPrintTax) + " kali.";
+						}
+						goto end_IL_0001;
+					case 2018:
+						num = -1;
+						switch (num2)
+						{
+						case 2:
+							Module1.SaveError(Information.Err(), "frmSalesInvoicePrint", "btnPrintTax_click", "");
+							goto end_IL_0001;
+						}
+						break;
+					}
+				}
+			}
+			catch (object obj) when (obj is Exception && num2 != 0 && num == 0)
+			{
+				ProjectData.SetProjectError((Exception)obj);
+				try0001_dispatch = 2018;
+				continue;
+			}
+			throw ProjectData.CreateProjectError(-2146828237);
+			continue;
+			end_IL_0001:
+			break;
+		}
+		if (num != 0)
+		{
+			ProjectData.ClearProjectError();
+		}
+	}
 }

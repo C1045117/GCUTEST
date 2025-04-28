@@ -1,226 +1,431 @@
 using System;
+using System.Collections;
+using System.ComponentModel;
+using System.Data;
+using System.Diagnostics;
+using System.Drawing;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
+using GCUv2.My;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
 
-namespace GCUv2
+namespace GCUv2;
+
+[DesignerGenerated]
+public class frmCustomerMiniSearch : Form
 {
-    public class Form
-    {
+	private IContainer components;
 
-        private class ComponentModel.IContainer components;
-        private class Button _btnSearch;
-        private class DataGridView _dgvList;
-        private class TextBox _txtName;
-        private class Label _Label2;
-        private string _callerName;
-        private int32 _branchId;
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnSearch")]
+	private Button _btnSearch;
 
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("dgvList")]
+	private DataGridView _dgvList;
 
-        protected override strict void Dispose(boolean disposing) {
+	private string _callerName;
 
-          boolean var_1;
+	private int _branchId;
 
-        }
+	internal virtual Button btnSearch
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnSearch;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnSearch_Click;
+			Button button = _btnSearch;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnSearch = value;
+			button = _btnSearch;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
 
-        private void InitializeComponent() {
+	internal virtual DataGridView dgvList
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _dgvList;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			KeyEventHandler value2 = dgvList_KeyDown;
+			EventHandler value3 = dgvList_GotFocus;
+			EventHandler value4 = dgvList_LostFocus;
+			EventHandler value5 = dgvList_DoubleClick;
+			DataGridView dataGridView = _dgvList;
+			if (dataGridView != null)
+			{
+				dataGridView.KeyDown -= value2;
+				dataGridView.GotFocus -= value3;
+				dataGridView.LostFocus -= value4;
+				dataGridView.DoubleClick -= value5;
+			}
+			_dgvList = value;
+			dataGridView = _dgvList;
+			if (dataGridView != null)
+			{
+				dataGridView.KeyDown += value2;
+				dataGridView.GotFocus += value3;
+				dataGridView.LostFocus += value4;
+				dataGridView.DoubleClick += value5;
+			}
+		}
+	}
 
+	[field: AccessedThroughProperty("txtName")]
+	internal virtual TextBox txtName
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-        }
+	[field: AccessedThroughProperty("Label2")]
+	internal virtual Label Label2
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-        assem override strict specialname class Button get_btnSearch() {
+	public string CallerName
+	{
+		get
+		{
+			return _callerName;
+		}
+		set
+		{
+			_callerName = value;
+		}
+	}
 
-          loc_4407B9: ldarg.0
-          loc_4407BA: ldfld GCUv2.frmCustomerMiniSearch::_btnSearch
-          loc_4407BF: br.s loc_4407C1
-          loc_4407C1: // Referenced from: loc_4407BF
-          loc_4407C1: ret
-        }
+	public int BranchId
+	{
+		get
+		{
+			return _branchId;
+		}
+		set
+		{
+			_branchId = value;
+		}
+	}
 
-        assem override strict specialname void set_btnSearch(class Button WithEventsValue) {
+	[DebuggerNonUserCode]
+	protected override void Dispose(bool disposing)
+	{
+		try
+		{
+			if (disposing && components != null)
+			{
+				components.Dispose();
+			}
+		}
+		finally
+		{
+			base.Dispose(disposing);
+		}
+	}
 
-          class System.EventHandler var_1;
-          class Button var_2;
+	[System.Diagnostics.DebuggerStepThrough]
+	private void InitializeComponent()
+	{
+		this.btnSearch = new System.Windows.Forms.Button();
+		this.dgvList = new System.Windows.Forms.DataGridView();
+		this.txtName = new System.Windows.Forms.TextBox();
+		this.Label2 = new System.Windows.Forms.Label();
+		((System.ComponentModel.ISupportInitialize)this.dgvList).BeginInit();
+		base.SuspendLayout();
+		this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnSearch.Location = new System.Drawing.Point(50, 38);
+		this.btnSearch.Name = "btnSearch";
+		this.btnSearch.Size = new System.Drawing.Size(47, 24);
+		this.btnSearch.TabIndex = 1;
+		this.btnSearch.Text = "&Cari";
+		this.btnSearch.UseVisualStyleBackColor = true;
+		this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+		this.dgvList.Location = new System.Drawing.Point(50, 68);
+		this.dgvList.Name = "dgvList";
+		this.dgvList.Size = new System.Drawing.Size(553, 183);
+		this.dgvList.TabIndex = 2;
+		this.txtName.Location = new System.Drawing.Point(50, 12);
+		this.txtName.Name = "txtName";
+		this.txtName.Size = new System.Drawing.Size(199, 20);
+		this.txtName.TabIndex = 0;
+		this.Label2.AutoSize = true;
+		this.Label2.Location = new System.Drawing.Point(8, 15);
+		this.Label2.Name = "Label2";
+		this.Label2.Size = new System.Drawing.Size(35, 13);
+		this.Label2.TabIndex = 33;
+		this.Label2.Text = "Nama";
+		base.AcceptButton = this.btnSearch;
+		base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
+		base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+		base.ClientSize = new System.Drawing.Size(615, 263);
+		base.Controls.Add(this.btnSearch);
+		base.Controls.Add(this.dgvList);
+		base.Controls.Add(this.txtName);
+		base.Controls.Add(this.Label2);
+		base.KeyPreview = true;
+		base.MaximizeBox = false;
+		base.Name = "frmCustomerMiniSearch";
+		base.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+		this.Text = "Cari Customer";
+		((System.ComponentModel.ISupportInitialize)this.dgvList).EndInit();
+		base.ResumeLayout(false);
+		base.PerformLayout();
+	}
 
-        }
+	public frmCustomerMiniSearch()
+	{
+		base.KeyDown += frmCustomerMiniSearch_KeyDown;
+		InitializeComponent();
+		DoubleBuffered = true;
+	}
 
-        assem override strict specialname class DataGridView get_dgvList() {
+	private void frmCustomerMiniSearch_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Escape)
+		{
+			Close();
+		}
+	}
 
-          loc_440808: ldarg.0
-          loc_440809: ldfld GCUv2.frmCustomerMiniSearch::_dgvList
-          loc_44080E: br.s loc_440810
-          loc_440810: // Referenced from: loc_44080E
-          loc_440810: ret
-        }
+	private void formatGrid()
+	{
+		dgvList.Columns.Clear();
+		dgvList.Columns.Add("", "custId");
+		dgvList.Columns.Add("", "branchId");
+		dgvList.Columns.Add("", "Nama");
+		dgvList.Columns.Add("", "Alamat");
+		dgvList.Columns.Add("", "Wilayah");
+		dgvList.Columns.Add("", "PT");
+		dgvList.Columns.Add("", "NPWP");
+		dgvList.Columns.Add("", "storeId");
+		dgvList.Columns.Add("", "unpaidLimit");
+		dgvList.Columns[0].Visible = false;
+		dgvList.Columns[1].Visible = false;
+		dgvList.Columns[2].Width = 210;
+		dgvList.Columns[3].Width = 200;
+		dgvList.Columns[4].Width = 120;
+		dgvList.Columns[5].Visible = false;
+		dgvList.Columns[6].Visible = false;
+		dgvList.Columns[7].Visible = false;
+		dgvList.Columns[8].Visible = false;
+		dgvList.RowHeadersVisible = false;
+		dgvList.AllowUserToAddRows = false;
+		dgvList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+		dgvList.ReadOnly = true;
+		dgvList.AlternatingRowsDefaultCellStyle.BackColor = Color.WhiteSmoke;
+		dgvList.AllowUserToResizeRows = false;
+	}
 
-        assem override strict specialname void set_dgvList(class DataGridView WithEventsValue) {
+	private void btnSearch_Click(object sender, EventArgs e)
+	{
+		int try0001_dispatch = -1;
+		int num2 = default(int);
+		int num = default(int);
+		while (true)
+		{
+			try
+			{
+				/*Note: ILSpy has introduced the following switch to emulate a goto from catch-block to try-block*/;
+				switch (try0001_dispatch)
+				{
+				default:
+				{
+					ProjectData.ClearProjectError();
+					num2 = 2;
+					int isParent = 99;
+					if ((Operators.CompareString(_callerName, "SalesOrder", TextCompare: false) == 0) | (Operators.CompareString(_callerName, "DeliveryOrder", TextCompare: false) == 0) | (Operators.CompareString(_callerName, "SalesInvoice", TextCompare: false) == 0) | (Operators.CompareString(_callerName, "SalesReturn", TextCompare: false) == 0) | (Operators.CompareString(_callerName, "SalesReceipt", TextCompare: false) == 0))
+					{
+						isParent = 0;
+					}
+					DataTable dataTable = cCustomer.Search(Module1.cleanString(txtName.Text), "", 0, 0, 0, 0, 0, 1, BelongToGroup: false, 0, Module1.pubGroupId, _branchId, 0, 0, isParent);
+					formatGrid();
+					dgvList.Rows.Clear();
+					IEnumerator enumerator = dataTable.Rows.GetEnumerator();
+					while (enumerator.MoveNext())
+					{
+						DataRow dataRow = (DataRow)enumerator.Current;
+						dgvList.Rows.Add(dataRow["custId"], dataRow["branchId"], dataRow["custName"], dataRow["custAddress"], dataRow["wilName"], dataRow["custPT"], dataRow["custNPWP"], dataRow["storeId"], dataRow["custPiutang"]);
+					}
+					if (enumerator is IDisposable)
+					{
+						(enumerator as IDisposable).Dispose();
+					}
+					if (dataTable.Rows.Count == 0)
+					{
+						Interaction.MsgBox("Data tidak ditemukan", MsgBoxStyle.Information);
+						txtName.Focus();
+					}
+					else
+					{
+						dgvList.Focus();
+					}
+					goto end_IL_0001;
+				}
+				case 524:
+					num = -1;
+					switch (num2)
+					{
+					case 2:
+						Module1.SaveError(Information.Err(), "frmCustomerMiniSearch", "btnSearch_click", "");
+						goto end_IL_0001;
+					}
+					break;
+				}
+			}
+			catch (object obj) when (obj is Exception && num2 != 0 && num == 0)
+			{
+				ProjectData.SetProjectError((Exception)obj);
+				try0001_dispatch = 524;
+				continue;
+			}
+			throw ProjectData.CreateProjectError(-2146828237);
+			continue;
+			end_IL_0001:
+			break;
+		}
+		if (num != 0)
+		{
+			ProjectData.ClearProjectError();
+		}
+	}
 
-          class KeyEventHandler var_1;
-          class System.EventHandler var_2;
-          class System.EventHandler var_3;
-          class System.EventHandler var_4;
-          class DataGridView var_5;
+	private void dgvList_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Return)
+		{
+			sendCustomer();
+			e.SuppressKeyPress = true;
+		}
+		else if (e.Shift & (e.KeyCode == Keys.Tab))
+		{
+			btnSearch.Focus();
+			e.SuppressKeyPress = true;
+		}
+		else if (e.KeyCode == Keys.Tab)
+		{
+			txtName.Focus();
+			e.SuppressKeyPress = true;
+		}
+	}
 
-        }
+	private void dgvList_GotFocus(object sender, EventArgs e)
+	{
+		if (dgvList.RowCount > 0)
+		{
+			dgvList.CurrentRow.Selected = true;
+		}
+	}
 
-        assem override strict specialname class TextBox get_txtName() {
+	private void dgvList_LostFocus(object sender, EventArgs e)
+	{
+		if (dgvList.RowCount > 0)
+		{
+			dgvList.CurrentRow.Selected = false;
+		}
+	}
 
-          loc_4408B5: ldarg.0
-          loc_4408B6: ldfld GCUv2.frmCustomerMiniSearch::_txtName
-          loc_4408BB: br.s loc_4408BD
-          loc_4408BD: // Referenced from: loc_4408BB
-          loc_4408BD: ret
-        }
+	private void dgvList_DoubleClick(object sender, EventArgs e)
+	{
+		sendCustomer();
+	}
 
-        assem override strict specialname void set_txtName(class TextBox WithEventsValue) {
-
-          loc_4408BF: ldarg.0
-          loc_4408C0: ldarg.1
-          loc_4408C1: stfld GCUv2.frmCustomerMiniSearch::_txtName
-          loc_4408C6: ret
-        }
-
-        assem override strict specialname class Label get_Label2() {
-
-          loc_4408C8: ldarg.0
-          loc_4408C9: ldfld GCUv2.frmCustomerMiniSearch::_Label2
-          loc_4408CE: br.s loc_4408D0
-          loc_4408D0: // Referenced from: loc_4408CE
-          loc_4408D0: ret
-        }
-
-        assem override strict specialname void set_Label2(class Label WithEventsValue) {
-
-          loc_4408D2: ldarg.0
-          loc_4408D3: ldarg.1
-          loc_4408D4: stfld GCUv2.frmCustomerMiniSearch::_Label2
-          loc_4408D9: ret
-        }
-
-        public specialname string get_CallerName() {
-
-          string str_1;
-
-        }
-
-        public specialname void set_CallerName(string value) {
-
-          loc_4408F5: nop
-          loc_4408F6: ldarg.0
-          loc_4408F7: ldarg.1
-          loc_4408F8: stfld GCUv2.frmCustomerMiniSearch::_callerName
-          loc_4408FD: ret
-        }
-
-        public specialname int32 get_BranchId() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_BranchId(int32 value) {
-
-          loc_440919: nop
-          loc_44091A: ldarg.0
-          loc_44091B: ldarg.1
-          loc_44091C: stfld GCUv2.frmCustomerMiniSearch::_branchId
-          loc_440921: ret
-        }
-
-        public void frmCustomerMiniSearch() {
-
-          loc_440923: nop
-          loc_440924: ldarg.0
-          loc_440925: call instance void System.Windows.Forms.Form::.ctor()
-          loc_44092A: nop
-          loc_44092B: ldarg.0
-          loc_44092C: ldarg.0
-          loc_44092D: ldftn instance void GCUv2.frmCustomerMiniSearch::frmCustomerMiniSearch_KeyDown(object, class KeyEventArgs)
-          loc_440933: newobj instance void System.Windows.Forms.KeyEventHandler::.ctor(object, System.IntPtr)
-          loc_440938: call instance void System.Windows.Forms.Control::add_KeyDown(class KeyEventHandler)
-          loc_44093D: nop
-          loc_44093E: ldarg.0
-          loc_44093F: call instance void GCUv2.frmCustomerMiniSearch::InitializeComponent()
-          loc_440944: nop
-          loc_440945: ldarg.0
-          loc_440946: ldc.i4.1
-          loc_440947: callvirt instance void System.Windows.Forms.Control::set_DoubleBuffered(boolean)
-          loc_44094C: nop
-          loc_44094D: ret
-        }
-
-        private void frmCustomerMiniSearch_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void formatGrid() {
-
-
-        }
-
-        private void btnSearch_Click(object sender, class System.EventArgs e) {
-
-          int32 num_1;
-          int32 num_2;
-          class DataTable var_1;
-          int32 num_3;
-          boolean var_2;
-          class System.Collections.IEnumerator var_3;
-          class DataRow var_4;
-          boolean var_5;
-          boolean var_6;
-
-        }
-
-        private void dgvList_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-          boolean var_2;
-          boolean var_3;
-
-        }
-
-        private void dgvList_GotFocus(object sender, class System.EventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void dgvList_LostFocus(object sender, class System.EventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void dgvList_DoubleClick(object sender, class System.EventArgs e) {
-
-          loc_440F2D: nop
-          loc_440F2E: ldarg.0
-          loc_440F2F: call instance void GCUv2.frmCustomerMiniSearch::sendCustomer()
-          loc_440F34: nop
-          loc_440F35: ret
-        }
-
-        public void sendCustomer() {
-
-          boolean var_1;
-          boolean var_2;
-          boolean var_3;
-          boolean var_4;
-          boolean var_5;
-          boolean var_6;
-          boolean var_7;
-          boolean var_8;
-          boolean var_9;
-          boolean var_10;
-          boolean var_11;
-          boolean var_12;
-          boolean var_13;
-          boolean var_14;
-          boolean var_15;
-          boolean var_16;
-
-        }
-
-    }
+	public void sendCustomer()
+	{
+		if (dgvList.RowCount > 0 && Operators.ConditionalCompareObjectGreater(dgvList[0, dgvList.CurrentRow.Index].Value, 0, TextCompare: false))
+		{
+			if (Operators.CompareString(_callerName, "SalesOrder", TextCompare: false) == 0)
+			{
+				MyProject.Forms.frmSalesOrder.CustomerId = Conversions.ToDouble(dgvList[0, dgvList.CurrentRow.Index].Value);
+			}
+			else if (Operators.CompareString(_callerName, "DeliveryOrder", TextCompare: false) == 0)
+			{
+				MyProject.Forms.frmDeliveryOrder.CustomerId = Conversions.ToDouble(dgvList[0, dgvList.CurrentRow.Index].Value);
+			}
+			else if (Operators.CompareString(_callerName, "SalesInvoice", TextCompare: false) == 0)
+			{
+				MyProject.Forms.frmSalesInvoice.CustomerId = Conversions.ToDouble(dgvList[0, dgvList.CurrentRow.Index].Value);
+			}
+			else if (Operators.CompareString(_callerName, "SalesReturn", TextCompare: false) == 0)
+			{
+				MyProject.Forms.frmSalesReturn.CustomerId = Conversions.ToDouble(dgvList[0, dgvList.CurrentRow.Index].Value);
+			}
+			else if (Operators.CompareString(_callerName, "CustomerPayment", TextCompare: false) == 0)
+			{
+				MyProject.Forms.frmCustomerPayment.CustomerId = Conversions.ToDouble(dgvList[0, dgvList.CurrentRow.Index].Value);
+			}
+			else if (Operators.CompareString(_callerName, "SalesReceipt", TextCompare: false) == 0)
+			{
+				MyProject.Forms.frmSalesReceipt.CustomerId = Conversions.ToDouble(dgvList[0, dgvList.CurrentRow.Index].Value);
+			}
+			else if (Operators.CompareString(_callerName, "ReportSalesOrder", TextCompare: false) == 0)
+			{
+				MyProject.Forms.frmReportSalesOrder.CustomerId = Conversions.ToDouble(dgvList[0, dgvList.CurrentRow.Index].Value);
+				MyProject.Forms.frmReportSalesOrder.lblCustomerName.Text = Conversions.ToString(dgvList[2, dgvList.CurrentRow.Index].Value);
+			}
+			else if (Operators.CompareString(_callerName, "ReportDeliveryOrder", TextCompare: false) == 0)
+			{
+				MyProject.Forms.frmReportDeliveryOrder.CustomerId = Conversions.ToDouble(dgvList[0, dgvList.CurrentRow.Index].Value);
+				MyProject.Forms.frmReportDeliveryOrder.lblCustomerName.Text = Conversions.ToString(dgvList[2, dgvList.CurrentRow.Index].Value);
+			}
+			else if (Operators.CompareString(_callerName, "ReportSalesItem", TextCompare: false) == 0)
+			{
+				MyProject.Forms.frmReportSalesItem.CustomerId = Conversions.ToDouble(dgvList[0, dgvList.CurrentRow.Index].Value);
+				MyProject.Forms.frmReportSalesItem.lblCustomerName.Text = Conversions.ToString(dgvList[2, dgvList.CurrentRow.Index].Value);
+			}
+			else if (Operators.CompareString(_callerName, "ReportSalesInvoice", TextCompare: false) == 0)
+			{
+				MyProject.Forms.frmReportSalesInvoice.CustomerId = Conversions.ToDouble(dgvList[0, dgvList.CurrentRow.Index].Value);
+				MyProject.Forms.frmReportSalesInvoice.lblCustomerName.Text = Conversions.ToString(dgvList[2, dgvList.CurrentRow.Index].Value);
+			}
+			else if (Operators.CompareString(_callerName, "ReportSalesReturn", TextCompare: false) == 0)
+			{
+				MyProject.Forms.frmReportSalesReturn.CustomerId = Conversions.ToDouble(dgvList[0, dgvList.CurrentRow.Index].Value);
+				MyProject.Forms.frmReportSalesReturn.lblCustomerName.Text = Conversions.ToString(dgvList[2, dgvList.CurrentRow.Index].Value);
+			}
+			else if (Operators.CompareString(_callerName, "ReportSalesReturnItem", TextCompare: false) == 0)
+			{
+				MyProject.Forms.frmReportSalesReturnItem.CustomerId = Conversions.ToDouble(dgvList[0, dgvList.CurrentRow.Index].Value);
+				MyProject.Forms.frmReportSalesReturnItem.lblCustomerName.Text = Conversions.ToString(dgvList[2, dgvList.CurrentRow.Index].Value);
+			}
+			else if (Operators.CompareString(_callerName, "ReportReceivable", TextCompare: false) == 0)
+			{
+				MyProject.Forms.frmReportReceivable.CustomerId = Conversions.ToDouble(dgvList[0, dgvList.CurrentRow.Index].Value);
+				MyProject.Forms.frmReportReceivable.lblCustomerName.Text = Conversions.ToString(dgvList[2, dgvList.CurrentRow.Index].Value);
+			}
+			else if (Operators.CompareString(_callerName, "ReportCustomerPayment", TextCompare: false) == 0)
+			{
+				MyProject.Forms.frmReportCustomerPayment.CustomerId = Conversions.ToDouble(dgvList[0, dgvList.CurrentRow.Index].Value);
+				MyProject.Forms.frmReportCustomerPayment.lblCustomerName.Text = Conversions.ToString(dgvList[2, dgvList.CurrentRow.Index].Value);
+			}
+			else if (Operators.CompareString(_callerName, "ReportSalesReturnPayment", TextCompare: false) == 0)
+			{
+				MyProject.Forms.frmReportSalesReturnPayment.CustomerId = Conversions.ToDouble(dgvList[0, dgvList.CurrentRow.Index].Value);
+				MyProject.Forms.frmReportSalesReturnPayment.lblCustomerName.Text = Conversions.ToString(dgvList[2, dgvList.CurrentRow.Index].Value);
+			}
+			Close();
+		}
+	}
 }

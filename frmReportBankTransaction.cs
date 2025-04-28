@@ -1,496 +1,890 @@
 using System;
+using System.Collections;
+using System.ComponentModel;
+using System.Data;
+using System.Diagnostics;
+using System.Drawing;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
+using GCUv2.My;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
 
-namespace GCUv2
+namespace GCUv2;
+
+[DesignerGenerated]
+public class frmReportBankTransaction : Form
 {
-    public class Form
-    {
-
-        private class ComponentModel.IContainer components;
-        private class Label _Label5;
-        private class ComboBox _cboIncomeExpense;
-        private class TextBox _txtDescription;
-        private class Label _Label4;
-        private class Label _Label3;
-        private class ComboBox _cboBankAccount;
-        private class Button _btnReset;
-        private class Button _btnWord;
-        private class Label _Label1;
-        private class Label _lblTotal;
-        private class Label _Label7;
-        private class ComboBox _cboAccount;
-        private class DataGridView _dgvList;
-        private class Button _btnSearch;
-        private class Label _Label2;
-        private class DateTimePicker _dtpEnd;
-        private class DateTimePicker _dtpBegin;
-        private class Button _btnPrint;
-
-
-        protected override strict void Dispose(boolean disposing) {
-
-          boolean var_1;
-
-        }
-
-        private void InitializeComponent() {
-
-
-        }
-
-        assem override strict specialname class Label get_Label5() {
-
-          loc_4A861A: ldarg.0
-          loc_4A861B: ldfld GCUv2.frmReportBankTransaction::_Label5
-          loc_4A8620: br.s loc_4A8622
-          loc_4A8622: // Referenced from: loc_4A8620
-          loc_4A8622: ret
-        }
-
-        assem override strict specialname void set_Label5(class Label WithEventsValue) {
-
-          loc_4A8624: ldarg.0
-          loc_4A8625: ldarg.1
-          loc_4A8626: stfld GCUv2.frmReportBankTransaction::_Label5
-          loc_4A862B: ret
-        }
-
-        assem override strict specialname class ComboBox get_cboIncomeExpense() {
-
-          loc_4A862D: ldarg.0
-          loc_4A862E: ldfld GCUv2.frmReportBankTransaction::_cboIncomeExpense
-          loc_4A8633: br.s loc_4A8635
-          loc_4A8635: // Referenced from: loc_4A8633
-          loc_4A8635: ret
-        }
-
-        assem override strict specialname void set_cboIncomeExpense(class ComboBox WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class ComboBox var_2;
-
-        }
-
-        assem override strict specialname class TextBox get_txtDescription() {
-
-          loc_4A867C: ldarg.0
-          loc_4A867D: ldfld GCUv2.frmReportBankTransaction::_txtDescription
-          loc_4A8682: br.s loc_4A8684
-          loc_4A8684: // Referenced from: loc_4A8682
-          loc_4A8684: ret
-        }
-
-        assem override strict specialname void set_txtDescription(class TextBox WithEventsValue) {
-
-          loc_4A8686: ldarg.0
-          loc_4A8687: ldarg.1
-          loc_4A8688: stfld GCUv2.frmReportBankTransaction::_txtDescription
-          loc_4A868D: ret
-        }
-
-        assem override strict specialname class Label get_Label4() {
-
-          loc_4A868F: ldarg.0
-          loc_4A8690: ldfld GCUv2.frmReportBankTransaction::_Label4
-          loc_4A8695: br.s loc_4A8697
-          loc_4A8697: // Referenced from: loc_4A8695
-          loc_4A8697: ret
-        }
-
-        assem override strict specialname void set_Label4(class Label WithEventsValue) {
-
-          loc_4A8699: ldarg.0
-          loc_4A869A: ldarg.1
-          loc_4A869B: stfld GCUv2.frmReportBankTransaction::_Label4
-          loc_4A86A0: ret
-        }
-
-        assem override strict specialname class Label get_Label3() {
-
-          loc_4A86A2: ldarg.0
-          loc_4A86A3: ldfld GCUv2.frmReportBankTransaction::_Label3
-          loc_4A86A8: br.s loc_4A86AA
-          loc_4A86AA: // Referenced from: loc_4A86A8
-          loc_4A86AA: ret
-        }
-
-        assem override strict specialname void set_Label3(class Label WithEventsValue) {
-
-          loc_4A86AC: ldarg.0
-          loc_4A86AD: ldarg.1
-          loc_4A86AE: stfld GCUv2.frmReportBankTransaction::_Label3
-          loc_4A86B3: ret
-        }
-
-        assem override strict specialname class ComboBox get_cboBankAccount() {
-
-          loc_4A86B5: ldarg.0
-          loc_4A86B6: ldfld GCUv2.frmReportBankTransaction::_cboBankAccount
-          loc_4A86BB: br.s loc_4A86BD
-          loc_4A86BD: // Referenced from: loc_4A86BB
-          loc_4A86BD: ret
-        }
-
-        assem override strict specialname void set_cboBankAccount(class ComboBox WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class ComboBox var_2;
-
-        }
-
-        assem override strict specialname class Button get_btnReset() {
-
-          loc_4A8704: ldarg.0
-          loc_4A8705: ldfld GCUv2.frmReportBankTransaction::_btnReset
-          loc_4A870A: br.s loc_4A870C
-          loc_4A870C: // Referenced from: loc_4A870A
-          loc_4A870C: ret
-        }
-
-        assem override strict specialname void set_btnReset(class Button WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Button var_2;
-
-        }
-
-        assem override strict specialname class Button get_btnWord() {
-
-          loc_4A8754: ldarg.0
-          loc_4A8755: ldfld GCUv2.frmReportBankTransaction::_btnWord
-          loc_4A875A: br.s loc_4A875C
-          loc_4A875C: // Referenced from: loc_4A875A
-          loc_4A875C: ret
-        }
-
-        assem override strict specialname void set_btnWord(class Button WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Button var_2;
-
-        }
-
-        assem override strict specialname class Label get_Label1() {
-
-          loc_4A87A4: ldarg.0
-          loc_4A87A5: ldfld GCUv2.frmReportBankTransaction::_Label1
-          loc_4A87AA: br.s loc_4A87AC
-          loc_4A87AC: // Referenced from: loc_4A87AA
-          loc_4A87AC: ret
-        }
-
-        assem override strict specialname void set_Label1(class Label WithEventsValue) {
-
-          loc_4A87AE: ldarg.0
-          loc_4A87AF: ldarg.1
-          loc_4A87B0: stfld GCUv2.frmReportBankTransaction::_Label1
-          loc_4A87B5: ret
-        }
-
-        assem override strict specialname class Label get_lblTotal() {
-
-          loc_4A87B7: ldarg.0
-          loc_4A87B8: ldfld GCUv2.frmReportBankTransaction::_lblTotal
-          loc_4A87BD: br.s loc_4A87BF
-          loc_4A87BF: // Referenced from: loc_4A87BD
-          loc_4A87BF: ret
-        }
-
-        assem override strict specialname void set_lblTotal(class Label WithEventsValue) {
-
-          loc_4A87C1: ldarg.0
-          loc_4A87C2: ldarg.1
-          loc_4A87C3: stfld GCUv2.frmReportBankTransaction::_lblTotal
-          loc_4A87C8: ret
-        }
-
-        assem override strict specialname class Label get_Label7() {
-
-          loc_4A87CA: ldarg.0
-          loc_4A87CB: ldfld GCUv2.frmReportBankTransaction::_Label7
-          loc_4A87D0: br.s loc_4A87D2
-          loc_4A87D2: // Referenced from: loc_4A87D0
-          loc_4A87D2: ret
-        }
-
-        assem override strict specialname void set_Label7(class Label WithEventsValue) {
-
-          loc_4A87D4: ldarg.0
-          loc_4A87D5: ldarg.1
-          loc_4A87D6: stfld GCUv2.frmReportBankTransaction::_Label7
-          loc_4A87DB: ret
-        }
-
-        assem override strict specialname class ComboBox get_cboAccount() {
-
-          loc_4A87DD: ldarg.0
-          loc_4A87DE: ldfld GCUv2.frmReportBankTransaction::_cboAccount
-          loc_4A87E3: br.s loc_4A87E5
-          loc_4A87E5: // Referenced from: loc_4A87E3
-          loc_4A87E5: ret
-        }
-
-        assem override strict specialname void set_cboAccount(class ComboBox WithEventsValue) {
-
-          loc_4A87E7: ldarg.0
-          loc_4A87E8: ldarg.1
-          loc_4A87E9: stfld GCUv2.frmReportBankTransaction::_cboAccount
-          loc_4A87EE: ret
-        }
-
-        assem override strict specialname class DataGridView get_dgvList() {
-
-          loc_4A87F0: ldarg.0
-          loc_4A87F1: ldfld GCUv2.frmReportBankTransaction::_dgvList
-          loc_4A87F6: br.s loc_4A87F8
-          loc_4A87F8: // Referenced from: loc_4A87F6
-          loc_4A87F8: ret
-        }
-
-        assem override strict specialname void set_dgvList(class DataGridView WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class KeyEventHandler var_2;
-          class System.EventHandler var_3;
-          class System.EventHandler var_4;
-          class DataGridView var_5;
-
-        }
-
-        assem override strict specialname class Button get_btnSearch() {
-
-          loc_4A889D: ldarg.0
-          loc_4A889E: ldfld GCUv2.frmReportBankTransaction::_btnSearch
-          loc_4A88A3: br.s loc_4A88A5
-          loc_4A88A5: // Referenced from: loc_4A88A3
-          loc_4A88A5: ret
-        }
-
-        assem override strict specialname void set_btnSearch(class Button WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Button var_2;
-
-        }
-
-        assem override strict specialname class Label get_Label2() {
-
-          loc_4A88EC: ldarg.0
-          loc_4A88ED: ldfld GCUv2.frmReportBankTransaction::_Label2
-          loc_4A88F2: br.s loc_4A88F4
-          loc_4A88F4: // Referenced from: loc_4A88F2
-          loc_4A88F4: ret
-        }
-
-        assem override strict specialname void set_Label2(class Label WithEventsValue) {
-
-          loc_4A88F6: ldarg.0
-          loc_4A88F7: ldarg.1
-          loc_4A88F8: stfld GCUv2.frmReportBankTransaction::_Label2
-          loc_4A88FD: ret
-        }
-
-        assem override strict specialname class DateTimePicker get_dtpEnd() {
-
-          loc_4A88FF: ldarg.0
-          loc_4A8900: ldfld GCUv2.frmReportBankTransaction::_dtpEnd
-          loc_4A8905: br.s loc_4A8907
-          loc_4A8907: // Referenced from: loc_4A8905
-          loc_4A8907: ret
-        }
-
-        assem override strict specialname void set_dtpEnd(class DateTimePicker WithEventsValue) {
-
-          class KeyEventHandler var_1;
-          class DateTimePicker var_2;
-
-        }
-
-        assem override strict specialname class DateTimePicker get_dtpBegin() {
-
-          loc_4A894C: ldarg.0
-          loc_4A894D: ldfld GCUv2.frmReportBankTransaction::_dtpBegin
-          loc_4A8952: br.s loc_4A8954
-          loc_4A8954: // Referenced from: loc_4A8952
-          loc_4A8954: ret
-        }
-
-        assem override strict specialname void set_dtpBegin(class DateTimePicker WithEventsValue) {
-
-          class KeyEventHandler var_1;
-          class DateTimePicker var_2;
-
-        }
-
-        assem override strict specialname class Button get_btnPrint() {
-
-          loc_4A899C: ldarg.0
-          loc_4A899D: ldfld GCUv2.frmReportBankTransaction::_btnPrint
-          loc_4A89A2: br.s loc_4A89A4
-          loc_4A89A4: // Referenced from: loc_4A89A2
-          loc_4A89A4: ret
-        }
-
-        assem override strict specialname void set_btnPrint(class Button WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Button var_2;
-
-        }
-
-        public void frmReportBankTransaction() {
-
-          class ComboBox var_1;
-
-        }
-
-        private void frmReportBankTransaction_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void frmReportBankTransaction_Load(object sender, class System.EventArgs e) {
-
-          loc_4A8AAE: nop
-          loc_4A8AAF: ldarg.0
-          loc_4A8AB0: call instance void GCUv2.frmReportBankTransaction::prepareForm()
-          loc_4A8AB5: nop
-          loc_4A8AB6: ret
-        }
-
-        private void prepareForm() {
-
-
-        }
-
-        private void dtpBegin_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-          boolean var_2;
-
-        }
-
-        private void dtpEnd_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-          boolean var_2;
-
-        }
-
-        private void cboBankAccount_SelectedIndexChanged(object sender, class System.EventArgs e) {
-
-          class GCUv2.cComboItem var_1;
-          class GCUv2.cComboItem var_2;
-          boolean var_3;
-          class GCUv2.cAccount var_4;
-          class ComboBox var_5;
-
-        }
-
-        private void cboIncomeExpense_SelectedIndexChanged(object sender, class System.EventArgs e) {
-
-          class GCUv2.cComboItem var_1;
-          class GCUv2.cComboItem var_2;
-          boolean var_3;
-          class GCUv2.cAccount var_4;
-          class ComboBox var_5;
-
-        }
-
-        private void btnSearch_Click(object sender, class System.EventArgs e) {
-
-          int32 num_1;
-          int32 num_2;
-          class GCUv2.cComboItem var_1;
-          class GCUv2.cComboItem var_2;
-          class GCUv2.cComboItem var_3;
-          class DataTable var_4;
-          double flt_1;
-          double flt_2;
-          boolean var_5;
-          boolean var_6;
-          boolean var_7;
-          class System.Collections.IEnumerator var_8;
-          class DataRow var_9;
-          boolean var_10;
-          boolean var_11;
-          boolean var_12;
-          boolean var_13;
-          boolean var_14;
-
-        }
-
-        private void formatGrid() {
-
-
-        }
-
-        private void dgvList_DoubleClick(object sender, class System.EventArgs e) {
-
-          loc_4A9570: nop
-          loc_4A9571: ldarg.0
-          loc_4A9572: call instance void GCUv2.frmReportBankTransaction::getData()
-          loc_4A9577: nop
-          loc_4A9578: ret
-        }
-
-        private void dgvList_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-          boolean var_2;
-          boolean var_3;
-
-        }
-
-        private void dgvList_GotFocus(object sender, class System.EventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void dgvList_LostFocus(object sender, class System.EventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void getData() {
-
-          boolean var_1;
-
-        }
-
-        private void btnWord_Click(object sender, class System.EventArgs e) {
-
-          loc_4A9752: nop
-          loc_4A9753: ldarg.0
-          loc_4A9754: ldc.i4.0
-          loc_4A9755: call instance void GCUv2.frmReportBankTransaction::ExportReport(boolean)
-          loc_4A975A: nop
-          loc_4A975B: ret
-        }
-
-        private void ExportReport(boolean Print) {
-
-          class GCUv2.MsWord var_1;
-
-        }
-
-        private void btnReset_Click(object sender, class System.EventArgs e) {
-
-          loc_4A8AAE: nop
-          loc_4A8AAF: ldarg.0
-          loc_4A8AB0: call instance void GCUv2.frmReportBankTransaction::prepareForm()
-          loc_4A8AB5: nop
-          loc_4A8AB6: ret
-        }
-
-        private void btnPrint_Click(object sender, class System.EventArgs e) {
-
-          boolean var_1;
-
-        }
-
-    }
+	private IContainer components;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("cboIncomeExpense")]
+	private ComboBox _cboIncomeExpense;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("cboBankAccount")]
+	private ComboBox _cboBankAccount;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnReset")]
+	private Button _btnReset;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnWord")]
+	private Button _btnWord;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("dgvList")]
+	private DataGridView _dgvList;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnSearch")]
+	private Button _btnSearch;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("dtpEnd")]
+	private DateTimePicker _dtpEnd;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("dtpBegin")]
+	private DateTimePicker _dtpBegin;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnPrint")]
+	private Button _btnPrint;
+
+	[field: AccessedThroughProperty("Label5")]
+	internal virtual Label Label5
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual ComboBox cboIncomeExpense
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _cboIncomeExpense;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = cboIncomeExpense_SelectedIndexChanged;
+			ComboBox comboBox = _cboIncomeExpense;
+			if (comboBox != null)
+			{
+				comboBox.SelectedIndexChanged -= value2;
+			}
+			_cboIncomeExpense = value;
+			comboBox = _cboIncomeExpense;
+			if (comboBox != null)
+			{
+				comboBox.SelectedIndexChanged += value2;
+			}
+		}
+	}
+
+	[field: AccessedThroughProperty("txtDescription")]
+	internal virtual TextBox txtDescription
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label4")]
+	internal virtual Label Label4
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label3")]
+	internal virtual Label Label3
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual ComboBox cboBankAccount
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _cboBankAccount;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = cboBankAccount_SelectedIndexChanged;
+			ComboBox comboBox = _cboBankAccount;
+			if (comboBox != null)
+			{
+				comboBox.SelectedIndexChanged -= value2;
+			}
+			_cboBankAccount = value;
+			comboBox = _cboBankAccount;
+			if (comboBox != null)
+			{
+				comboBox.SelectedIndexChanged += value2;
+			}
+		}
+	}
+
+	internal virtual Button btnReset
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnReset;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnReset_Click;
+			Button button = _btnReset;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnReset = value;
+			button = _btnReset;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
+
+	internal virtual Button btnWord
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnWord;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnWord_Click;
+			Button button = _btnWord;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnWord = value;
+			button = _btnWord;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
+
+	[field: AccessedThroughProperty("Label1")]
+	internal virtual Label Label1
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("lblTotal")]
+	internal virtual Label lblTotal
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label7")]
+	internal virtual Label Label7
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("cboAccount")]
+	internal virtual ComboBox cboAccount
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual DataGridView dgvList
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _dgvList;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = dgvList_DoubleClick;
+			KeyEventHandler value3 = dgvList_KeyDown;
+			EventHandler value4 = dgvList_GotFocus;
+			EventHandler value5 = dgvList_LostFocus;
+			DataGridView dataGridView = _dgvList;
+			if (dataGridView != null)
+			{
+				dataGridView.DoubleClick -= value2;
+				dataGridView.KeyDown -= value3;
+				dataGridView.GotFocus -= value4;
+				dataGridView.LostFocus -= value5;
+			}
+			_dgvList = value;
+			dataGridView = _dgvList;
+			if (dataGridView != null)
+			{
+				dataGridView.DoubleClick += value2;
+				dataGridView.KeyDown += value3;
+				dataGridView.GotFocus += value4;
+				dataGridView.LostFocus += value5;
+			}
+		}
+	}
+
+	internal virtual Button btnSearch
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnSearch;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnSearch_Click;
+			Button button = _btnSearch;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnSearch = value;
+			button = _btnSearch;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
+
+	[field: AccessedThroughProperty("Label2")]
+	internal virtual Label Label2
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual DateTimePicker dtpEnd
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _dtpEnd;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			KeyEventHandler value2 = dtpEnd_KeyDown;
+			DateTimePicker dateTimePicker = _dtpEnd;
+			if (dateTimePicker != null)
+			{
+				dateTimePicker.KeyDown -= value2;
+			}
+			_dtpEnd = value;
+			dateTimePicker = _dtpEnd;
+			if (dateTimePicker != null)
+			{
+				dateTimePicker.KeyDown += value2;
+			}
+		}
+	}
+
+	internal virtual DateTimePicker dtpBegin
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _dtpBegin;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			KeyEventHandler value2 = dtpBegin_KeyDown;
+			DateTimePicker dateTimePicker = _dtpBegin;
+			if (dateTimePicker != null)
+			{
+				dateTimePicker.KeyDown -= value2;
+			}
+			_dtpBegin = value;
+			dateTimePicker = _dtpBegin;
+			if (dateTimePicker != null)
+			{
+				dateTimePicker.KeyDown += value2;
+			}
+		}
+	}
+
+	internal virtual Button btnPrint
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnPrint;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnPrint_Click;
+			Button button = _btnPrint;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnPrint = value;
+			button = _btnPrint;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
+
+	[DebuggerNonUserCode]
+	protected override void Dispose(bool disposing)
+	{
+		try
+		{
+			if (disposing && components != null)
+			{
+				components.Dispose();
+			}
+		}
+		finally
+		{
+			base.Dispose(disposing);
+		}
+	}
+
+	[System.Diagnostics.DebuggerStepThrough]
+	private void InitializeComponent()
+	{
+		this.Label5 = new System.Windows.Forms.Label();
+		this.cboIncomeExpense = new System.Windows.Forms.ComboBox();
+		this.txtDescription = new System.Windows.Forms.TextBox();
+		this.Label4 = new System.Windows.Forms.Label();
+		this.Label3 = new System.Windows.Forms.Label();
+		this.cboBankAccount = new System.Windows.Forms.ComboBox();
+		this.btnReset = new System.Windows.Forms.Button();
+		this.btnWord = new System.Windows.Forms.Button();
+		this.Label1 = new System.Windows.Forms.Label();
+		this.lblTotal = new System.Windows.Forms.Label();
+		this.Label7 = new System.Windows.Forms.Label();
+		this.cboAccount = new System.Windows.Forms.ComboBox();
+		this.dgvList = new System.Windows.Forms.DataGridView();
+		this.btnSearch = new System.Windows.Forms.Button();
+		this.Label2 = new System.Windows.Forms.Label();
+		this.dtpEnd = new System.Windows.Forms.DateTimePicker();
+		this.dtpBegin = new System.Windows.Forms.DateTimePicker();
+		this.btnPrint = new System.Windows.Forms.Button();
+		((System.ComponentModel.ISupportInitialize)this.dgvList).BeginInit();
+		base.SuspendLayout();
+		this.Label5.AutoSize = true;
+		this.Label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label5.Location = new System.Drawing.Point(11, 94);
+		this.Label5.Name = "Label5";
+		this.Label5.Size = new System.Drawing.Size(28, 13);
+		this.Label5.TabIndex = 193;
+		this.Label5.Text = "Tipe";
+		this.cboIncomeExpense.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+		this.cboIncomeExpense.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+		this.cboIncomeExpense.FormattingEnabled = true;
+		this.cboIncomeExpense.Location = new System.Drawing.Point(91, 91);
+		this.cboIncomeExpense.Name = "cboIncomeExpense";
+		this.cboIncomeExpense.Size = new System.Drawing.Size(142, 21);
+		this.cboIncomeExpense.TabIndex = 178;
+		this.txtDescription.Location = new System.Drawing.Point(91, 145);
+		this.txtDescription.Name = "txtDescription";
+		this.txtDescription.Size = new System.Drawing.Size(141, 20);
+		this.txtDescription.TabIndex = 180;
+		this.Label4.AutoSize = true;
+		this.Label4.Location = new System.Drawing.Point(10, 148);
+		this.Label4.Name = "Label4";
+		this.Label4.Size = new System.Drawing.Size(62, 13);
+		this.Label4.TabIndex = 191;
+		this.Label4.Text = "Keterangan";
+		this.Label3.AutoSize = true;
+		this.Label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label3.Location = new System.Drawing.Point(11, 67);
+		this.Label3.Name = "Label3";
+		this.Label3.Size = new System.Drawing.Size(53, 13);
+		this.Label3.TabIndex = 190;
+		this.Label3.Text = "Rekening";
+		this.cboBankAccount.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+		this.cboBankAccount.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+		this.cboBankAccount.FormattingEnabled = true;
+		this.cboBankAccount.Location = new System.Drawing.Point(91, 64);
+		this.cboBankAccount.Name = "cboBankAccount";
+		this.cboBankAccount.Size = new System.Drawing.Size(142, 21);
+		this.cboBankAccount.TabIndex = 177;
+		this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnReset.Location = new System.Drawing.Point(145, 171);
+		this.btnReset.Name = "btnReset";
+		this.btnReset.Size = new System.Drawing.Size(47, 24);
+		this.btnReset.TabIndex = 183;
+		this.btnReset.Text = "&Reset";
+		this.btnReset.UseVisualStyleBackColor = true;
+		this.btnWord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnWord.Location = new System.Drawing.Point(737, 438);
+		this.btnWord.Name = "btnWord";
+		this.btnWord.Size = new System.Drawing.Size(73, 23);
+		this.btnWord.TabIndex = 185;
+		this.btnWord.Text = "&Word";
+		this.btnWord.UseVisualStyleBackColor = true;
+		this.Label1.AutoSize = true;
+		this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label1.Location = new System.Drawing.Point(10, 15);
+		this.Label1.Name = "Label1";
+		this.Label1.Size = new System.Drawing.Size(71, 13);
+		this.Label1.TabIndex = 189;
+		this.Label1.Text = "Tanggal awal";
+		this.lblTotal.AutoSize = true;
+		this.lblTotal.Location = new System.Drawing.Point(239, 437);
+		this.lblTotal.Name = "lblTotal";
+		this.lblTotal.Size = new System.Drawing.Size(91, 13);
+		this.lblTotal.TabIndex = 188;
+		this.lblTotal.Text = "Total Pencarian: -";
+		this.Label7.AutoSize = true;
+		this.Label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label7.Location = new System.Drawing.Point(10, 121);
+		this.Label7.Name = "Label7";
+		this.Label7.Size = new System.Drawing.Size(32, 13);
+		this.Label7.TabIndex = 187;
+		this.Label7.Text = "Akun";
+		this.cboAccount.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+		this.cboAccount.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+		this.cboAccount.FormattingEnabled = true;
+		this.cboAccount.Location = new System.Drawing.Point(92, 118);
+		this.cboAccount.Name = "cboAccount";
+		this.cboAccount.Size = new System.Drawing.Size(142, 21);
+		this.cboAccount.TabIndex = 179;
+		this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+		this.dgvList.Location = new System.Drawing.Point(242, 12);
+		this.dgvList.Name = "dgvList";
+		this.dgvList.Size = new System.Drawing.Size(647, 419);
+		this.dgvList.TabIndex = 184;
+		this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnSearch.Location = new System.Drawing.Point(92, 171);
+		this.btnSearch.Name = "btnSearch";
+		this.btnSearch.Size = new System.Drawing.Size(47, 24);
+		this.btnSearch.TabIndex = 182;
+		this.btnSearch.Text = "&Cari";
+		this.btnSearch.UseVisualStyleBackColor = true;
+		this.Label2.AutoSize = true;
+		this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label2.Location = new System.Drawing.Point(10, 41);
+		this.Label2.Name = "Label2";
+		this.Label2.Size = new System.Drawing.Size(72, 13);
+		this.Label2.TabIndex = 186;
+		this.Label2.Text = "Tanggal akhir";
+		this.dtpEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+		this.dtpEnd.Location = new System.Drawing.Point(91, 38);
+		this.dtpEnd.Name = "dtpEnd";
+		this.dtpEnd.Size = new System.Drawing.Size(142, 20);
+		this.dtpEnd.TabIndex = 176;
+		this.dtpBegin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+		this.dtpBegin.Location = new System.Drawing.Point(91, 12);
+		this.dtpBegin.Name = "dtpBegin";
+		this.dtpBegin.Size = new System.Drawing.Size(142, 20);
+		this.dtpBegin.TabIndex = 175;
+		this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnPrint.Location = new System.Drawing.Point(816, 438);
+		this.btnPrint.Name = "btnPrint";
+		this.btnPrint.Size = new System.Drawing.Size(73, 23);
+		this.btnPrint.TabIndex = 186;
+		this.btnPrint.Text = "Cetak";
+		this.btnPrint.UseVisualStyleBackColor = true;
+		base.AcceptButton = this.btnSearch;
+		base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
+		base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+		base.ClientSize = new System.Drawing.Size(901, 473);
+		base.Controls.Add(this.btnPrint);
+		base.Controls.Add(this.Label5);
+		base.Controls.Add(this.cboIncomeExpense);
+		base.Controls.Add(this.txtDescription);
+		base.Controls.Add(this.Label4);
+		base.Controls.Add(this.Label3);
+		base.Controls.Add(this.cboBankAccount);
+		base.Controls.Add(this.btnReset);
+		base.Controls.Add(this.btnWord);
+		base.Controls.Add(this.Label1);
+		base.Controls.Add(this.lblTotal);
+		base.Controls.Add(this.Label7);
+		base.Controls.Add(this.cboAccount);
+		base.Controls.Add(this.dgvList);
+		base.Controls.Add(this.btnSearch);
+		base.Controls.Add(this.Label2);
+		base.Controls.Add(this.dtpEnd);
+		base.Controls.Add(this.dtpBegin);
+		base.KeyPreview = true;
+		base.MaximizeBox = false;
+		base.Name = "frmReportBankTransaction";
+		base.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+		this.Text = "Report Transaksi Bank";
+		((System.ComponentModel.ISupportInitialize)this.dgvList).EndInit();
+		base.ResumeLayout(false);
+		base.PerformLayout();
+	}
+
+	public frmReportBankTransaction()
+	{
+		base.KeyDown += frmReportBankTransaction_KeyDown;
+		base.Load += frmReportBankTransaction_Load;
+		InitializeComponent();
+		DoubleBuffered = true;
+		base.MdiParent = MyProject.Forms.frmMenu;
+		ComboBox combo = cboBankAccount;
+		cCombo.getBankAccount(ref combo, 0, Module1.pubGroupId, All: true, GroupDefault: false, Active: true, "TRANSACTION", 0);
+		cboBankAccount = combo;
+		combo = cboIncomeExpense;
+		cCombo.getIncomeExpense(ref combo, All: true);
+		cboIncomeExpense = combo;
+	}
+
+	private void frmReportBankTransaction_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Escape)
+		{
+			Close();
+		}
+	}
+
+	private void frmReportBankTransaction_Load(object sender, EventArgs e)
+	{
+		prepareForm();
+	}
+
+	private void prepareForm()
+	{
+		btnWord.Enabled = false;
+		btnPrint.Enabled = false;
+		dtpBegin.Value = Module1.getFirstDateInMonth(DateAndTime.Now);
+		dtpEnd.Value = DateAndTime.Now;
+		cboBankAccount.SelectedIndex = 0;
+		cboIncomeExpense.SelectedIndex = 0;
+		cboAccount.SelectedIndex = 0;
+		txtDescription.Text = "";
+		dgvList.DataSource = null;
+		lblTotal.Text = "Total Pencarian: -";
+		dtpBegin.Focus();
+	}
+
+	private void dtpBegin_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Space)
+		{
+			dtpEnd.Focus();
+			dtpBegin.Focus();
+			dtpEnd.Value = dtpBegin.Value;
+		}
+		else if (e.KeyCode == Keys.ControlKey)
+		{
+			dtpEnd.Focus();
+			dtpBegin.Focus();
+			dtpBegin.Value = Module1.getFirstDateInMonth(dtpBegin.Value);
+			dtpEnd.Value = Module1.getLastDateInMonth(dtpBegin.Value);
+		}
+	}
+
+	private void dtpEnd_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Space)
+		{
+			dtpBegin.Focus();
+			dtpEnd.Focus();
+			dtpBegin.Value = dtpEnd.Value;
+		}
+		else if (e.KeyCode == Keys.ControlKey)
+		{
+			dtpBegin.Focus();
+			dtpEnd.Focus();
+			dtpBegin.Value = Module1.getFirstDateInMonth(dtpEnd.Value);
+			dtpEnd.Value = Module1.getLastDateInMonth(dtpEnd.Value);
+		}
+	}
+
+	private void cboBankAccount_SelectedIndexChanged(object sender, EventArgs e)
+	{
+		cComboItem cComboItem2 = (cComboItem)cboBankAccount.SelectedItem;
+		cComboItem cComboItem3 = (cComboItem)cboIncomeExpense.SelectedItem;
+		if (!Information.IsNothing(cComboItem2) & !Information.IsNothing(cComboItem3))
+		{
+			cAccount cAccount2 = new cAccount(Conversions.ToInteger(cComboItem2.Value));
+			ComboBox combo = cboAccount;
+			cCombo.getAccount(ref combo, All: true, 0, 0, 0, Conversions.ToInteger(cComboItem2.Value), 99, Conversions.ToInteger(cComboItem3.Value), 0, cAccount2.CurrencyId, 1);
+			cboAccount = combo;
+			cboAccount.SelectedIndex = 0;
+		}
+	}
+
+	private void cboIncomeExpense_SelectedIndexChanged(object sender, EventArgs e)
+	{
+		cComboItem cComboItem2 = (cComboItem)cboBankAccount.SelectedItem;
+		cComboItem cComboItem3 = (cComboItem)cboIncomeExpense.SelectedItem;
+		if (!Information.IsNothing(cComboItem2) & !Information.IsNothing(cComboItem3))
+		{
+			cAccount cAccount2 = new cAccount(Conversions.ToInteger(cComboItem2.Value));
+			ComboBox combo = cboAccount;
+			cCombo.getAccount(ref combo, All: true, 0, 0, 0, Conversions.ToInteger(cComboItem2.Value), 99, Conversions.ToInteger(cComboItem3.Value), 0, cAccount2.CurrencyId, 1);
+			cboAccount = combo;
+			cboAccount.SelectedIndex = 0;
+		}
+	}
+
+	private void btnSearch_Click(object sender, EventArgs e)
+	{
+		int try0001_dispatch = -1;
+		int num2 = default(int);
+		double num3 = default(double);
+		double num4 = default(double);
+		int num = default(int);
+		while (true)
+		{
+			try
+			{
+				/*Note: ILSpy has introduced the following switch to emulate a goto from catch-block to try-block*/;
+				switch (try0001_dispatch)
+				{
+				default:
+				{
+					ProjectData.ClearProjectError();
+					num2 = 2;
+					cComboItem cComboItem2 = (cComboItem)cboBankAccount.SelectedItem;
+					cComboItem cComboItem3 = (cComboItem)cboIncomeExpense.SelectedItem;
+					cComboItem cComboItem4 = (cComboItem)cboAccount.SelectedItem;
+					if (DateTime.Compare(dtpBegin.Value, Module1.pubBalanceDate) < 0)
+					{
+						Interaction.MsgBox("Data sebelum " + Conversions.ToString(Module1.pubBalanceDate) + " tidak tersedia.");
+						dtpBegin.Focus();
+						goto end_IL_0001;
+					}
+					if (cboBankAccount.SelectedIndex == -1)
+					{
+						Interaction.MsgBox("Kas yang anda pilih tidak terdaftar.", MsgBoxStyle.Information);
+						cboBankAccount.Focus();
+						goto end_IL_0001;
+					}
+					if (cboAccount.SelectedIndex == -1)
+					{
+						Interaction.MsgBox("Akun yang anda pilih tidak terdaftar.", MsgBoxStyle.Information);
+						cboAccount.Focus();
+						goto end_IL_0001;
+					}
+					Cursor = Cursors.WaitCursor;
+					DataTable dataTable = new DataTable();
+					btnSearch.Focus();
+					dataTable = cVoucher.SearchCashBank(1, dtpBegin.Value, dtpEnd.Value, 3, Conversions.ToInteger(cComboItem2.Value), Conversions.ToInteger(cComboItem4.Value), Conversions.ToInteger(cComboItem3.Value), 0, Module1.cleanString(txtDescription.Text), Module1.pubGroupId);
+					formatGrid();
+					IEnumerator enumerator = dataTable.Rows.GetEnumerator();
+					while (enumerator.MoveNext())
+					{
+						DataRow dataRow = (DataRow)enumerator.Current;
+						dgvList.Rows.Add(dataRow["voucherId"], dataRow["voucherDate"], dataRow["accountName"], Operators.ConcatenateObject(Operators.ConcatenateObject(dataRow["counterAccountNumber"], " - "), dataRow["counterAccountName"]), dataRow["voucherDescription"], Operators.ConditionalCompareObjectEqual(dataRow["voucherDebitCredit"], 1, TextCompare: false) ? Module1.formatCustomDecimal(Conversions.ToString(dataRow["voucherAmount"]), 2) : "", Operators.ConditionalCompareObjectEqual(dataRow["voucherDebitCredit"], 2, TextCompare: false) ? Module1.formatCustomDecimal(Conversions.ToString(dataRow["voucherAmount"]), 2) : "");
+						if (Operators.ConditionalCompareObjectEqual(dataRow["voucherDebitCredit"], 1, TextCompare: false))
+						{
+							num3 = Conversions.ToDouble(Operators.AddObject(num3, dataRow["voucherAmount"]));
+						}
+						else
+						{
+							num4 = Conversions.ToDouble(Operators.AddObject(num4, dataRow["voucherAmount"]));
+						}
+					}
+					if (enumerator is IDisposable)
+					{
+						(enumerator as IDisposable).Dispose();
+					}
+					dgvList.Focus();
+					if (dataTable.Rows.Count == 0)
+					{
+						Interaction.MsgBox("Data tidak ditemukan", MsgBoxStyle.Information);
+						btnWord.Enabled = false;
+						btnPrint.Enabled = false;
+						dtpBegin.Focus();
+					}
+					else
+					{
+						dgvList.Rows.Add(0, "", "Total", "", "", Module1.formatCustomDecimal(Conversions.ToString(num3), 2), Module1.formatCustomDecimal(Conversions.ToString(num4), 2));
+						if (Module1.pubPreviewReport)
+						{
+							btnWord.Enabled = true;
+						}
+						if (Module1.pubPrintReport)
+						{
+							btnPrint.Enabled = true;
+						}
+					}
+					lblTotal.Text = "Total Pencarian: " + Conversions.ToString(dataTable.Rows.Count);
+					Cursor = Cursors.Default;
+					goto end_IL_0001;
+				}
+				case 1116:
+					num = -1;
+					switch (num2)
+					{
+					case 2:
+						Cursor = Cursors.Default;
+						Module1.SaveError(Information.Err(), "frmReportBankTransaction", "btnSearch_click", "");
+						goto end_IL_0001;
+					}
+					break;
+				}
+			}
+			catch (object obj) when (obj is Exception && num2 != 0 && num == 0)
+			{
+				ProjectData.SetProjectError((Exception)obj);
+				try0001_dispatch = 1116;
+				continue;
+			}
+			throw ProjectData.CreateProjectError(-2146828237);
+			continue;
+			end_IL_0001:
+			break;
+		}
+		if (num != 0)
+		{
+			ProjectData.ClearProjectError();
+		}
+	}
+
+	private void formatGrid()
+	{
+		dgvList.Columns.Clear();
+		dgvList.Rows.Clear();
+		dgvList.Columns.Add("", "voucherId");
+		dgvList.Columns.Add("", "Tanggal");
+		dgvList.Columns.Add("", "Kas");
+		dgvList.Columns.Add("", "Akun");
+		dgvList.Columns.Add("", "Keterangan");
+		dgvList.Columns.Add("", "Pendapatan");
+		dgvList.Columns.Add("", "Pengeluaran");
+		dgvList.Columns[0].Visible = false;
+		dgvList.Columns[0].Width = 0;
+		dgvList.Columns[1].DefaultCellStyle.Format = "dd/MM/yyyy";
+		dgvList.Columns[1].Width = 65;
+		dgvList.Columns[2].Width = 110;
+		dgvList.Columns[3].Width = 140;
+		dgvList.Columns[4].Width = 100;
+		dgvList.Columns[5].Width = 100;
+		dgvList.Columns[6].Width = 100;
+		dgvList.Columns[5].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+		dgvList.Columns[6].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+		dgvList.RowHeadersVisible = false;
+		dgvList.AllowUserToAddRows = false;
+		dgvList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+		dgvList.ReadOnly = true;
+		dgvList.AlternatingRowsDefaultCellStyle.BackColor = Color.WhiteSmoke;
+		dgvList.AllowUserToResizeRows = false;
+		dgvList.DefaultCellStyle.Font = new Font("Arial", 8f, FontStyle.Regular);
+	}
+
+	private void dgvList_DoubleClick(object sender, EventArgs e)
+	{
+		getData();
+	}
+
+	private void dgvList_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Return)
+		{
+			getData();
+			e.SuppressKeyPress = true;
+		}
+		else if (e.Shift & (e.KeyCode == Keys.Tab))
+		{
+			btnReset.Focus();
+			e.SuppressKeyPress = true;
+		}
+		else if (e.KeyCode == Keys.Tab)
+		{
+			btnWord.Focus();
+			e.SuppressKeyPress = true;
+		}
+	}
+
+	private void dgvList_GotFocus(object sender, EventArgs e)
+	{
+		btnSearch.NotifyDefault(value: false);
+		if (dgvList.RowCount > 0)
+		{
+			dgvList.CurrentRow.Selected = true;
+		}
+	}
+
+	private void dgvList_LostFocus(object sender, EventArgs e)
+	{
+		if (dgvList.RowCount > 0)
+		{
+			dgvList.CurrentRow.Selected = false;
+		}
+	}
+
+	private void getData()
+	{
+		if (dgvList.RowCount > 0 && Operators.ConditionalCompareObjectGreater(dgvList[0, dgvList.CurrentRow.Index].Value, 0, TextCompare: false))
+		{
+			MyProject.Forms.frmBankTransaction.Show();
+			MyProject.Forms.frmBankTransaction.prepareForm(SaveNew: false);
+			MyProject.Forms.frmBankTransaction.CurrentId = Conversions.ToDouble(dgvList[0, dgvList.CurrentRow.Index].Value);
+			MyProject.Forms.frmBankTransaction.LoadData();
+			MyProject.Forms.frmBankTransaction.Activate();
+			MyProject.Forms.frmBankTransaction.WindowState = FormWindowState.Normal;
+		}
+	}
+
+	private void btnWord_Click(object sender, EventArgs e)
+	{
+		ExportReport(Print: false);
+	}
+
+	private void ExportReport(bool Print)
+	{
+		dgvList.SelectAll();
+		dgvList.ClipboardCopyMode = DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
+		Clipboard.SetDataObject(dgvList.GetClipboardContent());
+		dgvList.ClearSelection();
+		dgvList.Rows[0].Selected = true;
+		MsWord msWord = new MsWord();
+		msWord.rptWordNew(dgvList.Rows.Count, dgvList.Columns.Count, "LLLLRR", blnPortrait: true, "", Print);
+	}
+
+	private void btnReset_Click(object sender, EventArgs e)
+	{
+		prepareForm();
+	}
+
+	private void btnPrint_Click(object sender, EventArgs e)
+	{
+		if (MessageBox.Show("Cetak Report?", "Konfirmasi", MessageBoxButtons.YesNo) != DialogResult.No)
+		{
+			ExportReport(Print: true);
+		}
+	}
 }

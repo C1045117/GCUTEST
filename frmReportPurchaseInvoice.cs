@@ -1,574 +1,998 @@
 using System;
+using System.Collections;
+using System.ComponentModel;
+using System.Data;
+using System.Diagnostics;
+using System.Drawing;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
+using GCUv2.My;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
 
-namespace GCUv2
+namespace GCUv2;
+
+[DesignerGenerated]
+public class frmReportPurchaseInvoice : Form
 {
-    public class Form
-    {
-
-        private class ComponentModel.IContainer components;
-        private class Button _btnReset;
-        private class Button _btnWord;
-        private class Label _Label1;
-        private class Label _lblTotal;
-        private class Label _Label7;
-        private class ComboBox _cboSupplier;
-        private class DataGridView _dgvList;
-        private class Button _btnSearch;
-        private class Label _Label2;
-        private class DateTimePicker _dtpEnd;
-        private class DateTimePicker _dtpBegin;
-        private class Label _Label3;
-        private class ComboBox _cboBaseFilter;
-        private class Label _Label4;
-        private class TextBox _txtInvoiceNo;
-        private class Label _Label5;
-        private class ComboBox _cboNPWP;
-        private class Label _Label6;
-        private class ComboBox _cboStatus;
-        private class Label _Label8;
-        private class ComboBox _cboInvoiceCode;
-        private class Button _btnPrint;
-
-
-        protected override strict void Dispose(boolean disposing) {
-
-          boolean var_1;
-
-        }
-
-        private void InitializeComponent() {
-
-
-        }
-
-        assem override strict specialname class Button get_btnReset() {
-
-          loc_533D83: ldarg.0
-          loc_533D84: ldfld GCUv2.frmReportPurchaseInvoice::_btnReset
-          loc_533D89: br.s loc_533D8B
-          loc_533D8B: // Referenced from: loc_533D89
-          loc_533D8B: ret
-        }
-
-        assem override strict specialname void set_btnReset(class Button WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Button var_2;
-
-        }
-
-        assem override strict specialname class Button get_btnWord() {
-
-          loc_533DD0: ldarg.0
-          loc_533DD1: ldfld GCUv2.frmReportPurchaseInvoice::_btnWord
-          loc_533DD6: br.s loc_533DD8
-          loc_533DD8: // Referenced from: loc_533DD6
-          loc_533DD8: ret
-        }
-
-        assem override strict specialname void set_btnWord(class Button WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Button var_2;
-
-        }
-
-        assem override strict specialname class Label get_Label1() {
-
-          loc_533E20: ldarg.0
-          loc_533E21: ldfld GCUv2.frmReportPurchaseInvoice::_Label1
-          loc_533E26: br.s loc_533E28
-          loc_533E28: // Referenced from: loc_533E26
-          loc_533E28: ret
-        }
-
-        assem override strict specialname void set_Label1(class Label WithEventsValue) {
-
-          loc_533E2A: ldarg.0
-          loc_533E2B: ldarg.1
-          loc_533E2C: stfld GCUv2.frmReportPurchaseInvoice::_Label1
-          loc_533E31: ret
-        }
-
-        assem override strict specialname class Label get_lblTotal() {
-
-          loc_533E33: ldarg.0
-          loc_533E34: ldfld GCUv2.frmReportPurchaseInvoice::_lblTotal
-          loc_533E39: br.s loc_533E3B
-          loc_533E3B: // Referenced from: loc_533E39
-          loc_533E3B: ret
-        }
-
-        assem override strict specialname void set_lblTotal(class Label WithEventsValue) {
-
-          loc_533E3D: ldarg.0
-          loc_533E3E: ldarg.1
-          loc_533E3F: stfld GCUv2.frmReportPurchaseInvoice::_lblTotal
-          loc_533E44: ret
-        }
-
-        assem override strict specialname class Label get_Label7() {
-
-          loc_533E46: ldarg.0
-          loc_533E47: ldfld GCUv2.frmReportPurchaseInvoice::_Label7
-          loc_533E4C: br.s loc_533E4E
-          loc_533E4E: // Referenced from: loc_533E4C
-          loc_533E4E: ret
-        }
-
-        assem override strict specialname void set_Label7(class Label WithEventsValue) {
-
-          loc_533E50: ldarg.0
-          loc_533E51: ldarg.1
-          loc_533E52: stfld GCUv2.frmReportPurchaseInvoice::_Label7
-          loc_533E57: ret
-        }
-
-        assem override strict specialname class ComboBox get_cboSupplier() {
-
-          loc_533E59: ldarg.0
-          loc_533E5A: ldfld GCUv2.frmReportPurchaseInvoice::_cboSupplier
-          loc_533E5F: br.s loc_533E61
-          loc_533E61: // Referenced from: loc_533E5F
-          loc_533E61: ret
-        }
-
-        assem override strict specialname void set_cboSupplier(class ComboBox WithEventsValue) {
-
-          loc_533E63: ldarg.0
-          loc_533E64: ldarg.1
-          loc_533E65: stfld GCUv2.frmReportPurchaseInvoice::_cboSupplier
-          loc_533E6A: ret
-        }
-
-        assem override strict specialname class DataGridView get_dgvList() {
-
-          loc_533E6C: ldarg.0
-          loc_533E6D: ldfld GCUv2.frmReportPurchaseInvoice::_dgvList
-          loc_533E72: br.s loc_533E74
-          loc_533E74: // Referenced from: loc_533E72
-          loc_533E74: ret
-        }
-
-        assem override strict specialname void set_dgvList(class DataGridView WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class KeyEventHandler var_2;
-          class System.EventHandler var_3;
-          class System.EventHandler var_4;
-          class DataGridView var_5;
-
-        }
-
-        assem override strict specialname class Button get_btnSearch() {
-
-          loc_533F19: ldarg.0
-          loc_533F1A: ldfld GCUv2.frmReportPurchaseInvoice::_btnSearch
-          loc_533F1F: br.s loc_533F21
-          loc_533F21: // Referenced from: loc_533F1F
-          loc_533F21: ret
-        }
-
-        assem override strict specialname void set_btnSearch(class Button WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Button var_2;
-
-        }
-
-        assem override strict specialname class Label get_Label2() {
-
-          loc_533F68: ldarg.0
-          loc_533F69: ldfld GCUv2.frmReportPurchaseInvoice::_Label2
-          loc_533F6E: br.s loc_533F70
-          loc_533F70: // Referenced from: loc_533F6E
-          loc_533F70: ret
-        }
-
-        assem override strict specialname void set_Label2(class Label WithEventsValue) {
-
-          loc_533F72: ldarg.0
-          loc_533F73: ldarg.1
-          loc_533F74: stfld GCUv2.frmReportPurchaseInvoice::_Label2
-          loc_533F79: ret
-        }
-
-        assem override strict specialname class DateTimePicker get_dtpEnd() {
-
-          loc_533F7B: ldarg.0
-          loc_533F7C: ldfld GCUv2.frmReportPurchaseInvoice::_dtpEnd
-          loc_533F81: br.s loc_533F83
-          loc_533F83: // Referenced from: loc_533F81
-          loc_533F83: ret
-        }
-
-        assem override strict specialname void set_dtpEnd(class DateTimePicker WithEventsValue) {
-
-          class KeyEventHandler var_1;
-          class DateTimePicker var_2;
-
-        }
-
-        assem override strict specialname class DateTimePicker get_dtpBegin() {
-
-          loc_533FC8: ldarg.0
-          loc_533FC9: ldfld GCUv2.frmReportPurchaseInvoice::_dtpBegin
-          loc_533FCE: br.s loc_533FD0
-          loc_533FD0: // Referenced from: loc_533FCE
-          loc_533FD0: ret
-        }
-
-        assem override strict specialname void set_dtpBegin(class DateTimePicker WithEventsValue) {
-
-          class KeyEventHandler var_1;
-          class DateTimePicker var_2;
-
-        }
-
-        assem override strict specialname class Label get_Label3() {
-
-          loc_534018: ldarg.0
-          loc_534019: ldfld GCUv2.frmReportPurchaseInvoice::_Label3
-          loc_53401E: br.s loc_534020
-          loc_534020: // Referenced from: loc_53401E
-          loc_534020: ret
-        }
-
-        assem override strict specialname void set_Label3(class Label WithEventsValue) {
-
-          loc_534022: ldarg.0
-          loc_534023: ldarg.1
-          loc_534024: stfld GCUv2.frmReportPurchaseInvoice::_Label3
-          loc_534029: ret
-        }
-
-        assem override strict specialname class ComboBox get_cboBaseFilter() {
-
-          loc_53402B: ldarg.0
-          loc_53402C: ldfld GCUv2.frmReportPurchaseInvoice::_cboBaseFilter
-          loc_534031: br.s loc_534033
-          loc_534033: // Referenced from: loc_534031
-          loc_534033: ret
-        }
-
-        assem override strict specialname void set_cboBaseFilter(class ComboBox WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class ComboBox var_2;
-
-        }
-
-        assem override strict specialname class Label get_Label4() {
-
-          loc_534078: ldarg.0
-          loc_534079: ldfld GCUv2.frmReportPurchaseInvoice::_Label4
-          loc_53407E: br.s loc_534080
-          loc_534080: // Referenced from: loc_53407E
-          loc_534080: ret
-        }
-
-        assem override strict specialname void set_Label4(class Label WithEventsValue) {
-
-          loc_534082: ldarg.0
-          loc_534083: ldarg.1
-          loc_534084: stfld GCUv2.frmReportPurchaseInvoice::_Label4
-          loc_534089: ret
-        }
-
-        assem override strict specialname class TextBox get_txtInvoiceNo() {
-
-          loc_53408B: ldarg.0
-          loc_53408C: ldfld GCUv2.frmReportPurchaseInvoice::_txtInvoiceNo
-          loc_534091: br.s loc_534093
-          loc_534093: // Referenced from: loc_534091
-          loc_534093: ret
-        }
-
-        assem override strict specialname void set_txtInvoiceNo(class TextBox WithEventsValue) {
-
-          loc_534095: ldarg.0
-          loc_534096: ldarg.1
-          loc_534097: stfld GCUv2.frmReportPurchaseInvoice::_txtInvoiceNo
-          loc_53409C: ret
-        }
-
-        assem override strict specialname class Label get_Label5() {
-
-          loc_53409E: ldarg.0
-          loc_53409F: ldfld GCUv2.frmReportPurchaseInvoice::_Label5
-          loc_5340A4: br.s loc_5340A6
-          loc_5340A6: // Referenced from: loc_5340A4
-          loc_5340A6: ret
-        }
-
-        assem override strict specialname void set_Label5(class Label WithEventsValue) {
-
-          loc_5340A8: ldarg.0
-          loc_5340A9: ldarg.1
-          loc_5340AA: stfld GCUv2.frmReportPurchaseInvoice::_Label5
-          loc_5340AF: ret
-        }
-
-        assem override strict specialname class ComboBox get_cboNPWP() {
-
-          loc_5340B1: ldarg.0
-          loc_5340B2: ldfld GCUv2.frmReportPurchaseInvoice::_cboNPWP
-          loc_5340B7: br.s loc_5340B9
-          loc_5340B9: // Referenced from: loc_5340B7
-          loc_5340B9: ret
-        }
-
-        assem override strict specialname void set_cboNPWP(class ComboBox WithEventsValue) {
-
-          loc_5340BB: ldarg.0
-          loc_5340BC: ldarg.1
-          loc_5340BD: stfld GCUv2.frmReportPurchaseInvoice::_cboNPWP
-          loc_5340C2: ret
-        }
-
-        assem override strict specialname class Label get_Label6() {
-
-          loc_5340C4: ldarg.0
-          loc_5340C5: ldfld GCUv2.frmReportPurchaseInvoice::_Label6
-          loc_5340CA: br.s loc_5340CC
-          loc_5340CC: // Referenced from: loc_5340CA
-          loc_5340CC: ret
-        }
-
-        assem override strict specialname void set_Label6(class Label WithEventsValue) {
-
-          loc_5340CE: ldarg.0
-          loc_5340CF: ldarg.1
-          loc_5340D0: stfld GCUv2.frmReportPurchaseInvoice::_Label6
-          loc_5340D5: ret
-        }
-
-        assem override strict specialname class ComboBox get_cboStatus() {
-
-          loc_5340D7: ldarg.0
-          loc_5340D8: ldfld GCUv2.frmReportPurchaseInvoice::_cboStatus
-          loc_5340DD: br.s loc_5340DF
-          loc_5340DF: // Referenced from: loc_5340DD
-          loc_5340DF: ret
-        }
-
-        assem override strict specialname void set_cboStatus(class ComboBox WithEventsValue) {
-
-          loc_5340E1: ldarg.0
-          loc_5340E2: ldarg.1
-          loc_5340E3: stfld GCUv2.frmReportPurchaseInvoice::_cboStatus
-          loc_5340E8: ret
-        }
-
-        assem override strict specialname class Label get_Label8() {
-
-          loc_5340EA: ldarg.0
-          loc_5340EB: ldfld GCUv2.frmReportPurchaseInvoice::_Label8
-          loc_5340F0: br.s loc_5340F2
-          loc_5340F2: // Referenced from: loc_5340F0
-          loc_5340F2: ret
-        }
-
-        assem override strict specialname void set_Label8(class Label WithEventsValue) {
-
-          loc_5340F4: ldarg.0
-          loc_5340F5: ldarg.1
-          loc_5340F6: stfld GCUv2.frmReportPurchaseInvoice::_Label8
-          loc_5340FB: ret
-        }
-
-        assem override strict specialname class ComboBox get_cboInvoiceCode() {
-
-          loc_5340FD: ldarg.0
-          loc_5340FE: ldfld GCUv2.frmReportPurchaseInvoice::_cboInvoiceCode
-          loc_534103: br.s loc_534105
-          loc_534105: // Referenced from: loc_534103
-          loc_534105: ret
-        }
-
-        assem override strict specialname void set_cboInvoiceCode(class ComboBox WithEventsValue) {
-
-          loc_534107: ldarg.0
-          loc_534108: ldarg.1
-          loc_534109: stfld GCUv2.frmReportPurchaseInvoice::_cboInvoiceCode
-          loc_53410E: ret
-        }
-
-        assem override strict specialname class Button get_btnPrint() {
-
-          loc_534110: ldarg.0
-          loc_534111: ldfld GCUv2.frmReportPurchaseInvoice::_btnPrint
-          loc_534116: br.s loc_534118
-          loc_534118: // Referenced from: loc_534116
-          loc_534118: ret
-        }
-
-        assem override strict specialname void set_btnPrint(class Button WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Button var_2;
-
-        }
-
-        public void frmReportPurchaseInvoice() {
-
-          class ComboBox var_1;
-
-        }
-
-        private void frmReportPurchaseInvoice_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void frmReportPurchaseInvoice_Load(object sender, class System.EventArgs e) {
-
-          loc_534262: nop
-          loc_534263: ldarg.0
-          loc_534264: call instance void GCUv2.frmReportPurchaseInvoice::prepareForm()
-          loc_534269: nop
-          loc_53426A: ldarg.0
-          loc_53426B: callvirt instance class DataGridView GCUv2.frmReportPurchaseInvoice::get_dgvList()
-          loc_534270: ldc.i4.1
-          loc_534271: call void GCUv2.ExtensionMethods::DoubleBuffered(class DataGridView, boolean)
-          loc_534276: nop
-          loc_534277: ret
-        }
-
-        private void prepareForm() {
-
-
-        }
-
-        private void cboBaseFilter_SelectedIndexChanged(object sender, class System.EventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void dtpBegin_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-          boolean var_2;
-
-        }
-
-        private void dtpEnd_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-          boolean var_2;
-
-        }
-
-        private void btnSearch_Click(object sender, class System.EventArgs e) {
-
-          int32 num_1;
-          int32 num_2;
-          class GCUv2.cComboItem var_1;
-          class GCUv2.cComboItem var_2;
-          class GCUv2.cComboItem var_3;
-          class GCUv2.cComboItem var_4;
-          class GCUv2.cComboItem var_5;
-          class DataTable var_6;
-          double flt_1;
-          double flt_2;
-          double flt_3;
-          double flt_4;
-          double flt_5;
-          double flt_6;
-          double flt_7;
-          double flt_8;
-          boolean var_7;
-          boolean var_8;
-          boolean var_9;
-          boolean var_10;
-          boolean var_11;
-          boolean var_12;
-          boolean var_13;
-          class System.Collections.IEnumerator var_14;
-          class DataRow var_15;
-          boolean var_16;
-          boolean var_17;
-          boolean var_18;
-          boolean var_19;
-          boolean var_20;
-          class Label var_21;
-
-        }
-
-        private void formatGrid() {
-
-          class DataGridView var_1;
-
-        }
-
-        private void dgvList_DoubleClick(object sender, class System.EventArgs e) {
-
-          loc_53529B: nop
-          loc_53529C: ldarg.0
-          loc_53529D: call instance void GCUv2.frmReportPurchaseInvoice::getData()
-          loc_5352A2: nop
-          loc_5352A3: ret
-        }
-
-        private void dgvList_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-          boolean var_2;
-          boolean var_3;
-
-        }
-
-        private void dgvList_GotFocus(object sender, class System.EventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void dgvList_LostFocus(object sender, class System.EventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void getData() {
-
-          boolean var_1;
-
-        }
-
-        private void btnWord_Click(object sender, class System.EventArgs e) {
-
-          loc_535484: nop
-          loc_535485: ldarg.0
-          loc_535486: ldc.i4.0
-          loc_535487: call instance void GCUv2.frmReportPurchaseInvoice::ExportReport(boolean)
-          loc_53548C: nop
-          loc_53548D: ret
-        }
-
-        private void ExportReport(boolean Print) {
-
-          class GCUv2.MsWord var_1;
-
-        }
-
-        private void btnReset_Click(object sender, class System.EventArgs e) {
-
-          loc_53550E: nop
-          loc_53550F: ldarg.0
-          loc_535510: call instance void GCUv2.frmReportPurchaseInvoice::prepareForm()
-          loc_535515: nop
-          loc_535516: ret
-        }
-
-        private void btnPrint_Click(object sender, class System.EventArgs e) {
-
-          boolean var_1;
-
-        }
-
-    }
+	private IContainer components;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnReset")]
+	private Button _btnReset;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnWord")]
+	private Button _btnWord;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("dgvList")]
+	private DataGridView _dgvList;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnSearch")]
+	private Button _btnSearch;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("dtpEnd")]
+	private DateTimePicker _dtpEnd;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("dtpBegin")]
+	private DateTimePicker _dtpBegin;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("cboBaseFilter")]
+	private ComboBox _cboBaseFilter;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnPrint")]
+	private Button _btnPrint;
+
+	internal virtual Button btnReset
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnReset;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnReset_Click;
+			Button button = _btnReset;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnReset = value;
+			button = _btnReset;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
+
+	internal virtual Button btnWord
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnWord;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnWord_Click;
+			Button button = _btnWord;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnWord = value;
+			button = _btnWord;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
+
+	[field: AccessedThroughProperty("Label1")]
+	internal virtual Label Label1
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("lblTotal")]
+	internal virtual Label lblTotal
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label7")]
+	internal virtual Label Label7
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("cboSupplier")]
+	internal virtual ComboBox cboSupplier
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual DataGridView dgvList
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _dgvList;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = dgvList_DoubleClick;
+			KeyEventHandler value3 = dgvList_KeyDown;
+			EventHandler value4 = dgvList_GotFocus;
+			EventHandler value5 = dgvList_LostFocus;
+			DataGridView dataGridView = _dgvList;
+			if (dataGridView != null)
+			{
+				dataGridView.DoubleClick -= value2;
+				dataGridView.KeyDown -= value3;
+				dataGridView.GotFocus -= value4;
+				dataGridView.LostFocus -= value5;
+			}
+			_dgvList = value;
+			dataGridView = _dgvList;
+			if (dataGridView != null)
+			{
+				dataGridView.DoubleClick += value2;
+				dataGridView.KeyDown += value3;
+				dataGridView.GotFocus += value4;
+				dataGridView.LostFocus += value5;
+			}
+		}
+	}
+
+	internal virtual Button btnSearch
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnSearch;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnSearch_Click;
+			Button button = _btnSearch;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnSearch = value;
+			button = _btnSearch;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
+
+	[field: AccessedThroughProperty("Label2")]
+	internal virtual Label Label2
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual DateTimePicker dtpEnd
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _dtpEnd;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			KeyEventHandler value2 = dtpEnd_KeyDown;
+			DateTimePicker dateTimePicker = _dtpEnd;
+			if (dateTimePicker != null)
+			{
+				dateTimePicker.KeyDown -= value2;
+			}
+			_dtpEnd = value;
+			dateTimePicker = _dtpEnd;
+			if (dateTimePicker != null)
+			{
+				dateTimePicker.KeyDown += value2;
+			}
+		}
+	}
+
+	internal virtual DateTimePicker dtpBegin
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _dtpBegin;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			KeyEventHandler value2 = dtpBegin_KeyDown;
+			DateTimePicker dateTimePicker = _dtpBegin;
+			if (dateTimePicker != null)
+			{
+				dateTimePicker.KeyDown -= value2;
+			}
+			_dtpBegin = value;
+			dateTimePicker = _dtpBegin;
+			if (dateTimePicker != null)
+			{
+				dateTimePicker.KeyDown += value2;
+			}
+		}
+	}
+
+	[field: AccessedThroughProperty("Label3")]
+	internal virtual Label Label3
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual ComboBox cboBaseFilter
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _cboBaseFilter;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = cboBaseFilter_SelectedIndexChanged;
+			ComboBox comboBox = _cboBaseFilter;
+			if (comboBox != null)
+			{
+				comboBox.SelectedIndexChanged -= value2;
+			}
+			_cboBaseFilter = value;
+			comboBox = _cboBaseFilter;
+			if (comboBox != null)
+			{
+				comboBox.SelectedIndexChanged += value2;
+			}
+		}
+	}
+
+	[field: AccessedThroughProperty("Label4")]
+	internal virtual Label Label4
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("txtInvoiceNo")]
+	internal virtual TextBox txtInvoiceNo
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label5")]
+	internal virtual Label Label5
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("cboNPWP")]
+	internal virtual ComboBox cboNPWP
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label6")]
+	internal virtual Label Label6
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("cboStatus")]
+	internal virtual ComboBox cboStatus
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label8")]
+	internal virtual Label Label8
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("cboInvoiceCode")]
+	internal virtual ComboBox cboInvoiceCode
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual Button btnPrint
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnPrint;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnPrint_Click;
+			Button button = _btnPrint;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnPrint = value;
+			button = _btnPrint;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
+
+	[DebuggerNonUserCode]
+	protected override void Dispose(bool disposing)
+	{
+		try
+		{
+			if (disposing && components != null)
+			{
+				components.Dispose();
+			}
+		}
+		finally
+		{
+			base.Dispose(disposing);
+		}
+	}
+
+	[System.Diagnostics.DebuggerStepThrough]
+	private void InitializeComponent()
+	{
+		this.btnReset = new System.Windows.Forms.Button();
+		this.btnWord = new System.Windows.Forms.Button();
+		this.Label1 = new System.Windows.Forms.Label();
+		this.lblTotal = new System.Windows.Forms.Label();
+		this.Label7 = new System.Windows.Forms.Label();
+		this.cboSupplier = new System.Windows.Forms.ComboBox();
+		this.dgvList = new System.Windows.Forms.DataGridView();
+		this.btnSearch = new System.Windows.Forms.Button();
+		this.Label2 = new System.Windows.Forms.Label();
+		this.dtpEnd = new System.Windows.Forms.DateTimePicker();
+		this.dtpBegin = new System.Windows.Forms.DateTimePicker();
+		this.Label3 = new System.Windows.Forms.Label();
+		this.cboBaseFilter = new System.Windows.Forms.ComboBox();
+		this.Label4 = new System.Windows.Forms.Label();
+		this.txtInvoiceNo = new System.Windows.Forms.TextBox();
+		this.Label5 = new System.Windows.Forms.Label();
+		this.cboNPWP = new System.Windows.Forms.ComboBox();
+		this.Label6 = new System.Windows.Forms.Label();
+		this.cboStatus = new System.Windows.Forms.ComboBox();
+		this.Label8 = new System.Windows.Forms.Label();
+		this.cboInvoiceCode = new System.Windows.Forms.ComboBox();
+		this.btnPrint = new System.Windows.Forms.Button();
+		((System.ComponentModel.ISupportInitialize)this.dgvList).BeginInit();
+		base.SuspendLayout();
+		this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnReset.Location = new System.Drawing.Point(151, 114);
+		this.btnReset.Name = "btnReset";
+		this.btnReset.Size = new System.Drawing.Size(47, 24);
+		this.btnReset.TabIndex = 11;
+		this.btnReset.Text = "&Reset";
+		this.btnReset.UseVisualStyleBackColor = true;
+		this.btnWord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnWord.Location = new System.Drawing.Point(820, 527);
+		this.btnWord.Name = "btnWord";
+		this.btnWord.Size = new System.Drawing.Size(73, 23);
+		this.btnWord.TabIndex = 55;
+		this.btnWord.Text = "&Word";
+		this.btnWord.UseVisualStyleBackColor = true;
+		this.Label1.AutoSize = true;
+		this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label1.Location = new System.Drawing.Point(11, 39);
+		this.Label1.Name = "Label1";
+		this.Label1.Size = new System.Drawing.Size(71, 13);
+		this.Label1.TabIndex = 59;
+		this.Label1.Text = "Tanggal awal";
+		this.lblTotal.AutoSize = true;
+		this.lblTotal.Location = new System.Drawing.Point(13, 527);
+		this.lblTotal.Name = "lblTotal";
+		this.lblTotal.Size = new System.Drawing.Size(91, 13);
+		this.lblTotal.TabIndex = 58;
+		this.lblTotal.Text = "Total Pencarian: -";
+		this.Label7.AutoSize = true;
+		this.Label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label7.Location = new System.Drawing.Point(240, 12);
+		this.Label7.Name = "Label7";
+		this.Label7.Size = new System.Drawing.Size(45, 13);
+		this.Label7.TabIndex = 57;
+		this.Label7.Text = "Supplier";
+		this.cboSupplier.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+		this.cboSupplier.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+		this.cboSupplier.FormattingEnabled = true;
+		this.cboSupplier.Location = new System.Drawing.Point(326, 9);
+		this.cboSupplier.Name = "cboSupplier";
+		this.cboSupplier.Size = new System.Drawing.Size(135, 21);
+		this.cboSupplier.TabIndex = 4;
+		this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+		this.dgvList.Location = new System.Drawing.Point(16, 145);
+		this.dgvList.Name = "dgvList";
+		this.dgvList.Size = new System.Drawing.Size(956, 376);
+		this.dgvList.TabIndex = 54;
+		this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnSearch.Location = new System.Drawing.Point(98, 114);
+		this.btnSearch.Name = "btnSearch";
+		this.btnSearch.Size = new System.Drawing.Size(47, 24);
+		this.btnSearch.TabIndex = 10;
+		this.btnSearch.Text = "&Cari";
+		this.btnSearch.UseVisualStyleBackColor = true;
+		this.Label2.AutoSize = true;
+		this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label2.Location = new System.Drawing.Point(11, 65);
+		this.Label2.Name = "Label2";
+		this.Label2.Size = new System.Drawing.Size(72, 13);
+		this.Label2.TabIndex = 56;
+		this.Label2.Text = "Tanggal akhir";
+		this.dtpEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+		this.dtpEnd.Location = new System.Drawing.Point(99, 62);
+		this.dtpEnd.Name = "dtpEnd";
+		this.dtpEnd.Size = new System.Drawing.Size(113, 20);
+		this.dtpEnd.TabIndex = 2;
+		this.dtpBegin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+		this.dtpBegin.Location = new System.Drawing.Point(99, 36);
+		this.dtpBegin.Name = "dtpBegin";
+		this.dtpBegin.Size = new System.Drawing.Size(113, 20);
+		this.dtpBegin.TabIndex = 1;
+		this.Label3.AutoSize = true;
+		this.Label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label3.Location = new System.Drawing.Point(12, 12);
+		this.Label3.Name = "Label3";
+		this.Label3.Size = new System.Drawing.Size(86, 13);
+		this.Label3.TabIndex = 61;
+		this.Label3.Text = "Dasar Pencarian";
+		this.cboBaseFilter.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+		this.cboBaseFilter.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+		this.cboBaseFilter.FormattingEnabled = true;
+		this.cboBaseFilter.Location = new System.Drawing.Point(98, 9);
+		this.cboBaseFilter.Name = "cboBaseFilter";
+		this.cboBaseFilter.Size = new System.Drawing.Size(114, 21);
+		this.cboBaseFilter.TabIndex = 0;
+		this.Label4.AutoSize = true;
+		this.Label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label4.Location = new System.Drawing.Point(13, 91);
+		this.Label4.Name = "Label4";
+		this.Label4.Size = new System.Drawing.Size(54, 13);
+		this.Label4.TabIndex = 62;
+		this.Label4.Text = "No Faktur";
+		this.txtInvoiceNo.Location = new System.Drawing.Point(98, 88);
+		this.txtInvoiceNo.Name = "txtInvoiceNo";
+		this.txtInvoiceNo.Size = new System.Drawing.Size(114, 20);
+		this.txtInvoiceNo.TabIndex = 3;
+		this.Label5.AutoSize = true;
+		this.Label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label5.Location = new System.Drawing.Point(240, 66);
+		this.Label5.Name = "Label5";
+		this.Label5.Size = new System.Drawing.Size(40, 13);
+		this.Label5.TabIndex = 64;
+		this.Label5.Text = "NPWP";
+		this.cboNPWP.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+		this.cboNPWP.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+		this.cboNPWP.FormattingEnabled = true;
+		this.cboNPWP.Location = new System.Drawing.Point(326, 63);
+		this.cboNPWP.Name = "cboNPWP";
+		this.cboNPWP.Size = new System.Drawing.Size(135, 21);
+		this.cboNPWP.TabIndex = 6;
+		this.Label6.AutoSize = true;
+		this.Label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label6.Location = new System.Drawing.Point(240, 93);
+		this.Label6.Name = "Label6";
+		this.Label6.Size = new System.Drawing.Size(37, 13);
+		this.Label6.TabIndex = 66;
+		this.Label6.Text = "Status";
+		this.cboStatus.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+		this.cboStatus.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+		this.cboStatus.FormattingEnabled = true;
+		this.cboStatus.Location = new System.Drawing.Point(326, 90);
+		this.cboStatus.Name = "cboStatus";
+		this.cboStatus.Size = new System.Drawing.Size(135, 21);
+		this.cboStatus.TabIndex = 7;
+		this.Label8.AutoSize = true;
+		this.Label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label8.Location = new System.Drawing.Point(240, 38);
+		this.Label8.Name = "Label8";
+		this.Label8.Size = new System.Drawing.Size(66, 13);
+		this.Label8.TabIndex = 68;
+		this.Label8.Text = "Tunai/Kredit";
+		this.cboInvoiceCode.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+		this.cboInvoiceCode.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+		this.cboInvoiceCode.FormattingEnabled = true;
+		this.cboInvoiceCode.Location = new System.Drawing.Point(326, 35);
+		this.cboInvoiceCode.Name = "cboInvoiceCode";
+		this.cboInvoiceCode.Size = new System.Drawing.Size(135, 21);
+		this.cboInvoiceCode.TabIndex = 5;
+		this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnPrint.Location = new System.Drawing.Point(899, 527);
+		this.btnPrint.Name = "btnPrint";
+		this.btnPrint.Size = new System.Drawing.Size(73, 23);
+		this.btnPrint.TabIndex = 56;
+		this.btnPrint.Text = "Cetak";
+		this.btnPrint.UseVisualStyleBackColor = true;
+		base.AcceptButton = this.btnSearch;
+		base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
+		base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+		base.ClientSize = new System.Drawing.Size(984, 562);
+		base.Controls.Add(this.btnPrint);
+		base.Controls.Add(this.Label8);
+		base.Controls.Add(this.cboInvoiceCode);
+		base.Controls.Add(this.Label6);
+		base.Controls.Add(this.cboStatus);
+		base.Controls.Add(this.Label5);
+		base.Controls.Add(this.cboNPWP);
+		base.Controls.Add(this.txtInvoiceNo);
+		base.Controls.Add(this.Label4);
+		base.Controls.Add(this.Label3);
+		base.Controls.Add(this.cboBaseFilter);
+		base.Controls.Add(this.btnReset);
+		base.Controls.Add(this.btnWord);
+		base.Controls.Add(this.Label1);
+		base.Controls.Add(this.lblTotal);
+		base.Controls.Add(this.Label7);
+		base.Controls.Add(this.cboSupplier);
+		base.Controls.Add(this.dgvList);
+		base.Controls.Add(this.btnSearch);
+		base.Controls.Add(this.Label2);
+		base.Controls.Add(this.dtpEnd);
+		base.Controls.Add(this.dtpBegin);
+		base.KeyPreview = true;
+		base.MaximizeBox = false;
+		base.Name = "frmReportPurchaseInvoice";
+		base.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+		this.Text = "Report Pembelian";
+		((System.ComponentModel.ISupportInitialize)this.dgvList).EndInit();
+		base.ResumeLayout(false);
+		base.PerformLayout();
+	}
+
+	public frmReportPurchaseInvoice()
+	{
+		base.KeyDown += frmReportPurchaseInvoice_KeyDown;
+		base.Load += frmReportPurchaseInvoice_Load;
+		InitializeComponent();
+		DoubleBuffered = true;
+		base.MdiParent = MyProject.Forms.frmMenu;
+		ComboBox combo = cboBaseFilter;
+		cCombo.getReportPurchaseInvoiceFilter(ref combo);
+		cboBaseFilter = combo;
+		combo = cboSupplier;
+		cCombo.getSupplier(ref combo, Module1.pubGroupId, All: true, FlowerOnly: false, IncludeParent: true, Active: true);
+		cboSupplier = combo;
+		combo = cboNPWP;
+		cCombo.getYesNo(ref combo, All: true);
+		cboNPWP = combo;
+		combo = cboInvoiceCode;
+		cCombo.getInvoiceCode(ref combo, All: true);
+		cboInvoiceCode = combo;
+		combo = cboStatus;
+		cCombo.getPaymentStatus(ref combo, All: true);
+		cboStatus = combo;
+	}
+
+	private void frmReportPurchaseInvoice_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Escape)
+		{
+			Close();
+		}
+	}
+
+	private void frmReportPurchaseInvoice_Load(object sender, EventArgs e)
+	{
+		prepareForm();
+		ExtensionMethods.DoubleBuffered(dgvList, setting: true);
+	}
+
+	private void prepareForm()
+	{
+		btnWord.Enabled = false;
+		btnPrint.Enabled = false;
+		dtpBegin.Value = Module1.getFirstDateInMonth(DateAndTime.Now);
+		dtpEnd.Value = DateAndTime.Now;
+		cboBaseFilter.SelectedIndex = 0;
+		cboInvoiceCode.SelectedIndex = 0;
+		cboSupplier.SelectedIndex = 0;
+		cboNPWP.SelectedIndex = 0;
+		cboStatus.SelectedIndex = 0;
+		txtInvoiceNo.Text = "";
+		dgvList.Rows.Clear();
+		lblTotal.Text = "Total Pencarian: -";
+		dtpBegin.Focus();
+	}
+
+	private void cboBaseFilter_SelectedIndexChanged(object sender, EventArgs e)
+	{
+		if ((cboBaseFilter.SelectedIndex == 0) | (cboBaseFilter.SelectedIndex == 1))
+		{
+			dtpBegin.Enabled = true;
+			dtpEnd.Enabled = true;
+			txtInvoiceNo.Enabled = false;
+		}
+		else
+		{
+			dtpBegin.Enabled = false;
+			dtpEnd.Enabled = false;
+			txtInvoiceNo.Enabled = true;
+		}
+	}
+
+	private void dtpBegin_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Space)
+		{
+			dtpEnd.Focus();
+			dtpBegin.Focus();
+			dtpEnd.Value = dtpBegin.Value;
+		}
+		else if (e.KeyCode == Keys.ControlKey)
+		{
+			dtpEnd.Focus();
+			dtpBegin.Focus();
+			dtpBegin.Value = Module1.getFirstDateInMonth(dtpBegin.Value);
+			dtpEnd.Value = Module1.getLastDateInMonth(dtpBegin.Value);
+		}
+	}
+
+	private void dtpEnd_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Space)
+		{
+			dtpBegin.Focus();
+			dtpEnd.Focus();
+			dtpBegin.Value = dtpEnd.Value;
+		}
+		else if (e.KeyCode == Keys.ControlKey)
+		{
+			dtpBegin.Focus();
+			dtpEnd.Focus();
+			dtpBegin.Value = Module1.getFirstDateInMonth(dtpEnd.Value);
+			dtpEnd.Value = Module1.getLastDateInMonth(dtpEnd.Value);
+		}
+	}
+
+	private void btnSearch_Click(object sender, EventArgs e)
+	{
+		int try0001_dispatch = -1;
+		int num2 = default(int);
+		double num4 = default(double);
+		double num5 = default(double);
+		double num6 = default(double);
+		double num7 = default(double);
+		double num8 = default(double);
+		double num9 = default(double);
+		double num10 = default(double);
+		int num = default(int);
+		while (true)
+		{
+			try
+			{
+				/*Note: ILSpy has introduced the following switch to emulate a goto from catch-block to try-block*/;
+				switch (try0001_dispatch)
+				{
+				default:
+				{
+					ProjectData.ClearProjectError();
+					num2 = 2;
+					cComboItem cComboItem2 = (cComboItem)cboBaseFilter.SelectedItem;
+					cComboItem cComboItem3 = (cComboItem)cboInvoiceCode.SelectedItem;
+					cComboItem cComboItem4 = (cComboItem)cboSupplier.SelectedItem;
+					cComboItem cComboItem5 = (cComboItem)cboNPWP.SelectedItem;
+					cComboItem cComboItem6 = (cComboItem)cboStatus.SelectedItem;
+					if (cboBaseFilter.SelectedIndex == -1)
+					{
+						Interaction.MsgBox("Pilih dasar pencarian", MsgBoxStyle.Information);
+						cboBaseFilter.Focus();
+						goto end_IL_0001;
+					}
+					if (((Conversions.ToDouble(cComboItem2.Value) == 4.0) | (Conversions.ToDouble(cComboItem2.Value) == 5.0)) & (Operators.CompareString(txtInvoiceNo.Text, "", TextCompare: false) == 0))
+					{
+						Interaction.MsgBox("Masukkan nomer faktur", MsgBoxStyle.Information);
+						txtInvoiceNo.Focus();
+						goto end_IL_0001;
+					}
+					if (cboSupplier.SelectedIndex == -1)
+					{
+						Interaction.MsgBox("Supplier yang anda pilih tidak terdaftar.", MsgBoxStyle.Information);
+						cboSupplier.Focus();
+						goto end_IL_0001;
+					}
+					if (cboInvoiceCode.SelectedIndex == -1)
+					{
+						Interaction.MsgBox("Pilih Tunai/Kredit.", MsgBoxStyle.Information);
+						cboInvoiceCode.Focus();
+						goto end_IL_0001;
+					}
+					if (cboNPWP.SelectedIndex == -1)
+					{
+						Interaction.MsgBox("Opsi NPWP yang anda pilih tidak terdaftar.", MsgBoxStyle.Information);
+						cboNPWP.Focus();
+						goto end_IL_0001;
+					}
+					if (cboStatus.SelectedIndex == -1)
+					{
+						Interaction.MsgBox("Status yang anda pilih tidak terdaftar.", MsgBoxStyle.Information);
+						cboStatus.Focus();
+						goto end_IL_0001;
+					}
+					DataTable dataTable = new DataTable();
+					btnSearch.Focus();
+					dataTable = cPurchaseInvoice.Search(Conversions.ToInteger(cComboItem2.Value), dtpBegin.Value, dtpEnd.Value, 0, Conversions.ToInteger(cComboItem4.Value), txtInvoiceNo.Text, Conversions.ToInteger(cComboItem3.Value), 0, Module1.pubGroupId, 0, Conversions.ToInteger(cComboItem5.Value), Conversions.ToInteger(cComboItem6.Value), Module1.pubViewReportPurchaseInvoicePrice);
+					dgvList.Rows.Clear();
+					formatGrid();
+					if ((Conversions.ToDouble(cComboItem2.Value) == 3.0) | (Conversions.ToDouble(cComboItem2.Value) == 5.0))
+					{
+						dgvList.Columns[1].Visible = false;
+						dgvList.Columns[2].Visible = false;
+						dgvList.Columns[3].Visible = true;
+						dgvList.Columns[4].Visible = true;
+					}
+					else
+					{
+						dgvList.Columns[1].Visible = true;
+						dgvList.Columns[2].Visible = true;
+						dgvList.Columns[3].Visible = false;
+						dgvList.Columns[4].Visible = false;
+					}
+					IEnumerator enumerator = dataTable.Rows.GetEnumerator();
+					while (enumerator.MoveNext())
+					{
+						DataRow dataRow = (DataRow)enumerator.Current;
+						double num3 = Conversions.ToDouble(Operators.SubtractObject(Operators.SubtractObject(dataRow["invTotal"], dataRow["invReturn"]), dataRow["invDiscount"]));
+						dgvList.Rows.Add(dataRow["invId"], dataRow["invDate"], dataRow["invNumber"], dataRow["invTaxDate"], dataRow["invTaxNumber"], dataRow["supName"], dataRow["invCode"], Module1.formatCustomDecimal(Conversions.ToString(dataRow["invTotal"]), 2), Module1.formatCustomDecimal(Conversions.ToString(dataRow["invReturn"]), 2), Module1.formatCustomDecimal(Conversions.ToString(dataRow["invDiscount"]), 2), Module1.formatCustomDecimal(Conversions.ToString(num3), 2), Module1.formatCustomDecimal(Conversions.ToString(dataRow["invDeduction"]), 2), Module1.formatCustomDecimal(Conversions.ToString(dataRow["invPayment"]), 2), Module1.formatCustomDecimal(Conversions.ToString(dataRow["invPayable"]), 2), dataRow["invPayableDays"]);
+						num4 = Conversions.ToDouble(Operators.AddObject(num4, dataRow["invTotal"]));
+						num5 = Conversions.ToDouble(Operators.AddObject(num5, dataRow["invReturn"]));
+						num6 = Conversions.ToDouble(Operators.AddObject(num6, dataRow["invDiscount"]));
+						num7 += num3;
+						num8 = Conversions.ToDouble(Operators.AddObject(num8, dataRow["invPayment"]));
+						num9 = Conversions.ToDouble(Operators.AddObject(num9, dataRow["invDeduction"]));
+						num10 = Conversions.ToDouble(Operators.AddObject(num10, dataRow["invPayable"]));
+					}
+					if (enumerator is IDisposable)
+					{
+						(enumerator as IDisposable).Dispose();
+					}
+					if (dataTable.Rows.Count == 0)
+					{
+						Interaction.MsgBox("Data tidak ditemukan", MsgBoxStyle.Information);
+						btnWord.Enabled = false;
+						btnPrint.Enabled = false;
+						dtpBegin.Focus();
+					}
+					else
+					{
+						dgvList.Rows.Add("", "Total", "", "Total", "", "", "", Module1.formatCustomDecimal(Conversions.ToString(num4), 2), Module1.formatCustomDecimal(Conversions.ToString(num5), 2), Module1.formatCustomDecimal(Conversions.ToString(num6), 2), Module1.formatCustomDecimal(Conversions.ToString(num7), 2), Module1.formatCustomDecimal(Conversions.ToString(num9), 2), Module1.formatCustomDecimal(Conversions.ToString(num8), 2), Module1.formatCustomDecimal(Conversions.ToString(num10), 2));
+						dgvList.Focus();
+						if (Module1.pubPreviewReport)
+						{
+							btnWord.Enabled = true;
+						}
+						if (Module1.pubPrintReport)
+						{
+							btnPrint.Enabled = true;
+						}
+					}
+					lblTotal.Text = "Total Pencarian: " + Conversions.ToString(dataTable.Rows.Count);
+					if (!Module1.pubViewReportPurchaseInvoicePrice)
+					{
+						lblTotal.Text += " (Hanya Faktur yang belum memiliki harga)";
+					}
+					goto end_IL_0001;
+				}
+				case 1963:
+					num = -1;
+					switch (num2)
+					{
+					case 2:
+						Module1.SaveError(Information.Err(), "frmReportPurchaseInvoice", "btnSearch_click", "");
+						goto end_IL_0001;
+					}
+					break;
+				}
+			}
+			catch (object obj) when (obj is Exception && num2 != 0 && num == 0)
+			{
+				ProjectData.SetProjectError((Exception)obj);
+				try0001_dispatch = 1963;
+				continue;
+			}
+			throw ProjectData.CreateProjectError(-2146828237);
+			continue;
+			end_IL_0001:
+			break;
+		}
+		if (num != 0)
+		{
+			ProjectData.ClearProjectError();
+		}
+	}
+
+	private void formatGrid()
+	{
+		dgvList.Columns.Clear();
+		dgvList.Columns.Add("", "invId");
+		dgvList.Columns.Add("", "Tanggal");
+		dgvList.Columns.Add("", "No Faktur");
+		dgvList.Columns.Add("", "Tgl Pajak");
+		dgvList.Columns.Add("", "No Faktur Pajak");
+		dgvList.Columns.Add("", "Supplier");
+		dgvList.Columns.Add("", "T/K");
+		dgvList.Columns.Add("", "Total Harga");
+		dgvList.Columns.Add("", "Retur");
+		dgvList.Columns.Add("", "Diskon");
+		dgvList.Columns.Add("", "Total Faktur");
+		dgvList.Columns.Add("", "Potongan");
+		dgvList.Columns.Add("", "Total Bayar");
+		dgvList.Columns.Add("", "Total Hutang");
+		dgvList.Columns.Add("", "Umur Hutang");
+		dgvList.Columns[0].Visible = false;
+		dgvList.Columns[1].DefaultCellStyle.Format = "dd/MM/yyyy";
+		dgvList.Columns[3].DefaultCellStyle.Format = "dd/MM/yyyy";
+		dgvList.Columns[0].Width = 0;
+		dgvList.Columns[1].Width = 63;
+		dgvList.Columns[2].Width = 90;
+		dgvList.Columns[3].Width = 63;
+		dgvList.Columns[4].Width = 90;
+		dgvList.Columns[5].Width = 120;
+		dgvList.Columns[6].Width = 35;
+		dgvList.Columns[6].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+		dgvList.Columns[7].Width = 97;
+		dgvList.Columns[7].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+		dgvList.Columns[8].Width = 66;
+		dgvList.Columns[8].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+		dgvList.Columns[9].Width = 68;
+		dgvList.Columns[9].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+		dgvList.Columns[10].Width = 97;
+		dgvList.Columns[10].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+		dgvList.Columns[11].Width = 68;
+		dgvList.Columns[11].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+		dgvList.Columns[12].Width = 87;
+		dgvList.Columns[12].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+		dgvList.Columns[13].Width = 97;
+		dgvList.Columns[13].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+		dgvList.Columns[14].Width = 44;
+		dgvList.Columns[14].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+		dgvList.RowHeadersVisible = false;
+		dgvList.AllowUserToAddRows = false;
+		dgvList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+		dgvList.ReadOnly = true;
+		dgvList.AlternatingRowsDefaultCellStyle.BackColor = Color.WhiteSmoke;
+		dgvList.AllowUserToResizeRows = false;
+		DataGridView grid = dgvList;
+		Module1.DisableGridSorting(ref grid);
+		dgvList = grid;
+		dgvList.DefaultCellStyle.Font = new Font("Arial", 8f, FontStyle.Regular);
+		dgvList.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 8f, FontStyle.Regular);
+	}
+
+	private void dgvList_DoubleClick(object sender, EventArgs e)
+	{
+		getData();
+	}
+
+	private void dgvList_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Return)
+		{
+			getData();
+			e.SuppressKeyPress = true;
+		}
+		else if (e.Shift & (e.KeyCode == Keys.Tab))
+		{
+			btnReset.Focus();
+			e.SuppressKeyPress = true;
+		}
+		else if (e.KeyCode == Keys.Tab)
+		{
+			btnWord.Focus();
+			e.SuppressKeyPress = true;
+		}
+	}
+
+	private void dgvList_GotFocus(object sender, EventArgs e)
+	{
+		btnSearch.NotifyDefault(value: false);
+		if (dgvList.RowCount > 0)
+		{
+			dgvList.CurrentRow.Selected = true;
+		}
+	}
+
+	private void dgvList_LostFocus(object sender, EventArgs e)
+	{
+		if (dgvList.RowCount > 0)
+		{
+			dgvList.CurrentRow.Selected = false;
+		}
+	}
+
+	private void getData()
+	{
+		if (dgvList.RowCount > 0 && Conversion.Val(RuntimeHelpers.GetObjectValue(dgvList[0, dgvList.CurrentRow.Index].Value)) > 0.0)
+		{
+			MyProject.Forms.frmPurchaseInvoice.Show();
+			MyProject.Forms.frmPurchaseInvoice.prepareForm(SaveNew: false, KeepSupplier: false);
+			MyProject.Forms.frmPurchaseInvoice.CurrentId = Conversions.ToDouble(dgvList[0, dgvList.CurrentRow.Index].Value);
+			MyProject.Forms.frmPurchaseInvoice.LoadData();
+			MyProject.Forms.frmPurchaseInvoice.Activate();
+			MyProject.Forms.frmPurchaseInvoice.WindowState = FormWindowState.Normal;
+		}
+	}
+
+	private void btnWord_Click(object sender, EventArgs e)
+	{
+		ExportReport(Print: false);
+	}
+
+	private void ExportReport(bool Print)
+	{
+		dgvList.SelectAll();
+		dgvList.ClipboardCopyMode = DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
+		Clipboard.SetDataObject(dgvList.GetClipboardContent());
+		dgvList.ClearSelection();
+		MsWord msWord = new MsWord();
+		msWord.rptWordNew(dgvList.Rows.Count, dgvList.Columns.Count, "LLLLRRRRRRRR", blnPortrait: false, "", Print);
+	}
+
+	private void btnReset_Click(object sender, EventArgs e)
+	{
+		prepareForm();
+	}
+
+	private void btnPrint_Click(object sender, EventArgs e)
+	{
+		if (MessageBox.Show("Cetak Report?", "Konfirmasi", MessageBoxButtons.YesNo) != DialogResult.No)
+		{
+			ExportReport(Print: true);
+		}
+	}
 }

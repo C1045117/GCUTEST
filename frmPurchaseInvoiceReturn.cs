@@ -1,174 +1,178 @@
 using System;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Drawing;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
+using Microsoft.VisualBasic.CompilerServices;
 
-namespace GCUv2
+namespace GCUv2;
+
+[DesignerGenerated]
+public class frmPurchaseInvoiceReturn : Form
 {
-    public class Form
-    {
+	private IContainer components;
 
-        private class ComponentModel.IContainer components;
-        private class Label _Label4;
-        private class ComboBox _cboRetur;
-        private class GCUv2.FilteredTextBox _txtAmount;
-        private class Label _Label5;
-        private class Button _btnDelete;
-        private class Button _btnSave;
-        private int32 _supplierId;
+	private int _supplierId;
 
+	[field: AccessedThroughProperty("Label4")]
+	internal virtual Label Label4
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-        public void frmPurchaseInvoiceReturn() {
+	[field: AccessedThroughProperty("cboRetur")]
+	internal virtual ComboBox cboRetur
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-          loc_5307F7: ldarg.0
-          loc_5307F8: call instance void System.Windows.Forms.Form::.ctor()
-          loc_5307FD: ldarg.0
-          loc_5307FE: ldarg.0
-          loc_5307FF: ldftn instance void GCUv2.frmPurchaseInvoiceReturn::frmPurchaseInvoiceRetur_KeyDown(object, class KeyEventArgs)
-          loc_530805: newobj instance void System.Windows.Forms.KeyEventHandler::.ctor(object, System.IntPtr)
-          loc_53080A: call instance void System.Windows.Forms.Control::add_KeyDown(class KeyEventHandler)
-          loc_53080F: ldarg.0
-          loc_530810: call instance void GCUv2.frmPurchaseInvoiceReturn::InitializeComponent()
-          loc_530815: ret
-        }
+	[field: AccessedThroughProperty("txtAmount")]
+	internal virtual FilteredTextBox txtAmount
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-        protected override strict void Dispose(boolean disposing) {
+	[field: AccessedThroughProperty("Label5")]
+	internal virtual Label Label5
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-          boolean var_1;
+	[field: AccessedThroughProperty("btnDelete")]
+	internal virtual Button btnDelete
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-        }
+	[field: AccessedThroughProperty("btnSave")]
+	internal virtual Button btnSave
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
 
-        private void InitializeComponent() {
+	public int SupplierId
+	{
+		get
+		{
+			return _supplierId;
+		}
+		set
+		{
+			_supplierId = value;
+		}
+	}
 
+	public frmPurchaseInvoiceReturn()
+	{
+		base.KeyDown += frmPurchaseInvoiceRetur_KeyDown;
+		InitializeComponent();
+	}
 
-        }
+	[DebuggerNonUserCode]
+	protected override void Dispose(bool disposing)
+	{
+		try
+		{
+			if (disposing && components != null)
+			{
+				components.Dispose();
+			}
+		}
+		finally
+		{
+			base.Dispose(disposing);
+		}
+	}
 
-        assem override strict specialname class Label get_Label4() {
+	[System.Diagnostics.DebuggerStepThrough]
+	private void InitializeComponent()
+	{
+		this.Label4 = new System.Windows.Forms.Label();
+		this.cboRetur = new System.Windows.Forms.ComboBox();
+		this.txtAmount = new GCUv2.FilteredTextBox();
+		this.Label5 = new System.Windows.Forms.Label();
+		this.btnDelete = new System.Windows.Forms.Button();
+		this.btnSave = new System.Windows.Forms.Button();
+		base.SuspendLayout();
+		this.Label4.AutoSize = true;
+		this.Label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label4.Location = new System.Drawing.Point(9, 17);
+		this.Label4.Name = "Label4";
+		this.Label4.Size = new System.Drawing.Size(33, 13);
+		this.Label4.TabIndex = 88;
+		this.Label4.Text = "Retur";
+		this.cboRetur.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+		this.cboRetur.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+		this.cboRetur.FormattingEnabled = true;
+		this.cboRetur.Location = new System.Drawing.Point(58, 12);
+		this.cboRetur.Name = "cboRetur";
+		this.cboRetur.Size = new System.Drawing.Size(139, 21);
+		this.cboRetur.TabIndex = 85;
+		this.txtAmount.AllowedCharacters = GCUv2.FilteredTextBox.InputType.All;
+		this.txtAmount.Enabled = false;
+		this.txtAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.txtAmount.Location = new System.Drawing.Point(58, 39);
+		this.txtAmount.Name = "txtAmount";
+		this.txtAmount.Size = new System.Drawing.Size(139, 26);
+		this.txtAmount.TabIndex = 86;
+		this.txtAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+		this.Label5.AutoSize = true;
+		this.Label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label5.Location = new System.Drawing.Point(9, 47);
+		this.Label5.Name = "Label5";
+		this.Label5.Size = new System.Drawing.Size(43, 13);
+		this.Label5.TabIndex = 87;
+		this.Label5.Text = "Jumlah ";
+		this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnDelete.Location = new System.Drawing.Point(139, 71);
+		this.btnDelete.Name = "btnDelete";
+		this.btnDelete.Size = new System.Drawing.Size(58, 24);
+		this.btnDelete.TabIndex = 90;
+		this.btnDelete.Text = "Hapus";
+		this.btnDelete.UseVisualStyleBackColor = true;
+		this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnSave.Location = new System.Drawing.Point(72, 71);
+		this.btnSave.Name = "btnSave";
+		this.btnSave.Size = new System.Drawing.Size(61, 24);
+		this.btnSave.TabIndex = 89;
+		this.btnSave.Text = "Simpan ";
+		this.btnSave.UseVisualStyleBackColor = true;
+		base.AcceptButton = this.btnSave;
+		base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
+		base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+		base.ClientSize = new System.Drawing.Size(212, 105);
+		base.Controls.Add(this.btnDelete);
+		base.Controls.Add(this.btnSave);
+		base.Controls.Add(this.Label4);
+		base.Controls.Add(this.cboRetur);
+		base.Controls.Add(this.txtAmount);
+		base.Controls.Add(this.Label5);
+		base.KeyPreview = true;
+		base.MaximizeBox = false;
+		base.MinimizeBox = false;
+		base.Name = "frmPurchaseInvoiceReturn";
+		base.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+		this.Text = "Retur";
+		base.ResumeLayout(false);
+		base.PerformLayout();
+	}
 
-          loc_530CB4: ldarg.0
-          loc_530CB5: ldfld GCUv2.frmPurchaseInvoiceReturn::_Label4
-          loc_530CBA: br.s loc_530CBC
-          loc_530CBC: // Referenced from: loc_530CBA
-          loc_530CBC: ret
-        }
+	private void frmPurchaseInvoiceRetur_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Escape)
+		{
+			Close();
+		}
+	}
 
-        assem override strict specialname void set_Label4(class Label WithEventsValue) {
-
-          loc_530CBE: ldarg.0
-          loc_530CBF: ldarg.1
-          loc_530CC0: stfld GCUv2.frmPurchaseInvoiceReturn::_Label4
-          loc_530CC5: ret
-        }
-
-        assem override strict specialname class ComboBox get_cboRetur() {
-
-          loc_530CC7: ldarg.0
-          loc_530CC8: ldfld GCUv2.frmPurchaseInvoiceReturn::_cboRetur
-          loc_530CCD: br.s loc_530CCF
-          loc_530CCF: // Referenced from: loc_530CCD
-          loc_530CCF: ret
-        }
-
-        assem override strict specialname void set_cboRetur(class ComboBox WithEventsValue) {
-
-          loc_530CD1: ldarg.0
-          loc_530CD2: ldarg.1
-          loc_530CD3: stfld GCUv2.frmPurchaseInvoiceReturn::_cboRetur
-          loc_530CD8: ret
-        }
-
-        assem override strict specialname class GCUv2.FilteredTextBox get_txtAmount() {
-
-          loc_530CDA: ldarg.0
-          loc_530CDB: ldfld GCUv2.frmPurchaseInvoiceReturn::_txtAmount
-          loc_530CE0: br.s loc_530CE2
-          loc_530CE2: // Referenced from: loc_530CE0
-          loc_530CE2: ret
-        }
-
-        assem override strict specialname void set_txtAmount(class GCUv2.FilteredTextBox WithEventsValue) {
-
-          loc_530CE4: ldarg.0
-          loc_530CE5: ldarg.1
-          loc_530CE6: stfld GCUv2.frmPurchaseInvoiceReturn::_txtAmount
-          loc_530CEB: ret
-        }
-
-        assem override strict specialname class Label get_Label5() {
-
-          loc_530CED: ldarg.0
-          loc_530CEE: ldfld GCUv2.frmPurchaseInvoiceReturn::_Label5
-          loc_530CF3: br.s loc_530CF5
-          loc_530CF5: // Referenced from: loc_530CF3
-          loc_530CF5: ret
-        }
-
-        assem override strict specialname void set_Label5(class Label WithEventsValue) {
-
-          loc_530CF7: ldarg.0
-          loc_530CF8: ldarg.1
-          loc_530CF9: stfld GCUv2.frmPurchaseInvoiceReturn::_Label5
-          loc_530CFE: ret
-        }
-
-        assem override strict specialname class Button get_btnDelete() {
-
-          loc_530D00: ldarg.0
-          loc_530D01: ldfld GCUv2.frmPurchaseInvoiceReturn::_btnDelete
-          loc_530D06: br.s loc_530D08
-          loc_530D08: // Referenced from: loc_530D06
-          loc_530D08: ret
-        }
-
-        assem override strict specialname void set_btnDelete(class Button WithEventsValue) {
-
-          loc_530D0A: ldarg.0
-          loc_530D0B: ldarg.1
-          loc_530D0C: stfld GCUv2.frmPurchaseInvoiceReturn::_btnDelete
-          loc_530D11: ret
-        }
-
-        assem override strict specialname class Button get_btnSave() {
-
-          loc_530D13: ldarg.0
-          loc_530D14: ldfld GCUv2.frmPurchaseInvoiceReturn::_btnSave
-          loc_530D19: br.s loc_530D1B
-          loc_530D1B: // Referenced from: loc_530D19
-          loc_530D1B: ret
-        }
-
-        assem override strict specialname void set_btnSave(class Button WithEventsValue) {
-
-          loc_530D1D: ldarg.0
-          loc_530D1E: ldarg.1
-          loc_530D1F: stfld GCUv2.frmPurchaseInvoiceReturn::_btnSave
-          loc_530D24: ret
-        }
-
-        public specialname int32 get_SupplierId() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_SupplierId(int32 value) {
-
-          loc_530D41: nop
-          loc_530D42: ldarg.0
-          loc_530D43: ldarg.1
-          loc_530D44: stfld GCUv2.frmPurchaseInvoiceReturn::_supplierId
-          loc_530D49: ret
-        }
-
-        private void frmPurchaseInvoiceRetur_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void btnSave_Click(object sender, class System.EventArgs e) {
-
-          loc_4404BF: nop
-          loc_4404C0: ret
-        }
-
-    }
+	private void btnSave_Click(object sender, EventArgs e)
+	{
+	}
 }

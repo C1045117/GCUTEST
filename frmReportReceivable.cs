@@ -1,776 +1,1240 @@
 using System;
+using System.ComponentModel;
+using System.Data;
+using System.Diagnostics;
+using System.Drawing;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic.PowerPacks.Vs;
+using GCUv2.My;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using Microsoft.VisualBasic.PowerPacks;
 
-namespace GCUv2
+namespace GCUv2;
+
+[DesignerGenerated]
+public class frmReportReceivable : Form
 {
-    public class Form
-    {
-
-        private class ComponentModel.IContainer components;
-        private class Label _Label3;
-        private class ComboBox _cboBaseFilter;
-        private class Button _btnReset;
-        private class Button _btnWord;
-        private class Label _lblDate;
-        private class Label _lblTotal;
-        private class DataGridView _dgvList;
-        private class Button _btnSearch;
-        private class Label _Label2;
-        private class DateTimePicker _dtpEnd;
-        private class DateTimePicker _dtpBegin;
-        private class Label _Label9;
-        private class ComboBox _cboStorage;
-        private class Label _Label10;
-        private class ComboBox _cboBranch;
-        private class CheckedListBox _clbArea;
-        private class Label _Label4;
-        private class CheckBox _chkAllArea;
-        private class Microsoft.VisualBasic.PowerPacks.LineShape _LineShape1;
-        private class Microsoft.VisualBasic.PowerPacks.LineShape _LineShape2;
-        private class Microsoft.VisualBasic.PowerPacks.ShapeContainer _ShapeContainer1;
-        private class Button _btnAllCustomer;
-        private class Button _btnSearchCustomer;
-        private class Label _lblCustomerName;
-        private class Label _Label11;
-        private class Label _Label12;
-        private class ComboBox _cboCustomerCode;
-        private class Label _Label13;
-        private class ComboBox _cboSalesPerson;
-        private class Button _btnPrint;
-        private double _customerId;
-
-
-        protected override strict void Dispose(boolean disposing) {
-
-          boolean var_1;
-
-        }
-
-        private void InitializeComponent() {
-
-
-        }
-
-        assem override strict specialname class Label get_Label3() {
-
-          loc_48037A: ldarg.0
-          loc_48037B: ldfld GCUv2.frmReportReceivable::_Label3
-          loc_480380: br.s loc_480382
-          loc_480382: // Referenced from: loc_480380
-          loc_480382: ret
-        }
-
-        assem override strict specialname void set_Label3(class Label WithEventsValue) {
-
-          loc_480384: ldarg.0
-          loc_480385: ldarg.1
-          loc_480386: stfld GCUv2.frmReportReceivable::_Label3
-          loc_48038B: ret
-        }
-
-        assem override strict specialname class ComboBox get_cboBaseFilter() {
-
-          loc_48038D: ldarg.0
-          loc_48038E: ldfld GCUv2.frmReportReceivable::_cboBaseFilter
-          loc_480393: br.s loc_480395
-          loc_480395: // Referenced from: loc_480393
-          loc_480395: ret
-        }
-
-        assem override strict specialname void set_cboBaseFilter(class ComboBox WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class ComboBox var_2;
-
-        }
-
-        assem override strict specialname class Button get_btnReset() {
-
-          loc_4803DC: ldarg.0
-          loc_4803DD: ldfld GCUv2.frmReportReceivable::_btnReset
-          loc_4803E2: br.s loc_4803E4
-          loc_4803E4: // Referenced from: loc_4803E2
-          loc_4803E4: ret
-        }
-
-        assem override strict specialname void set_btnReset(class Button WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Button var_2;
-
-        }
-
-        assem override strict specialname class Button get_btnWord() {
-
-          loc_48042C: ldarg.0
-          loc_48042D: ldfld GCUv2.frmReportReceivable::_btnWord
-          loc_480432: br.s loc_480434
-          loc_480434: // Referenced from: loc_480432
-          loc_480434: ret
-        }
-
-        assem override strict specialname void set_btnWord(class Button WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Button var_2;
-
-        }
-
-        assem override strict specialname class Label get_lblDate() {
-
-          loc_48047C: ldarg.0
-          loc_48047D: ldfld GCUv2.frmReportReceivable::_lblDate
-          loc_480482: br.s loc_480484
-          loc_480484: // Referenced from: loc_480482
-          loc_480484: ret
-        }
-
-        assem override strict specialname void set_lblDate(class Label WithEventsValue) {
-
-          loc_480486: ldarg.0
-          loc_480487: ldarg.1
-          loc_480488: stfld GCUv2.frmReportReceivable::_lblDate
-          loc_48048D: ret
-        }
-
-        assem override strict specialname class Label get_lblTotal() {
-
-          loc_48048F: ldarg.0
-          loc_480490: ldfld GCUv2.frmReportReceivable::_lblTotal
-          loc_480495: br.s loc_480497
-          loc_480497: // Referenced from: loc_480495
-          loc_480497: ret
-        }
-
-        assem override strict specialname void set_lblTotal(class Label WithEventsValue) {
-
-          loc_480499: ldarg.0
-          loc_48049A: ldarg.1
-          loc_48049B: stfld GCUv2.frmReportReceivable::_lblTotal
-          loc_4804A0: ret
-        }
-
-        assem override strict specialname class DataGridView get_dgvList() {
-
-          loc_4804A2: ldarg.0
-          loc_4804A3: ldfld GCUv2.frmReportReceivable::_dgvList
-          loc_4804A8: br.s loc_4804AA
-          loc_4804AA: // Referenced from: loc_4804A8
-          loc_4804AA: ret
-        }
-
-        assem override strict specialname void set_dgvList(class DataGridView WithEventsValue) {
-
-          class DataGridViewCellFormattingEventHandler var_1;
-          class DataGridViewSortCompareEventHandler var_2;
-          class System.EventHandler var_3;
-          class KeyEventHandler var_4;
-          class System.EventHandler var_5;
-          class System.EventHandler var_6;
-          class DataGridView var_7;
-
-        }
-
-        assem override strict specialname class Button get_btnSearch() {
-
-          loc_48058D: ldarg.0
-          loc_48058E: ldfld GCUv2.frmReportReceivable::_btnSearch
-          loc_480593: br.s loc_480595
-          loc_480595: // Referenced from: loc_480593
-          loc_480595: ret
-        }
-
-        assem override strict specialname void set_btnSearch(class Button WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Button var_2;
-
-        }
-
-        assem override strict specialname class Label get_Label2() {
-
-          loc_4805DC: ldarg.0
-          loc_4805DD: ldfld GCUv2.frmReportReceivable::_Label2
-          loc_4805E2: br.s loc_4805E4
-          loc_4805E4: // Referenced from: loc_4805E2
-          loc_4805E4: ret
-        }
-
-        assem override strict specialname void set_Label2(class Label WithEventsValue) {
-
-          loc_4805E6: ldarg.0
-          loc_4805E7: ldarg.1
-          loc_4805E8: stfld GCUv2.frmReportReceivable::_Label2
-          loc_4805ED: ret
-        }
-
-        assem override strict specialname class DateTimePicker get_dtpEnd() {
-
-          loc_4805EF: ldarg.0
-          loc_4805F0: ldfld GCUv2.frmReportReceivable::_dtpEnd
-          loc_4805F5: br.s loc_4805F7
-          loc_4805F7: // Referenced from: loc_4805F5
-          loc_4805F7: ret
-        }
-
-        assem override strict specialname void set_dtpEnd(class DateTimePicker WithEventsValue) {
-
-          class KeyEventHandler var_1;
-          class DateTimePicker var_2;
-
-        }
-
-        assem override strict specialname class DateTimePicker get_dtpBegin() {
-
-          loc_48063C: ldarg.0
-          loc_48063D: ldfld GCUv2.frmReportReceivable::_dtpBegin
-          loc_480642: br.s loc_480644
-          loc_480644: // Referenced from: loc_480642
-          loc_480644: ret
-        }
-
-        assem override strict specialname void set_dtpBegin(class DateTimePicker WithEventsValue) {
-
-          class KeyEventHandler var_1;
-          class DateTimePicker var_2;
-
-        }
-
-        assem override strict specialname class Label get_Label9() {
-
-          loc_48068C: ldarg.0
-          loc_48068D: ldfld GCUv2.frmReportReceivable::_Label9
-          loc_480692: br.s loc_480694
-          loc_480694: // Referenced from: loc_480692
-          loc_480694: ret
-        }
-
-        assem override strict specialname void set_Label9(class Label WithEventsValue) {
-
-          loc_480696: ldarg.0
-          loc_480697: ldarg.1
-          loc_480698: stfld GCUv2.frmReportReceivable::_Label9
-          loc_48069D: ret
-        }
-
-        assem override strict specialname class ComboBox get_cboStorage() {
-
-          loc_48069F: ldarg.0
-          loc_4806A0: ldfld GCUv2.frmReportReceivable::_cboStorage
-          loc_4806A5: br.s loc_4806A7
-          loc_4806A7: // Referenced from: loc_4806A5
-          loc_4806A7: ret
-        }
-
-        assem override strict specialname void set_cboStorage(class ComboBox WithEventsValue) {
-
-          loc_4806A9: ldarg.0
-          loc_4806AA: ldarg.1
-          loc_4806AB: stfld GCUv2.frmReportReceivable::_cboStorage
-          loc_4806B0: ret
-        }
-
-        assem override strict specialname class Label get_Label10() {
-
-          loc_4806B2: ldarg.0
-          loc_4806B3: ldfld GCUv2.frmReportReceivable::_Label10
-          loc_4806B8: br.s loc_4806BA
-          loc_4806BA: // Referenced from: loc_4806B8
-          loc_4806BA: ret
-        }
-
-        assem override strict specialname void set_Label10(class Label WithEventsValue) {
-
-          loc_4806BC: ldarg.0
-          loc_4806BD: ldarg.1
-          loc_4806BE: stfld GCUv2.frmReportReceivable::_Label10
-          loc_4806C3: ret
-        }
-
-        assem override strict specialname class ComboBox get_cboBranch() {
-
-          loc_4806C5: ldarg.0
-          loc_4806C6: ldfld GCUv2.frmReportReceivable::_cboBranch
-          loc_4806CB: br.s loc_4806CD
-          loc_4806CD: // Referenced from: loc_4806CB
-          loc_4806CD: ret
-        }
-
-        assem override strict specialname void set_cboBranch(class ComboBox WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class ComboBox var_2;
-
-        }
-
-        assem override strict specialname class CheckedListBox get_clbArea() {
-
-          loc_480714: ldarg.0
-          loc_480715: ldfld GCUv2.frmReportReceivable::_clbArea
-          loc_48071A: br.s loc_48071C
-          loc_48071C: // Referenced from: loc_48071A
-          loc_48071C: ret
-        }
-
-        assem override strict specialname void set_clbArea(class CheckedListBox WithEventsValue) {
-
-          loc_48071E: ldarg.0
-          loc_48071F: ldarg.1
-          loc_480720: stfld GCUv2.frmReportReceivable::_clbArea
-          loc_480725: ret
-        }
-
-        assem override strict specialname class Label get_Label4() {
-
-          loc_480727: ldarg.0
-          loc_480728: ldfld GCUv2.frmReportReceivable::_Label4
-          loc_48072D: br.s loc_48072F
-          loc_48072F: // Referenced from: loc_48072D
-          loc_48072F: ret
-        }
-
-        assem override strict specialname void set_Label4(class Label WithEventsValue) {
-
-          loc_480731: ldarg.0
-          loc_480732: ldarg.1
-          loc_480733: stfld GCUv2.frmReportReceivable::_Label4
-          loc_480738: ret
-        }
-
-        assem override strict specialname class CheckBox get_chkAllArea() {
-
-          loc_48073A: ldarg.0
-          loc_48073B: ldfld GCUv2.frmReportReceivable::_chkAllArea
-          loc_480740: br.s loc_480742
-          loc_480742: // Referenced from: loc_480740
-          loc_480742: ret
-        }
-
-        assem override strict specialname void set_chkAllArea(class CheckBox WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class CheckBox var_2;
-
-        }
-
-        assem override strict specialname class Microsoft.VisualBasic.PowerPacks.LineShape get_LineShape1() {
-
-          loc_480788: ldarg.0
-          loc_480789: ldfld GCUv2.frmReportReceivable::_LineShape1
-          loc_48078E: br.s loc_480790
-          loc_480790: // Referenced from: loc_48078E
-          loc_480790: ret
-        }
-
-        assem override strict specialname void set_LineShape1(class Microsoft.VisualBasic.PowerPacks.LineShape WithEventsValue) {
-
-          loc_480792: ldarg.0
-          loc_480793: ldarg.1
-          loc_480794: stfld GCUv2.frmReportReceivable::_LineShape1
-          loc_480799: ret
-        }
-
-        assem override strict specialname class Microsoft.VisualBasic.PowerPacks.LineShape get_LineShape2() {
-
-          loc_48079B: ldarg.0
-          loc_48079C: ldfld GCUv2.frmReportReceivable::_LineShape2
-          loc_4807A1: br.s loc_4807A3
-          loc_4807A3: // Referenced from: loc_4807A1
-          loc_4807A3: ret
-        }
-
-        assem override strict specialname void set_LineShape2(class Microsoft.VisualBasic.PowerPacks.LineShape WithEventsValue) {
-
-          loc_4807A5: ldarg.0
-          loc_4807A6: ldarg.1
-          loc_4807A7: stfld GCUv2.frmReportReceivable::_LineShape2
-          loc_4807AC: ret
-        }
-
-        assem override strict specialname class Microsoft.VisualBasic.PowerPacks.ShapeContainer get_ShapeContainer1() {
-
-          loc_4807AE: ldarg.0
-          loc_4807AF: ldfld GCUv2.frmReportReceivable::_ShapeContainer1
-          loc_4807B4: br.s loc_4807B6
-          loc_4807B6: // Referenced from: loc_4807B4
-          loc_4807B6: ret
-        }
-
-        assem override strict specialname void set_ShapeContainer1(class Microsoft.VisualBasic.PowerPacks.ShapeContainer WithEventsValue) {
-
-          loc_4807B8: ldarg.0
-          loc_4807B9: ldarg.1
-          loc_4807BA: stfld GCUv2.frmReportReceivable::_ShapeContainer1
-          loc_4807BF: ret
-        }
-
-        assem override strict specialname class Button get_btnAllCustomer() {
-
-          loc_4807C1: ldarg.0
-          loc_4807C2: ldfld GCUv2.frmReportReceivable::_btnAllCustomer
-          loc_4807C7: br.s loc_4807C9
-          loc_4807C9: // Referenced from: loc_4807C7
-          loc_4807C9: ret
-        }
-
-        assem override strict specialname void set_btnAllCustomer(class Button WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Button var_2;
-
-        }
-
-        assem override strict specialname class Button get_btnSearchCustomer() {
-
-          loc_480810: ldarg.0
-          loc_480811: ldfld GCUv2.frmReportReceivable::_btnSearchCustomer
-          loc_480816: br.s loc_480818
-          loc_480818: // Referenced from: loc_480816
-          loc_480818: ret
-        }
-
-        assem override strict specialname void set_btnSearchCustomer(class Button WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Button var_2;
-
-        }
-
-        assem override strict specialname class Label get_lblCustomerName() {
-
-          loc_480860: ldarg.0
-          loc_480861: ldfld GCUv2.frmReportReceivable::_lblCustomerName
-          loc_480866: br.s loc_480868
-          loc_480868: // Referenced from: loc_480866
-          loc_480868: ret
-        }
-
-        assem override strict specialname void set_lblCustomerName(class Label WithEventsValue) {
-
-          loc_48086A: ldarg.0
-          loc_48086B: ldarg.1
-          loc_48086C: stfld GCUv2.frmReportReceivable::_lblCustomerName
-          loc_480871: ret
-        }
-
-        assem override strict specialname class Label get_Label11() {
-
-          loc_480873: ldarg.0
-          loc_480874: ldfld GCUv2.frmReportReceivable::_Label11
-          loc_480879: br.s loc_48087B
-          loc_48087B: // Referenced from: loc_480879
-          loc_48087B: ret
-        }
-
-        assem override strict specialname void set_Label11(class Label WithEventsValue) {
-
-          loc_48087D: ldarg.0
-          loc_48087E: ldarg.1
-          loc_48087F: stfld GCUv2.frmReportReceivable::_Label11
-          loc_480884: ret
-        }
-
-        assem override strict specialname class Label get_Label12() {
-
-          loc_480886: ldarg.0
-          loc_480887: ldfld GCUv2.frmReportReceivable::_Label12
-          loc_48088C: br.s loc_48088E
-          loc_48088E: // Referenced from: loc_48088C
-          loc_48088E: ret
-        }
-
-        assem override strict specialname void set_Label12(class Label WithEventsValue) {
-
-          loc_480890: ldarg.0
-          loc_480891: ldarg.1
-          loc_480892: stfld GCUv2.frmReportReceivable::_Label12
-          loc_480897: ret
-        }
-
-        assem override strict specialname class ComboBox get_cboCustomerCode() {
-
-          loc_480899: ldarg.0
-          loc_48089A: ldfld GCUv2.frmReportReceivable::_cboCustomerCode
-          loc_48089F: br.s loc_4808A1
-          loc_4808A1: // Referenced from: loc_48089F
-          loc_4808A1: ret
-        }
-
-        assem override strict specialname void set_cboCustomerCode(class ComboBox WithEventsValue) {
-
-          loc_4808A3: ldarg.0
-          loc_4808A4: ldarg.1
-          loc_4808A5: stfld GCUv2.frmReportReceivable::_cboCustomerCode
-          loc_4808AA: ret
-        }
-
-        assem override strict specialname class Label get_Label13() {
-
-          loc_4808AC: ldarg.0
-          loc_4808AD: ldfld GCUv2.frmReportReceivable::_Label13
-          loc_4808B2: br.s loc_4808B4
-          loc_4808B4: // Referenced from: loc_4808B2
-          loc_4808B4: ret
-        }
-
-        assem override strict specialname void set_Label13(class Label WithEventsValue) {
-
-          loc_4808B6: ldarg.0
-          loc_4808B7: ldarg.1
-          loc_4808B8: stfld GCUv2.frmReportReceivable::_Label13
-          loc_4808BD: ret
-        }
-
-        assem override strict specialname class ComboBox get_cboSalesPerson() {
-
-          loc_4808BF: ldarg.0
-          loc_4808C0: ldfld GCUv2.frmReportReceivable::_cboSalesPerson
-          loc_4808C5: br.s loc_4808C7
-          loc_4808C7: // Referenced from: loc_4808C5
-          loc_4808C7: ret
-        }
-
-        assem override strict specialname void set_cboSalesPerson(class ComboBox WithEventsValue) {
-
-          loc_4808C9: ldarg.0
-          loc_4808CA: ldarg.1
-          loc_4808CB: stfld GCUv2.frmReportReceivable::_cboSalesPerson
-          loc_4808D0: ret
-        }
-
-        assem override strict specialname class Button get_btnPrint() {
-
-          loc_4808D2: ldarg.0
-          loc_4808D3: ldfld GCUv2.frmReportReceivable::_btnPrint
-          loc_4808D8: br.s loc_4808DA
-          loc_4808DA: // Referenced from: loc_4808D8
-          loc_4808DA: ret
-        }
-
-        assem override strict specialname void set_btnPrint(class Button WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Button var_2;
-
-        }
-
-        public specialname double get_CustomerId() {
-
-          double flt_1;
-
-        }
-
-        public specialname void set_CustomerId(double value) {
-
-          loc_480939: nop
-          loc_48093A: ldarg.0
-          loc_48093B: ldarg.1
-          loc_48093C: stfld GCUv2.frmReportReceivable::_customerId
-          loc_480941: ret
-        }
-
-        public void frmReportReceivable() {
-
-          class ComboBox var_1;
-
-        }
-
-        private void frmReportPurchaseInvoice_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void frmReportPurchaseInvoice_Load(object sender, class System.EventArgs e) {
-
-          loc_480A1A: nop
-          loc_480A1B: ldarg.0
-          loc_480A1C: call instance void GCUv2.frmReportReceivable::prepareForm()
-          loc_480A21: nop
-          loc_480A22: ldarg.0
-          loc_480A23: callvirt instance class DataGridView GCUv2.frmReportReceivable::get_dgvList()
-          loc_480A28: ldc.i4.1
-          loc_480A29: call void GCUv2.ExtensionMethods::DoubleBuffered(class DataGridView, boolean)
-          loc_480A2E: nop
-          loc_480A2F: ret
-        }
-
-        private void cboBranch_SelectedIndexChanged(object sender, class System.EventArgs e) {
-
-          class GCUv2.cComboItem var_1;
-          boolean var_2;
-          class ComboBox var_3;
-          class CheckedListBox var_4;
-
-        }
-
-        private void prepareForm() {
-
-
-        }
-
-        private void cboBaseFilter_SelectedIndexChanged(object sender, class System.EventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void dtpBegin_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-          boolean var_2;
-
-        }
-
-        private void dtpEnd_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-          boolean var_2;
-
-        }
-
-        private void btnAllCustomer_Click(object sender, class System.EventArgs e) {
-
-          loc_480E2A: nop
-          loc_480E2B: ldarg.0
-          loc_480E2C: ldc.r8 0.0F
-          loc_480E35: stfld GCUv2.frmReportReceivable::_customerId
-          loc_480E3A: ldarg.0
-          loc_480E3B: callvirt instance class Label GCUv2.frmReportReceivable::get_lblCustomerName()
-          loc_480E40: ldstr "--SEMUA--"
-          loc_480E45: callvirt instance void System.Windows.Forms.Label::set_Text(string)
-          loc_480E4A: nop
-          loc_480E4B: ret
-        }
-
-        private void btnSearchCustomer_Click(object sender, class System.EventArgs e) {
-
-          class GCUv2.cComboItem var_1;
-          class GCUv2.frmCustomerMiniSearch var_2;
-
-        }
-
-        private void btnSearch_Click(object sender, class System.EventArgs e) {
-
-          class GCUv2.cComboItem var_1;
-          class GCUv2.cComboItem var_2;
-          class GCUv2.cComboItem var_3;
-          class GCUv2.cComboItem var_4;
-          class GCUv2.cComboItem var_5;
-          int32[] var_6;
-          class GCUv2.cComboItem var_7;
-          int32 num_1;
-          class DataTable var_8;
-          double flt_1;
-          boolean var_9;
-          boolean var_10;
-          boolean var_11;
-          boolean var_12;
-          boolean var_13;
-          boolean var_14;
-          int32 num_2;
-          class System.Collections.IEnumerator var_15;
-          class DataRow var_16;
-          boolean var_17;
-          boolean var_18;
-          boolean var_19;
-          boolean var_20;
-          boolean var_21;
-
-        }
-
-        private void formatGrid() {
-
-
-        }
-
-        private void dgvList_CellFormatting(object sender, class DataGridViewCellFormattingEventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void dgvList_SortCompare(object sender, class DataGridViewSortCompareEventArgs e) {
-
-          boolean var_1;
-          boolean var_2;
-
-        }
-
-        private void dgvList_DoubleClick(object sender, class System.EventArgs e) {
-
-          loc_4816CF: nop
-          loc_4816D0: ldarg.0
-          loc_4816D1: call instance void GCUv2.frmReportReceivable::getData()
-          loc_4816D6: nop
-          loc_4816D7: ret
-        }
-
-        private void dgvList_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-          boolean var_2;
-          boolean var_3;
-
-        }
-
-        private void dgvList_GotFocus(object sender, class System.EventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void dgvList_LostFocus(object sender, class System.EventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void getData() {
-
-          boolean var_1;
-
-        }
-
-        private void btnWord_Click(object sender, class System.EventArgs e) {
-
-          loc_4818B7: nop
-          loc_4818B8: ldarg.0
-          loc_4818B9: ldc.i4.0
-          loc_4818BA: call instance void GCUv2.frmReportReceivable::ExportReport(boolean)
-          loc_4818BF: nop
-          loc_4818C0: ret
-        }
-
-        private void ExportReport(boolean Print) {
-
-          class GCUv2.MsWord var_1;
-
-        }
-
-        private void btnReset_Click(object sender, class System.EventArgs e) {
-
-          loc_481942: nop
-          loc_481943: ldarg.0
-          loc_481944: call instance void GCUv2.frmReportReceivable::prepareForm()
-          loc_481949: nop
-          loc_48194A: ret
-        }
-
-        private void chkAllArea_CheckedChanged(object sender, class System.EventArgs e) {
-
-          int32 num_1;
-          int32 num_2;
-          boolean var_1;
-
-        }
-
-        private void btnPrint_Click(object sender, class System.EventArgs e) {
-
-          boolean var_1;
-
-        }
-
-    }
+	private IContainer components;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("cboBaseFilter")]
+	private ComboBox _cboBaseFilter;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnReset")]
+	private Button _btnReset;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnWord")]
+	private Button _btnWord;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("dgvList")]
+	private DataGridView _dgvList;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnSearch")]
+	private Button _btnSearch;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("dtpEnd")]
+	private DateTimePicker _dtpEnd;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("dtpBegin")]
+	private DateTimePicker _dtpBegin;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("cboBranch")]
+	private ComboBox _cboBranch;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("chkAllArea")]
+	private CheckBox _chkAllArea;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnAllCustomer")]
+	private Button _btnAllCustomer;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnSearchCustomer")]
+	private Button _btnSearchCustomer;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnPrint")]
+	private Button _btnPrint;
+
+	private double _customerId;
+
+	[field: AccessedThroughProperty("Label3")]
+	internal virtual Label Label3
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual ComboBox cboBaseFilter
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _cboBaseFilter;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = cboBaseFilter_SelectedIndexChanged;
+			ComboBox comboBox = _cboBaseFilter;
+			if (comboBox != null)
+			{
+				comboBox.SelectedIndexChanged -= value2;
+			}
+			_cboBaseFilter = value;
+			comboBox = _cboBaseFilter;
+			if (comboBox != null)
+			{
+				comboBox.SelectedIndexChanged += value2;
+			}
+		}
+	}
+
+	internal virtual Button btnReset
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnReset;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnReset_Click;
+			Button button = _btnReset;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnReset = value;
+			button = _btnReset;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
+
+	internal virtual Button btnWord
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnWord;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnWord_Click;
+			Button button = _btnWord;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnWord = value;
+			button = _btnWord;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
+
+	[field: AccessedThroughProperty("lblDate")]
+	internal virtual Label lblDate
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("lblTotal")]
+	internal virtual Label lblTotal
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual DataGridView dgvList
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _dgvList;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			DataGridViewCellFormattingEventHandler value2 = dgvList_CellFormatting;
+			DataGridViewSortCompareEventHandler value3 = dgvList_SortCompare;
+			EventHandler value4 = dgvList_DoubleClick;
+			KeyEventHandler value5 = dgvList_KeyDown;
+			EventHandler value6 = dgvList_GotFocus;
+			EventHandler value7 = dgvList_LostFocus;
+			DataGridView dataGridView = _dgvList;
+			if (dataGridView != null)
+			{
+				dataGridView.CellFormatting -= value2;
+				dataGridView.SortCompare -= value3;
+				dataGridView.DoubleClick -= value4;
+				dataGridView.KeyDown -= value5;
+				dataGridView.GotFocus -= value6;
+				dataGridView.LostFocus -= value7;
+			}
+			_dgvList = value;
+			dataGridView = _dgvList;
+			if (dataGridView != null)
+			{
+				dataGridView.CellFormatting += value2;
+				dataGridView.SortCompare += value3;
+				dataGridView.DoubleClick += value4;
+				dataGridView.KeyDown += value5;
+				dataGridView.GotFocus += value6;
+				dataGridView.LostFocus += value7;
+			}
+		}
+	}
+
+	internal virtual Button btnSearch
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnSearch;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnSearch_Click;
+			Button button = _btnSearch;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnSearch = value;
+			button = _btnSearch;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
+
+	[field: AccessedThroughProperty("Label2")]
+	internal virtual Label Label2
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual DateTimePicker dtpEnd
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _dtpEnd;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			KeyEventHandler value2 = dtpEnd_KeyDown;
+			DateTimePicker dateTimePicker = _dtpEnd;
+			if (dateTimePicker != null)
+			{
+				dateTimePicker.KeyDown -= value2;
+			}
+			_dtpEnd = value;
+			dateTimePicker = _dtpEnd;
+			if (dateTimePicker != null)
+			{
+				dateTimePicker.KeyDown += value2;
+			}
+		}
+	}
+
+	internal virtual DateTimePicker dtpBegin
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _dtpBegin;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			KeyEventHandler value2 = dtpBegin_KeyDown;
+			DateTimePicker dateTimePicker = _dtpBegin;
+			if (dateTimePicker != null)
+			{
+				dateTimePicker.KeyDown -= value2;
+			}
+			_dtpBegin = value;
+			dateTimePicker = _dtpBegin;
+			if (dateTimePicker != null)
+			{
+				dateTimePicker.KeyDown += value2;
+			}
+		}
+	}
+
+	[field: AccessedThroughProperty("Label9")]
+	internal virtual Label Label9
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("cboStorage")]
+	internal virtual ComboBox cboStorage
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label10")]
+	internal virtual Label Label10
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual ComboBox cboBranch
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _cboBranch;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = cboBranch_SelectedIndexChanged;
+			ComboBox comboBox = _cboBranch;
+			if (comboBox != null)
+			{
+				comboBox.SelectedIndexChanged -= value2;
+			}
+			_cboBranch = value;
+			comboBox = _cboBranch;
+			if (comboBox != null)
+			{
+				comboBox.SelectedIndexChanged += value2;
+			}
+		}
+	}
+
+	[field: AccessedThroughProperty("clbArea")]
+	internal virtual CheckedListBox clbArea
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label4")]
+	internal virtual Label Label4
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual CheckBox chkAllArea
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _chkAllArea;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = chkAllArea_CheckedChanged;
+			CheckBox checkBox = _chkAllArea;
+			if (checkBox != null)
+			{
+				checkBox.CheckedChanged -= value2;
+			}
+			_chkAllArea = value;
+			checkBox = _chkAllArea;
+			if (checkBox != null)
+			{
+				checkBox.CheckedChanged += value2;
+			}
+		}
+	}
+
+	[field: AccessedThroughProperty("LineShape1")]
+	internal virtual LineShape LineShape1
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("LineShape2")]
+	internal virtual LineShape LineShape2
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("ShapeContainer1")]
+	internal virtual ShapeContainer ShapeContainer1
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual Button btnAllCustomer
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnAllCustomer;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnAllCustomer_Click;
+			Button button = _btnAllCustomer;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnAllCustomer = value;
+			button = _btnAllCustomer;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
+
+	internal virtual Button btnSearchCustomer
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnSearchCustomer;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnSearchCustomer_Click;
+			Button button = _btnSearchCustomer;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnSearchCustomer = value;
+			button = _btnSearchCustomer;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
+
+	[field: AccessedThroughProperty("lblCustomerName")]
+	internal virtual Label lblCustomerName
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label11")]
+	internal virtual Label Label11
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label12")]
+	internal virtual Label Label12
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("cboCustomerCode")]
+	internal virtual ComboBox cboCustomerCode
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label13")]
+	internal virtual Label Label13
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("cboSalesPerson")]
+	internal virtual ComboBox cboSalesPerson
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual Button btnPrint
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnPrint;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnPrint_Click;
+			Button button = _btnPrint;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnPrint = value;
+			button = _btnPrint;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
+
+	public double CustomerId
+	{
+		get
+		{
+			return _customerId;
+		}
+		set
+		{
+			_customerId = value;
+		}
+	}
+
+	[DebuggerNonUserCode]
+	protected override void Dispose(bool disposing)
+	{
+		try
+		{
+			if (disposing && components != null)
+			{
+				components.Dispose();
+			}
+		}
+		finally
+		{
+			base.Dispose(disposing);
+		}
+	}
+
+	[System.Diagnostics.DebuggerStepThrough]
+	private void InitializeComponent()
+	{
+		//IL_00da: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00e4: Expected O, but got Unknown
+		//IL_00e6: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00f0: Expected O, but got Unknown
+		//IL_00f2: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00fc: Expected O, but got Unknown
+		this.Label3 = new System.Windows.Forms.Label();
+		this.cboBaseFilter = new System.Windows.Forms.ComboBox();
+		this.btnReset = new System.Windows.Forms.Button();
+		this.btnWord = new System.Windows.Forms.Button();
+		this.lblDate = new System.Windows.Forms.Label();
+		this.lblTotal = new System.Windows.Forms.Label();
+		this.dgvList = new System.Windows.Forms.DataGridView();
+		this.btnSearch = new System.Windows.Forms.Button();
+		this.Label2 = new System.Windows.Forms.Label();
+		this.dtpEnd = new System.Windows.Forms.DateTimePicker();
+		this.dtpBegin = new System.Windows.Forms.DateTimePicker();
+		this.Label9 = new System.Windows.Forms.Label();
+		this.cboStorage = new System.Windows.Forms.ComboBox();
+		this.Label10 = new System.Windows.Forms.Label();
+		this.cboBranch = new System.Windows.Forms.ComboBox();
+		this.clbArea = new System.Windows.Forms.CheckedListBox();
+		this.Label4 = new System.Windows.Forms.Label();
+		this.chkAllArea = new System.Windows.Forms.CheckBox();
+		this.LineShape1 = new LineShape();
+		this.LineShape2 = new LineShape();
+		this.ShapeContainer1 = new ShapeContainer();
+		this.btnAllCustomer = new System.Windows.Forms.Button();
+		this.btnSearchCustomer = new System.Windows.Forms.Button();
+		this.lblCustomerName = new System.Windows.Forms.Label();
+		this.Label11 = new System.Windows.Forms.Label();
+		this.Label12 = new System.Windows.Forms.Label();
+		this.cboCustomerCode = new System.Windows.Forms.ComboBox();
+		this.Label13 = new System.Windows.Forms.Label();
+		this.cboSalesPerson = new System.Windows.Forms.ComboBox();
+		this.btnPrint = new System.Windows.Forms.Button();
+		((System.ComponentModel.ISupportInitialize)this.dgvList).BeginInit();
+		base.SuspendLayout();
+		this.Label3.AutoSize = true;
+		this.Label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label3.Location = new System.Drawing.Point(10, 15);
+		this.Label3.Name = "Label3";
+		this.Label3.Size = new System.Drawing.Size(86, 13);
+		this.Label3.TabIndex = 91;
+		this.Label3.Text = "Dasar Pencarian";
+		this.cboBaseFilter.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+		this.cboBaseFilter.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+		this.cboBaseFilter.FormattingEnabled = true;
+		this.cboBaseFilter.Location = new System.Drawing.Point(100, 12);
+		this.cboBaseFilter.Name = "cboBaseFilter";
+		this.cboBaseFilter.Size = new System.Drawing.Size(121, 21);
+		this.cboBaseFilter.TabIndex = 0;
+		this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnReset.Location = new System.Drawing.Point(153, 431);
+		this.btnReset.Name = "btnReset";
+		this.btnReset.Size = new System.Drawing.Size(47, 24);
+		this.btnReset.TabIndex = 22;
+		this.btnReset.Text = "&Reset";
+		this.btnReset.UseVisualStyleBackColor = true;
+		this.btnWord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnWord.Location = new System.Drawing.Point(699, 451);
+		this.btnWord.Name = "btnWord";
+		this.btnWord.Size = new System.Drawing.Size(73, 23);
+		this.btnWord.TabIndex = 24;
+		this.btnWord.Text = "&Word";
+		this.btnWord.UseVisualStyleBackColor = true;
+		this.lblDate.AutoSize = true;
+		this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.lblDate.Location = new System.Drawing.Point(10, 42);
+		this.lblDate.Name = "lblDate";
+		this.lblDate.Size = new System.Drawing.Size(71, 13);
+		this.lblDate.TabIndex = 90;
+		this.lblDate.Text = "Tanggal awal";
+		this.lblTotal.AutoSize = true;
+		this.lblTotal.Location = new System.Drawing.Point(267, 456);
+		this.lblTotal.Name = "lblTotal";
+		this.lblTotal.Size = new System.Drawing.Size(91, 13);
+		this.lblTotal.TabIndex = 89;
+		this.lblTotal.Text = "Total Pencarian: -";
+		this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+		this.dgvList.Location = new System.Drawing.Point(270, 12);
+		this.dgvList.Name = "dgvList";
+		this.dgvList.Size = new System.Drawing.Size(581, 433);
+		this.dgvList.TabIndex = 23;
+		this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnSearch.Location = new System.Drawing.Point(100, 431);
+		this.btnSearch.Name = "btnSearch";
+		this.btnSearch.Size = new System.Drawing.Size(47, 24);
+		this.btnSearch.TabIndex = 21;
+		this.btnSearch.Text = "&Cari";
+		this.btnSearch.UseVisualStyleBackColor = true;
+		this.Label2.AutoSize = true;
+		this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label2.Location = new System.Drawing.Point(10, 68);
+		this.Label2.Name = "Label2";
+		this.Label2.Size = new System.Drawing.Size(72, 13);
+		this.Label2.TabIndex = 87;
+		this.Label2.Text = "Tanggal akhir";
+		this.dtpEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+		this.dtpEnd.Location = new System.Drawing.Point(100, 65);
+		this.dtpEnd.Name = "dtpEnd";
+		this.dtpEnd.Size = new System.Drawing.Size(121, 20);
+		this.dtpEnd.TabIndex = 2;
+		this.dtpBegin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+		this.dtpBegin.Location = new System.Drawing.Point(100, 39);
+		this.dtpBegin.Name = "dtpBegin";
+		this.dtpBegin.Size = new System.Drawing.Size(121, 20);
+		this.dtpBegin.TabIndex = 1;
+		this.Label9.AutoSize = true;
+		this.Label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label9.Location = new System.Drawing.Point(10, 121);
+		this.Label9.Name = "Label9";
+		this.Label9.Size = new System.Drawing.Size(45, 13);
+		this.Label9.TabIndex = 183;
+		this.Label9.Text = "Gudang";
+		this.cboStorage.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+		this.cboStorage.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+		this.cboStorage.FormattingEnabled = true;
+		this.cboStorage.Location = new System.Drawing.Point(100, 118);
+		this.cboStorage.Name = "cboStorage";
+		this.cboStorage.Size = new System.Drawing.Size(120, 21);
+		this.cboStorage.TabIndex = 4;
+		this.Label10.AutoSize = true;
+		this.Label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label10.Location = new System.Drawing.Point(10, 94);
+		this.Label10.Name = "Label10";
+		this.Label10.Size = new System.Drawing.Size(44, 13);
+		this.Label10.TabIndex = 182;
+		this.Label10.Text = "Cabang";
+		this.cboBranch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+		this.cboBranch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+		this.cboBranch.FormattingEnabled = true;
+		this.cboBranch.Location = new System.Drawing.Point(100, 91);
+		this.cboBranch.Name = "cboBranch";
+		this.cboBranch.Size = new System.Drawing.Size(120, 21);
+		this.cboBranch.TabIndex = 3;
+		this.clbArea.CheckOnClick = true;
+		this.clbArea.FormattingEnabled = true;
+		this.clbArea.Location = new System.Drawing.Point(100, 286);
+		this.clbArea.Name = "clbArea";
+		this.clbArea.Size = new System.Drawing.Size(153, 139);
+		this.clbArea.TabIndex = 10;
+		this.Label4.AutoSize = true;
+		this.Label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label4.Location = new System.Drawing.Point(10, 265);
+		this.Label4.Name = "Label4";
+		this.Label4.Size = new System.Drawing.Size(45, 13);
+		this.Label4.TabIndex = 185;
+		this.Label4.Text = "Wilayah";
+		this.chkAllArea.AutoSize = true;
+		this.chkAllArea.Location = new System.Drawing.Point(103, 265);
+		this.chkAllArea.Name = "chkAllArea";
+		this.chkAllArea.Size = new System.Drawing.Size(76, 17);
+		this.chkAllArea.TabIndex = 9;
+		this.chkAllArea.Text = "--SEMUA--";
+		this.chkAllArea.UseVisualStyleBackColor = true;
+		((Shape)this.LineShape1).Name = "LineShape1";
+		this.LineShape1.X1 = 14;
+		this.LineShape1.X2 = 220;
+		this.LineShape1.Y1 = 199;
+		this.LineShape1.Y2 = 199;
+		((Shape)this.LineShape2).Name = "LineShape2";
+		this.LineShape2.X1 = 14;
+		this.LineShape2.X2 = 220;
+		this.LineShape2.Y1 = 147;
+		this.LineShape2.Y2 = 147;
+		((System.Windows.Forms.Control)(object)this.ShapeContainer1).Location = new System.Drawing.Point(0, 0);
+		((System.Windows.Forms.Control)(object)this.ShapeContainer1).Margin = new System.Windows.Forms.Padding(0);
+		((System.Windows.Forms.Control)(object)this.ShapeContainer1).Name = "ShapeContainer1";
+		this.ShapeContainer1.Shapes.AddRange((Shape[])(object)new Shape[2]
+		{
+			(Shape)this.LineShape2,
+			(Shape)this.LineShape1
+		});
+		((System.Windows.Forms.Control)(object)this.ShapeContainer1).Size = new System.Drawing.Size(863, 486);
+		((System.Windows.Forms.Control)(object)this.ShapeContainer1).TabIndex = 187;
+		((System.Windows.Forms.Control)(object)this.ShapeContainer1).TabStop = false;
+		this.btnAllCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnAllCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.btnAllCustomer.Location = new System.Drawing.Point(72, 153);
+		this.btnAllCustomer.Name = "btnAllCustomer";
+		this.btnAllCustomer.Size = new System.Drawing.Size(50, 23);
+		this.btnAllCustomer.TabIndex = 5;
+		this.btnAllCustomer.Text = "Semua";
+		this.btnAllCustomer.UseVisualStyleBackColor = true;
+		this.btnSearchCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnSearchCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.btnSearchCustomer.Location = new System.Drawing.Point(128, 153);
+		this.btnSearchCustomer.Name = "btnSearchCustomer";
+		this.btnSearchCustomer.Size = new System.Drawing.Size(92, 23);
+		this.btnSearchCustomer.TabIndex = 6;
+		this.btnSearchCustomer.Text = "Pilih Customer";
+		this.btnSearchCustomer.UseVisualStyleBackColor = true;
+		this.lblCustomerName.AutoSize = true;
+		this.lblCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.lblCustomerName.Location = new System.Drawing.Point(69, 181);
+		this.lblCustomerName.Name = "lblCustomerName";
+		this.lblCustomerName.Size = new System.Drawing.Size(63, 13);
+		this.lblCustomerName.TabIndex = 191;
+		this.lblCustomerName.Text = "-- SEMUA --";
+		this.Label11.AutoSize = true;
+		this.Label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label11.Location = new System.Drawing.Point(11, 181);
+		this.Label11.Name = "Label11";
+		this.Label11.Size = new System.Drawing.Size(51, 13);
+		this.Label11.TabIndex = 190;
+		this.Label11.Text = "Customer";
+		this.Label12.AutoSize = true;
+		this.Label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label12.Location = new System.Drawing.Point(10, 212);
+		this.Label12.Name = "Label12";
+		this.Label12.Size = new System.Drawing.Size(79, 13);
+		this.Label12.TabIndex = 193;
+		this.Label12.Text = "Kode Customer";
+		this.cboCustomerCode.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+		this.cboCustomerCode.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+		this.cboCustomerCode.FormattingEnabled = true;
+		this.cboCustomerCode.Location = new System.Drawing.Point(100, 209);
+		this.cboCustomerCode.Name = "cboCustomerCode";
+		this.cboCustomerCode.Size = new System.Drawing.Size(120, 21);
+		this.cboCustomerCode.TabIndex = 7;
+		this.Label13.AutoSize = true;
+		this.Label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label13.Location = new System.Drawing.Point(10, 239);
+		this.Label13.Name = "Label13";
+		this.Label13.Size = new System.Drawing.Size(33, 13);
+		this.Label13.TabIndex = 197;
+		this.Label13.Text = "Sales";
+		this.cboSalesPerson.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+		this.cboSalesPerson.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+		this.cboSalesPerson.FormattingEnabled = true;
+		this.cboSalesPerson.Location = new System.Drawing.Point(100, 236);
+		this.cboSalesPerson.Name = "cboSalesPerson";
+		this.cboSalesPerson.Size = new System.Drawing.Size(120, 21);
+		this.cboSalesPerson.TabIndex = 8;
+		this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnPrint.Location = new System.Drawing.Point(778, 451);
+		this.btnPrint.Name = "btnPrint";
+		this.btnPrint.Size = new System.Drawing.Size(73, 23);
+		this.btnPrint.TabIndex = 25;
+		this.btnPrint.Text = "Cetak";
+		this.btnPrint.UseVisualStyleBackColor = true;
+		base.AcceptButton = this.btnSearch;
+		base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
+		base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+		base.ClientSize = new System.Drawing.Size(863, 486);
+		base.Controls.Add(this.btnPrint);
+		base.Controls.Add(this.Label13);
+		base.Controls.Add(this.cboSalesPerson);
+		base.Controls.Add(this.Label12);
+		base.Controls.Add(this.cboCustomerCode);
+		base.Controls.Add(this.btnAllCustomer);
+		base.Controls.Add(this.btnSearchCustomer);
+		base.Controls.Add(this.lblCustomerName);
+		base.Controls.Add(this.Label11);
+		base.Controls.Add(this.chkAllArea);
+		base.Controls.Add(this.Label4);
+		base.Controls.Add(this.clbArea);
+		base.Controls.Add(this.Label9);
+		base.Controls.Add(this.cboStorage);
+		base.Controls.Add(this.Label10);
+		base.Controls.Add(this.cboBranch);
+		base.Controls.Add(this.Label3);
+		base.Controls.Add(this.cboBaseFilter);
+		base.Controls.Add(this.btnReset);
+		base.Controls.Add(this.btnWord);
+		base.Controls.Add(this.lblDate);
+		base.Controls.Add(this.lblTotal);
+		base.Controls.Add(this.dgvList);
+		base.Controls.Add(this.btnSearch);
+		base.Controls.Add(this.Label2);
+		base.Controls.Add(this.dtpEnd);
+		base.Controls.Add(this.dtpBegin);
+		base.Controls.Add((System.Windows.Forms.Control)(object)this.ShapeContainer1);
+		base.KeyPreview = true;
+		base.MaximizeBox = false;
+		base.Name = "frmReportReceivable";
+		base.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+		this.Text = "Report Piutang";
+		((System.ComponentModel.ISupportInitialize)this.dgvList).EndInit();
+		base.ResumeLayout(false);
+		base.PerformLayout();
+	}
+
+	public frmReportReceivable()
+	{
+		base.KeyDown += frmReportPurchaseInvoice_KeyDown;
+		base.Load += frmReportPurchaseInvoice_Load;
+		InitializeComponent();
+		DoubleBuffered = true;
+		base.MdiParent = MyProject.Forms.frmMenu;
+		ComboBox combo = cboBaseFilter;
+		cCombo.getReportReceivableFilter(ref combo);
+		cboBaseFilter = combo;
+		combo = cboCustomerCode;
+		cCombo.getCustomerCode(ref combo, All: true, 1);
+		cboCustomerCode = combo;
+		combo = cboBranch;
+		cCombo.getBranch(ref combo, Module1.pubGroupId, blnAll: true);
+		cboBranch = combo;
+		formatGrid();
+	}
+
+	private void frmReportPurchaseInvoice_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Escape)
+		{
+			Close();
+		}
+	}
+
+	private void frmReportPurchaseInvoice_Load(object sender, EventArgs e)
+	{
+		prepareForm();
+		ExtensionMethods.DoubleBuffered(dgvList, setting: true);
+	}
+
+	private void cboBranch_SelectedIndexChanged(object sender, EventArgs e)
+	{
+		cComboItem cComboItem2 = (cComboItem)cboBranch.SelectedItem;
+		if (!Information.IsNothing(cComboItem2))
+		{
+			ComboBox combo = cboStorage;
+			cCombo.getStorage(ref combo, Module1.pubGroupId, Conversions.ToInteger(cComboItem2.Value), "MARKETING", blnAll: true, 1);
+			cboStorage = combo;
+			combo = cboSalesPerson;
+			cCombo.getSalesPerson(ref combo, "SALESPERSON", 0, 99, Conversions.ToInteger(cComboItem2.Value), Module1.pubGroupId, All: true, Dash: false, 1);
+			cboSalesPerson = combo;
+			CheckedListBox ListBox = clbArea;
+			cCombo.getAreaList(ref ListBox, Conversions.ToInteger(cComboItem2.Value), Module1.pubGroupId, Active: true);
+			clbArea = ListBox;
+			cboStorage.Text = "";
+			cboSalesPerson.Text = "";
+			cboStorage.SelectedIndex = 0;
+			cboSalesPerson.SelectedIndex = 0;
+			chkAllArea_CheckedChanged(RuntimeHelpers.GetObjectValue(sender), e);
+		}
+	}
+
+	private void prepareForm()
+	{
+		btnWord.Enabled = false;
+		btnPrint.Enabled = false;
+		_customerId = 0.0;
+		dtpBegin.Value = Conversions.ToDate("01/01/2000");
+		dtpEnd.Value = DateAndTime.Now;
+		cboBaseFilter.SelectedIndex = 0;
+		cboBranch.SelectedIndex = 0;
+		cboStorage.SelectedIndex = 0;
+		_customerId = 0.0;
+		lblCustomerName.Text = "--SEMUA--";
+		cboCustomerCode.SelectedIndex = 0;
+		cboSalesPerson.SelectedIndex = 0;
+		chkAllArea.Checked = false;
+		chkAllArea.Checked = true;
+		lblTotal.Text = "Total Pencarian: -";
+		dgvList.Rows.Clear();
+		dtpBegin.Focus();
+	}
+
+	private void cboBaseFilter_SelectedIndexChanged(object sender, EventArgs e)
+	{
+		if (cboBaseFilter.SelectedIndex == 0)
+		{
+			dtpEnd.Enabled = true;
+			lblDate.Text = "Tanggal awal";
+			dtpBegin.Value = Conversions.ToDate("01/01/2000");
+		}
+		else
+		{
+			dtpEnd.Enabled = false;
+			lblDate.Text = "Tanggal piutang";
+			dtpBegin.Value = Module1.getFirstDateInMonth(DateAndTime.Now);
+		}
+	}
+
+	private void dtpBegin_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Space)
+		{
+			dtpEnd.Focus();
+			dtpBegin.Focus();
+			dtpEnd.Value = dtpBegin.Value;
+		}
+		else if (e.KeyCode == Keys.ControlKey)
+		{
+			dtpEnd.Focus();
+			dtpBegin.Focus();
+			dtpBegin.Value = Module1.getFirstDateInMonth(dtpBegin.Value);
+			dtpEnd.Value = Module1.getLastDateInMonth(dtpBegin.Value);
+		}
+	}
+
+	private void dtpEnd_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Space)
+		{
+			dtpBegin.Focus();
+			dtpEnd.Focus();
+			dtpBegin.Value = dtpEnd.Value;
+		}
+		else if (e.KeyCode == Keys.ControlKey)
+		{
+			dtpBegin.Focus();
+			dtpEnd.Focus();
+			dtpBegin.Value = Module1.getFirstDateInMonth(dtpEnd.Value);
+			dtpEnd.Value = Module1.getLastDateInMonth(dtpEnd.Value);
+		}
+	}
+
+	private void btnAllCustomer_Click(object sender, EventArgs e)
+	{
+		_customerId = 0.0;
+		lblCustomerName.Text = "--SEMUA--";
+	}
+
+	private void btnSearchCustomer_Click(object sender, EventArgs e)
+	{
+		cComboItem cComboItem2 = (cComboItem)cboBranch.SelectedItem;
+		frmCustomerMiniSearch frmCustomerMiniSearch2 = new frmCustomerMiniSearch();
+		frmCustomerMiniSearch2.BranchId = Conversions.ToInteger(cComboItem2.Value);
+		frmCustomerMiniSearch2.CallerName = "ReportReceivable";
+		frmCustomerMiniSearch2.ShowDialog();
+		frmCustomerMiniSearch2.Close();
+		frmCustomerMiniSearch2.Dispose();
+	}
+
+	private void btnSearch_Click(object sender, EventArgs e)
+	{
+		cComboItem cComboItem2 = (cComboItem)cboBaseFilter.SelectedItem;
+		cComboItem cComboItem3 = (cComboItem)cboBranch.SelectedItem;
+		cComboItem cComboItem4 = (cComboItem)cboStorage.SelectedItem;
+		cComboItem cComboItem5 = (cComboItem)cboSalesPerson.SelectedItem;
+		cComboItem cComboItem6 = (cComboItem)cboCustomerCode.SelectedItem;
+		if (cboBaseFilter.SelectedIndex == -1)
+		{
+			Interaction.MsgBox("Pilih dasar pencarian", MsgBoxStyle.Information);
+			cboBaseFilter.Focus();
+			return;
+		}
+		if (cboBranch.SelectedIndex == -1)
+		{
+			Interaction.MsgBox("Pilih cabang", MsgBoxStyle.Information);
+			cboBranch.Focus();
+			return;
+		}
+		if (cboStorage.SelectedIndex == -1)
+		{
+			Interaction.MsgBox("Pilih gudang", MsgBoxStyle.Information);
+			cboStorage.Focus();
+			return;
+		}
+		if (clbArea.CheckedItems.Count == 0)
+		{
+			Interaction.MsgBox("Pilih wilayah", MsgBoxStyle.Information);
+			clbArea.Focus();
+			return;
+		}
+		if (cboSalesPerson.SelectedIndex == -1)
+		{
+			Interaction.MsgBox("Pilih sales", MsgBoxStyle.Information);
+			cboSalesPerson.Focus();
+			return;
+		}
+		if (cboCustomerCode.SelectedIndex == -1)
+		{
+			Interaction.MsgBox("Pilih kode customer", MsgBoxStyle.Information);
+			cboCustomerCode.Focus();
+			return;
+		}
+		checked
+		{
+			int[] array = new int[clbArea.CheckedItems.Count - 1 + 1];
+			int num = clbArea.CheckedItems.Count - 1;
+			for (int i = 0; i <= num; i++)
+			{
+				cComboItem cComboItem7 = (cComboItem)clbArea.CheckedItems[i];
+				array[i] = Conversions.ToInteger(cComboItem7.Value);
+			}
+			DataTable dataTable = new DataTable();
+			btnSearch.Focus();
+			Cursor = Cursors.WaitCursor;
+			dataTable = cSalesInvoice.SearchReceivable(Conversions.ToInteger(cComboItem2.Value), dtpBegin.Value, dtpEnd.Value, _customerId, array, Conversions.ToInteger(cComboItem5.Value), Conversions.ToInteger(cComboItem6.Value), Conversions.ToInteger(cComboItem4.Value), 0, Conversions.ToInteger(cComboItem3.Value), Module1.pubGroupId);
+			dgvList.Rows.Clear();
+			double num2 = default(double);
+			foreach (DataRow row in dataTable.Rows)
+			{
+				if (Operators.ConditionalCompareObjectGreater(row["penjReceivable"], 0, TextCompare: false))
+				{
+					dgvList.Rows.Add(row["penjId"], row["penjDate"], row["penjFaktur"], row["custName"], row["penjReceivable"], row["penjReceivableDays"]);
+					num2 = Conversions.ToDouble(Operators.AddObject(num2, row["penjReceivable"]));
+				}
+			}
+			if (dataTable.Rows.Count == 0)
+			{
+				Interaction.MsgBox("Data tidak ditemukan", MsgBoxStyle.Information);
+				btnWord.Enabled = false;
+				btnPrint.Enabled = false;
+				dtpBegin.Focus();
+			}
+			else
+			{
+				dgvList.Rows.Add("", "Total", "", "", Module1.formatCustomDecimal(Conversions.ToString(num2), 2), "");
+				dgvList.Focus();
+				if (Module1.pubPreviewReport)
+				{
+					btnWord.Enabled = true;
+				}
+				if (Module1.pubPrintReport)
+				{
+					btnPrint.Enabled = true;
+				}
+			}
+			lblTotal.Text = "Total Pencarian: " + Conversions.ToString(dataTable.Rows.Count);
+			Cursor = Cursors.Default;
+		}
+	}
+
+	private void formatGrid()
+	{
+		dgvList.Columns.Add("", "penjId");
+		dgvList.Columns.Add("", "Tanggal");
+		dgvList.Columns.Add("", "No Faktur");
+		dgvList.Columns.Add("", "Customer");
+		dgvList.Columns.Add("", "Piutang");
+		dgvList.Columns.Add("", "Umur Piutang");
+		dgvList.Columns.Add("", "Bayar Cash");
+		dgvList.Columns.Add("", "Bayar Bank");
+		dgvList.Columns.Add("", "Potongan / Retur");
+		dgvList.Columns[0].Visible = false;
+		dgvList.Columns[1].DefaultCellStyle.Format = "dd/MM/yyyy";
+		dgvList.Columns[1].Width = 65;
+		dgvList.Columns[2].Width = 110;
+		dgvList.Columns[3].Width = 220;
+		dgvList.Columns[4].Width = 90;
+		dgvList.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+		dgvList.Columns[5].Width = 58;
+		dgvList.Columns[5].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+		dgvList.Columns[6].Width = 0;
+		dgvList.Columns[7].Width = 0;
+		dgvList.Columns[8].Width = 0;
+		dgvList.RowHeadersVisible = false;
+		dgvList.AllowUserToAddRows = false;
+		dgvList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+		dgvList.ReadOnly = true;
+		dgvList.AlternatingRowsDefaultCellStyle.BackColor = Color.WhiteSmoke;
+		dgvList.AllowUserToResizeRows = false;
+		dgvList.DefaultCellStyle.Font = new Font("Segoe UI", 8f, FontStyle.Regular);
+		dgvList.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 8f, FontStyle.Regular);
+	}
+
+	private void dgvList_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+	{
+		if (e.ColumnIndex == 4)
+		{
+			e.Value = Module1.formatCustomDecimal(Conversions.ToString(e.Value), 2);
+		}
+	}
+
+	private void dgvList_SortCompare(object sender, DataGridViewSortCompareEventArgs e)
+	{
+		checked
+		{
+			if (e.RowIndex1 == dgvList.Rows.Count - 1)
+			{
+				e.Handled = true;
+			}
+			if (e.RowIndex2 == dgvList.Rows.Count - 1)
+			{
+				e.Handled = true;
+			}
+		}
+	}
+
+	private void dgvList_DoubleClick(object sender, EventArgs e)
+	{
+		getData();
+	}
+
+	private void dgvList_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Return)
+		{
+			getData();
+			e.SuppressKeyPress = true;
+		}
+		else if (e.Shift & (e.KeyCode == Keys.Tab))
+		{
+			btnReset.Focus();
+			e.SuppressKeyPress = true;
+		}
+		else if (e.KeyCode == Keys.Tab)
+		{
+			btnWord.Focus();
+			e.SuppressKeyPress = true;
+		}
+	}
+
+	private void dgvList_GotFocus(object sender, EventArgs e)
+	{
+		btnSearch.NotifyDefault(value: false);
+		if (dgvList.RowCount > 0)
+		{
+			dgvList.CurrentRow.Selected = true;
+		}
+	}
+
+	private void dgvList_LostFocus(object sender, EventArgs e)
+	{
+		if (dgvList.RowCount > 0)
+		{
+			dgvList.CurrentRow.Selected = false;
+		}
+	}
+
+	private void getData()
+	{
+		if (dgvList.RowCount > 0 && Conversion.Val(RuntimeHelpers.GetObjectValue(dgvList[0, dgvList.CurrentRow.Index].Value)) > 0.0)
+		{
+			MyProject.Forms.frmSalesInvoice.Show();
+			MyProject.Forms.frmSalesInvoice.prepareForm(SaveNew: false);
+			MyProject.Forms.frmSalesInvoice.CurrentId = Conversions.ToDouble(dgvList[0, dgvList.CurrentRow.Index].Value);
+			MyProject.Forms.frmSalesInvoice.LoadData();
+			MyProject.Forms.frmSalesInvoice.Activate();
+			MyProject.Forms.frmSalesInvoice.WindowState = FormWindowState.Normal;
+		}
+	}
+
+	private void btnWord_Click(object sender, EventArgs e)
+	{
+		ExportReport(Print: false);
+	}
+
+	private void ExportReport(bool Print)
+	{
+		dgvList.SelectAll();
+		dgvList.ClipboardCopyMode = DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
+		Clipboard.SetDataObject(dgvList.GetClipboardContent());
+		dgvList.ClearSelection();
+		MsWord msWord = new MsWord();
+		msWord.rptWordNew(dgvList.Rows.Count, dgvList.Columns.Count, "LLLRR", blnPortrait: true, "", Print);
+	}
+
+	private void btnReset_Click(object sender, EventArgs e)
+	{
+		prepareForm();
+	}
+
+	private void chkAllArea_CheckedChanged(object sender, EventArgs e)
+	{
+		checked
+		{
+			int num = clbArea.Items.Count - 1;
+			for (int i = 0; i <= num; i++)
+			{
+				if (!chkAllArea.Checked)
+				{
+					clbArea.SetItemChecked(i, value: false);
+				}
+				else
+				{
+					clbArea.SetItemChecked(i, value: true);
+				}
+			}
+		}
+	}
+
+	private void btnPrint_Click(object sender, EventArgs e)
+	{
+		if (MessageBox.Show("Cetak Report?", "Konfirmasi", MessageBoxButtons.YesNo) != DialogResult.No)
+		{
+			ExportReport(Print: true);
+		}
+	}
 }

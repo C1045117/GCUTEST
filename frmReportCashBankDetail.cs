@@ -1,124 +1,226 @@
 using System;
+using System.ComponentModel;
+using System.Data;
+using System.Diagnostics;
+using System.Drawing;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
+using GCUv2.My;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
 
-namespace GCUv2
+namespace GCUv2;
+
+[DesignerGenerated]
+public class frmReportCashBankDetail : Form
 {
-    public class Form
-    {
+	private IContainer components;
 
-        private class ComponentModel.IContainer components;
-        private class DataGridView _dgvList;
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("dgvList")]
+	private DataGridView _dgvList;
 
+	internal virtual DataGridView dgvList
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _dgvList;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = dgvList_DoubleClick;
+			KeyEventHandler value3 = dgvList_KeyDown;
+			DataGridView dataGridView = _dgvList;
+			if (dataGridView != null)
+			{
+				dataGridView.DoubleClick -= value2;
+				dataGridView.KeyDown -= value3;
+			}
+			_dgvList = value;
+			dataGridView = _dgvList;
+			if (dataGridView != null)
+			{
+				dataGridView.DoubleClick += value2;
+				dataGridView.KeyDown += value3;
+			}
+		}
+	}
 
-        protected override strict void Dispose(boolean disposing) {
+	[DebuggerNonUserCode]
+	protected override void Dispose(bool disposing)
+	{
+		try
+		{
+			if (disposing && components != null)
+			{
+				components.Dispose();
+			}
+		}
+		finally
+		{
+			base.Dispose(disposing);
+		}
+	}
 
-          boolean var_1;
+	[System.Diagnostics.DebuggerStepThrough]
+	private void InitializeComponent()
+	{
+		this.dgvList = new System.Windows.Forms.DataGridView();
+		((System.ComponentModel.ISupportInitialize)this.dgvList).BeginInit();
+		base.SuspendLayout();
+		this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+		this.dgvList.Location = new System.Drawing.Point(12, 12);
+		this.dgvList.Name = "dgvList";
+		this.dgvList.Size = new System.Drawing.Size(493, 305);
+		this.dgvList.TabIndex = 185;
+		base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
+		base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+		base.ClientSize = new System.Drawing.Size(517, 330);
+		base.Controls.Add(this.dgvList);
+		base.KeyPreview = true;
+		base.MaximizeBox = false;
+		base.Name = "frmReportCashBankDetail";
+		base.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+		this.Text = "Detail";
+		((System.ComponentModel.ISupportInitialize)this.dgvList).EndInit();
+		base.ResumeLayout(false);
+	}
 
-        }
+	public frmReportCashBankDetail()
+	{
+		base.KeyDown += frmReportCashBankDetail_KeyDown;
+		InitializeComponent();
+		base.MdiParent = MyProject.Forms.frmMenu;
+	}
 
-        private void InitializeComponent() {
+	private void frmReportCashBankDetail_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Escape)
+		{
+			Close();
+		}
+	}
 
+	private void dgvList_DoubleClick(object sender, EventArgs e)
+	{
+		getData();
+	}
 
-        }
+	private void dgvList_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Return)
+		{
+			getData();
+			e.SuppressKeyPress = true;
+		}
+	}
 
-        assem override strict specialname class DataGridView get_dgvList() {
+	private void getData()
+	{
+		if (Conversion.Val(RuntimeHelpers.GetObjectValue(dgvList[0, dgvList.CurrentRow.Index].Value)) == 1.0)
+		{
+			MyProject.Forms.frmSalesInvoice.Show();
+			MyProject.Forms.frmSalesInvoice.prepareForm(SaveNew: false);
+			MyProject.Forms.frmSalesInvoice.CurrentId = Conversions.ToDouble(dgvList[1, dgvList.CurrentRow.Index].Value);
+			MyProject.Forms.frmSalesInvoice.LoadData();
+			MyProject.Forms.frmSalesInvoice.Activate();
+			MyProject.Forms.frmSalesInvoice.WindowState = FormWindowState.Normal;
+		}
+		else if (Conversion.Val(RuntimeHelpers.GetObjectValue(dgvList[0, dgvList.CurrentRow.Index].Value)) == 2.0)
+		{
+			MyProject.Forms.frmSalesReturn.Show();
+			MyProject.Forms.frmSalesReturn.prepareForm(SaveNew: false);
+			MyProject.Forms.frmSalesReturn.CurrentId = Conversions.ToDouble(dgvList[1, dgvList.CurrentRow.Index].Value);
+			MyProject.Forms.frmSalesReturn.LoadData();
+			MyProject.Forms.frmSalesReturn.Activate();
+			MyProject.Forms.frmSalesReturn.WindowState = FormWindowState.Normal;
+		}
+		else if (Conversion.Val(RuntimeHelpers.GetObjectValue(dgvList[0, dgvList.CurrentRow.Index].Value)) == 3.0)
+		{
+			MyProject.Forms.frmPurchaseInvoice.Show();
+			MyProject.Forms.frmPurchaseInvoice.prepareForm(SaveNew: false, KeepSupplier: false);
+			MyProject.Forms.frmPurchaseInvoice.CurrentId = Conversions.ToDouble(dgvList[1, dgvList.CurrentRow.Index].Value);
+			MyProject.Forms.frmPurchaseInvoice.LoadData();
+			MyProject.Forms.frmPurchaseInvoice.Activate();
+			MyProject.Forms.frmPurchaseInvoice.WindowState = FormWindowState.Normal;
+		}
+		else if (Conversion.Val(RuntimeHelpers.GetObjectValue(dgvList[0, dgvList.CurrentRow.Index].Value)) == 4.0)
+		{
+			MyProject.Forms.frmPurchaseReturn.Show();
+			MyProject.Forms.frmPurchaseReturn.prepareForm(SaveNew: false, KeepSupplier: false);
+			MyProject.Forms.frmPurchaseReturn.CurrentId = Conversions.ToDouble(dgvList[1, dgvList.CurrentRow.Index].Value);
+			MyProject.Forms.frmPurchaseReturn.LoadData();
+			MyProject.Forms.frmPurchaseReturn.Activate();
+			MyProject.Forms.frmPurchaseReturn.WindowState = FormWindowState.Normal;
+		}
+	}
 
-          loc_4A998B: ldarg.0
-          loc_4A998C: ldfld GCUv2.frmReportCashBankDetail::_dgvList
-          loc_4A9991: br.s loc_4A9993
-          loc_4A9993: // Referenced from: loc_4A9991
-          loc_4A9993: ret
-        }
+	public void LoadCustomerPayment(DateTime FirstDate, DateTime LastDate, int CashAccountId, int SalesId, int AreaId, int PaymentType)
+	{
+		DataTable dataTable = cCashAccount.CustomerPayment(FirstDate, LastDate, CashAccountId, SalesId, AreaId, PaymentType);
+		FormatPaymentGrid(1);
+		double num = default(double);
+		foreach (DataRow row in dataTable.Rows)
+		{
+			dgvList.Rows.Add(Operators.ConditionalCompareObjectEqual(row["penjBsType"], 0, TextCompare: false) ? 1 : 2, row["penjId"], row["pbDate"], row["penjFaktur"], row["custName"], Module1.formatCustomDecimal(Conversions.ToString(row["pbAmount"]), 2));
+			num = Conversions.ToDouble(Operators.AddObject(num, row["pbAmount"]));
+		}
+		dgvList.Rows.Add("", "", "", "Total", "", Module1.formatCustomDecimal(Conversions.ToString(num), 2));
+	}
 
-        assem override strict specialname void set_dgvList(class DataGridView WithEventsValue) {
+	public void LoadSupplierPayment(DateTime FirstDate, DateTime LastDate, int CashAccountId, int SupplierId)
+	{
+		DataTable dataTable = cCashAccount.SupplierPayment(FirstDate, LastDate, CashAccountId, SupplierId);
+		FormatPaymentGrid(2);
+		double num = default(double);
+		foreach (DataRow row in dataTable.Rows)
+		{
+			dgvList.Rows.Add(Operators.ConditionalCompareObjectEqual(row["invIsReturn"], 0, TextCompare: false) ? 3 : 4, row["invId"], row["payDate"], row["invNumber"], row["supName"], Module1.formatCustomDecimal(Conversions.ToString(row["payAmount"]), 2));
+			num = Conversions.ToDouble(Operators.AddObject(num, row["payAmount"]));
+		}
+		dgvList.Rows.Add("", "", "", "Total", "", Module1.formatCustomDecimal(Conversions.ToString(num), 2));
+	}
 
-          class System.EventHandler var_1;
-          class KeyEventHandler var_2;
-          class DataGridView var_3;
-
-        }
-
-        public void frmReportCashBankDetail() {
-
-          loc_4A99F3: nop
-          loc_4A99F4: ldarg.0
-          loc_4A99F5: call instance void System.Windows.Forms.Form::.ctor()
-          loc_4A99FA: nop
-          loc_4A99FB: ldarg.0
-          loc_4A99FC: ldarg.0
-          loc_4A99FD: ldftn instance void GCUv2.frmReportCashBankDetail::frmReportCashBankDetail_KeyDown(object, class KeyEventArgs)
-          loc_4A9A03: newobj instance void System.Windows.Forms.KeyEventHandler::.ctor(object, System.IntPtr)
-          loc_4A9A08: call instance void System.Windows.Forms.Control::add_KeyDown(class KeyEventHandler)
-          loc_4A9A0D: nop
-          loc_4A9A0E: ldarg.0
-          loc_4A9A0F: call instance void GCUv2.frmReportCashBankDetail::InitializeComponent()
-          loc_4A9A14: nop
-          loc_4A9A15: ldarg.0
-          loc_4A9A16: call class MyForms GCUv2.My.MyProject::get_Forms()
-          loc_4A9A1B: callvirt instance class GCUv2.frmMenu GCUv2.frmReportCashBankDetail/MyForms::get_frmMenu()
-          loc_4A9A20: call 
-          loc_4A9A25: nop
-          loc_4A9A26: ret
-        }
-
-        private void frmReportCashBankDetail_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void dgvList_DoubleClick(object sender, class System.EventArgs e) {
-
-          loc_4A9A4E: nop
-          loc_4A9A4F: ldarg.0
-          loc_4A9A50: call instance void GCUv2.frmReportCashBankDetail::getData()
-          loc_4A9A55: nop
-          loc_4A9A56: ret
-        }
-
-        private void dgvList_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void getData() {
-
-          boolean var_1;
-          boolean var_2;
-          boolean var_3;
-          boolean var_4;
-
-        }
-
-        public void LoadCustomerPayment(valuetype System.DateTime FirstDate, valuetype System.DateTime LastDate, int32 CashAccountId, int32 SalesId, int32 AreaId, int32 PaymentType) {
-
-          class DataTable var_1;
-          double flt_1;
-          class System.Collections.IEnumerator var_2;
-          class DataRow var_3;
-          boolean var_4;
-
-        }
-
-        public void LoadSupplierPayment(valuetype System.DateTime FirstDate, valuetype System.DateTime LastDate, int32 CashAccountId, int32 SupplierId) {
-
-          class DataTable var_1;
-          double flt_1;
-          class System.Collections.IEnumerator var_2;
-          class DataRow var_3;
-          boolean var_4;
-
-        }
-
-        private void FormatPaymentGrid(int32 CustomerSupplier) {
-
-          boolean var_1;
-          class System.Collections.IEnumerator var_2;
-          object var_3;
-          boolean var_4;
-
-        }
-
-    }
+	private void FormatPaymentGrid(int CustomerSupplier)
+	{
+		dgvList.Rows.Clear();
+		dgvList.Columns.Clear();
+		dgvList.Columns.Add("", "CustomerSupplier");
+		dgvList.Columns.Add("", "id");
+		dgvList.Columns.Add("", "Tanggal");
+		dgvList.Columns.Add("", "No Faktur");
+		if (CustomerSupplier == 1)
+		{
+			dgvList.Columns.Add("", "Customer");
+		}
+		else
+		{
+			dgvList.Columns.Add("", "Supplier");
+		}
+		dgvList.Columns.Add("", "Jumlah Bayar");
+		dgvList.Columns[0].Visible = false;
+		dgvList.Columns[1].Visible = false;
+		dgvList.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
+		dgvList.Columns[2].Width = 68;
+		dgvList.Columns[3].Width = 100;
+		dgvList.Columns[4].Width = 180;
+		dgvList.Columns[5].Width = 90;
+		dgvList.Columns[5].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+		dgvList.RowHeadersVisible = false;
+		dgvList.AllowUserToAddRows = false;
+		dgvList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+		dgvList.ReadOnly = true;
+		dgvList.AlternatingRowsDefaultCellStyle.BackColor = Color.WhiteSmoke;
+		dgvList.AllowUserToResizeRows = false;
+		dgvList.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 8f, FontStyle.Regular);
+		foreach (object column in dgvList.Columns)
+		{
+			object objectValue = RuntimeHelpers.GetObjectValue(column);
+			NewLateBinding.LateSet(objectValue, null, "SortMode", new object[1] { DataGridViewColumnSortMode.NotSortable }, null, null);
+		}
+	}
 }

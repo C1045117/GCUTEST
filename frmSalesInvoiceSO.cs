@@ -1,192 +1,340 @@
 using System;
+using System.ComponentModel;
+using System.Data;
+using System.Diagnostics;
+using System.Drawing;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
+using GCUv2.My;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
 
-namespace GCUv2
+namespace GCUv2;
+
+[DesignerGenerated]
+public class frmSalesInvoiceSO : Form
 {
-    public class Form
-    {
+	private IContainer components;
 
-        private class ComponentModel.IContainer components;
-        private class Button _btnSave;
-        private class DataGridView _dgvList;
-        private int32 _customerId;
-        private double _invoiceId;
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnSave")]
+	private Button _btnSave;
 
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("dgvList")]
+	private DataGridView _dgvList;
 
-        protected override strict void Dispose(boolean disposing) {
+	private int _customerId;
 
-          boolean var_1;
+	private double _invoiceId;
 
-        }
+	internal virtual Button btnSave
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnSave;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnSave_Click;
+			Button button = _btnSave;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnSave = value;
+			button = _btnSave;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
 
-        private void InitializeComponent() {
+	internal virtual DataGridView dgvList
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _dgvList;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			KeyEventHandler value2 = dgvList_KeyDown;
+			DataGridViewCellEventHandler value3 = dgvList_CellContentClick;
+			DataGridView dataGridView = _dgvList;
+			if (dataGridView != null)
+			{
+				dataGridView.KeyDown -= value2;
+				dataGridView.CellContentClick -= value3;
+			}
+			_dgvList = value;
+			dataGridView = _dgvList;
+			if (dataGridView != null)
+			{
+				dataGridView.KeyDown += value2;
+				dataGridView.CellContentClick += value3;
+			}
+		}
+	}
 
+	public int CustomerId
+	{
+		get
+		{
+			return _customerId;
+		}
+		set
+		{
+			_customerId = value;
+		}
+	}
 
-        }
+	public double InvoiceId
+	{
+		get
+		{
+			return _invoiceId;
+		}
+		set
+		{
+			_invoiceId = value;
+		}
+	}
 
-        assem override strict specialname class Button get_btnSave() {
+	[DebuggerNonUserCode]
+	protected override void Dispose(bool disposing)
+	{
+		try
+		{
+			if (disposing && components != null)
+			{
+				components.Dispose();
+			}
+		}
+		finally
+		{
+			base.Dispose(disposing);
+		}
+	}
 
-          loc_49A103: ldarg.0
-          loc_49A104: ldfld GCUv2.frmSalesInvoiceSO::_btnSave
-          loc_49A109: br.s loc_49A10B
-          loc_49A10B: // Referenced from: loc_49A109
-          loc_49A10B: ret
-        }
+	[System.Diagnostics.DebuggerStepThrough]
+	private void InitializeComponent()
+	{
+		this.btnSave = new System.Windows.Forms.Button();
+		this.dgvList = new System.Windows.Forms.DataGridView();
+		((System.ComponentModel.ISupportInitialize)this.dgvList).BeginInit();
+		base.SuspendLayout();
+		this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnSave.Location = new System.Drawing.Point(265, 256);
+		this.btnSave.Name = "btnSave";
+		this.btnSave.Size = new System.Drawing.Size(61, 24);
+		this.btnSave.TabIndex = 1;
+		this.btnSave.Text = "Update";
+		this.btnSave.UseVisualStyleBackColor = true;
+		this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+		this.dgvList.Location = new System.Drawing.Point(12, 12);
+		this.dgvList.Name = "dgvList";
+		this.dgvList.Size = new System.Drawing.Size(314, 238);
+		this.dgvList.TabIndex = 0;
+		base.AcceptButton = this.btnSave;
+		base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
+		base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+		base.ClientSize = new System.Drawing.Size(338, 288);
+		base.Controls.Add(this.btnSave);
+		base.Controls.Add(this.dgvList);
+		base.KeyPreview = true;
+		base.MaximizeBox = false;
+		base.Name = "frmSalesInvoiceSO";
+		base.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+		this.Text = "Daftar Pesanan Penjualan";
+		((System.ComponentModel.ISupportInitialize)this.dgvList).EndInit();
+		base.ResumeLayout(false);
+	}
 
-        assem override strict specialname void set_btnSave(class Button WithEventsValue) {
+	public frmSalesInvoiceSO(int customerId, double InvoiceId)
+	{
+		base.KeyDown += frmSalesInvoiceSO_KeyDown;
+		InitializeComponent();
+		_customerId = customerId;
+		_invoiceId = InvoiceId;
+		LoadData();
+	}
 
-          class System.EventHandler var_1;
-          class Button var_2;
+	private void frmSalesInvoiceSO_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Escape)
+		{
+			Close();
+		}
+	}
 
-        }
+	private void LoadData()
+	{
+		DataTable dataTable = cSalesOrder.Search(5, DateAndTime.Now, DateAndTime.Now, _customerId, Module1.pubGroupId, 0, _invoiceId);
+		FormatGrid();
+		checked
+		{
+			foreach (DataRow row in dataTable.Rows)
+			{
+				bool flag = false;
+				int num = MyProject.Forms.frmSalesInvoice.dgvItem.Rows.Count - 1;
+				for (int i = 0; i <= num; i++)
+				{
+					if (Operators.ConditionalCompareObjectEqual(MyProject.Forms.frmSalesInvoice.dgvItem[16, i].Value, row["soId"], TextCompare: false))
+					{
+						flag = true;
+						break;
+					}
+				}
+				dgvList.Rows.Add(row["soId"], flag, row["soDate"], row["poNumber"], Module1.formatCustomDecimal(Conversions.ToString(Operators.SubtractObject(row["soTotalPrice"], row["soDiscount"])), 2));
+			}
+		}
+	}
 
-        assem override strict specialname class DataGridView get_dgvList() {
+	private void FormatGrid()
+	{
+		dgvList.Columns.Clear();
+		dgvList.Rows.Clear();
+		DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn = new DataGridViewCheckBoxColumn();
+		dgvList.Columns.Add("", "soId");
+		dgvList.Columns.Add(dataGridViewCheckBoxColumn);
+		dataGridViewCheckBoxColumn.HeaderText = "";
+		dataGridViewCheckBoxColumn.Name = "chk";
+		dgvList.Columns.Add("", "Tanggal");
+		dgvList.Columns.Add("", "Nomer PO");
+		dgvList.Columns.Add("", "Total");
+		dgvList.Columns[0].Visible = false;
+		dgvList.Columns[0].Width = 0;
+		dgvList.Columns[1].Width = 20;
+		dgvList.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
+		dgvList.Columns[2].Width = 80;
+		dgvList.Columns[3].Width = 120;
+		dgvList.Columns[4].Width = 80;
+		dgvList.Columns[2].ReadOnly = true;
+		dgvList.Columns[3].ReadOnly = true;
+		dgvList.Columns[4].ReadOnly = true;
+		dgvList.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+		dgvList.RowHeadersVisible = false;
+		dgvList.AllowUserToAddRows = false;
+		dgvList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+		dgvList.AlternatingRowsDefaultCellStyle.BackColor = Color.WhiteSmoke;
+		dgvList.AllowUserToResizeRows = false;
+	}
 
-          loc_49A150: ldarg.0
-          loc_49A151: ldfld GCUv2.frmSalesInvoiceSO::_dgvList
-          loc_49A156: br.s loc_49A158
-          loc_49A158: // Referenced from: loc_49A156
-          loc_49A158: ret
-        }
+	private void dgvList_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.Shift & (e.KeyCode == Keys.Tab))
+		{
+			btnSave.Focus();
+			e.SuppressKeyPress = true;
+		}
+		else if (e.KeyCode == Keys.Tab)
+		{
+			btnSave.Focus();
+			e.SuppressKeyPress = true;
+		}
+	}
 
-        assem override strict specialname void set_dgvList(class DataGridView WithEventsValue) {
+	private void btnSave_Click(object sender, EventArgs e)
+	{
+		MyProject.Forms.frmSalesInvoice.SOId = new double[1];
+		bool flag = false;
+		checked
+		{
+			int num = dgvList.Rows.Count - 1;
+			int num3 = default(int);
+			for (int i = 0; i <= num; i++)
+			{
+				bool flag2;
+				if (Operators.ConditionalCompareObjectEqual(dgvList[1, i].EditedFormattedValue, true, TextCompare: false))
+				{
+					flag2 = false;
+					int num2 = MyProject.Forms.frmSalesInvoice.dgvItem.Rows.Count - 1;
+					for (int j = 0; j <= num2; j++)
+					{
+						if (Operators.ConditionalCompareObjectEqual(MyProject.Forms.frmSalesInvoice.dgvItem[16, j].Value, dgvList[0, i].Value, TextCompare: false))
+						{
+							flag2 = true;
+							break;
+						}
+					}
+					if (!flag2)
+					{
+						cSalesOrder cSalesOrder2 = new cSalesOrder(Conversions.ToDouble(dgvList[0, i].Value));
+						if (MyProject.Forms.frmSalesInvoice.CurrentId == 0.0)
+						{
+							cComboItem cComboItem2 = (cComboItem)MyProject.Forms.frmSalesInvoice.cboStorage.SelectedItem;
+							cSalesOrderItem[] item = cSalesOrder2.Item;
+							foreach (cSalesOrderItem cSalesOrderItem2 in item)
+							{
+								if (!cValidation.isInStock(Module1.pubCheckStock, Module1.pubBalanceDate, MyProject.Forms.frmSalesInvoice.dtpInvoice.Value, "not_used", MyProject.Forms.frmSalesInvoice.OriginalDate, cSalesOrderItem2.ItemId, 0, cSalesOrderItem2.Qty, 0.0, Conversions.ToInteger(cComboItem2.Value), 0, Module1.pubGroupId, 2))
+								{
+									Interaction.MsgBox("Stok " + cSalesOrderItem2.ItemName + " tidak tersedia.", MsgBoxStyle.Information);
+									return;
+								}
+							}
+						}
+						cSalesOrderItem[] item2 = cSalesOrder2.Item;
+						foreach (cSalesOrderItem cSalesOrderItem3 in item2)
+						{
+							cItemPrintDetail cItemPrintDetail2 = new cItemPrintDetail(cSalesOrderItem3.ItemId);
+							MyProject.Forms.frmSalesInvoice.dgvItem.Rows.Add(cSalesOrderItem3.ItemId, cSalesOrderItem3.ItemName, "", Module1.formatCustomDecimal(Conversions.ToString(cSalesOrderItem3.Qty), 3), Module1.formatCustomDecimal(Conversions.ToString(cSalesOrderItem3.Price), 2), Module1.formatCustomDecimal(Conversions.ToString(cSalesOrderItem3.Qty * cSalesOrderItem3.Price), 2), cSalesOrderItem3.Price, cSalesOrderItem3.Qty * cSalesOrderItem3.Price, cItemPrintDetail2.GeneralType, cItemPrintDetail2.LongName, cItemPrintDetail2.Packaging, cItemPrintDetail2.SmallUnit, cItemPrintDetail2.SmallQtyMultiplier, cItemPrintDetail2.LargeUnit, dgvList[3, i].Value, "", dgvList[0, i].Value, 0);
+						}
+						MyProject.Forms.frmSalesInvoice.txtDiscountValue.Text = Module1.formatCustomDecimal(Conversions.ToString(cSalesOrder2.Discount), 2);
+						MyProject.Forms.frmSalesInvoice.txtDiscountDescription.Text = cSalesOrder2.DiscountDescription;
+						flag = true;
+					}
+					num3++;
+					frmSalesInvoice frmSalesInvoice2;
+					(frmSalesInvoice2 = MyProject.Forms.frmSalesInvoice).SOId = (double[])Utils.CopyArray(frmSalesInvoice2.SOId, new double[num3 + 1]);
+					MyProject.Forms.frmSalesInvoice.SOId[num3] = Conversions.ToDouble(dgvList[0, i].Value);
+					continue;
+				}
+				flag2 = false;
+				int num4 = MyProject.Forms.frmSalesInvoice.dgvItem.Rows.Count - 1;
+				for (int j = num4; j >= 0; j += -1)
+				{
+					if (Operators.ConditionalCompareObjectEqual(MyProject.Forms.frmSalesInvoice.dgvItem[16, j].Value, dgvList[0, i].Value, TextCompare: false))
+					{
+						MyProject.Forms.frmSalesInvoice.dgvItem.Rows.RemoveAt(j);
+						if (!flag)
+						{
+							MyProject.Forms.frmSalesInvoice.txtDiscountValue.Text = "";
+							MyProject.Forms.frmSalesInvoice.txtDiscountDescription.Text = "";
+						}
+					}
+				}
+			}
+			MyProject.Forms.frmSalesInvoice.calculateTotalPrice();
+			Close();
+		}
+	}
 
-          class KeyEventHandler var_1;
-          class DataGridViewCellEventHandler var_2;
-          class DataGridView var_3;
-
-        }
-
-        public specialname int32 get_CustomerId() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_CustomerId(int32 value) {
-
-          loc_49A1D5: nop
-          loc_49A1D6: ldarg.0
-          loc_49A1D7: ldarg.1
-          loc_49A1D8: stfld GCUv2.frmSalesInvoiceSO::_customerId
-          loc_49A1DD: ret
-        }
-
-        public specialname double get_InvoiceId() {
-
-          double flt_1;
-
-        }
-
-        public specialname void set_InvoiceId(double value) {
-
-          loc_49A1F9: nop
-          loc_49A1FA: ldarg.0
-          loc_49A1FB: ldarg.1
-          loc_49A1FC: stfld GCUv2.frmSalesInvoiceSO::_invoiceId
-          loc_49A201: ret
-        }
-
-        public void frmSalesInvoiceSO(int32 customerId, double InvoiceId) {
-
-          loc_49A203: nop
-          loc_49A204: ldarg.0
-          loc_49A205: call instance void System.Windows.Forms.Form::.ctor()
-          loc_49A20A: nop
-          loc_49A20B: ldarg.0
-          loc_49A20C: ldarg.0
-          loc_49A20D: ldftn instance void GCUv2.frmSalesInvoiceSO::frmSalesInvoiceSO_KeyDown(object, class KeyEventArgs)
-          loc_49A213: newobj instance void System.Windows.Forms.KeyEventHandler::.ctor(object, System.IntPtr)
-          loc_49A218: call instance void System.Windows.Forms.Control::add_KeyDown(class KeyEventHandler)
-          loc_49A21D: nop
-          loc_49A21E: ldarg.0
-          loc_49A21F: call instance void GCUv2.frmSalesInvoiceSO::InitializeComponent()
-          loc_49A224: nop
-          loc_49A225: ldarg.0
-          loc_49A226: ldarg.1
-          loc_49A227: stfld GCUv2.frmSalesInvoiceSO::_customerId
-          loc_49A22C: ldarg.0
-          loc_49A22D: ldarg.2
-          loc_49A22E: stfld GCUv2.frmSalesInvoiceSO::_invoiceId
-          loc_49A233: ldarg.0
-          loc_49A234: call instance void GCUv2.frmSalesInvoiceSO::LoadData()
-          loc_49A239: nop
-          loc_49A23A: ret
-        }
-
-        private void frmSalesInvoiceSO_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void LoadData() {
-
-          class DataTable var_1;
-          int32 num_1;
-          boolean var_2;
-          class System.Collections.IEnumerator var_3;
-          class DataRow var_4;
-          int32 num_2;
-          boolean var_5;
-          boolean var_6;
-
-        }
-
-        private void FormatGrid() {
-
-          class DataGridViewCheckBoxColumn var_1;
-
-        }
-
-        private void dgvList_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-          boolean var_2;
-
-        }
-
-        private void btnSave_Click(object sender, class System.EventArgs e) {
-
-          int32 num_1;
-          int32 num_2;
-          int32 num_3;
-          boolean var_1;
-          boolean var_2;
-          int32 num_4;
-          boolean var_3;
-          int32 num_5;
-          boolean var_4;
-          boolean var_5;
-          class GCUv2.cSalesOrder var_6;
-          boolean var_7;
-          class GCUv2.cComboItem var_8;
-          class GCUv2.cSalesOrderItem[] var_9;
-          int32 num_6;
-          class GCUv2.cSalesOrderItem var_10;
-          boolean var_11;
-          boolean var_12;
-          class GCUv2.cSalesOrderItem[] var_13;
-          int32 num_7;
-          class GCUv2.cSalesOrderItem var_14;
-          class GCUv2.cItemPrintDetail var_15;
-          boolean var_16;
-          class GCUv2.frmSalesInvoice var_17;
-          int32 num_8;
-          boolean var_18;
-          boolean var_19;
-
-        }
-
-        private void dgvList_CellContentClick(object sender, class DataGridViewCellEventArgs e) {
-
-          boolean var_1;
-          boolean var_2;
-          int32 num_1;
-          int32 num_2;
-          boolean var_3;
-
-        }
-
-    }
+	private void dgvList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+	{
+		dgvList.EndEdit();
+		if (e.ColumnIndex != 1 || !Operators.ConditionalCompareObjectEqual(dgvList[1, dgvList.CurrentRow.Index].Value, true, TextCompare: false))
+		{
+			return;
+		}
+		checked
+		{
+			int num = dgvList.Rows.Count - 1;
+			for (int i = 0; i <= num; i++)
+			{
+				if (i != dgvList.CurrentRow.Index)
+				{
+					dgvList[1, i].Value = false;
+				}
+			}
+		}
+	}
 }

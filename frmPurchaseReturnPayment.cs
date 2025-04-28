@@ -1,400 +1,623 @@
 using System;
+using System.ComponentModel;
+using System.Data;
+using System.Diagnostics;
+using System.Drawing;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
+using GCUv2.My;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
 
-namespace GCUv2
+namespace GCUv2;
+
+[DesignerGenerated]
+public class frmPurchaseReturnPayment : Form
 {
-    public class Form
-    {
-
-        private class ComponentModel.IContainer components;
-        private class GCUv2.FilteredTextBox _txtAmount;
-        private class Label _lblAmount;
-        private class TextBox _txtChequeNo;
-        private class Label _Label3;
-        private class DateTimePicker _dtpCheque;
-        private class Label _Label9;
-        private class DateTimePicker _dtpPayment;
-        private class Label _Label4;
-        private class ComboBox _cboPaymentCode;
-        private class Label _Label2;
-        private class Button _btnDelete;
-        private class Button _btnSave;
-        private class GCUv2.FilteredTextBox _txtCurrencyRate;
-        private class Label _lblCurrencyRate;
-        private class Label _lblAccount;
-        private class ComboBox _cboAccount;
-        private boolean _currentData;
-        private int32 _invoiceCurrencyId;
-        private int32 _currencyId;
-        private string _currencyName;
-        private int32 _cashAccountId;
-        private int32 _bankAccountId;
-
-
-        protected override strict void Dispose(boolean disposing) {
-
-          boolean var_1;
-
-        }
-
-        private void InitializeComponent() {
-
-
-        }
-
-        assem override strict specialname class GCUv2.FilteredTextBox get_txtAmount() {
-
-          loc_460058: ldarg.0
-          loc_460059: ldfld GCUv2.frmPurchaseReturnPayment::_txtAmount
-          loc_46005E: br.s loc_460060
-          loc_460060: // Referenced from: loc_46005E
-          loc_460060: ret
-        }
-
-        assem override strict specialname void set_txtAmount(class GCUv2.FilteredTextBox WithEventsValue) {
-
-          loc_460062: ldarg.0
-          loc_460063: ldarg.1
-          loc_460064: stfld GCUv2.frmPurchaseReturnPayment::_txtAmount
-          loc_460069: ret
-        }
-
-        assem override strict specialname class Label get_lblAmount() {
-
-          loc_46006B: ldarg.0
-          loc_46006C: ldfld GCUv2.frmPurchaseReturnPayment::_lblAmount
-          loc_460071: br.s loc_460073
-          loc_460073: // Referenced from: loc_460071
-          loc_460073: ret
-        }
-
-        assem override strict specialname void set_lblAmount(class Label WithEventsValue) {
-
-          loc_460075: ldarg.0
-          loc_460076: ldarg.1
-          loc_460077: stfld GCUv2.frmPurchaseReturnPayment::_lblAmount
-          loc_46007C: ret
-        }
-
-        assem override strict specialname class TextBox get_txtChequeNo() {
-
-          loc_46007E: ldarg.0
-          loc_46007F: ldfld GCUv2.frmPurchaseReturnPayment::_txtChequeNo
-          loc_460084: br.s loc_460086
-          loc_460086: // Referenced from: loc_460084
-          loc_460086: ret
-        }
-
-        assem override strict specialname void set_txtChequeNo(class TextBox WithEventsValue) {
-
-          loc_460088: ldarg.0
-          loc_460089: ldarg.1
-          loc_46008A: stfld GCUv2.frmPurchaseReturnPayment::_txtChequeNo
-          loc_46008F: ret
-        }
-
-        assem override strict specialname class Label get_Label3() {
-
-          loc_460091: ldarg.0
-          loc_460092: ldfld GCUv2.frmPurchaseReturnPayment::_Label3
-          loc_460097: br.s loc_460099
-          loc_460099: // Referenced from: loc_460097
-          loc_460099: ret
-        }
-
-        assem override strict specialname void set_Label3(class Label WithEventsValue) {
-
-          loc_46009B: ldarg.0
-          loc_46009C: ldarg.1
-          loc_46009D: stfld GCUv2.frmPurchaseReturnPayment::_Label3
-          loc_4600A2: ret
-        }
-
-        assem override strict specialname class DateTimePicker get_dtpCheque() {
-
-          loc_4600A4: ldarg.0
-          loc_4600A5: ldfld GCUv2.frmPurchaseReturnPayment::_dtpCheque
-          loc_4600AA: br.s loc_4600AC
-          loc_4600AC: // Referenced from: loc_4600AA
-          loc_4600AC: ret
-        }
-
-        assem override strict specialname void set_dtpCheque(class DateTimePicker WithEventsValue) {
-
-          loc_4600AE: ldarg.0
-          loc_4600AF: ldarg.1
-          loc_4600B0: stfld GCUv2.frmPurchaseReturnPayment::_dtpCheque
-          loc_4600B5: ret
-        }
-
-        assem override strict specialname class Label get_Label9() {
-
-          loc_4600B7: ldarg.0
-          loc_4600B8: ldfld GCUv2.frmPurchaseReturnPayment::_Label9
-          loc_4600BD: br.s loc_4600BF
-          loc_4600BF: // Referenced from: loc_4600BD
-          loc_4600BF: ret
-        }
-
-        assem override strict specialname void set_Label9(class Label WithEventsValue) {
-
-          loc_4600C1: ldarg.0
-          loc_4600C2: ldarg.1
-          loc_4600C3: stfld GCUv2.frmPurchaseReturnPayment::_Label9
-          loc_4600C8: ret
-        }
-
-        assem override strict specialname class DateTimePicker get_dtpPayment() {
-
-          loc_4600CA: ldarg.0
-          loc_4600CB: ldfld GCUv2.frmPurchaseReturnPayment::_dtpPayment
-          loc_4600D0: br.s loc_4600D2
-          loc_4600D2: // Referenced from: loc_4600D0
-          loc_4600D2: ret
-        }
-
-        assem override strict specialname void set_dtpPayment(class DateTimePicker WithEventsValue) {
-
-          loc_4600D4: ldarg.0
-          loc_4600D5: ldarg.1
-          loc_4600D6: stfld GCUv2.frmPurchaseReturnPayment::_dtpPayment
-          loc_4600DB: ret
-        }
-
-        assem override strict specialname class Label get_Label4() {
-
-          loc_4600DD: ldarg.0
-          loc_4600DE: ldfld GCUv2.frmPurchaseReturnPayment::_Label4
-          loc_4600E3: br.s loc_4600E5
-          loc_4600E5: // Referenced from: loc_4600E3
-          loc_4600E5: ret
-        }
-
-        assem override strict specialname void set_Label4(class Label WithEventsValue) {
-
-          loc_4600E7: ldarg.0
-          loc_4600E8: ldarg.1
-          loc_4600E9: stfld GCUv2.frmPurchaseReturnPayment::_Label4
-          loc_4600EE: ret
-        }
-
-        assem override strict specialname class ComboBox get_cboPaymentCode() {
-
-          loc_4600F0: ldarg.0
-          loc_4600F1: ldfld GCUv2.frmPurchaseReturnPayment::_cboPaymentCode
-          loc_4600F6: br.s loc_4600F8
-          loc_4600F8: // Referenced from: loc_4600F6
-          loc_4600F8: ret
-        }
-
-        assem override strict specialname void set_cboPaymentCode(class ComboBox WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class ComboBox var_2;
-
-        }
-
-        assem override strict specialname class Label get_Label2() {
-
-          loc_460140: ldarg.0
-          loc_460141: ldfld GCUv2.frmPurchaseReturnPayment::_Label2
-          loc_460146: br.s loc_460148
-          loc_460148: // Referenced from: loc_460146
-          loc_460148: ret
-        }
-
-        assem override strict specialname void set_Label2(class Label WithEventsValue) {
-
-          loc_46014A: ldarg.0
-          loc_46014B: ldarg.1
-          loc_46014C: stfld GCUv2.frmPurchaseReturnPayment::_Label2
-          loc_460151: ret
-        }
-
-        assem override strict specialname class Button get_btnDelete() {
-
-          loc_460153: ldarg.0
-          loc_460154: ldfld GCUv2.frmPurchaseReturnPayment::_btnDelete
-          loc_460159: br.s loc_46015B
-          loc_46015B: // Referenced from: loc_460159
-          loc_46015B: ret
-        }
-
-        assem override strict specialname void set_btnDelete(class Button WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Button var_2;
-
-        }
-
-        assem override strict specialname class Button get_btnSave() {
-
-          loc_4601A0: ldarg.0
-          loc_4601A1: ldfld GCUv2.frmPurchaseReturnPayment::_btnSave
-          loc_4601A6: br.s loc_4601A8
-          loc_4601A8: // Referenced from: loc_4601A6
-          loc_4601A8: ret
-        }
-
-        assem override strict specialname void set_btnSave(class Button WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class Button var_2;
-
-        }
-
-        assem override strict specialname class GCUv2.FilteredTextBox get_txtCurrencyRate() {
-
-          loc_4601F0: ldarg.0
-          loc_4601F1: ldfld GCUv2.frmPurchaseReturnPayment::_txtCurrencyRate
-          loc_4601F6: br.s loc_4601F8
-          loc_4601F8: // Referenced from: loc_4601F6
-          loc_4601F8: ret
-        }
-
-        assem override strict specialname void set_txtCurrencyRate(class GCUv2.FilteredTextBox WithEventsValue) {
-
-          loc_4601FA: ldarg.0
-          loc_4601FB: ldarg.1
-          loc_4601FC: stfld GCUv2.frmPurchaseReturnPayment::_txtCurrencyRate
-          loc_460201: ret
-        }
-
-        assem override strict specialname class Label get_lblCurrencyRate() {
-
-          loc_460203: ldarg.0
-          loc_460204: ldfld GCUv2.frmPurchaseReturnPayment::_lblCurrencyRate
-          loc_460209: br.s loc_46020B
-          loc_46020B: // Referenced from: loc_460209
-          loc_46020B: ret
-        }
-
-        assem override strict specialname void set_lblCurrencyRate(class Label WithEventsValue) {
-
-          loc_46020D: ldarg.0
-          loc_46020E: ldarg.1
-          loc_46020F: stfld GCUv2.frmPurchaseReturnPayment::_lblCurrencyRate
-          loc_460214: ret
-        }
-
-        assem override strict specialname class Label get_lblAccount() {
-
-          loc_460216: ldarg.0
-          loc_460217: ldfld GCUv2.frmPurchaseReturnPayment::_lblAccount
-          loc_46021C: br.s loc_46021E
-          loc_46021E: // Referenced from: loc_46021C
-          loc_46021E: ret
-        }
-
-        assem override strict specialname void set_lblAccount(class Label WithEventsValue) {
-
-          loc_460220: ldarg.0
-          loc_460221: ldarg.1
-          loc_460222: stfld GCUv2.frmPurchaseReturnPayment::_lblAccount
-          loc_460227: ret
-        }
-
-        assem override strict specialname class ComboBox get_cboAccount() {
-
-          loc_460229: ldarg.0
-          loc_46022A: ldfld GCUv2.frmPurchaseReturnPayment::_cboAccount
-          loc_46022F: br.s loc_460231
-          loc_460231: // Referenced from: loc_46022F
-          loc_460231: ret
-        }
-
-        assem override strict specialname void set_cboAccount(class ComboBox WithEventsValue) {
-
-          class System.EventHandler var_1;
-          class ComboBox var_2;
-
-        }
-
-        public specialname int32 get_CashAccountId() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_CashAccountId(int32 value) {
-
-          loc_460291: nop
-          loc_460292: ldarg.0
-          loc_460293: ldarg.1
-          loc_460294: stfld GCUv2.frmPurchaseReturnPayment::_cashAccountId
-          loc_460299: ret
-        }
-
-        public specialname int32 get_BankAccountId() {
-
-          int32 num_1;
-
-        }
-
-        public specialname void set_BankAccountId(int32 value) {
-
-          loc_4602B5: nop
-          loc_4602B6: ldarg.0
-          loc_4602B7: ldarg.1
-          loc_4602B8: stfld GCUv2.frmPurchaseReturnPayment::_bankAccountId
-          loc_4602BD: ret
-        }
-
-        public void frmPurchaseReturnPayment(boolean CurrentData, int32 CurrencyId) {
-
-          boolean var_1;
-          boolean var_2;
-          class GCUv2.cCurrency var_3;
-          class ComboBox var_4;
-          boolean var_5;
-
-        }
-
-        private void frmPurchaseReturnPayment_KeyDown(object sender, class KeyEventArgs e) {
-
-          boolean var_1;
-
-        }
-
-        private void btnSave_Click(object sender, class System.EventArgs e) {
-
-          class GCUv2.cComboItem var_1;
-          class GCUv2.cComboItem var_2;
-          boolean var_3;
-          boolean var_4;
-          valuetype System.DateTime var_5;
-          boolean var_6;
-          boolean var_7;
-          boolean var_8;
-          boolean var_9;
-          boolean var_10;
-          boolean var_11;
-          boolean var_12;
-          boolean var_13;
-
-        }
-
-        private void btnDelete_Click(object sender, class System.EventArgs e) {
-
-
-        }
-
-        private void cboPaymentType_SelectedIndexChanged(object sender, class System.EventArgs e) {
-
-          boolean var_1;
-          boolean var_2;
-          class ComboBox var_3;
-
-        }
-
-        private void cboAccount_SelectedIndexChanged(object sender, class System.EventArgs e) {
-
-          class GCUv2.cComboItem var_1;
-          boolean var_2;
-          class DataTable var_3;
-          boolean var_4;
-
-        }
-
-    }
+	private IContainer components;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("cboPaymentCode")]
+	private ComboBox _cboPaymentCode;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnDelete")]
+	private Button _btnDelete;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("btnSave")]
+	private Button _btnSave;
+
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	[AccessedThroughProperty("cboAccount")]
+	private ComboBox _cboAccount;
+
+	private bool _currentData;
+
+	private int _invoiceCurrencyId;
+
+	private int _currencyId;
+
+	private string _currencyName;
+
+	private int _cashAccountId;
+
+	private int _bankAccountId;
+
+	[field: AccessedThroughProperty("txtAmount")]
+	internal virtual FilteredTextBox txtAmount
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("lblAmount")]
+	internal virtual Label lblAmount
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("txtChequeNo")]
+	internal virtual TextBox txtChequeNo
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label3")]
+	internal virtual Label Label3
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("dtpCheque")]
+	internal virtual DateTimePicker dtpCheque
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label9")]
+	internal virtual Label Label9
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("dtpPayment")]
+	internal virtual DateTimePicker dtpPayment
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("Label4")]
+	internal virtual Label Label4
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual ComboBox cboPaymentCode
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _cboPaymentCode;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = cboPaymentType_SelectedIndexChanged;
+			ComboBox comboBox = _cboPaymentCode;
+			if (comboBox != null)
+			{
+				comboBox.SelectedIndexChanged -= value2;
+			}
+			_cboPaymentCode = value;
+			comboBox = _cboPaymentCode;
+			if (comboBox != null)
+			{
+				comboBox.SelectedIndexChanged += value2;
+			}
+		}
+	}
+
+	[field: AccessedThroughProperty("Label2")]
+	internal virtual Label Label2
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual Button btnDelete
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnDelete;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnDelete_Click;
+			Button button = _btnDelete;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnDelete = value;
+			button = _btnDelete;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
+
+	internal virtual Button btnSave
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _btnSave;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = btnSave_Click;
+			Button button = _btnSave;
+			if (button != null)
+			{
+				button.Click -= value2;
+			}
+			_btnSave = value;
+			button = _btnSave;
+			if (button != null)
+			{
+				button.Click += value2;
+			}
+		}
+	}
+
+	[field: AccessedThroughProperty("txtCurrencyRate")]
+	internal virtual FilteredTextBox txtCurrencyRate
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("lblCurrencyRate")]
+	internal virtual Label lblCurrencyRate
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	[field: AccessedThroughProperty("lblAccount")]
+	internal virtual Label lblAccount
+	{
+		get; [MethodImpl(MethodImplOptions.Synchronized)]
+		set;
+	}
+
+	internal virtual ComboBox cboAccount
+	{
+		[CompilerGenerated]
+		get
+		{
+			return _cboAccount;
+		}
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		[CompilerGenerated]
+		set
+		{
+			EventHandler value2 = cboAccount_SelectedIndexChanged;
+			ComboBox comboBox = _cboAccount;
+			if (comboBox != null)
+			{
+				comboBox.SelectedIndexChanged -= value2;
+			}
+			_cboAccount = value;
+			comboBox = _cboAccount;
+			if (comboBox != null)
+			{
+				comboBox.SelectedIndexChanged += value2;
+			}
+		}
+	}
+
+	public int CashAccountId
+	{
+		get
+		{
+			return _cashAccountId;
+		}
+		set
+		{
+			_cashAccountId = value;
+		}
+	}
+
+	public int BankAccountId
+	{
+		get
+		{
+			return _bankAccountId;
+		}
+		set
+		{
+			_bankAccountId = value;
+		}
+	}
+
+	[DebuggerNonUserCode]
+	protected override void Dispose(bool disposing)
+	{
+		try
+		{
+			if (disposing && components != null)
+			{
+				components.Dispose();
+			}
+		}
+		finally
+		{
+			base.Dispose(disposing);
+		}
+	}
+
+	[System.Diagnostics.DebuggerStepThrough]
+	private void InitializeComponent()
+	{
+		this.txtAmount = new GCUv2.FilteredTextBox();
+		this.lblAmount = new System.Windows.Forms.Label();
+		this.txtChequeNo = new System.Windows.Forms.TextBox();
+		this.Label3 = new System.Windows.Forms.Label();
+		this.dtpCheque = new System.Windows.Forms.DateTimePicker();
+		this.Label9 = new System.Windows.Forms.Label();
+		this.dtpPayment = new System.Windows.Forms.DateTimePicker();
+		this.Label4 = new System.Windows.Forms.Label();
+		this.cboPaymentCode = new System.Windows.Forms.ComboBox();
+		this.Label2 = new System.Windows.Forms.Label();
+		this.btnDelete = new System.Windows.Forms.Button();
+		this.btnSave = new System.Windows.Forms.Button();
+		this.txtCurrencyRate = new GCUv2.FilteredTextBox();
+		this.lblCurrencyRate = new System.Windows.Forms.Label();
+		this.lblAccount = new System.Windows.Forms.Label();
+		this.cboAccount = new System.Windows.Forms.ComboBox();
+		base.SuspendLayout();
+		this.txtAmount.AllowedCharacters = GCUv2.FilteredTextBox.InputType.All;
+		this.txtAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.txtAmount.Location = new System.Drawing.Point(99, 120);
+		this.txtAmount.MaximumDigit = 3;
+		this.txtAmount.Name = "txtAmount";
+		this.txtAmount.Size = new System.Drawing.Size(116, 26);
+		this.txtAmount.TabIndex = 4;
+		this.txtAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+		this.lblAmount.AutoSize = true;
+		this.lblAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.lblAmount.Location = new System.Drawing.Point(10, 126);
+		this.lblAmount.Name = "lblAmount";
+		this.lblAmount.Size = new System.Drawing.Size(43, 13);
+		this.lblAmount.TabIndex = 109;
+		this.lblAmount.Text = "Jumlah ";
+		this.txtChequeNo.Enabled = false;
+		this.txtChequeNo.Location = new System.Drawing.Point(99, 94);
+		this.txtChequeNo.Name = "txtChequeNo";
+		this.txtChequeNo.Size = new System.Drawing.Size(116, 20);
+		this.txtChequeNo.TabIndex = 3;
+		this.Label3.AutoSize = true;
+		this.Label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label3.Location = new System.Drawing.Point(10, 68);
+		this.Label3.Name = "Label3";
+		this.Label3.Size = new System.Drawing.Size(69, 13);
+		this.Label3.TabIndex = 108;
+		this.Label3.Text = "Tanggal C/G";
+		this.dtpCheque.Enabled = false;
+		this.dtpCheque.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+		this.dtpCheque.Location = new System.Drawing.Point(99, 65);
+		this.dtpCheque.Name = "dtpCheque";
+		this.dtpCheque.Size = new System.Drawing.Size(116, 20);
+		this.dtpCheque.TabIndex = 2;
+		this.Label9.AutoSize = true;
+		this.Label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label9.Location = new System.Drawing.Point(10, 15);
+		this.Label9.Name = "Label9";
+		this.Label9.Size = new System.Drawing.Size(46, 13);
+		this.Label9.TabIndex = 107;
+		this.Label9.Text = "Tanggal";
+		this.dtpPayment.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+		this.dtpPayment.Location = new System.Drawing.Point(99, 12);
+		this.dtpPayment.Name = "dtpPayment";
+		this.dtpPayment.Size = new System.Drawing.Size(116, 20);
+		this.dtpPayment.TabIndex = 0;
+		this.Label4.AutoSize = true;
+		this.Label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label4.Location = new System.Drawing.Point(10, 41);
+		this.Label4.Name = "Label4";
+		this.Label4.Size = new System.Drawing.Size(28, 13);
+		this.Label4.TabIndex = 106;
+		this.Label4.Text = "Tipe";
+		this.cboPaymentCode.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+		this.cboPaymentCode.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+		this.cboPaymentCode.FormattingEnabled = true;
+		this.cboPaymentCode.Location = new System.Drawing.Point(99, 38);
+		this.cboPaymentCode.Name = "cboPaymentCode";
+		this.cboPaymentCode.Size = new System.Drawing.Size(116, 21);
+		this.cboPaymentCode.TabIndex = 1;
+		this.Label2.AutoSize = true;
+		this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.Label2.Location = new System.Drawing.Point(10, 97);
+		this.Label2.Name = "Label2";
+		this.Label2.Size = new System.Drawing.Size(44, 13);
+		this.Label2.TabIndex = 105;
+		this.Label2.Text = "No C/G";
+		this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnDelete.Location = new System.Drawing.Point(169, 211);
+		this.btnDelete.Name = "btnDelete";
+		this.btnDelete.Size = new System.Drawing.Size(58, 24);
+		this.btnDelete.TabIndex = 103;
+		this.btnDelete.Text = "Hapus";
+		this.btnDelete.UseVisualStyleBackColor = true;
+		this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+		this.btnSave.Location = new System.Drawing.Point(100, 211);
+		this.btnSave.Name = "btnSave";
+		this.btnSave.Size = new System.Drawing.Size(63, 24);
+		this.btnSave.TabIndex = 102;
+		this.btnSave.Text = "Simpan ";
+		this.btnSave.UseVisualStyleBackColor = true;
+		this.txtCurrencyRate.AllowedCharacters = GCUv2.FilteredTextBox.InputType.All;
+		this.txtCurrencyRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.txtCurrencyRate.Location = new System.Drawing.Point(99, 179);
+		this.txtCurrencyRate.MaximumDigit = 3;
+		this.txtCurrencyRate.Name = "txtCurrencyRate";
+		this.txtCurrencyRate.Size = new System.Drawing.Size(116, 26);
+		this.txtCurrencyRate.TabIndex = 7;
+		this.txtCurrencyRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+		this.lblCurrencyRate.AutoSize = true;
+		this.lblCurrencyRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.lblCurrencyRate.Location = new System.Drawing.Point(10, 185);
+		this.lblCurrencyRate.Name = "lblCurrencyRate";
+		this.lblCurrencyRate.Size = new System.Drawing.Size(28, 13);
+		this.lblCurrencyRate.TabIndex = 181;
+		this.lblCurrencyRate.Text = "Kurs";
+		this.lblAccount.AutoSize = true;
+		this.lblAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+		this.lblAccount.Location = new System.Drawing.Point(10, 155);
+		this.lblAccount.Name = "lblAccount";
+		this.lblAccount.Size = new System.Drawing.Size(76, 13);
+		this.lblAccount.TabIndex = 179;
+		this.lblAccount.Text = "Kas/Rekening";
+		this.cboAccount.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+		this.cboAccount.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+		this.cboAccount.FormattingEnabled = true;
+		this.cboAccount.Location = new System.Drawing.Point(99, 152);
+		this.cboAccount.Name = "cboAccount";
+		this.cboAccount.Size = new System.Drawing.Size(116, 21);
+		this.cboAccount.TabIndex = 5;
+		base.AcceptButton = this.btnSave;
+		base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
+		base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+		base.ClientSize = new System.Drawing.Size(246, 247);
+		base.Controls.Add(this.txtCurrencyRate);
+		base.Controls.Add(this.lblCurrencyRate);
+		base.Controls.Add(this.lblAccount);
+		base.Controls.Add(this.cboAccount);
+		base.Controls.Add(this.txtAmount);
+		base.Controls.Add(this.lblAmount);
+		base.Controls.Add(this.txtChequeNo);
+		base.Controls.Add(this.Label3);
+		base.Controls.Add(this.dtpCheque);
+		base.Controls.Add(this.Label9);
+		base.Controls.Add(this.dtpPayment);
+		base.Controls.Add(this.Label4);
+		base.Controls.Add(this.cboPaymentCode);
+		base.Controls.Add(this.Label2);
+		base.Controls.Add(this.btnDelete);
+		base.Controls.Add(this.btnSave);
+		base.KeyPreview = true;
+		base.MaximizeBox = false;
+		base.Name = "frmPurchaseReturnPayment";
+		base.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+		this.Text = "Pembayaran ";
+		base.ResumeLayout(false);
+		base.PerformLayout();
+	}
+
+	public frmPurchaseReturnPayment(bool CurrentData, int CurrencyId)
+	{
+		base.KeyDown += frmPurchaseReturnPayment_KeyDown;
+		InitializeComponent();
+		_currentData = CurrentData;
+		_invoiceCurrencyId = CurrencyId;
+		if (_invoiceCurrencyId == 1)
+		{
+			txtCurrencyRate.Enabled = false;
+		}
+		else
+		{
+			txtCurrencyRate.Enabled = true;
+		}
+		if (_invoiceCurrencyId == 1)
+		{
+			txtCurrencyRate.Text = Conversions.ToString(1);
+		}
+		else
+		{
+			cCurrency cCurrency2 = new cCurrency(_invoiceCurrencyId);
+			txtCurrencyRate.Text = Module1.formatCustomDecimal(Conversions.ToString(cCurrency2.Rate), 2);
+		}
+		txtAmount.AllowedCharacters = FilteredTextBox.InputType.NumeralsAndCurrency;
+		ComboBox combo = cboPaymentCode;
+		cCombo.getPaymentCode(ref combo, All: false, ShowCheque: false);
+		cboPaymentCode = combo;
+		if (_currentData)
+		{
+			btnSave.Text = "Update";
+			btnDelete.Enabled = true;
+		}
+		else
+		{
+			btnSave.Text = "Tambah";
+			btnDelete.Enabled = false;
+		}
+	}
+
+	private void frmPurchaseReturnPayment_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.KeyCode == Keys.Escape)
+		{
+			Close();
+		}
+	}
+
+	private void btnSave_Click(object sender, EventArgs e)
+	{
+		cComboItem cComboItem2 = (cComboItem)cboAccount.SelectedItem;
+		cComboItem cComboItem3 = (cComboItem)cboPaymentCode.SelectedItem;
+		if (cboPaymentCode.SelectedIndex == -1)
+		{
+			Interaction.MsgBox("Pilih tipe pembayaran", MsgBoxStyle.Information);
+			cboPaymentCode.Focus();
+			return;
+		}
+		if (!cValidation.isDateWithinRange(dtpPayment.Value, Module1.pubGroupId, Module1.pubDaysLimit))
+		{
+			Interaction.MsgBox("Anda tidak bisa memasukkan pembayaran sebelum " + Strings.FormatDateTime(DateAndTime.Now.AddDays(checked(Module1.pubDaysLimit * -1)), DateFormat.ShortDate), MsgBoxStyle.Information);
+			dtpPayment.Focus();
+			return;
+		}
+		if (Conversion.Val(txtAmount.Text) == 0.0)
+		{
+			Interaction.MsgBox("Masukkan jumlah pembayaran", MsgBoxStyle.Information);
+			txtAmount.Focus();
+			return;
+		}
+		if (!Versioned.IsNumeric(txtAmount.Text))
+		{
+			Interaction.MsgBox("Masukkan jumlah dengan format angka yang benar", MsgBoxStyle.Information);
+			txtAmount.Focus();
+			return;
+		}
+		if ((Operators.CompareString(cboPaymentCode.Text, "C/G", TextCompare: false) == 0) & (Operators.CompareString(txtChequeNo.Text, "", TextCompare: false) == 0))
+		{
+			Interaction.MsgBox("Masukkan nomer Cek/Giro", MsgBoxStyle.Information);
+			txtChequeNo.Focus();
+			return;
+		}
+		if (cboAccount.SelectedIndex == -1)
+		{
+			Interaction.MsgBox("Pilih Kas/Rekening", MsgBoxStyle.Information);
+			cboAccount.Focus();
+			return;
+		}
+		if (Conversion.Val(txtCurrencyRate.Text) == 0.0)
+		{
+			Interaction.MsgBox("Masukkan nilai kurs", MsgBoxStyle.Information);
+			txtCurrencyRate.Focus();
+			return;
+		}
+		if (!Versioned.IsNumeric(txtCurrencyRate.Text))
+		{
+			Interaction.MsgBox("Masukkan nilai kurs format angka yang benar", MsgBoxStyle.Information);
+			txtCurrencyRate.Focus();
+			return;
+		}
+		if (_currentData)
+		{
+			MyProject.Forms.frmPurchaseReturn.dgvPayment[2, MyProject.Forms.frmPurchaseReturn.dgvPayment.CurrentRow.Index].Value = cComboItem3.Value;
+			MyProject.Forms.frmPurchaseReturn.dgvPayment[3, MyProject.Forms.frmPurchaseReturn.dgvPayment.CurrentRow.Index].Value = cComboItem2.Value;
+			MyProject.Forms.frmPurchaseReturn.dgvPayment[13, MyProject.Forms.frmPurchaseReturn.dgvPayment.CurrentRow.Index].Value = cboAccount.Text;
+			MyProject.Forms.frmPurchaseReturn.dgvPayment[4, MyProject.Forms.frmPurchaseReturn.dgvPayment.CurrentRow.Index].Value = _currencyId;
+			MyProject.Forms.frmPurchaseReturn.dgvPayment[5, MyProject.Forms.frmPurchaseReturn.dgvPayment.CurrentRow.Index].Value = dtpPayment.Value;
+			MyProject.Forms.frmPurchaseReturn.dgvPayment[6, MyProject.Forms.frmPurchaseReturn.dgvPayment.CurrentRow.Index].Value = cboPaymentCode.Text;
+			MyProject.Forms.frmPurchaseReturn.dgvPayment[12, MyProject.Forms.frmPurchaseReturn.dgvPayment.CurrentRow.Index].Value = Module1.formatCustomDecimal(txtAmount.Text, 2);
+			MyProject.Forms.frmPurchaseReturn.dgvPayment[14, MyProject.Forms.frmPurchaseReturn.dgvPayment.CurrentRow.Index].Value = _currencyName;
+			MyProject.Forms.frmPurchaseReturn.dgvPayment[15, MyProject.Forms.frmPurchaseReturn.dgvPayment.CurrentRow.Index].Value = txtCurrencyRate.Text;
+			if (Operators.CompareString(cboPaymentCode.Text, "C/G", TextCompare: false) == 0)
+			{
+				MyProject.Forms.frmPurchaseReturn.dgvPayment[8, MyProject.Forms.frmPurchaseReturn.dgvPayment.CurrentRow.Index].Value = dtpCheque.Value;
+				MyProject.Forms.frmPurchaseReturn.dgvPayment[9, MyProject.Forms.frmPurchaseReturn.dgvPayment.CurrentRow.Index].Value = txtChequeNo.Text;
+			}
+		}
+		else
+		{
+			MyProject.Forms.frmPurchaseReturn.dgvPayment.Rows.Add(0, 0, cComboItem3.Value, cComboItem2.Value, _currencyId, dtpPayment.Value, cboPaymentCode.Text, 0, Interaction.IIf(Operators.CompareString(cboPaymentCode.Text, "C/G", TextCompare: false) == 0, dtpCheque.Value, ""), txtChequeNo.Text, 0, 0, Module1.formatCustomDecimal(txtAmount.Text, 2), cboAccount.Text, _currencyName, txtCurrencyRate.Text, DateAndTime.Now);
+			MyProject.Forms.frmPurchaseReturn.dgvPayment.CurrentRow.Selected = false;
+		}
+		MyProject.Forms.frmPurchaseReturn.calculateTotalPayment();
+		MyProject.Forms.frmPurchaseReturn.Edited = true;
+		Close();
+	}
+
+	private void btnDelete_Click(object sender, EventArgs e)
+	{
+		MyProject.Forms.frmPurchaseReturn.dgvPayment.Rows.RemoveAt(MyProject.Forms.frmPurchaseReturn.dgvPayment.CurrentRow.Index);
+		MyProject.Forms.frmPurchaseReturn.calculateTotalPayment();
+		MyProject.Forms.frmPurchaseReturn.Edited = true;
+		Close();
+	}
+
+	private void cboPaymentType_SelectedIndexChanged(object sender, EventArgs e)
+	{
+		if (Operators.CompareString(cboPaymentCode.Text, "C/G", TextCompare: false) == 0)
+		{
+			txtChequeNo.Enabled = true;
+			dtpCheque.Enabled = true;
+		}
+		else
+		{
+			txtChequeNo.Text = "";
+			txtChequeNo.Enabled = false;
+			dtpCheque.Enabled = false;
+		}
+		if (Operators.CompareString(cboPaymentCode.Text, "Cash", TextCompare: false) == 0)
+		{
+			ComboBox combo = cboAccount;
+			cCombo.getCashAccount(ref combo, 0, Module1.pubGroupId, All: false, GroupDefault: false, Active: true, "GENERAL", 0);
+			cboAccount = combo;
+			combo = cboAccount;
+			Module1.comboBoundValue(ref combo, _cashAccountId);
+			cboAccount = combo;
+		}
+		else
+		{
+			ComboBox combo = cboAccount;
+			cCombo.getBankAccount(ref combo, 0, Module1.pubGroupId, All: false, GroupDefault: false, Active: true, "GENERAL", 0);
+			cboAccount = combo;
+			combo = cboAccount;
+			Module1.comboBoundValue(ref combo, _bankAccountId);
+			cboAccount = combo;
+		}
+		cboAccount_SelectedIndexChanged(RuntimeHelpers.GetObjectValue(sender), e);
+	}
+
+	private void cboAccount_SelectedIndexChanged(object sender, EventArgs e)
+	{
+		cComboItem cComboItem2 = (cComboItem)cboAccount.SelectedItem;
+		if (!Information.IsNothing(cComboItem2) && cboPaymentCode.SelectedIndex > -1 && Conversions.ToDouble(cComboItem2.Value) > 1.0)
+		{
+			DataTable currencyOfAccount = cCurrency.GetCurrencyOfAccount(Conversions.ToInteger(cComboItem2.Value));
+			if (cboPaymentCode.SelectedIndex == 0)
+			{
+				lblAccount.Text = Conversions.ToString(Operators.ConcatenateObject(Operators.ConcatenateObject("Kas (", currencyOfAccount.Rows[0]["currencyName"]), ")"));
+			}
+			else
+			{
+				lblAccount.Text = Conversions.ToString(Operators.ConcatenateObject(Operators.ConcatenateObject("Rekening (", currencyOfAccount.Rows[0]["currencyName"]), ")"));
+			}
+			_currencyName = Conversions.ToString(currencyOfAccount.Rows[0]["currencyName"]);
+			_currencyId = Conversions.ToInteger(currencyOfAccount.Rows[0]["currencyId"]);
+		}
+	}
 }
